@@ -131,42 +131,42 @@
                     <div class="in-sec">
                         <h4 class="text-center mb-2">Electricity</h4>
                         <form class="needs-validation" novalidate>
-                            <div class="row justify-content-center">
-                                <div class="col-md-12 mb-3">
-                                    <label for="eleResi">Electricity uses in residential area</label>
-                                    <input type="text" class="form-control" id="eleResi" placeholder="First name" required>
-                                    <div class="invalid-feedback">
-                                        Please provide a valid state.
-                                    </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="eleResi" placeholder="Electricity uses in residential area" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid data.
                                 </div>
+                                <label for="eleResi">Electricity uses in residential area</label>
                             </div>
-                            <div class="row justify-content-center">
-                                <div class="col-md-12 mb-3">
-                                    <label for="eleCom">Electricity uses in commercial area</label>
-                                    <input type="text" class="form-control" id="eleCom" placeholder="Last name" required>
-                                    <div class="invalid-feedback">
-                                        Please provide a valid state.
-                                    </div>
+
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="eleCom" placeholder="Electricity uses in commercial area" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid data.
                                 </div>
+                                <label for="eleCom">Electricity uses in commercial area</label>
                             </div>
-                            <div class="row justify-content-center">
-                                <div class="col-md-12 mb-3">
-                                    <label for="eleSum">Electricity uses in slum area</label>
-                                    <input type="text" class="form-control" id="eleSum" placeholder="City" required>
-                                    <div class="invalid-feedback">
-                                        Please provide a valid city.
-                                    </div>
+
+
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="eleSum" placeholder="Electricity uses in slum area" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid data.
                                 </div>
+                                <label for="eleSum">Electricity uses in slum area</label>
                             </div>
-                            <div class="row justify-content-center">
-                                <div class="col-md-12 mb-3">
-                                    <label for="eleSL">Electricty uses for Street light</label>
-                                    <input type="text" class="form-control" id="eleSL" placeholder="State" required>
-                                    <div class="invalid-feedback">
-                                        Please provide a valid state.
-                                    </div>
+
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="eleSL" placeholder="Electricty uses for Street light" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid data.
                                 </div>
+                                <label for="eleSL">Electricty uses for Street light</label>
                             </div>
+
+
 
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
