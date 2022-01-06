@@ -133,8 +133,8 @@
                         <form class="needs-validation" novalidate>
                             <div class="row justify-content-center">
                                 <div class="col-md-12 mb-3">
-                                    <label for="validationCustom01">Electricity uses in residential area</label>
-                                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name" required>
+                                    <label for="eleResi">Electricity uses in residential area</label>
+                                    <input type="text" class="form-control" id="eleResi" placeholder="First name" required>
                                     <div class="invalid-feedback">
                                         Please provide a valid state.
                                     </div>
@@ -142,8 +142,8 @@
                             </div>
                             <div class="row justify-content-center">
                                 <div class="col-md-12 mb-3">
-                                    <label for="validationCustom02">Electricity uses in commercial area</label>
-                                    <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" required>
+                                    <label for="eleCom">Electricity uses in commercial area</label>
+                                    <input type="text" class="form-control" id="eleCom" placeholder="Last name" required>
                                     <div class="invalid-feedback">
                                         Please provide a valid state.
                                     </div>
@@ -151,8 +151,8 @@
                             </div>
                             <div class="row justify-content-center">
                                 <div class="col-md-12 mb-3">
-                                    <label for="validationCustom03">Electricity uses in slum area</label>
-                                    <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                                    <label for="eleSum">Electricity uses in slum area</label>
+                                    <input type="text" class="form-control" id="eleSum" placeholder="City" required>
                                     <div class="invalid-feedback">
                                         Please provide a valid city.
                                     </div>
@@ -160,8 +160,8 @@
                             </div>
                             <div class="row justify-content-center">
                                 <div class="col-md-12 mb-3">
-                                    <label for="validationCustom04">Electricty uses for Street light</label>
-                                    <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+                                    <label for="eleSL">Electricty uses for Street light</label>
+                                    <input type="text" class="form-control" id="eleSL" placeholder="State" required>
                                     <div class="invalid-feedback">
                                         Please provide a valid state.
                                     </div>
