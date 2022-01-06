@@ -1,5 +1,5 @@
 <?php
-$db_name = "dpr_new";
+$db_name = "carbon_mis";
 $mysqli_username = "root";
 $mysqli_password = "Root@123";
 $server_name = "localhost";

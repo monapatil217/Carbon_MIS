@@ -8,17 +8,18 @@
 
         <nav id="navbar" class="navbar">
             <ul>
+
                 <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
 
-                <li class="dropdown"><a href="#"><span>Energy</span> <i class="bi bi-chevron-down"></i></a>
+                <li class="dropdown"><a><span>Energy</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="energy.php">Electricity</a></li>
                     </ul>
                 </li>
 
-                <li><a class="nav-link scrollto">Transport</a></li>
+                <li><a class="nav-link scrollto" href="transport.php">Transport</a></li>
 
-                <li class="dropdown"><a href="#"><span>AFOLU</span> <i class="bi bi-chevron-down"></i></a>
+                <li class="dropdown"><a><span>AFOLU</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="#">Agriculture</a></li>
                         <li><a href="#">Forest</a></li>
@@ -27,18 +28,15 @@
                 </li>
                 <li><a class="nav-link scrollto">SolidWaste</a></li>
                 <li><a class="nav-link scrollto">WasteWater</a></li>
-                <li class="dropdown"><a href="#"><span>Industry</span> <i class="bi bi-chevron-down"></i></a>
+                <li class="dropdown"><a href=""><span>Industry</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#">Energy</a></li>
-                        <li><a href="#">Process & Product</a></li>
+                        <li><a href="industry-energy.php">Energy</a></li>
+                        <li><a href="industry-pp.php">Process & Product</a></li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="#"><span>FuelType</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                        <li><a href="#">Residential</a></li>
-                        <li><a href="#">Commercial</a></li>
-                    </ul>
-                </li>
+
+                <li><a class="nav-link scrollto" href="fueluseincity.php">FuelType</a></li>
+
                 <!-- <li class="dropdown"><a href="#"><span>Other</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a href="#"></a></li>
