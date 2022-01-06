@@ -57,7 +57,7 @@
                             <div class="row mx-auto mt-5  justify-content-center">
                                 <div class="col-md-6 mb-3">
                                     <label for="selCity" class="form-label">City</label>
-                                    <select class="form-select" id="selCity" onchange="getCity()" required>
+                                    <select class="form-select" id="selCity" required>
                                         <option selected disabled value="">Choose City</option>
                                         <option value="abc"> ABC </option>
                                     </select>
@@ -105,9 +105,10 @@
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
-
+    <script src="assets/js/jquery.min.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="js/login.js"></script>
 
 </body>
 
