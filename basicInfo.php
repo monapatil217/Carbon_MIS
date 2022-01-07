@@ -1,3 +1,6 @@
+<?php
+require "php/session.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +53,7 @@
 
             <form class="needs-validation" novalidate>
 
-                <div class="row justify-content-center">
+                <div class="row">
                     <div class="col-md-3 col-lg-3  mb-3 s " data-aos-delay="200">
                         <div class="in-sec">
 
@@ -123,7 +126,7 @@
                             <div class="row mb-2">
                                 <div class="col-md-12">
                                     <label for="city"> City </label>
-                                    <input type="text" class="form-control" id="city" placeholder="city" required>
+                                    <input type="text" class="form-control" id="city" value=<?php echo $_SESSION["cityName"];?> disabled>
                                     <div class="invalid-feedback">
                                         Please provide a valid data.
                                     </div>
@@ -184,11 +187,15 @@
 
                         </div>
                     </div>
+                    <div class="col-md-3 col-lg-3  mb-3  s" id="map">
+                        <!-- <iframe src='https://www.google.com/maps/d/embed?mid=140-hCtIBiMR1cPYqnNdAfshk9uBF58cW' width='620' height='480'>
+                        </iframe> -->
+                    </div>
                 </div>
 
                 <div class="row ">
                     <div class="col-md-12  text-center">
-                        <button class="btn btn-primary btn-get-started scrollto " type="submit"> LOGIN </button>
+                        <button class="btn btn-primary btn-get-started scrollto " onclick="saveBasic()" type="button"> Next </button>
                     </div>
                 </div>
 
@@ -228,9 +235,12 @@
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/basicInfoJs.js"></script>
 
 </body>
 

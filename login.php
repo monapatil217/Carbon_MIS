@@ -52,14 +52,13 @@
                         <h2 style="color:white;">LOGIN</h2>
                     </div>
                     <div class="in-sec">
-                        <form class="needs-validation">
+                        <form class="needs-validation" action="php/loginId.php" method="POST">
 
                             <div class="row mx-auto mt-5  justify-content-center">
                                 <div class="col-md-6 mb-3">
-                                    <label for="selCity" class="form-label">City</label>
-                                    <select class="form-select" id="selCity" required>
+                                    <label for="username" class="form-label">City</label>
+                                    <select class="form-select" id="username" name="username" required>
                                         <option selected disabled value="">Choose City</option>
-                                        <option value="abc"> ABC </option>
                                     </select>
                                     <div class="invalid-feedback">
                                         Please select a City.
@@ -70,7 +69,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-md-6 mb-3">
                                     <label for="Password">Password</label>
-                                    <input type="password" class="form-control" id="Password" placeholder="Password" required>
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                                     <div class="invalid-feedback">
                                         Please provide a valid data.
                                     </div>
@@ -90,8 +89,6 @@
             </div>
 
         </div>
-
-
 
     </section><!-- End Hero -->
     <main id="main">

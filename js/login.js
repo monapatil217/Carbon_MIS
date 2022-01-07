@@ -3,13 +3,13 @@ $(document).ready(function () {
 })
 
 function getCity() {
-    $("#selCity").empty();
+    $("#username").empty();
     var cityName = getCityList();
 
     var html = '<option selected disabled value="">Choose City</option>'
         + cityName;
 
-    $("#selCity").append(html);
+    $("#username").append(html);
 
 }
 function getCityList() {
