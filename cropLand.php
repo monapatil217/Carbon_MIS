@@ -14,7 +14,9 @@
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -52,6 +54,18 @@
                 <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
                         <h3>Crop Land</h3>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>
+                                    <p>Total Emissions in 2019 = 6,558 Million Metric Tons of CO2 equivalent.</p>
+                                    <p>Globally cotton cultivation accounts for 220 million metric tons of CO2 per year.
+                                    </p>
+                                    <p>Cropland-based agricultural activities account for 24.17 percent of India’s total
+                                        methane and 95.84 percent of the total nitrous oxide emission from the
+                                        agricultural sector.</p>
+                                </h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -61,7 +75,8 @@
                         <form class="needs-validation" novalidate>
 
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="areaCrop" placeholder="Area under Crop Land (sq. km)" required>
+                                <input type="text" class="form-control" id="areaCrop"
+                                    placeholder="Area under Crop Land (sq. km)" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
@@ -85,24 +100,24 @@
 
 
     <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
     </script>
 
     <!-- Vendor JS Files -->

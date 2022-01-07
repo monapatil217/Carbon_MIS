@@ -14,7 +14,9 @@
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -51,6 +53,17 @@
                 <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
                         <h3>Electricity</h3>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>
+                                    <p>1 unit of electricity is equal to 1000 watts. which means 1 unit = 1 kwatt
+                                        electricity</p>
+                                    <p>Burning 1 kg of bituminous coal will produce 2.42 kg of carbon dioxide</p>
+                                    <p>The emissions per unit of electricity are estimated to be in the range of 0.91
+                                        to 0.95 kg/kWh for CO2</p>
+                                </h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -60,7 +73,8 @@
                         <form class="needs-validation" novalidate>
 
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="eleResi" placeholder="Electricity uses in residential area" required>
+                                <input type="text" class="form-control" id="eleResi"
+                                    placeholder="Electricity uses in residential area" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
@@ -68,7 +82,8 @@
                             </div>
 
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="eleCom" placeholder="Electricity uses in commercial area" required>
+                                <input type="text" class="form-control" id="eleCom"
+                                    placeholder="Electricity uses in commercial area" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
@@ -78,7 +93,8 @@
 
 
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="eleSum" placeholder="Electricity uses in slum area" required>
+                                <input type="text" class="form-control" id="eleSum"
+                                    placeholder="Electricity uses in slum area" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
@@ -86,7 +102,8 @@
                             </div>
 
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="eleSL" placeholder="Electricty uses for Street light" required>
+                                <input type="text" class="form-control" id="eleSL"
+                                    placeholder="Electricty uses for Street light" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
@@ -111,24 +128,24 @@
 
 
     <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
     </script>
 
     <!-- Vendor JS Files -->

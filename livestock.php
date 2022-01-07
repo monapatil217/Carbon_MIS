@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Transport</title>
+    <title>Live Stock</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -51,13 +51,20 @@
 
                 <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
-                        <h3>Transport</h3>
+                        <h3>Live Stock</h3>
+
                         <div class="card">
                             <div class="card-body">
                                 <h5>
-                                    <p> After burning 1 liter of diesel 2.62 kg of co2 is release in enviroment</p>
-                                    <p>Whereas petrol has a lower carbon content and produces about 2.39 kgs of co2 per
-                                        liter</p>
+                                    <p>It has been estimated that over 200 million tonnes of CO2 equivalents are
+                                        released by Indian livestock each year.</p>
+                                    <p>The total GHGs emission from Indian livestock is estimated at 247.2 Mt in terms
+                                        of CO2 equivalent emissions.</p>
+                                    <p>Although the Indian livestock contributes substantially to the methane budget,
+                                        the per capita emission is only 24.23 kgCH4/animal/year.</p>
+                                    <p>The production of 1 kg beef causes about 13.3 kg of CO2. The same quantity of CO2
+                                        is released when you burn about 6 liters of petrol! _ _ _ no need to add</p>
+
                                 </h5>
                             </div>
                         </div>
@@ -66,76 +73,93 @@
 
                 <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
                     <div class="in-sec">
-                        <h4 class="text-center mb-2">Transport</h4>
+                        <h4 class="text-center mb-2">Live Stock</h4>
                         <form class="needs-validation" novalidate>
 
                             <div class="form-floating mt-5">
-                                <input type="text" class="form-control" id="2Wheeler" placeholder="Two wheeler"
-                                    required>
+                                <input type="text" class="form-control" id="indigenouscattle"
+                                    placeholder="Indigenous Cattle" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
-                                <label for="2Wheeler">Two Wheeler</label>
+                                <label for="indigenouscattle">Indigenous Cattle</label>
                             </div>
 
                             <div class="form-floating mt-3">
-                                <input type="text" class="form-control" id="3Wheeler" placeholder="Three wheeler"
-                                    required>
+                                <input type="text" class="form-control" id="crossbredcattle"
+                                    placeholder="Cross-bred cattle" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
-                                <label for="3Wheeler">Three Wheeler</label>
+                                <label for="crossbredcattle">Cross-bred cattle</label>
                             </div>
 
                             <div class="form-floating mt-3">
-                                <input type="text" class="form-control" id="4Wheeler" placeholder="Four wheeler"
-                                    required>
+                                <input type="text" class="form-control" id="buffalo" placeholder="Buffalo" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
-                                <label for="4Wheeler">Four Wheeler</label>
+                                <label for="buffalo">Buffalo</label>
                             </div>
 
                             <div class="form-floating mt-3">
-                                <input type="text" class="form-control" id="bus" placeholder="Bus" required>
+                                <input type="text" class="form-control" id="sheep" placeholder="Sheep" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
-                                <label for="bus">Bus</label>
+                                <label for="sheep ">Sheep</label>
                             </div>
 
                             <div class="form-floating mt-3">
-                                <input type="text" class="form-control" id="tempo" placeholder="Tempo" required>
+                                <input type="text" class="form-control" id="goat" placeholder="Goat" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
-                                <label for="tempo">Tempo</label>
+                                <label for="goat">Goat</label>
                             </div>
 
                             <div class="form-floating mt-3">
-                                <input type="text" class="form-control" id="truck" placeholder="Truck" required>
+                                <input type="text" class="form-control" id="horsesandponies"
+                                    placeholder="Horses & Ponies" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
-                                <label for="truck">Truck</label>
+                                <label for="horsesandponies">Horses & Ponies</label>
                             </div>
 
                             <div class="form-floating mt-3">
-                                <input type="text" class="form-control" id="train" placeholder="Train" required>
+                                <input type="text" class="form-control" id="donkeys" placeholder="Donkeys" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
-                                <label for="train">Train</label>
+                                <label for="donkeys">Donkeys</label>
                             </div>
 
                             <div class="form-floating mt-3 mb-2">
-                                <input type="text" class="form-control" id="flight" placeholder="Flight" required>
+                                <input type="text" class="form-control" id="camels" placeholder="Camels" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
-                                <label for="flight">Flight</label>
+                                <label for="camels">Camels</label>
                             </div>
 
+                            <div class="form-floating mt-3 mb-2">
+                                <input type="text" class="form-control" id="pig" placeholder="Pig" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid data.
+                                </div>
+                                <label for="pig">Pig</label>
+                            </div>
+
+
+
+                            <div class="form-floating mt-3 mb-2">
+                                <input type="text" class="form-control" id="poultry" placeholder="Poultry" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid data.
+                                </div>
+                                <label for="poultry">Poultry</label>
+                            </div>
 
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">

@@ -14,7 +14,9 @@
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -51,6 +53,16 @@
                 <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
                         <h3>Waste Water</h3>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>
+                                    <p>Currently, India has the capacity to treat approximately 37% of its wastewater,
+                                        or 22,963 million litres per day (MLD), against a daily</p>
+                                    <p>sewage generation of approximately 61,754 MLD according to the 2015 report of the
+                                        Central Pollution Control Board.</p>
+                                </h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -58,9 +70,10 @@
                     <div class="in-sec">
                         <h4 class="text-center mb-2">Waste Water</h4>
                         <form class="needs-validation" novalidate>
-                            
+
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="waterConsumption" placeholder="Water Consumption (CMD)" required>
+                                <input type="text" class="form-control" id="waterConsumption"
+                                    placeholder="Water Consumption (CMD)" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
@@ -68,7 +81,8 @@
                             </div>
 
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="waterGenration" placeholder="Waste water generated (CMD)" required>
+                                <input type="text" class="form-control" id="waterGenration"
+                                    placeholder="Waste water generated (CMD)" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
@@ -76,7 +90,8 @@
                             </div>
 
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="waterCollection" placeholder="Waste water collection (CMD)" required>
+                                <input type="text" class="form-control" id="waterCollection"
+                                    placeholder="Waste water collection (CMD)" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
@@ -84,7 +99,8 @@
                             </div>
 
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="waterCollection" placeholder="Waste Water Treatment" required>
+                                <input type="text" class="form-control" id="waterCollection"
+                                    placeholder="Waste Water Treatment" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
@@ -92,7 +108,8 @@
                             </div>
 
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="noSTP" placeholder="No. of STP present" required>
+                                <input type="text" class="form-control" id="noSTP" placeholder="No. of STP present"
+                                    required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
@@ -166,24 +183,24 @@
 
 
     <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
     </script>
 
     <!-- Vendor JS Files -->

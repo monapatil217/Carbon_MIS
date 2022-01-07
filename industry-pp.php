@@ -14,7 +14,9 @@
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -51,6 +53,21 @@
                 <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
                         <h3>Industry-Process and Product</h3>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>
+                                    <p>Total Emissions in 2019 = 6,558 Million Metric Tons of CO2 equivalent.</p>
+                                    <p>CO2 accounts for about 76 percent of total greenhouse gas emissions. Methane,
+                                        primarily from agriculture, contributes 16 percent of greenhouse</p>
+                                    <p>Gas emissions and nitrous oxide, mostly from industry and agriculture,
+                                        contributes 6 percent to global emissions.</p>
+                                    <p>Carbon dioxide emissions from fossil fuel and industrial purposes in India
+                                        totaled 2,412 million metric tons in 2020.</p>
+                                    <p>This was a reduction of six percent compared with 2019 levels, a year in which
+                                        emissions in India peaked.</p>
+                                </h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -64,7 +81,8 @@
                             </div>
 
                             <div class="form-floating mb-2">
-                                <input type="text" class="form-control" id="mipo" placeholder="Material input or product output" required>
+                                <input type="text" class="form-control" id="mipo"
+                                    placeholder="Material input or product output" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
@@ -87,24 +105,24 @@
 
 
     <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
     </script>
 
     <!-- Vendor JS Files -->
