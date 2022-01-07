@@ -56,15 +56,18 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5>
+                                    <p>the average annual population of animals was taken from the Census of Livestock,
+                                        which is conducted every five years. </p>
+                                    <p>Categorization was done as per available
+                                        categories in the census viz. dairy and non-dairy for cattle</P>
                                     <p>It has been estimated that over 200 million tonnes of CO2 equivalents are
                                         released by Indian livestock each year.</p>
                                     <p>The total GHGs emission from Indian livestock is estimated at 247.2 Mt in terms
                                         of CO2 equivalent emissions.</p>
                                     <p>Although the Indian livestock contributes substantially to the methane budget,
                                         the per capita emission is only 24.23 kgCH4/animal/year.</p>
-                                    <p>The production of 1 kg beef causes about 13.3 kg of CO2. The same quantity of CO2
-                                        is released when you burn about 6 liters of petrol! _ _ _ no need to add</p>
-
+                                    <p>categorisation are: Mature dairy cows, Non-dairy cattle, Goats, Sheep, Camels,
+                                        Horses and ponies, Pigs</p>
                                 </h5>
                             </div>
                         </div>
