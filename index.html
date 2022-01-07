@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>MIS- Index</title>
+  <title>MIS - MainPage</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -40,41 +40,75 @@
 
 <body>
 
+
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">OnePage</a></h1>
+      <h1 class="logo"><a href="index.html"><b>MIS</b></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto o" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+
+          <li class="dropdown"><a href="#"><span>Energy</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="energy.php">Electricity</a></li>
             </ul>
           </li>
+
+          <li><a class="nav-link scrollto">Transport</a></li>
+
+          <li class="dropdown"><a href="#"><span>AFOLU</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Agriculture</a></li>
+              <li><a href="#">Forest</a></li>
+              <li><a href="#">Landuse</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto">SolidWaste</a></li>
+          <li><a class="nav-link scrollto">WasteWater</a></li>
+          <li class="dropdown"><a href="#"><span>Industry</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Energy</a></li>
+              <li><a href="#">Process & Product</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>FuelType</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Residential</a></li>
+              <li><a href="#">Commercial</a></li>
+            </ul>
+          </li>
+          <!-- <li class="dropdown"><a href="#"><span>Other</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </li> -->
+          <!-- <li class="dropdown"><a href="#"><span>AFOLU</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="#">Drop Down 1</a></li>
+                            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                                <ul>
+                                    <li><a href="#">Deep Drop Down 1</a></li>
+                                    <li><a href="#">Deep Drop Down 2</a></li>
+                                    <li><a href="#">Deep Drop Down 3</a></li>
+                                    <li><a href="#">Deep Drop Down 4</a></li>
+                                    <li><a href="#">Deep Drop Down 5</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Drop Down 2</a></li>
+                            <li><a href="#">Drop Down 3</a></li>
+                            <li><a href="#">Drop Down 4</a></li>
+                        </ul>
+                    </li> -->
+
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+          <li><a class="getstarted scrollto" href="login.php">LogIn</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -85,27 +119,87 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-      <div class="row justify-content-center">
+
+      <div class="row justify-content-center" style="height: 60vh">
         <div class="col-xl-7 col-lg-9 text-center">
           <h1>MIS system </h1>
-          <h2>for municipal corporation</h2>
+          <h2>for Municipal Corporation</h2>
+        </div>
+
+        <div class="text-center">
+          <a href="#about" class="btn-get-started scrollto">Get Started</a>
         </div>
       </div>
-      <div class="text-center">
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
-      </div>
 
-      <div class="row icon-boxes">
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mt-5  mb-lg-0" data-aos="zoom-in"
-          data-aos-delay="200">
-          <div class="icon-box">
+      <div class="row mt-5">
+
+        <div class="col-md-12 col-lg-8  mb-3 mt-3 s" data-aos-delay="200">
+          <div class="in-sec">
             <div class="icon"><i class="ri-stack-line"></i></div>
-            <h4 class="title"><a href="">Electricity</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            <h4 class="title">Electricity</h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
+              Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
+              Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-4  mb-3 mt-3 s" data-aos-delay="200">
+          <div class="in-sec">
+            <div class="icon"><i class="ri-stack-line"></i></div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mt-5  mb-lg-0" data-aos="zoom-in"
+        <div class="col-md-12 col-lg-4  mb-3 mt-3 s" data-aos-delay="200">
+          <div class="in-sec">
+            <div class="icon"><i class="ri-stack-line"></i></div>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-8  mb-3 mt-3 s" data-aos-delay="200">
+          <div class="in-sec">
+            <div class="icon"><i class="ri-stack-line"></i></div>
+            <h4 class="title">Trasport</h4>
+            <p class="description">Voluptatum excepturi</p>
+          </div>
+        </div>
+
+        <div class="col-md-12 col-lg-12  mb-3 mt-3 s" data-aos-delay="200">
+          <div class="in-sec">
+            <div class="icon"><i class="ri-stack-line"></i></div>
+            <h4 class="title">Electricity</h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolor
+              Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+          </div>
+        </div>
+
+        <div class="col-md-12 col-lg-12  mb-3 mt-3 s" data-aos-delay="200">
+          <div class="in-sec">
+            <div class="icon"><i class="ri-stack-line"></i></div>
+            <h4 class="title">Trasport</h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
+              Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
+              Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-12  mb-3 mt-3 s" data-aos-delay="200">
+          <div class="in-sec">
+            <div class="icon"><i class="ri-stack-line"></i></div>
+            <h4 class="title">Electricity</h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
+              Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
+              Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+          </div>
+        </div>
+
+        <div class="col-md-12 col-lg-12  mb-3 mt-3 s" data-aos-delay="200">
+          <div class="in-sec">
+            <div class="icon"><i class="ri-stack-line"></i></div>
+            <h4 class="title">Trasport</h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
+              Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
+              Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+          </div>
+        </div>
+
+        <!--   <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mt-5  mb-lg-0" data-aos="zoom-in"
           data-aos-delay="300">
           <div class="icon-box">
             <div class="icon"><i class="ri-palette-line"></i></div>
@@ -159,6 +253,7 @@
           </div>
         </div>
 
+      -->
       </div>
     </div>
   </section><!-- End Hero -->
@@ -166,7 +261,7 @@
   <main id="main">
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <!-- <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -199,10 +294,11 @@
         </div>
 
       </div>
-    </section><!-- End About Section -->
+    </section> -->
+    <!-- End About Section -->
 
     <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts section-bg">
+    <!-- <section id="counts" class="counts section-bg">
       <div class="container">
 
         <div class="row justify-content-end">
@@ -242,10 +338,11 @@
         </div>
 
       </div>
-    </section><!-- End Counts Section -->
+    </section> -->
+    <!-- End Counts Section -->
 
     <!-- ======= About Video Section ======= -->
-    <section id="about-video" class="about-video">
+    <!--  <section id="about-video" class="about-video">
       <div class="container" data-aos="fade-up">
 
         <div class="row">
@@ -282,10 +379,11 @@
         </div>
 
       </div>
-    </section><!-- End About Video Section -->
+    </section>-->
+    <!-- End About Video Section -->
 
     <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients section-bg">
+    <!-- <section id="clients" class="clients section-bg">
       <div class="container">
 
         <div class="row">
@@ -317,10 +415,11 @@
         </div>
 
       </div>
-    </section><!-- End Clients Section -->
+    </section>-->
+    <!-- End Clients Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
+    <!--  <section id="testimonials" class="testimonials">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -345,7 +444,7 @@
                 <h3>Saul Goodman</h3>
                 <h4>Ceo &amp; Founder</h4>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide">
               <div class="testimonial-item">
@@ -359,7 +458,7 @@
                 <h3>Sara Wilsson</h3>
                 <h4>Designer</h4>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide">
               <div class="testimonial-item">
@@ -373,7 +472,7 @@
                 <h3>Jena Karlis</h3>
                 <h4>Store Owner</h4>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide">
               <div class="testimonial-item">
@@ -387,7 +486,7 @@
                 <h3>Matt Brandon</h3>
                 <h4>Freelancer</h4>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide">
               <div class="testimonial-item">
@@ -401,17 +500,18 @@
                 <h3>John Larson</h3>
                 <h4>Entrepreneur</h4>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
           </div>
           <div class="swiper-pagination"></div>
         </div>
 
       </div>
-    </section><!-- End Testimonials Section -->
+    </section>  -->
+    <!-- End Testimonials Section -->
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
+    <!--   <section id="services" class="services section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -517,10 +617,11 @@
         </div>
 
       </div>
-    </section><!-- End Sevices Section -->
+    </section> -->
+    <!-- End Sevices Section -->
 
     <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
+    <!--  <section id="cta" class="cta">
       <div class="container" data-aos="zoom-in">
         <div class="text-center">
           <h3>Call To Action</h3>
@@ -530,10 +631,11 @@
           <a class="cta-btn" href="#">Call To Action</a>
         </div>
       </div>
-    </section><!-- End Cta Section -->
+    </section>-->
+    <!-- End Cta Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
+    <!--  <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -694,10 +796,11 @@
         </div>
 
       </div>
-    </section><!-- End Portfolio Section -->
+    </section>-->
+    <!-- End Portfolio Section -->
 
     <!-- ======= Team Section ======= -->
-    <section id="team" class="team section-bg">
+    <!-- <section id="team" class="team section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -784,10 +887,11 @@
         </div>
 
       </div>
-    </section><!-- End Team Section -->
+    </section>-->
+    <!-- End Team Section -->
 
     <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
+    <!--  <section id="pricing" class="pricing">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -853,7 +957,8 @@
         </div>
 
       </div>
-    </section><!-- End Pricing Section -->
+    </section>-->
+    <!-- End Pricing Section -->
 
     <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq" class="faq section-bg">
