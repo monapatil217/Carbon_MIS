@@ -50,47 +50,142 @@
 
             <div class="row">
 
-                <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
+                <div class="col-md-12 col-lg-5  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
                         <h3>Industry Energy</h3>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5>
-                                    <p>Total Emissions in 2019 = 6,558 Million Metric Tons of CO2 equivalent.</p>
-                                    <p>CO2 accounts for about 76 percent of total greenhouse gas emissions. Methane,
-                                        primarily from agriculture, contributes 16 percent of greenhouse</p>
-                                    <p>Gas emissions and nitrous oxide, mostly from industry and agriculture,
-                                        contributes 6 percent to global emissions.</p>
-                                    <p>Carbon dioxide emissions from fossil fuel and industrial purposes in India
-                                        totaled 2,412 million metric tons in 2020.</p>
-                                    <p>This was a reduction of six percent compared with 2019 levels, a year in which
-                                        emissions in India peaked.</p>
-                                </h5>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
 
-                <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
+                <div class="col-md-12 col-lg-7  mb-3  s" data-aos-delay="200">
                     <div class="in-sec">
                         <!-- <h4 class="text-center mb-2">Industry</h4> -->
                         <form class="needs-validation" novalidate>
 
                             <div>
                                 <h4>Energy</h4>
-                            </div>
+                                
+                                <marquee width="100%" direction="left" height="30px">
+                                   t - tonne / d - day / FO - Fuel Oil / LDO - Light Diesel Oil / HSD -  High Speed Diesel / PNG - Piped Natural gas / NG - Natural Gas
+                                </marquee>
 
-                            <div class="form-floating mb-2">
-                                <input type="text" class="form-control" id="tFuel"
-                                    placeholder="Type of fuel mix used by industry" required>
+                                <h6 class="text-center">Type of fuel mix used by industry</h6>
+                            </div>
+                            
+                            <div class="row ">
+                                <div class="col-lg-6">
+                                
+                                <div class="input-group mb-3 m-lg-4">
+                                    <span class="form-floating">
+                                        <div class="form-floating labelFont">
+                                            <input type="text" class="form-control" id="amtCoal"  placeholder="Amount of Coal used">
+                                            <label for="amtCoal">Amount of Coal used</label>
+                                        </div>
+                                    </span>
+                                    <span class="input-group-text" id="basic-addon-1">t/day</span>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid data.
+                                    </div>
+                                </div>
+
+                                <div class="input-group mb-3 m-lg-4">
+                                    <span class="form-floating">
+                                        <div class="form-floating labelFont">
+                                            <input type="text" class="form-control" id="amtFO" placeholder="Amount of FO used">
+                                            <label for="amtFO">Amount of FO used</label>
+                                        </div>
+                                    </span>
+                                    <span class="input-group-text" id="basic-addon-1">t/day</span>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid data.
+                                    </div>
+                                </div>
+
+                                <div class="input-group mb-3 m-lg-4">
+                                    <span class="form-floating">
+                                        <div class="form-floating labelFont">
+                                            <input type="text" class="form-control" id="amtLDO" placeholder="Amount of LDO used">
+                                            <label for="amtLDO">Amount of LDO used</label>
+                                        </div>
+                                    </span>
+                                    <span class="input-group-text" id="basic-addon-1">t/day</span>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid data.
+                                    </div>
+                                </div>
+
+                                <div class="input-group mb-3 m-lg-4">
+                                    <span class="form-floating">
+                                        <div class="form-floating labelFont">
+                                            <input type="text" class="form-control" id="amtHSD" placeholder="Amount of HSD used">
+                                            <label for="amtHSD">Amount of HSD used</label>
+                                        </div>
+                                    </span>
+                                    <span class="input-group-text" id="basic-addon-1">t/day</span>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid data.
+                                    </div>
+                                </div>
+                            </div>
+  
+                            <div class="col-lg-6">
+                             <div class="input-group mb-3 m-lg-4">
+                                <span class="form-floating">
+                                   <div class="form-floating labelFont">
+                                        <input type="text" class="form-control" id="amtPNG" placeholder="Amount of PNG used">
+                                        <label for="amtPNG">Amount of PNG used</label>
+                                    </div>
+                                </span>
+                                <span class="input-group-text" id="basic-addon-1">t/day</span>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
-                                <label for="tFuel">Type of fuel mix used by industry</label>
                             </div>
 
+                            <div class="input-group mb-3 m-lg-4">
+                                <span class="form-floating">
+                                    <div class="form-floating labelFont">
+                                        <input type="text" class="form-control" id="amtNG" placeholder="Amount of NG used">
+                                        <label for="amtNG">Amount of NG used</label>
+                                    </div>
+                                </span>
+                                <span class="input-group-text" id="basic-addon-1">t/day</span>
+                                <div class="invalid-feedback">
+                                    Please provide a valid data.
+                                </div>
+                            </div>
 
+                            <!-- <div class="form-floating">
+                                        <input type="text" class="form-control" id="floatingInput">
+                                        <label for="floatingInput">Amount of Wood used</label>
+                                    </div> -->
 
+                            <div class="input-group mb-3 m-lg-4">
+                                <span class="form-floating">
+                                   <div class="form-floating labelFont">
+                                        <input type="text" class="form-control" id="amtBriquette" placeholder="Amount of Briquette used">
+                                        <label for="amtBriquette">Amount of Briquette used</label>
+                                    </div>
+                                </span>
+                                <span class="input-group-text" id="basic-addon-1">t/day</span>
+                                <div class="invalid-feedback">
+                                    Please provide a valid data.
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-3 m-lg-4">
+                                <span class="form-floating">
+                                   <div class="form-floating labelFont">
+                                        <input type="text" class="form-control" id="amtWood"  placeholder="Amount of Wood used">
+                                        <label for="amtWood">Amount of Wood used</label>
+                                    </div> 
+                                </span>
+                                <span class="input-group-text" id="basic-addon-1">t/day</span>
+                                <div class="invalid-feedback">
+                                    Please provide a valid data.
+                                </div>
+                            </div>
+</div></div>
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
                                     <button class="btn btn-primary " type="submit">Submit form</button>

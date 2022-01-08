@@ -1700,6 +1700,10 @@ section {
   font-size: calc(100% + .2vw + .2vh);
 }
 
+.labelFont label{
+  font-size: calc(70% + .1vw + .1vh);
+}
+
 .fade-to-img img {
     position: fixed;
     left: -7%;
