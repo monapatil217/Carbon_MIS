@@ -49,27 +49,34 @@
 
             <div class="row">
 
-                <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
+                <div class="col-md-12 col-lg-6  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
                         <h3>Transport</h3>
-                        <div class="card">
-                            <div class="card-body">
+                        <!-- <div class="card">
+                            <div class="card-body"> -->
                                 <h5>
-                                    <p> After burning 1 liter of diesel 2.62 kg of co2 is release in enviroment</p>
-                                    <p>Whereas petrol has a lower carbon content and produces about 2.39 kgs of co2 per
-                                        liter</p>
+                                    <ul style="margin-left: 10px;">
+                                        <li class="popupli"> After burning 1 liter of diesel 2.62 kg of co2 is release in enviroment .</li>
+                                        <li class="popupli">Whereas petrol has a lower carbon content and produces about 2.39 kgs of co2 per liter.</li>
+                                        <!-- <li class="popupli">Around 60.9% installed generation capacity is due to fossil fuel. </li>
+                                        <li class="popupli">Around 37.9% installed generation capacity is due to renewable energy sources.</li>
+                                        <li class="popupli">Around 1.7% installed generation capacity is due to Nuclear Fuel.</li> -->
+                                   </ul>
                                 </h5>
-                            </div>
-                        </div>
+                            <!-- </div>
+                        </div> -->
                     </div>
                 </div>
 
-                <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
+                <div class="col-md-12 col-lg-6  mb-3  s" data-aos-delay="200">
                     <div class="in-sec">
                         <h4 class="text-center mb-2">Transport</h4>
                         <form class="needs-validation" novalidate>
+                         
+                         <div class="row ">
+                            <div class="col-lg-6">
 
-                            <div class="form-floating mt-5">
+                            <div class="form-floating mt-3">
                                 <input type="text" class="form-control" id="2Wheeler" placeholder="Two wheeler"
                                     required>
                                 <div class="invalid-feedback">
@@ -103,7 +110,9 @@
                                 </div>
                                 <label for="bus">Bus</label>
                             </div>
-
+                    </div>
+                    <!-- <div class="row "> -->
+                        <div class="col-lg-6">
                             <div class="form-floating mt-3">
                                 <input type="text" class="form-control" id="tempo" placeholder="Tempo" required>
                                 <div class="invalid-feedback">
@@ -135,7 +144,7 @@
                                 </div>
                                 <label for="flight">Flight</label>
                             </div>
-
+</div></div>
 
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
@@ -148,11 +157,90 @@
                 </div>
             </div>
 
+            <div class="row align-items-center justify-content-center" id="moreInfo">
+
+                <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+
+                    <div class="popup-flex fade-to-img" onclick="showEleInfo();">
+                        <img class="reggot" id="popup-btn" src="img/sedan.png" width="80" height="80">
+                    </div>
+
+                    <div id="popup-wrapper" class="popup-container">
+                        <div class="popup-content">
+
+                            <div class="row align-items-center justify-content-center">
+                                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <!-- <p>1 unit of electricity is equal to 1000 watts. which means 1 unit = 1 kwatt
+                                        electricity</p>
+                                    <p>Burning 1 kg of bituminous coal will produce 2.42 kg of carbon dioxide</p>
+                                    <p>The emissions per unit of electricity are estimated to be in the range of 0.91
+                                        to 0.95 kg/kWh for CO2</p> -->
+                                </div>
+                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="btn-container">
+                                        <a href="#" id="close" class="btn-gotit">Got It</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section><!-- End Hero -->
 
 
     <script>
+
+     var popup = document.getElementById('popup-wrapper');
+        var btn = document.getElementById("popup-btn");
+        var span = document.getElementById("close");
+        btn.onclick = function () {
+            popup.classList.add('show');
+        }
+        span.onclick = function () {
+            popup.classList.remove('show');
+        }
+
+        window.onclick = function (event) {
+            if (event.target == popup) {
+                popup.classList.remove('show');
+            }
+        }
+
+        // var div = document.getElementById("moreInfo");
+        // div.style.display = "none";
+
+    function showEleInfo(){
+        var div = document.getElementById("moreInfo");
+        div.style.display = "block";
+
+        $("#popUpData").empty();
+            var html1 = '<div class="row" >'
+
+                + '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto "><center><h5 class="mt-4">Transport </h5></center>'
+
+                + '<div class="row mt-2 mb-3">'
+                + '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'
+                + '<ul style="margin-left: 10px;">'
+                + '<li class="popupli"> After burning 1 liter of diesel 2.62 kg of co2 is release in enviroment .</li>'
+                + '<li class="popupli">Whereas petrol has a lower carbon content and produces about 2.39 kgs of co2 per liter.</li>'
+                // + '<li class="popupli">Around 60.9% installed generation capacity is due to fossil fuel. </li>'
+                // + '<li class="popupli">Around 37.9% installed generation capacity is due to renewable energy sources.</li>'
+                // + '<li class="popupli">Around 1.7% installed generation capacity is due to Nuclear Fuel.</li>'
+                + '</ul>'
+                // + '<br>Despite its soaring energy needs, India has one of the lowest per capita rates of consumption of power in the world - 734 units as compared to a world average of 2,429 units. </b></p>'
+                + '<center> <a class="my-3" href="http://www.ghgplatform-india.org/emissionestimates-phase2" target="_blank" rel="noopener noreferrer">Reference</a></center>'
+                + '<center><a class="my-3" href="http://www.technogreen.co.in/Survey/files/Estimates-Energy-National.xlsx" target="_blank" rel="noopener noreferrer">Reference</a></center>'
+
+                + '</div> '
+                + '</div>'
+                + '</div></div>';
+        $("#popUpData").append(html1);
+    }
+
     // Example starter JavaScript for disabling form submissions if there are invalid fields
     (function() {
         'use strict';
@@ -185,6 +273,7 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+      <script src="assets/js/bootstrap-show-modal.js"></script>
 
 </body>
 

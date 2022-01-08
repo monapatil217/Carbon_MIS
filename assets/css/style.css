@@ -1719,6 +1719,9 @@ section {
 
 /* ...................css for popup................. */
 
+.popupli {
+    list-style-type: "❖ ";
+}
 
 .popup-flex {
     display: inline-flex;
