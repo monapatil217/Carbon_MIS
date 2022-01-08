@@ -31,7 +31,7 @@
                 <li class="dropdown"><a href=""><span>Industry</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="industryEnergy.php">Energy</a></li>
-                        <li><a href="industry-pp.php">Process & Product</a></li>
+                        <li><a href="industryPP.php">Process & Product</a></li>
                     </ul>
                 </li>
 

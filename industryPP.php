@@ -53,21 +53,8 @@
                 <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
                         <h3>Industry-Process and Product</h3>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5>
-                                    <p>Total Emissions in 2019 = 6,558 Million Metric Tons of CO2 equivalent.</p>
-                                    <p>CO2 accounts for about 76 percent of total greenhouse gas emissions. Methane,
-                                        primarily from agriculture, contributes 16 percent of greenhouse</p>
-                                    <p>Gas emissions and nitrous oxide, mostly from industry and agriculture,
-                                        contributes 6 percent to global emissions.</p>
-                                    <p>Carbon dioxide emissions from fossil fuel and industrial purposes in India
-                                        totaled 2,412 million metric tons in 2020.</p>
-                                    <p>This was a reduction of six percent compared with 2019 levels, a year in which
-                                        emissions in India peaked.</p>
-                                </h5>
-                            </div>
-                        </div>
+                       
+                        
                     </div>
                 </div>
 
@@ -78,15 +65,23 @@
 
                             <div>
                                 <h4>Industrial Process and Product</h4>
+                                 <marquee width="100%" direction="left" height="30px">
+                                    t - tonne
+                                </marquee>
                             </div>
 
-                            <div class="form-floating mb-2">
-                                <input type="text" class="form-control" id="mipo"
-                                    placeholder="Material input or product output" required>
+                            <div class="input-group mb-3 ">
+                                <div class="col-1"></div> 
+                                <span class="form-floating">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="amtProd" placeholder="Amount of product">
+                                        <label for="amtProd">Amount of product</label>
+                                    </div>
+                                </span>
+                                <span class="input-group-text" id="basic-addon-1">t/year</span>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
-                                <label for="mipo">Material input or product output</label>
                             </div>
 
                             <div class="row ">
@@ -96,6 +91,33 @@
                             </div>
                         </form>
 
+                    </div>
+                </div>
+            </div>
+
+             <div class="row align-items-center justify-content-center" id="moreInfo">
+
+                <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+
+                    <div class="popup-flex fade-to-img" onclick="showPPInfo();">
+                        <img class="reggot" id="popup-btn" src="img/distributed.png" width="80" height="80">
+                    </div>
+
+                    <div id="popup-wrapper" class="popup-container">
+                        <div class="popup-content">
+
+                            <div class="row align-items-center justify-content-center">
+                                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                </div>
+                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="btn-container">
+                                        <a href="#" id="close" class="btn-gotit">Got It</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -133,8 +155,10 @@
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
-
+    <script src="js/industryPPModel.js"></script>
+    
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap-show-modal.js"></script>
 
 
     <!-- Template Main JS File -->
