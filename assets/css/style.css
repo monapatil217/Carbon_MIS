@@ -1694,7 +1694,11 @@ section {
 
 
 
-/* Changes done by Monika */
+/********************************* Changes done by Monika ****************************************/
+
+.infoFont u li{
+  font-size: calc(100% + .2vw + .2vh);
+}
 
 .fade-to-img img {
     position: fixed;

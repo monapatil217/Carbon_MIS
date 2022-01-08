@@ -50,12 +50,12 @@
 
             <div class="row">
 
-                <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
-                    <div class="in-sec">
+                <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
+                    <div class="in-sec infoFont">
                         <h3>Electricity</h3>
                         <!-- <div class="card">
                             <div class="card-body"> -->
-                                <h5>
+                                
 
                                 <ul style="margin-left: 10px;"> 
                                 <li class="popupli"> 1 unit of electricity is equal to 1000 watts. which means 1 unit = 1 kwatt electricity.</li>
@@ -64,7 +64,7 @@
                                 <!-- <li class="popupli">Around 37.9% installed generation capacity is due to renewable energy sources.</li> 
                                 <li class="popupli">Around 1.7% installed generation capacity is due to Nuclear Fuel.</li> -->
                                 </ul>
-                                </h5>
+                                
                             <!-- </div>
                         </div> -->
                     </div>
@@ -78,11 +78,34 @@
                         </marquee>
                         <form class="needs-validation" novalidate>
 
-                            <div class="input-group mb-3 m-lg-4">
+                                                  
+
+                            <div class="input-group mb-3">
+                                <div class="col-1"></div> 
                                 <span class="form-floating">
-                                    <input type="text" class="form-control" id="eleResi"
-                                        aria-describedby="basic-addon-1" ... />
-                                    <label for="eleResi">Residential ELEC use</label>
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="resElec" placeholder="name@example.com">
+                                        <label for="resElec">Residential ELEC use</label>
+                                    </div>
+                                </span>
+                                <span class="input-group-text" id="basic-addon-1">MW/m</span>
+                                <div class="invalid-feedback">
+                                    Please provide a valid data.
+                                </div>
+                            </div>
+
+                            <!-- <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <label for="floatingInput">Street light ELEC use</label>
+                                    </div> -->
+
+                            <div class="input-group mb-3 ">
+                                <div class="col-1"></div> 
+                                <span class="form-floating">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="comElec" placeholder="name@example.com">
+                                        <label for="comElec">Commercial ELEC use</label>
+                                    </div>
                                 </span>
                                 <span class="input-group-text" id="basic-addon-1">MW/m</span>
                                 <div class="invalid-feedback">
@@ -91,10 +114,12 @@
                             </div>
 
                             <div class="input-group mb-3 ">
+                                <div class="col-1"></div> 
                                 <span class="form-floating">
-                                    <input type="text" class="form-control" id="eleCom" aria-describedby="basic-addon-1"
-                                        ... />
-                                    <label for="eleCom">Commercial ELEC use</label>
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="slumEle" placeholder="name@example.com">
+                                        <label for="slumEle">Slum area ELEC use</label>
+                                    </div>
                                 </span>
                                 <span class="input-group-text" id="basic-addon-1">MW/m</span>
                                 <div class="invalid-feedback">
@@ -103,22 +128,12 @@
                             </div>
 
                             <div class="input-group mb-3 ">
+                                <div class="col-1"></div> 
                                 <span class="form-floating">
-                                    <input type="text" class="form-control" id="eleSum" aria-describedby="basic-addon-1"
-                                        ... />
-                                    <label for="eleSum">Slum area ELEC use</label>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">MW/m</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                            </div>
-
-                            <div class="input-group mb-3 ">
-                                <span class="form-floating">
-                                    <input type="text" class="form-control" id="eleSL" aria-describedby="basic-addon-1"
-                                        ... />
-                                    <label for="eleSL">Street light ELEC use</label>
+                                     <div class="form-floating">
+                                        <input type="email" class="form-control" id="streetEle" placeholder="name@example.com">
+                                        <label for="streetEle">Street light ELEC use</label>
+                                    </div>
                                 </span>
                                 <span class="input-group-text" id="basic-addon-1">MW/m</span>
                                 <div class="invalid-feedback">
