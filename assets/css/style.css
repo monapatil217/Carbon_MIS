@@ -1689,3 +1689,277 @@ section {
 }
 
 
+
+
+
+
+
+/* Changes done by Monika */
+
+.fade-to-img img {
+    position: fixed;
+    left: -7%;
+    /* top: 80%; */
+    bottom: -5%;
+    z-index: 2;
+    -webkit-animation: wiggle 1s infinite;
+    animation: wiggle 5s infinite;
+}
+
+@keyframes wiggle {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+}
+
+
+/* ...................css for popup................. */
+
+
+.popup-flex {
+    display: inline-flex;
+    position: fixed;
+    bottom: 0px;
+    right: 60px;
+    animation: run 6s ease;
+    height: 100px;
+    width: 100px;
+}
+
+@keyframes run {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+.popup-container {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.3);
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(21, 17, 17, 0.61); */
+    display: flex;
+    align-items: center;
+}
+
+.popup-content {
+    border-radius: 50px;
+    background-color: #B6EFF3;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid rgb(166, 213, 214);
+    width: 650px;
+}
+
+.popup-content p {
+    font-size: 17px;
+    padding: 10px;
+    line-height: 20px;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.more-articles {
+    margin: 30px 30px 50px;
+    font-size: 20px;
+}
+
+.more-articles a {
+    margin: 0 10px;
+    text-decoration: underline;
+}
+
+/*...................button design .....  */
+
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+h1 {
+    margin: 50px 0;
+    color: #fff;
+    font-family: 'Indie Flower', cursive;
+    font-size: 48px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.btn-container {
+    position: absolute;
+    left: 50%;
+    margin: 0 0 150px -100px;
+}
+
+.btn-gotit {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #FF6138;
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'Indie Flower', cursive;
+    font-size: 22px;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px);
+    -webkit-animation-name: hover;
+    animation-name: hover;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+.btn-gotit before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: -webkit-transform, opacity;
+    transition-property: transform, opacity;
+    opacity: .4;
+    -webkit-transform: translateY(6px);
+    -ms-transform: translateY(6px);
+    transform: translateY(6px);
+    -webkit-animation-name: hover-shadow;
+    animation-name: hover-shadow;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+.btn-gotit hover {
+    background-color: #76FAC7;
+}
+
+@keyframes hover {
+    50% {
+        -webkit-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+        transform: translateY(-3px);
+    }
+    100% {
+        -webkit-transform: translateY(-6px);
+        -ms-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+}
+
+@-webkit-keyframes hover-shadow {
+    0% {
+        -webkit-transform: translateY(6px);
+        transform: translateY(6px);
+        opacity: .4;
+    }
+    50% {
+        -webkit-transform: translateY(3px);
+        transform: translateY(3px);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateY(6px);
+        transform: translateY(6px);
+        opacity: .4;
+    }
+}
+
+@keyframes hover-shadow {
+    0% {
+        -webkit-transform: translateY(6px);
+        -ms-transform: translateY(6px);
+        transform: translateY(6px);
+        opacity: .4;
+    }
+    50% {
+        -webkit-transform: translateY(3px);
+        -ms-transform: translateY(3px);
+        transform: translateY(3px);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateY(6px);
+        -ms-transform: translateY(6px);
+        transform: translateY(6px);
+        opacity: .4;
+    }
+}
+
+@-webkit-keyframes hover {
+    50% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+    }
+    100% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes hover {
+    50% {
+        -webkit-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+        transform: translateY(-3px);
+    }
+    100% {
+        -webkit-transform: translateY(-6px);
+        -ms-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+}
+
+
+/* .................info button design................. */
