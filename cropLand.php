@@ -56,14 +56,7 @@
                         <h3>Crop Land</h3>
                         <div class="card">
                             <div class="card-body">
-                                <h5>
-                                    <p>Total Emissions in 2019 = 6,558 Million Metric Tons of CO2 equivalent.</p>
-                                    <p>Globally cotton cultivation accounts for 220 million metric tons of CO2 per year.
-                                    </p>
-                                    <p>Cropland-based agricultural activities account for 24.17 percent of India’s total
-                                        methane and 95.84 percent of the total nitrous oxide emission from the
-                                        agricultural sector.</p>
-                                </h5>
+
                             </div>
                         </div>
                     </div>
@@ -78,13 +71,28 @@
                         <form class="needs-validation" novalidate>
 
 
-                            <div class="input-group mb-3 mt-3">
+                            <!-- <div class="input-group mb-3 mt-3">
                                 <span class="form-floating">
                                     <input type="text" class="form-control" id="areaCrop"
                                         aria-describedby="basic-addon-1" ... />
                                     <label for="areaCrop">Area under Crop Land</label>
                                 </span>
                                 <span class="input-group-text" id="basic-addon-1">sq.km</span>
+                                <div class="invalid-feedback">
+                                    Please provide a valid data.
+                                </div>
+                            </div> -->
+
+                            <div class="input-group mb-3 ">
+                                <div class="col-1"></div>
+                                <span class="form-floating">
+                                    <div class="form-floating">
+                                        <input type="Text" class="form-control" id="areaCrop"
+                                            placeholder="name@example.com">
+                                        <label for="areaCrop">Area under Crop Land</label>
+                                    </div>
+                                </span>
+                                <span class="input-group-text" id="basic-addon-1">sq.Km</span>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
