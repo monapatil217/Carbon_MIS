@@ -72,13 +72,29 @@
                         </marquee>
                         <form class="needs-validation" novalidate>
 
-                            <div class="input-group mb-3 mt-3">
+                            <!-- <div class="input-group mb-3 mt-3">
                                 <span class="form-floating">
                                     <input type="text" class="form-control" id="areaForest"
                                         aria-describedby="basic-addon-1" ... />
                                     <label for="areaForest">Area under Forest Land</label>
                                 </span>
                                 <span class="input-group-text" id="basic-addon-1">sq.km</span>
+                                <div class="invalid-feedback">
+                                    Please provide a valid data.
+                                </div>
+                            </div> -->
+
+
+                            <div class="input-group ">
+                                <div class="col-1"></div>
+                                <span class="form-floating">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="areaForest"
+                                            placeholder="name@example.com">
+                                        <label for="areaForest">Area under Forest Land</label>
+                                    </div>
+                                </span>
+                                <span class="input-group-text" id="basic-addon-1">sqKM</span>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
