@@ -13,7 +13,7 @@
 
                 <li class="dropdown"><a><span>Energy</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="energy.php">Electricity</a></li>
+                        <li><a href="eletricityEnergy.php">Electricity</a></li>
                     </ul>
                 </li>
 
@@ -30,7 +30,7 @@
                 <li><a class="nav-link scrollto">WasteWater</a></li>
                 <li class="dropdown"><a href=""><span>Industry</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="industry-energy.php">Energy</a></li>
+                        <li><a href="industryEnergy.php">Energy</a></li>
                         <li><a href="industry-pp.php">Process & Product</a></li>
                     </ul>
                 </li>

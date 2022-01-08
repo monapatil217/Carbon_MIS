@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Industry-Energy</title>
+    <title>Industry Energy</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -52,7 +52,7 @@
 
                 <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
-                        <h3>Industry-Energy</h3>
+                        <h3>Industry Energy</h3>
                         <div class="card">
                             <div class="card-body">
                                 <h5>
@@ -101,12 +101,50 @@
                     </div>
                 </div>
             </div>
+            <!-- Start PopUp div -->
+             <div class="row align-items-center justify-content-center" id="moreInfo">
+
+                <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+
+                    <div class="popup-flex fade-to-img" onclick="showIndFInfo();">
+                        <img class="reggot" id="popup-btn" src="img/barrel.png" width="80" height="80">
+                    </div>
+
+                    <div id="popup-wrapper" class="popup-container">
+                        <div class="popup-content">
+
+                            <div class="row align-items-center justify-content-center">
+                                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <!-- <p>1 unit of electricity is equal to 1000 watts. which means 1 unit = 1 kwatt
+                                        electricity</p>
+                                    <p>Burning 1 kg of bituminous coal will produce 2.42 kg of carbon dioxide</p>
+                                    <p>The emissions per unit of electricity are estimated to be in the range of 0.91
+                                        to 0.95 kg/kWh for CO2</p> -->
+                                </div>
+                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="btn-container">
+                                        <a href="#" id="close" class="btn-gotit">Got It</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End PopUp div -->
+
 
         </div>
+
+        </div>
+    
     </section><!-- End Hero -->
 
 
     <script>
+
     // Example starter JavaScript for disabling form submissions if there are invalid fields
     (function() {
         'use strict';
@@ -135,9 +173,11 @@
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
+   
+    <script src="js/industryEnergyModel.js"></script>
 
     <script src="assets/js/jquery.min.js"></script>
-
+    <script src="assets/js/bootstrap-show-modal.js"></script>
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
