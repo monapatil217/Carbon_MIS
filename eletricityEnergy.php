@@ -49,22 +49,18 @@
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
             <div class="row">
-
                 <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">
                         <h3>Electricity</h3>
                         <!-- <div class="card">
-                            <div class="card-body"> -->
-                                
-
+                            <div class="card-body"> --> 
                                 <ul style="margin-left: 10px;"> 
-                                <li class="popupli"> 1 unit of electricity is equal to 1000 watts. which means 1 unit = 1 kwatt electricity.</li>
-                                <li class="popupli">Burning 1 kg of bituminous coal will produce 2.42 kg of carbon dioxide.</li>
-                                <li class="popupli">The emissions per unit of electricity are estimated to be in the range of 0.91 to 0.95 kg/kWh for CO2 </li> 
-                                <!-- <li class="popupli">Around 37.9% installed generation capacity is due to renewable energy sources.</li> 
-                                <li class="popupli">Around 1.7% installed generation capacity is due to Nuclear Fuel.</li> -->
+                                    <li class="popupli"> 1 unit of electricity is equal to 1000 watts. which means 1 unit = 1 kwatt electricity.</li>
+                                    <li class="popupli">Burning 1 kg of bituminous coal will produce 2.42 kg of carbon dioxide.</li>
+                                    <li class="popupli">The emissions per unit of electricity are estimated to be in the range of 0.91 to 0.95 kg/kWh for CO2 </li> 
+                                    <!-- <li class="popupli">Around 37.9% installed generation capacity is due to renewable energy sources.</li> 
+                                    <li class="popupli">Around 1.7% installed generation capacity is due to Nuclear Fuel.</li> -->
                                 </ul>
-                                
                             <!-- </div>
                         </div> -->
                     </div>
@@ -77,9 +73,6 @@
                             ELEC - Electricity / MW - megawatt / m - month.
                         </marquee>
                         <form class="needs-validation" novalidate>
-
-                                                  
-
                             <div class="input-group mb-3">
                                 <div class="col-1"></div> 
                                 <span class="form-floating">
