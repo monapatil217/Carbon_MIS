@@ -1,3 +1,6 @@
+<?php
+//require "php/session.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,7 +56,11 @@
                 <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
                         <h3>Land Use</h3>
-
+                        <h5>
+                            <p>It has been defined as "the purposes and activities through which people interact 
+                                with land and terrestrial ecosystems"[3] and as "the total of arrangements, activities, 
+                                and inputs that people undertake in a certain land type.</p>
+                        </h5>
                     </div>
                 </div>
 

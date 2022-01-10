@@ -1,3 +1,6 @@
+<?php
+//require "php/session.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,8 +65,9 @@
                 <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
                         <h3>Crop Land</h3>
-
-
+                        <h5>
+                            <p> Land that is suited to or used for crops as known as Crop Land.</p>
+                        </h5>
 
                         <div id="chartName">
                             <h3> Crop Land Graph</h3>

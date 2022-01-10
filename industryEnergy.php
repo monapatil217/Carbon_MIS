@@ -1,3 +1,6 @@
+<?php
+//require "php/session.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,6 +62,8 @@
                 <div class="col-md-12 col-lg-5  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
                         <h3>Industry Energy</h3>
+
+                        
 
                         <div id="chartName">
                             <h3> Industry Graph</h3>
