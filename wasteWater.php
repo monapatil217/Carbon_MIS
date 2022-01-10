@@ -56,10 +56,10 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5>
-                                    <p>Currently, India has the capacity to treat approximately 37% of its wastewater,
+                                    <!-- <p>Currently, India has the capacity to treat approximately 37% of its wastewater,
                                         or 22,963 million litres per day (MLD), against a daily</p>
                                     <p>sewage generation of approximately 61,754 MLD according to the 2015 report of the
-                                        Central Pollution Control Board.</p>
+                                        Central Pollution Control Board.</p> -->
                                 </h5>
                             </div>
                         </div>
@@ -71,49 +71,74 @@
                         <h4 class="text-center mb-2">Waste Water</h4>
                         <form class="needs-validation" novalidate>
 
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="waterConsumption"
-                                    placeholder="Water Consumption (CMD)" required>
+                            <div class="input-group mb-3">
+                                <div class="col-1"></div>
+                                <span class="form-floating">
+                                    <div class="form-floating labelFont">
+                                        <input type="text" class="form-control" id="waterConsumption" placeholder="Water Consumption">
+                                        <label for="waterConsumption">Water Consumption</label>
+                                    </div>
+                                </span>
+                                <span class="input-group-text" id="basic-addon-1">CMD</span>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
-                                <label for="waterConsumption">Water Consumption (CMD)</label>
                             </div>
 
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="waterGenration"
-                                    placeholder="Waste water generated (CMD)" required>
+                            <div class="input-group mb-3">
+                                <div class="col-1"></div>
+                                <span class="form-floating">
+                                    <div class="form-floating labelFont">
+                                        <input type="text" class="form-control" id="waterGenration" placeholder="Waste water generated">
+                                        <label for="waterGenration">Waste water generated</label>
+                                    </div>
+                                </span>
+                                <span class="input-group-text" id="basic-addon-1">CMD</span>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
-                                <label for="waterConsumption">How much Waste water generated (CMD)</label>
                             </div>
 
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="waterCollection"
-                                    placeholder="Waste water collection (CMD)" required>
+                            <div class="input-group mb-3">
+                                <div class="col-1"></div>
+                                <span class="form-floating">
+                                    <div class="form-floating labelFont">
+                                        <input type="text" class="form-control" id="waterCollection" placeholder="Waste water collection">
+                                        <label for="waterCollection">Waste water collection</label>
+                                    </div>
+                                </span>
+                                <span class="input-group-text" id="basic-addon-1">CMD</span>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
-                                <label for="waterCollection">How much Waste water collection (CMD)</label>
                             </div>
 
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="waterCollection"
-                                    placeholder="Waste Water Treatment" required>
+                            <div class="input-group mb-3">
+                                <div class="col-1"></div>
+                                <span class="form-floating">
+                                    <div class="form-floating labelFont">
+                                        <input type="text" class="form-control" id="waterTreat" placeholder="Qty of treat from WW">
+                                        <label for="waterTreat">Qty of treat from waste water</label>
+                                    </div>
+                                </span>
+                                <span class="input-group-text" id="basic-addon-1">CMD</span>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
-                                <label for="waterCollection">Quantity of treat from waste water (CMD)</label>
                             </div>
 
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="noSTP" placeholder="No. of STP present"
-                                    required>
+                            <div class="input-group mb-3">
+                                <div class="col-1"></div>
+                                <span class="form-floating">
+                                    <div class="form-floating labelFont">
+                                        <input type="text" class="form-control" id="noSTP" placeholder="No of STP">
+                                        <label for="noSTP">No of STP</label>
+                                    </div>
+                                </span>
+                                <span class="input-group-text" id="basic-addon-1">CMD</span>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
-                                <label for="noSTP">No of STP present in your city</label>
                             </div>
 
                             <!-- The below section will open after adding js -->
@@ -178,6 +203,33 @@
                 </div>
             </div>
 
+            <div class="row align-items-center justify-content-center" id="moreInfo">
+
+                <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+
+                    <div class="popup-flex fade-to-img" onclick="showWaterInfo();">
+                        <img class="reggot" id="popup-btn" src="img/water-drop.png" width="80" height="80">
+                    </div>
+
+                    <div id="popup-wrapper" class="popup-container">
+                        <div class="popup-content">
+
+                            <div class="row align-items-center justify-content-center">
+                                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                                </div>
+                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="btn-container">
+                                        <a href="#" id="close" class="btn-gotit">Got It</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section><!-- End Hero -->
 
@@ -211,8 +263,10 @@
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="js/wasteWaterModel.js"></script>
 
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap-show-modal.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 

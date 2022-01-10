@@ -176,7 +176,7 @@
 
                 <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
 
-                    <div class="popup-flex fade-to-img" onclick="showEleInfo();">
+                    <div class="popup-flex fade-to-img" onclick="showvehiInfo();">
                         <img class="reggot" id="popup-btn" src="img/sedan.png" width="80" height="80">
                     </div>
 
@@ -204,35 +204,6 @@
 
 
     <script>
-        var popup = document.getElementById('popup-wrapper');
-        var btn = document.getElementById("popup-btn");
-        var span = document.getElementById("close");
-        btn.onclick = function() {
-            popup.classList.add('show');
-        }
-        span.onclick = function() {
-            popup.classList.remove('show');
-        }
-
-        window.onclick = function(event) {
-            if (event.target == popup) {
-                popup.classList.remove('show');
-            }
-        }
-
-        // var div = document.getElementById("moreInfo");
-        // div.style.display = "none";
-
-        function showEleInfo() {
-            var div = document.getElementById("moreInfo");
-            div.style.display = "block";
-
-            $("#popUpData").empty();
-            var html1 = '<div class="row" >' +
-                '</div></div>';
-            $("#popUpData").append(html1);
-        }
-
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (function() {
             'use strict';
@@ -270,13 +241,13 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/js/jquery.min.js"></script>
-
+    <script src="js/energyTransportModel.js"></script>
 
     <script src="js/induGraph.js"></script>
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-    <!-- <script src="assets/js/bootstrap-show-modal.js"></script> -->
+    <script src="assets/js/bootstrap-show-modal.js"></script>
 
 
 </body>

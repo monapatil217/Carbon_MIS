@@ -60,38 +60,60 @@
                         <h4 class="text-center mb-2">Solid Waste</h4>
                         <form class="needs-validation" novalidate>
 
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="solidGen" placeholder="Solid waste Generation" required>
+                            <div class="input-group mb-3">
+                                <div class="col-1"></div>
+                                <span class="form-floating">
+                                    <div class="form-floating labelFont">
+                                        <input type="text" class="form-control" id="solidGen" placeholder="Solid waste Generation">
+                                        <label for="solidGen">Solid waste Generation</label>
+                                    </div>
+                                </span>
+                                <span class="input-group-text" id="basic-addon-1">tonne</span>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
-                                <label for="solidGen">Solid waste Generation in tonne</label>
                             </div>
 
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="solidColl" placeholder="Solid Waste Collection" required>
+                            <div class="input-group mb-3">
+                                <div class="col-1"></div>
+                                <span class="form-floating">
+                                    <div class="form-floating labelFont">
+                                        <input type="text" class="form-control" id="solidColl" placeholder="Solid Waste Collection">
+                                        <label for="solidColl">Solid Waste Collection</label>
+                                    </div>
+                                </span>
+                                <span class="input-group-text" id="basic-addon-1">tonne</span>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
-                                <label for="solidColl">How Much solid waste you collect in %</label>
                             </div>
 
-                          
-
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="solidTreat" placeholder="Solid Waste Treatement" required>
+                             <div class="input-group mb-3">
+                                <div class="col-1"></div>
+                                <span class="form-floating">
+                                    <div class="form-floating labelFont">
+                                        <input type="text" class="form-control" id="solidTreat" placeholder="Solid Waste Treatement">
+                                        <label for="solidTreat">Solid Waste Treatement</label>
+                                    </div>
+                                </span>
+                                <span class="input-group-text" id="basic-addon-1">tonne</span>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
-                                <label for="solidTreat">Which is way used to treat solid waste</label>
                             </div>
-
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="dumpingYard" placeholder="No. of Dumping yard present" required>
+                            
+                             <div class="input-group mb-3">
+                                <div class="col-1"></div>
+                                <span class="form-floating">
+                                    <div class="form-floating labelFont">
+                                        <input type="text" class="form-control" id="dumpingYard" placeholder="No. of Dumping yard present">
+                                        <label for="dumpingYard">No. of Dumping yard present</label>
+                                    </div>
+                                </span>
+                                <span class="input-group-text" id="basic-addon-1">tonne</span>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
-                                <label for="dumpingYard">No. of dumping yard present in your area</label>
                             </div>
 
 
@@ -140,6 +162,33 @@
                 </div>
             </div>
 
+             <div class="row align-items-center justify-content-center" id="moreInfo">
+
+                <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+
+                    <div class="popup-flex fade-to-img" onclick="showSolidInfo();">
+                        <img class="reggot" id="popup-btn" src="img/waste.png" width="80" height="80">
+                    </div>
+
+                    <div id="popup-wrapper" class="popup-container">
+                        <div class="popup-content">
+
+                            <div class="row align-items-center justify-content-center">
+                                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                   
+                                </div>
+                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="btn-container">
+                                        <a href="#" id="close" class="btn-gotit">Got It</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section><!-- End Hero -->
 
@@ -173,8 +222,12 @@
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
+   
+    <script src="js/solidWasteModel.js"></script>
 
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap-show-modal.js"></script>
+   
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 
