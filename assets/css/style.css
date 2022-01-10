@@ -341,14 +341,24 @@ h1, h2, h3, h4, h5, h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  background: url("../img/hero-bg.jpg") top center;
-  background-size: cover;
-  position: relative;
+  overflow: hidden;
+    position: relative;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/hero-bg.jpg);
+    background-repeat: no-repeat;
+    /*
+TRY IT ... with or without CENTER CENTER
+  background-position: center center; 
+*/
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    margin-top: 0vh;
 }
-#hero:before {
+/* #hero:before {
   content: "";
   background: rgba(255, 255, 255, 0.8);
   position: absolute;
@@ -356,11 +366,12 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   right: 0;
-}
+} */
 #hero .container {
   padding-top: 80px;
 }
  
+  /* background: url("../img/hero-bg.jpg") top center; */
 
 #hero h1 {
   margin: 0;
@@ -1695,6 +1706,11 @@ section {
 
 
 /********************************* Changes done by Monika ****************************************/
+
+.carbonDash h1 {
+        margin-top: 200px;
+        /* margin-right: 190px; */
+    }
 
 .infoFont u li{
   font-size: calc(100% + .2vw + .2vh);
