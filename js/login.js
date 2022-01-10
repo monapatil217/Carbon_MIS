@@ -6,6 +6,7 @@ function showLoginDesign(id) {
     $("#addUserDesign").empty();
     if (id == "user") {
         var html = '<div class="row mx-auto mt-5">'
+            +'<input type="hidden" id="role" name="role" value="user">'
             + '<div class="form-group mb-3">'
             + '<select class="form-select" id="username" name="username" required>'
             + '<option selected disabled value="">Choose City</option>'
@@ -30,9 +31,9 @@ function showLoginDesign(id) {
 
     $("#addAdminDesign").empty();
     if (id == "admin") {
-        var html =
-            '<div class="form-group mt-3">'
-            + '<input type="text" class="form-control"  id="userId" name="userId" placeholder="User Id" required>'
+        var html =  '<div class="form-group mt-3">'
+            +'<input type="hidden" id="role" name="role" value="Admin">'
+            + '<input type="text" class="form-control"  id="username" name="username" placeholder="User Id" required>'
             + '</div>'
             + '<div class="form-group">'
             + '<input id="password-field" type="password" class="form-control" placeholder="Password" required>'
