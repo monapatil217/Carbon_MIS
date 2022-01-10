@@ -46,64 +46,37 @@
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
+        <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+            <div class="row">
+                <div class="row justify-content-center ">
+                    <div class="col-xl-7 col-lg-9 text-center carbonDash">
+                        <h1>MIS system </h1>
+                        <h2>for Municipal Corporation</h2>
+                    </div>
 
-        <div class="row">
-            <div class="row justify-content-center ">
-                <div class="col-xl-7 col-lg-9 text-center carbonDash">
-                    <h1>MIS system </h1>
-                    <h2>for Municipal Corporation</h2>
-                </div>
-
-                <div class="text-center">
-                <a href="#about" class="btn-get-started scrollto">Get Started</a>
-                </div>
-            </div>
-            
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xl-6" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-
-            <div class="container py-5 text-white">            
-                <div class="row justify-content-center text-center">
-                    <div class="col-lg-8"> </div>
-                        <div class="col-md-6 col-lg-4 col-6 visitor">
-                            <h5>VISITORS</h5>
-                            <h5> <span id="count1"></span></h5>
-                        </div>
+                    <div class="text-center">
+                    <a href="#about" class="btn-get-started scrollto">Get Started</a>
                     </div>
                 </div>
+                
+                <!-- Visitor Count Display when it need -->
+                <!-- <div class="col-lg-6 col-md-12 col-sm-12 col-xl-6" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
 
-            </div>
-                    <!-- <img src="img/footprint2.png" class="rounded img-fluid d-block mx-auto" alt="First Vector Graphic"> -->
-        </div>
-        <!-- <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="row justify-content-center" style="height: 60vh">
-                <div class="col-xl-7 col-lg-9 text-center">
-                    <h1>MIS system </h1>
-                    <h2>for Municipal Corporation</h2>
-                </div>
-
-                <div class="text-center">
-                <a href="#about" class="btn-get-started scrollto">Get Started</a>
-                </div>
-            </div>
-
-            <div class="fade-to-b">
-                <a href="#services"><img class="emissionBtn" src="assets/img/logo3.png"></a>
-            </div>
-            
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xl-6" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                <div class="container py-5 text-white">
-                    <div class="row justify-content-center text-center">
-                        <div class="col-lg-8"> </div>
-                        <div class="col-md-6 col-lg-4 col-6 visitor">
-                            <h5>VISITORS</h5>
-                            <h5> <span id="count1"></span></h5>
+                
+                <div class="container py-5 text-white">            
+                        <div class="row justify-content-center text-center">
+                            <div class="col-lg-8"> </div>
+                                <div class="col-md-6 col-lg-4 col-6 visitor">
+                                    <h5>VISITORS</h5>
+                                    <h5> <span id="count1"></span></h5>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div id="chartdivDash" class="chart--containerDash dashChart"> </div>
+
+                </div> -->
+                        <!-- <img src="img/footprint2.png" class="rounded img-fluid d-block mx-auto" alt="First Vector Graphic"> -->
             </div>
-        </div> -->
+        </div> 
     </section><!-- End Hero -->
 
     <div class="fade-to-b">
@@ -867,7 +840,7 @@
 
 
      <!-- ***** Features Big Item Start ***** -->
-     <section class="section" id="about">
+     <!-- <section class="section" id="about">
       <div class="container">
           <div class="row">
               <div class="col-lg-7 col-md-12 col-sm-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
@@ -889,7 +862,7 @@
                           the soil and evaporated, transpired or incorporated by plants. It is particularly relevant
                           for agricultural, horticultural and forestry products</p>
 
-                      <!-- <a href="#about2" class="main-button">Measure Emissions</a> -->
+                      <a href="#about2" class="main-button">Measure Emissions</a>
                   </div>
               </div>
           </div>
@@ -917,7 +890,7 @@
               </div>
           </div>
       </div>
-  </section>
+  </section> -->
   <!-- ***** Features Big Item End ***** -->
 
   <!-- ***** Features Big Item Start ***** -->
@@ -952,77 +925,88 @@
 
         <div class="section-title">
           <h2>Frequently Asked Questions</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
             consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-            in iste officiis commodi quidem hic quas.</p>
+            in iste officiis commodi quidem hic quas.</p> -->
         </div>
 
         <div class="faq-list">
           <ul>
+
             <li data-aos="fade-up">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
-                data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i
+                data-bs-target="#faq-list-1">Why focus first on carbon dioxide?  <i
                   class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
                 <p>
-                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
-                  gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                  Carbon dioxide is released in greater amounts and represents 50% of the warming attributed to greenhouse gases.
+                  As the major contributor of global warming, any serious environmental and economic program must
+                  first address this issue. The bulk of carbon dioxide comes from generating power and moving about in fossil
+                  fuel powered vehicles,
+                  the rest comes from agricultural and other activities.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="100">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2"
-                class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i
+                class="collapsed">Why do I need to know my carbon footprint and what does it mean  <i
                   class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
-                  donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit
-                  ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                   Your carbon footprint represents the impact you are having on climate change.
+                    Your footprint is defined as the total greenhouse gas emissions,
+                    expressed as carbon dioxide equivalent (CO2e). In the CoGo app, we call these 'carbon emissions' ,
+                    measured in kilograms. These emissions come from your lifestyle choices, such as how you get around
+                    and what you eat. Knowing your carbon footprint helps you make changes to your lifestyle that will
+                    lower your impact.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3"
-                class="collapsed">Dolor sit amet consectetur adipiscing elit? <i
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2"
+                class="collapsed">I am only one person, can I really make that much of a difference  <i
                   class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum
-                  integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt.
-                  Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi
-                  quis
+                    Yes you can! You are a part of a greater movement.
+                    In the app we show you the collective impact of the entire community,
+                    so you can see how all of our individual actions add up to make a huge difference.
+                    Collective action is absolutely necessary for us to help our planet,
+                    but collective action can't happen without individuals - that's you!
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="300">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4"
-                class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3"
+                class="collapsed">How does calculate my carbon footprint <i
                   class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc
-                  vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus
-                  gravida quis blandit turpis cursus in.
+                Your carbon footprint is the carbon emissions that are created by your consumption and lifestyle choices.
+                A carbon footprint is measured in kgs of carbon dioxide
+                equivalent (CO2e) and represents your personal contribution to the polluting gases that cause climate change.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="400">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5"
-                class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem
-                dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4"
+                class="collapsed">What is the solution for the greenhouse problem?<i
+                  class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada
-                  nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis
-                  tellus in metus vulputate eu scelerisque.
+                  The solution is a significant reduction of the greenhouse gases produced by mankind.
+                  This can be achieved by coordinating participation on government, industry, community and individual levels.
+                  Luckily, the technology to drive our economies emissions free is already available,
+                  and a shift over time to these alternate sources of energy is within our means.
                 </p>
               </div>
             </li>
+
+            <!--  -->
 
           </ul>
         </div>
@@ -1042,9 +1026,10 @@
         </div>
 
         <div>
-          <iframe style="border:0; width: 100%; height: 270px;"
+        <iframe src="https://www.google.co.in/maps/d/embed?mid=1GNIIOkKoqwk6Ov4SDpa6x93hdRmRmTd6" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <!-- <iframe style="border:0; width: 100%; height: 270px;"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-            frameborder="0" allowfullscreen></iframe>
+            frameborder="0" allowfullscreen></iframe> -->
         </div>
 
         <div class="row mt-5">
@@ -1054,19 +1039,20 @@
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>Kalpataru Point, 3rd and 4th floor,opp. PVR Theater ,Sion Circle, Mumbai, Maharashtra 400022</p>
               </div>
 
-              <div class="email">
+              <!-- Info need to be added after some time -->
+              <!-- <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
                 <p>info@example.com</p>
-              </div>
+              </div> -->
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
+                <p>022- 24020781</p>
               </div>
 
             </div>
@@ -1077,7 +1063,7 @@
 
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="row">
-                <div class="col-md-6 form-group">
+                <div class="col-md-6 form-group mt-3">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-3">
@@ -1115,13 +1101,13 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>OnePage</h3>
+            <h3>Carbon MIS</h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              Maharashtra Pollution Control Board<br>
+              Kalpataru Point, 3rd and 4th floor,opp. PVR Theater ,
+              Sion Circle, Mumbai, Maharashtra 400022 <br><br>
+              <strong>Phone:</strong> 022-24020781 / 022-24020782 <br>
+              <!-- <strong>Email:</strong> info@example.com<br> -->
             </p>
           </div>
 
@@ -1130,7 +1116,7 @@
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contact Us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
             </ul>
@@ -1174,11 +1160,11 @@
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://twitter.com/mpcb_official/" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.facebook.com/MPCBOfficial/" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/mpcb_official/" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCSN1pc56H0HaJq8ETiiWiVQ" class="google-plus"><i class="bx bxl-youtube"></i></a>
+        <!-- <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> If need add link for linked in -->
       </div>
     </div>
   </footer><!-- End Footer -->

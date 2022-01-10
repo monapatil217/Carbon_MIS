@@ -52,9 +52,73 @@
                         <h2 style="color:white;">LOGIN</h2>
                     </div>
                     <div class="in-sec">
+
+                    <!-- <div id="card">
+                                <div id="card-content">
+                                <div id="card-title">
+                                    <h2>LOGIN</h2>
+                                    <div class="underline-title"></div>
+                                </div>
+                                <form action="php/loginId.php" method="POST" class="form">
+                                    <label for="user-email" style="padding-top:13px">
+                                        &nbsp;Email
+                                    </label>
+                                    <input id="user-email" class="form-content" type="email" name="username" autocomplete="on" required />
+                                    <div class="form-border"></div>
+                                    <label for="user-password" style="padding-top:22px">&nbsp;Password
+                                    </label>
+                                    <input id="user-password" class="form-content" type="password" name="password" required />
+                                    <div class="form-border"></div>
+                                    <a href="#">
+                                    <legend id="forgot-pass">Forgot password?</legend>
+                                    </a>
+                                    <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
+                                    <a href="#" id="signup">Don't have account yet?</a>
+                                </form>
+                                </div>
+                            </div> -->
                         <form class="needs-validation" action="php/loginId.php" method="POST">
 
-                            <div class="row mx-auto mt-5  justify-content-center">
+                        <div class="social d-flex text-center">
+                            <a href="#" class="px-2 py-2 mr-md-1 rounded" id="user" onclick="showLoginDesign('user')"><span class="ion-logo-facebook mr-2"></span> User</a>
+                            <a href="#" class="px-2 py-2 ml-md-1 rounded" id="admin" onclick="showLoginDesign('admin')"><span class="ion-logo-twitter mr-2"></span> Admin</a>
+                        </div>
+
+                         <form action="#" class="signin-form">
+
+                             <div id="addUserDesign">
+
+                            </div>
+                            <div id="addAdminDesign">
+
+                            </div>
+
+                            <!-- <div class="form-group mt-3">
+                                <input type="text" class="form-control" placeholder="Username" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input id="password-field" type="password" class="form-control" placeholder="Password" required>
+                                <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
+                            </div> -->
+                            <div class="form-group d-md-flex">
+                                <div class="w-50 text-md-left">
+                                    <label class="checkbox-wrap checkbox-primary">Remember Me
+                                            <input type="checkbox" checked>
+                                            <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="w-50 text-md-right">
+                                    <a href="#" style="color: #000000">Forgot Password</a>
+                                </div>
+                            </div>
+                    </form>
+
+                            <!-- <div class="row mx-auto mt-5  justify-content-center">
                                 <div class="col-md-6 mb-3">
                                     <label for="username" class="form-label">City</label>
                                     <select class="form-select" id="username" name="username" required>
@@ -81,7 +145,7 @@
                                 <div class="col-md-12 mb-3 text-center">
                                     <button class="btn btn-primary btn-get-started scrollto " type="submit"> LOGIN </button>
                                 </div>
-                            </div>
+                            </div> -->
 
                         </form>
                     </div>
