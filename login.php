@@ -52,32 +52,31 @@
                         <h2 style="color:white;">LOGIN</h2>
                     </div>
                     <div class="in-sec">
-
                         <div class="social d-flex text-center">
                             <a href="#" class="px-2 py-2 mr-md-1 rounded" id="user" onclick="showLoginDesign('user')"><span class="ion-logo-facebook mr-2"></span> User</a>
                             <a href="#" class="px-2 py-2 ml-md-1 rounded" id="admin" onclick="showLoginDesign('admin')"><span class="ion-logo-twitter mr-2"></span> Admin</a>
                         </div>
+                        <form class="needs-validation" action="php/loginId.php" method="POST">
+                        
+                        <div id="addUserDesign">
+                           
+                        </div>
 
-                         <form action="php/loginId.php" method="POST" class="signin-form needs-validation">
+                        <div id="addAdminDesign">
 
-                             <div id="addUserDesign">
-
-                            </div>
-                            <div id="addAdminDesign">
-
-                            </div>
-
-                            <div class="form-group d-md-flex">
+                        </div>
+                            
+                               <div class="form-group d-md-flex">
                                 <div class="w-50 text-md-left">
                                     <label class="checkbox-wrap checkbox-primary">Remember Me
-                                            <input type="checkbox" checked>
-                                            <span class="checkmark"></span>
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
                                     </label>
                                 </div>
                                 <div class="w-50 text-md-right">
                                     <a href="#" style="color: #000000">Forgot Password</a>
                                 </div>
-                            </div>
+                            </div>  
 
                         </form>
                     </div>

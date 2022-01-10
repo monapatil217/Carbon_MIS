@@ -5,31 +5,33 @@ $(document).ready(function () {
 function showLoginDesign(id) {
     $("#addUserDesign").empty();
     if (id == "user") {
-        var html = '<input type="hidden" id="userId" name="userId" value="user">'
-            + '<div class="form-group mt-3">'
-            // + '<label for="username" class="form-label">City</label>'
+        var html = '<div class="row mx-auto mt-5">'
+            + '<div class="form-group mb-3">'
             + '<select class="form-select" id="username" name="username" required>'
             + '<option selected disabled value="">Choose City</option>'
             + '</select>'
-            + '<div class="invalid-feedback">Please select a City.</div>'
+            + '<div class="invalid-feedback">Please select a City. </div>'
             + '</div>'
             + '</div>'
-            + '<div class="form-group">'
-            + '<input id="password-field" type="password" class="form-control" placeholder="Password" required>'
-            + '<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>'
+            + '<div class="row">'
+            + '<div class="form-group mb-3">'
+            + '<input type="password" class="form-control" id="password" name="password" placeholder="Password" required>'
+            + '<div class="invalid-feedback">Please provide a valid data.</div>'
             + '</div>'
-            + '<div class="form-group">'
-            + '<button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>'
-            + '</div >';
-        // + '<div class="row mb-3 px-3 justify-content-center"> <button type="submit" id="myBtn" class="btn btn-blue text-center" onclick=loginDetail("number")>Login</button> </div>';
+            + '</div>'
+            + '<div class="row ">'
+            + '<div class="col-md-12 mb-3 text-center form-group">'
+            + '<button class="btn btn-primary btn-get-started scrollto " type="submit"> LOGIN </button>'
+            + '</div>'
+            + '</div>'
         $("#addUserDesign").append(html);
         getCity();
     }
 
     $("#addAdminDesign").empty();
     if (id == "admin") {
-        var html = '<input type="hidden" id="admin" name="admin" value="admin">'
-            + '<div class="form-group mt-3">'
+        var html =
+            '<div class="form-group mt-3">'
             + '<input type="text" class="form-control"  id="userId" name="userId" placeholder="User Id" required>'
             + '</div>'
             + '<div class="form-group">'
@@ -39,38 +41,38 @@ function showLoginDesign(id) {
             + '<div class="form-group">'
             + '<button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>'
             + '</div >';
-        // + '<div class="row mb-3 px-3 justify-content-center"> <button type="submit" id="myBtn" class="btn btn-blue text-center" onclick=loginDetail("number")>Login</button> </div>';
+        + '<div class="row mb-3 px-3 justify-content-center"> <button type="submit" id="myBtn" class="btn btn-blue text-center" onclick=loginDetail("number")>Login</button> </div>';
 
         $("#addAdminDesign").append(html);
     }
-
 }
-function user() {
-    $("#loginfrom").empty();
-    var html = '<div class="row mx-auto mt-5  justify-content-center">'
-        + '<div class="col-md-6 mb-3">'
-        + '<label for="username" class="form-label">City</label>'
-        + '<select class="form-select" id="username" name="username" required>'
-        + '<option selected disabled value="">Choose City</option>'
-        + '</select>'
-        + '<div class="invalid-feedback">Please select a City.</div>'
-        + '</div>'
-        + '</div>'
-    $("#loginfrom").append(html);
-    getCity();
-}
-function admin() {
-    $("#loginfrom").empty();
-    var html = '<div class="row mt-5 justify-content-center">'
-        + '<div class="col-md-6 mb-3">'
-        + '<label for="username">User Id</label>'
-        + '<input type="text" class="form-control"  id="username" name="username" required>'
-        + '<div class="invalid-feedback">Please provide user Id.</div>'
-        + '</div>'
-        + '</div>'
-    $("#loginfrom").append(html);
-    // getCity();
-}
+// }
+// function user() {
+//     $("#loginfrom").empty();
+//     var html = '<div class="row mx-auto mt-5  justify-content-center">'
+//         + '<div class="col-md-6 mb-3">'
+//         + '<label for="username" class="form-label">City</label>'
+//         + '<select class="form-select" id="username" name="username" required>'
+//         + '<option selected disabled value="">Choose City</option>'
+//         + '</select>'
+//         + '<div class="invalid-feedback">Please select a City.</div>'
+//         + '</div>'
+//         + '</div>'
+//     $("#loginfrom").append(html);
+//     getCity();
+// }
+// function admin() {
+//     $("#loginfrom").empty();
+//     var html = '<div class="row mt-5 justify-content-center">'
+//         + '<div class="col-md-6 mb-3">'
+//         + '<label for="username">User Id</label>'
+//         + '<input type="text" class="form-control"  id="username" name="username" required>'
+//         + '<div class="invalid-feedback">Please provide user Id.</div>'
+//         + '</div>'
+//         + '</div>'
+//     $("#loginfrom").append(html);
+//     // getCity();
+// }
 function getCity() {
     $("#username").empty();
     var cityName = getCityList();
