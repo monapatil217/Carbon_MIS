@@ -14,9 +14,7 @@
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -36,6 +34,14 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+
+    <style>
+        #cropChart {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
 </head>
 
 <body>
@@ -49,16 +55,21 @@
     <section id="hero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
+            <input type="text" class="form-control" id="sectionType" value="cropChart" hidden>
+
             <div class="row">
 
                 <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
                         <h3>Crop Land</h3>
-                        <div class="card">
-                            <div class="card-body">
 
-                            </div>
+
+
+                        <div id="chartName">
+                            <h3> Crop Land Graph</h3>
                         </div>
+                        <div id="cropChart"></div>
+
                     </div>
                 </div>
 
@@ -87,8 +98,7 @@
                                 <div class="col-1"></div>
                                 <span class="form-floating">
                                     <div class="form-floating">
-                                        <input type="Text" class="form-control" id="areaCrop"
-                                            placeholder="name@example.com">
+                                        <input type="Text" class="form-control" id="areaCrop" placeholder="name@example.com">
                                         <label for="areaCrop">Area under Crop Land</label>
                                     </div>
                                 </span>
@@ -111,8 +121,7 @@
                 <!-- Start PopUp div -->
                 <div class="row align-items-center justify-content-center" id="moreInfo">
 
-                    <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12"
-                        data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                    <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
 
                         <div class="popup-flex fade-to-img" onclick="showCropLInfo();">
                             <img class="reggot" id="popup-btn" src="img/land.png" width="80" height="80">
@@ -149,25 +158,32 @@
 
 
     <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    })();
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
     </script>
+
+    <!-- Resources -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter.js"></script>
@@ -178,9 +194,10 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
 
-
     <script src="js/cropLandModel.js"></script>
     <script src="assets/js/jquery.min.js"></script>
+
+    <script src="js/induGraph.js"></script>
 
     <script src="assets/js/bootstrap-show-modal.js"></script>
 
