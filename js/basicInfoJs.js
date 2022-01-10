@@ -1,3 +1,7 @@
+$(document).ready(function () {
+    allMap();
+})
+
 function saveBasic(){
     
     var flag = 0;
@@ -55,5 +59,9 @@ function saveBasic(){
             }
         });
     }
+
+}
+
+function allMap(){
 
 }
