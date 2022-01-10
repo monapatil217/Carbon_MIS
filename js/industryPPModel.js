@@ -17,6 +17,12 @@ window.onclick = function (event) {
 // var div = document.getElementById("popup-btn");
 // div.style.display = "block";
 
+function redirect() {
+
+    window.location.replace("industryEnergy.php");
+
+}
+
 function showPPInfo() {
     var div = document.getElementById("moreInfo");
     div.style.display = "block";

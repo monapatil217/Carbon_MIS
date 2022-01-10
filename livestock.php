@@ -17,9 +17,7 @@
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -83,8 +81,7 @@
                         <form class="needs-validation" novalidate>
 
                             <div class="form-floating mt-5">
-                                <input type="text" class="form-control" id="indigenouscattle"
-                                    placeholder="Indigenous Cattle" required>
+                                <input type="text" class="form-control" id="indigenouscattle" placeholder="Indigenous Cattle" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
@@ -92,8 +89,7 @@
                             </div>
 
                             <div class="form-floating mt-3">
-                                <input type="text" class="form-control" id="crossbredcattle"
-                                    placeholder="Cross-bred cattle" required>
+                                <input type="text" class="form-control" id="crossbredcattle" placeholder="Cross-bred cattle" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
@@ -125,8 +121,7 @@
                             </div>
 
                             <div class="form-floating mt-3">
-                                <input type="text" class="form-control" id="horsesandponies"
-                                    placeholder="Horses & Ponies" required>
+                                <input type="text" class="form-control" id="horsesandponies" placeholder="Horses & Ponies" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid data.
                                 </div>
@@ -169,7 +164,7 @@
 
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
-                                    <button class="btn btn-primary " type="submit">Submit form</button>
+                                    <button class="btn btn-primary " type="button" onclick="redirect();">Submit form</button>
                                 </div>
                             </div>
                         </form>
@@ -183,24 +178,24 @@
 
 
     <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    })();
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
     </script>
 
     <!-- Vendor JS Files -->
@@ -216,6 +211,8 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 
+
+    <script src="js/liveStock.js"></script>
 </body>
 
 </html>

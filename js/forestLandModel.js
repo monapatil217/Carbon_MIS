@@ -14,6 +14,12 @@ window.onclick = function (event) {
     }
 }
 
+function redirect() {
+
+    window.location.replace("landUSe.php");
+
+}
+
 // var div = document.getElementById("popup-btn");
 // div.style.display = "block";
 

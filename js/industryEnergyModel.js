@@ -16,6 +16,11 @@ window.onclick = function (event) {
 
 // var div = document.getElementById("popup-btn");
 // div.style.display = "block";
+function redirect() {
+
+    window.location.replace("fueluseincity.php");
+
+}
 
 function showIndFInfo() {
     var div = document.getElementById("moreInfo");

@@ -17,6 +17,12 @@ window.onclick = function (event) {
 // var div = document.getElementById("popup-btn");
 // div.style.display = "block";
 
+function redirect() {
+
+    window.location.replace("livestock.php");
+
+}
+
 function showCropLInfo() {
     var div = document.getElementById("moreInfo");
     div.style.display = "block";

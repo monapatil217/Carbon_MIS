@@ -15,6 +15,12 @@ window.onclick = function (event) {
     }
 }
 
+function redirect() {
+
+    window.location.replace("cropLand.php");
+
+}
+
 // var div = document.getElementById("moreInfo");
 // div.style.display = "none";
 

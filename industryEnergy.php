@@ -63,7 +63,7 @@
                     <div class="in-sec">
                         <h3>Industry Energy</h3>
 
-                        
+
 
                         <div id="chartName">
                             <h3> Industry Graph</h3>
@@ -205,7 +205,7 @@
                             </div>
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
-                                    <button class="btn btn-primary " type="submit">Submit form</button>
+                                    <button class="btn btn-primary " type="button" onclick="redirect();">Submit form</button>
                                 </div>
                             </div>
                         </form>

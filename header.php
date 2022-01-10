@@ -10,32 +10,42 @@
             <ul>
 
                 <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-
                 <li class="dropdown"><a><span>Energy</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="eletricityEnergy.php">Electricity</a></li>
+                        <li><a href="transport.php">Transport</a></li>
                     </ul>
                 </li>
-
-                <li><a class="nav-link scrollto" href="transport.php">Transport</a></li>
-
+                <!-- <li><a class="nav-link scrollto" href="transport.php">Transport</a></li> -->
                 <li class="dropdown"><a><span>AFOLU</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#">Agriculture</a></li>
-                        <li><a href="#">Forest</a></li>
-                        <li><a href="#">Landuse</a></li>
+
+                        <li class="dropdown"><a><span>Agriculture</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li><a href="cropLand.php">Crop Land</a></li>
+                                <li><a href="livestock.php">Live Stack</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="forestLand.php">Forest</a></li>
+                        <li><a href="landUSe.php">Landuse</a></li>
                     </ul>
                 </li>
-                <li><a class="nav-link scrollto">SolidWaste</a></li>
-                <li><a class="nav-link scrollto">WasteWater</a></li>
-                <li class="dropdown"><a href=""><span>Industry</span> <i class="bi bi-chevron-down"></i></a>
+
+                <li class="dropdown"><a><span>Waste </span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="solidWaste.php">SolidWaste</a></li>
+                        <li><a href="wasteWater.php">WasteWater</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown"><a><span>Industry</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="industryEnergy.php">Energy</a></li>
                         <li><a href="industryPP.php">Process & Product</a></li>
                     </ul>
                 </li>
 
-                <li><a class="nav-link scrollto" href="fueluseincity.php">FuelType</a></li>
+                <li><a class="nav-link scrollto" href="fueluseincity.php">Cooking Fuel</a></li>
 
                 <!-- <li class="dropdown"><a href="#"><span>Other</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>

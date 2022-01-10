@@ -41,3 +41,9 @@ function showEleInfo() {
         + '</div></div>';
     $("#popUpData").append(html1);
 }
+
+function redirect() {
+
+    window.location.replace("transport.php");
+
+}

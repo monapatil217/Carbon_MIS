@@ -18,6 +18,12 @@ window.onclick = function (event) {
 // var div = document.getElementById("moreInfo");
 // div.style.display = "none";
 
+function redirect() {
+
+    window.location.replace("industryPP.php");
+
+}
+
 function showWaterInfo() {
     var div = document.getElementById("moreInfo");
     div.style.display = "block";
