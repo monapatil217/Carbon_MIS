@@ -1,6 +1,6 @@
 <?php
 include 'conn.php';
-require "php/session.php";
+require "session.php";
 $json = file_get_contents('php://input');
 $data = json_decode($json);
 
@@ -24,3 +24,4 @@ $query = "INSERT INTO basic_info(popu,female,male,city,gArea,tArea,lite,gdp,hosp
     $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
     
     echo  "success";
+?>

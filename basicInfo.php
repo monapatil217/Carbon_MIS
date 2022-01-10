@@ -27,6 +27,7 @@ require "php/session.php";
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/jbox/jBox.all.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -198,6 +199,11 @@ require "php/session.php";
                         <button class="btn btn-primary btn-get-started scrollto " onclick="saveBasic()" type="button"> Next </button>
                     </div>
                 </div>
+                <div class="row ">
+                    <div class="col-md-12  text-center">
+                        <button class="btn btn-primary btn-get-started scrollto " onclick="abc()" type="button"> add </button>
+                    </div>
+                </div>
 
 
             </form>
@@ -236,6 +242,7 @@ require "php/session.php";
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/vendor/jbox/jBox.all.min.js"></script>
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>

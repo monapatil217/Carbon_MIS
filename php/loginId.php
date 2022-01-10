@@ -1,6 +1,6 @@
 <?php
 include 'conn.php';
-require "php/session.php";
+require "session.php";
 $message = "";
 if (isset($_POST["username"])) {
     $query = "SELECT * FROM city_name WHERE name ='" . $_POST["username"] . "' and password = '" . $_POST["password"] . "'";
