@@ -24,7 +24,7 @@ function redirect() {
 // var div = document.getElementById("moreInfo");
 // div.style.display = "none";
 
-function showEleInfo() {
+function showVehiInfo() {
     var div = document.getElementById("moreInfo");
     div.style.display = "block";
 

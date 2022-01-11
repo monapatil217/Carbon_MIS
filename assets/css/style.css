@@ -1707,6 +1707,22 @@ section {
 
 /********************************* Changes done by Monika ****************************************/
 
+
+/* #pagebg {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    background-image: url(../images/pagebg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed !important;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    margin-top: 0vh;
+} */
+
 .carbonDash h1 {
         margin-top: 200px;
         /* margin-right: 190px; */
@@ -2080,7 +2096,7 @@ h1 {
   color: #fff;
 }
 
-.form-control {
+/* .form-control {
   display: block;
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
@@ -2136,7 +2152,7 @@ select.form-control:focus::-ms-value {
 .form-control-file,
 .form-control-range {
   display: block;
-  width: 100%; }
+  width: 100%; } */
 
 .col-form-label {
   padding-top: calc(0.375rem + 1px);

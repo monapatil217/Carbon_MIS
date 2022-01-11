@@ -62,11 +62,13 @@ require "php/session.php";
             <div class="row">
 
                 <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
-                    <div class="in-sec">
+                    <div class="in-sec infoFont">
                         <h3>Industry-Process and Product</h3>
-
+                             <ul style="margin-left: 10px;">
+                                <li class="popupli"> Total Emissions in 2019 = 6,558 Million Metric Tons of CO2 equivalent.</li>
+                            </ul>
                         <div id="chartName">
-                            <h3> Industry-Process and Product Graph</h3>
+                            <h4> Industry-Process and Product Graph</h4>
                         </div>
                         <div id="indusppChart"></div>
 
@@ -75,27 +77,28 @@ require "php/session.php";
 
                 <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
                     <div class="in-sec">
-                        <!-- <h4 class="text-center mb-2">Industry</h4> -->
+                        <h6 class="text-center">Industrial Process and Product</h6>
+                            <marquee width="100%" direction="left" height="30px">
+                                t - tonne
+                            </marquee>
                         <form class="needs-validation" novalidate>
+                            <h6 class="text-center"> Amount of Product Manufacture </h6>
+                            
 
-                            <div>
-                                <h4>Industrial Process and Product</h4>
-                                <marquee width="100%" direction="left" height="30px">
-                                    t - tonne
-                                </marquee>
-                            </div>
-
-                            <div class="input-group mb-3 ">
-                                <div class="col-1"></div>
-                                <span class="form-floating">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="amtProd" placeholder="Amount of product">
-                                        <label for="amtProd">Amount of product</label>
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 col-lg-10 col-xl-9 col-8">
+                                    <div class="input-group mb-3 mt-3">
+                                        <span class="form-floating col-8 col-lg-7 col-xl-8">
+                                            <div class="form-floating ">
+                                                <input type="text" class="form-control" id="amtProd" placeholder="Product">
+                                                <label for="amtProd">Product</label>
+                                            </div>
+                                        </span>
+                                        <span class="input-group-text" id="basic-addon-1">t/year</span>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid data.
+                                        </div>
                                     </div>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">t/year</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
                                 </div>
                             </div>
 

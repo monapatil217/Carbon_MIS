@@ -50,125 +50,186 @@ require "php/session.php";
 
             <div class="row">
 
-                <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
-                    <div class="in-sec">
+                <div class="col-md-12 col-lg-7  mb-2" data-aos-delay="200">
+                    <div class="in-sec infoFont">
                         <h3>Live Stock</h3>
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h5>
-                                    <p>the average annual population of animals was taken from the Census of Livestock,
-                                        which is conducted every five years. </p>
-                                    <p>Categorization was done as per available
-                                        categories in the census viz. dairy and non-dairy for cattle</P>
-                                    <p>It has been estimated that over 200 million tonnes of CO2 equivalents are
-                                        released by Indian livestock each year.</p>
-                                    <p>The total GHGs emission from Indian livestock is estimated at 247.2 Mt in terms
-                                        of CO2 equivalent emissions.</p>
-                                    <p>Although the Indian livestock contributes substantially to the methane budget,
-                                        the per capita emission is only 24.23 kgCH4/animal/year.</p>
-                                    <p>categorisation are: Mature dairy cows, Non-dairy cattle, Goats, Sheep, Camels,
-                                        Horses and ponies, Pigs</p>
-                                </h5>
-                            </div>
-                        </div>
+                            <ul style="margin-left: 10px;">
+                                <li class="popupli"> It has been estimated that over 200 million tonnes of CO2 equivalents are released by Indian livestock each year. </li>
+                                
+                            </ul>
                     </div>
                 </div>
 
-                <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
+                <div class="col-md-12 col-lg-5" data-aos-delay="200">
                     <div class="in-sec">
                         <h4 class="text-center mb-2">Live Stock</h4>
                         <form class="needs-validation" novalidate>
+                            <h6 class="text-center mt-3"> Enter Number of Animals </h6>
 
-                            <div class="form-floating mt-5">
-                                <input type="text" class="form-control" id="indigenouscattle" placeholder="Indigenous Cattle" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
+                            <div class="row justify-content-center">
+                                <div class="col-sm-5 col-lg-6">
+                                    <div class="row">
+
+                                        <div class="input-group mb-3 mt-3">
+                                            <span class="form-floating">
+                                                <div class="form-floating labelFont">
+                                                    <input type="text" class="form-control" id="indigenouscattle" placeholder="Indigenous Cattle">
+                                                    <label for="indigenouscattle">Indigenous Cattle</label>
+                                                </div>
+                                            </span>
+                                            <div class="invalid-feedback">
+                                                Please provide a valid data.
+                                            </div>
+                                        </div>
+
+                                         <div class="input-group mb-3 mt-3">
+                                            <span class="form-floating">
+                                                <div class="form-floating labelFont">
+                                                    <input type="text" class="form-control" id="crossbredcattle" placeholder="Cross-bred cattle">
+                                                    <label for="crossbredcattle">Cross-Breed cattle</label>
+                                                </div>
+                                            </span>
+                                            <div class="invalid-feedback">
+                                                Please provide a valid data.
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group mb-3 mt-3">
+                                            <span class="form-floating">
+                                                <div class="form-floating labelFont">
+                                                    <input type="text" class="form-control" id="buffalo" placeholder="Buffalo">
+                                                    <label for="buffalo">Buffalo</label>
+                                                </div>
+                                            </span>
+                                            <div class="invalid-feedback">
+                                                Please provide a valid data.
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group mb-3 mt-3">
+                                            <span class="form-floating">
+                                                <div class="form-floating labelFont">
+                                                    <input type="text" class="form-control" id="sheep" placeholder="Sheep">
+                                                    <label for="sheep">Sheep</label>
+                                                </div>
+                                            </span>
+                                            <div class="invalid-feedback">
+                                                Please provide a valid data.
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group mb-3 mt-3">
+                                            <span class="form-floating">
+                                                <div class="form-floating labelFont">
+                                                    <input type="text" class="form-control" id="goat" placeholder="Goat">
+                                                    <label for="goat">Goat</label>
+                                                </div>
+                                            </span>
+                                            <div class="invalid-feedback">
+                                                Please provide a valid data.
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <label for="indigenouscattle">Indigenous Cattle</label>
+
+                                <div class="col-sm-5 col-lg-6">
+                                    <div class="row">
+
+                                        <div class="input-group mb-3 mt-3">
+                                            <span class="form-floating">
+                                                <div class="form-floating labelFont">
+                                                    <input type="text" class="form-control" id="horsesandponies" placeholder="Horses & Ponies">
+                                                    <label for="horsesandponies">Horses & Ponies</label>
+                                                </div>
+                                            </span>
+                                            <div class="invalid-feedback">
+                                                Please provide a valid data.
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group mb-3 mt-3">
+                                            <span class="form-floating">
+                                                <div class="form-floating labelFont">
+                                                    <input type="text" class="form-control" id="donkeys" placeholder="Donkeys">
+                                                    <label for="donkeys">Donkeys</label>
+                                                </div>
+                                            </span>
+                                            <div class="invalid-feedback">
+                                                Please provide a valid data.
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group mb-3 mt-3">
+                                            <span class="form-floating">
+                                                <div class="form-floating labelFont">
+                                                    <input type="text" class="form-control" id="camels" placeholder="Camels">
+                                                    <label for="camels">Camels</label>
+                                                </div>
+                                            </span>
+                                            <div class="invalid-feedback">
+                                                Please provide a valid data.
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group mb-3 mt-3">
+                                            <span class="form-floating">
+                                                <div class="form-floating labelFont">
+                                                    <input type="text" class="form-control" id="pig" placeholder="Pig">
+                                                    <label for="pig">Pig</label>
+                                                </div>
+                                            </span>
+                                            <div class="invalid-feedback">
+                                                Please provide a valid data.
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group mb-3 mt-3">
+                                            <span class="form-floating">
+                                                <div class="form-floating labelFont">
+                                                    <input type="text" class="form-control" id="Poultry" placeholder="Poultry">
+                                                    <label for="Poultry">Poultry</label>
+                                                </div>
+                                            </span>
+                                            <div class="invalid-feedback">
+                                                Please provide a valid data.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="form-floating mt-3">
-                                <input type="text" class="form-control" id="crossbredcattle" placeholder="Cross-bred cattle" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                                <label for="crossbredcattle">Cross-bred cattle</label>
-                            </div>
-
-                            <div class="form-floating mt-3">
-                                <input type="text" class="form-control" id="buffalo" placeholder="Buffalo" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                                <label for="buffalo">Buffalo</label>
-                            </div>
-
-                            <div class="form-floating mt-3">
-                                <input type="text" class="form-control" id="sheep" placeholder="Sheep" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                                <label for="sheep ">Sheep</label>
-                            </div>
-
-                            <div class="form-floating mt-3">
-                                <input type="text" class="form-control" id="goat" placeholder="Goat" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                                <label for="goat">Goat</label>
-                            </div>
-
-                            <div class="form-floating mt-3">
-                                <input type="text" class="form-control" id="horsesandponies" placeholder="Horses & Ponies" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                                <label for="horsesandponies">Horses & Ponies</label>
-                            </div>
-
-                            <div class="form-floating mt-3">
-                                <input type="text" class="form-control" id="donkeys" placeholder="Donkeys" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                                <label for="donkeys">Donkeys</label>
-                            </div>
-
-                            <div class="form-floating mt-3 mb-2">
-                                <input type="text" class="form-control" id="camels" placeholder="Camels" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                                <label for="camels">Camels</label>
-                            </div>
-
-                            <div class="form-floating mt-3 mb-2">
-                                <input type="text" class="form-control" id="pig" placeholder="Pig" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                                <label for="pig">Pig</label>
-                            </div>
-
-
-
-                            <div class="form-floating mt-3 mb-2">
-                                <input type="text" class="form-control" id="poultry" placeholder="Poultry" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                                <label for="poultry">Poultry</label>
-                            </div>
-
-                            <div class="row ">
-                                <div class="col-md-12 mb-3 text-center">
+                            <div class="row justify-content-center">
+                                <div class="col-12 mb-3 mt-3 text-center">
                                     <button class="btn btn-primary " type="button" onclick="redirect();">Submit form</button>
                                 </div>
                             </div>
                         </form>
+                    </div>
+                </div>
+            </div>
 
+            <div class="row align-items-center justify-content-center" id="moreInfo">
+
+                <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+
+                    <div class="popup-flex fade-to-img" onclick="showLiveStockInfo();">
+                        <img class="reggot" id="popup-btn" src="img/horse.png" width="80" height="80">
+                    </div>
+
+                    <div id="popup-wrapper" class="popup-container">
+                        <div class="popup-content">
+
+                            <div class="row align-items-center justify-content-center">
+                                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                </div>
+                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="btn-container">
+                                        <a href="#" id="close" class="btn-gotit">Got It</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -210,7 +271,6 @@ require "php/session.php";
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-
 
     <script src="js/liveStock.js"></script>
 </body>

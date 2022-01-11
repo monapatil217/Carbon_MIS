@@ -3,7 +3,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
         <h3><a><b>Carbon</b></a></h3><br>
-        <h5>Natural Amrut City MIS</h5>
+        <h5>Neutral Amrut City MIS</h5>
 
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->

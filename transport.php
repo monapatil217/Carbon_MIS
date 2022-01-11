@@ -61,21 +61,21 @@ require "php/session.php";
 
             <div class="row">
 
-                <div class="col-md-12 col-lg-6  mb-3 s " data-aos-delay="200">
-                    <div class="in-sec">
+                <div class="col-md-12 col-lg-6  mb-3" data-aos-delay="200">
+                    <div class="in-sec infoFont">
                         <h3>Transport</h3>
                         <!-- <div class="card">
                             <div class="card-body"> -->
-                        <h5>
+                        <!-- <h5> -->
                             <ul style="margin-left: 10px;">
-                                <li class="popupli"> After burning 1 liter of diesel 2.62 kg of co2 is release in enviroment .</li>
-                                <li class="popupli">Whereas petrol has a lower carbon content and produces about 2.39 kgs of co2 per liter.</li>
+                                <li class="popupli"> After burning 1 liter of diesel 2.62 kg of CO2 is release in enviroment .</li>
+                                <li class="popupli">Whereas petrol has a lower carbon content and produces about 2.39 kgs of CO2 per liter.</li>
                                 <!--    <li class="popupli">Around 60.9% installed generation capacity is due to fossil fuel. </li>
                                         <li class="popupli">Around 37.9% installed generation capacity is due to renewable energy sources.</li>
                                         <li class="popupli">Around 1.7% installed generation capacity is due to Nuclear Fuel.</li>
                            -->
                             </ul>
-                        </h5>
+                        <!-- </h5> -->
 
                         <div id="chartName">
                             <h3> Transport Graph</h3>
@@ -91,7 +91,7 @@ require "php/session.php";
                     <div class="in-sec">
                         <h4 class="text-center mb-2">Transport</h4>
                         <form class="needs-validation" novalidate>
-
+                            <h6 class="text-center"> Enter Total No of Vehicles in your Region</h6>
 
                             <div class="row ">
                                 <div class="col-lg-6">
@@ -179,8 +179,8 @@ require "php/session.php";
 
                 <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
 
-                    <div class="popup-flex fade-to-img" onclick="showvehiInfo();">
-                        <img class="reggot" id="popup-btn" src="img/sedan.png" width="80" height="80">
+                    <div class="popup-flex fade-to-img" onclick="showVehiInfo();">
+                        <img class="reggot" id="popup-btn" src="img/car.png" width="80" height="80">
                     </div>
 
                     <div id="popup-wrapper" class="popup-container">
