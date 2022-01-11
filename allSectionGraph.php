@@ -17,9 +17,7 @@ require "php/session.php";
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -40,10 +38,10 @@ require "php/session.php";
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
     <style>
-    #secChart {
-        width: 100%;
-        height: 500px;
-    }
+        #secChart {
+            width: 100%;
+            height: 500px;
+        }
     </style>
 </head>
 
@@ -98,158 +96,69 @@ require "php/session.php";
                                         ELEC - Electricity / MW - megawatt / m - month.
                                     </marquee>
                                     <form class="needs-validation" novalidate>
-                                        <div class="input-group mb-3">
-                                            <div class="col-1"></div>
-                                            <span class="form-floating">
-                                                <div class="form-floating">
-                                                    <input type="email" class="form-control" id="resElec"
-                                                        placeholder="name@example.com" disabled>
-                                                    <label for="resElec">Residential ELEC use</label>
-                                                </div>
-                                            </span>
-                                            <span class="input-group-text" id="basic-addon-1">MW/m</span>
-                                            <div class="invalid-feedback">
-                                                Please provide a valid data.
-                                            </div>
-                                        </div>
-
-                                        <!-- <div class="form-floating mb-3">
-                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                        <label for="floatingInput">Street light ELEC use</label>
-                                    </div> -->
-
-                                        <div class="input-group mb-3 ">
-                                            <div class="col-1"></div>
-                                            <span class="form-floating">
-                                                <div class="form-floating">
-                                                    <input type="email" class="form-control" id="comElec"
-                                                        placeholder="name@example.com" disabled>
-                                                    <label for="comElec">Commercial ELEC use</label>
-                                                </div>
-                                            </span>
-                                            <span class="input-group-text" id="basic-addon-1">MW/m</span>
-                                            <div class="invalid-feedback">
-                                                Please provide a valid data.
-                                            </div>
-                                        </div>
-
-                                        <div class="input-group mb-3 ">
-                                            <div class="col-1"></div>
-                                            <span class="form-floating">
-                                                <div class="form-floating">
-                                                    <input type="email" class="form-control" id="slumEle"
-                                                        placeholder="name@example.com" disabled>
-                                                    <label for="slumEle">Slum area ELEC use</label>
-                                                </div>
-                                            </span>
-                                            <span class="input-group-text" id="basic-addon-1">MW/m</span>
-                                            <div class="invalid-feedback">
-                                                Please provide a valid data.
-                                            </div>
-                                        </div>
-
-                                        <div class="input-group mb-3 ">
-                                            <div class="col-1"></div>
-                                            <span class="form-floating">
-                                                <div class="form-floating">
-                                                    <input type="email" class="form-control" id="streetEle"
-                                                        placeholder="name@example.com" disabled>
-                                                    <label for="streetEle">Street light ELEC use</label>
-                                                </div>
-                                            </span>
-                                            <span class="input-group-text" id="basic-addon-1">MW/m</span>
-                                            <div class="invalid-feedback">
-                                                Please provide a valid data.
-                                            </div>
-                                        </div>
-
-                                </div>
-                            </div>
 
 
 
-                            <!-- transport -->
-                            <div class="col-md-12 col-lg-12  mb-3  s" data-aos-delay="200">
-                                <div class="in-sec">
-                                    <h4 class="text-center mb-2">Transport</h4>
-                                    <form class="needs-validation" novalidate>
-
-
-                                        <div class="row ">
-                                            <div class="col-lg-6">
-
-                                                <div class="form-floating mt-3">
-                                                    <input type="text" class="form-control" id="2Wheeler"
-                                                        placeholder="Two wheeler" required disabled>
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3">
+                                                    <div class="col-1"></div>
+                                                    <span class="form-floating">
+                                                        <div class="form-floating">
+                                                            <input type="email" class="form-control" id="resElec" placeholder="name@example.com" value="24" disabled>
+                                                            <label for="resElec">Residential ELEC use</label>
+                                                        </div>
+                                                    </span>
+                                                    <span class="input-group-text" id="basic-addon-1">MW/m</span>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid data.
                                                     </div>
-                                                    <label for="2Wheeler">Two Wheeler</label>
-                                                </div>
-
-                                                <div class="form-floating mt-3">
-                                                    <input type="text" class="form-control" id="3Wheeler"
-                                                        placeholder="Three wheeler" required disabled>
-                                                    <div class="invalid-feedback">
-                                                        Please provide a valid data.
-                                                    </div>
-                                                    <label for="3Wheeler">Three Wheeler</label>
-                                                </div>
-
-                                                <div class="form-floating mt-3">
-                                                    <input type="text" class="form-control" id="4Wheeler"
-                                                        placeholder="Four wheeler" required disabled>
-                                                    <div class="invalid-feedback">
-                                                        Please provide a valid data.
-                                                    </div>
-                                                    <label for="4Wheeler">Four Wheeler</label>
-                                                </div>
-
-                                                <div class="form-floating mt-3">
-                                                    <input type="text" class="form-control" id="bus" placeholder="Bus"
-                                                        required disabled>
-                                                    <div class="invalid-feedback">
-                                                        Please provide a valid data.
-                                                    </div>
-                                                    <label for="bus">Bus</label>
                                                 </div>
                                             </div>
-                                            <!-- <div class="row "> -->
-                                            <div class="col-lg-6">
-                                                <div class="form-floating mt-3">
-                                                    <input type="text" class="form-control" id="tempo"
-                                                        placeholder="Tempo" required disabled>
-                                                    <div class="invalid-feedback">
-                                                        Please provide a valid data.
-                                                    </div>
-                                                    <label for="tempo">Tempo</label>
-                                                </div>
 
-                                                <div class="form-floating mt-3">
-                                                    <input type="text" class="form-control" id="truck"
-                                                        placeholder="Truck" required disabled>
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3 ">
+                                                    <div class="col-1"></div>
+                                                    <span class="form-floating">
+                                                        <div class="form-floating">
+                                                            <input type="email" class="form-control" id="comElec" placeholder="name@example.com" value="77" disabled>
+                                                            <label for="comElec">Commercial ELEC use</label>
+                                                        </div>
+                                                    </span>
+                                                    <span class="input-group-text" id="basic-addon-1">MW/m</span>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid data.
                                                     </div>
-                                                    <label for="truck">Truck</label>
                                                 </div>
-
-                                                <div class="form-floating mt-3">
-                                                    <input type="text" class="form-control" id="train"
-                                                        placeholder="Train" required disabled>
+                                            </div>
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3 ">
+                                                    <div class="col-1"></div>
+                                                    <span class="form-floating">
+                                                        <div class="form-floating">
+                                                            <input type="email" class="form-control" id="slumEle" placeholder="name@example.com" value="54" disabled>
+                                                            <label for="slumEle">Slum area ELEC use</label>
+                                                        </div>
+                                                    </span>
+                                                    <span class="input-group-text" id="basic-addon-1">MW/m</span>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid data.
                                                     </div>
-                                                    <label for="train">Train</label>
                                                 </div>
-
-                                                <div class="form-floating mt-3 mb-2">
-                                                    <input type="text" class="form-control" id="flight"
-                                                        placeholder="Flight" required disabled>
+                                            </div>
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3 ">
+                                                    <div class="col-1"></div>
+                                                    <span class="form-floating">
+                                                        <div class="form-floating">
+                                                            <input type="email" class="form-control" id="streetEle" placeholder="name@example.com" value="32" disabled>
+                                                            <label for="streetEle">Street light ELEC use</label>
+                                                        </div>
+                                                    </span>
+                                                    <span class="input-group-text" id="basic-addon-1">MW/m</span>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid data.
                                                     </div>
-                                                    <label for="flight">Flight</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -258,10 +167,102 @@ require "php/session.php";
 
                                 </div>
                             </div>
+                            <!-- transport -->
+                            <div class="col-md-12 col-lg-12  mb-3  s" data-aos-delay="200">
+                                <div class="in-sec">
+                                    <h4 class="text-center mb-2">Transport</h4>
+                                    <form class="needs-validation" novalidate>
+
+
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="form-floating mt-3">
+                                                    <input type="text" class="form-control" id="2Wheeler" placeholder="Two wheeler" value="37" required disabled>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid data.
+                                                    </div>
+                                                    <label for="2Wheeler">Two Wheeler</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="form-floating mt-3">
+                                                    <input type="text" class="form-control" id="3Wheeler" placeholder="Three wheeler" value="54" required disabled>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid data.
+                                                    </div>
+                                                    <label for="3Wheeler">Three Wheeler</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="form-floating mt-3">
+                                                    <input type="text" class="form-control" id="4Wheeler" placeholder="Four wheeler" value="32" required disabled>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid data.
+                                                    </div>
+                                                    <label for="4Wheeler">Four Wheeler</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="form-floating mt-3">
+                                                    <input type="text" class="form-control" id="bus" placeholder="Bus" value="65" required disabled>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid data.
+                                                    </div>
+                                                    <label for="bus">Bus</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="form-floating mt-3">
+                                                    <input type="text" class="form-control" id="tempo" placeholder="Tempo" value="34" required disabled>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid data.
+                                                    </div>
+                                                    <label for="tempo">Tempo</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="form-floating mt-3">
+                                                    <input type="text" class="form-control" id="truck" placeholder="Truck" required value="23" disabled>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid data.
+                                                    </div>
+                                                    <label for="truck">Truck</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="form-floating mt-3">
+                                                    <input type="text" class="form-control" id="train" placeholder="Train" required value="72" disabled>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid data.
+                                                    </div>
+                                                    <label for="train">Train</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="form-floating mt-3 mb-2">
+                                                    <input type="text" class="form-control" id="flight" placeholder="Flight" required value="24" disabled>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid data.
+                                                    </div>
+                                                    <label for="flight">Flight</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </form>
+
+                                </div>
+                            </div>
 
                             <div class="col-md-12 col-lg-12  mb-3  s" data-aos-delay="200">
                                 <div class="row">
-
                                     <!-- Cropland -->
                                     <div class="col-md-12 col-lg-12  mb-3  s" data-aos-delay="200">
                                         <div class="in-sec">
@@ -271,44 +272,49 @@ require "php/session.php";
                                             </marquee>
                                             <form class="needs-validation" novalidate>
 
-                                                <div class="input-group mb-3 ">
-                                                    <div class="col-1"></div>
-                                                    <span class="form-floating">
-                                                        <div class="form-floating">
-                                                            <input type="Text" class="form-control" id="areaCrop"
-                                                                placeholder="name@example.com" disabled>
-                                                            <label for="areaCrop">Area under Crop Land</label>
+
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-4 col-lg-4">
+
+                                                        <div class="input-group mb-3 ">
+                                                            <span class="form-floating">
+                                                                <div class="form-floating">
+                                                                    <input type="Text" class="form-control" id="areaCrop" placeholder="name@example.com" value="72" disabled>
+                                                                    <label for="areaCrop">Area under Crop Land</label>
+                                                                </div>
+                                                            </span>
+                                                            <span class="input-group-text" id="basic-addon-1">sq.Km</span>
+                                                            <div class="invalid-feedback">
+                                                                Please provide a valid data.
+                                                            </div>
                                                         </div>
-                                                    </span>
-                                                    <span class="input-group-text" id="basic-addon-1">sq.Km</span>
-                                                    <div class="invalid-feedback">
-                                                        Please provide a valid data.
+
                                                     </div>
                                                 </div>
 
                                             </form>
-
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
+                            </div>
 
 
-                                    <!-- forest -->
-                                    <div class="col-md-12 col-lg-12  mb-3  s" data-aos-delay="200">
-                                        <div class="in-sec">
-                                            <h4 class="text-center mb-2">Forest Land</h4>
-                                            <marquee width="100%" direction="left" height="30px">
-                                                sq.km - Square Kilometre.
-                                            </marquee>
-                                            <form class="needs-validation" novalidate>
+                            <!-- forest -->
+                            <div class="col-md-12 col-lg-12  mb-3  s" data-aos-delay="200">
+                                <div class="in-sec">
+                                    <h4 class="text-center mb-2">Forest Land</h4>
+                                    <marquee width="100%" direction="left" height="30px">
+                                        sq.km - Square Kilometre.
+                                    </marquee>
+                                    <form class="needs-validation" novalidate>
+
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-4 col-lg-4">
 
                                                 <div class="input-group mb-3">
-                                                    <div class="col-1"></div>
                                                     <span class="form-floating">
                                                         <div class="form-floating">
-                                                            <input type="text" class="form-control" id="areaForest"
-                                                                placeholder="name@example.com" disabled>
+                                                            <input type="text" class="form-control" id="areaForest" placeholder="name@example.com" value="43" disabled>
                                                             <label for="areaForest">Area under Forest Land</label>
                                                         </div>
                                                     </span>
@@ -317,111 +323,126 @@ require "php/session.php";
                                                         Please provide a valid data.
                                                     </div>
                                                 </div>
-                                            </form>
+
+
+                                            </div>
                                         </div>
-                                    </div>
+
+                                    </form>
+
                                 </div>
                             </div>
+
+
                             <!--  live Stock-->
                             <div class="col-md-12 col-lg-12  mb-3  s" data-aos-delay="200">
                                 <div class="in-sec">
                                     <h4 class="text-center mb-2">Live Stock</h4>
                                     <form class="needs-validation" novalidate>
 
-                                        <div class="row">
-                                            <div class="col-md-6 col-lg-6">
+                                        <!-- <div class="row">
+                                            <div class="col-md-6 col-lg-6"> -->
+
+
+
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-4 col-lg-4">
 
                                                 <div class="form-floating mt-3">
-                                                    <input type="text" class="form-control" id="indigenouscattle"
-                                                        placeholder="Indigenous Cattle" required disabled>
+                                                    <input type="text" class="form-control" id="indigenouscattle" placeholder="Indigenous Cattle" value="51" required disabled>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid data.
                                                     </div>
                                                     <label for="indigenouscattle">Indigenous Cattle</label>
                                                 </div>
+                                            </div>
+                                            <div class="col-md-4 col-lg-4">
 
                                                 <div class="form-floating mt-3">
-                                                    <input type="text" class="form-control" id="crossbredcattle"
-                                                        placeholder="Cross-bred cattle" required disabled>
+                                                    <input type="text" class="form-control" id="crossbredcattle" placeholder="Cross-bred cattle" value="34" required disabled>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid data.
                                                     </div>
                                                     <label for="crossbredcattle">Cross-bred cattle</label>
                                                 </div>
+                                            </div>
+                                            <div class="col-md-4 col-lg-4">
 
                                                 <div class="form-floating mt-3">
-                                                    <input type="text" class="form-control" id="buffalo"
-                                                        placeholder="Buffalo" required disabled>
+                                                    <input type="text" class="form-control" id="buffalo" placeholder="Buffalo" value="52" required disabled>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid data.
                                                     </div>
                                                     <label for="buffalo">Buffalo</label>
                                                 </div>
+                                            </div>
+                                        </div>
 
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-4 col-lg-4">
                                                 <div class="form-floating mt-3">
-                                                    <input type="text" class="form-control" id="sheep"
-                                                        placeholder="Sheep" required disabled>
+                                                    <input type="text" class="form-control" id="sheep" placeholder="Sheep" value="23" required disabled>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid data.
                                                     </div>
                                                     <label for="sheep ">Sheep</label>
                                                 </div>
-
+                                            </div>
+                                            <div class="col-md-4 col-lg-4">
                                                 <div class="form-floating mt-3">
-                                                    <input type="text" class="form-control" id="goat" placeholder="Goat"
-                                                        required disabled>
+                                                    <input type="text" class="form-control" id="goat" placeholder="Goat" value="63" required disabled>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid data.
                                                     </div>
                                                     <label for="goat">Goat</label>
                                                 </div>
-
                                             </div>
-
-                                            <!-- <div class="row "> -->
-                                            <div class="col-md-6 col-lg-6">
-
+                                            <div class="col-md-4 col-lg-4">
                                                 <div class="form-floating mt-3">
-                                                    <input type="text" class="form-control" id="horsesandponies"
-                                                        placeholder="Horses & Ponies" required disabled>
+                                                    <input type="text" class="form-control" id="horsesandponies" placeholder="Horses & Ponies" value="72" required disabled>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid data.
                                                     </div>
                                                     <label for="horsesandponies">Horses & Ponies</label>
                                                 </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-4 col-lg-4">
 
                                                 <div class="form-floating mt-3">
-                                                    <input type="text" class="form-control" id="donkeys"
-                                                        placeholder="Donkeys" required disabled>
+                                                    <input type="text" class="form-control" id="donkeys" placeholder="Donkeys" value="36" required disabled>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid data.
                                                     </div>
                                                     <label for="donkeys">Donkeys</label>
                                                 </div>
-
+                                            </div>
+                                            <div class="col-md-4 col-lg-4">
                                                 <div class="form-floating mt-3 mb-2">
-                                                    <input type="text" class="form-control" id="camels"
-                                                        placeholder="Camels" required disabled>
+                                                    <input type="text" class="form-control" id="camels" placeholder="Camels" value="34" required disabled>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid data.
                                                     </div>
                                                     <label for="camels">Camels</label>
                                                 </div>
-
+                                            </div>
+                                            <div class="col-md-4 col-lg-4">
                                                 <div class="form-floating mt-3 mb-2">
-                                                    <input type="text" class="form-control" id="pig" placeholder="Pig"
-                                                        required disabled>
+                                                    <input type="text" class="form-control" id="pig" placeholder="Pig" value="45" required disabled>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid data.
                                                     </div>
                                                     <label for="pig">Pig</label>
                                                 </div>
+                                            </div>
+                                        </div>
 
-
-
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-4 col-lg-4">
                                                 <div class="form-floating mt-3 mb-2">
-                                                    <input type="text" class="form-control" id="poultry"
-                                                        placeholder="Poultry" required disabled>
+                                                    <input type="text" class="form-control" id="poultry" placeholder="Poultry" value="24" required disabled>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid data.
                                                     </div>
@@ -429,6 +450,7 @@ require "php/session.php";
                                                 </div>
                                             </div>
                                         </div>
+
                                     </form>
                                 </div>
                             </div>
@@ -444,157 +466,159 @@ require "php/session.php";
 
                                     <form class="needs-validation" novalidate>
 
-                                        <div class="input-group mb-3 ">
-                                            <div class="col-1"></div>
-                                            <span class="form-floating">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" id="residential"
-                                                        placeholder="Total area under Residential (sq. km)" disabled>
-                                                    <label for="residential">Residential area</label>
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3 ">
+                                                    <span class="form-floating">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control" id="residential" placeholder="Total area under Residential (sq. km)" value="67" disabled>
+                                                            <label for="residential">Residential area</label>
+                                                        </div>
+                                                    </span>
+                                                    <span class="input-group-text" id="basic-addon-1">sq. Km</span>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid data.
+                                                    </div>
                                                 </div>
-                                            </span>
-                                            <span class="input-group-text" id="basic-addon-1">sq. Km</span>
-                                            <div class="invalid-feedback">
-                                                Please provide a valid data.
                                             </div>
-                                        </div>
-
-                                        <div class="input-group mb-3 ">
-                                            <div class="col-1"></div>
-                                            <span class="form-floating">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" id="commercial"
-                                                        placeholder="Total area under Commercial (sq. km)" disabled>
-                                                    <label for="commercial">Commercial area</label>
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3 ">
+                                                    <span class="form-floating">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control" id="commercial" placeholder="Total area under Commercial (sq. km)" value="65" disabled>
+                                                            <label for="commercial">Commercial area</label>
+                                                        </div>
+                                                    </span>
+                                                    <span class="input-group-text" id="basic-addon-1">sq. Km</span>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid data.
+                                                    </div>
                                                 </div>
-                                            </span>
-                                            <span class="input-group-text" id="basic-addon-1">sq. Km</span>
-                                            <div class="invalid-feedback">
-                                                Please provide a valid data.
                                             </div>
-                                        </div>
-
-                                        <div class="input-group mb-3 ">
-                                            <div class="col-1"></div>
-                                            <span class="form-floating">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" id="waterBodies"
-                                                        placeholder="Total area under Commercial (sq. km)" disabled>
-                                                    <label for="waterBodies">Water Bodiea area</label>
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3 ">
+                                                    <span class="form-floating">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control" id="waterBodies" placeholder="Total area under Commercial (sq. km)" value="54" disabled>
+                                                            <label for="waterBodies">Water Bodiea area</label>
+                                                        </div>
+                                                    </span>
+                                                    <span class="input-group-text" id="basic-addon-1">sq. Km</span>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid data.
+                                                    </div>
                                                 </div>
-                                            </span>
-                                            <span class="input-group-text" id="basic-addon-1">sq. Km</span>
-                                            <div class="invalid-feedback">
-                                                Please provide a valid data.
-                                            </div>
-                                        </div>
-
-
-                                        <div class="input-group mb-3 ">
-                                            <div class="col-1"></div>
-                                            <span class="form-floating">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" id="defence"
-                                                        placeholder="Total area under Defence (sq. km)" disabled>
-                                                    <label for="defence">Defence area</label>
-                                                </div>
-                                            </span>
-                                            <span class="input-group-text" id="basic-addon-1">sq. Km</span>
-                                            <div class="invalid-feedback">
-                                                Please provide a valid data.
-                                            </div>
-                                        </div>
-
-                                        <div class="input-group mb-3 ">
-                                            <div class="col-1"></div>
-                                            <span class="form-floating">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" id="agriculture"
-                                                        placeholder="Total area under Agriculture (sq. km)" disabled>
-                                                    <label for="agriculture">Agriculture area</label>
-                                                </div>
-                                            </span>
-                                            <span class="input-group-text" id="basic-addon-1">sq. Km</span>
-                                            <div class="invalid-feedback">
-                                                Please provide a valid data.
-                                            </div>
-                                        </div>
-
-                                        <div class="input-group mb-3 ">
-                                            <div class="col-1"></div>
-                                            <span class="form-floating">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" id="vacentLand"
-                                                        placeholder="Total area under Vacant Land (sq. km)" disabled>
-                                                    <label for="vacentLand">Vacant Land area</label>
-                                                </div>
-                                            </span>
-                                            <span class="input-group-text" id="basic-addon-1">sq. Km</span>
-                                            <div class="invalid-feedback">
-                                                Please provide a valid data.
                                             </div>
                                         </div>
 
 
-                                        <div class="input-group mb-3 ">
-                                            <div class="col-1"></div>
-                                            <span class="form-floating">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" id="roadArea"
-                                                        placeholder="Total area under Road Area (sq. km)" disabled>
-                                                    <label for="roadArea">Under Road area</label>
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3 ">
+                                                    <span class="form-floating">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control" id="defence" placeholder="Total area under Defence (sq. km)" value="23" disabled>
+                                                            <label for="defence">Defence area</label>
+                                                        </div>
+                                                    </span>
+                                                    <span class="input-group-text" id="basic-addon-1">sq. Km</span>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid data.
+                                                    </div>
                                                 </div>
-                                            </span>
-                                            <span class="input-group-text" id="basic-addon-1">sq. Km</span>
-                                            <div class="invalid-feedback">
-                                                Please provide a valid data.
+                                            </div>
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3 ">
+                                                    <span class="form-floating">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control" id="agriculture" placeholder="Total area under Agriculture (sq. km)" value="67" disabled>
+                                                            <label for="agriculture">Agriculture area</label>
+                                                        </div>
+                                                    </span>
+                                                    <span class="input-group-text" id="basic-addon-1">sq. Km</span>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid data.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3 ">
+                                                    <span class="form-floating">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control" id="vacentLand" placeholder="Total area under Vacant Land (sq. km)" value="85" disabled>
+                                                            <label for="vacentLand">Vacant Land area</label>
+                                                        </div>
+                                                    </span>
+                                                    <span class="input-group-text" id="basic-addon-1">sq. Km</span>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid data.
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="input-group mb-3 ">
-                                            <div class="col-1"></div>
-                                            <span class="form-floating">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" id="greenArea"
-                                                        placeholder="Total area under Green Area (sq. km)" disabled>
-                                                    <label for="greenArea">Under Green area</label>
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3 ">
+                                                    <span class="form-floating">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control" id="roadArea" placeholder="Total area under Road Area (sq. km)" value="45" disabled>
+                                                            <label for="roadArea">Under Road area</label>
+                                                        </div>
+                                                    </span>
+                                                    <span class="input-group-text" id="basic-addon-1">sq. Km</span>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid data.
+                                                    </div>
                                                 </div>
-                                            </span>
-                                            <span class="input-group-text" id="basic-addon-1">sq. Km</span>
-                                            <div class="invalid-feedback">
-                                                Please provide a valid data.
+                                            </div>
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3 ">
+                                                    <span class="form-floating">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control" id="greenArea" placeholder="Total area under Green Area (sq. km)" value="44" disabled>
+                                                            <label for="greenArea">Under Green area</label>
+                                                        </div>
+                                                    </span>
+                                                    <span class="input-group-text" id="basic-addon-1">sq. Km</span>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid data.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3 ">
+                                                    <span class="form-floating">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control" id="industrial" placeholder="Total area under Industrial (sq. km)" value="54" disabled>
+                                                            <label for="industrial">Industrial area</label>
+                                                        </div>
+                                                    </span>
+                                                    <span class="input-group-text" id="basic-addon-1">sq. Km</span>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid data.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3 ">
+                                                    <span class="form-floating">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control" id="slum" placeholder="Total area under Slum (sq. km)" value="54" disabled>
+                                                            <label for="slum">Slum area</label>
+                                                        </div>
+                                                    </span>
+                                                    <span class="input-group-text" id="basic-addon-1">sq. Km</span>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid data.
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="input-group mb-3 ">
-                                            <div class="col-1"></div>
-                                            <span class="form-floating">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" id="industrial"
-                                                        placeholder="Total area under Industrial (sq. km)" disabled>
-                                                    <label for="industrial">Industrial area</label>
-                                                </div>
-                                            </span>
-                                            <span class="input-group-text" id="basic-addon-1">sq. Km</span>
-                                            <div class="invalid-feedback">
-                                                Please provide a valid data.
-                                            </div>
-                                        </div>
 
-                                        <div class="input-group mb-3 ">
-                                            <div class="col-1"></div>
-                                            <span class="form-floating">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" id="slum"
-                                                        placeholder="Total area under Slum (sq. km)" disabled>
-                                                    <label for="slum">Slum area</label>
-                                                </div>
-                                            </span>
-                                            <span class="input-group-text" id="basic-addon-1">sq. Km</span>
-                                            <div class="invalid-feedback">
-                                                Please provide a valid data.
-                                            </div>
-                                        </div>
                                     </form>
                                 </div>
                             </div>
@@ -607,69 +631,73 @@ require "php/session.php";
                                             <h4 class="text-center mb-2">Solid Waste</h4>
                                             <form class="needs-validation" novalidate>
 
-                                                <div class="input-group mb-3">
-                                                    <div class="col-1"></div>
-                                                    <span class="form-floating">
-                                                        <div class="form-floating labelFont">
-                                                            <input type="text" class="form-control" id="solidGen"
-                                                                placeholder="Solid waste Generation" disabled>
-                                                            <label for="solidGen">Solid waste Generation</label>
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-4 col-lg-4">
+                                                        <div class="input-group mb-3">
+                                                            <span class="form-floating">
+                                                                <div class="form-floating labelFont">
+                                                                    <input type="text" class="form-control" id="solidGen" placeholder="Solid waste Generation" value="63" disabled>
+                                                                    <label for="solidGen">Solid waste Generation</label>
+                                                                </div>
+                                                            </span>
+                                                            <span class="input-group-text" id="basic-addon-1">tonne</span>
+                                                            <div class="invalid-feedback">
+                                                                Please provide a valid data.
+                                                            </div>
                                                         </div>
-                                                    </span>
-                                                    <span class="input-group-text" id="basic-addon-1">tonne</span>
-                                                    <div class="invalid-feedback">
-                                                        Please provide a valid data.
+                                                    </div>
+                                                    <div class="col-md-4 col-lg-4">
+                                                        <div class="input-group mb-3">
+                                                            <span class="form-floating">
+                                                                <div class="form-floating labelFont">
+                                                                    <input type="text" class="form-control" id="solidColl" placeholder="Solid Waste Collection" value="12" disabled>
+                                                                    <label for="solidColl">Solid Waste Collection</label>
+                                                                </div>
+                                                            </span>
+                                                            <span class="input-group-text" id="basic-addon-1">tonne</span>
+                                                            <div class="invalid-feedback">
+                                                                Please provide a valid data.
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="input-group mb-3">
-                                                    <div class="col-1"></div>
-                                                    <span class="form-floating">
-                                                        <div class="form-floating labelFont">
-                                                            <input type="text" class="form-control" id="solidColl"
-                                                                placeholder="Solid Waste Collection" disabled>
-                                                            <label for="solidColl">Solid Waste Collection</label>
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-4 col-lg-4">
+                                                        <div class="input-group mb-3">
+                                                            <span class="form-floating">
+                                                                <div class="form-floating labelFont">
+                                                                    <input type="text" class="form-control" id="solidTreat" placeholder="Solid Waste Treatement" value="36" disabled>
+                                                                    <label for="solidTreat">Solid Waste Treatement</label>
+                                                                </div>
+                                                            </span>
+                                                            <span class="input-group-text" id="basic-addon-1">tonne</span>
+                                                            <div class="invalid-feedback">
+                                                                Please provide a valid data.
+                                                            </div>
                                                         </div>
-                                                    </span>
-                                                    <span class="input-group-text" id="basic-addon-1">tonne</span>
-                                                    <div class="invalid-feedback">
-                                                        Please provide a valid data.
+                                                    </div>
+                                                    <div class="col-md-4 col-lg-4">
+                                                        <div class="input-group mb-3">
+                                                            <span class="form-floating">
+                                                                <div class="form-floating labelFont">
+                                                                    <input type="text" class="form-control" id="dumpingYard" placeholder="No. of Dumping yard present" value="82" disabled>
+                                                                    <label for="dumpingYard">No. of Dumping yard present</label>
+                                                                </div>
+                                                            </span>
+                                                            <span class="input-group-text" id="basic-addon-1">tonne</span>
+                                                            <div class="invalid-feedback">
+                                                                Please provide a valid data.
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="input-group mb-3">
-                                                    <div class="col-1"></div>
-                                                    <span class="form-floating">
-                                                        <div class="form-floating labelFont">
-                                                            <input type="text" class="form-control" id="solidTreat"
-                                                                placeholder="Solid Waste Treatement" disabled>
-                                                            <label for="solidTreat">Solid Waste Treatement</label>
-                                                        </div>
-                                                    </span>
-                                                    <span class="input-group-text" id="basic-addon-1">tonne</span>
-                                                    <div class="invalid-feedback">
-                                                        Please provide a valid data.
-                                                    </div>
-                                                </div>
-
-                                                <div class="input-group mb-3">
-                                                    <div class="col-1"></div>
-                                                    <span class="form-floating">
-                                                        <div class="form-floating labelFont">
-                                                            <input type="text" class="form-control" id="dumpingYard"
-                                                                placeholder="No. of Dumping yard present" disabled>
-                                                            <label for="dumpingYard">No. of Dumping yard present</label>
-                                                        </div>
-                                                    </span>
-                                                    <span class="input-group-text" id="basic-addon-1">tonne</span>
-                                                    <div class="invalid-feedback">
-                                                        Please provide a valid data.
-                                                    </div>
-                                                </div>
                                             </form>
                                         </div>
                                     </div>
                                 </div>
+
                                 <!-- waste water  -->
                                 <div class="row">
                                     <div class="col-md-12 col-lg-12  mb-3  s" data-aos-delay="200">
@@ -677,82 +705,91 @@ require "php/session.php";
                                             <h4 class="text-center mb-2">Waste Water</h4>
                                             <form class="needs-validation" novalidate>
 
-                                                <div class="input-group mb-3">
-                                                    <div class="col-1"></div>
-                                                    <span class="form-floating">
-                                                        <div class="form-floating labelFont">
-                                                            <input type="text" class="form-control"
-                                                                id="waterConsumption" placeholder="Water Consumption"
-                                                                disabled>
-                                                            <label for="waterConsumption">Water Consumption</label>
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-4 col-lg-4">
+                                                        <div class="input-group mb-3">
+                                                            <span class="form-floating">
+                                                                <div class="form-floating labelFont">
+                                                                    <input type="text" class="form-control" id="waterConsumption" placeholder="Water Consumption" value="82" disabled>
+                                                                    <label for="waterConsumption">Water Consumption</label>
+                                                                </div>
+                                                            </span>
+                                                            <span class="input-group-text" id="basic-addon-1">CMD</span>
+                                                            <div class="invalid-feedback">
+                                                                Please provide a valid data.
+                                                            </div>
                                                         </div>
-                                                    </span>
-                                                    <span class="input-group-text" id="basic-addon-1">CMD</span>
-                                                    <div class="invalid-feedback">
-                                                        Please provide a valid data.
+                                                    </div>
+                                                    <div class="col-md-4 col-lg-4">
+                                                        <div class="input-group mb-3">
+                                                            <span class="form-floating">
+                                                                <div class="form-floating labelFont">
+                                                                    <input type="text" class="form-control" id="waterGenration" placeholder="Waste water generated" value="48" disabled>
+                                                                    <label for="waterGenration">Waste water generated</label>
+                                                                </div>
+                                                            </span>
+                                                            <span class="input-group-text" id="basic-addon-1">CMD</span>
+                                                            <div class="invalid-feedback">
+                                                                Please provide a valid data.
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="input-group mb-3">
-                                                    <div class="col-1"></div>
-                                                    <span class="form-floating">
-                                                        <div class="form-floating labelFont">
-                                                            <input type="text" class="form-control" id="waterGenration"
-                                                                placeholder="Waste water generated" disabled>
-                                                            <label for="waterGenration">Waste water generated</label>
+                                                <div class="row justify-content-center">
+
+                                                    <div class="col-md-4 col-lg-4">
+                                                        <div class="input-group mb-3">
+                                                            <span class="form-floating">
+                                                                <div class="form-floating labelFont">
+                                                                    <input type="text" class="form-control" id="waterCollection" placeholder="Waste water collection" value="45" disabled>
+                                                                    <label for="waterCollection">Waste water collection</label>
+                                                                </div>
+                                                            </span>
+                                                            <span class="input-group-text" id="basic-addon-1">CMD</span>
+                                                            <div class="invalid-feedback">
+                                                                Please provide a valid data.
+                                                            </div>
                                                         </div>
-                                                    </span>
-                                                    <span class="input-group-text" id="basic-addon-1">CMD</span>
-                                                    <div class="invalid-feedback">
-                                                        Please provide a valid data.
                                                     </div>
+                                                    <div class="col-md-4 col-lg-4">
+                                                        <div class="input-group mb-3">
+                                                            <span class="form-floating">
+                                                                <div class="form-floating labelFont">
+                                                                    <input type="text" class="form-control" id="waterTreat" placeholder="Qty of treat from WW" value="84" disabled>
+                                                                    <label for="waterTreat">Qty of treat from waste
+                                                                        water</label>
+                                                                </div>
+                                                            </span>
+                                                            <span class="input-group-text" id="basic-addon-1">CMD</span>
+                                                            <div class="invalid-feedback">
+                                                                Please provide a valid data.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
 
-                                                <div class="input-group mb-3">
-                                                    <div class="col-1"></div>
-                                                    <span class="form-floating">
-                                                        <div class="form-floating labelFont">
-                                                            <input type="text" class="form-control" id="waterCollection"
-                                                                placeholder="Waste water collection" disabled>
-                                                            <label for="waterCollection">Waste water collection</label>
+                                                <div class="row justify-content-center">
+
+                                                    <div class="col-md-4 col-lg-4">
+                                                        <div class="input-group mb-3">
+                                                            <span class="form-floating">
+                                                                <div class="form-floating labelFont">
+                                                                    <input type="text" class="form-control" id="noSTP" placeholder="No of STP" value="38" disabled>
+                                                                    <label for="noSTP">No of STP</label>
+                                                                </div>
+                                                            </span>
+                                                            <span class="input-group-text" id="basic-addon-1">CMD</span>
+                                                            <div class="invalid-feedback">
+                                                                Please provide a valid data.
+                                                            </div>
                                                         </div>
-                                                    </span>
-                                                    <span class="input-group-text" id="basic-addon-1">CMD</span>
-                                                    <div class="invalid-feedback">
-                                                        Please provide a valid data.
+
                                                     </div>
+
                                                 </div>
 
-                                                <div class="input-group mb-3">
-                                                    <div class="col-1"></div>
-                                                    <span class="form-floating">
-                                                        <div class="form-floating labelFont">
-                                                            <input type="text" class="form-control" id="waterTreat"
-                                                                placeholder="Qty of treat from WW" disabled>
-                                                            <label for="waterTreat">Qty of treat from waste
-                                                                water</label>
-                                                        </div>
-                                                    </span>
-                                                    <span class="input-group-text" id="basic-addon-1">CMD</span>
-                                                    <div class="invalid-feedback">
-                                                        Please provide a valid data.
-                                                    </div>
-                                                </div>
-
-                                                <div class="input-group mb-3">
-                                                    <div class="col-1"></div>
-                                                    <span class="form-floating">
-                                                        <div class="form-floating labelFont">
-                                                            <input type="text" class="form-control" id="noSTP"
-                                                                placeholder="No of STP" disabled>
-                                                            <label for="noSTP">No of STP</label>
-                                                        </div>
-                                                    </span>
-                                                    <span class="input-group-text" id="basic-addon-1">CMD</span>
-                                                    <div class="invalid-feedback">
-                                                        Please provide a valid data.
-                                                    </div>
-                                                </div>
                                             </form>
                                         </div>
                                     </div>
@@ -777,14 +814,13 @@ require "php/session.php";
                                             <h6 class="text-center">Type of fuel mix used by industry</h6>
                                         </div>
 
-                                        <div class="row ">
-                                            <div class="col-lg-6">
+                                        <div class="row justify-content-center">
 
-                                                <div class="input-group mb-3 m-lg-4">
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3 ">
                                                     <span class="form-floating">
                                                         <div class="form-floating labelFont">
-                                                            <input type="text" class="form-control" id="amtCoal"
-                                                                placeholder="Amount of Coal used" disabled>
+                                                            <input type="text" class="form-control" id="amtCoal" placeholder="Amount of Coal used" value="17" disabled>
                                                             <label for="amtCoal">Amount of Coal used</label>
                                                         </div>
                                                     </span>
@@ -793,12 +829,12 @@ require "php/session.php";
                                                         Please provide a valid data.
                                                     </div>
                                                 </div>
-
-                                                <div class="input-group mb-3 m-lg-4">
+                                            </div>
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3 ">
                                                     <span class="form-floating">
                                                         <div class="form-floating labelFont">
-                                                            <input type="text" class="form-control" id="amtFO"
-                                                                placeholder="Amount of FO used" disabled>
+                                                            <input type="text" class="form-control" id="amtFO" placeholder="Amount of FO used" value="61" disabled>
                                                             <label for="amtFO">Amount of FO used</label>
                                                         </div>
                                                     </span>
@@ -807,12 +843,12 @@ require "php/session.php";
                                                         Please provide a valid data.
                                                     </div>
                                                 </div>
-
-                                                <div class="input-group mb-3 m-lg-4">
+                                            </div>
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3 ">
                                                     <span class="form-floating">
                                                         <div class="form-floating labelFont">
-                                                            <input type="text" class="form-control" id="amtLDO"
-                                                                placeholder="Amount of LDO used" disabled>
+                                                            <input type="text" class="form-control" id="amtLDO" placeholder="Amount of LDO used" value="34" disabled>
                                                             <label for="amtLDO">Amount of LDO used</label>
                                                         </div>
                                                     </span>
@@ -821,12 +857,14 @@ require "php/session.php";
                                                         Please provide a valid data.
                                                     </div>
                                                 </div>
-
-                                                <div class="input-group mb-3 m-lg-4">
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3 ">
                                                     <span class="form-floating">
                                                         <div class="form-floating labelFont">
-                                                            <input type="text" class="form-control" id="amtHSD"
-                                                                placeholder="Amount of HSD used" disabled>
+                                                            <input type="text" class="form-control" id="amtHSD" placeholder="Amount of HSD used" value="45" disabled>
                                                             <label for="amtHSD">Amount of HSD used</label>
                                                         </div>
                                                     </span>
@@ -836,13 +874,11 @@ require "php/session.php";
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <div class="col-lg-6">
-                                                <div class="input-group mb-3 m-lg-4">
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3 ">
                                                     <span class="form-floating">
                                                         <div class="form-floating labelFont">
-                                                            <input type="text" class="form-control" id="amtPNG"
-                                                                placeholder="Amount of PNG used" disabled>
+                                                            <input type="text" class="form-control" id="amtPNG" placeholder="Amount of PNG used" value="23" disabled>
                                                             <label for="amtPNG">Amount of PNG used</label>
                                                         </div>
                                                     </span>
@@ -851,12 +887,12 @@ require "php/session.php";
                                                         Please provide a valid data.
                                                     </div>
                                                 </div>
-
-                                                <div class="input-group mb-3 m-lg-4">
+                                            </div>
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3 ">
                                                     <span class="form-floating">
                                                         <div class="form-floating labelFont">
-                                                            <input type="text" class="form-control" id="amtNG"
-                                                                placeholder="Amount of NG used" disabled>
+                                                            <input type="text" class="form-control" id="amtNG" placeholder="Amount of NG used" value="34" disabled>
                                                             <label for="amtNG">Amount of NG used</label>
                                                         </div>
                                                     </span>
@@ -865,12 +901,14 @@ require "php/session.php";
                                                         Please provide a valid data.
                                                     </div>
                                                 </div>
-
-                                                <div class="input-group mb-3 m-lg-4">
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3 ">
                                                     <span class="form-floating">
                                                         <div class="form-floating labelFont">
-                                                            <input type="text" class="form-control" id="amtBriquette"
-                                                                placeholder="Amount of Briquette used" disabled>
+                                                            <input type="text" class="form-control" id="amtBriquette" placeholder="Amount of Briquette used" value="34" disabled>
                                                             <label for="amtBriquette">Amount of Briquette used</label>
                                                         </div>
                                                     </span>
@@ -879,12 +917,12 @@ require "php/session.php";
                                                         Please provide a valid data.
                                                     </div>
                                                 </div>
-
-                                                <div class="input-group mb-3 m-lg-4">
+                                            </div>
+                                            <div class="col-md-4 col-lg-4">
+                                                <div class="input-group mb-3 ">
                                                     <span class="form-floating">
                                                         <div class="form-floating labelFont">
-                                                            <input type="text" class="form-control" id="amtWood"
-                                                                placeholder="Amount of Wood used" disabled>
+                                                            <input type="text" class="form-control" id="amtWood" placeholder="Amount of Wood used" value="44" disabled>
                                                             <label for="amtWood">Amount of Wood used</label>
                                                         </div>
                                                     </span>
@@ -895,6 +933,8 @@ require "php/session.php";
                                                 </div>
                                             </div>
                                         </div>
+
+
                                     </form>
                                 </div>
                             </div>
@@ -915,20 +955,26 @@ require "php/session.php";
                                                     </marquee>
                                                 </div>
 
-                                                <div class="input-group mb-3 ">
-                                                    <div class="col-1"></div>
-                                                    <span class="form-floating">
-                                                        <div class="form-floating">
-                                                            <input type="text" class="form-control" id="amtProd"
-                                                                placeholder="Amount of product" disabled>
-                                                            <label for="amtProd">Amount of product</label>
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-4 col-lg-4">
+
+                                                        <div class="input-group mb-3 ">
+                                                            <div class="col-1"></div>
+                                                            <span class="form-floating">
+                                                                <div class="form-floating">
+                                                                    <input type="text" class="form-control" id="amtProd" placeholder="Amount of product" value="23" disabled>
+                                                                    <label for="amtProd">Amount of product</label>
+                                                                </div>
+                                                            </span>
+                                                            <span class="input-group-text" id="basic-addon-1">t/year</span>
+                                                            <div class="invalid-feedback">
+                                                                Please provide a valid data.
+                                                            </div>
                                                         </div>
-                                                    </span>
-                                                    <span class="input-group-text" id="basic-addon-1">t/year</span>
-                                                    <div class="invalid-feedback">
-                                                        Please provide a valid data.
+
                                                     </div>
                                                 </div>
+
                                             </form>
                                         </div>
                                     </div>
@@ -940,38 +986,19 @@ require "php/session.php";
                                         <div class="in-sec">
                                             <h4 class="text-center mb-2">Fuel use in city</h4>
                                             <form class="needs-validation" novalidate>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <label for="popu">Fuel use </label>
-                                                        <div class="invalid-feedback">
-                                                            Please provide a valid data.
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group col-md-6">
-                                                        <select class="form-control" id="exampleFormControlSelect1">
-                                                            <option>LPG</option>
-                                                            <option>MNGL</option>
-                                                            <option>Kerosene</option>
-                                                            <option>Wood</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
 
                                                 <!-- LPG -->
-                                                <div class="row">
-                                                    <div class="form-floating col-6 mt-3 mb-3">
-                                                        <input type="text" class="form-control" id="lpginr"
-                                                            placeholder="Residential LPG" required disabled>
+                                                <div class="row justify-content-center">
+                                                    <div class="form-floating col-3 mt-3 mb-3">
+                                                        <input type="text" class="form-control" id="lpginr" placeholder="Residential LPG" value="76" required disabled>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid data.
                                                         </div>
                                                         <label for="lpginr">Residential LPG</label>
                                                     </div>
 
-                                                    <div class="form-floating col-6 mt-3 mb-3">
-                                                        <input type="text" class="form-control" id="lpginc"
-                                                            placeholder="Commercial LPG" required disabled>
+                                                    <div class="form-floating col-3 mt-3 mb-3">
+                                                        <input type="text" class="form-control" id="lpginc" placeholder="Commercial LPG" value="35" required disabled>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid data.
                                                         </div>
@@ -980,19 +1007,17 @@ require "php/session.php";
                                                 </div>
 
                                                 <!-- MNGL -->
-                                                <div class="row">
-                                                    <div class="form-floating col-6 mt-3 mb-3">
-                                                        <input type="text" class="form-control" id="mnglinr"
-                                                            placeholder="Residential MNGL" required disabled>
+                                                <div class="row justify-content-center">
+                                                    <div class="form-floating col-3 mt-3 mb-3">
+                                                        <input type="text" class="form-control" id="mnglinr" placeholder="Residential MNGL" value="54" required disabled>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid data.
                                                         </div>
                                                         <label for="mnglinr">Residential MNGL</label>
                                                     </div>
 
-                                                    <div class="form-floating col-6 mt-3 mb-3">
-                                                        <input type="text" class="form-control" id="mnglinc"
-                                                            placeholder="Commercial MNGL" required disabled>
+                                                    <div class="form-floating col-3 mt-3 mb-3">
+                                                        <input type="text" class="form-control" id="mnglinc" placeholder="Commercial MNGL" value="53" required disabled>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid data.
                                                         </div>
@@ -1001,19 +1026,17 @@ require "php/session.php";
                                                 </div>
 
                                                 <!-- kerosene -->
-                                                <div class="row">
-                                                    <div class="form-floating col-6 mt-3 mb-3">
-                                                        <input type="text" class="form-control" id="keroseneinr"
-                                                            placeholder="Residential Kerosene" required disabled>
+                                                <div class="row justify-content-center">
+                                                    <div class="form-floating col-3 mt-3 mb-3">
+                                                        <input type="text" class="form-control" id="keroseneinr" placeholder="Residential Kerosene" value="28" required disabled>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid data.
                                                         </div>
                                                         <label for="keroseneinr">Residential Kerosene</label>
                                                     </div>
 
-                                                    <div class="form-floating col-6 mt-3 mb-3">
-                                                        <input type="text" class="form-control" id="keroseneinc"
-                                                            placeholder="Commercial Kerosene" required disabled>
+                                                    <div class="form-floating col-3 mt-3 mb-3">
+                                                        <input type="text" class="form-control" id="keroseneinc" placeholder="Commercial Kerosene" value="43" required disabled>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid data.
                                                         </div>
@@ -1022,25 +1045,25 @@ require "php/session.php";
                                                 </div>
 
                                                 <!-- Wood -->
-                                                <div class="row">
-                                                    <div class="form-floating col-6 mt-3 mb-3">
-                                                        <input type="text" class="form-control" id="woodinr"
-                                                            placeholder="Residential Wood" required disabled>
+                                                <div class="row justify-content-center">
+                                                    <div class="form-floating col-3 mt-3 mb-3">
+                                                        <input type="text" class="form-control" id="woodinr" placeholder="Residential Wood" value="56" required disabled>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid data.
                                                         </div>
                                                         <label for="woodinr">Residential Wood</label>
                                                     </div>
 
-                                                    <div class="form-floating col-6 mt-3 mb-3">
-                                                        <input type="text" class="form-control" id="woodinc"
-                                                            placeholder="Commercial Wood" required disabled>
+                                                    <div class="form-floating col-3 mt-3 mb-3">
+                                                        <input type="text" class="form-control" id="woodinc" placeholder="Commercial Wood" value="23" required disabled>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid data.
                                                         </div>
                                                         <label for="woodinc">Commercial wood</label>
                                                     </div>
                                                 </div>
+
+
                                             </form>
                                         </div>
                                     </div>
@@ -1058,24 +1081,24 @@ require "php/session.php";
 
 
     <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    })();
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
     </script>
 
 
