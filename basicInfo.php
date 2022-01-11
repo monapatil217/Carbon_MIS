@@ -191,8 +191,9 @@ require "php/session.php";
                     <div class="col-md-3 col-lg-3  mb-3  s" id="map">
                         <!-- <iframe src='https://www.google.com/maps/d/embed?mid=140-hCtIBiMR1cPYqnNdAfshk9uBF58cW' width='620' height='480'>
                         </iframe>  -->
+                        <iframe src="https://www.google.com/maps/d/embed?mid=1-FesHGQxUbyg_7qyS4yD4T0xZZf6tm66&ehbc=2E312F" width="640" height="480"></iframe>
 
-                        <iframe src="https://www.google.com/maps/d/embed?mid=1dIcX1epifIboxYbkm9zmsqleYbZLDJGY&ehbc=2E312F" width="640" height="480"></iframe>
+                        <!-- <iframe src="https://www.google.com/maps/d/embed?mid=1dIcX1epifIboxYbkm9zmsqleYbZLDJGY&ehbc=2E312F" width="640" height="480"></iframe> -->
                     </div>
                 </div>
 
