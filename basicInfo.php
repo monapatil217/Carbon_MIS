@@ -17,7 +17,9 @@ require "php/session.php";
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -60,8 +62,13 @@ require "php/session.php";
 
                             <div class="row mb-2">
                                 <div class="col-md-12">
-                                    <label for="popu">Population </label>
-                                    <input type="text" class="form-control" id="popu" placeholder="Population" required>
+                                    <span class="form-floating">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="city"
+                                                value=<?php echo $_SESSION["cityName"];?> disabled>
+                                            <label for="popu">City</label>
+                                        </div>
+                                    </span>
                                     <div class="invalid-feedback">
                                         Please provide a valid data.
                                     </div>
@@ -69,6 +76,20 @@ require "php/session.php";
                             </div>
 
                             <div class="row mb-2">
+                                <div class="col-md-12">
+                                    <span class="form-floating">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="popu" placeholder="Population">
+                                            <label for="popu">Population</label>
+                                        </div>
+                                    </span>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid data.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="row mb-2">
                                 <div class="col-md-12">
                                     <label for="rpopu">Rular Population</label>
                                     <input type="text" class="form-control" id="rpopu" placeholder="Rular Population" required>
@@ -76,39 +97,53 @@ require "php/session.php";
                                         Please provide a valid data.
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="row mb-2">
-                                <div class=" col-md-12">
-                                    <label for="female">Female</label>
-                                    <input type="text" class="form-control" id="female" placeholder=" Female " required>
-                                    <div class="invalid-feedback">
-                                        Please provide a valid data.
-                                    </div>
-                                </div>
-                            </div>
+                            </div> -->
 
                             <div class="row mb-2">
                                 <div class="col-md-12">
-                                    <label for="gArea">Green Area</label>
-                                    <input type="text" class="form-control" id="gArea" placeholder="Green Area " required>
+                                    <span class="form-floating">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="male" placeholder="male">
+                                            <label for="male">Male</label>
+                                        </div>
+                                    </span>
                                     <div class="invalid-feedback">
                                         Please provide a valid data.
                                     </div>
                                 </div>
                             </div>
+
 
                             <div class="row mb-2">
                                 <div class="col-md-12">
-                                    <label for="lite">literacy</label>
-                                    <input type="text" class="form-control" id="lite" placeholder="literacy" required>
+                                    <span class="form-floating">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="female" placeholder="female">
+                                            <label for="female">Female</label>
+                                        </div>
+                                    </span>
                                     <div class="invalid-feedback">
                                         Please provide a valid data.
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="row mb-2">
+                            <div class="input-group mb-3">
+                                <div class="col-1 md-12"></div>
+                                <span class="form-floating">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="literacy"
+                                            placeholder="name@example.com">
+                                        <label for="literacy">literacy</label>
+                                    </div>
+                                </span>
+                                <span class="input-group-text" id="basic-addon-1">%</span>
+                                <div class="invalid-feedback">
+                                    Please provide a valid data.
+                                </div>
+                            </div>
+
+                            <!-- <div class="row mb-2">
                                 <div class="col-md-12">
                                     <label for="edu">Education</label>
                                     <input type="text" class="form-control" id="edu" placeholder="Education" required>
@@ -116,7 +151,7 @@ require "php/session.php";
                                         Please provide a valid data.
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                         </div>
                     </div>
@@ -124,22 +159,25 @@ require "php/session.php";
                     <div class="col-md-3 col-lg-3  mb-3  s" data-aos-delay="200">
                         <div class="in-sec">
 
-                            <div class="row mb-2">
-                                <div class="col-md-12">
-                                    <label for="city"> City </label>
-                                    <input type="text" class="form-control" id="city" value=<?php echo $_SESSION["cityName"];?> disabled>
-                                    <div class="invalid-feedback">
-                                        Please provide a valid data.
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="row mb-2">
+                            <!-- <div class="row mb-2">
                                 <div class="col-md-12">
                                     <label for="upopu"> Urban Population </label>
                                     <input type="text" class="form-control" id="upopu" placeholder="Urban Population" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid data.
+                                    </div>
+                                </div>
+                            </div> -->
 
+                            <div class="row mb-2">
+                                <div class="col-md-12">
+                                    <span class="form-floating">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="hospital"
+                                                placeholder="hospital">
+                                            <label for="hospital">No of Hospital</label>
+                                        </div>
+                                    </span>
                                     <div class="invalid-feedback">
                                         Please provide a valid data.
                                     </div>
@@ -148,65 +186,67 @@ require "php/session.php";
 
                             <div class="row mb-2">
                                 <div class="col-md-12">
-                                    <label for="male">Male</label>
-                                    <input type="text" class="form-control" id="male" placeholder=" Male " required>
+                                    <span class="form-floating">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="gdp" placeholder="GDP">
+                                            <label for="gdp">GDP</label>
+                                        </div>
+                                    </span>
                                     <div class="invalid-feedback">
                                         Please provide a valid data.
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="row mb-2">
-                                <div class="col-md-12">
-                                    <label for="tArea">Total Area</label>
-                                    <input type="text" class="form-control" id="tArea" placeholder="Total Area" required>
-                                    <div class="invalid-feedback">
-                                        Please provide a valid data.
+
+                            <div class="input-group mb-3">
+                                <div class="col-1 md-12"></div>
+                                <span class="form-floating">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="tArea"
+                                            placeholder="name@example.com">
+                                        <label for="tArea">Total Area</label>
                                     </div>
+                                </span>
+                                <span class="input-group-text" id="basic-addon-1">sq.Km</span>
+                                <div class="invalid-feedback">
+                                    Please provide a valid data.
                                 </div>
                             </div>
 
-                            <div class="row mb-2">
-                                <div class="col-md-12">
-                                    <label for="gdp">GDP</label>
-                                    <input type="text" class="form-control" id="gdp" placeholder="GDP" required>
-                                    <div class="invalid-feedback">
-                                        Please provide a valid data.
+                            <div class="input-group mb-3">
+                                <div class="col-1 md-12"></div>
+                                <span class="form-floating">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="gArea"
+                                            placeholder="name@example.com">
+                                        <label for="gArea">Green Area</label>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="row mb-2">
-                                <div class="col-md-12">
-                                    <label for="hospital">No of Hospital</label>
-                                    <input type="text" class="form-control" id="hospital" placeholder="No of Hospital" required>
-                                    <div class="invalid-feedback">
-                                        Please provide a valid data.
-                                    </div>
+                                </span>
+                                <span class="input-group-text" id="basic-addon-1">sq.Km</span>
+                                <div class="invalid-feedback">
+                                    Please provide a valid data.
                                 </div>
                             </div>
 
                         </div>
                     </div>
                     <div class="col-md-3 col-lg-3  mb-3  s" id="map">
-                        <!-- <iframe src='https://www.google.com/maps/d/embed?mid=140-hCtIBiMR1cPYqnNdAfshk9uBF58cW' width='620' height='480'>
-                        </iframe>  -->
-                        <iframe src="https://www.google.com/maps/d/embed?mid=1-FesHGQxUbyg_7qyS4yD4T0xZZf6tm66&ehbc=2E312F" width="640" height="480"></iframe>
-
-                        <!-- <iframe src="https://www.google.com/maps/d/embed?mid=1dIcX1epifIboxYbkm9zmsqleYbZLDJGY&ehbc=2E312F" width="640" height="480"></iframe> -->
+                      
                     </div>
                 </div>
 
                 <div class="row ">
                     <div class="col-md-12  text-center">
-                        <button class="btn btn-primary btn-get-started scrollto " onclick="saveBasic()" type="button"> Next </button>
+                        <button class="btn btn-primary btn-get-started scrollto " onclick="saveBasic()" type="button">
+                            Next </button>
                     </div>
                 </div>
-                <div class="row ">
+                <!-- <div class="row ">
                     <div class="col-md-12  text-center">
                         <button class="btn btn-primary btn-get-started scrollto " onclick="abc()" type="button"> add </button>
                     </div>
-                </div>
+                </div> -->
 
 
             </form>
@@ -216,24 +256,24 @@ require "php/session.php";
 
 
     <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
     </script>
 
     <!-- Vendor JS Files -->
