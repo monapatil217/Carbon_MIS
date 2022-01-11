@@ -58,14 +58,15 @@ require "php/session.php";
             <input type="text" class="form-control" id="sectionType" value="landuseChart" hidden>
 
             <div class="row">
-                <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
-                    <div class="in-sec">
+                <div class="col-md-12 col-lg-7  mb-3" data-aos-delay="200">
+                    <div class="in-sec infoFont">
                         <h3>Land Use</h3>
-                        <h5>
-                            <p>It has been defined as "the purposes and activities through which people interact
+
+                         <ul style="margin-left: 10px;">
+                                <li class="popupli"> It has been defined as "the purposes and activities through which people interact
                                 with land and terrestrial ecosystems the total of arrangements, activities,
-                                and inputs that people undertake in a certain land type.</p>
-                        </h5>
+                                and inputs that people undertake in a certain land type.</li>
+                            </ul>
                         <div id="chartName">
                             <h3> Land Use Graph</h3>
                         </div>
@@ -73,153 +74,175 @@ require "php/session.php";
                     </div>
                 </div>
 
-                <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
+                <div class="col-md-12 col-lg-5  mb-3" data-aos-delay="200">
                     <div class="in-sec">
                         <h4 class="text-center mb-2">Land Use</h4>
                         <marquee width="100%" direction="left" height="30px">
                             sq.km - Square Kilometre.
                         </marquee>
                         <form class="needs-validation" novalidate>
+                        <h6 class="text-center"> Enter Land Use Area </h6>
+                            <div class="row justify-content-center">
+                                
+                                <div class="col-sm-5 col-lg-6">
+                                    <div class="row justify-content-center">
 
-                            <div class="input-group mb-3 ">
-                                <div class="col-1"></div>
-                                <span class="form-floating">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="residential" placeholder="Total area under Residential (sq. km)">
-                                        <label for="residential">Residential area</label>
+                                        <div class="col-md-6 col-lg-10 col-xl-12 col-8">
+                                            <div class="input-group  mb-3 ">
+                                                <span class="form-floating col-8 col-lg-7 col-xl-7">
+                                                    <div class="form-floating labelFont">
+                                                        <input type="text" class="form-control" id="residential" placeholder="Residential Area">
+                                                        <label for="residential">Residential</label>
+                                                    </div>
+                                                </span>
+                                                <span class="input-group-text" id="basic-addon-1">sq. km</span>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid data.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                       <div class="col-md-6 col-lg-10 col-xl-12 col-8">
+                                            <div class="input-group mb-3 ">
+                                                <span class="form-floating col-8 col-lg-7 col-xl-7">
+                                                    <div class="form-floating labelFont">
+                                                        <input type="text" class="form-control" id="commercial" placeholder="Total area under Commercial (sq. km)">
+                                                        <label for="commercial">Commercial</label>
+                                                    </div>
+                                                </span>
+                                                <span class="input-group-text" id="basic-addon-1">sq. km</span>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid data.
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-6 col-lg-10 col-xl-12 col-8">
+                                            <div class="input-group mb-3 ">
+                                                <span class="form-floating col-8 col-lg-7 col-xl-7">
+                                                    <div class="form-floating labelFont">
+                                                        <input type="text" class="form-control" id="waterBodies" placeholder="Total area under Commercial (sq. km)">
+                                                        <label for="waterBodies">Water Bodiea</label>
+                                                    </div>
+                                                </span>
+                                                <span class="input-group-text" id="basic-addon-1">sq. km</span>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid data.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 col-lg-10 col-xl-12 col-8">
+                                            <div class="input-group mb-3 ">
+                                                <span class="form-floating col-8 col-lg-7 col-xl-7">
+                                                    <div class="form-floating labelFont">
+                                                        <input type="text" class="form-control" id="defence" placeholder="Total area under Defence (sq. km)">
+                                                        <label for="defence">Defence</label>
+                                                    </div>
+                                                </span>
+                                                <span class="input-group-text" id="basic-addon-1">sq. km</span>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid data.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 col-lg-10 col-xl-12 col-8">
+                                            <div class="input-group mb-3 ">
+                                                <span class="form-floating col-8 col-lg-7 col-xl-7">
+                                                    <div class="form-floating labelFont">
+                                                        <input type="text" class="form-control" id="agriculture" placeholder="Total area under Agriculture (sq. km)">
+                                                        <label for="agriculture">Agriculture</label>
+                                                    </div>
+                                                </span>
+                                                <span class="input-group-text" id="basic-addon-1">sq. km</span>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid data.
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">sq. Km</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
                                 </div>
-                            </div>
 
-                            <div class="input-group mb-3 ">
-                                <div class="col-1"></div>
-                                <span class="form-floating">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="commercial" placeholder="Total area under Commercial (sq. km)">
-                                        <label for="commercial">Commercial area</label>
+                                <div class="col-sm-5 col-lg-6">
+                                    <div class="row justify-content-center">
+
+                                        <div class="col-md-6 col-lg-10 col-xl-12 col-8">
+                                            <div class="input-group mb-3 ">
+                                                <span class="form-floating col-8 col-lg-7 col-xl-7">
+                                                    <div class="form-floating labelFont">
+                                                        <input type="text" class="form-control" id="vacentLand" placeholder="Total area under Vacant Land (sq. km">
+                                                        <label for="vacentLand">Vacant Land</label>
+                                                    </div>
+                                                </span>
+                                                <span class="input-group-text" id="basic-addon-1">sq. km</span>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid data.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 col-lg-10 col-xl-12 col-8">
+                                            <div class="input-group mb-3 ">
+                                                <span class="form-floating col-8 col-lg-7 col-xl-7">
+                                                    <div class="form-floating labelFont">
+                                                        <input type="text" class="form-control" id="roadArea" placeholder="Total area under Road Area (sq. km)">
+                                                        <label for="roadArea">Under Road</label>
+                                                    </div>
+                                                </span>
+                                                <span class="input-group-text" id="basic-addon-1">sq. km</span>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid data.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 col-lg-10 col-xl-12 col-8">
+                                            <div class="input-group mb-3 ">
+                                                <span class="form-floating col-8 col-lg-7 col-xl-7">
+                                                    <div class="form-floating labelFont">
+                                                        <input type="text" class="form-control" id="greenArea" placeholder="Total area under Green Area (sq. km)">
+                                                        <label for="greenArea">Under Green</label>
+                                                    </div>
+                                                </span>
+                                                <span class="input-group-text" id="basic-addon-1">sq. km</span>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid data.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 col-lg-10 col-xl-12 col-8">
+                                            <div class="input-group mb-3 ">
+                                                <span class="form-floating col-8 col-lg-7 col-xl-7">
+                                                    <div class="form-floating labelFont">
+                                                        <input type="text" class="form-control" id="industrial" placeholder="Total area under Industrial (sq. km)">
+                                                        <label for="industrial">Industrial</label>
+                                                    </div>
+                                                </span>
+                                                <span class="input-group-text" id="basic-addon-1">sq. km</span>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid data.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 col-lg-10 col-xl-12 col-8">
+                                            <div class="input-group mb-3 ">
+                                                <span class="form-floating col-8 col-lg-7 col-xl-7">
+                                                    <div class="form-floating labelFont">
+                                                        <input type="text" class="form-control" id="slum" placeholder="Total area under Slum (sq. km)">
+                                                        <label for="slum">Slum</label>
+                                                    </div>
+                                                </span>
+                                                <span class="input-group-text" id="basic-addon-1">sq. Km</span>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid data.
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">sq. Km</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                            </div>
-
-                            <div class="input-group mb-3 ">
-                                <div class="col-1"></div>
-                                <span class="form-floating">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="waterBodies" placeholder="Total area under Commercial (sq. km)">
-                                        <label for="waterBodies">Water Bodiea area</label>
-                                    </div>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">sq. Km</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                            </div>
-
-
-                            <div class="input-group mb-3 ">
-                                <div class="col-1"></div>
-                                <span class="form-floating">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="defence" placeholder="Total area under Defence (sq. km)">
-                                        <label for="defence">Defence area</label>
-                                    </div>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">sq. Km</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                            </div>
-
-                            <div class="input-group mb-3 ">
-                                <div class="col-1"></div>
-                                <span class="form-floating">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="agriculture" placeholder="Total area under Agriculture (sq. km)">
-                                        <label for="agriculture">Agriculture area</label>
-                                    </div>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">sq. Km</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                            </div>
-
-                            <div class="input-group mb-3 ">
-                                <div class="col-1"></div>
-                                <span class="form-floating">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="vacentLand" placeholder="Total area under Vacant Land (sq. km">
-                                        <label for="vacentLand">Vacant Land area</label>
-                                    </div>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">sq. Km</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                            </div>
-
-
-                            <div class="input-group mb-3 ">
-                                <div class="col-1"></div>
-                                <span class="form-floating">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="roadArea" placeholder="Total area under Road Area (sq. km)">
-                                        <label for="roadArea">Under Road area</label>
-                                    </div>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">sq. Km</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                            </div>
-
-                            <div class="input-group mb-3 ">
-                                <div class="col-1"></div>
-                                <span class="form-floating">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="greenArea" placeholder="Total area under Green Area (sq. km)">
-                                        <label for="greenArea">Under Green area</label>
-                                    </div>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">sq. Km</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                            </div>
-
-                            <div class="input-group mb-3 ">
-                                <div class="col-1"></div>
-                                <span class="form-floating">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="industrial" placeholder="Total area under Industrial (sq. km)">
-                                        <label for="industrial">Industrial area</label>
-                                    </div>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">sq. Km</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                            </div>
-
-                            <div class="input-group mb-3 ">
-                                <div class="col-1"></div>
-                                <span class="form-floating">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="slum" placeholder="Total area under Slum (sq. km)">
-                                        <label for="slum">Slum area</label>
-                                    </div>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">sq. Km</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
                                 </div>
                             </div>
 
