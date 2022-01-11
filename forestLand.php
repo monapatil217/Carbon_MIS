@@ -61,13 +61,11 @@ require "php/session.php";
 
             <div class="row">
                 <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
-                    <div class="in-sec ">
+                    <div class="in-sec infoFont">
                         <h3>Forest Land</h3>
-                        <h5>
-                            <p>Forests provide a “carbon sink” that absorbs a net 7.6 billion metric tonnes of
-                                CO2 per year</p>
-                        </h5>
-
+                        <ul style="margin-left: 10px;">
+                                <li class="popupli"> Forests provide a “carbon sink” that absorbs a net 7.6 billion metric tonnes of CO2 per year</li>
+                            </ul>
                         <div id="chartName">
                             <h3> Forest Land Graph</h3>
                         </div>
@@ -83,31 +81,22 @@ require "php/session.php";
                             sq.km - Square Kilometre.
                         </marquee>
                         <form class="needs-validation" novalidate>
+                        <h6 class="text-center"> Area under Forest Land </h6>
 
-                            <!-- <div class="input-group mb-3 mt-3">
-                                <span class="form-floating">
-                                    <input type="text" class="form-control" id="areaForest"
-                                        aria-describedby="basic-addon-1" ... />
-                                    <label for="areaForest">Area under Forest Land</label>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">sq.km</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                            </div> -->
-
-
-                            <div class="input-group mb-3">
-                                <div class="col-1"></div>
-                                <span class="form-floating">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="areaForest" placeholder="name@example.com">
-                                        <label for="areaForest">Area under Forest Land</label>
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 col-lg-10 col-xl-9 col-8">
+                                    <div class="input-group mb-3 mt-3">
+                                        <span class="form-floating col-8 col-lg-7 col-xl-8">
+                                            <div class="form-floating ">
+                                                <input type="Text" class="form-control" id="areaForest" placeholder="Area">
+                                                <label for="areaForest">Area</label>
+                                            </div>
+                                        </span>
+                                        <span class="input-group-text" id="basic-addon-1">sq.km</span>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid data.
+                                        </div>
                                     </div>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">sqKM</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
                                 </div>
                             </div>
 

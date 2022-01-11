@@ -62,12 +62,12 @@ require "php/session.php";
 
             <div class="row">
 
-                <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
-                    <div class="in-sec">
+                <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
+                    <div class="in-sec infoFont">
                         <h3>Crop Land</h3>
-                        <h5>
-                            <p> Land that is suited to or used for crops as known as Crop Land.</p>
-                        </h5>
+                            <ul style="margin-left: 10px;">
+                                <li class="popupli"> Land that is suited to or used for crops as known as Crop Land.</li>
+                            </ul>
 
                         <div id="chartName">
                             <h3> Crop Land Graph</h3>
@@ -77,38 +77,29 @@ require "php/session.php";
                     </div>
                 </div>
 
-                <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
+                <div class="col-md-12 col-lg-4  mb-3" data-aos-delay="200">
                     <div class="in-sec">
                         <h4 class="text-center mb-2">Crop Land</h4>
                         <marquee width="100%" direction="left" height="30px">
                             sq.km - Square Kilometre.
                         </marquee>
                         <form class="needs-validation" novalidate>
+                            <h6 class="text-center"> Area under Crop Land </h6>
 
-
-                            <!-- <div class="input-group mb-3 mt-3">
-                                <span class="form-floating">
-                                    <input type="text" class="form-control" id="areaCrop"
-                                        aria-describedby="basic-addon-1" ... />
-                                    <label for="areaCrop">Area under Crop Land</label>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">sq.km</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                            </div> -->
-
-                            <div class="input-group mb-3 ">
-                                <div class="col-1"></div>
-                                <span class="form-floating">
-                                    <div class="form-floating">
-                                        <input type="Text" class="form-control" id="areaCrop" placeholder="name@example.com">
-                                        <label for="areaCrop">Area under Crop Land</label>
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 col-lg-10 col-xl-9 col-8">
+                                    <div class="input-group mb-3 mt-3">
+                                        <span class="form-floating col-8 col-lg-7 col-xl-8">
+                                            <div class="form-floating ">
+                                                <input type="text" class="form-control" id="areaCrop" placeholder="name@example.com">
+                                                <label for="areaCrop">Area</label>
+                                            </div>
+                                        </span>
+                                        <span class="input-group-text" id="basic-addon-1">sq.km</span>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid data.
+                                        </div>
                                     </div>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">sq.Km</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
                                 </div>
                             </div>
 
@@ -128,7 +119,7 @@ require "php/session.php";
                     <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
 
                         <div class="popup-flex fade-to-img" onclick="showCropLInfo();">
-                            <img class="reggot" id="popup-btn" src="img/land.png" width="80" height="80">
+                            <img class="reggot" id="popup-btn" src="img/field.png" width="80" height="80">
                         </div>
 
                         <div id="popup-wrapper" class="popup-container">
@@ -136,11 +127,7 @@ require "php/session.php";
 
                                 <div class="row align-items-center justify-content-center">
                                     <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <!-- <p>1 unit of electricity is equal to 1000 watts. which means 1 unit = 1 kwatt
-                                        electricity</p>
-                                    <p>Burning 1 kg of bituminous coal will produce 2.42 kg of carbon dioxide</p>
-                                    <p>The emissions per unit of electricity are estimated to be in the range of 0.91
-                                        to 0.95 kg/kWh for CO2</p> -->
+                                       
                                     </div>
                                     <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="btn-container">
