@@ -63,5 +63,27 @@ function saveBasic(){
 }
 
 function allMap(){
-
+    var flag = 0;
+    var userData = {};
+    var city = document.getElementById("city").value;
+    flag += customInputValidator(city, "city");
+    userData["city"] = city;
+    if(flag == 0){
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: "php/mapurl.php",
+            contentType: "application/json",
+            data: JSON.stringify(userData),
+            success: function (data) {
+                console.log(data);
+                var data1 =$.parseJSON(data)
+                var html ='';
+               $.each(data1, function (index, element) {
+                    html += element.url
+                });
+                $("#map").append(html);
+            }
+        });
+    }
 }
