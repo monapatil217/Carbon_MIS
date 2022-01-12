@@ -64,24 +64,17 @@ require "php/session.php";
                 <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">
                         <h3>Electricity</h3>
-                        <!-- <div class="card">
-                            <div class="card-body"> -->
+                       
                         <ul style="margin-left: 10px;">
                             <li class="popupli"> 1 unit of electricity is equal to 1000 watts. which means 1 unit = 1 kwatt electricity.</li>
                             <li class="popupli">Burning 1 kg of bituminous coal will produce 2.42 kg of carbon dioxide.</li>
                             <li class="popupli">The emissions per unit of electricity are estimated to be in the range of 0.91 to 0.95 kg/kWh for CO2 </li>
-                            <!-- <li class="popupli">Around 37.9% installed generation capacity is due to renewable energy sources.</li> 
-                                    <li class="popupli">Around 1.7% installed generation capacity is due to Nuclear Fuel.</li> -->
                         </ul>
-                        <!-- </div>
-                        </div> -->
-
-
+                       
                         <div id="chartName">
                             <h3> Electricity Graph</h3>
                         </div>
                         <div id="eleChart"></div>
-
 
                     </div>
                 </div>
@@ -93,70 +86,50 @@ require "php/session.php";
                             ELEC - Electricity / MW - megawatt / m - month.
                         </marquee>
                         <form class="needs-validation" novalidate>
-                            <div class="input-group mb-3">
-                                <div class="col-1"></div>
-                                <span class="form-floating">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="resElec" placeholder="name@example.com">
-                                        <label for="resElec">Residential ELEC use</label>
+
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                    <label for="resElec" class="form-label"> Residential Electricity use</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" id="resElec" class="form-control" placeholder="Residential" aria-label="Residential" aria-describedby="basic-addon2">
+                                        <span class="input-group-text" id="basic-addon2">MW/m</span>
                                     </div>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">MW/m</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
                                 </div>
                             </div>
 
-                            <!-- <div class="form-floating mb-3">
-                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                        <label for="floatingInput">Street light ELEC use</label>
-                                    </div> -->
-
-                            <div class="input-group mb-3 ">
-                                <div class="col-1"></div>
-                                <span class="form-floating">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="comElec" placeholder="name@example.com">
-                                        <label for="comElec">Commercial ELEC use</label>
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                    <label for="comElec" class="form-label"> Commercial Electricity use</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" id="comElec" class="form-control" placeholder="Commercial" aria-label="Commercial" aria-describedby="basic-addon2">
+                                        <span class="input-group-text" id="basic-addon2">MW/m</span>
                                     </div>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">MW/m</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
                                 </div>
                             </div>
 
-                            <div class="input-group mb-3 ">
-                                <div class="col-1"></div>
-                                <span class="form-floating">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="slumEle" placeholder="name@example.com">
-                                        <label for="slumEle">Slum area ELEC use</label>
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                    <label for="slumEle" class="form-label"> Slum area Electricity use</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" id="slumEle" class="form-control" placeholder="Slum area " aria-label="Slum" aria-describedby="basic-addon2">
+                                        <span class="input-group-text" id="basic-addon2">MW/m</span>
                                     </div>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">MW/m</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
                                 </div>
                             </div>
 
-                            <div class="input-group mb-3 ">
-                                <div class="col-1"></div>
-                                <span class="form-floating">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="streetEle" placeholder="name@example.com">
-                                        <label for="streetEle">Street light ELEC use</label>
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                    <label for="streetEle" class="form-label"> Street light Electricity use</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" id="streetEle" class="form-control" placeholder="Street light" aria-label="Slum" aria-describedby="basic-addon2">
+                                        <span class="input-group-text" id="basic-addon2">MW/m</span>
                                     </div>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">MW/m</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
                                 </div>
                             </div>
 
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
-                                    <button class="btn btn-primary " type="button" onclick="redirect();">Submit form</button>
+                                    <button class="btn btn-primary " type="button" onclick="redirect();">NEXT</button>
                                 </div>
                             </div>
 
@@ -165,10 +138,6 @@ require "php/session.php";
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="fade-to-img"  onclick="showEleInfo();">
-                <a href="#" class="electricity" id="electricity"></a><img src="img/idea.png" alt="save-energy" width="80" height="80"> 
-            </div> -->
 
             <div class="row align-items-center justify-content-center" id="moreInfo">
 
@@ -183,11 +152,7 @@ require "php/session.php";
 
                             <div class="row align-items-center justify-content-center">
                                 <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <!-- <p>1 unit of electricity is equal to 1000 watts. which means 1 unit = 1 kwatt
-                                        electricity</p>
-                                    <p>Burning 1 kg of bituminous coal will produce 2.42 kg of carbon dioxide</p>
-                                    <p>The emissions per unit of electricity are estimated to be in the range of 0.91
-                                        to 0.95 kg/kWh for CO2</p> -->
+                                   
                                 </div>
                                 <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="btn-container">

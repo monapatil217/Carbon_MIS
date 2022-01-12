@@ -56,121 +56,98 @@ require "php/session.php";
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-
             <input type="text" class="form-control" id="sectionType" value="transChart" hidden>
-
             <div class="row">
-
+                
                 <div class="col-md-12 col-lg-6  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">
                         <h3>Transport</h3>
-                        <!-- <div class="card">
-                            <div class="card-body"> -->
-                        <!-- <h5> -->
                             <ul style="margin-left: 10px;">
                                 <li class="popupli"> After burning 1 liter of diesel 2.62 kg of CO2 is release in enviroment .</li>
                                 <li class="popupli">Whereas petrol has a lower carbon content and produces about 2.39 kgs of CO2 per liter.</li>
-                                <!--    <li class="popupli">Around 60.9% installed generation capacity is due to fossil fuel. </li>
-                                        <li class="popupli">Around 37.9% installed generation capacity is due to renewable energy sources.</li>
-                                        <li class="popupli">Around 1.7% installed generation capacity is due to Nuclear Fuel.</li>
-                           -->
                             </ul>
-                        <!-- </h5> -->
-
                         <div id="chartName">
                             <h3> Transport Graph</h3>
                         </div>
                         <div id="transChart"></div>
-
-                        <!-- </div>
-                        </div> -->
                     </div>
                 </div>
 
-                <div class="col-md-12 col-lg-6  mb-3  s" data-aos-delay="200">
+                <div class="col-md-12 col-lg-6  mb-3" data-aos-delay="200">
                     <div class="in-sec">
                         <h4 class="text-center mb-2">Transport</h4>
+
                         <form class="needs-validation" novalidate>
                             <h6 class="text-center"> Enter Total No of Vehicles in your Region</h6>
 
-                            <div class="row ">
-                                <div class="col-lg-6">
-
-                                    <div class="form-floating mt-3">
-                                        <input type="text" class="form-control" id="2Wheeler" placeholder="Two wheeler" required>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid data.
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-6 col-lg-10 col-xl-6 col-10">
+                                            <label for="2Wheeler" class="form-label"> Two wheeler</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" id="2Wheeler" class="form-control" placeholder="Two wheeler" aria-label="Residential" aria-describedby="basic-addon2">
+                                            </div>
                                         </div>
-                                        <label for="2Wheeler">Two Wheeler</label>
+
+                                        <div class="col-md-6 col-lg-10 col-xl-6 col-10">
+                                            <label for="3Wheeler" class="form-label"> Three wheeler</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" id="3Wheeler" class="form-control" placeholder="Three wheeler" aria-label="Residential" aria-describedby="basic-addon2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-6 col-lg-10 col-xl-6 col-10">
+                                            <label for="4Wheeler" class="form-label"> Four wheeler</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" id="4Wheeler" class="form-control" placeholder="Four wheeler" aria-label="Residential" aria-describedby="basic-addon2">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 col-lg-10 col-xl-6 col-10">
+                                            <label for="bus" class="form-label"> Bus</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" id="bus" class="form-control" placeholder="Bus" aria-label="Residential" aria-describedby="basic-addon2">
+                                            </div>
+                                        </div>
+                                    </div>
+                               
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-6 col-lg-10 col-xl-6 col-10">
+                                            <label for="bus" class="form-label"> Tempo</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" id="bus" class="form-control" placeholder="Tempo" aria-label="Tempo" aria-describedby="basic-addon2">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 col-lg-10 col-xl-6 col-10">
+                                            <label for="tempo" class="form-label"> Truck</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" id="tempo" class="form-control" placeholder="Truck" aria-label="Truck" aria-describedby="basic-addon2">
+                                            </div>
+                                        </div>
                                     </div>
 
-                                    <div class="form-floating mt-3">
-                                        <input type="text" class="form-control" id="3Wheeler" placeholder="Three wheeler" required>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid data.
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-6 col-lg-10 col-xl-6 col-10">
+                                            <label for="train" class="form-label"> Train</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" id="train" class="form-control" placeholder="Train" aria-label="Train" aria-describedby="basic-addon2">
+                                            </div>
                                         </div>
-                                        <label for="3Wheeler">Three Wheeler</label>
-                                    </div>
-
-                                    <div class="form-floating mt-3">
-                                        <input type="text" class="form-control" id="4Wheeler" placeholder="Four wheeler" required>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid data.
+                                        <div class="col-md-6 col-lg-10 col-xl-6 col-10">
+                                            <label for="flight" class="form-label"> Flight</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" id="flight" class="form-control" placeholder="Flight" aria-label="Flight" aria-describedby="basic-addon2">
+                                            </div>
                                         </div>
-                                        <label for="4Wheeler">Four Wheeler</label>
                                     </div>
-
-                                    <div class="form-floating mt-3">
-                                        <input type="text" class="form-control" id="bus" placeholder="Bus" required>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid data.
-                                        </div>
-                                        <label for="bus">Bus</label>
-                                    </div>
-                                </div>
-                                <!-- <div class="row "> -->
-                                <div class="col-lg-6">
-                                    <div class="form-floating mt-3">
-                                        <input type="text" class="form-control" id="tempo" placeholder="Tempo" required>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid data.
-                                        </div>
-                                        <label for="tempo">Tempo</label>
-                                    </div>
-
-                                    <div class="form-floating mt-3">
-                                        <input type="text" class="form-control" id="truck" placeholder="Truck" required>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid data.
-                                        </div>
-                                        <label for="truck">Truck</label>
-                                    </div>
-
-                                    <div class="form-floating mt-3">
-                                        <input type="text" class="form-control" id="train" placeholder="Train" required>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid data.
-                                        </div>
-                                        <label for="train">Train</label>
-                                    </div>
-
-                                    <div class="form-floating mt-3 mb-2">
-                                        <input type="text" class="form-control" id="flight" placeholder="Flight" required>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid data.
-                                        </div>
-                                        <label for="flight">Flight</label>
-                                    </div>
-                                </div>
-                            </div>
-
+                            
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
-                                    <button class="btn btn-primary " type="button" onclick="redirect();">Submit form</button>
+                                    <button class="btn btn-primary " type="button" onclick="redirect();">NEXT</button>
                                 </div>
                             </div>
                         </form>
-
                     </div>
                 </div>
             </div>
