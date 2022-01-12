@@ -1,5 +1,5 @@
 <?php
-require "php/session.php";
+// require "php/session.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,21 +81,13 @@ require "php/session.php";
                             sq.km - Square Kilometre.
                         </marquee>
                         <form class="needs-validation" novalidate>
-                        <h6 class="text-center"> Area under Forest Land </h6>
 
                             <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-9 col-8">
-                                    <div class="input-group mb-3 mt-3">
-                                        <span class="form-floating col-8 col-lg-7 col-xl-8">
-                                            <div class="form-floating ">
-                                                <input type="Text" class="form-control" id="areaForest" placeholder="Area">
-                                                <label for="areaForest">Area</label>
-                                            </div>
-                                        </span>
-                                        <span class="input-group-text" id="basic-addon-1">sq.km</span>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid data.
-                                        </div>
+                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                    <label for="areaForest" class="form-label"> Area under Forest Land</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" id="areaForest" class="form-control" placeholder="Area" aria-label="Area" aria-describedby="basic-addon2">
+                                        <span class="input-group-text" id="basic-addon2">sq.km</span>
                                     </div>
                                 </div>
                             </div>
@@ -125,11 +117,7 @@ require "php/session.php";
 
                                 <div class="row align-items-center justify-content-center">
                                     <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <!-- <p>1 unit of electricity is equal to 1000 watts. which means 1 unit = 1 kwatt
-                                        electricity</p>
-                                    <p>Burning 1 kg of bituminous coal will produce 2.42 kg of carbon dioxide</p>
-                                    <p>The emissions per unit of electricity are estimated to be in the range of 0.91
-                                        to 0.95 kg/kWh for CO2</p> -->
+                                       
                                     </div>
                                     <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="btn-container">
