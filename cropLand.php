@@ -84,28 +84,20 @@ require "php/session.php";
                             sq.km - Square Kilometre.
                         </marquee>
                         <form class="needs-validation" novalidate>
-                            <h6 class="text-center"> Area under Crop Land </h6>
-
+                             
                             <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-9 col-8">
-                                    <div class="input-group mb-3 mt-3">
-                                        <span class="form-floating col-8 col-lg-7 col-xl-8">
-                                            <div class="form-floating ">
-                                                <input type="text" class="form-control" id="areaCrop" placeholder="name@example.com">
-                                                <label for="areaCrop">Area</label>
-                                            </div>
-                                        </span>
-                                        <span class="input-group-text" id="basic-addon-1">sq.km</span>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid data.
-                                        </div>
+                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                    <label for="areaCrop" class="form-label"> Area under Crop Land </label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" id="areaCrop" class="form-control" placeholder="Area" aria-label="Area" aria-describedby="basic-addon2">
+                                        <span class="input-group-text" id="basic-addon2">sq.km</span>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
-                                    <button class="btn btn-primary " type="button" onclick="redirect();">Submit form</button>
+                                    <button class="btn btn-primary " type="button" onclick="redirect();">NEXT</button>
                                 </div>
                             </div>
                         </form>

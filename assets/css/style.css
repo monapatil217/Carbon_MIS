@@ -1700,8 +1700,10 @@ section {
 }
 
 
-
-
+/* Footer Size by Monika */
+.sizeFooter{
+  height: 75px;
+}
 
 
 
@@ -1727,6 +1729,14 @@ section {
         margin-top: 200px;
         /* margin-right: 190px; */
     }
+
+.all_font label{
+  font-size: calc(80% + .01vw + .01vh);
+}
+
+.all_font input {
+  font-size: calc(80% + .01vw + .01vh);
+}
 
 .infoFont u li{
   font-size: calc(100% + .2vw + .2vh);

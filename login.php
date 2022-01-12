@@ -67,7 +67,7 @@
                         </div>
                             
                                <div class="form-group d-md-flex">
-                                <div class="w-50 text-md-left">
+                                <div class="w-50">
                                     <label class="checkbox-wrap checkbox-primary">Remember Me
                                         <input type="checkbox" checked>
                                         <span class="checkmark"></span>
