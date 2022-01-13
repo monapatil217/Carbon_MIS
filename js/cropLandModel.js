@@ -13,10 +13,65 @@ window.onclick = function (event) {
         popup.classList.remove('show');
     }
 }
+$(document).ready(function () {
+    showCropLand();
+})
 
-// var div = document.getElementById("popup-btn");
-// div.style.display = "block";
+function showCropLand() {
+    var html = '';
 
+    var basicId = document.getElementById("basicId").value;
+    $("#cropInput").empty();
+
+    var myobj = {};
+    myobj["type"] = "CropLand";
+    myobj["basicId"] = basicId;
+
+    $.ajax({
+        type: "POST",
+        async: false,
+        url: "php/getAllData.php",
+        contentType: "application/json",
+        data: JSON.stringify(myobj),
+        success: function (data) {
+            var divList = JSON.parse(data);
+            $.each(divList, function (index, element) {
+                var check = element.check;
+
+                if (check == "true") {
+                    var eledata = element.cData;
+                    $.each(eledata, function (index, element1) {
+
+                        html = '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '<label for="areaCrop" class="form-label"> Area under Crop Land </label>'
+                        + '<div class="input-group mb-3">'
+                        + '<input type="text" id="areaCrop" class="form-control" value="'+element1.area+'" placeholder="Area" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
+                        + '</div>'
+                        + '</div>'
+                        + '</div>' ;
+                    });
+                }
+                else {
+
+                    html = '<div class="row justify-content-center">'
+                    + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                    + '<label for="areaCrop" class="form-label"> Area under Crop Land </label>'
+                    + '<div class="input-group mb-3">'
+                    + '<input type="text" id="areaCrop" class="form-control" placeholder="Area" aria-label="Area" aria-describedby="basic-addon2">'
+                    + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
+                    + '</div>'
+                    + '</div>'
+                    + '</div>' ;
+                }
+            });
+        }
+    });
+
+    $("#cropInput").append(html);
+
+}
 function redirect() {
 
     window.location.replace("livestock.php");
