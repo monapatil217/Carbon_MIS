@@ -24,25 +24,30 @@ function showEleInput() {
     var html = '';
     $("#eleInput").empty();
 
+    var myobj = {};
+    myobj["basicid"] = 2;
+    myobj["type"] = "Electricity";
     $.ajax({
         type: "POST",
         async: false,
-        url: "php/.php",
+        url: "php/getAllData.php",
         contentType: "application/json",
+        data: JSON.stringify(myobj),
         success: function (data) {
             var divList = JSON.parse(data);
             $.each(divList, function (index, element) {
                 var check = element.check;
-                var eledata = element.eledata;
+
 
                 if (check == "true") {
+                    var eledata = element.eleData;
                     $.each(eledata, function (index, element1) {
 
                         html = '<div class="row justify-content-center">'
                             + '   <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                             + '       <label for="relec" class="form-label"> Residential Electricity use</label>'
                             + '       <div class="input-group mb-3">'
-                            + '           <input type="text" id="relec" name="relec" class="form-control"  value="' + element1.relec + '"   placeholder="Residential" aria-label="Residential" aria-describedby="basic-addon2">'
+                            + '           <input type="text" id="relec" name="relec" class="form-control"  value="' + element1.r_elec + '"   placeholder="Residential" aria-label="Residential" aria-describedby="basic-addon2">'
                             + '                <span class="input-group-text" id="basic-addon2">MW/m</span>'
                             + '</div>'
                             + '</div>'
@@ -52,7 +57,7 @@ function showEleInput() {
                             + '       <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                             + '           <label for="celec" class="form-label"> Commercial Electricity use</label>'
                             + '               <div class="input-group mb-3">'
-                            + '                 <input type="text" id="celec" name="celec"  class="form-control"   value="' + element1.celec + '"  placeholder="Commercial" aria-label="Commercial" aria-describedby="basic-addon2">'
+                            + '                 <input type="text" id="celec" name="celec"  class="form-control"   value="' + element1.c_elec + '"  placeholder="Commercial" aria-label="Commercial" aria-describedby="basic-addon2">'
                             + '         <span class="input-group-text" id="basic-addon2">MW/m</span>'
                             + '</div>'
                             + '</div>'
@@ -62,7 +67,7 @@ function showEleInput() {
                             + '              <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                             + '                   <label for="selec" class="form-label"> Slum area Electricity use</label>'
                             + '                  <div class="input-group mb-3">'
-                            + '                   <input type="text" id="selec" name="selec"  class="form-control"   value="' + element1.selec + '"   placeholder="Slum area " aria-label="Slum" aria-describedby="basic-addon2">'
+                            + '                   <input type="text" id="selec" name="selec"  class="form-control"   value="' + element1.s_elec + '"   placeholder="Slum area " aria-label="Slum" aria-describedby="basic-addon2">'
                             + '                       <span class="input-group-text" id="basic-addon2">MW/m</span>'
                             + ' </div>'
                             + '</div>'
@@ -72,7 +77,7 @@ function showEleInput() {
                             + '      <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                             + '          <label for="slelec" class="form-label"> Street light Electricity use</label>'
                             + '          <div class="input-group mb-3">'
-                            + '              <input type="text" id="slelec" name="slelec"   class="form-control"   value="' + element1.slelec + '"    placeholder="Street light" aria-label="Slum" aria-describedby="basic-addon2">'
+                            + '              <input type="text" id="slelec" name="slelec"   class="form-control"   value="' + element1.sl_elec + '"    placeholder="Street light" aria-label="Slum" aria-describedby="basic-addon2">'
                             + '                  <span class="input-group-text" id="basic-addon2">MW/m</span>'
                             + '</div>'
                             + '</div>'

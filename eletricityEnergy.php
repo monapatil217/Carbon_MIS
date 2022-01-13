@@ -54,8 +54,8 @@ require "php/session.php";
     include 'header.php';
     ?>
 
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
+    <!-- ======= subHero Section ======= -->
+    <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
             <input type="text" class="form-control" id="sectionType" value="eleChart" hidden>
@@ -64,13 +64,13 @@ require "php/session.php";
                 <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">
                         <h3>Electricity</h3>
-                       
+
                         <ul style="margin-left: 10px;">
                             <li class="popupli"> 1 unit of electricity is equal to 1000 watts. which means 1 unit = 1 kwatt electricity.</li>
                             <li class="popupli">Burning 1 kg of bituminous coal will produce 2.42 kg of carbon dioxide.</li>
                             <li class="popupli">The emissions per unit of electricity are estimated to be in the range of 0.91 to 0.95 kg/kWh for CO2 </li>
                         </ul>
-                       
+
                         <div id="chartName">
                             <h3> Electricity Graph</h3>
                         </div>
@@ -86,55 +86,13 @@ require "php/session.php";
                             ELEC - Electricity / MW - megawatt / m - month.
                         </marquee>
                         <form class="needs-validation" novalidate>
-
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
-                                    <label for="resElec" class="form-label"> Residential Electricity use</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="resElec" class="form-control" placeholder="Residential" aria-label="Residential" aria-describedby="basic-addon2">
-                                        <span class="input-group-text" id="basic-addon2">MW/m</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
-                                    <label for="comElec" class="form-label"> Commercial Electricity use</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="comElec" class="form-control" placeholder="Commercial" aria-label="Commercial" aria-describedby="basic-addon2">
-                                        <span class="input-group-text" id="basic-addon2">MW/m</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
-                                    <label for="slumEle" class="form-label"> Slum area Electricity use</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="slumEle" class="form-control" placeholder="Slum area " aria-label="Slum" aria-describedby="basic-addon2">
-                                        <span class="input-group-text" id="basic-addon2">MW/m</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
-                                    <label for="streetEle" class="form-label"> Street light Electricity use</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="streetEle" class="form-control" placeholder="Street light" aria-label="Slum" aria-describedby="basic-addon2">
-                                        <span class="input-group-text" id="basic-addon2">MW/m</span>
-                                    </div>
-                                </div>
-                            </div>
-
+                            <div id="eleInput"></div>
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
-                                    <button class="btn btn-primary " type="button" onclick="redirect();">NEXT</button>
+                                    <button class="btn btn-primary " type="button" onclick="saveEleData();">NEXT</button>
                                 </div>
                             </div>
-
                         </form>
-
                     </div>
                 </div>
             </div>
@@ -152,7 +110,7 @@ require "php/session.php";
 
                             <div class="row align-items-center justify-content-center">
                                 <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                   
+
                                 </div>
                                 <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="btn-container">
@@ -198,7 +156,6 @@ require "php/session.php";
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 
-
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
@@ -207,14 +164,14 @@ require "php/session.php";
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="js/energyElectricityModel.js"></script>
+
     <!-- <script src="assets/js/popper.js"></script> -->
     <!-- <script src="assets/js/bootstrap.min.js"></script> -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap-show-modal.js"></script>
 
     <script src="js/induGraph.js"></script>
-
+    <script src="js/energyElectricityModel.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 
