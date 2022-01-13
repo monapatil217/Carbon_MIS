@@ -201,5 +201,32 @@ if ($type == "Electricity") {
             array_push($finalArray, $mainArray);
         }
     }
+}else if ($type == "Energy") { // pending
+
+    $query2 = "SELECT * FROM indu_eng_data WHERE b_id='" . $basicId . "'";
+
+    $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
+    $rowcount = mysqli_num_rows($result);
+    if ($rowcount == 0) {
+        $mainArray['check'] = "false";
+        array_push($finalArray, $mainArray);
+    } else {
+        while ($row = mysqli_fetch_array($result)) {
+
+            $mainArray['check'] = "true";
+            $deleData = array();
+            $cData = [];
+            $cData['coal'] = $row['coal'];
+            $cData['png'] = $row['png'];
+            $cData['fo'] = $row['fo'];
+            $cData['ng'] = $row['ng'];
+            $cData['ido'] = $row['ido'];
+            $cData['briq'] = $row['briq'];
+            $cData['hsd'] = $row['hsd'];
+            array_push($deleData, $cData);
+            $mainArray['cData'] =   $deleData;
+            array_push($finalArray, $mainArray);
+        }
+    }
 }
 echo  json_encode($finalArray);
