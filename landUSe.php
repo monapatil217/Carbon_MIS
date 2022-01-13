@@ -56,7 +56,7 @@ require "php/session.php";
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
             <input type="text" class="form-control" id="sectionType" value="landuseChart" hidden>
-
+            <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
             <div class="row">
                 <div class="col-md-12 col-lg-7  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">
@@ -81,8 +81,15 @@ require "php/session.php";
                             sq.km - Square Kilometre.
                         </marquee>
                         <form class="needs-validation" novalidate>
+
+                        <div id="landUseInput"></div>
+                            <div class="row ">
+                                <div class="col-md-12 mb-3 text-center">
+                                    <button class="btn btn-primary " type="button" onclick="saveLandData();">NEXT</button>
+                                </div>
+                            </div>
                             
-                            <div class="row justify-content-center">
+                            <!-- <div class="row justify-content-center">
                                 <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                     <label for="residential" class="form-label"> Residential Area</label>
                                     <div class="input-group mb-3">
@@ -170,12 +177,12 @@ require "php/session.php";
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row ">
+                            </div> -->
+                            <!-- <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
                                     <button class="btn btn-primary " type="button" onclick="redirect();">Submit form</button>
                                 </div>
-                            </div>
+                            </div> -->
                         </form>
                     </div>
                 </div>
@@ -255,11 +262,12 @@ require "php/session.php";
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
 
-    <script src="js/landUseModel.js"></script>
+   
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap-show-modal.js"></script>
     <script src="js/induGraph.js"></script>
+    <script src="js/landUseModel.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 

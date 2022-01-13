@@ -86,21 +86,12 @@ require "php/session.php";
                             sq.km - Square Kilometre.
                         </marquee>
                         <form class="needs-validation" novalidate>
-                        <div id="cropInput"></div>
+                            <div id="cropInput"></div>
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
                                     <button class="btn btn-primary " type="button" onclick="saveCropData();">NEXT</button>
                                 </div>
                             </div>
-                            <!-- <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
-                                    <label for="areaCrop" class="form-label"> Area under Crop Land </label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="areaCrop" class="form-control" placeholder="Area" aria-label="Area" aria-describedby="basic-addon2">
-                                        <span class="input-group-text" id="basic-addon2">sq.km</span>
-                                    </div>
-                                </div>
-                            </div> -->
                         </form>
 
                     </div>

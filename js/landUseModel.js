@@ -13,15 +13,277 @@ window.onclick = function (event) {
         popup.classList.remove('show');
     }
 }
+$(document).ready(function () {
+    showlandUse();
+})
 
-// var div = document.getElementById("popup-btn");
-// div.style.display = "block";
+function showlandUse() {
+    var html = '';
 
-function redirect() {
+    var basicId = document.getElementById("basicId").value;
+    $("#landUseInput").empty();
 
+    var myobj = {};
+    myobj["type"] = "LandUse";
+    myobj["basicId"] = basicId;
+
+    $.ajax({
+        type: "POST",
+        async: false,
+        url: "php/getAllData.php",
+        contentType: "application/json",
+        data: JSON.stringify(myobj),
+        success: function (data) {
+            var divList = JSON.parse(data);
+            $.each(divList, function (index, element) {
+                var check = element.check;
+
+                if (check == "true") {
+                    var eledata = element.cData;
+                    $.each(eledata, function (index, element1) {
+
+                        html = '<div class="row justify-content-center">'
+                        +'   <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                        +'       <label for="residential" class="form-label"> Residential Area</label>'
+                        +'       <div class="input-group mb-3">'
+                        +'           <input type="text" id="residential" class="form-control" value="'+element1.resi+'" placeholder="Residential" aria-label="Residential" aria-describedby="basic-addon2">'
+                        +'           <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                        +'        </div>'
+                        +'    </div>'
+
+                        +'    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                        +'        <label for="commercial" class="form-label"> Commercial Area</label>'
+                        +'        <div class="input-group mb-3">'
+                        +'            <input type="text" id="commercial" class="form-control" value="'+element1.com+'" placeholder="Commercial" aria-label="Commercial" aria-describedby="basic-addon2">'
+                        +'            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                        +'        </div>'
+                        +'    </div>'
+                        +'</div>'
+                        
+                        +'<div class="row justify-content-center">'
+                        +'    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                        +'        <label for="waterBodies" class="form-label"> Water Bodies Area</label>'
+                        +'        <div class="input-group mb-3">'
+                        +'            <input type="text" id="waterBodies" class="form-control" value="'+element1.w_body+'" placeholder="Water Bodies" aria-label="Water Bodies" aria-describedby="basic-addon2">'
+                        +'            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                        +'        </div>'
+                        +'    </div>'
+
+                        +'    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                        +'        <label for="defence" class="form-label"> Defence Area</label>'
+                        +'        <div class="input-group mb-3">'
+                        +'            <input type="text" id="defence" class="form-control" value="'+element1.defence+'" placeholder="Defence" aria-label="Defence" aria-describedby="basic-addon2">'
+                        +'            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                        +'        </div>'
+                        +'    </div>'
+                        +'</div>'
+
+                        +'<div class="row justify-content-center">'
+                        +'    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                        +'        <label for="agriculture" class="form-label"> Agriculture Area</label>'
+                        +'        <div class="input-group mb-3">'
+                        +'            <input type="text" id="agriculture" class="form-control" value="'+element1.agri+'" placeholder="Agriculture" aria-label="Agriculture" aria-describedby="basic-addon2">'
+                        +'            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                        +'        </div>'
+                        +'    </div>'
+
+                        +'    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                        +'        <label for="vacentLand" class="form-label"> Vacant Land Area</label>'
+                        +'        <div class="input-group mb-3">'
+                        +'            <input type="text" id="vacentLand" class="form-control" value="'+element1.vaca+'" placeholder="Vacant Land" aria-label="Vacant Land" aria-describedby="basic-addon2">'
+                        +'            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                        +'        </div>'
+                        +'    </div>'
+                        +'</div>'
+
+                        +'<div class="row justify-content-center">'
+                        +'    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                        +'        <label for="roadArea" class="form-label"> Under Road Area</label>'
+                        +'        <div class="input-group mb-3">'
+                        +'            <input type="text" id="roadArea" class="form-control" value="'+element1.u_road+'" placeholder="Under Road" aria-label="Under Road" aria-describedby="basic-addon2">'
+                        +'            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                        +'        </div>'
+                        +'    </div>'
+                        +'    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                        +'        <label for="greenArea" class="form-label"> Under Green Area</label>'
+                        +'        <div class="input-group mb-3">'
+                        +'            <input type="text" id="greenArea" class="form-control" value="'+element1.u_green+'" placeholder="Under Green" aria-label="Under Green" aria-describedby="basic-addon2">'
+                        +'            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                        +'        </div>'
+                        +'    </div>'
+                        +'</div>'
+
+                        +'<div class="row justify-content-center">'
+                        +'    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                        +'        <label for="industrial" class="form-label"> Industrial Area</label>'
+                        +'        <div class="input-group mb-3">'
+                        +'            <input type="text" id="industrial" class="form-control" value="'+element1.indu+'" placeholder="Industrial" aria-label="Industrial" aria-describedby="basic-addon2">'
+                        +'            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                        +'        </div>'
+                        +'    </div>'
+
+                        +'    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                        +'        <label for="slum" class="form-label"> Slum Area</label>'
+                        +'            <div class="input-group mb-3">'
+                        +'                <input type="text" id="slum" class="form-control" value="'+element1.slum+'" placeholder="Slum" aria-label="Slum" aria-describedby="basic-addon2">'
+                        +'                <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                        +'            </div>'
+                        +'        </div>'
+                        +'    </div>'
+                        +'</div>' ;
+                    });
+                }
+                else {
+
+                    html = '<div class="row justify-content-center">'
+                    +'   <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                    +'       <label for="residential" class="form-label"> Residential Area</label>'
+                    +'       <div class="input-group mb-3">'
+                    +'           <input type="text" id="residential" class="form-control" placeholder="Residential" aria-label="Residential" aria-describedby="basic-addon2">'
+                    +'           <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                    +'        </div>'
+                    +'    </div>'
+
+                    +'    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                    +'        <label for="commercial" class="form-label"> Commercial Area</label>'
+                    +'        <div class="input-group mb-3">'
+                    +'            <input type="text" id="commercial" class="form-control" placeholder="Commercial" aria-label="Commercial" aria-describedby="basic-addon2">'
+                    +'            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                    +'        </div>'
+                    +'    </div>'
+                    +'</div>'
+                    
+                    +'<div class="row justify-content-center">'
+                    +'    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                    +'        <label for="waterBodies" class="form-label"> Water Bodies Area</label>'
+                    +'        <div class="input-group mb-3">'
+                    +'            <input type="text" id="waterBodies" class="form-control" placeholder="Water Bodies" aria-label="Water Bodies" aria-describedby="basic-addon2">'
+                    +'            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                    +'        </div>'
+                    +'    </div>'
+
+                    +'    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                    +'        <label for="defence" class="form-label"> Defence Area</label>'
+                    +'        <div class="input-group mb-3">'
+                    +'            <input type="text" id="defence" class="form-control" placeholder="Defence" aria-label="Defence" aria-describedby="basic-addon2">'
+                    +'            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                    +'        </div>'
+                    +'    </div>'
+                    +'</div>'
+
+                    +'<div class="row justify-content-center">'
+                    +'    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                    +'        <label for="agriculture" class="form-label"> Agriculture Area</label>'
+                    +'        <div class="input-group mb-3">'
+                    +'            <input type="text" id="agriculture" class="form-control" placeholder="Agriculture" aria-label="Agriculture" aria-describedby="basic-addon2">'
+                    +'            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                    +'        </div>'
+                    +'    </div>'
+
+                    +'    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                    +'        <label for="vacentLand" class="form-label"> Vacant Land Area</label>'
+                    +'        <div class="input-group mb-3">'
+                    +'            <input type="text" id="vacentLand" class="form-control" placeholder="Vacant Land" aria-label="Vacant Land" aria-describedby="basic-addon2">'
+                    +'            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                    +'        </div>'
+                    +'    </div>'
+                    +'</div>'
+
+                    +'<div class="row justify-content-center">'
+                    +'    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                    +'        <label for="roadArea" class="form-label"> Under Road Area</label>'
+                    +'        <div class="input-group mb-3">'
+                    +'            <input type="text" id="roadArea" class="form-control" placeholder="Under Road" aria-label="Under Road" aria-describedby="basic-addon2">'
+                    +'            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                    +'        </div>'
+                    +'    </div>'
+                    +'    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                    +'        <label for="greenArea" class="form-label"> Under Green Area</label>'
+                    +'        <div class="input-group mb-3">'
+                    +'            <input type="text" id="greenArea" class="form-control" placeholder="Under Green" aria-label="Under Green" aria-describedby="basic-addon2">'
+                    +'            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                    +'        </div>'
+                    +'    </div>'
+                    +'</div>'
+
+                    +'<div class="row justify-content-center">'
+                    +'    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                    +'        <label for="industrial" class="form-label"> Industrial Area</label>'
+                    +'        <div class="input-group mb-3">'
+                    +'            <input type="text" id="industrial" class="form-control" placeholder="Industrial" aria-label="Industrial" aria-describedby="basic-addon2">'
+                    +'            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                    +'        </div>'
+                    +'    </div>'
+
+                    +'    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                    +'        <label for="slum" class="form-label"> Slum Area</label>'
+                    +'            <div class="input-group mb-3">'
+                    +'                <input type="text" id="slum" class="form-control" placeholder="Slum" aria-label="Slum" aria-describedby="basic-addon2">'
+                    +'                <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                    +'            </div>'
+                    +'        </div>'
+                    +'    </div>'
+                    +'</div>' ;
+                }
+            });
+        }
+    });
+
+    $("#landUseInput").append(html);
+
+} 
+
+function saveLandData() {
     window.location.replace("solidWaste.php");
+    // var flag = 0;
+    // var userData = {};
+
+    // var relec = document.getElementById("relec").value;
+    // flag += customInputValidator(relec, "relec");
+
+    // var celec = document.getElementById("celec").value;
+    // flag += customInputValidator(celec, "celec");
+
+    // var selec = document.getElementById("selec").value;
+    // flag += customInputValidator(selec, "selec");
+
+    // var slelec = document.getElementById("slelec").value;
+    // flag += customInputValidator(slelec, "slelec");
+
+    // userData["relec"] = relec;
+    // userData["celec"] = celec;
+    // userData["selec"] = selec;
+    // userData["slelec"] = slelec;
+
+
+
+    // if (flag == 0) {
+    //     $.ajax({
+    //         type: "POST",
+    //         async: false,
+    //         url: "php/.php",
+    //         contentType: "application/json",
+    //         data: JSON.stringify(userData),
+    //         success: function (data) {
+    //             // var data1 = JSON.parse(data);
+    //             // if (data1 == "success") {
+    //             //     alert("Data Save Succesfuly");
+    //             //     window.location.replace("menuPage.php");
+    //             // } else {
+    //             //     alert("Data not Save Succesfuly")
+    //             // }
+    //             window.location.replace("transport.php");
+    //         }
+    //     });
+    // }
 
 }
+
+// function redirect() {
+
+//     window.location.replace("solidWaste.php");
+
+// }
 
 function showLandUInfo() {
     var div = document.getElementById("moreInfo");
