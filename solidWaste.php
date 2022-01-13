@@ -1,3 +1,6 @@
+<?php
+require "php/session.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,7 +60,7 @@
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
             <input type="text" class="form-control" id="sectionType" value="solidChart" hidden>
-
+            <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
 
             <div class="row">
 
@@ -78,109 +81,12 @@
                         <h4 class="text-center mb-2">Solid Waste</h4>
                         <form class="needs-validation" novalidate>
 
-                            <!-- <div class="input-group mb-3">
-                                <div class="col-1"></div>
-                                <span class="form-floating">
-                                    <div class="form-floating labelFont">
-                                        <input type="text" class="form-control" id="solidGen" placeholder="Solid waste Generation">
-                                        <label for="solidGen">Solid waste Generation</label>
-                                    </div>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">tonne</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                            </div> -->
-
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
-                                    <label for="solidGen" class="form-label">Solid waste Generation</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="solidGen" class="form-control" placeholder="Generation"
-                                            aria-label="Area" aria-describedby="basic-addon2">
-                                        <span class="input-group-text" id="basic-addon2">MTD</span>
-                                    </div>
+                            <div id="solidInput"></div>
+                            <div class="row ">
+                                <div class="col-md-12 mb-3 text-center">
+                                    <button class="btn btn-primary " type="button" onclick="saveSolidData();">NEXT</button>
                                 </div>
                             </div>
-
-                            <!-- <div class="input-group mb-3">
-                                <div class="col-1"></div>
-                                <span class="form-floating">
-                                    <div class="form-floating labelFont">
-                                        <input type="text" class="form-control" id="solidColl" placeholder="Solid Waste Collection">
-                                        <label for="solidColl">Solid Waste Collection</label>
-                                    </div>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">tonne</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                            </div> -->
-
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
-                                    <label for="solidColl" class="form-label">Solid Waste Collection</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="solidColl" class="form-control" placeholder="Collection"
-                                            aria-label="Area" aria-describedby="basic-addon2">
-                                        <span class="input-group-text" id="basic-addon2">MTD</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- <div class="input-group mb-3">
-                                <div class="col-1"></div>
-                                <span class="form-floating">
-                                    <div class="form-floating labelFont">
-                                        <input type="text" class="form-control" id="solidTreat" placeholder="Solid Waste Treatement">
-                                        <label for="solidTreat">Solid Waste Treatement</label>
-                                    </div>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">tonne</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                            </div> -->
-
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
-                                    <label for="solidTreat" class="form-label">Solid Waste Treatement</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="solidTreat" class="form-control" placeholder="Treatement"
-                                            aria-label="Area" aria-describedby="basic-addon2">
-                                        <span class="input-group-text" id="basic-addon2">MTD</span>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                            <!-- <div class="input-group mb-3">
-                                <div class="col-1"></div>
-                                <span class="form-floating">
-                                    <div class="form-floating labelFont">
-                                        <input type="text" class="form-control" id="dumpingYard" placeholder="No. of Dumping yard present">
-                                        <label for="dumpingYard">No. of Dumping yard present</label>
-                                    </div>
-                                </span>
-                                <span class="input-group-text" id="basic-addon-1">tonne</span>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                            </div> -->
-
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
-                                    <label for="dumpingYard" class="form-label">Dumping yard Present</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="dumpingYard" class="form-control"
-                                            placeholder=" Dumping yard" aria-label="Area"
-                                            aria-describedby="basic-addon2">
-                                        <span class="input-group-text" id="basic-addon2">MTD</span>
-                                    </div>
-                                </div>
-                            </div>
-
 
                             <!-- The below section will open after adding js -->
 
@@ -215,12 +121,6 @@
                                 </div>
                                 <label for="AppWaste">Approximate Waste</label>
                             </div> -->
-
-                            <div class="row ">
-                                <div class="col-md-12 mb-3 text-center">
-                                    <button class="btn btn-primary " type="button" onclick="redirect();">Next</button>
-                                </div>
-                            </div>
                         </form>
 
                     </div>
@@ -296,7 +196,7 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
 
-    <script src="js/solidWasteModel.js"></script>
+   
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap-show-modal.js"></script>
@@ -304,6 +204,7 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="js/induGraph.js"></script>
+     <script src="js/solidWasteModel.js"></script>
 </body>
 
 </html>

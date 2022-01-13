@@ -14,15 +14,182 @@ window.onclick = function (event) {
         popup.classList.remove('show');
     }
 }
+$(document).ready(function () {
+    showSolidInput();
+})
+
+function showSolidInput() {
+    var html = '';
+
+    var basicId = document.getElementById("basicId").value;
+    $("#solidInput").empty();
+
+    var myobj = {};
+    myobj["type"] = "SolidWaste";
+    myobj["basicId"] = basicId;
+
+    $.ajax({
+        type: "POST",
+        async: false,
+        url: "php/getAllData.php",
+        contentType: "application/json",
+        data: JSON.stringify(myobj),
+        success: function (data) {
+            var divList = JSON.parse(data);
+            $.each(divList, function (index, element) {
+                var check = element.check;
+
+                if (check == "true") {
+                    var eledata = element.cData;
+                    $.each(eledata, function (index, element1) {
+
+                        html = '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '<label for="solidGen" class="form-label">Solid waste Generation</label>'
+                            + '<div class="input-group mb-3">'
+                            + '<input type="text" id="solidGen" class="form-control" value="' + element1.sw_gen + '" placeholder="Generation" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<span class="input-group-text" id="basic-addon2">MTD</span>'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>'
+
+                            + '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '<label for="solidColl" class="form-label">Solid Waste Collection</label>'
+                            + '<div class="input-group mb-3">'
+                            + '<input type="text" id="solidColl" class="form-control" value="' + element1.sw_col + '" placeholder="Collection" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<span class="input-group-text" id="basic-addon2">MTD</span>'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>'
+
+                            + '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '<label for="solidTreat" class="form-label">Solid Waste Treatement</label>'
+                            + '<div class="input-group mb-3">'
+                            + '<input type="text" id="solidTreat" class="form-control" value="' + element1.sw_treat + '" placeholder="Treatement"aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<span class="input-group-text" id="basic-addon2">MTD</span>'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>'
+
+                            + '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '<label for="dumpingYard" class="form-label">Dumping yard Present</label>'
+                            + ' <div class="input-group mb-3">'
+                            + '<input type="text" id="dumpingYard" class="form-control" value="' + element1.n_yard + '" placeholder=" Dumping yard" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<span class="input-group-text" id="basic-addon2">MTD</span>'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>';
+                    });
+                }
+                else {
+
+                    html = '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '<label for="solidGen" class="form-label">Solid waste Generation</label>'
+                        + '<div class="input-group mb-3">'
+                        + '<input type="text" id="solidGen" class="form-control" placeholder="Generation" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<span class="input-group-text" id="basic-addon2">MTD</span>'
+                        + '</div>'
+                        + '</div>'
+                        + '</div>'
+
+                        + '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '<label for="solidColl" class="form-label">Solid Waste Collection</label>'
+                        + '<div class="input-group mb-3">'
+                        + '<input type="text" id="solidColl" class="form-control" placeholder="Collection" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<span class="input-group-text" id="basic-addon2">MTD</span>'
+                        + '</div>'
+                        + '</div>'
+                        + '</div>'
+
+                        + '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '<label for="solidTreat" class="form-label">Solid Waste Treatement</label>'
+                        + '<div class="input-group mb-3">'
+                        + '<input type="text" id="solidTreat" class="form-control" placeholder="Treatement"aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<span class="input-group-text" id="basic-addon2">MTD</span>'
+                        + '</div>'
+                        + '</div>'
+                        + '</div>'
+
+                        + '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '<label for="dumpingYard" class="form-label">Dumping yard Present</label>'
+                        + ' <div class="input-group mb-3">'
+                        + '<input type="text" id="dumpingYard" class="form-control" placeholder=" Dumping yard" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<span class="input-group-text" id="basic-addon2">MTD</span>'
+                        + '</div>'
+                        + '</div>'
+                        + '</div>';
+                }
+            });
+        }
+    });
+
+    $("#solidInput").append(html);
+
+}
+
+
+function saveSolidData() {
+
+    window.location.replace("wasteWater.php");
+    // var flag = 0;
+    // var userData = {};
+
+    // var relec = document.getElementById("relec").value;
+    // flag += customInputValidator(relec, "relec");
+
+    // var celec = document.getElementById("celec").value;
+    // flag += customInputValidator(celec, "celec");
+
+    // var selec = document.getElementById("selec").value;
+    // flag += customInputValidator(selec, "selec");
+
+    // var slelec = document.getElementById("slelec").value;
+    // flag += customInputValidator(slelec, "slelec");
+
+    // userData["relec"] = relec;
+    // userData["celec"] = celec;
+    // userData["selec"] = selec;
+    // userData["slelec"] = slelec;
+
+
+
+    // if (flag == 0) {
+    //     $.ajax({
+    //         type: "POST",
+    //         async: false,
+    //         url: "php/.php",
+    //         contentType: "application/json",
+    //         data: JSON.stringify(userData),
+    //         success: function (data) {
+    //             // var data1 = JSON.parse(data);
+    //             // if (data1 == "success") {
+    //             //     alert("Data Save Succesfuly");
+    //             //     window.location.replace("menuPage.php");
+    //             // } else {
+    //             //     alert("Data not Save Succesfuly")
+    //             // }
+    //             
+    //         }
+    //     });
+    // }
+
+}
 
 // var div = document.getElementById("moreInfo");
 // div.style.display = "none";
 
-function redirect() {
+// function redirect() {
 
-    window.location.replace("wasteWater.php");
+//     window.location.replace("wasteWater.php");
 
-}
+// }
 
 function showSolidInfo() {
     var div = document.getElementById("moreInfo");
