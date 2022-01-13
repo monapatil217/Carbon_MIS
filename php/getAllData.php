@@ -176,5 +176,30 @@ if ($type == "Electricity") {
             array_push($finalArray, $mainArray);
         }
     }
+}else if ($type == "WasteWater") { // pending
+
+    $query2 = "SELECT * FROM waste_data WHERE b_id='" . $basicId . "'";
+
+    $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
+    $rowcount = mysqli_num_rows($result);
+    if ($rowcount == 0) {
+        $mainArray['check'] = "false";
+        array_push($finalArray, $mainArray);
+    } else {
+        while ($row = mysqli_fetch_array($result)) {
+
+            $mainArray['check'] = "true";
+            $deleData = array();
+            $cData = [];
+            $cData['w_cons'] = $row['w_cons'];
+            $cData['w_gen'] = $row['w_gen'];
+            $cData['w_coll'] = $row['w_coll'];
+            $cData['q_treat'] = $row['q_treat'];
+            $cData['n_stp'] = $row['n_stp'];
+            array_push($deleData, $cData);
+            $mainArray['cData'] =   $deleData;
+            array_push($finalArray, $mainArray);
+        }
+    }
 }
 echo  json_encode($finalArray);
