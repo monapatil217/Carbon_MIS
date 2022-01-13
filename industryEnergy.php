@@ -17,7 +17,9 @@ require "php/session.php";
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -38,10 +40,10 @@ require "php/session.php";
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
     <style>
-        #industryChart {
-            width: 300px;
-            height: 300px;
-        }
+    #industryChart {
+        width: 300px;
+        height: 300px;
+    }
     </style>
 </head>
 
@@ -82,7 +84,8 @@ require "php/session.php";
                                 <h4>Energy</h4>
 
                                 <marquee width="100%" direction="left" height="30px">
-                                    t - tonne / d - day / FO - Fuel Oil / LDO - Light Diesel Oil / HSD - High Speed Diesel / PNG - Piped Natural gas / NG - Natural Gas
+                                    t - tonne / d - day / FO - Fuel Oil / LDO - Light Diesel Oil / HSD - High Speed
+                                    Diesel / PNG - Piped Natural gas / NG - Natural Gas
                                 </marquee>
 
                                 <h6 class="text-center">Type of fuel mix used by industry</h6>
@@ -91,160 +94,151 @@ require "php/session.php";
                             <div class="row ">
                                 <div class="col-lg-6">
 
-                                    <div class="input-group mb-3 m-lg-4">
-                                        <span class="form-floating">
-                                            <div class="form-floating labelFont">
-                                                <input type="text" class="form-control" id="amtCoal" placeholder="Amount of Coal used">
-                                                <label for="amtCoal">Amount of Coal used</label>
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                            <label for="amtCoal" class="form-label"> Amount of Coal used</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" id="amtCoal" class="form-control" placeholder="Coal"
+                                                    aria-label="Area" aria-describedby="basic-addon2">
+                                                <span class="input-group-text" id="basic-addon2">t/day</span>
                                             </div>
-                                        </span>
-                                        <span class="input-group-text" id="basic-addon-1">t/day</span>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid data.
                                         </div>
                                     </div>
 
-                                    <div class="input-group mb-3 m-lg-4">
-                                        <span class="form-floating">
-                                            <div class="form-floating labelFont">
-                                                <input type="text" class="form-control" id="amtFO" placeholder="Amount of FO used">
-                                                <label for="amtFO">Amount of FO used</label>
+
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                            <label for="amtFO" class="form-label">Amount of FO used</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" id="amtFO" class="form-control" placeholder="FO"
+                                                    aria-label="Area" aria-describedby="basic-addon2">
+                                                <span class="input-group-text" id="basic-addon2">t/day</span>
                                             </div>
-                                        </span>
-                                        <span class="input-group-text" id="basic-addon-1">t/day</span>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid data.
                                         </div>
                                     </div>
 
-                                    <div class="input-group mb-3 m-lg-4">
-                                        <span class="form-floating">
-                                            <div class="form-floating labelFont">
-                                                <input type="text" class="form-control" id="amtLDO" placeholder="Amount of LDO used">
-                                                <label for="amtLDO">Amount of LDO used</label>
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                            <label for="amtLDO" class="form-label">Amount of LDO used</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" id="amtLDO" class="form-control" placeholder="LDO"
+                                                    aria-label="Area" aria-describedby="basic-addon2">
+                                                <span class="input-group-text" id="basic-addon2">t/day</span>
                                             </div>
-                                        </span>
-                                        <span class="input-group-text" id="basic-addon-1">t/day</span>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid data.
                                         </div>
                                     </div>
 
-                                    <div class="input-group mb-3 m-lg-4">
-                                        <span class="form-floating">
-                                            <div class="form-floating labelFont">
-                                                <input type="text" class="form-control" id="amtHSD" placeholder="Amount of HSD used">
-                                                <label for="amtHSD">Amount of HSD used</label>
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                            <label for="amtHSD" class="form-label">Amount of HSD used</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" id="amtHSD" class="form-control" placeholder="HSD"
+                                                    aria-label="Area" aria-describedby="basic-addon2">
+                                                <span class="input-group-text" id="basic-addon2">t/day</span>
                                             </div>
-                                        </span>
-                                        <span class="input-group-text" id="basic-addon-1">t/day</span>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid data.
                                         </div>
                                     </div>
                                 </div>
+
+
 
                                 <div class="col-lg-6">
-                                    <div class="input-group mb-3 m-lg-4">
-                                        <span class="form-floating">
-                                            <div class="form-floating labelFont">
-                                                <input type="text" class="form-control" id="amtPNG" placeholder="Amount of PNG used">
-                                                <label for="amtPNG">Amount of PNG used</label>
+
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                            <label for="amtPNG" class="form-label">Amount of PNG used</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" id="amtPNG" class="form-control" placeholder="PNG"
+                                                    aria-label="Area" aria-describedby="basic-addon2">
+                                                <span class="input-group-text" id="basic-addon2">t/day</span>
                                             </div>
-                                        </span>
-                                        <span class="input-group-text" id="basic-addon-1">t/day</span>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid data.
                                         </div>
                                     </div>
 
-                                    <div class="input-group mb-3 m-lg-4">
-                                        <span class="form-floating">
-                                            <div class="form-floating labelFont">
-                                                <input type="text" class="form-control" id="amtNG" placeholder="Amount of NG used">
-                                                <label for="amtNG">Amount of NG used</label>
+
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                            <label for="amtNG" class="form-label">Amount of NG used</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" id="amtNG" class="form-control" placeholder="NG"
+                                                    aria-label="Area" aria-describedby="basic-addon2">
+                                                <span class="input-group-text" id="basic-addon2">t/day</span>
                                             </div>
-                                        </span>
-                                        <span class="input-group-text" id="basic-addon-1">t/day</span>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid data.
                                         </div>
                                     </div>
 
-                                    <!-- <div class="form-floating">
-                                        <input type="text" class="form-control" id="floatingInput">
-                                        <label for="floatingInput">Amount of Wood used</label>
-                                    </div> -->
-
-                                    <div class="input-group mb-3 m-lg-4">
-                                        <span class="form-floating">
-                                            <div class="form-floating labelFont">
-                                                <input type="text" class="form-control" id="amtBriquette" placeholder="Amount of Briquette used">
-                                                <label for="amtBriquette">Amount of Briquette used</label>
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                            <label for="amtBriquette" class="form-label">Amount of Briquette
+                                                used</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" id="amtBriquette" class="form-control"
+                                                    placeholder="Briquette" aria-label="Area"
+                                                    aria-describedby="basic-addon2">
+                                                <span class="input-group-text" id="basic-addon2">t/day</span>
                                             </div>
-                                        </span>
-                                        <span class="input-group-text" id="basic-addon-1">t/day</span>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid data.
                                         </div>
                                     </div>
 
-                                    <div class="input-group mb-3 m-lg-4">
-                                        <span class="form-floating">
-                                            <div class="form-floating labelFont">
-                                                <input type="text" class="form-control" id="amtWood" placeholder="Amount of Wood used">
-                                                <label for="amtWood">Amount of Wood used</label>
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                            <label for="amtWood" class="form-label">Amount of Wood used</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" id="amtWood" class="form-control" placeholder="Wood"
+                                                    aria-label="Area" aria-describedby="basic-addon2">
+                                                <span class="input-group-text" id="basic-addon2">t/day</span>
                                             </div>
-                                        </span>
-                                        <span class="input-group-text" id="basic-addon-1">t/day</span>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid data.
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row ">
-                                <div class="col-md-12 mb-3 text-center">
-                                    <button class="btn btn-primary " type="button" onclick="redirect();">Submit form</button>
-                                </div>
-                            </div>
-                        </form>
-
                     </div>
+
+
+
+                    <div class="row ">
+                        <div class="col-md-12 mb-3 mt-3 text-center">
+                            <button class="btn btn-primary " type="button" onclick="redirect();"> Next</button>
+                        </div>
+                    </div>
+                    </form>
+
                 </div>
             </div>
-            <!-- Start PopUp div -->
-            <div class="row align-items-center justify-content-center" id="moreInfo">
+        </div>
+        <!-- Start PopUp div -->
+        <div class="row align-items-center justify-content-center" id="moreInfo">
 
-                <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+            <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12"
+                data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
 
-                    <div class="popup-flex fade-to-img" onclick="showIndFInfo();">
-                        <img class="reggot" id="popup-btn" src="img/barrel.png" width="80" height="80">
-                    </div>
+                <div class="popup-flex fade-to-img" onclick="showIndFInfo();">
+                    <img class="reggot" id="popup-btn" src="img/barrel.png" width="80" height="80">
+                </div>
 
-                    <div id="popup-wrapper" class="popup-container">
-                        <div class="popup-content">
+                <div id="popup-wrapper" class="popup-container">
+                    <div class="popup-content">
 
-                            <div class="row align-items-center justify-content-center">
-                                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <!-- <p>1 unit of electricity is equal to 1000 watts. which means 1 unit = 1 kwatt
+                        <div class="row align-items-center justify-content-center">
+                            <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <!-- <p>1 unit of electricity is equal to 1000 watts. which means 1 unit = 1 kwatt
                                         electricity</p>
                                     <p>Burning 1 kg of bituminous coal will produce 2.42 kg of carbon dioxide</p>
                                     <p>The emissions per unit of electricity are estimated to be in the range of 0.91
                                         to 0.95 kg/kWh for CO2</p> -->
-                                </div>
-                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="btn-container">
-                                        <a href="#" id="close" class="btn-gotit">Got It</a>
-                                    </div>
+                            </div>
+                            <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="btn-container">
+                                    <a href="#" id="close" class="btn-gotit">Got It</a>
                                 </div>
                             </div>
-
                         </div>
+
                     </div>
                 </div>
             </div>
-            <!-- End PopUp div -->
+        </div>
+        <!-- End PopUp div -->
 
 
         </div>
@@ -255,24 +249,24 @@ require "php/session.php";
 
 
     <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
     </script>
 
 

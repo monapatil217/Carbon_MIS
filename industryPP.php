@@ -17,7 +17,9 @@ require "php/session.php";
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -39,10 +41,10 @@ require "php/session.php";
   ======================================================== -->
 
     <style>
-        #indusppChart {
-            width: 300px;
-            height: 300px;
-        }
+    #indusppChart {
+        width: 300px;
+        height: 300px;
+    }
     </style>
 
 </head>
@@ -64,9 +66,10 @@ require "php/session.php";
                 <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
                     <div class="in-sec infoFont">
                         <h3>Industry-Process and Product</h3>
-                             <ul style="margin-left: 10px;">
-                                <li class="popupli"> Total Emissions in 2019 = 6,558 Million Metric Tons of CO2 equivalent.</li>
-                            </ul>
+                        <ul style="margin-left: 10px;">
+                            <li class="popupli"> Total Emissions in 2019 = 6,558 Million Metric Tons of CO2 equivalent.
+                            </li>
+                        </ul>
                         <div id="chartName">
                             <h4> Industry-Process and Product Graph</h4>
                         </div>
@@ -78,14 +81,14 @@ require "php/session.php";
                 <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
                     <div class="in-sec">
                         <h6 class="text-center">Industrial Process and Product</h6>
-                            <marquee width="100%" direction="left" height="30px">
-                                t - tonne
-                            </marquee>
+                        <marquee width="100%" direction="left" height="30px">
+                            t - tonne
+                        </marquee>
                         <form class="needs-validation" novalidate>
-                            <h6 class="text-center"> Amount of Product Manufacture </h6>
-                            
+                        <label for="amtProd" class="form-label"> Amount of Product Manufacture</label>
 
-                            <div class="row justify-content-center">
+
+                            <!-- <div class="row justify-content-center">
                                 <div class="col-md-6 col-lg-10 col-xl-9 col-8">
                                     <div class="input-group mb-3 mt-3">
                                         <span class="form-floating col-8 col-lg-7 col-xl-8">
@@ -100,11 +103,22 @@ require "php/session.php";
                                         </div>
                                     </div>
                                 </div>
+                            </div> -->
+
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                   
+                                    <div class="input-group mb-3">
+                                        <input type="text" id="amtProd" class="form-control" placeholder="Product"
+                                            aria-label="Area" aria-describedby="basic-addon2">
+                                        <span class="input-group-text" id="basic-addon2">t/year</span>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
-                                    <button class="btn btn-primary " type="button" onclick="redirect();">Submit form</button>
+                                    <button class="btn btn-primary " type="button" onclick="redirect();">Next</button>
                                 </div>
                             </div>
                         </form>
@@ -115,7 +129,8 @@ require "php/session.php";
 
             <div class="row align-items-center justify-content-center" id="moreInfo">
 
-                <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
 
                     <div class="popup-flex fade-to-img" onclick="showPPInfo();">
                         <img class="reggot" id="popup-btn" src="img/distributed.png" width="80" height="80">
@@ -144,24 +159,24 @@ require "php/session.php";
 
 
     <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
     </script>
 
     <!-- Resources -->
