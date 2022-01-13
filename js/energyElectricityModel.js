@@ -1,3 +1,5 @@
+
+
 var popup = document.getElementById('popup-wrapper');
 var btn = document.getElementById("popup-btn");
 var span = document.getElementById("close");
@@ -13,6 +15,170 @@ window.onclick = function (event) {
         popup.classList.remove('show');
     }
 }
+
+$(document).ready(function () {
+    showEleInput();
+})
+
+function showEleInput() {
+    var html = '';
+    $("#eleInput").empty();
+
+    $.ajax({
+        type: "POST",
+        async: false,
+        url: "php/.php",
+        contentType: "application/json",
+        success: function (data) {
+            var divList = JSON.parse(data);
+            $.each(divList, function (index, element) {
+                var check = element.check;
+                var eledata = element.eledata;
+
+                if (check == "true") {
+                    $.each(eledata, function (index, element1) {
+
+                        html = '<div class="row justify-content-center">'
+                            + '   <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '       <label for="relec" class="form-label"> Residential Electricity use</label>'
+                            + '       <div class="input-group mb-3">'
+                            + '           <input type="text" id="relec" name="relec" class="form-control"  value="' + element1.relec + '"   placeholder="Residential" aria-label="Residential" aria-describedby="basic-addon2">'
+                            + '                <span class="input-group-text" id="basic-addon2">MW/m</span>'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>'
+
+                            + '<div class="row justify-content-center">'
+                            + '       <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '           <label for="celec" class="form-label"> Commercial Electricity use</label>'
+                            + '               <div class="input-group mb-3">'
+                            + '                 <input type="text" id="celec" name="celec"  class="form-control"   value="' + element1.celec + '"  placeholder="Commercial" aria-label="Commercial" aria-describedby="basic-addon2">'
+                            + '         <span class="input-group-text" id="basic-addon2">MW/m</span>'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>'
+
+                            + '<div class="row justify-content-center">'
+                            + '              <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '                   <label for="selec" class="form-label"> Slum area Electricity use</label>'
+                            + '                  <div class="input-group mb-3">'
+                            + '                   <input type="text" id="selec" name="selec"  class="form-control"   value="' + element1.selec + '"   placeholder="Slum area " aria-label="Slum" aria-describedby="basic-addon2">'
+                            + '                       <span class="input-group-text" id="basic-addon2">MW/m</span>'
+                            + ' </div>'
+                            + '</div>'
+                            + '</div>'
+
+                            + '<div class="row justify-content-center">'
+                            + '      <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '          <label for="slelec" class="form-label"> Street light Electricity use</label>'
+                            + '          <div class="input-group mb-3">'
+                            + '              <input type="text" id="slelec" name="slelec"   class="form-control"   value="' + element1.slelec + '"    placeholder="Street light" aria-label="Slum" aria-describedby="basic-addon2">'
+                            + '                  <span class="input-group-text" id="basic-addon2">MW/m</span>'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>'
+                            ;
+                    });
+                }
+                else {
+
+                    html = '<div class="row justify-content-center">'
+                        + '   <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '       <label for="relec" class="form-label"> Residential Electricity use</label>'
+                        + '       <div class="input-group mb-3">'
+                        + '           <input type="text" id="relec" name="relec" class="form-control" placeholder="Residential" aria-label="Residential" aria-describedby="basic-addon2">'
+                        + '                <span class="input-group-text" id="basic-addon2">MW/m</span>'
+                        + '       </div>'
+                        + '        </div>'
+                        + '     </div>'
+
+                        + '     <div class="row justify-content-center">'
+                        + '       <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '           <label for="celec" class="form-label"> Commercial Electricity use</label>'
+                        + '               <div class="input-group mb-3">'
+                        + '                 <input type="text" id="celec" name="celec"  class="form-control" placeholder="Commercial" aria-label="Commercial" aria-describedby="basic-addon2">'
+                        + '         <span class="input-group-text" id="basic-addon2">MW/m</span>'
+                        + '   </div>'
+                        + '             </div>'
+                        + '            </div>'
+
+                        + '           <div class="row justify-content-center">'
+                        + '              <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '                   <label for="selec" class="form-label"> Slum area Electricity use</label>'
+                        + '                  <div class="input-group mb-3">'
+                        + '                   <input type="text" id="selec" name="selec"  class="form-control" placeholder="Slum area " aria-label="Slum" aria-describedby="basic-addon2">'
+                        + '                       <span class="input-group-text" id="basic-addon2">MW/m</span>'
+                        + '  </div>'
+                        + '                </div>'
+                        + '          </div>'
+
+                        + '  <div class="row justify-content-center">'
+                        + '      <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '          <label for="slelec" class="form-label"> Street light Electricity use</label>'
+                        + '          <div class="input-group mb-3">'
+                        + '              <input type="text" id="slelec" name="slelec"   class="form-control" placeholder="Street light" aria-label="Slum" aria-describedby="basic-addon2">'
+                        + '                  <span class="input-group-text" id="basic-addon2">MW/m</span>'
+                        + '    </div>'
+                        + '            </div>'
+                        + '     </div>'
+                        ;
+                }
+            });
+        }
+    });
+
+    $("#eleInput").append(html);
+
+}
+
+
+function saveEleData() {
+    var flag = 0;
+    var userData = {};
+
+    var relec = document.getElementById("relec").value;
+    flag += customInputValidator(relec, "relec");
+
+    var celec = document.getElementById("celec").value;
+    flag += customInputValidator(celec, "celec");
+
+    var selec = document.getElementById("selec").value;
+    flag += customInputValidator(selec, "selec");
+
+    var slelec = document.getElementById("slelec").value;
+    flag += customInputValidator(slelec, "slelec");
+
+    userData["relec"] = relec;
+    userData["celec"] = celec;
+    userData["selec"] = selec;
+    userData["slelec"] = slelec;
+
+
+
+    if (flag == 0) {
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: "php/.php",
+            contentType: "application/json",
+            data: JSON.stringify(userData),
+            success: function (data) {
+                // var data1 = JSON.parse(data);
+                // if (data1 == "success") {
+                //     alert("Data Save Succesfuly");
+                //     window.location.replace("menuPage.php");
+                // } else {
+                //     alert("Data not Save Succesfuly")
+                // }
+                window.location.replace("transport.php");
+            }
+        });
+    }
+
+}
+
+
+
 
 function showEleInfo() {
     var div = document.getElementById("moreInfo");
@@ -46,4 +212,46 @@ function redirect() {
 
     window.location.replace("transport.php");
 
+}
+
+
+function customSelectValidator(eleValue, eleName) {
+    var flag = 0;
+    var errSelector = ".invalid-feedback";
+    if (eleValue == "") {
+        if (eleName[0] == '#') {
+            $(eleName).parent().find(errSelector).addClass("d-block");
+        } else {
+            $("[name=" + eleName + "]").parent().find(errSelector).addClass("d-block");
+        }
+        flag--;
+    } else {
+        if (eleName[0] == '#') {
+            $("#" + eleName).parent().find(errSelector).removeClass("d-block");
+        } else {
+            $("[name=" + eleName + "]").parent().find(errSelector).removeClass("d-block");
+        }
+    }
+    return flag;
+}
+
+function customInputValidator(eleValue, eleName) {
+    var flag = 0;
+    if (eleValue == "") {
+        if (eleName[0] == '#') {
+            $(eleName).addClass("is-invalid");
+
+        } else {
+            $("input[name=" + eleName + "]").addClass("is-invalid");
+        }
+        flag--;
+
+    } else {
+        if (eleName[0] == '#') {
+            $(eleName).removeClass("is-invalid");
+        } else {
+            $("input[name=" + eleName + "]").removeClass("is-invalid");
+        }
+    }
+    return flag;
 }
