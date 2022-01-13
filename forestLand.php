@@ -1,5 +1,5 @@
 <?php
-// require "php/session.php";
+require "php/session.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,6 +58,8 @@
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
             <input type="text" class="form-control" id="sectionType" value="forestChart" hidden>
+            
+            <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
 
             <div class="row">
                 <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
@@ -81,23 +83,21 @@
                             sq.km - Square Kilometre.
                         </marquee>
                         <form class="needs-validation" novalidate>
+                        <div id="forestLand"></div>
 
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
-                                    <label for="areaForest" class="form-label"> Area under Forest Land</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="areaForest" class="form-control" placeholder="Area" aria-label="Area" aria-describedby="basic-addon2">
-                                        <span class="input-group-text" id="basic-addon2">sq.km</span>
-                                    </div>
-                                </div>
+                        <div class="row ">
+                            <div class="col-md-12 mb-3 text-center">
+                                <button class="btn btn-primary " type="button" onclick="saveForestData();">NEXT</button>
                             </div>
+                        </div>
+                            
 
 
-                            <div class="row ">
+                            <!-- <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
                                     <button class="btn btn-primary " type="button" onclick="redirect();">Submit form</button>
                                 </div>
-                            </div>
+                            </div> -->
                         </form>
 
                     </div>
@@ -175,13 +175,13 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
 
-    <script src="js/forestLandModel.js"></script>
+    
     <script src="assets/js/jquery.min.js"></script>
 
     <script src="assets/js/bootstrap-show-modal.js"></script>
 
     <script src="js/induGraph.js"></script>
-
+<script src="js/forestLandModel.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 
