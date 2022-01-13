@@ -60,6 +60,8 @@ require "php/session.php";
 
             <input type="text" class="form-control" id="sectionType" value="eleChart" hidden>
 
+            <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
+
             <div class="row">
                 <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">

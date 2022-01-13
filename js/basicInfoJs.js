@@ -2,8 +2,8 @@ $(document).ready(function () {
     allMap();
 })
 
-function saveBasic(){
-    
+function saveBasic() {
+
     var flag = 0;
     var userData = {};
 
@@ -21,13 +21,11 @@ function saveBasic(){
     flag += customInputValidator(gArea, "gArea");
     var tArea = document.getElementById("tArea").value;
     flag += customInputValidator(tArea, "tArea");
-    var lite = document.getElementById("lite").value;
-    flag += customInputValidator(lite, "lite");
+    // var lite = document.getElementById("lite").value;  open
+    // flag += customInputValidator(lite, "lite");
 
     var gdp = document.getElementById("gdp").value;
     flag += customInputValidator(gdp, "gdp");
-    var edu = document.getElementById("edu").value;
-    flag += customInputValidator(edu, "edu");
     var hospital = document.getElementById("hospital").value;
     flag += customInputValidator(hospital, "hospital");
 
@@ -37,11 +35,10 @@ function saveBasic(){
     userData["city"] = city;
     userData["tArea"] = tArea;
     userData["gArea"] = gArea;
-    userData["lite"] = lite;
+    // userData["lite"] = lite;  open 
     userData["gdp"] = gdp;
-    userData["edu"] = edu;
     userData["hospital"] = hospital;
-    if(flag == 0){
+    if (flag == 0) {
         $.ajax({
             type: "POST",
             async: false,
@@ -62,13 +59,13 @@ function saveBasic(){
 
 }
 
-function allMap(){
+function allMap() {
     var flag = 0;
     var userData = {};
     var city = document.getElementById("city").value;
     flag += customInputValidator(city, "city");
     userData["city"] = city;
-    if(flag == 0){
+    if (flag == 0) {
         $.ajax({
             type: "POST",
             async: false,
@@ -77,9 +74,9 @@ function allMap(){
             data: JSON.stringify(userData),
             success: function (data) {
                 console.log(data);
-                var data1 =$.parseJSON(data)
-                var html ='';
-               $.each(data1, function (index, element) {
+                var data1 = $.parseJSON(data)
+                var html = '';
+                $.each(data1, function (index, element) {
                     html += element.url
                 });
                 $("#map").append(html);

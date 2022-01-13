@@ -17,9 +17,7 @@ require "php/session.php";
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -57,72 +55,72 @@ require "php/session.php";
             <div class="col-md-12 col-lg-6  mb-3" data-aos-delay="200">
                 <div class="in-sec">
                     <form class="needs-validation" novalidate>
-                        
+
                         <div class="row justify-content-center">
                             <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                 <label for="popu" class="form-label">City</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="city" class="form-control" value="<?php echo $_SESSION["cityName"];?>" aria-label="City" aria-describedby="basic-addon2" disabled>
-                                    </div>
+                                <div class="input-group mb-3">
+                                    <input type="text" id="city" class="form-control" value="<?php echo $_SESSION["cityName"]; ?>" aria-label="City" aria-describedby="basic-addon2" disabled>
+                                </div>
                             </div>
                             <div class="col-md-6 col-lg-10 col-xl-6 col-10">
-                                <label for="popu" class="form-label">No of Hospital</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="popu" class="form-control" placeholder="Hospital" aria-label="Hospital" aria-describedby="basic-addon2">
-                                    </div>
+                                <label for="hospital" class="form-label">No of Hospital</label>
+                                <div class="input-group mb-3">
+                                    <input type="text" id="hospital" class="form-control" placeholder="Hospital" aria-label="Hospital" aria-describedby="basic-addon2">
+                                </div>
                             </div>
-                            
+
                         </div>
 
                         <div class="row justify-content-center">
-                             <div class="col-md-6 col-lg-10 col-xl-6 col-10">
+                            <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                 <label for="popu" class="form-label"> Population</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="popu" class="form-control" placeholder="Population" aria-label="Population" aria-describedby="basic-addon2">
-                                    </div>
+                                <div class="input-group mb-3">
+                                    <input type="text" id="popu" class="form-control" placeholder="Population" aria-label="Population" aria-describedby="basic-addon2">
+                                </div>
                             </div>
                             <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                 <label for="gdp" class="form-label">GDP</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="gdp" class="form-control" placeholder="GDP" aria-label="GDP" aria-describedby="basic-addon2">
-                                    </div>
+                                <div class="input-group mb-3">
+                                    <input type="text" id="gdp" class="form-control" placeholder="GDP" aria-label="GDP" aria-describedby="basic-addon2">
+                                </div>
                             </div>
-                            
+
                         </div>
 
                         <div class="row justify-content-center">
-                             <div class="col-md-6 col-lg-10 col-xl-6 col-10">
+                            <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                 <label for="male" class="form-label"> Male</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="male" class="form-control" placeholder="Male" aria-label="Male" aria-describedby="basic-addon2">
-                                    </div>
+                                <div class="input-group mb-3">
+                                    <input type="text" id="male" class="form-control" placeholder="Male" aria-label="Male" aria-describedby="basic-addon2">
+                                </div>
                             </div>
                             <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                 <label for="tArea" class="form-label">Total Area</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="tArea" class="form-control" placeholder="Total Area" aria-label="Total Area" aria-describedby="basic-addon2">
-                                        <span class="input-group-text" id="basic-addon2">sq.km</span>
-                                    </div>
+                                <div class="input-group mb-3">
+                                    <input type="text" id="tArea" class="form-control" placeholder="Total Area" aria-label="Total Area" aria-describedby="basic-addon2">
+                                    <span class="input-group-text" id="basic-addon2">sq.km</span>
+                                </div>
                             </div>
-                            
+
                         </div>
 
-                         <div class="row justify-content-center">
+                        <div class="row justify-content-center">
                             <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                 <label for="female" class="form-label">Female</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="female" class="form-control" placeholder="Female" aria-label="Female" aria-describedby="basic-addon2">
-                                    </div>
+                                <div class="input-group mb-3">
+                                    <input type="text" id="female" class="form-control" placeholder="Female" aria-label="Female" aria-describedby="basic-addon2">
+                                </div>
                             </div>
                             <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                 <label for="gArea" class="form-label">Green Area</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="gArea" class="form-control" placeholder="Green Area" aria-label="Green Area" aria-describedby="basic-addon2">
-                                        <span class="input-group-text" id="basic-addon2">sq.km</span>
-                                    </div>
+                                <div class="input-group mb-3">
+                                    <input type="text" id="gArea" class="form-control" placeholder="Green Area" aria-label="Green Area" aria-describedby="basic-addon2">
+                                    <span class="input-group-text" id="basic-addon2">sq.km</span>
+                                </div>
                             </div>
                         </div>
-                           
+
                         <div class="row ">
                             <div class="col-md-12  text-center">
                                 <button class="btn btn-primary btn-get-started scrollto " onclick="saveBasic()" type="button">
@@ -137,24 +135,24 @@ require "php/session.php";
     </section><!-- End Hero -->
 
     <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    })();
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
     </script>
 
     <!-- Vendor JS Files -->

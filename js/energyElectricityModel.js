@@ -22,11 +22,14 @@ $(document).ready(function () {
 
 function showEleInput() {
     var html = '';
+
+    var basicId = document.getElementById("basicId").value;
     $("#eleInput").empty();
 
     var myobj = {};
-    myobj["basicid"] = 2;
     myobj["type"] = "Electricity";
+    myobj["basicId"] = basicId;
+
     $.ajax({
         type: "POST",
         async: false,
@@ -37,7 +40,6 @@ function showEleInput() {
             var divList = JSON.parse(data);
             $.each(divList, function (index, element) {
                 var check = element.check;
-
 
                 if (check == "true") {
                     var eledata = element.eleData;
