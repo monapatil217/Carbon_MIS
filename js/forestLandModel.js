@@ -14,14 +14,118 @@ window.onclick = function (event) {
     }
 }
 
-function redirect() {
+$(document).ready(function () {
+    showForestLand();
+})
 
-    window.location.replace("landUSe.php");
+function showForestLand() {
+    var html = '';
+
+    var basicId = document.getElementById("basicId").value;
+    $("#forestLand").empty();
+
+    var myobj = {};
+    myobj["type"] = "Forest";
+    myobj["basicId"] = basicId;
+
+    $.ajax({
+        type: "POST",
+        async: false,
+        url: "php/getAllData.php",
+        contentType: "application/json",
+        data: JSON.stringify(myobj),
+        success: function (data) {
+            var divList = JSON.parse(data);
+            $.each(divList, function (index, element) {
+                var check = element.check;
+
+                if (check == "true") {
+                    var eledata = element.cData;
+                    $.each(eledata, function (index, element1) {
+
+                        html = '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '<label for="areaForest" class="form-label"> Area under Forest Land </label >'
+                            + '<div class="input-group mb-3">'
+                            + '<input type="text" id="areaForest" class="form-control" value="' + element1.area + '" placeholder="Area" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<span class="input-group-text" id="basic-addon2">sq.km </span >'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>';
+                    });
+                }
+                else {
+
+                    html = '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '<label for="areaForest" class="form-label"> Area under Forest Land </label >'
+                        + '<div class="input-group mb-3">'
+                        + '<input type="text" id="areaForest" class="form-control" placeholder="Area" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<span class="input-group-text" id="basic-addon2">sq.km </span >'
+                        + '</div>'
+                        + '</div>'
+                        + '</div>';
+                }
+            });
+        }
+    });
+
+    $("#forestLand").append(html);
 
 }
 
-// var div = document.getElementById("popup-btn");
-// div.style.display = "block";
+function saveForestData() {
+
+    window.location.replace("landUSe.php");
+    // var flag = 0;
+    // var userData = {};
+
+    // var relec = document.getElementById("relec").value;
+    // flag += customInputValidator(relec, "relec");
+
+    // var celec = document.getElementById("celec").value;
+    // flag += customInputValidator(celec, "celec");
+
+    // var selec = document.getElementById("selec").value;
+    // flag += customInputValidator(selec, "selec");
+
+    // var slelec = document.getElementById("slelec").value;
+    // flag += customInputValidator(slelec, "slelec");
+
+    // userData["relec"] = relec;
+    // userData["celec"] = celec;
+    // userData["selec"] = selec;
+    // userData["slelec"] = slelec;
+
+
+
+    // if (flag == 0) {
+    //     $.ajax({
+    //         type: "POST",
+    //         async: false,
+    //         url: "php/.php",
+    //         contentType: "application/json",
+    //         data: JSON.stringify(userData),
+    //         success: function (data) {
+    //             // var data1 = JSON.parse(data);
+    //             // if (data1 == "success") {
+    //             //     alert("Data Save Succesfuly");
+    //             //     window.location.replace("menuPage.php");
+    //             // } else {
+    //             //     alert("Data not Save Succesfuly")
+    //             // }
+
+    //         }
+    //     });
+    // }
+
+}
+
+function redirect() {
+
+    window.location.replace(".php");
+
+}
 
 function showforestLInfo() {
     var div = document.getElementById("moreInfo");
@@ -47,4 +151,45 @@ function showforestLInfo() {
         + '</div>'
         + '</div></div>';
     $("#popUpData").append(html1);
+}
+
+function customSelectValidator(eleValue, eleName) {
+    var flag = 0;
+    var errSelector = ".invalid-feedback";
+    if (eleValue == "") {
+        if (eleName[0] == '#') {
+            $(eleName).parent().find(errSelector).addClass("d-block");
+        } else {
+            $("[name=" + eleName + "]").parent().find(errSelector).addClass("d-block");
+        }
+        flag--;
+    } else {
+        if (eleName[0] == '#') {
+            $("#" + eleName).parent().find(errSelector).removeClass("d-block");
+        } else {
+            $("[name=" + eleName + "]").parent().find(errSelector).removeClass("d-block");
+        }
+    }
+    return flag;
+}
+
+function customInputValidator(eleValue, eleName) {
+    var flag = 0;
+    if (eleValue == "") {
+        if (eleName[0] == '#') {
+            $(eleName).addClass("is-invalid");
+
+        } else {
+            $("input[name=" + eleName + "]").addClass("is-invalid");
+        }
+        flag--;
+
+    } else {
+        if (eleName[0] == '#') {
+            $(eleName).removeClass("is-invalid");
+        } else {
+            $("input[name=" + eleName + "]").removeClass("is-invalid");
+        }
+    }
+    return flag;
 }
