@@ -58,44 +58,42 @@ require "php/session.php";
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
             <input type="text" class="form-control" id="sectionType" value="industryChart" hidden>
+            <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
 
             <div class="row">
 
-                <div class="col-md-12 col-lg-5  mb-3 s " data-aos-delay="200">
+                <div class="col-md-12 col-lg-6  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
-                        <h3>Industry Energy</h3>
-
-
+                        <h3>Carbon Emission from Energy</h3>
 
                         <div id="chartName">
-                            <h3> Industry Graph</h3>
+                            <!-- <h3> Industry Graph</h3> -->
                         </div>
                         <div id="industryChart"></div>
 
                     </div>
                 </div>
 
-                <div class="col-md-12 col-lg-7  mb-3  s" data-aos-delay="200">
+                <div class="col-md-12 col-lg-6  mb-3  s" data-aos-delay="200">
                     <div class="in-sec">
-                        <!-- <h4 class="text-center mb-2">Industry</h4> -->
+
                         <form class="needs-validation" novalidate>
+                            <marquee width="100%" direction="left" height="30px">
+                                t - tonne / d - day / FO - Fuel Oil / LDO - Light Diesel Oil / HSD - High Speed
+                                Diesel / PNG - Piped Natural gas / NG - Natural Gas
+                            </marquee>
 
-                            <div>
-                                <h4>Energy</h4>
-
-                                <marquee width="100%" direction="left" height="30px">
-                                    t - tonne / d - day / FO - Fuel Oil / LDO - Light Diesel Oil / HSD - High Speed
-                                    Diesel / PNG - Piped Natural gas / NG - Natural Gas
-                                </marquee>
-
-                                <h6 class="text-center">Type of fuel mix used by industry</h6>
+                            <div id="energyIndInput"></div>
+                            <div class="row ">
+                                <div class="col-md-12 mb-3 text-center">
+                                    <button class="btn btn-primary " type="button" onclick="saveSolidData();">NEXT</button>
+                                </div>
                             </div>
 
-                            <div class="row ">
-                                <div class="col-lg-6">
+                                    <!-- <h6 class="text-center">Type of fuel mix used by industry</h6>
 
                                     <div class="row justify-content-center">
-                                        <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                        <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                             <label for="amtCoal" class="form-label"> Amount of Coal used</label>
                                             <div class="input-group mb-3">
                                                 <input type="text" id="amtCoal" class="form-control" placeholder="Coal"
@@ -103,11 +101,8 @@ require "php/session.php";
                                                 <span class="input-group-text" id="basic-addon2">t/day</span>
                                             </div>
                                         </div>
-                                    </div>
 
-
-                                    <div class="row justify-content-center">
-                                        <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                        <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                             <label for="amtFO" class="form-label">Amount of FO used</label>
                                             <div class="input-group mb-3">
                                                 <input type="text" id="amtFO" class="form-control" placeholder="FO"
@@ -115,10 +110,10 @@ require "php/session.php";
                                                 <span class="input-group-text" id="basic-addon2">t/day</span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div >
 
                                     <div class="row justify-content-center">
-                                        <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                        <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                             <label for="amtLDO" class="form-label">Amount of LDO used</label>
                                             <div class="input-group mb-3">
                                                 <input type="text" id="amtLDO" class="form-control" placeholder="LDO"
@@ -126,10 +121,8 @@ require "php/session.php";
                                                 <span class="input-group-text" id="basic-addon2">t/day</span>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="row justify-content-center">
-                                        <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                       <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                             <label for="amtHSD" class="form-label">Amount of HSD used</label>
                                             <div class="input-group mb-3">
                                                 <input type="text" id="amtHSD" class="form-control" placeholder="HSD"
@@ -138,14 +131,9 @@ require "php/session.php";
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-
-
-                                <div class="col-lg-6">
 
                                     <div class="row justify-content-center">
-                                        <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                        <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                             <label for="amtPNG" class="form-label">Amount of PNG used</label>
                                             <div class="input-group mb-3">
                                                 <input type="text" id="amtPNG" class="form-control" placeholder="PNG"
@@ -153,11 +141,8 @@ require "php/session.php";
                                                 <span class="input-group-text" id="basic-addon2">t/day</span>
                                             </div>
                                         </div>
-                                    </div>
 
-
-                                    <div class="row justify-content-center">
-                                        <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                       <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                             <label for="amtNG" class="form-label">Amount of NG used</label>
                                             <div class="input-group mb-3">
                                                 <input type="text" id="amtNG" class="form-control" placeholder="NG"
@@ -168,20 +153,16 @@ require "php/session.php";
                                     </div>
 
                                     <div class="row justify-content-center">
-                                        <div class="col-md-6 col-lg-10 col-xl-9 col-10">
-                                            <label for="amtBriquette" class="form-label">Amount of Briquette
-                                                used</label>
+                                        <div class="col-md-6 col-lg-10 col-xl-6 col-10">
+                                            <label for="amtBriquette" class="form-label">Amount of Briquette used</label>
                                             <div class="input-group mb-3">
-                                                <input type="text" id="amtBriquette" class="form-control"
-                                                    placeholder="Briquette" aria-label="Area"
+                                                <input type="text" id="amtBriquette" class="form-control" placeholder="Briquette" aria-label="Area"
                                                     aria-describedby="basic-addon2">
                                                 <span class="input-group-text" id="basic-addon2">t/day</span>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="row justify-content-center">
-                                        <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                        <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                             <label for="amtWood" class="form-label">Amount of Wood used</label>
                                             <div class="input-group mb-3">
                                                 <input type="text" id="amtWood" class="form-control" placeholder="Wood"
@@ -189,18 +170,7 @@ require "php/session.php";
                                                 <span class="input-group-text" id="basic-addon2">t/day</span>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-
-
-
-                    <div class="row ">
-                        <div class="col-md-12 mb-3 mt-3 text-center">
-                            <button class="btn btn-primary " type="button" onclick="redirect();"> Next</button>
-                        </div>
-                    </div>
+                                    </div > -->
                     </form>
 
                 </div>
@@ -221,11 +191,7 @@ require "php/session.php";
 
                         <div class="row align-items-center justify-content-center">
                             <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <!-- <p>1 unit of electricity is equal to 1000 watts. which means 1 unit = 1 kwatt
-                                        electricity</p>
-                                    <p>Burning 1 kg of bituminous coal will produce 2.42 kg of carbon dioxide</p>
-                                    <p>The emissions per unit of electricity are estimated to be in the range of 0.91
-                                        to 0.95 kg/kWh for CO2</p> -->
+                                
                             </div>
                             <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="btn-container">
@@ -239,14 +205,10 @@ require "php/session.php";
             </div>
         </div>
         <!-- End PopUp div -->
-
-
         </div>
-
         </div>
 
     </section><!-- End Hero -->
-
 
     <script>
     // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -285,13 +247,11 @@ require "php/session.php";
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
 
-    <script src="js/industryEnergyModel.js"></script>
-
-
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap-show-modal.js"></script>
 
     <script src="js/induGraph.js"></script>
+     <script src="js/industryEnergyModel.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 
