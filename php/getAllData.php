@@ -201,7 +201,7 @@ if ($type == "Electricity") {
             array_push($finalArray, $mainArray);
         }
     }
-}else if ($type == "Energy") { // pending
+}else if ($type == "Energy") {
 
     $query2 = "SELECT * FROM indu_eng_data WHERE b_id='" . $basicId . "'";
 
