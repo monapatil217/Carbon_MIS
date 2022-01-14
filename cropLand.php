@@ -55,7 +55,7 @@ require "php/session.php";
 
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
+    <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
             <input type="text" class="form-control" id="sectionType" value="cropChart" hidden>
@@ -63,25 +63,8 @@ require "php/session.php";
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
 
             <div class="row">
-
-                <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
-                    <div class="in-sec infoFont">
-                        <h3>Crop Land</h3>
-                            <ul style="margin-left: 10px;">
-                                <li class="popupli"> Land that is suited to or used for crops as known as Crop Land.</li>
-                            </ul>
-
-                        <div id="chartName">
-                            <h3> Crop Land Graph</h3>
-                        </div>
-                        <div id="cropChart"></div>
-
-                    </div>
-                </div>
-
                 <div class="col-md-12 col-lg-4  mb-3" data-aos-delay="200">
                     <div class="in-sec">
-                        <h4 class="text-center mb-2">Crop Land</h4>
                         <marquee width="100%" direction="left" height="30px">
                             sq.km - Square Kilometre.
                         </marquee>
@@ -95,18 +78,32 @@ require "php/session.php";
                         </form>
 
                     </div>
-                </div>
-
-                <!-- Start PopUp div -->
-                <div class="row align-items-center justify-content-center" id="moreInfo">
-
-                    <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-
-                        <div class="popup-flex fade-to-img" onclick="showCropLInfo();">
-                            <img class="reggot" id="popup-btn" src="img/field.png" width="80" height="80">
+                     <!-- Start PopUp div -->
+                    <div class="row align-items-center justify-content-center" id="moreInfo">
+                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                            <div class="fade-to-img" onclick="showCropLInfo();">
+                                <img class="reggot" id="popup-btn" src="img/field.png" width="80" height="100">
+                            </div>
                         </div>
+                    </div>
+                    <!-- End PopUp div -->
+                </div>
+                
+                <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
+                    <div class="in-sec infoFont">
+                    <h3 class="text-center mb-2">Carbon Emission of Crop Land</h3>
+                            <ul style="margin-left: 10px;">
+                                <li class="popupli"> Land that is suited to or used for crops as known as Crop Land.</li>
+                            </ul>
+                        <div id="chartName"></div>
+                        <div id="cropChart"></div>
+                    </div>
+                </div>
+            </div>
 
-                        <div id="popup-wrapper" class="popup-container">
+        </div>
+    </section><!-- End Sub Hero -->
+                       <div id="popup-wrapper" class="popup-container">
                             <div class="popup-content">
 
                                 <div class="row align-items-center justify-content-center">
@@ -122,15 +119,6 @@ require "php/session.php";
 
                             </div>
                         </div>
-                    </div>
-                </div>
-                <!-- End PopUp div -->
-
-            </div>
-
-        </div>
-    </section><!-- End Hero -->
-
 
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
