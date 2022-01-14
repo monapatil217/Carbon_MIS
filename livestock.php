@@ -48,142 +48,63 @@ require "php/session.php";
     <section id="hero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
-            <div class="row">
+            <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
+
+            <div class="row justify-content-center">
+                
+                <div class="col-md-12 col-lg-5" data-aos-delay="200">
+                    <div class="in-sec">
+
+                        <form class="needs-validation" novalidate>
+
+                            <div id="liveStockInput"></div>
+                            <div class="row ">
+                                <div class="col-md-12 mb-3 text-center">
+                                    <button class="btn btn-primary " type="button" onclick="saveLiveData();">NEXT</button>
+                                </div>
+                            </div>
+                            
+                        </form>
+
+                        <div class="row align-items-center justify-content-center" id="moreInfo">
+                            <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+
+                                <div class="fade-to-img" onclick="showLiveStockInfo();">
+                                    <img class="reggot" id="popup-btn" src="img/horse.png" width="80" height="80">
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
 
                 <div class="col-md-12 col-lg-7  mb-2" data-aos-delay="200">
                     <div class="in-sec infoFont">
-                        <h3>Live Stock</h3>
+                            <h3 class="text-center">Carbon Emission from Live Stock</h3>
                             <ul style="margin-left: 10px;">
                                 <li class="popupli"> It has been estimated that over 200 million tonnes of CO2 equivalents are released by Indian livestock each year. </li>
-                                
                             </ul>
                     </div>
                 </div>
-
-                <div class="col-md-12 col-lg-5" data-aos-delay="200">
-                    <div class="in-sec">
-                        <h4 class="text-center mb-2">Live Stock</h4>
-                        <form class="needs-validation" novalidate>
-                            <h6 class="text-center mt-3"> Enter Number of Animals </h6>
-
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
-                                    <label for="indCattle" class="form-label"> Indigenous Cattle</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="indCattle" class="form-control" placeholder="Indigenous Cattle" aria-label="Indigenous Cattle" aria-describedby="basic-addon2">
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
-                                    <label for="crossBread" class="form-label"> Cross-bred cattle</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="crossBread" class="form-control" placeholder="Cross-bred cattle" aria-label="Cross-bred cattle" aria-describedby="basic-addon2">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
-                                    <label for="buffalo" class="form-label"> Buffalo</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="buffalo" class="form-control" placeholder="Buffalo" aria-label="Buffalo" aria-describedby="basic-addon2">
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
-                                    <label for="Sheep" class="form-label"> Sheep</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="Sheep" class="form-control" placeholder="Sheep" aria-label="Sheep" aria-describedby="basic-addon2">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
-                                    <label for="goat" class="form-label"> Goat</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="goat" class="form-control" placeholder="Goat" aria-label="Goat" aria-describedby="basic-addon2">
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
-                                    <label for="horses" class="form-label"> Horses</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="horses" class="form-control" placeholder="Horses" aria-label="Horses" aria-describedby="basic-addon2">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
-                                    <label for="donkeys" class="form-label"> Donkeys</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="donkeys" class="form-control" placeholder="Donkeys" aria-label="Donkeys" aria-describedby="basic-addon2">
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
-                                    <label for="camels" class="form-label"> Camels </label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="camels" class="form-control" placeholder="Camels" aria-label="Camels" aria-describedby="basic-addon2">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
-                                    <label for="pig" class="form-label"> Pig</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="pig" class="form-control" placeholder="Pig" aria-label="Pig" aria-describedby="basic-addon2">
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
-                                    <label for="poultry" class="form-label"> Poultry </label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="poultry" class="form-control" placeholder="Poultry" aria-label="Poultry" aria-describedby="basic-addon2">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row justify-content-center">
-                                <div class="col-12 mb-3 mt-3 text-center">
-                                    <button class="btn btn-primary " type="button" onclick="redirect();">Submit form</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
             </div>
+        </div>
+    </section><!-- End Hero -->
 
-            <div class="row align-items-center justify-content-center" id="moreInfo">
+    <div id="popup-wrapper" class="popup-container">
+        <div class="popup-content">
 
-                <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-
-                    <div class="popup-flex fade-to-img" onclick="showLiveStockInfo();">
-                        <img class="reggot" id="popup-btn" src="img/horse.png" width="80" height="80">
-                    </div>
-
-                    <div id="popup-wrapper" class="popup-container">
-                        <div class="popup-content">
-
-                            <div class="row align-items-center justify-content-center">
-                                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                </div>
-                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="btn-container">
-                                        <a href="#" id="close" class="btn-gotit">Got It</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+            <div class="row align-items-center justify-content-center">
+                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                </div>
+                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="btn-container">
+                        <a href="#" id="close" class="btn-gotit">Got It</a>
                     </div>
                 </div>
             </div>
 
         </div>
-    </section><!-- End Hero -->
+    </div>
 
 
     <script>

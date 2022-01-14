@@ -116,7 +116,16 @@ if ($type == "Electricity") {
             $mainArray['check'] = "true";
             $deleData = array();
             $eleData = [];
-            $eleData['w2'] = $row['w2'];
+             $eleData['ind_cat'] = $row['ind_cat'];
+            $eleData['cross_cat'] = $row['cross_cat'];
+            $eleData['buff'] = $row['buff'];
+            $eleData['sheep'] = $row['sheep'];
+            $eleData['goat'] = $row['goat'];
+            $eleData['hors'] = $row['hors'];
+            $eleData['donk'] = $row['donk'];
+            $eleData['came'] = $row['came'];
+            $eleData['pig'] = $row['pig'];
+            $eleData['poul'] = $row['poul'];
             array_push($deleData, $eleData);
             $mainArray['cData'] =   $deleData;
             array_push($finalArray, $mainArray);
