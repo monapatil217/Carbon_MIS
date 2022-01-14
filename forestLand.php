@@ -54,27 +54,14 @@ require "php/session.php";
 
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
+    <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
             <input type="text" class="form-control" id="sectionType" value="forestChart" hidden>
             
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
 
-            <div class="row">
-                <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
-                    <div class="in-sec infoFont">
-                        <h3>Forest Land</h3>
-                        <ul style="margin-left: 10px;">
-                                <li class="popupli"> Forests provide a “carbon sink” that absorbs a net 7.6 billion metric tonnes of CO2 per year</li>
-                            </ul>
-                        <div id="chartName">
-                            <h3> Forest Land Graph</h3>
-                        </div>
-                        <div id="forestChart"></div>
-
-                    </div>
-                </div>
+            <div class="row  justify-content-center">
 
                 <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
                     <div class="in-sec">
@@ -90,52 +77,55 @@ require "php/session.php";
                                 <button class="btn btn-primary " type="button" onclick="saveForestData();">NEXT</button>
                             </div>
                         </div>
-                            
-
-
-                            <!-- <div class="row ">
-                                <div class="col-md-12 mb-3 text-center">
-                                    <button class="btn btn-primary " type="button" onclick="redirect();">Submit form</button>
-                                </div>
-                            </div> -->
                         </form>
 
-                    </div>
-                </div>
+                         <!-- Start PopUp div -->
+                        <div class="row align-items-center justify-content-center" id="moreInfo">
 
-                <!-- Start PopUp div -->
-                <div class="row align-items-center justify-content-center" id="moreInfo">
+                            <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
 
-                    <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-
-                        <div class="popup-flex fade-to-img" onclick="showforestLInfo();">
-                            <img class="reggot" id="popup-btn" src="img/forest.png" width="80" height="80">
-                        </div>
-
-                        <div id="popup-wrapper" class="popup-container">
-                            <div class="popup-content">
-
-                                <div class="row align-items-center justify-content-center">
-                                    <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                       
-                                    </div>
-                                    <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="btn-container">
-                                            <a href="#" id="close" class="btn-gotit">Got It</a>
-                                        </div>
-                                    </div>
+                                <div class="fade-to-img" onclick="showforestLInfo();">
+                                    <img class="reggot" id="popup-btn" src="img/forest.png" width="80" height="80">
                                 </div>
-
                             </div>
                         </div>
+                        <!-- End PopUp div -->
+
                     </div>
                 </div>
-                <!-- End PopUp div -->
 
+                <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
+                    <div class="in-sec infoFont">
+                        <h3 class="text-center">Carbon Stock in Forest Land Sector</h3>
+                        <ul style="margin-left: 10px;">
+                            <li class="popupli"> Forests provide a “carbon sink” that absorbs a net 7.6 billion metric tonnes of CO2 per year</li>
+                        </ul>
+                        <div class="row justify-content-center">
+                            <div id="chartName">
+                            </div>
+                            <div id="forestChart"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
     </section><!-- End Hero -->
+
+    <div id="popup-wrapper" class="popup-container">
+        <div class="popup-content">
+
+            <div class="row align-items-center justify-content-center">
+                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                       
+                </div>
+                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="btn-container">
+                        <a href="#" id="close" class="btn-gotit">Got It</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <script>

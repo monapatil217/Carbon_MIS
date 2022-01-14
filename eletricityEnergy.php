@@ -79,11 +79,6 @@ require "php/session.php";
                                 </div>
                             </div>
                         </form>
-
-
-
-
-
                         <div class="row align-items-center justify-content-center" id="moreInfo">
 
                             <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
@@ -94,18 +89,13 @@ require "php/session.php";
 
                             </div>
                         </div>
-
-
-
-
-
                     </div>
                 </div>
 
                 <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">
                         <!-- <h3>Electricity</h3> -->
-                        <h3 class="text-center mb-2">Carbon emission of Electricity</h3>
+                        <h3 class="text-center mb-2">Carbon Emission from Electricity Sector</h3>
                         <ul style="margin-left: 10px;">
                             <li class="popupli"> 1 unit of electricity is equal to 1000 watts. which means 1 unit = 1 kwatt electricity.</li>
                             <li class="popupli">Burning 1 kg of bituminous coal will produce 2.42 kg of carbon dioxide.</li>
@@ -119,13 +109,7 @@ require "php/session.php";
                         </div>
                     </div>
                 </div>
-
-
-
-
-
             </div>
-
         </div>
     </section><!-- End Hero -->
 

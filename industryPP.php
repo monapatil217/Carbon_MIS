@@ -56,27 +56,15 @@ require "php/session.php";
     ?>
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
+    <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
             <input type="text" class="form-control" id="sectionType" value="indusppChart" hidden>
+            <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
+            
+            <div class="row justify-content-center">
 
-            <div class="row">
-
-                <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
-                    <div class="in-sec infoFont">
-                        <h3>Industry-Process and Product</h3>
-                        <ul style="margin-left: 10px;">
-                            <li class="popupli"> Total Emissions in 2019 = 6,558 Million Metric Tons of CO2 equivalent.
-                            </li>
-                        </ul>
-                        <div id="chartName">
-                            <h4> Industry-Process and Product Graph</h4>
-                        </div>
-                        <div id="indusppChart"></div>
-
-                    </div>
-                </div>
+                
 
                 <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
                     <div class="in-sec">
@@ -85,32 +73,12 @@ require "php/session.php";
                             t - tonne
                         </marquee>
                         <form class="needs-validation" novalidate>
-                        <label for="amtProd" class="form-label"> Amount of Product Manufacture</label>
-
-
-                            <!-- <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-9 col-8">
-                                    <div class="input-group mb-3 mt-3">
-                                        <span class="form-floating col-8 col-lg-7 col-xl-8">
-                                            <div class="form-floating ">
-                                                <input type="text" class="form-control" id="amtProd" placeholder="Product">
-                                                <label for="amtProd">Product</label>
-                                            </div>
-                                        </span>
-                                        <span class="input-group-text" id="basic-addon-1">t/year</span>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid data.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-
+                        
                             <div class="row justify-content-center">
                                 <div class="col-md-6 col-lg-10 col-xl-9 col-10">
-                                   
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="amtProd" class="form-control" placeholder="Product"
-                                            aria-label="Area" aria-describedby="basic-addon2">
+                                    <label for="amtProd" class="form-label">  Amount of Product Manufacture</label>
+                                    <div class="input-group mb-2">
+                                        <input type="text" id="amtProd" class="form-control" placeholder="Product" aria-label="Area" aria-describedby="basic-addon2">
                                         <span class="input-group-text" id="basic-addon2">t/year</span>
                                     </div>
                                 </div>
@@ -118,44 +86,58 @@ require "php/session.php";
 
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
-                                    <button class="btn btn-primary " type="button" onclick="redirect();">Next</button>
+                                    <button class="btn btn-primary " type="button" onclick="saveIndPPData();">NEXT</button>
                                 </div>
                             </div>
                         </form>
 
-                    </div>
-                </div>
-            </div>
-
-            <div class="row align-items-center justify-content-center" id="moreInfo">
-
-                <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12"
-                    data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-
-                    <div class="popup-flex fade-to-img" onclick="showPPInfo();">
-                        <img class="reggot" id="popup-btn" src="img/distributed.png" width="80" height="80">
-                    </div>
-
-                    <div id="popup-wrapper" class="popup-container">
-                        <div class="popup-content">
-
-                            <div class="row align-items-center justify-content-center">
-                                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                </div>
-                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="btn-container">
-                                        <a href="#" id="close" class="btn-gotit">Got It</a>
-                                    </div>
+                        <div class="row align-items-center justify-content-center" id="moreInfo">
+                            <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <div class="fade-to-img" onclick="showPPInfo();">
+                                    <img class="reggot" id="popup-btn" src="img/distributed.png" width="80" height="80">
                                 </div>
                             </div>
-
                         </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
+                    <div class="in-sec infoFont">
+                        <h3 class="text-center">Carbon Emission from IPPU Sector</h3>
+                        <ul style="margin-left: 10px;">
+                            <li class="popupli"> Total Emissions in 2019 = 6,558 Million Metric Tons of CO2 equivalent.
+                            </li>
+                        </ul>
+                        <div class="row justify-content-center">
+                            <div id="chartName">
+                            </div>
+                            <div id="indusppChart"></div>
+                        </div>
+
                     </div>
                 </div>
             </div>
+
+            
 
         </div>
     </section><!-- End Hero -->
+
+    <div id="popup-wrapper" class="popup-container">
+        <div class="popup-content">
+
+            <div class="row align-items-center justify-content-center">
+                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                </div>
+                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="btn-container">
+                        <a href="#" id="close" class="btn-gotit">Got It</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <script>

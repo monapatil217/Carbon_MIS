@@ -43,12 +43,12 @@ function showEnergyIndInput() {
                     var eledata = element.cData;
                     $.each(eledata, function (index, element1) {
 
-                        html = '<h6 class="text-center">Type of fuel mix used by industry</h6>'
+                        html = '<h6 class="text-center">Type of Fuel Mix used by Industry</h6>'
 
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + ' <label for="amtCoal" class="form-label"> Amount of Coal used</label>'
-                            + '<div class="input-group mb-3">'
+                            + '<div class="input-group mb-2">'
                             + '<input type="text" id="amtCoal" class="form-control" value="' + element1.coal + '" placeholder="Coal" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                             + '</div>'
@@ -56,7 +56,7 @@ function showEnergyIndInput() {
 
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '<label for="amtFO" class="form-label">Amount of FO used</label>'
-                            + '<div class="input-group mb-3">'
+                            + '<div class="input-group mb-2">'
                             + '<input type="text" id="amtFO" class="form-control" value="' + element1.fo + '" placeholder="FO" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                             + '</div>'
@@ -66,7 +66,7 @@ function showEnergyIndInput() {
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '<label for="amtLDO" class="form-label">Amount of LDO used</label>'
-                            + '<div class="input-group mb-3">'
+                            + '<div class="input-group mb-2">'
                             + '<input type="text" id="amtLDO" class="form-control" value="' + element1.ido + '" placeholder="LDO" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                             + '</div>'
@@ -74,7 +74,7 @@ function showEnergyIndInput() {
 
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '<label for="amtHSD" class="form-label">Amount of HSD used</label>'
-                            + ' <div class="input-group mb-3">'
+                            + ' <div class="input-group mb-2">'
                             + '<input type="text" id="amtHSD" class="form-control" value="' + element1.hsd + '" placeholder="HSD" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                             + '</div>'
@@ -84,7 +84,7 @@ function showEnergyIndInput() {
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '<label for="amtPNG" class="form-label">Amount of PNG used</label>'
-                            + '<div class="input-group mb-3">'
+                            + '<div class="input-group mb-2">'
                             + '<input type="text" id="amtPNG" class="form-control" value="' + element1.png + '" placeholder="PNG" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                             + '</div>'
@@ -92,7 +92,7 @@ function showEnergyIndInput() {
 
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '<label for="amtNG" class="form-label">Amount of NG used</label>'
-                            + '<div class="input-group mb-3">'
+                            + '<div class="input-group mb-2">'
                             + '<input type="text" id="amtNG" class="form-control" value="' + element1.ng + '" placeholder="NG" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                             + '</div>'
@@ -102,7 +102,7 @@ function showEnergyIndInput() {
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '<label for="amtBriquette" class="form-label">Amount of Briquette used</label>'
-                            + '<div class="input-group mb-3">'
+                            + '<div class="input-group mb-2">'
                             + '<input type="text" id="amtBriquette" class="form-control" value="' + element1.briq + '" placeholder="Briquette" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                             + '</div>'
@@ -110,7 +110,7 @@ function showEnergyIndInput() {
 
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             // + ' <label for="amtWood" class="form-label">Amount of Wood used</label>'
-                            // + '<div class="input-group mb-3">'
+                            // + '<div class="input-group mb-2">'
                             // + '<input type="text" id="amtWood" class="form-control" value="' + element1.sw_col + '" placeholder="Wood" aria-label="Area" aria-describedby="basic-addon2">'
                             // + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                             // + '</div>'
@@ -125,7 +125,7 @@ function showEnergyIndInput() {
                         + '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + ' <label for="amtCoal" class="form-label"> Amount of Coal used</label>'
-                        + '<div class="input-group mb-3">'
+                        + '<div class="input-group mb-2">'
                         + '<input type="text" id="amtCoal" class="form-control" placeholder="Coal" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                         + '</div>'
@@ -133,7 +133,7 @@ function showEnergyIndInput() {
 
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '<label for="amtFO" class="form-label">Amount of FO used</label>'
-                        + '<div class="input-group mb-3">'
+                        + '<div class="input-group mb-2">'
                         + '<input type="text" id="amtFO" class="form-control" placeholder="FO" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                         + '</div>'
@@ -143,7 +143,7 @@ function showEnergyIndInput() {
                         + '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '<label for="amtLDO" class="form-label">Amount of LDO used</label>'
-                        + '<div class="input-group mb-3">'
+                        + '<div class="input-group mb-2">'
                         + '<input type="text" id="amtLDO" class="form-control" placeholder="LDO" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                         + '</div>'
@@ -151,7 +151,7 @@ function showEnergyIndInput() {
 
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '<label for="amtHSD" class="form-label">Amount of HSD used</label>'
-                        + ' <div class="input-group mb-3">'
+                        + ' <div class="input-group mb-2">'
                         + '<input type="text" id="amtHSD" class="form-control" placeholder="HSD" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                         + '</div>'
@@ -161,7 +161,7 @@ function showEnergyIndInput() {
                         + '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '<label for="amtPNG" class="form-label">Amount of PNG used</label>'
-                        + '<div class="input-group mb-3">'
+                        + '<div class="input-group mb-2">'
                         + '<input type="text" id="amtPNG" class="form-control" placeholder="PNG" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                         + '</div>'
@@ -169,7 +169,7 @@ function showEnergyIndInput() {
 
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '<label for="amtNG" class="form-label">Amount of NG used</label>'
-                        + '<div class="input-group mb-3">'
+                        + '<div class="input-group mb-2">'
                         + '<input type="text" id="amtNG" class="form-control" placeholder="NG" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                         + '</div>'
@@ -179,18 +179,18 @@ function showEnergyIndInput() {
                         + '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '<label for="amtBriquette" class="form-label">Amount of Briquette used</label>'
-                        + '<div class="input-group mb-3">'
+                        + '<div class="input-group mb-2">'
                         + '<input type="text" id="amtBriquette" class="form-control" placeholder="Briquette" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                         + '</div>'
                         + '</div>'
 
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + ' <label for="amtWood" class="form-label">Amount of Wood used</label>'
-                        + '<div class="input-group mb-3">'
-                        + '<input type="text" id="amtWood" class="form-control" placeholder="Wood" aria-label="Area" aria-describedby="basic-addon2">'
-                        + '<span class="input-group-text" id="basic-addon2">t/day</span>'
-                        + '</div>'
+                        // + ' <label for="amtWood" class="form-label">Amount of Wood used</label>'
+                        // + '<div class="input-group mb-2">'
+                        // + '<input type="text" id="amtWood" class="form-control" placeholder="Wood" aria-label="Area" aria-describedby="basic-addon2">'
+                        // + '<span class="input-group-text" id="basic-addon2">t/day</span>'
+                        // + '</div>'
                         + '</div>'
                         + '</div>';
                 }
@@ -205,7 +205,7 @@ function showEnergyIndInput() {
 
 function saveEnergyIData() {
 
-    window.location.replace("fueluseincity.php");
+    window.location.replace("industryPP.php");
     // var flag = 0;
     // var userData = {};
 

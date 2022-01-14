@@ -15,14 +15,200 @@ window.onclick = function (event) {
     }
 }
 
-// var div = document.getElementById("moreInfo");
-// div.style.display = "none";
+$(document).ready(function () {
+    showWaterInput();
+})
 
-function redirect() {
+function showWaterInput() {
+    var html = '';
 
-    window.location.replace("industryPP.php");
+    var basicId = document.getElementById("basicId").value;
+    $("#waterInput").empty();
+
+    var myobj = {};
+    myobj["type"] = "WasteWater";
+    myobj["basicId"] = basicId;
+
+    $.ajax({
+        type: "POST",
+        async: false,
+        url: "php/getAllData.php",
+        contentType: "application/json",
+        data: JSON.stringify(myobj),
+        success: function (data) {
+            var divList = JSON.parse(data);
+            $.each(divList, function (index, element) {
+                var check = element.check;
+
+                if (check == "true") {
+                    var eledata = element.cData;
+                    $.each(eledata, function (index, element1) {
+
+                        html = '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '<label for="waterConsumption" class="form-label">Water Consumption</label>'
+                            + '<div class="input-group mb-2">'
+                            + '<input type="text" id="waterConsumption" class="form-control" value="' + element1.w_cons + '" placeholder="Consumption" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>'
+
+                            + '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '<label for="waterGenration" class="form-label">Waste water Generated</label>'
+                            + '<div class="input-group mb-2">'
+                            + '<input type="text" id="waterGenration" class="form-control" value="' + element1.w_gen + '" placeholder="Generated" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>'
+
+                            + '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '<label for="waterCollection" class="form-label">Waste water Collection</label>'
+                            + '<div class="input-group mb-2">'
+                            + '<input type="text" id="waterCollection" class="form-control" value="' + element1.w_coll + '" placeholder="Collection" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>'
+
+                            + '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '<label for="waterTreat" class="form-label">Qty of treat waste water</label>'
+                            + '<div class="input-group mb-2">'
+                            + '<input type="text" id="waterTreat" class="form-control" value="' + element1.q_treat + '" placeholder="Water Treat" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>'
+
+                            + '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '<label for="noSTP" class="form-label">No of STP</label>'
+                            + '<div class="input-group mb-2">'
+                            + '<input type="text" id="noSTP" class="form-control" value="' + element1.n_stp + '" placeholder="STP" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>';
+                    });
+                }
+                else {
+
+                    html = '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '<label for="waterConsumption" class="form-label">Water Consumption</label>'
+                        + '<div class="input-group mb-2">'
+                        + '<input type="text" id="waterConsumption" class="form-control" placeholder="Consumption" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                        + '</div>'
+                        + '</div>'
+                        + '</div>'
+
+                        + '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '<label for="waterGenration" class="form-label">Waste water Generated</label>'
+                        + '<div class="input-group mb-2">'
+                        + '<input type="text" id="waterGenration" class="form-control" placeholder="Generated" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                        + '</div>'
+                        + '</div>'
+                        + '</div>'
+
+                        + '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '<label for="waterCollection" class="form-label">Waste water Collection</label>'
+                        + '<div class="input-group mb-2">'
+                        + '<input type="text" id="waterCollection" class="form-control" placeholder="Collection" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                        + '</div>'
+                        + '</div>'
+                        + '</div>'
+
+                        + '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '<label for="waterTreat" class="form-label">Qty of treat waste water</label>'
+                        + '<div class="input-group mb-2">'
+                        + '<input type="text" id="waterTreat" class="form-control" placeholder="Water Treat" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                        + '</div>'
+                        + '</div>'
+                        + '</div>'
+
+                        + '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '<label for="noSTP" class="form-label">No of STP</label>'
+                        + '<div class="input-group mb-2">'
+                        + '<input type="text" id="noSTP" class="form-control" placeholder="STP" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                        + '</div>'
+                        + '</div>'
+                        + '</div>';
+                }
+            });
+        }
+    });
+
+    $("#waterInput").append(html);
 
 }
+
+
+function saveWaterData() {
+
+    window.location.replace("industryEnergy.php");
+    // var flag = 0;
+    // var userData = {};
+
+    // var relec = document.getElementById("relec").value;
+    // flag += customInputValidator(relec, "relec");
+
+    // var celec = document.getElementById("celec").value;
+    // flag += customInputValidator(celec, "celec");
+
+    // var selec = document.getElementById("selec").value;
+    // flag += customInputValidator(selec, "selec");
+
+    // var slelec = document.getElementById("slelec").value;
+    // flag += customInputValidator(slelec, "slelec");
+
+    // userData["relec"] = relec;
+    // userData["celec"] = celec;
+    // userData["selec"] = selec;
+    // userData["slelec"] = slelec;
+
+
+
+    // if (flag == 0) {
+    //     $.ajax({
+    //         type: "POST",
+    //         async: false,
+    //         url: "php/.php",
+    //         contentType: "application/json",
+    //         data: JSON.stringify(userData),
+    //         success: function (data) {
+    //             // var data1 = JSON.parse(data);
+    //             // if (data1 == "success") {
+    //             //     alert("Data Save Succesfuly");
+    //             //     window.location.replace("menuPage.php");
+    //             // } else {
+    //             //     alert("Data not Save Succesfuly")
+    //             // }
+    //             
+    //         }
+    //     });
+    // }
+
+}
+
+
+// function redirect() {
+
+//     window.location.replace("industryPP.php");
+
+// }
 
 function showWaterInfo() {
     var div = document.getElementById("moreInfo");

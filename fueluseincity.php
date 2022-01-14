@@ -56,102 +56,90 @@
         ?>
 
      <!-- ======= Hero Section ======= -->
-     <section id="hero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
-         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-             <input type="text" class="form-control" id="sectionType" value="fuelChart" hidden>
+    <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
+        <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+            <input type="text" class="form-control" id="sectionType" value="fuelChart" hidden>
 
-             <div class="row">
+            <div class="row justify-content-center">
 
+                <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
+                    <div class="in-sec">
+                        <form class="needs-validation" novalidate>
+                        <h6 class="text-center">Select Cooking Fuel</h6>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="popu">Fuel</label>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid data.
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <select class="form-control" id="fuelType" onchange="addTypeDiv();">
+                                        <option disabled selected> Types</option>
+                                        <option value="LPG">LPG</option>
+                                        <option value="MNGL">MNGL</option>
+                                        <option value="Kerosene">Kerosene</option>
+                                        <option value="Wood">Wood</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div id="lpg"></div>
+                            <div id="mngl"></div>
+                            <div id="kerosene"></div>
+                            <div id="wood"></div>
+
+                            <div class="row ">
+                                <div class="col-md-12 mb-3 text-center">
+                                    <button class="btn btn-primary " type="button" onclick="redirect();">Next</button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- Start PopUp div -->
+                        <div class="row align-items-center justify-content-center" id="moreInfo">
+                            <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <div class="fade-to-img" onclick="showCookingFuelInfo();">
+                                    <img class="reggot" id="popup-btn" src="img/cookingfuel.png" width="80" height="80">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End PopUp div -->
+                    </div>
+                </div>
                  <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
-                     <div class="in-sec">
-                         <h3>Fuel use in city</h3>
+                    <div class="in-sec">
+                        <h3 class="text-center">Carbon Emission from Cooking Fuel</h3>
+                            <ul style="margin-left: 10px;">
+                                <li class="popupli"> 454 grammes of carbon per liter of LPG. In order to combust this carbon to CO2,
+                                 1211 grammes of oxygen is needed .</li>
+                                <li class="popupli">The sum is then 454 + 1211 = 1665 grammes of CO2/liter of LPG.</li>
+                            </ul>
+                            <div class="row justify-content-center">
+                                <div id="chartName">
+                                </div>
+                                <div id="fuelChart"></div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Hero -->
 
-                         <h5>
-                             <p>454 grammes of carbon per liter of LPG. In order to combust this carbon to CO2,
-                                 1211 grammes of oxygen is needed.
-                                 The sum is then 454 + 1211 = 1665 grammes of CO2/liter of LPG</p>
-                         </h5>
-
-                         <div id="chartName">
-                             <h3> Forest Land Graph</h3>
-                         </div>
-                         <div id="fuelChart"></div>
-
-                     </div>
-                 </div>
-
-                 <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
-                     <div class="in-sec">
-                         <h4 class="text-center mb-2">Fuel use in city</h4>
-                         <form class="needs-validation" novalidate>
-                             <div class="row">
-                                 <div class="col-md-3">
-                                     <label for="popu">Fuel</label>
-                                     <div class="invalid-feedback">
-                                         Please provide a valid data.
-                                     </div>
-                                 </div>
-
-                                 <div class="form-group col-md-6">
-                                     <select class="form-control" id="fuelType" onchange="addTypeDiv();">
-                                         <option disabled selected> Types</option>
-                                         <option value="LPG">LPG</option>
-                                         <option value="MNGL">MNGL</option>
-                                         <option value="Kerosene">Kerosene</option>
-                                         <option value="Wood">Wood</option>
-                                     </select>
-                                 </div>
-
-                             </div>
-                             <div id="lpg"></div>
-                             <div id="mngl"></div>
-                             <div id="kerosene"></div>
-                             <div id="wood"></div>
-
-                             <div class="row ">
-                                 <div class="col-md-12 mb-3 text-center">
-                                     <button class="btn btn-primary " type="button" onclick="redirect();">Next</button>
-                                 </div>
-                             </div>
-                         </form>
-
-                     </div>
-                 </div>
-
-                 <!-- Start PopUp div -->
-                 <div class="row align-items-center justify-content-center" id="moreInfo">
-
-                     <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12"
-                         data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-
-                         <div class="popup-flex fade-to-img" onclick="showCookingFuelInfo();">
-                             <img class="reggot" id="popup-btn" src="img/cookingfuel.png" width="80" height="80">
-                         </div>
-
-                         <div id="popup-wrapper" class="popup-container">
-                             <div class="popup-content">
-
-                                 <div class="row align-items-center justify-content-center">
-                                     <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-                                     </div>
-                                     <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                         <div class="btn-container">
-                                             <a href="#" id="close" class="btn-gotit">Got It</a>
-                                         </div>
-                                     </div>
-                                 </div>
-
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <!-- End PopUp div -->
-
-             </div>
-
-         </div>
-     </section><!-- End Hero -->
+    <div id="popup-wrapper" class="popup-container">
+        <div class="popup-content">
+            <div class="row align-items-center justify-content-center">
+                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                </div>
+                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="btn-container">
+                        <a href="#" id="close" class="btn-gotit">Got It</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
      <script>

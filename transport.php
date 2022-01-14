@@ -38,8 +38,6 @@ require "php/session.php";
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 
-
-
     <style>
         #transChart {
             width: 300px;
@@ -54,31 +52,17 @@ require "php/session.php";
     include 'header.php';
     ?>
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
+    <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
             
             <input type="text" class="form-control" id="sectionType" value="transChart" hidden>
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
             
-            <div class="row">
-                
-                <div class="col-md-12 col-lg-6  mb-3" data-aos-delay="200">
-                    <div class="in-sec infoFont">
-                        <h3>Transport</h3>
-                            <ul style="margin-left: 10px;">
-                                <li class="popupli"> After burning 1 liter of diesel 2.62 kg of CO2 is release in enviroment .</li>
-                                <li class="popupli">Whereas petrol has a lower carbon content and produces about 2.39 kgs of CO2 per liter.</li>
-                            </ul>
-                        <div id="chartName">
-                            <h3> Transport Graph</h3>
-                        </div>
-                        <div id="transChart"></div>
-                    </div>
-                </div>
+            <div class="row justify-content-center">
 
-                <div class="col-md-12 col-lg-6  mb-3" data-aos-delay="200">
+                <div class="col-md-12 col-lg-4  mb-3" data-aos-delay="200">
                     <div class="in-sec">
-                        <h4 class="text-center mb-2">Transport</h4>
+                        <!-- <h4 class="text-center mb-2">Transport</h4> -->
 
                         <form class="needs-validation" novalidate>
 
@@ -90,39 +74,53 @@ require "php/session.php";
                             </div>
                             
                         </form>
-                    </div>
-                </div>
-            </div>
 
-            <div class="row align-items-center justify-content-center" id="moreInfo">
+                        <div class="row align-items-center justify-content-center" id="moreInfo">
 
-                <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-
-                    <div class="popup-flex fade-to-img" onclick="showVehiInfo();">
-                        <img class="reggot" id="popup-btn" src="img/car.png" width="80" height="80">
-                    </div>
-
-                    <div id="popup-wrapper" class="popup-container">
-                        <div class="popup-content">
-
-                            <div class="row align-items-center justify-content-center">
-                                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-                                </div>
-                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="btn-container">
-                                        <a href="#" id="close" class="btn-gotit">Got It</a>
-                                    </div>
+                            <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <div class="fade-to-img" onclick="showVehiInfo();">
+                                    <img class="reggot" id="popup-btn" src="img/car.png" width="80" height="80">
                                 </div>
                             </div>
-
                         </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
+                    <div class="in-sec infoFont">
+                        <h3 class="text-center">Carbon Emission from Transport Sector</h3>
+                            <ul style="margin-left: 10px;">
+                                <li class="popupli"> After burning 1 liter of diesel 2.62 kg of CO2 is release in enviroment .</li>
+                                <li class="popupli">Whereas petrol has a lower carbon content and produces about 2.39 kgs of CO2 per liter.</li>
+                            </ul>
+                            <div class="row justify-content-center">
+                                <div id="chartName">
+                                </div>
+                                <div id="transChart"></div>
+                            </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section><!-- End Hero -->
+
+    <div id="popup-wrapper" class="popup-container">
+        <div class="popup-content">
+
+            <div class="row align-items-center justify-content-center">
+                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                </div>
+                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="btn-container">
+                        <a href="#" id="close" class="btn-gotit">Got It</a>
                     </div>
                 </div>
             </div>
 
         </div>
-    </section><!-- End Hero -->
+    </div>
 
 
     <script>

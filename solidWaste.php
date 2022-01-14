@@ -56,29 +56,19 @@ require "php/session.php";
 
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
+    <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
             <input type="text" class="form-control" id="sectionType" value="solidChart" hidden>
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
 
-            <div class="row">
+            <div class="row justify-content-center">
 
-                <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
-                    <div class="in-sec">
-                        <h3>Solid Waste</h3>
-
-                        <div id="chartName">
-                            <h3> Solid Waste Graph</h3>
-                        </div>
-                        <div id="solidChart"></div>
-
-                    </div>
-                </div>
+               
 
                 <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
                     <div class="in-sec">
-                        <h4 class="text-center mb-2">Solid Waste</h4>
+                        <!-- <h4 class="text-center mb-2">Solid Waste</h4> -->
                         <form class="needs-validation" novalidate>
 
                             <div id="solidInput"></div>
@@ -122,42 +112,44 @@ require "php/session.php";
                                 <label for="AppWaste">Approximate Waste</label>
                             </div> -->
                         </form>
+                        <div class="row align-items-center justify-content-center" id="moreInfo">
+                            <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <div class="fade-to-img" onclick="showSolidInfo();">
+                                    <img class="reggot" id="popup-btn" src="img/waste.png" width="80" height="80">
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
-            </div>
-
-            <div class="row align-items-center justify-content-center" id="moreInfo">
-
-                <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12"
-                    data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-
-                    <div class="popup-flex fade-to-img" onclick="showSolidInfo();">
-                        <img class="reggot" id="popup-btn" src="img/waste.png" width="80" height="80">
-                    </div>
-
-                    <div id="popup-wrapper" class="popup-container">
-                        <div class="popup-content">
-
-                            <div class="row align-items-center justify-content-center">
-                                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-                                </div>
-                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="btn-container">
-                                        <a href="#" id="close" class="btn-gotit">Got It</a>
-                                    </div>
-                                </div>
+                <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
+                    <div class="in-sec">
+                    <h3 class="text-center">Carbon Emission from Solid Waste Sector</h3>
+                        <div class="row justify-content-center">
+                            <div id="chartName">
                             </div>
-
+                            <div id="solidChart"></div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Hero -->
+    <div id="popup-wrapper" class="popup-container">
+        <div class="popup-content">
+
+            <div class="row align-items-center justify-content-center">
+                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                </div>
+                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="btn-container">
+                        <a href="#" id="close" class="btn-gotit">Got It</a>
                     </div>
                 </div>
             </div>
 
         </div>
-    </section><!-- End Hero -->
-
+    </div>
 
     <script>
     // Example starter JavaScript for disabling form submissions if there are invalid fields

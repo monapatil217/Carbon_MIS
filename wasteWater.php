@@ -56,32 +56,28 @@ require "php/session.php";
     ?>
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
+    <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
             <input type="text" class="form-control" id="sectionType" value="wwChart" hidden>
+            <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
 
-            <div class="row">
+            <div class="row justify-content-center">
 
-                <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
-                    <div class="in-sec">
-                        <h3>Waste Water</h3>
-
-
-                        <div id="chartName">
-                            <h3> Solid Waste Graph</h3>
-                        </div>
-                        <div id="wwChart"></div>
-
-                    </div>
-                </div>
+                
 
                 <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
                     <div class="in-sec">
-                        <h4 class="text-center mb-2">Waste Water</h4>
                         <form class="needs-validation" novalidate>
 
-                            <div class="row justify-content-center">
+                            <div id="waterInput"></div>
+                            <div class="row ">
+                                <div class="col-md-12 mb-3 text-center">
+                                    <button class="btn btn-primary " type="button" onclick="saveWaterData();">NEXT</button>
+                                </div>
+                            </div>
+
+                            <!-- <div class="row justify-content-center">
                                 <div class="col-md-6 col-lg-10 col-xl-9 col-10">
                                     <label for="waterConsumption" class="form-label">Water Consumption</label>
                                     <div class="input-group mb-3">
@@ -134,7 +130,7 @@ require "php/session.php";
                                         <span class="input-group-text" id="basic-addon2">CMD</span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!-- The below section will open after adding js -->
 
@@ -185,42 +181,23 @@ require "php/session.php";
                                 </div>
                                 <label for="waterDisposal">Disposal of Waste</label>
                             </div> -->
-
-
-                            <div class="row ">
-                                <div class="col-md-12 mb-3 text-center">
-                                    <button class="btn btn-primary " type="button" onclick="redirect();">Next</button>
+                        </form>
+                        <div class="row align-items-center justify-content-center" id="moreInfo">
+                            <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <div class=" fade-to-img" onclick="showWaterInfo();">
+                                    <img class="reggot" id="popup-btn" src="img/water-drop.png" width="80" height="80">
                                 </div>
                             </div>
-                        </form>
-
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="row align-items-center justify-content-center" id="moreInfo">
-
-                <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12"
-                    data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-
-                    <div class="popup-flex fade-to-img" onclick="showWaterInfo();">
-                        <img class="reggot" id="popup-btn" src="img/water-drop.png" width="80" height="80">
-                    </div>
-
-                    <div id="popup-wrapper" class="popup-container">
-                        <div class="popup-content">
-
-                            <div class="row align-items-center justify-content-center">
-                                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-                                </div>
-                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="btn-container">
-                                        <a href="#" id="close" class="btn-gotit">Got It</a>
-                                    </div>
-                                </div>
+                <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
+                    <div class="in-sec">
+                    <h3 class="text-center">Carbon Emission from Waste Water Sector</h3>
+                        <div class="row justify-content-center">
+                            <div id="chartName">
                             </div>
-
+                            <div id="wwChart"></div>
                         </div>
                     </div>
                 </div>
@@ -228,6 +205,20 @@ require "php/session.php";
 
         </div>
     </section><!-- End Hero -->
+
+    <div id="popup-wrapper" class="popup-container">
+        <div class="popup-content">
+            <div class="row align-items-center justify-content-center">
+                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                </div>
+                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="btn-container">
+                        <a href="#" id="close" class="btn-gotit">Got It</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <script>
@@ -266,13 +257,14 @@ require "php/session.php";
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="js/wasteWaterModel.js"></script>
-
+    
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap-show-modal.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="js/induGraph.js"></script>
+    <script src="js/wasteWaterModel.js"></script>
+
 </body>
 
 </html>
