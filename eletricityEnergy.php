@@ -41,7 +41,7 @@ require "php/session.php";
 
     <style>
         #eleChart {
-            width: 300px;
+            width: 400px;
             height: 300px;
         }
     </style>
@@ -62,28 +62,12 @@ require "php/session.php";
 
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
 
-            <div class="row">
-                <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
-                    <div class="in-sec infoFont">
-                        <h3>Electricity</h3>
+            <div class="row justify-content-center">
 
-                        <ul style="margin-left: 10px;">
-                            <li class="popupli"> 1 unit of electricity is equal to 1000 watts. which means 1 unit = 1 kwatt electricity.</li>
-                            <li class="popupli">Burning 1 kg of bituminous coal will produce 2.42 kg of carbon dioxide.</li>
-                            <li class="popupli">The emissions per unit of electricity are estimated to be in the range of 0.91 to 0.95 kg/kWh for CO2 </li>
-                        </ul>
-
-                        <div id="chartName">
-                            <h3> Electricity Graph</h3>
-                        </div>
-                        <div id="eleChart"></div>
-
-                    </div>
-                </div>
 
                 <div class="col-md-12 col-lg-4 mb-3" data-aos-delay="200">
                     <div class="in-sec">
-                        <h4 class="text-center mb-2">Electricity</h4>
+
                         <marquee width="100%" direction="left" height="30px">
                             ELEC - Electricity / MW - megawatt / m - month.
                         </marquee>
@@ -95,39 +79,74 @@ require "php/session.php";
                                 </div>
                             </div>
                         </form>
+
+
+
+
+
+                        <div class="row align-items-center justify-content-center" id="moreInfo">
+
+                            <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+
+                                <div class="fade-to-img" onclick="showEleInfo();">
+                                    <img class="reggot" id="popup-btn" src="img/idea.png">
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+
+
                     </div>
                 </div>
+
+                <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
+                    <div class="in-sec infoFont">
+                        <!-- <h3>Electricity</h3> -->
+                        <h3 class="text-center mb-2">Carbon emission of Electricity</h3>
+                        <ul style="margin-left: 10px;">
+                            <li class="popupli"> 1 unit of electricity is equal to 1000 watts. which means 1 unit = 1 kwatt electricity.</li>
+                            <li class="popupli">Burning 1 kg of bituminous coal will produce 2.42 kg of carbon dioxide.</li>
+                            <li class="popupli">The emissions per unit of electricity are estimated to be in the range of 0.91 to 0.95 kg/kWh for CO2 </li>
+                        </ul>
+                        <div class="row justify-content-center">
+                            <div id="chartName">
+                                <!-- <h3>Carbon emission of Electricity</h3> -->
+                            </div>
+                            <div id="eleChart"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
             </div>
 
-            <div class="row align-items-center justify-content-center" id="moreInfo">
+        </div>
+    </section><!-- End Hero -->
 
-                <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
 
-                    <div class="popup-flex fade-to-img" onclick="showEleInfo();">
-                        <img class="reggot" id="popup-btn" src="img/idea.png" width="80" height="80">
-                    </div>
+    <div id="popup-wrapper" class="popup-container">
+        <div class="popup-content">
 
-                    <div id="popup-wrapper" class="popup-container">
-                        <div class="popup-content">
+            <div class="row align-items-center justify-content-center">
+                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-                            <div class="row align-items-center justify-content-center">
-                                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-                                </div>
-                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="btn-container">
-                                        <a href="#" id="close" class="btn-gotit">Got It</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                </div>
+                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="btn-container">
+                        <a href="#" id="close" class="btn-gotit">Got It</a>
                     </div>
                 </div>
             </div>
 
         </div>
-    </section><!-- End Hero -->
+    </div>
+
 
 
     <script>

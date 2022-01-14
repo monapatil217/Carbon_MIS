@@ -42,7 +42,7 @@ function showEleInput() {
                 var check = element.check;
 
                 if (check == "true") {
-                    var eledata = element.eleData;
+                    var eledata = element.cData;
                     $.each(eledata, function (index, element1) {
 
                         html = '<div class="row justify-content-center">'
@@ -140,6 +140,9 @@ function showEleInput() {
 
 
 function saveEleData() {
+
+    window.location.replace("transport.php");
+
     var flag = 0;
     var userData = {};
 
@@ -159,8 +162,6 @@ function saveEleData() {
     userData["celec"] = celec;
     userData["selec"] = selec;
     userData["slelec"] = slelec;
-
-
 
     if (flag == 0) {
         $.ajax({
