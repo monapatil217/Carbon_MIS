@@ -30,7 +30,7 @@ while ($row = mysqli_fetch_array($result)) {
              $rowcount = mysqli_num_rows($emiresult);
              if ($rowcount != 0) {
                 $row = mysqli_fetch_array($emiresult);
-                $value = $row['ItemSum'];
+                $value = floatval($row['ItemSum']);
              }
              $mainData['country'] = $cityName;
              $mainData[$tableName] = $value;
