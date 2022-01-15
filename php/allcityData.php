@@ -32,29 +32,28 @@ while ($row = mysqli_fetch_array($result)) {
                     $value += 9.9;
                 }
             }
-        }else if($type == 'Emission'){
-            for($i=0;$i<sizeof($tableEmiarray);$i++){
+        } else if ($type == 'emission') {
+            for ($i = 0; $i < sizeof($tableEmiarray); $i++) {
                 $tableName = $tableEmiarray[$i];
-                echo "tablename";
-                 $dataQuery = "SELECT ifnull(ch4, 0) + ifnull(n2o, 0) + ifnull(co2, 0) as ItemSum FROM $tableName WHERE b_id='".$basicId."'";
-                 $emiresult = mysqli_query($conn, $dataQuery)  or die(mysqli_error($conn));
-                 $rowcount = mysqli_num_rows($emiresult);
-                 if ($rowcount != 0) {
+                $dataQuery = "SELECT ifnull(ch4, 0) + ifnull(n2o, 0) + ifnull(co2, 0) as ItemSum FROM $tableName WHERE b_id='" . $basicId . "'";
+                $emiresult = mysqli_query($conn, $dataQuery)  or die(mysqli_error($conn));
+                $rowcount = mysqli_num_rows($emiresult);
+                if ($rowcount != 0) {
                     $row = mysqli_fetch_array($emiresult);
                     $value += $row['ItemSum'];
-                 }
+                }
             }
-        }else if($type == 'Pollutant'){
-            $mtype = $data->typeofpoplu;
-            for($i=0;$i<sizeof($tableEmiarray);$i++){
+        } else if ($type == 'pollutant') {
+            $mtype = $data->polluType;
+            for ($i = 0; $i < sizeof($tableEmiarray); $i++) {
                 $tableName = $tableEmiarray[$i];
-                 $dataQuery = "SELECT ifnull($mtype, 0) as ItemSum FROM $tableName WHERE b_id='".$basicId."'";
-                 $emiresult = mysqli_query($conn, $dataQuery)  or die(mysqli_error($conn));
-                 $rowcount = mysqli_num_rows($emiresult);
-                 if ($rowcount != 0) {
+                $dataQuery = "SELECT ifnull($mtype, 0) as ItemSum FROM $tableName WHERE b_id='" . $basicId . "'";
+                $emiresult = mysqli_query($conn, $dataQuery)  or die(mysqli_error($conn));
+                $rowcount = mysqli_num_rows($emiresult);
+                if ($rowcount != 0) {
                     $row = mysqli_fetch_array($emiresult);
                     $value += $row['ItemSum'];
-                 }
+                }
             }
         }
     }
