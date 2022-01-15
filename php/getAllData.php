@@ -8,7 +8,6 @@ $mainArray = array();
 $finalArray = array();
 
 if ($type == "Electricity") {
-
     $query2 = "SELECT * FROM ele_data WHERE b_id='" . $basicId . "'";
 
     $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
