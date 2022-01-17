@@ -10,7 +10,7 @@ if ($type == 'Electricity') {
     $tableName  = 'ele_emi';
 } else if ($type == 'Transport') {
     $tableName = 'trans_emi';
-} else if ($type == 'LiveStok') {
+} else if ($type == 'LiveStock') {
     $tableName = 'live_emi';
 } else if ($type == 'CropLand') {
     $tableName = 'crop_emi';

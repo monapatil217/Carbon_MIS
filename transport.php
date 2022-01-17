@@ -40,10 +40,11 @@ require "php/session.php";
 
     <style>
         #transChart {
-            width: 300px;
+            width: 100%;
             height: 300px;
         }
     </style>
+
 </head>
 
 <body>
@@ -54,11 +55,10 @@ require "php/session.php";
     <!-- ======= Hero Section ======= -->
     <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-            
+
             <input type="text" class="form-control" id="sectionType" value="transChart" hidden>
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
-            <input type="text" id="cityName" class="form-control" value="<?php echo $_SESSION["cityName"]; ?>" hidden disabled>
-            
+
             <div class="row justify-content-center">
 
                 <div class="col-md-12 col-lg-4  mb-3" data-aos-delay="200">
@@ -73,7 +73,7 @@ require "php/session.php";
                                     <button class="btn btn-primary " type="button" onclick="saveTransData();">NEXT</button>
                                 </div>
                             </div>
-                            
+
                         </form>
 
                         <div class="row align-items-center justify-content-center" id="moreInfo">
@@ -90,15 +90,14 @@ require "php/session.php";
                 <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">
                         <h3 class="text-center">Carbon Emission from Transport Sector</h3>
-                            <ul style="margin-left: 10px;">
-                                <li class="popupli"> AIndia's transport sector is responsible for 13.5 per cent of the country’s energy-related CO2 emissions, with road transport accounting for 90 percent of the sector’s final energy consumption.</li>
-                                <!-- <li class="popupli">Whereas petrol has a lower carbon content and produces about 2.39 kgs of CO2 per liter.</li> -->
-                            </ul>
-                            <div class="row justify-content-center">
-                                <div id="chartName">
-                                </div>
-                                <div id="transChart"></div>
+                        <ul style="margin-left: 10px;">
+                            <li class="popupli"> India's transport sector is responsible for 13.5 per cent of the country’s energy-related CO2 emissions, with road transport accounting for 90 percent of the sector’s final energy consumption.</li>
+                        </ul>
+                        <div class="row justify-content-center">
+                            <div id="chartName">
                             </div>
+                            <div id="transChart"></div>
+                        </div>
                     </div>
                 </div>
 
@@ -164,7 +163,7 @@ require "php/session.php";
     <script src="assets/js/jquery.min.js"></script>
     <script src="js/energyTransportModel.js"></script>
 
-    <script src="js/induGraph.js"></script>
+    <script src="js/travelGraph.js"></script>
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>

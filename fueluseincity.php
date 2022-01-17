@@ -17,9 +17,7 @@
      <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
      <!-- Google Fonts -->
-     <link
-         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-         rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
      <!-- Vendor CSS Files -->
      <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -41,10 +39,10 @@
   ======================================================== -->
 
      <style>
-     #fuelChart {
-         width: 300px;
-         height: 300px;
-     }
+         #fuelChart {
+             width: 300px;
+             height: 300px;
+         }
      </style>
 
  </head>
@@ -56,17 +54,17 @@
         ?>
 
      <!-- ======= Hero Section ======= -->
-    <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
-        <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-            <input type="text" class="form-control" id="sectionType" value="fuelChart" hidden>
+     <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
+         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+             <input type="text" class="form-control" id="sectionType" value="fuelChart" hidden>
 
-            <div class="row justify-content-center">
+             <div class="row justify-content-center">
 
-                <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
-                    <div class="in-sec">
-                        <form class="needs-validation" novalidate>
-                        <h6 class="text-center">Select Cooking Fuel</h6>
-                            <div class="row">
+                 <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
+                     <div class="in-sec">
+                         <form class="needs-validation" novalidate>
+                             <h6 class="text-center"> Cooking Fuel</h6>
+                             <!-- <div class="row">
                                 <div class="col-md-3">
                                     <label for="popu">Fuel</label>
                                     <div class="invalid-feedback">
@@ -84,83 +82,162 @@
                                     </select>
                                 </div>
 
-                            </div>
-                            <div id="lpg"></div>
-                            <div id="mngl"></div>
-                            <div id="kerosene"></div>
-                            <div id="wood"></div>
+                            </div> -->
 
-                            <div class="row ">
-                                <div class="col-md-12 mb-3 text-center">
-                                    <button class="btn btn-primary " type="button" onclick="redirect();">Next</button>
-                                </div>
-                            </div>
-                        </form>
 
-                        <!-- Start PopUp div -->
-                        <div class="row align-items-center justify-content-center" id="moreInfo">
-                            <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                                <div class="fade-to-img" onclick="showCookingFuelInfo();">
-                                    <img class="reggot" id="popup-btn" src="img/cookingfuel.png" width="80" height="80">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End PopUp div -->
-                    </div>
-                </div>
+
+                             <div class="row">
+                                 <div class="form-floating col-6 mt-3 mb-3">
+                                     <input type="text" class="form-control" id="lpginr" placeholder="Residential LPG" required>
+                                     <div class="invalid-feedback">
+                                         Please provide a valid data.
+                                     </div>
+                                     <label for="lpginr">Residential LPG</label>
+                                 </div>
+
+                                 <div class="form-floating col-6 mt-3 mb-3">
+                                     <input type="text" class="form-control" id="lpginc" placeholder="Commercial LPG" required>
+                                     <div class="invalid-feedback">
+                                         Please provide a valid data.
+                                     </div>
+                                     <label for="lpginc">Commercial LPG</label>
+                                 </div>
+                             </div>
+
+
+                             <div class="row">
+                                 <div class="form-floating col-6 mt-3 mb-3">
+                                     <input type="text" class="form-control" id="mnglinr" placeholder="Residential MNGL" required>
+                                     <div class="invalid-feedback">
+                                         Please provide a valid data.
+                                     </div>
+                                     <label for="mnglinr">Residential MNGL</label>
+                                 </div>
+
+                                 <div class="form-floating col-6 mt-3 mb-3">
+                                     <input type="text" class="form-control" id="mnglinc" placeholder="Commercial MNGL" required>
+                                     <div class="invalid-feedback">
+                                         Please provide a valid data.
+                                     </div>
+                                     <label for="mnglinc">Commercial MNGL</label>
+                                 </div>
+                             </div>
+
+
+                             <div class="row">
+                                 <div class="form-floating col-6 mt-3 mb-3">
+                                     <input type="text" class="form-control" id="keroseneinr" placeholder="Residential Kerosene" required>
+                                     <div class="invalid-feedback">
+                                         Please provide a valid data.
+                                     </div>
+                                     <label for="keroseneinr">Residential Kerosene</label>
+                                 </div>
+
+                                 <div class="form-floating col-6 mt-3 mb-3">
+                                     <input type="text" class="form-control" id="keroseneinc" placeholder="Commercial Kerosene" required>
+                                     <div class="invalid-feedback">
+                                         Please provide a valid data.
+                                     </div>
+                                     <label for="keroseneinc">Commercial Kerosene</label>
+                                 </div>
+                             </div>
+
+                             <div class="row">
+                                 <div class="form-floating col-6 mt-3 mb-3">
+                                     <input type="text" class="form-control" id="woodinr" placeholder="Residential Wood" required>
+                                     '<div class="invalid-feedback">
+                                         Please provide a valid data.
+                                     </div>
+                                     <label for="woodinr">Residential Wood</label>
+                                 </div>
+
+                                 <div class="form-floating col-6 mt-3 mb-3">
+                                     <input type="text" class="form-control" id="woodinc" placeholder="Commercial Wood" required>
+                                     <div class="invalid-feedback">
+                                         Please provide a valid data.
+                                     </div>
+                                     <label for="woodinc">Commercial wood</label>
+                                 </div>
+                             </div>
+
+
+                             <!--             
+                             <div id="lpg"></div>
+                             <div id="mngl"></div>
+                             <div id="kerosene"></div>
+                             <div id="wood"></div> -->
+
+                             <div class="row ">
+                                 <div class="col-md-12 mb-3 text-center">
+                                     <button class="btn btn-primary " type="button" onclick="redirect();">Next</button>
+                                 </div>
+                             </div>
+                         </form>
+
+                         <!-- Start PopUp div -->
+                         <div class="row align-items-center justify-content-center" id="moreInfo">
+                             <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                 <div class="fade-to-img" onclick="showCookingFuelInfo();">
+                                     <img class="reggot" id="popup-btn" src="img/cookingfuel.png" width="80" height="80">
+                                 </div>
+                             </div>
+                         </div>
+                         <!-- End PopUp div -->
+                     </div>
+                 </div>
                  <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
-                    <div class="in-sec">
-                        <h3 class="text-center">Carbon Emission from Cooking Fuel</h3>
-                            <ul style="margin-left: 10px;">
-                                <li class="popupli"> 454 grammes of carbon per liter of LPG. In order to combust this carbon to CO2,
+                     <div class="in-sec">
+                         <h3 class="text-center">Carbon Emission from Cooking Fuel</h3>
+                         <ul style="margin-left: 10px;">
+                             <li class="popupli"> 454 grammes of carbon per liter of LPG. In order to combust this carbon to CO2,
                                  1211 grammes of oxygen is needed .</li>
-                                <li class="popupli">The sum is then 454 + 1211 = 1665 grammes of CO2/liter of LPG.</li>
-                            </ul>
-                            <div class="row justify-content-center">
-                                <div id="chartName">
-                                </div>
-                                <div id="fuelChart"></div>
-                            </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- End Hero -->
+                             <li class="popupli">The sum is then 454 + 1211 = 1665 grammes of CO2/liter of LPG.</li>
+                         </ul>
+                         <div class="row justify-content-center">
+                             <div id="chartName">
+                             </div>
+                             <div id="fuelChart"></div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section><!-- End Hero -->
 
-    <div id="popup-wrapper" class="popup-container">
-        <div class="popup-content">
-            <div class="row align-items-center justify-content-center">
-                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                </div>
-                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="btn-container">
-                        <a href="#" id="close" class="btn-gotit">Got It</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+     <div id="popup-wrapper" class="popup-container">
+         <div class="popup-content">
+             <div class="row align-items-center justify-content-center">
+                 <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                 </div>
+                 <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                     <div class="btn-container">
+                         <a href="#" id="close" class="btn-gotit">Got It</a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
 
 
      <script>
-     // Example starter JavaScript for disabling form submissions if there are invalid fields
-     (function() {
-         'use strict';
-         window.addEventListener('load', function() {
-             // Fetch all the forms we want to apply custom Bootstrap validation styles to
-             var forms = document.getElementsByClassName('needs-validation');
-             // Loop over them and prevent submission
-             var validation = Array.prototype.filter.call(forms, function(form) {
-                 form.addEventListener('submit', function(event) {
-                     if (form.checkValidity() === false) {
-                         event.preventDefault();
-                         event.stopPropagation();
-                     }
-                     form.classList.add('was-validated');
-                 }, false);
-             });
-         }, false);
-     })();
+         // Example starter JavaScript for disabling form submissions if there are invalid fields
+         (function() {
+             'use strict';
+             window.addEventListener('load', function() {
+                 // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                 var forms = document.getElementsByClassName('needs-validation');
+                 // Loop over them and prevent submission
+                 var validation = Array.prototype.filter.call(forms, function(form) {
+                     form.addEventListener('submit', function(event) {
+                         if (form.checkValidity() === false) {
+                             event.preventDefault();
+                             event.stopPropagation();
+                         }
+                         form.classList.add('was-validated');
+                     }, false);
+                 });
+             }, false);
+         })();
      </script>
 
      <!-- Resources -->

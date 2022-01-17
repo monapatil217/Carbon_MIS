@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Graph</title>
+    <title> Data Analytics Graph</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -54,25 +54,21 @@
     ?>
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
+    <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
-            <input type="text" class="form-control" id="sectionType" value="commChart" hidden>
+            <!-- <input type="text" class="form-control" id="sectionType" value="commChart" hidden> -->
 
             <div class="row">
-
                 <div class="col-md-12 col-lg-12  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
                         <div id="chartName">
-                            <h3> Amrut City Total Graph</h3>
+                            <h3>City-wise Data Analytics </h3>
                         </div>
                         <div id="commChart"></div>
 
                     </div>
                 </div>
-
-
-
             </div>
 
         </div>
@@ -116,7 +112,6 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
 
-    <script src="js/cropLandModel.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap-show-modal.js"></script>
 
