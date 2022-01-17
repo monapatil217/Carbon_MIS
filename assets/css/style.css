@@ -1493,8 +1493,12 @@ section {
 /*--------------------------------------------------------------
 # Frequently Asked Questions
 --------------------------------------------------------------*/
-.faq .faq-list {
+/* .faq .faq-list {
   padding: 0 100px;
+} */
+
+.faq .extraC{
+   padding: 0 100px;
 }
 .faq .faq-list ul {
   padding: 0;
@@ -1509,6 +1513,9 @@ section {
   border-radius: 4px;
   position: relative;
 }
+
+
+
 .faq .faq-list a {
   display: block;
   position: relative;
@@ -1557,6 +1564,75 @@ section {
     padding: 0;
   }
 }
+
+
+
+
+
+/* Monika  */
+
+.faq .faq_list_e li {
+  padding: 5px;
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+}
+/* .faq_pp .faq-list_pp ul {
+  padding: 0;
+  list-style: none;
+}
+.faq_pp .faq-list li + li {
+  margin-top: 15px;
+}
+.faq_pp .faq-list_pp li {
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+}
+.faq_pp .faq-list_pp a {
+  display: block;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 0 30px;
+  outline: none;
+  cursor: pointer;
+} */
+/* .faq_pp .faq-list .icon-help {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  left: 20px;
+  color: #87c1ea;
+}
+.faq_pp .faq-list .icon-show, .faq .faq-list .icon-close {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.faq_pp .faq-list p {
+  margin-bottom: 0;
+  padding: 10px 0 0 0;
+}
+.faq .faq-list .icon-show {
+  display: none;
+}
+.faq_pp .faq-list a.collapsed {
+  color: #343a40;
+}
+.faq_pp .faq-list a.collapsed:hover {
+  color: #2487ce;
+}
+.faq_pp .faq-list a.collapsed .icon-show {
+  display: inline-block;
+}
+.faq_pp .faq-list a.collapsed .icon-close {
+  display: none;
+} */
 
 /*--------------------------------------------------------------
 # Contact
@@ -1870,10 +1946,39 @@ section {
 
 
 /* Footer Size by Monika */
-.sizeFooter{
-  height: 75px;
+
+#sub_footer {
+  color: #444444;
+  font-size: 14px;
+  background: #f8fbfe;
+  box-shadow: 0px 2px 15px rgba(18, 66, 101, 0.08);
+  height: 50px;
+}
+#sub_footer .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #2487ce;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 5px;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+#sub_footer .social-links a:hover {
+  background: #3194db;
+  color: #fff;
+  text-decoration: none;
 }
 
+
+
+.section_bg_pp {
+  background-color: #f8fbfe;
+}
 
 
 /********************************* Changes done by Monika ****************************************/
@@ -1906,13 +2011,15 @@ section {
   font-size: calc(80% + .01vw + .01vh);
 }
 
-.infoFont u li{
-  font-size: calc(100% + .2vw + .2vh);
-}
+
 
 .labelFont label{
   font-size: calc(70% + .1vw + .1vh);
 } */
+
+.infoFont ul li{
+  font-size: calc(80% + .1vw + .1vh);
+}
 
 .fade-to-img img {
     position: fixed;

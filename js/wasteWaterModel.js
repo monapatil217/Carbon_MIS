@@ -46,9 +46,9 @@ function showWaterInput() {
 
                         html = '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                            + '<label for="waterConsumption" class="form-label">Water Consumption</label>'
+                            + '<label for="waterCon" class="form-label">Water Consumption</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="waterConsumption" class="form-control" value="' + element1.w_cons + '" placeholder="Consumption" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="waterCon" name="waterCon"  class="form-control" value="' + element1.w_cons + '" placeholder="Consumption" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">CMD</span>'
                             + '</div>'
                             + '</div>'
@@ -56,9 +56,9 @@ function showWaterInput() {
 
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                            + '<label for="waterGenration" class="form-label">Waste water Generated</label>'
+                            + '<label for="waterGen" class="form-label">Waste water Generated</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="waterGenration" class="form-control" value="' + element1.w_gen + '" placeholder="Generated" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="waterGen" name="waterGen" class="form-control" value="' + element1.w_gen + '" placeholder="Generated" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">CMD</span>'
                             + '</div>'
                             + '</div>'
@@ -66,9 +66,9 @@ function showWaterInput() {
 
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                            + '<label for="waterCollection" class="form-label">Waste water Collection</label>'
+                            + '<label for="waterColl" class="form-label">Waste water Collection</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="waterCollection" class="form-control" value="' + element1.w_coll + '" placeholder="Collection" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="waterColl" name="waterColl" class="form-control" value="' + element1.w_coll + '" placeholder="Collection" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">CMD</span>'
                             + '</div>'
                             + '</div>'
@@ -78,7 +78,7 @@ function showWaterInput() {
                             + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                             + '<label for="waterTreat" class="form-label">Qty of treat waste water</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="waterTreat" class="form-control" value="' + element1.q_treat + '" placeholder="Water Treat" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="waterTreat" name="waterTreat" class="form-control" value="' + element1.q_treat + '" placeholder="Water Treat" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">CMD</span>'
                             + '</div>'
                             + '</div>'
@@ -88,7 +88,7 @@ function showWaterInput() {
                             + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                             + '<label for="noSTP" class="form-label">No of STP</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="noSTP" class="form-control" value="' + element1.n_stp + '" placeholder="STP" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="noSTP" name="noSTP" class="form-control" value="' + element1.n_stp + '" placeholder="STP" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">CMD</span>'
                             + '</div>'
                             + '</div>'
@@ -99,9 +99,9 @@ function showWaterInput() {
 
                     html = '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                        + '<label for="waterConsumption" class="form-label">Water Consumption</label>'
+                        + '<label for="waterCon" class="form-label">Water Consumption</label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="waterConsumption" class="form-control" placeholder="Consumption" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="waterCon" name="waterCon" class="form-control" placeholder="Consumption" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">CMD</span>'
                         + '</div>'
                         + '</div>'
@@ -109,9 +109,9 @@ function showWaterInput() {
 
                         + '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                        + '<label for="waterGenration" class="form-label">Waste water Generated</label>'
+                        + '<label for="waterGen" class="form-label">Waste water Generated</label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="waterGenration" class="form-control" placeholder="Generated" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="waterGen" name="waterGen" class="form-control" placeholder="Generated" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">CMD</span>'
                         + '</div>'
                         + '</div>'
@@ -119,9 +119,9 @@ function showWaterInput() {
 
                         + '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                        + '<label for="waterCollection" class="form-label">Waste water Collection</label>'
+                        + '<label for="waterColl" class="form-label">Waste water Collection</label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="waterCollection" class="form-control" placeholder="Collection" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="waterColl" name="waterColl" class="form-control" placeholder="Collection" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">CMD</span>'
                         + '</div>'
                         + '</div>'
@@ -131,7 +131,7 @@ function showWaterInput() {
                         + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                         + '<label for="waterTreat" class="form-label">Qty of treat waste water</label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="waterTreat" class="form-control" placeholder="Water Treat" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="waterTreat" name="waterTreat" class="form-control" placeholder="Water Treat" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">CMD</span>'
                         + '</div>'
                         + '</div>'
@@ -141,7 +141,7 @@ function showWaterInput() {
                         + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                         + '<label for="noSTP" class="form-label">No of STP</label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="noSTP" class="form-control" placeholder="STP" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="noSTP" name="noSTP" class="form-control" placeholder="STP" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">CMD</span>'
                         + '</div>'
                         + '</div>'
@@ -158,28 +158,24 @@ function showWaterInput() {
 
 function saveWaterData() {
 
-    window.location.replace("industryEnergy.php");
-    // var flag = 0;
-    // var userData = {};
+    var flag = 0;
+    var waterData = {};
 
-    // var relec = document.getElementById("relec").value;
-    // flag += customInputValidator(relec, "relec");
+    var waterCon = document.getElementById("waterCon").value;
 
-    // var celec = document.getElementById("celec").value;
-    // flag += customInputValidator(celec, "celec");
+    var waterGen = document.getElementById("waterGen").value;
 
-    // var selec = document.getElementById("selec").value;
-    // flag += customInputValidator(selec, "selec");
+    var waterColl = document.getElementById("waterColl").value;
 
-    // var slelec = document.getElementById("slelec").value;
-    // flag += customInputValidator(slelec, "slelec");
+    var waterTreat = document.getElementById("waterTreat").value;
 
-    // userData["relec"] = relec;
-    // userData["celec"] = celec;
-    // userData["selec"] = selec;
-    // userData["slelec"] = slelec;
+    var noSTP = document.getElementById("noSTP").value;
 
-
+    waterData["waterCon"] = waterCon;
+    waterData["waterGen"] = waterGen;
+    waterData["waterColl"] = waterColl;
+    waterData["waterTreat"] = waterTreat;
+    waterData["noSTP"] = noSTP;
 
     // if (flag == 0) {
     //     $.ajax({
@@ -200,6 +196,7 @@ function saveWaterData() {
     //         }
     //     });
     // }
+    window.location.replace("industryEnergy.php");
 
 }
 

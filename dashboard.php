@@ -52,7 +52,7 @@ require "php/session.php";
                 <div class="row justify-content-center ">
                     <div class="col-xl-7 col-lg-9 text-center carbonDash">
                         <h1>MIS system </h1>
-                        <h2>for Municipal Corporation</h2>
+                        <h2>for Municipal Corporations</h2>
                     </div>
 
                     <div class="text-center">
@@ -798,10 +798,10 @@ require "php/session.php";
                     </div>
                     <div class="right-text col-lg-5 col-md-12 col-sm-12 mobile-top-fix">
                         <div class="left-heading">
-                            <h5>Start measuring your Carbon Emissions</h5>
+                            <h5>Start Measuring your Carbon Emissions!</h5>
                         </div>
                         <div class="left-text">
-                            <p> Today <b>Carbon</b> dioxide levels are the highest they’ve ever been in human history, and
+                            <p> Today carbon dioxide levels are the highest they’ve ever been in human history, and
                                 probably
                                 the highest in 3 million years.
                                 The concentration of carbon dioxide in Earth’s atmosphere is currently at 412 parts
@@ -931,7 +931,7 @@ require "php/session.php";
             in iste officiis commodi quidem hic quas.</p> -->
                 </div>
 
-                <div class="faq-list">
+                <div class="faq-list extraC">
                     <ul>
 
                         <li data-aos="fade-up">
@@ -962,7 +962,7 @@ require "php/session.php";
                         </li>
 
                         <li data-aos="fade-up" data-aos-delay="200">
-                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">I am only one person, can I really make that much of a difference <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">I am only one person, can I really make that much of a difference <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
                                 <p>
                                     Yes you can! You are a part of a greater movement.
@@ -975,7 +975,7 @@ require "php/session.php";
                         </li>
 
                         <li data-aos="fade-up" data-aos-delay="300">
-                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">How does calculate my carbon footprint <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">How does calculate my carbon footprint <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
                                 <p>
                                     Your carbon footprint is the carbon emissions that are created by your consumption and lifestyle choices.
@@ -986,7 +986,7 @@ require "php/session.php";
                         </li>
 
                         <li data-aos="fade-up" data-aos-delay="400">
-                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">What is the solution for the greenhouse problem?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">What is the solution for the greenhouse problem?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
                                 <p>
                                     The solution is a significant reduction of the greenhouse gases produced by mankind.
@@ -1011,9 +1011,9 @@ require "php/session.php";
 
                 <div class="section-title">
                     <h2>Contact</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                    <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
                         consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-                        in iste officiis commodi quidem hic quas.</p>
+                        in iste officiis commodi quidem hic quas.</p> -->
                 </div>
 
                 <div>

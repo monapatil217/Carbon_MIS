@@ -67,7 +67,7 @@ require "php/session.php";
                     <div class="in-sec">
                         <h4 class="text-center mb-2">Forest Land</h4>
                         <marquee width="100%" direction="left" height="30px">
-                            sq.km - Square Kilometre.
+                            sq.km - square kilometre.
                         </marquee>
                         <form class="needs-validation" novalidate>
                         <div id="forestLand"></div>
@@ -96,9 +96,9 @@ require "php/session.php";
 
                 <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
                     <div class="in-sec infoFont">
-                        <h3 class="text-center">Carbon Stock in Forest Land Sector</h3>
+                        <h3 class="text-center">Carbon Stock in Forest Land</h3>
                         <ul style="margin-left: 10px;">
-                            <li class="popupli"> Forests provide a “carbon sink” that absorbs a net 7.6 billion metric tonnes of CO2 per year</li>
+                            <li class="popupli"> Forest carbon stock is the amount of carbon that has been sequestered from the atmosphere and is now stored within the forest ecosystem, mainly within living biomass and soil, and to a lesser extent also in dead wood and litter. </li>
                         </ul>
                         <div class="row justify-content-center">
                             <div id="chartName">
@@ -164,17 +164,16 @@ require "php/session.php";
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
-
     
     <script src="assets/js/jquery.min.js"></script>
 
     <script src="assets/js/bootstrap-show-modal.js"></script>
 
     <script src="js/induGraph.js"></script>
-<script src="js/forestLandModel.js"></script>
+
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-
+<script src="js/forestLandModel.js"></script>
 </body>
 
 </html>

@@ -32,7 +32,7 @@ if ($type == "Electricity") {
     }
 }else if ($type == "Forest") {
 
-    $query2 = "SELECT * FROM fc_land_data WHERE b_id='" . $basicId . "' AND  type='Forest'";
+    $query2 = "SELECT * FROM forest_data WHERE b_id='" . $basicId . "'";
 
     $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
     $rowcount = mysqli_num_rows($result);
@@ -53,7 +53,7 @@ if ($type == "Electricity") {
     }
 }else if ($type == "CropLand") {
 
-    $query2 = "SELECT * FROM fc_land_data WHERE b_id='" . $basicId . "' AND  type='CropLand'";
+    $query2 = "SELECT * FROM crop_data WHERE b_id='" . $basicId . "'";
 
     $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
     $rowcount = mysqli_num_rows($result);

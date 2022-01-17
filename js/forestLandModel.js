@@ -139,7 +139,7 @@ function showforestLInfo() {
         + '<div class="row mt-2 mb-3">'
         + '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'
         + '<ul style="margin-left: 10px;">'
-        + '<li class="popupli">Forests provide a “carbon sink” that absorbs a net 7.6 billion metric tonnes of CO2 per year.</li>'
+        + '<li class="popupli">An assessment by the Forest Survey of India (FSI) last year had projected that, by 2030, the carbon stock in forests as well as tree cover was likely to reach 31.87 billion tonnes of CO2 equivalent.</li>'
         // + '<li class="popupli">Globally cotton cultivation accounts for 220 million metric tons of CO2 per year.</li>'
         // + '<li class="popupli">Cropland-based agricultural activities account for 24.17 percent of India’s total methane and 95.84 percent of the total nitrous oxide emission from the agricultural sector.</li>'
         + '</ul>'

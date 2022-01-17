@@ -22,11 +22,13 @@ function showTransInput() {
     var html = '';
 
     var basicId = document.getElementById("basicId").value;
+    // var cityName = document.getElementById("cityName").value;
     $("#transportInput").empty();
 
     var myobj = {};
     myobj["type"] = "Transport";
     myobj["basicId"] = basicId;
+    // myobj["cityName"] = cityName;
 
     $.ajax({
         type: "POST",
@@ -43,51 +45,51 @@ function showTransInput() {
                     var eledata = element.cData;
                     $.each(eledata, function (index, element1) {
 
-                        html = '<h6 class="text-center"> Enter Total No of Vehicles in your Region</h6>'
+                        html = '<h6 class="text-center"> Enter Total No. of Register Vehicles</h6>'
 
                             + ' <div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + '<label for="2Wheeler" class="form-label"> Two wheeler</label>'
-                            + '<div class="input-group mb-3">'
-                            + '<input type="text" id="2Wheeler" class="form-control" value="' + element1.w2 + '" placeholder="Two wheeler" aria-label="Residential" aria-describedby="basic-addon2">'
+                            + '<label for="w2" class="form-label"> Two wheeler</label>'
+                            + '<div class="input-group mb-2">'
+                            + '<input type="text" id="w2" name="w2" class="form-control" value="' + element1.w2 + '" placeholder="Two wheeler" aria-label="Residential" aria-describedby="basic-addon2">'
                             + '</div>'
                             + '</div>'
 
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + '<label for="3Wheeler" class="form-label"> Three wheeler</label>'
-                            + '<div class="input-group mb-3">'
-                            + '<input type="text" id="3Wheeler" class="form-control" value="' + element1.w3 + '" placeholder="Three wheeler" aria-label="Residential" aria-describedby="basic-addon2">'
+                            + '<label for="w3" class="form-label"> Three wheeler</label>'
+                            + '<div class="input-group mb-2">'
+                            + '<input type="text" id="w3" name="w3" class="form-control" value="' + element1.w3 + '" placeholder="Three wheeler" aria-label="Residential" aria-describedby="basic-addon2">'
                             + '</div>'
                             + '</div>'
                             + '</div >'
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + '<label for="4Wheeler" class="form-label"> Four wheeler</label>'
-                            + '<div class="input-group mb-3">'
-                            + '<input type="text" id="4Wheeler" class="form-control" value="' + element1.w4 + '" placeholder="Four wheeler" aria-label="Residential" aria-describedby="basic-addon2">'
+                            + '<label for="w4" class="form-label"> Four wheeler</label>'
+                            + '<div class="input-group mb-2">'
+                            + '<input type="text" id="w4" name="w4" class="form-control" value="' + element1.w4 + '" placeholder="Four wheeler" aria-label="Residential" aria-describedby="basic-addon2">'
                             + '</div>'
                             + '</div>'
 
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '<label for="bus" class="form-label"> Bus</label>'
-                            + '<div class="input-group mb-3">'
-                            + '<input type="text" id="bus" class="form-control" value="' + element1.bus + '" placeholder="Bus" aria-label="Residential" aria-describedby="basic-addon2">'
+                            + '<div class="input-group mb-2">'
+                            + '<input type="text" id="bus" name="bus" class="form-control" value="' + element1.bus + '" placeholder="Bus" aria-label="Residential" aria-describedby="basic-addon2">'
                             + '</div>'
                             + '</div>'
                             + '</div>'
 
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + '<label for="bus" class="form-label"> Tempo</label>'
-                            + '<div class="input-group mb-3">'
-                            + '<input type="text" id="bus" class="form-control" value="' + element1.tempo + '" placeholder="Tempo" aria-label="Tempo" aria-describedby="basic-addon2">'
+                            + '<label for="temp" class="form-label"> LCV </label>'
+                            + '<div class="input-group mb-2">'
+                            + '<input type="text" id="temp" name="temp" class="form-control" value="' + element1.tempo + '" placeholder="Tempo" aria-label="Tempo" aria-describedby="basic-addon2">'
                             + '</div>'
                             + '</div>'
 
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + '<label for="tempo" class="form-label"> Truck</label>'
-                            + '<div class="input-group mb-3">'
-                            + '<input type="text" id="tempo" class="form-control" value="' + element1.truck + '" placeholder="Truck" aria-label="Truck" aria-describedby="basic-addon2">'
+                            + '<label for="truck" class="form-label"> HCV </label>'
+                            + '<div class="input-group mb-2">'
+                            + '<input type="text" id="truck" name="truck" class="form-control" value="' + element1.truck + '" placeholder="Truck" aria-label="Truck" aria-describedby="basic-addon2">'
                             + '</div>'
                             + '</div>'
                             + ' </div>'
@@ -95,14 +97,14 @@ function showTransInput() {
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + ' <label for="train" class="form-label"> Train</label>'
-                            + '<div class="input-group mb-3">'
+                            + '<div class="input-group mb-2">'
                             + ' <input type="text" id="train" class="form-control" value="' + element1.train + '" placeholder="Train" aria-label="Train" aria-describedby="basic-addon2">'
                             + '</div>'
                             + '</div>'
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '<label for="flight" class="form-label"> Flight</label>'
-                            + ' <div class="input-group mb-3">'
-                            + '<input type="text" id="flight" class="form-control" value="' + element1.flight + '" placeholder="Flight" aria-label="Flight" aria-describedby="basic-addon2">'
+                            + ' <div class="input-group mb-2">'
+                            + '<input type="text" id="flight" name="flight" class="form-control" value="' + element1.flight + '" placeholder="Flight" aria-label="Flight" aria-describedby="basic-addon2">'
                             + '</div>'
                             + '</div>'
                             + '</div>';
@@ -111,51 +113,51 @@ function showTransInput() {
                 }
                 else {
 
-                    html = '<h6 class="text-center"> Enter Total No of Vehicles in your Region</h6>'
+                    html = '<h6 class="text-center mb-3"> Enter Total No. of Register Vehicles </h6>'
 
                         + ' <div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + '<label for="2Wheeler" class="form-label"> Two wheeler</label>'
-                        + '<div class="input-group mb-3">'
-                        + '<input type="text" id="2Wheeler" class="form-control" placeholder="Two wheeler" aria-label="Residential" aria-describedby="basic-addon2">'
+                        + '<label for="w2" class="form-label"> Two wheeler</label>'
+                        + '<div class="input-group mb-2">'
+                        + '<input type="text" id="w2" name="w2" class="form-control" placeholder="Two wheeler" aria-label="Residential" aria-describedby="basic-addon2">'
                         + '</div>'
                         + '</div>'
 
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + '<label for="3Wheeler" class="form-label"> Three wheeler</label>'
-                        + '<div class="input-group mb-3">'
-                        + '<input type="text" id="3Wheeler" class="form-control" placeholder="Three wheeler" aria-label="Residential" aria-describedby="basic-addon2">'
+                        + '<label for="w3" class="form-label"> Three wheeler</label>'
+                        + '<div class="input-group mb-2">'
+                        + '<input type="text" id="w3" name="w3" class="form-control" placeholder="Three wheeler" aria-label="Residential" aria-describedby="basic-addon2">'
                         + '</div>'
                         + '</div>'
                         + '</div >'
                         + '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + '<label for="4Wheeler" class="form-label"> Four wheeler</label>'
-                        + '<div class="input-group mb-3">'
-                        + '<input type="text" id="4Wheeler" class="form-control" placeholder="Four wheeler" aria-label="Residential" aria-describedby="basic-addon2">'
+                        + '<label for="w4" class="form-label"> Four wheeler</label>'
+                        + '<div class="input-group mb-2">'
+                        + '<input type="text" id="w4" name="w4" class="form-control" placeholder="Four wheeler" aria-label="Residential" aria-describedby="basic-addon2">'
                         + '</div>'
                         + '</div>'
 
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '<label for="bus" class="form-label"> Bus</label>'
-                        + '<div class="input-group mb-3">'
-                        + '<input type="text" id="bus" class="form-control" placeholder="Bus" aria-label="Residential" aria-describedby="basic-addon2">'
+                        + '<div class="input-group mb-2">'
+                        + '<input type="text" id="bus" name="bus" class="form-control" placeholder="Bus" aria-label="Residential" aria-describedby="basic-addon2">'
                         + '</div>'
                         + '</div>'
                         + '</div>'
 
                         + '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + '<label for="bus" class="form-label"> Tempo</label>'
-                        + '<div class="input-group mb-3">'
-                        + '<input type="text" id="bus" class="form-control" placeholder="Tempo" aria-label="Tempo" aria-describedby="basic-addon2">'
+                        + '<label for="tempo" class="form-label">LCV </label>'
+                        + '<div class="input-group mb-2">'
+                        + '<input type="text" id="tempo" name="tempo" class="form-control" placeholder="Tempo" aria-label="Tempo" aria-describedby="basic-addon2">'
                         + '</div>'
                         + '</div>'
 
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + '<label for="tempo" class="form-label"> Truck</label>'
-                        + '<div class="input-group mb-3">'
-                        + '<input type="text" id="tempo" class="form-control" placeholder="Truck" aria-label="Truck" aria-describedby="basic-addon2">'
+                        + '<label for="truck" class="form-label"> HCV </label>'
+                        + '<div class="input-group mb-2">'
+                        + '<input type="truck" id="truck" name="truck" class="form-control" placeholder="Truck" aria-label="Truck" aria-describedby="basic-addon2">'
                         + '</div>'
                         + '</div>'
                         + ' </div>'
@@ -163,14 +165,14 @@ function showTransInput() {
                         + '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + ' <label for="train" class="form-label"> Train</label>'
-                        + '<div class="input-group mb-3">'
-                        + ' <input type="text" id="train" class="form-control" placeholder="Train" aria-label="Train" aria-describedby="basic-addon2">'
+                        + '<div class="input-group mb-2">'
+                        + ' <input type="text" id="train" name="train" class="form-control" placeholder="Train" aria-label="Train" aria-describedby="basic-addon2">'
                         + '</div>'
                         + '</div>'
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '<label for="flight" class="form-label"> Flight</label>'
-                        + ' <div class="input-group mb-3">'
-                        + '<input type="text" id="flight" class="form-control" placeholder="Flight" aria-label="Flight" aria-describedby="basic-addon2">'
+                        + ' <div class="input-group mb-2">'
+                        + '<input type="text" id="flight" name="flight" class="form-control" placeholder="Flight" aria-label="Flight" aria-describedby="basic-addon2">'
                         + '</div>'
                         + '</div>'
                         + '</div>';
@@ -185,48 +187,56 @@ function showTransInput() {
 
 function saveTransData() {
 
-    window.location.replace("cropLand.php");
-    // var flag = 0;
-    // var userData = {};
+    // window.location.replace("cropLand.php");
+    var flag = 0;
+    var transData = {};
 
-    // var relec = document.getElementById("relec").value;
-    // flag += customInputValidator(relec, "relec");
+    var w2 = document.getElementById("w2").value;
 
-    // var celec = document.getElementById("celec").value;
-    // flag += customInputValidator(celec, "celec");
+    var w3 = document.getElementById("w3").value;
 
-    // var selec = document.getElementById("selec").value;
-    // flag += customInputValidator(selec, "selec");
+    var w4 = document.getElementById("w4").value;
 
-    // var slelec = document.getElementById("slelec").value;
-    // flag += customInputValidator(slelec, "slelec");
+    var bus = document.getElementById("bus").value;
 
-    // userData["relec"] = relec;
-    // userData["celec"] = celec;
-    // userData["selec"] = selec;
-    // userData["slelec"] = slelec;
+    var tempo = document.getElementById("tempo").value;
+
+    var truck = document.getElementById("truck").value;
+
+    var train = document.getElementById("train").value;
+
+    var flight = document.getElementById("flight").value;
+
+    transData["w2"] = w2;
+    transData["w3"] = w3;
+    transData["w4"] = w4;
+    transData["bus"] = bus;
+    transData["tempo"] = tempo;
+    transData["truck"] = truck;
+    transData["train"] = train;
+    transData["flight"] = flight;
 
 
 
-    // if (flag == 0) {
-    //     $.ajax({
-    //         type: "POST",
-    //         async: false,
-    //         url: "php/.php",
-    //         contentType: "application/json",
-    //         data: JSON.stringify(userData),
-    //         success: function (data) {
-    //             // var data1 = JSON.parse(data);
-    //             // if (data1 == "success") {
-    //             //     alert("Data Save Succesfuly");
-    //             //     window.location.replace("menuPage.php");
-    //             // } else {
-    //             //     alert("Data not Save Succesfuly")
-    //             // }
+    if (flag == 0) {
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: "php/.php",
+            contentType: "application/json",
+            data: JSON.stringify(transData),
+            success: function (data) {
+                // var data1 = JSON.parse(data);
+                // if (data1 == "success") {
+                //     alert("Data Save Succesfuly");
+                //     window.location.replace("menuPage.php");
+                // } else {
+                //     alert("Data not Save Succesfuly")
+                // }
 
-    //         }
-    //     });
-    // }
+            }
+        });
+    }
 
 }
 
@@ -244,10 +254,10 @@ function showVehiInfo() {
         + '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto "><center><h5 class="mt-4">Transport </h5></center>'
 
         + '<div class="row mt-2 mb-3">'
-        + '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'
+        + '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 infoFont">'
         + '<ul style="margin-left: 10px;">'
-        + '<li class="popupli"> After burning 1 liter of diesel 2.62 kg of co2 is release in enviroment .</li>'
-        + '<li class="popupli">Whereas petrol has a lower carbon content and produces about 2.39 kgs of co2 per liter.</li>'
+        + '<li class="popupli"> Between 2019-20 and 2020-21, the share of diesel cars in the market fell from 29.5 per cent to 17 per cent while the share of petrol cars rose from 66 per cent to 76 per cent. CNG cars, running mainly in big metros, jumped from 4 to 6 per cent. The share of electric and hybrid vehicles also rose marginally.</li>'
+        + '<li class="popupli">The greenhouse gas (GHG) emissions in India consisted of 70 % CO2 and 30 % non - CO2 (methane, nitrous oxide, F - gas) emissions(Olivier and Peters 2020).</li > '
         // + '<li class="popupli">Around 60.9% installed generation capacity is due to fossil fuel. </li>'
         // + '<li class="popupli">Around 37.9% installed generation capacity is due to renewable energy sources.</li>'
         // + '<li class="popupli">Around 1.7% installed generation capacity is due to Nuclear Fuel.</li>'

@@ -63,12 +63,12 @@ require "php/session.php";
             <div class="row justify-content-center">
                 
 
-                <div class="col-md-12 col-lg-5  mb-3  s" data-aos-delay="200">
+                <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
                     <div class="in-sec">
 
                         <form class="needs-validation" novalidate>
                             <marquee width="100%" direction="left" height="30px">
-                                t - tonne / d - day / FO - Fuel Oil / LDO - Light Diesel Oil / HSD - High Speed
+                                t - tons / d - day / FO - Fuel Oil / LDO - Light Diesel Oil / HSD - High Speed
                                 Diesel / PNG - Piped Natural gas / NG - Natural Gas
                             </marquee>
 
@@ -91,7 +91,7 @@ require "php/session.php";
                         <!-- End PopUp div -->
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-7 mb-3" data-aos-delay="200">
+                <div class="col-md-12 col-lg-8 mb-3" data-aos-delay="200">
                     <div class="in-sec">
                         <h3 class="text-center">Carbon Emission from Energy</h3>
                         <div class="row justify-content-center">

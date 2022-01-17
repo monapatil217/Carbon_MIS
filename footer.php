@@ -1,5 +1,5 @@
-<footer id="footer" class="sizeFooter">
-    <div class="container d-md-flex py-4">
+<footer id="sub_footer" class="sizeFooter">
+    <div class="container d-md-flex">
 
             <div class="me-md-auto text-center text-md-start">
                 <div class="copyright">

@@ -27,6 +27,8 @@ require "php/session.php";
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/jbox/jBox.all.min.css" rel="stylesheet">
+
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -67,9 +69,9 @@ require "php/session.php";
 
                 <div class="col-md-12 col-lg-4 mb-3" data-aos-delay="200">
                     <div class="in-sec">
-
-                        <marquee width="100%" direction="left" height="30px">
-                            ELEC - Electricity / MW - megawatt / m - month.
+                        <h6 class="text-center mb-1">Amount of Electricity Used by Different Sectors</h6>
+                        <marquee width="100%" direction="left" height="30px" scrollamount="2">
+                             MW - megawatt / m - month
                         </marquee>
                         <form class="needs-validation" novalidate>
                             <div id="eleInput"></div>
@@ -97,8 +99,8 @@ require "php/session.php";
                         <!-- <h3>Electricity</h3> -->
                         <h3 class="text-center mb-2">Carbon Emission from Electricity Sector</h3>
                         <ul style="margin-left: 10px;">
-                            <li class="popupli"> 1 unit of electricity is equal to 1000 watts. which means 1 unit = 1 kwatt electricity.</li>
-                            <li class="popupli">Burning 1 kg of bituminous coal will produce 2.42 kg of carbon dioxide.</li>
+                            <li class="popupli"> Electricity is the biggest driver of India's carbon emissions due to its reliance on coal-based power plants: Coal accounts for 74% of India's electricity generation and was the source of one-third of the country's total greenhouse gas emissions.</li>
+                            <!-- <li class="popupli">Burning 1 kg of bituminous coal will produce 2.42 kg of carbon dioxide.</li> -->
                             <li class="popupli">The emissions per unit of electricity are estimated to be in the range of 0.91 to 0.95 kg/kWh for CO2 </li>
                         </ul>
                         <div class="row justify-content-center">
@@ -130,7 +132,11 @@ require "php/session.php";
 
         </div>
     </div>
-
+    <!-- ***** Footer Start ***** -->
+        <?php
+        include 'footer.php';
+        ?>
+    <!-- End Footer -->
 
 
     <script>
@@ -169,16 +175,16 @@ require "php/session.php";
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
-
-    <!-- <script src="assets/js/popper.js"></script> -->
-    <!-- <script src="assets/js/bootstrap.min.js"></script> -->
+    
     <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap-show-modal.js"></script>
+    <script src="assets/vendor/jbox/jBox.all.min.js"></script>
+    <!-- <script src="assets/js/bootstrap-show-modal.js"></script> -->
 
     <script src="js/induGraph.js"></script>
     <script src="js/energyElectricityModel.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+     <script src="js/common.js"></script>
 
 </body>
 

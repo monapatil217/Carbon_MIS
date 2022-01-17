@@ -118,6 +118,59 @@ function addTypeDiv() {
 
 }
 
+function saveEnergyIData() {
+
+    var flag = 0;
+    var energyData = {};
+
+    var amtCoal = document.getElementById("amtCoal").value;
+
+    var amtFO = document.getElementById("amtFO").value;
+
+    var amtLDO = document.getElementById("amtLDO").value;
+
+    var amtHSD = document.getElementById("amtHSD").value;
+
+    var amtPNG = document.getElementById("amtPNG").value;
+
+    var amtNG = document.getElementById("amtNG").value;
+
+    var amtBriquette = document.getElementById("amtBriquette").value;
+
+    energyData["amtCoal"] = amtCoal;
+    energyData["amtFO"] = amtFO;
+    energyData["amtLDO"] = amtLDO;
+    energyData["amtHSD"] = amtHSD;
+    energyData["amtPNG"] = amtPNG;
+    energyData["amtNG"] = amtNG;
+    energyData["amtBriquette"] = amtBriquette;
+
+
+
+    // if (flag == 0) {
+    //     $.ajax({
+    //         type: "POST",
+    //         async: false,
+    //         url: "php/.php",
+    //         contentType: "application/json",
+    //         data: JSON.stringify(energyData),
+    //         success: function (data) {
+    //             // var data1 = JSON.parse(data);
+    //             // if (data1 == "success") {
+    //             //     alert("Data Save Succesfuly");
+    //             //     window.location.replace("menuPage.php");
+    //             // } else {
+    //             //     alert("Data not Save Succesfuly")
+    //             // }
+    //             
+    //         }
+    //     });
+    // }
+
+    window.location.replace("industryPP.php");
+
+}
+
 function showCookingFuelInfo() {
     var div = document.getElementById("moreInfo");
     div.style.display = "block";

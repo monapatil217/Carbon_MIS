@@ -43,21 +43,21 @@ function showEnergyIndInput() {
                     var eledata = element.cData;
                     $.each(eledata, function (index, element1) {
 
-                        html = '<h6 class="text-center">Type of Fuel Mix used by Industry</h6>'
+                        html = '<h6 class="text-center">Type and Quantity of Fuel Mix used by Industry</h6>'
 
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + ' <label for="amtCoal" class="form-label"> Amount of Coal used</label>'
+                            + ' <label for="amtCoal" class="form-label"> Coal</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="amtCoal" class="form-control" value="' + element1.coal + '" placeholder="Coal" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="amtCoal" name="amtCoal" class="form-control" value="' + element1.coal + '" placeholder="Coal" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                             + '</div>'
                             + '</div>'
 
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + '<label for="amtFO" class="form-label">Amount of FO used</label>'
+                            + '<label for="amtFO" class="form-label"> FO</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="amtFO" class="form-control" value="' + element1.fo + '" placeholder="FO" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="amtFO" name="amtFO" class="form-control" value="' + element1.fo + '" placeholder="FO" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                             + '</div>'
                             + '</div>'
@@ -65,17 +65,17 @@ function showEnergyIndInput() {
 
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + '<label for="amtLDO" class="form-label">Amount of LDO used</label>'
+                            + '<label for="amtLDO" class="form-label" >LDO</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="amtLDO" class="form-control" value="' + element1.ido + '" placeholder="LDO" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="amtLDO" name="amtLDO" class="form-control" value="' + element1.ido + '" placeholder="LDO" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                             + '</div>'
                             + '</div>'
 
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + '<label for="amtHSD" class="form-label">Amount of HSD used</label>'
+                            + '<label for="amtHSD" class="form-label" >HSD</label>'
                             + ' <div class="input-group mb-2">'
-                            + '<input type="text" id="amtHSD" class="form-control" value="' + element1.hsd + '" placeholder="HSD" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="amtHSD" name="amtHSD" class="form-control" value="' + element1.hsd + '" placeholder="HSD" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                             + '</div>'
                             + '</div>'
@@ -83,17 +83,17 @@ function showEnergyIndInput() {
 
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + '<label for="amtPNG" class="form-label">Amount of PNG used</label>'
+                            + '<label for="amtPNG" class="form-label" >PNG</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="amtPNG" class="form-control" value="' + element1.png + '" placeholder="PNG" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="amtPNG" name="amtPNG" class="form-control" value="' + element1.png + '" placeholder="PNG" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                             + '</div>'
                             + '</div>'
 
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + '<label for="amtNG" class="form-label">Amount of NG used</label>'
+                            + '<label for="amtNG" class="form-label"> NG</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="amtNG" class="form-control" value="' + element1.ng + '" placeholder="NG" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="amtNG" name="amtNG" class="form-control" value="' + element1.ng + '" placeholder="NG" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                             + '</div>'
                             + '</div>'
@@ -101,40 +101,40 @@ function showEnergyIndInput() {
 
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + '<label for="amtBriquette" class="form-label">Amount of Briquette used</label>'
+                            + '<label for="amtBriquette" class="form-label"> Brique>tte</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="amtBriquette" class="form-control" value="' + element1.briq + '" placeholder="Briquette" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="amtBriquette" name="amtBriquette" class="form-control" value="' + element1.briq + '" placeholder="Briquette" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                             + '</div>'
                             + '</div>'
 
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            // + ' <label for="amtWood" class="form-label">Amount of Wood used</label>'
-                            // + '<div class="input-group mb-2">'
-                            // + '<input type="text" id="amtWood" class="form-control" value="' + element1.sw_col + '" placeholder="Wood" aria-label="Area" aria-describedby="basic-addon2">'
-                            // + '<span class="input-group-text" id="basic-addon2">t/day</span>'
-                            // + '</div>'
+                            + ' <label for="amtWood" class="form-label"> Wood</label>'
+                            + '<div class="input-group mb-2">'
+                            + '<input type="text" id="amtWood" class="form-control" value="' + element1.sw_col + '" placeholder="Wood" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<span class="input-group-text" id="basic-addon2">t/day</span>'
+                            + '</div>'
                             + '</div>'
                             + '</div>';
                     });
                 }
                 else {
 
-                    html = '<h6 class="text-center">Type of fuel mix used by industry</h6>'
+                    html = '<h6 class="text-center">Type and Quantity of fuel mix used by industry</h6>'
 
                         + '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + ' <label for="amtCoal" class="form-label"> Amount of Coal used</label>'
+                        + ' <label for="amtCoal" class="form-label"> Coal</label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="amtCoal" class="form-control" placeholder="Coal" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="amtCoal" name="amtCoal" class="form-control" placeholder="Coal" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                         + '</div>'
                         + '</div>'
 
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + '<label for="amtFO" class="form-label">Amount of FO used</label>'
+                        + '<label for="amtFO" class="form-label"> FO</label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="amtFO" class="form-control" placeholder="FO" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="amtFO" name="amtFO" class="form-control" placeholder="FO" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                         + '</div>'
                         + '</div>'
@@ -142,17 +142,17 @@ function showEnergyIndInput() {
 
                         + '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + '<label for="amtLDO" class="form-label">Amount of LDO used</label>'
+                        + '<label for="amtLDO" class="form-label"> LDO </label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="amtLDO" class="form-control" placeholder="LDO" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="amtLDO" name="amtLDO" class="form-control" placeholder="LDO" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                         + '</div>'
                         + '</div>'
 
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + '<label for="amtHSD" class="form-label">Amount of HSD used</label>'
+                        + '<label for="amtHSD" class="form-label"> HSD </label>'
                         + ' <div class="input-group mb-2">'
-                        + '<input type="text" id="amtHSD" class="form-control" placeholder="HSD" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="amtHSD" name="amtHSD" class="form-control" placeholder="HSD" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                         + '</div>'
                         + '</div>'
@@ -160,17 +160,17 @@ function showEnergyIndInput() {
 
                         + '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + '<label for="amtPNG" class="form-label">Amount of PNG used</label>'
+                        + '<label for="amtPNG" class="form-label"> PNG</label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="amtPNG" class="form-control" placeholder="PNG" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="amtPNG" name="amtPNG" class="form-control" placeholder="PNG" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                         + '</div>'
                         + '</div>'
 
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + '<label for="amtNG" class="form-label">Amount of NG used</label>'
+                        + '<label for="amtNG" class="form-label"> NG </label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="amtNG" class="form-control" placeholder="NG" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="amtNG" name="amtNG" class="form-control" placeholder="NG" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                         + '</div>'
                         + '</div>'
@@ -178,19 +178,19 @@ function showEnergyIndInput() {
 
                         + '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + '<label for="amtBriquette" class="form-label">Amount of Briquette used</label>'
+                        + '<label for="amtBriquette" class="form-label"> Briquette</label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="amtBriquette" class="form-control" placeholder="Briquette" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="amtBriquette" name="amtBriquette" class="form-control" placeholder="Briquette" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">t/day</span>'
                         + '</div>'
                         + '</div>'
 
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        // + ' <label for="amtWood" class="form-label">Amount of Wood used</label>'
-                        // + '<div class="input-group mb-2">'
-                        // + '<input type="text" id="amtWood" class="form-control" placeholder="Wood" aria-label="Area" aria-describedby="basic-addon2">'
-                        // + '<span class="input-group-text" id="basic-addon2">t/day</span>'
-                        // + '</div>'
+                        + ' <label for="amtWood" class="form-label"> Wood </label>'
+                        + '<div class="input-group mb-2">'
+                        + '<input type="text" id="amtWood" class="form-control" placeholder="Wood" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<span class="input-group-text" id="basic-addon2">t/day</span>'
+                        + '</div>'
                         + '</div>'
                         + '</div>';
                 }
@@ -205,26 +205,30 @@ function showEnergyIndInput() {
 
 function saveEnergyIData() {
 
-    window.location.replace("industryPP.php");
-    // var flag = 0;
-    // var userData = {};
+    var flag = 0;
+    var energyData = {};
 
-    // var relec = document.getElementById("relec").value;
-    // flag += customInputValidator(relec, "relec");
+    var amtCoal = document.getElementById("amtCoal").value;
 
-    // var celec = document.getElementById("celec").value;
-    // flag += customInputValidator(celec, "celec");
+    var amtFO = document.getElementById("amtFO").value;
 
-    // var selec = document.getElementById("selec").value;
-    // flag += customInputValidator(selec, "selec");
+    var amtLDO = document.getElementById("amtLDO").value;
 
-    // var slelec = document.getElementById("slelec").value;
-    // flag += customInputValidator(slelec, "slelec");
+    var amtHSD = document.getElementById("amtHSD").value;
 
-    // userData["relec"] = relec;
-    // userData["celec"] = celec;
-    // userData["selec"] = selec;
-    // userData["slelec"] = slelec;
+    var amtPNG = document.getElementById("amtPNG").value;
+
+    var amtNG = document.getElementById("amtNG").value;
+
+    var amtBriquette = document.getElementById("amtBriquette").value;
+
+    energyData["amtCoal"] = amtCoal;
+    energyData["amtFO"] = amtFO;
+    energyData["amtLDO"] = amtLDO;
+    energyData["amtHSD"] = amtHSD;
+    energyData["amtPNG"] = amtPNG;
+    energyData["amtNG"] = amtNG;
+    energyData["amtBriquette"] = amtBriquette;
 
 
 
@@ -234,7 +238,7 @@ function saveEnergyIData() {
     //         async: false,
     //         url: "php/.php",
     //         contentType: "application/json",
-    //         data: JSON.stringify(userData),
+    //         data: JSON.stringify(energyData),
     //         success: function (data) {
     //             // var data1 = JSON.parse(data);
     //             // if (data1 == "success") {
@@ -247,6 +251,8 @@ function saveEnergyIData() {
     //         }
     //     });
     // }
+
+    window.location.replace("industryPP.php");
 
 }
 

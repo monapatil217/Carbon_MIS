@@ -47,7 +47,7 @@ function showSolidInput() {
                             + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                             + '<label for="solidGen" class="form-label">Solid waste Generation</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="solidGen" class="form-control" value="' + element1.sw_gen + '" placeholder="Generation" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="solidGen" name="solidGen" class="form-control" value="' + element1.sw_gen + '" placeholder="Generation" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">MTD</span>'
                             + '</div>'
                             + '</div>'
@@ -57,7 +57,7 @@ function showSolidInput() {
                             + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                             + '<label for="solidColl" class="form-label">Solid Waste Collection</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="solidColl" class="form-control" value="' + element1.sw_col + '" placeholder="Collection" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="solidColl" name="solidColl" class="form-control" value="' + element1.sw_col + '" placeholder="Collection" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">MTD</span>'
                             + '</div>'
                             + '</div>'
@@ -67,7 +67,7 @@ function showSolidInput() {
                             + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                             + '<label for="solidTreat" class="form-label">Solid Waste Treatement</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="solidTreat" class="form-control" value="' + element1.sw_treat + '" placeholder="Treatement"aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="solidTreat" name="solidTreat" class="form-control" value="' + element1.sw_treat + '" placeholder="Treatement"aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">MTD</span>'
                             + '</div>'
                             + '</div>'
@@ -77,7 +77,7 @@ function showSolidInput() {
                             + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                             + '<label for="dumpingYard" class="form-label">Dumping yard Present</label>'
                             + ' <div class="input-group mb-2">'
-                            + '<input type="text" id="dumpingYard" class="form-control" value="' + element1.n_yard + '" placeholder=" Dumping yard" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="dumpingYard" name="dumpingYard" class="form-control" value="' + element1.n_yard + '" placeholder=" Dumping yard" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">MTD</span>'
                             + '</div>'
                             + '</div>'
@@ -90,7 +90,7 @@ function showSolidInput() {
                         + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                         + '<label for="solidGen" class="form-label">Solid waste Generation</label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="solidGen" class="form-control" placeholder="Generation" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="solidGen" name="solidGen" class="form-control" placeholder="Generation" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">MTD</span>'
                         + '</div>'
                         + '</div>'
@@ -100,7 +100,7 @@ function showSolidInput() {
                         + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                         + '<label for="solidColl" class="form-label">Solid Waste Collection</label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="solidColl" class="form-control" placeholder="Collection" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="solidColl" name="solidColl" class="form-control" placeholder="Collection" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">MTD</span>'
                         + '</div>'
                         + '</div>'
@@ -110,7 +110,7 @@ function showSolidInput() {
                         + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                         + '<label for="solidTreat" class="form-label">Solid Waste Treatement</label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="solidTreat" class="form-control" placeholder="Treatement"aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="solidTreat" name="solidTreat" class="form-control" placeholder="Treatement"aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">MTD</span>'
                         + '</div>'
                         + '</div>'
@@ -120,7 +120,7 @@ function showSolidInput() {
                         + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                         + '<label for="dumpingYard" class="form-label">Dumping yard Present</label>'
                         + ' <div class="input-group mb-2">'
-                        + '<input type="text" id="dumpingYard" class="form-control" placeholder=" Dumping yard" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="dumpingYard" name="dumpingYard" class="form-control" placeholder=" Dumping yard" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">MTD</span>'
                         + '</div>'
                         + '</div>'
@@ -137,26 +137,21 @@ function showSolidInput() {
 
 function saveSolidData() {
 
-    window.location.replace("wasteWater.php");
-    // var flag = 0;
-    // var userData = {};
+    var flag = 0;
+    var solidData = {};
 
-    // var relec = document.getElementById("relec").value;
-    // flag += customInputValidator(relec, "relec");
+    var solidGen = document.getElementById("solidGen").value;
 
-    // var celec = document.getElementById("celec").value;
-    // flag += customInputValidator(celec, "celec");
+    var solidColl = document.getElementById("solidColl").value;
 
-    // var selec = document.getElementById("selec").value;
-    // flag += customInputValidator(selec, "selec");
+    var solidTreat = document.getElementById("solidTreat").value;
 
-    // var slelec = document.getElementById("slelec").value;
-    // flag += customInputValidator(slelec, "slelec");
+    var dumpingYard = document.getElementById("dumpingYard").value;
 
-    // userData["relec"] = relec;
-    // userData["celec"] = celec;
-    // userData["selec"] = selec;
-    // userData["slelec"] = slelec;
+    solidData["solidGen"] = solidGen;
+    solidData["solidColl"] = solidColl;
+    solidData["solidTreat"] = solidTreat;
+    solidData["dumpingYard"] = dumpingYard;
 
 
 
@@ -179,6 +174,7 @@ function saveSolidData() {
     //         }
     //     });
     // }
+    window.location.replace("wasteWater.php");
 
 }
 

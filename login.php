@@ -84,10 +84,17 @@
             </div>
 
         </div>
+        
 
     </section><!-- End Hero -->
+     
     <main id="main">
     </main><!-- End #main -->
+    <!-- ***** Footer Start ***** -->
+    <?php
+    include 'footer.php';
+    ?>
+    <!-- End Footer -->
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter.js"></script>

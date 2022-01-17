@@ -62,11 +62,11 @@ require "php/session.php";
 
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
 
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-4  mb-3" data-aos-delay="200">
                     <div class="in-sec">
                         <marquee width="100%" direction="left" height="30px">
-                            sq.km - Square Kilometre.
+                            sq.km - square kilometer.
                         </marquee>
                         <form class="needs-validation" novalidate>
                             <div id="cropInput"></div>
@@ -76,27 +76,29 @@ require "php/session.php";
                                 </div>
                             </div>
                         </form>
-
-                    </div>
-                     <!-- Start PopUp div -->
-                    <div class="row align-items-center justify-content-center" id="moreInfo">
-                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                            <div class="fade-to-img" onclick="showCropLInfo();">
-                                <img class="reggot" id="popup-btn" src="img/field.png" width="80" height="100">
+                        <!-- Start PopUp div -->
+                        <div class="row align-items-center justify-content-center" id="moreInfo">
+                            <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <div class="fade-to-img" onclick="showCropLInfo();">
+                                    <img class="reggot" id="popup-btn" src="img/field.png" width="80" height="80">
+                                </div>
                             </div>
                         </div>
+                        <!-- End PopUp div -->
                     </div>
-                    <!-- End PopUp div -->
                 </div>
                 
                 <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">
                     <h3 class="text-center mb-2">Carbon Emission of Crop Land</h3>
-                            <ul style="margin-left: 10px;">
-                                <li class="popupli"> Land that is suited to or used for crops as known as Crop Land.</li>
-                            </ul>
-                        <div id="chartName"></div>
-                        <div id="cropChart"></div>
+                        <ul style="margin-left: 10px;">
+                            <li class="popupli">Stabilizing greenhouse gas (GHG) emissions from croplands as agricultural demand grows is a critical component of climate change mitigation.</li>
+                            <li class="popupli">Agricultural production is a major emitter of GHGs, currently accounting for 18% of total GHG emissions in India . </li>
+                        </ul>
+                        <div class="row justify-content-center">
+                            <div id="chartName"></div>
+                            <div id="cropChart"></div>
+                        </div>
                     </div>
                 </div>
             </div>

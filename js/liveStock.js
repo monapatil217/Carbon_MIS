@@ -46,16 +46,16 @@ function showLiveStock() {
                         html = '<h6 class="text-center mt-3"> Enter Number of Animals </h6>'
                             + ' <div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + '<label for="indCattle" class="form-label"> Indigenous Cattle</label>'
+                            + '<label for="indCattle" class="form-label"> Indigenous Cattles</label>'
                             + ' <div class="input-group mb-2">'
-                            + '<input type="text" id="indCattle" class="form-control"  value="' + element1.ind_cat + '" placeholder="Indigenous Cattle" aria-label="Indigenous Cattle" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="indCattle" name="indCattle" class="form-control"  value="' + element1.ind_cat + '" placeholder="Indigenous Cattle" aria-label="Indigenous Cattle" aria-describedby="basic-addon2">'
                             + '</div>'
                             + '</div>'
 
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + '<label for="crossBread" class="form-label"> Cross-bred cattle</label>'
+                            + '<label for="crossBread" class="form-label"> Cross-breed cattles</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="crossBread" class="form-control"  value="' + element1.cross_cat + '" placeholder="Cross-bred cattle" aria-label="Cross-bred cattle" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="crossBread" name="crossBread" class="form-control"  value="' + element1.cross_cat + '" placeholder="Cross-bred cattle" aria-label="Cross-bred cattle" aria-describedby="basic-addon2">'
                             + '</div>'
                             + '</div>'
                             + '</div>'
@@ -64,14 +64,14 @@ function showLiveStock() {
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '<label for="buffalo" class="form-label"> Buffalo</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="buffalo" class="form-control"  value="' + element1.buff + '" placeholder="Buffalo" aria-label="Buffalo" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="buffalo" name="buffalo" class="form-control"  value="' + element1.buff + '" placeholder="Buffalo" aria-label="Buffalo" aria-describedby="basic-addon2">'
                             + '</div>'
                             + '</div>'
 
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '<label for="Sheep" class="form-label"> Sheep</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="Sheep" class="form-control" value="' + element1.sheep + '" placeholder="Sheep" aria-label="Sheep" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="Sheep" name="Sheep" class="form-control" value="' + element1.sheep + '" placeholder="Sheep" aria-label="Sheep" aria-describedby="basic-addon2">'
                             + '</div>'
                             + '</div>'
                             + '</div>'
@@ -80,14 +80,14 @@ function showLiveStock() {
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '<label for="goat" class="form-label"> Goat</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="goat" class="form-control" value="' + element1.goat + '" placeholder="Goat" aria-label="Goat" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="goat" name="goat" class="form-control" value="' + element1.goat + '" placeholder="Goat" aria-label="Goat" aria-describedby="basic-addon2">'
                             + '</div>'
                             + '</div >'
 
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '<label for="horses" class="form-label"> Horses</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="horses" class="form-control" value="' + element1.hors + '" placeholder="Horses" aria-label="Horses" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="horses" name="horses" class="form-control" value="' + element1.hors + '" placeholder="Horses" aria-label="Horses" aria-describedby="basic-addon2">'
                             + '</div>'
                             + ' </div>'
                             + '</div>'
@@ -96,14 +96,14 @@ function showLiveStock() {
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '<label for="donkeys" class="form-label"> Donkeys</label>'
                             + '<div class="input-group mb-2">'
-                            + ' <input type="text" id="donkeys" class="form-control" value="' + element1.donk + '" placeholder="Donkeys" aria-label="Donkeys" aria-describedby="basic-addon2">'
+                            + ' <input type="text" id="donkeys" name="donkeys" class="form-control" value="' + element1.donk + '" placeholder="Donkeys" aria-label="Donkeys" aria-describedby="basic-addon2">'
                             + '</div>'
                             + '</div>'
 
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '<label for="camels" class="form-label"> Camels </label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="camels" class="form-control" value="' + element1.came + '" placeholder="Camels" aria-label="Camels" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="camels" name="camels" class="form-control" value="' + element1.came + '" placeholder="Camels" aria-label="Camels" aria-describedby="basic-addon2">'
                             + '</div>'
                             + '</div>'
                             + '</div>'
@@ -112,33 +112,33 @@ function showLiveStock() {
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '<label for="pig" class="form-label"> Pig</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="pig" class="form-control" value="' + element1.pig + '" placeholder="Pig" aria-label="Pig" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="pig" name="pig" class="form-control" value="' + element1.pig + '" placeholder="Pig" aria-label="Pig" aria-describedby="basic-addon2">'
                             + '</div>'
                             + '</div>'
 
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '<label for="poultry" class="form-label"> Poultry </label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="poultry" class="form-control" value="' + element1.poul + '" placeholder="Poultry" aria-label="Poultry" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="poultry" name="poultry" class="form-control" value="' + element1.poul + '" placeholder="Poultry" aria-label="Poultry" aria-describedby="basic-addon2">'
                             + '</div>'
                             + '</div>'
                             + '</div>';
                     });
                 }
                 else {
-                    '<h6 class="text-center mt-3"> Enter Number of Animals </h6>'
+                    html = '<h6 class="text-center mt-3"> Enter Number of Animals </h6>'
                         + ' <div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + '<label for="indCattle" class="form-label"> Indigenous Cattle</label>'
+                        + '<label for="indCattle" class="form-label"> Indigenous Cattles</label>'
                         + ' <div class="input-group mb-2">'
-                        + '<input type="text" id="indCattle" class="form-control" placeholder="Indigenous Cattle" aria-label="Indigenous Cattle" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="indCattle" name="indCattle" class="form-control" placeholder="Indigenous Cattle" aria-label="Indigenous Cattle" aria-describedby="basic-addon2">'
                         + '</div>'
                         + '</div>'
 
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + '<label for="crossBread" class="form-label"> Cross-bred cattle</label>'
+                        + '<label for="crossBread" class="form-label"> Cross-breed cattles</label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="crossBread" class="form-control" placeholder="Cross-bred cattle" aria-label="Cross-bred cattle" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="crossBread" name="crossBread" class="form-control" placeholder="Cross-bred cattle" aria-label="Cross-bred cattle" aria-describedby="basic-addon2">'
                         + '</div>'
                         + '</div>'
                         + '</div>'
@@ -147,14 +147,14 @@ function showLiveStock() {
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '<label for="buffalo" class="form-label"> Buffalo</label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="buffalo" class="form-control" placeholder="Buffalo" aria-label="Buffalo" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="buffalo" name="buffalo" class="form-control" placeholder="Buffalo" aria-label="Buffalo" aria-describedby="basic-addon2">'
                         + '</div>'
                         + '</div>'
 
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '<label for="Sheep" class="form-label"> Sheep</label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="Sheep" class="form-control" placeholder="Sheep" aria-label="Sheep" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="Sheep" name="Sheep" class="form-control" placeholder="Sheep" aria-label="Sheep" aria-describedby="basic-addon2">'
                         + '</div>'
                         + '</div>'
                         + '</div>'
@@ -163,14 +163,14 @@ function showLiveStock() {
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '<label for="goat" class="form-label"> Goat</label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="goat" class="form-control" placeholder="Goat" aria-label="Goat" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="goat" name="goat" class="form-control" placeholder="Goat" aria-label="Goat" aria-describedby="basic-addon2">'
                         + '</div>'
                         + '</div >'
 
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '<label for="horses" class="form-label"> Horses</label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="horses" class="form-control" placeholder="Horses" aria-label="Horses" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="horses" name="horses" class="form-control" placeholder="Horses" aria-label="Horses" aria-describedby="basic-addon2">'
                         + '</div>'
                         + ' </div>'
                         + '</div>'
@@ -179,14 +179,14 @@ function showLiveStock() {
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '<label for="donkeys" class="form-label"> Donkeys</label>'
                         + '<div class="input-group mb-2">'
-                        + ' <input type="text" id="donkeys" class="form-control" placeholder="Donkeys" aria-label="Donkeys" aria-describedby="basic-addon2">'
+                        + ' <input type="text" id="donkeys" name="donkeys" class="form-control" placeholder="Donkeys" aria-label="Donkeys" aria-describedby="basic-addon2">'
                         + '</div>'
                         + '</div>'
 
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '<label for="camels" class="form-label"> Camels </label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="camels" class="form-control" placeholder="Camels" aria-label="Camels" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="camels" name="camels" class="form-control" placeholder="Camels" aria-label="Camels" aria-describedby="basic-addon2">'
                         + '</div>'
                         + '</div>'
                         + '</div>'
@@ -195,14 +195,14 @@ function showLiveStock() {
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '<label for="pig" class="form-label"> Pig</label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="pig" class="form-control" placeholder="Pig" aria-label="Pig" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="pig" name="pig" class="form-control" placeholder="Pig" aria-label="Pig" aria-describedby="basic-addon2">'
                         + '</div>'
                         + '</div>'
 
                         + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '<label for="poultry" class="form-label"> Poultry </label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="poultry" class="form-control" placeholder="Poultry" aria-label="Poultry" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="poultry" name="poultry" class="form-control" placeholder="Poultry" aria-label="Poultry" aria-describedby="basic-addon2">'
                         + '</div>'
                         + '</div>'
                         + '</div>';
@@ -217,26 +217,40 @@ function showLiveStock() {
 
 function saveLiveData() {
 
-    window.location.replace("forestLand.php");
-    // var flag = 0;
-    // var userData = {};
 
-    // var relec = document.getElementById("relec").value;
-    // flag += customInputValidator(relec, "relec");
+    var flag = 0;
+    var liveData = {};
 
-    // var celec = document.getElementById("celec").value;
-    // flag += customInputValidator(celec, "celec");
+    var indCattle = document.getElementById("indCattle").value;
 
-    // var selec = document.getElementById("selec").value;
-    // flag += customInputValidator(selec, "selec");
+    var crossBread = document.getElementById("crossBread").value;
 
-    // var slelec = document.getElementById("slelec").value;
-    // flag += customInputValidator(slelec, "slelec");
+    var buffalo = document.getElementById("buffalo").value;
 
-    // userData["relec"] = relec;
-    // userData["celec"] = celec;
-    // userData["selec"] = selec;
-    // userData["slelec"] = slelec;
+    var Sheep = document.getElementById("Sheep").value;
+
+    var goat = document.getElementById("goat").value;
+
+    var horses = document.getElementById("horses").value;
+
+    var donkeys = document.getElementById("donkeys").value;
+
+    var camels = document.getElementById("camels").value;
+
+    var pig = document.getElementById("pig").value;
+
+    var poultry = document.getElementById("poultry").value;
+
+    liveData["indCattle"] = indCattle;
+    liveData["crossBread"] = crossBread;
+    liveData["buffalo"] = buffalo;
+    liveData["Sheep"] = Sheep;
+    liveData["goat"] = goat;
+    liveData["horses"] = horses;
+    liveData["donkeys"] = donkeys;
+    liveData["camels"] = camels;
+    liveData["pig"] = pig;
+    liveData["poultry"] = poultry;
 
 
 
@@ -246,7 +260,7 @@ function saveLiveData() {
     //         async: false,
     //         url: "php/.php",
     //         contentType: "application/json",
-    //         data: JSON.stringify(userData),
+    //         data: JSON.stringify(liveData),
     //         success: function (data) {
     //             // var data1 = JSON.parse(data);
     //             // if (data1 == "success") {
@@ -259,6 +273,7 @@ function saveLiveData() {
     //         }
     //     });
     // }
+    window.location.replace("forestLand.php");
 
 }
 
@@ -274,12 +289,12 @@ function showLiveStockInfo() {
         + '<div class="row mt-2 mb-3">'
         + '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'
         + '<ul style="margin-left: 10px;">'
-        + '<li class="popupli"> The average annual population of animals was taken from the Census of Livestock, which is conducted every five years.</li>'
-        + '<li class="popupli"> Categorization was done as per available categories in the census viz. dairy and non-dairy for cattle . </li>'
-        + '<li class="popupli">It has been estimated that over 200 million tonnes of CO2 equivalents are released by Indian livestock each year.</li>'
+        // + '<li class="popupli"> The average annual population of animals was taken from the Census of Livestock, which is conducted every five years.</li>'
+        // + '<li class="popupli"> Categorization was done as per available categories in the census viz. dairy and non-dairy for cattle . </li>'
+        // + '<li class="popupli">It has been estimated that over 200 million tonnes of CO2 equivalents are released by Indian livestock each year.</li>'
         + '<li class="popupli">The total GHGs emission from Indian livestock is estimated at 247.2 Mt in terms of CO2 equivalent emissions.</li>'
         + '<li class="popupli">Although the Indian livestock contributes substantially to the methane budget, the per capita emission is only 24.23 kgCH4/animal/year.</li>'
-        + '<li class="popupli"> Categorisation are: Mature dairy cows, Non-dairy cattle, Goats, Sheep, Camels, Horses and ponies, Pigs </li>'
+        // + '<li class="popupli"> Categorisation are: Mature dairy cows, Non-dairy cattle, Goats, Sheep, Camels, Horses and ponies, Pigs </li>'
         + '</ul>'
         // +'<br>Despite its soaring energy needs, India has one of the lowest per capita rates of consumption of power in the world - 734 units as compared to a world average of 2,429 units. </b></p>'
         // + '<center> <a class="my-3" href="http://www.ghgplatform-india.org/emissionestimates-phase2" target="_blank" rel="noopener noreferrer">Reference</a></center>'

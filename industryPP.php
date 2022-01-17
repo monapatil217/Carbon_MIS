@@ -66,15 +66,23 @@ require "php/session.php";
 
                 
 
-                <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
+                <div class="col-md-12 col-lg-5  mb-3" data-aos-delay="200">
                     <div class="in-sec">
                         <h6 class="text-center">Industrial Process and Product</h6>
                         <marquee width="100%" direction="left" height="30px">
-                            t - tonne
+                            t - tons
                         </marquee>
                         <form class="needs-validation" novalidate>
+
+                            <div id="IndPPLand"></div>
+
+                            <div class="row ">
+                                <div class="col-md-12 mb-3 text-center">
+                                    <button class="btn btn-primary " type="button" onclick="saveIndPPData();">NEXT</button>
+                                </div>
+                            </div>
                         
-                            <div class="row justify-content-center">
+                            <!-- <div class="row justify-content-center">
                                 <div class="col-md-6 col-lg-10 col-xl-9 col-10">
                                     <label for="amtProd" class="form-label">  Amount of Product Manufacture</label>
                                     <div class="input-group mb-2">
@@ -82,13 +90,13 @@ require "php/session.php";
                                         <span class="input-group-text" id="basic-addon2">t/year</span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
-                            <div class="row ">
+                            <!-- <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
                                     <button class="btn btn-primary " type="button" onclick="saveIndPPData();">NEXT</button>
                                 </div>
-                            </div>
+                            </div> -->
                         </form>
 
                         <div class="row align-items-center justify-content-center" id="moreInfo">
@@ -102,7 +110,7 @@ require "php/session.php";
                     </div>
                 </div>
 
-                <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
+                <div class="col-md-12 col-lg-7  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">
                         <h3 class="text-center">Carbon Emission from IPPU Sector</h3>
                         <ul style="margin-left: 10px;">
@@ -175,13 +183,13 @@ require "php/session.php";
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="js/industryPPModel.js"></script>
+    
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap-show-modal.js"></script>
 
     <script src="js/induGraph.js"></script>
-
+<script src="js/industryPPModel.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 

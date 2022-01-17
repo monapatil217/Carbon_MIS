@@ -46,7 +46,7 @@ function showlandUse() {
                             + '   <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '       <label for="residential" class="form-label"> Residential Area</label>'
                             + '       <div class="input-group mb-2">'
-                            + '           <input type="text" id="residential" class="form-control" value="' + element1.resi + '" placeholder="Residential" aria-label="Residential" aria-describedby="basic-addon2">'
+                            + '           <input type="text" id="residential" name="residential" class="form-control" value="' + element1.resi + '" placeholder="Residential" aria-label="Residential" aria-describedby="basic-addon2">'
                             + '           <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                             + '        </div>'
                             + '    </div>'
@@ -54,7 +54,7 @@ function showlandUse() {
                             + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '        <label for="commercial" class="form-label"> Commercial Area</label>'
                             + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="commercial" class="form-control" value="' + element1.com + '" placeholder="Commercial" aria-label="Commercial" aria-describedby="basic-addon2">'
+                            + '            <input type="text" id="commercial" name="commercial" class="form-control" value="' + element1.com + '" placeholder="Commercial" aria-label="Commercial" aria-describedby="basic-addon2">'
                             + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                             + '        </div>'
                             + '    </div>'
@@ -64,7 +64,7 @@ function showlandUse() {
                             + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '        <label for="waterBodies" class="form-label"> Water Bodies Area</label>'
                             + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="waterBodies" class="form-control" value="' + element1.w_body + '" placeholder="Water Bodies" aria-label="Water Bodies" aria-describedby="basic-addon2">'
+                            + '            <input type="text" id="waterBodies" name="waterBodies" class="form-control" value="' + element1.w_body + '" placeholder="Water Bodies" aria-label="Water Bodies" aria-describedby="basic-addon2">'
                             + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                             + '        </div>'
                             + '    </div>'
@@ -72,7 +72,7 @@ function showlandUse() {
                             + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '        <label for="defence" class="form-label"> Defence Area</label>'
                             + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="defence" class="form-control" value="' + element1.defence + '" placeholder="Defence" aria-label="Defence" aria-describedby="basic-addon2">'
+                            + '            <input type="text" id="defence" name="defence" class="form-control" value="' + element1.defence + '" placeholder="Defence" aria-label="Defence" aria-describedby="basic-addon2">'
                             + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                             + '        </div>'
                             + '    </div>'
@@ -82,7 +82,7 @@ function showlandUse() {
                             + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '        <label for="agriculture" class="form-label"> Agriculture Area</label>'
                             + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="agriculture" class="form-control" value="' + element1.agri + '" placeholder="Agriculture" aria-label="Agriculture" aria-describedby="basic-addon2">'
+                            + '            <input type="text" id="agriculture" name="agriculture" class="form-control" value="' + element1.agri + '" placeholder="Agriculture" aria-label="Agriculture" aria-describedby="basic-addon2">'
                             + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                             + '        </div>'
                             + '    </div>'
@@ -90,7 +90,7 @@ function showlandUse() {
                             + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '        <label for="vacentLand" class="form-label"> Vacant Land Area</label>'
                             + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="vacentLand" class="form-control" value="' + element1.vaca + '" placeholder="Vacant Land" aria-label="Vacant Land" aria-describedby="basic-addon2">'
+                            + '            <input type="text" id="vacentLand" name="vacentLand" class="form-control" value="' + element1.vaca + '" placeholder="Vacant Land" aria-label="Vacant Land" aria-describedby="basic-addon2">'
                             + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                             + '        </div>'
                             + '    </div>'
@@ -100,14 +100,14 @@ function showlandUse() {
                             + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '        <label for="roadArea" class="form-label"> Under Road Area</label>'
                             + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="roadArea" class="form-control" value="' + element1.u_road + '" placeholder="Under Road" aria-label="Under Road" aria-describedby="basic-addon2">'
+                            + '            <input type="text" id="roadArea" name="roadArea" class="form-control" value="' + element1.u_road + '" placeholder="Under Road" aria-label="Under Road" aria-describedby="basic-addon2">'
                             + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                             + '        </div>'
                             + '    </div>'
                             + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '        <label for="greenArea" class="form-label"> Under Green Area</label>'
                             + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="greenArea" class="form-control" value="' + element1.u_green + '" placeholder="Under Green" aria-label="Under Green" aria-describedby="basic-addon2">'
+                            + '            <input type="text" id="greenArea" name="greenArea" class="form-control" value="' + element1.u_green + '" placeholder="Under Green" aria-label="Under Green" aria-describedby="basic-addon2">'
                             + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                             + '        </div>'
                             + '    </div>'
@@ -117,7 +117,7 @@ function showlandUse() {
                             + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '        <label for="industrial" class="form-label"> Industrial Area</label>'
                             + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="industrial" class="form-control" value="' + element1.indu + '" placeholder="Industrial" aria-label="Industrial" aria-describedby="basic-addon2">'
+                            + '            <input type="text" id="industrial" name="industrial" class="form-control" value="' + element1.indu + '" placeholder="Industrial" aria-label="Industrial" aria-describedby="basic-addon2">'
                             + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                             + '        </div>'
                             + '    </div>'
@@ -125,7 +125,7 @@ function showlandUse() {
                             + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '        <label for="slum" class="form-label"> Slum Area</label>'
                             + '            <div class="input-group mb-2">'
-                            + '                <input type="text" id="slum" class="form-control" value="' + element1.slum + '" placeholder="Slum" aria-label="Slum" aria-describedby="basic-addon2">'
+                            + '                <input type="text" id="slum" name="slum" class="form-control" value="' + element1.slum + '" placeholder="Slum" aria-label="Slum" aria-describedby="basic-addon2">'
                             + '                <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                             + '            </div>'
                             + '        </div>'
@@ -139,7 +139,7 @@ function showlandUse() {
                         + '   <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '       <label for="residential" class="form-label"> Residential Area</label>'
                         + '       <div class="input-group mb-2">'
-                        + '           <input type="text" id="residential" class="form-control" placeholder="Residential" aria-label="Residential" aria-describedby="basic-addon2">'
+                        + '           <input type="text" id="residential" name="residential" class="form-control" placeholder="Residential" aria-label="Residential" aria-describedby="basic-addon2">'
                         + '           <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                         + '        </div>'
                         + '    </div>'
@@ -147,7 +147,7 @@ function showlandUse() {
                         + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '        <label for="commercial" class="form-label"> Commercial Area</label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="commercial" class="form-control" placeholder="Commercial" aria-label="Commercial" aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="commercial" name="commercial" class="form-control" placeholder="Commercial" aria-label="Commercial" aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                         + '        </div>'
                         + '    </div>'
@@ -157,7 +157,7 @@ function showlandUse() {
                         + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '        <label for="waterBodies" class="form-label"> Water Bodies Area</label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="waterBodies" class="form-control" placeholder="Water Bodies" aria-label="Water Bodies" aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="waterBodies" name="waterBodies" class="form-control" placeholder="Water Bodies" aria-label="Water Bodies" aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                         + '        </div>'
                         + '    </div>'
@@ -165,7 +165,7 @@ function showlandUse() {
                         + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '        <label for="defence" class="form-label"> Defence Area</label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="defence" class="form-control" placeholder="Defence" aria-label="Defence" aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="defence" name="defence" class="form-control" placeholder="Defence" aria-label="Defence" aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                         + '        </div>'
                         + '    </div>'
@@ -175,7 +175,7 @@ function showlandUse() {
                         + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '        <label for="agriculture" class="form-label"> Agriculture Area</label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="agriculture" class="form-control" placeholder="Agriculture" aria-label="Agriculture" aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="agriculture" name="agriculture" class="form-control" placeholder="Agriculture" aria-label="Agriculture" aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                         + '        </div>'
                         + '    </div>'
@@ -183,7 +183,7 @@ function showlandUse() {
                         + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '        <label for="vacentLand" class="form-label"> Vacant Land Area</label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="vacentLand" class="form-control" placeholder="Vacant Land" aria-label="Vacant Land" aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="vacentLand" name="vacentLand" class="form-control" placeholder="Vacant Land" aria-label="Vacant Land" aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                         + '        </div>'
                         + '    </div>'
@@ -193,14 +193,14 @@ function showlandUse() {
                         + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '        <label for="roadArea" class="form-label"> Under Road Area</label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="roadArea" class="form-control" placeholder="Under Road" aria-label="Under Road" aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="roadArea" name="roadArea" class="form-control" placeholder="Under Road" aria-label="Under Road" aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                         + '        </div>'
                         + '    </div>'
                         + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '        <label for="greenArea" class="form-label"> Under Green Area</label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="greenArea" class="form-control" placeholder="Under Green" aria-label="Under Green" aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="greenArea" name="greenArea" class="form-control" placeholder="Under Green" aria-label="Under Green" aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                         + '        </div>'
                         + '    </div>'
@@ -210,7 +210,7 @@ function showlandUse() {
                         + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '        <label for="industrial" class="form-label"> Industrial Area</label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="industrial" class="form-control" placeholder="Industrial" aria-label="Industrial" aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="industrial" name="industrial" class="form-control" placeholder="Industrial" aria-label="Industrial" aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                         + '        </div>'
                         + '    </div>'
@@ -218,7 +218,7 @@ function showlandUse() {
                         + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '        <label for="slum" class="form-label"> Slum Area</label>'
                         + '            <div class="input-group mb-2">'
-                        + '                <input type="text" id="slum" class="form-control" placeholder="Slum" aria-label="Slum" aria-describedby="basic-addon2">'
+                        + '                <input type="text" id="slum" name="slum" class="form-control" placeholder="Slum" aria-label="Slum" aria-describedby="basic-addon2">'
                         + '                <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                         + '            </div>'
                         + '        </div>'
@@ -234,26 +234,40 @@ function showlandUse() {
 }
 
 function saveLandData() {
-    window.location.replace("solidWaste.php");
-    // var flag = 0;
-    // var userData = {};
 
-    // var relec = document.getElementById("relec").value;
-    // flag += customInputValidator(relec, "relec");
+    var flag = 0;
+    var landData = {};
 
-    // var celec = document.getElementById("celec").value;
-    // flag += customInputValidator(celec, "celec");
+    var residential = document.getElementById("residential").value;
 
-    // var selec = document.getElementById("selec").value;
-    // flag += customInputValidator(selec, "selec");
+    var commercial = document.getElementById("commercial").value;
 
-    // var slelec = document.getElementById("slelec").value;
-    // flag += customInputValidator(slelec, "slelec");
+    var waterBodies = document.getElementById("waterBodies").value;
 
-    // userData["relec"] = relec;
-    // userData["celec"] = celec;
-    // userData["selec"] = selec;
-    // userData["slelec"] = slelec;
+    var defence = document.getElementById("defence").value;
+
+    var agriculture = document.getElementById("agriculture").value;
+
+    var vacentLand = document.getElementById("vacentLand").value;
+
+    var roadArea = document.getElementById("roadArea").value;
+
+    var greenArea = document.getElementById("greenArea").value;
+
+    var industrial = document.getElementById("industrial").value;
+
+    var slum = document.getElementById("slum").value;
+
+    landData["residential"] = residential;
+    landData["commercial"] = commercial;
+    landData["waterBodies"] = waterBodies;
+    landData["defence"] = defence;
+    landData["agriculture"] = agriculture;
+    landData["vacentLand"] = vacentLand;
+    landData["roadArea"] = roadArea;
+    landData["greenArea"] = greenArea;
+    landData["industrial"] = industrial;
+    landData["slum"] = slum;
 
 
 
@@ -263,7 +277,7 @@ function saveLandData() {
     //         async: false,
     //         url: "php/.php",
     //         contentType: "application/json",
-    //         data: JSON.stringify(userData),
+    //         data: JSON.stringify(landData),
     //         success: function (data) {
     //             // var data1 = JSON.parse(data);
     //             // if (data1 == "success") {
@@ -276,6 +290,7 @@ function saveLandData() {
     //         }
     //     });
     // }
+    window.location.replace("solidWaste.php");
 
 }
 

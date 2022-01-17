@@ -64,7 +64,7 @@ require "php/session.php";
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-10 col-xl-6 col-10">
-                                <label for="hospital" class="form-label">No of Hospital</label>
+                                <label for="hospital" class="form-label">No. of Hospitals</label>
                                 <div class="input-group mb-3">
                                     <input type="text" id="hospital" class="form-control" placeholder="Hospital" aria-label="Hospital" aria-describedby="basic-addon2">
                                 </div>
