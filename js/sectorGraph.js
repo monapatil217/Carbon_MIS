@@ -1,13 +1,15 @@
 $(document).ready(function () {
+    getCity();
     document.getElementById("sectorInfo").style.display = "none";
     addChart();
+
 })
 
 function addCityChart() {
 
     document.getElementById("sectorInfo").style.display = "block";
 
-    var type = document.getElementById("city").value;
+    var type = document.getElementById("cityList").value;
 
     $("#chartName").empty();
     var html1 = '<h3>Sectors wise graph of ' + type + ' </h3>';
@@ -25,7 +27,6 @@ function addCityChart() {
         root.setThemes([
             am5themes_Animated.new(root)
         ]);
-
 
         // Create chart
         // https://www.amcharts.com/docs/v5/charts/xy-chart/
@@ -136,10 +137,9 @@ function addCityChart() {
             legend.data.push(series);
         }
 
-        makeSeries("Ch4", "ch4");
+        makeSeries("CH4", "ch4");
         makeSeries("N2O", "n2o");
-        makeSeries("Co2", "co2");
-
+        makeSeries("CO2", "co2");
 
         // Make stuff animate on load
         // https://www.amcharts.com/docs/v5/concepts/animations/
@@ -149,3 +149,33 @@ function addCityChart() {
 
 }
 
+function getCity() {
+    $("#cityList").empty();
+    var cityName = getCityList();
+    var html = '<option selected disabled value="">Choose City</option>'
+        + cityName;
+
+    $("#cityList").append(html);
+
+}
+function getCityList() {
+    var myobj = {};
+    myobj["type"] = "district";
+    var cityName = "";
+    $.ajax({
+        type: "POST",
+        async: false,
+        url: "php/getcity.php",
+        contentType: "application/json",
+        data: JSON.stringify(myobj),
+        success: function (data) {
+            var divList = JSON.parse(data);
+            $.each(divList, function (index, element) {
+
+                cityName += "<option value='" + element.name + "'>" + element.name + "</option>";
+
+            });
+        }
+    });
+    return cityName;
+}

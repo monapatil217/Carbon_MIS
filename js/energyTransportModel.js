@@ -187,7 +187,7 @@ function showTransInput() {
 
 function saveTransData() {
 
-    // window.location.replace("cropLand.php");
+    window.location.replace("cropLand.php");
     var flag = 0;
     var transData = {};
 

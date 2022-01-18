@@ -1,5 +1,5 @@
 <?php
-require "php/session.php";
+// require "php/session.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +8,7 @@ require "php/session.php";
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Graph</title>
+    <title>Raw Data</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -52,7 +52,7 @@ require "php/session.php";
     ?>
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
+    <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
             <!-- <input type="text" class="form-control" id="sectionType" value="secChart" hidden> -->
@@ -69,15 +69,16 @@ require "php/session.php";
                                 <h5>Select City :</h5>
                             </div>
                             <div class="form-group col-md-2">
-                                <select class="form-control" id="city" onchange="addCityChart();">
-                                    <option disabled selected>Select City</option>
+                                <select class="form-control" id="cityList" name="cityList" onchange="addCityChart();">
+                                    <option selected disabled value="">Choose City</option>
+                                    <!-- <option disabled selected>Select City</option>
                                     <option value="Akola">Akola</option>
                                     <option value="Achalpur">Achalpur</option>
                                     <option value="Amravati">Amravati</option>
                                     <option value="Yavatmal">Yavatmal</option>
                                     <option value="Aurangabad">Aurangabad</option>
                                     <option value="Beed">Beed</option>
-                                    <option value="Jalna">Jalna</option>
+                                    <option value="Jalna">Jalna</option> -->
                                 </select>
                             </div>
                         </div>

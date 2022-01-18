@@ -17,9 +17,7 @@ require "php/session.php";
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -41,10 +39,17 @@ require "php/session.php";
   ======================================================== -->
 
     <style>
-    #wwChart {
-        width: 300px;
-        height: 300px;
-    }
+        #wwChart {
+            width: 300px;
+            height: 300px;
+        }
+
+        hr {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border: 1;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
     </style>
 
 </head>
@@ -64,12 +69,10 @@ require "php/session.php";
 
             <div class="row justify-content-center">
 
-                
-
-                <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
+                <div class="col-md-12 col-lg-12  mb-3  s" data-aos-delay="200">
                     <div class="in-sec">
                         <marquee width="100%" direction="left" height="30px" scrollamount="2">
-                             CMD - Cubic meter per day
+                            CMD - Cubic meter per day
                         </marquee>
                         <form class="needs-validation" novalidate>
 
@@ -79,111 +82,7 @@ require "php/session.php";
                                     <button class="btn btn-primary " type="button" onclick="saveWaterData();">NEXT</button>
                                 </div>
                             </div>
-<!--  -->
-                            <!-- <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
-                                    <label for="waterConsumption" class="form-label">Water Consumption</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="waterConsumption" class="form-control"
-                                            placeholder="Consumption" aria-label="Area" aria-describedby="basic-addon2">
-                                        <span class="input-group-text" id="basic-addon2">CMD</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
-                                    <label for="waterGenration" class="form-label">Waste water Generated</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="waterGenration" class="form-control"
-                                            placeholder="Generated" aria-label="Area" aria-describedby="basic-addon2">
-                                        <span class="input-group-text" id="basic-addon2">CMD</span>
-                                    </div>
-                                </div>
 
-                            </div>
-
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
-                                    <label for="waterCollection" class="form-label">Waste water Collection</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="waterCollection" class="form-control"
-                                            placeholder="Collection" aria-label="Area" aria-describedby="basic-addon2">
-                                        <span class="input-group-text" id="basic-addon2">CMD</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
-                                    <label for="waterTreat" class="form-label">Qty of treat waste water</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="waterTreat" class="form-control"
-                                            placeholder="Water Treat" aria-label="Area" aria-describedby="basic-addon2">
-                                        <span class="input-group-text" id="basic-addon2">CMD</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
-                                    <label for="noSTP" class="form-label">No of STP</label>
-                                    <div class="input-group mb-3">
-                                        <input type="text" id="noSTP" class="form-control" placeholder="STP"
-                                            aria-label="Area" aria-describedby="basic-addon2">
-                                        <span class="input-group-text" id="basic-addon2">CMD</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
-                                    
-                                </div>
-                            </div> -->
-
-                            <!-- The below section will open after adding js -->
-
-                            <!-- <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="capacity" placeholder="Capacity" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                                <label for="capacity">Capacity</label>
-                            </div>
-
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="latitude" placeholder="Latitude" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                                <label for="latitude">Latitude</label>
-                            </div>
-
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="logitude" placeholder="Logitude" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                                <label for="logitude">Logitude</label>
-                            </div>
-
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="technology" placeholder="Technology" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                                <label for="technology">Technology</label>
-                            </div>
-
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="waterRecycle" placeholder="Recycling Water" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                                <label for="waterRecycle">Recycling Water</label>
-                            </div>
-                            
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="waterDisposal" placeholder="Disposal of Waste" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                                <label for="waterDisposal">Disposal of Waste</label>
-                            </div> -->
                         </form>
                         <div class="row align-items-center justify-content-center" id="moreInfo">
                             <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
@@ -196,7 +95,7 @@ require "php/session.php";
                 </div>
                 <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
-                    <h3 class="text-center">Carbon Emission from Wastewater  Sector</h3>
+                        <h3 class="text-center">Carbon Emission from Wastewater Sector</h3>
 
                         <ul style="margin-left: 10px;">
                             <li class="popupli">The operation of wastewater treatment plants results in direct emissions, from the biological processes, of greenhouse gases (GHG) such as carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O), as well as indirect emissions resulting from energy generation.</li>
@@ -229,24 +128,24 @@ require "php/session.php";
 
 
     <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    })();
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
     </script>
 
 
@@ -264,7 +163,7 @@ require "php/session.php";
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
-    
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap-show-modal.js"></script>
     <!-- Template Main JS File -->

@@ -71,7 +71,7 @@ require "php/session.php";
                     <div class="in-sec">
                         <h6 class="text-center mb-1">Amount of Electricity Used by Different Sectors</h6>
                         <marquee width="100%" direction="left" height="30px" scrollamount="2">
-                             MW - megawatt / m - month
+                            MW - megawatt / m - month
                         </marquee>
                         <form class="needs-validation" novalidate>
                             <div id="eleInput"></div>
@@ -133,9 +133,9 @@ require "php/session.php";
         </div>
     </div>
     <!-- ***** Footer Start ***** -->
-        <?php
-        include 'footer.php';
-        ?>
+    <?php
+    include 'footer.php';
+    ?>
     <!-- End Footer -->
 
 
@@ -175,7 +175,7 @@ require "php/session.php";
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
-    
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/vendor/jbox/jBox.all.min.js"></script>
     <!-- <script src="assets/js/bootstrap-show-modal.js"></script> -->
@@ -184,7 +184,7 @@ require "php/session.php";
     <script src="js/energyElectricityModel.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-     <script src="js/common.js"></script>
+    <!-- <script src="js/common.js"></script> -->
 
 </body>
 

@@ -63,11 +63,9 @@ require "php/session.php";
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
             <div class="row">
-
-
                 <div class="col-md-12 col-lg-12  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
-                        <h3>Carbon Graph</h3>
+                        <h3>Carbon Emission</h3>
                         <div id="carbonGharph"></div>
                     </div>
                 </div>

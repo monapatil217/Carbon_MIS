@@ -66,7 +66,7 @@
                 <div class="col-md-12 col-lg-12  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
                         <div id="chartName">
-                            <h3> Carbon Contribution by Cities</h3>
+                            <h3> Carbon Contribution by Cities ( tCO2e/day )</h3>
                         </div>
                         <div id="allEmiChart"></div>
 
@@ -77,7 +77,7 @@
                 <div class="col-md-12 col-lg-12  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
                         <div id="chartName">
-                            <h3> Carbon Contribution by Cities in Different Sector</h3>
+                            <h3> Carbon Contribution by Cities in Different Sector ( tCO2e/day )</h3>
                         </div>
                         <div id="allsecEmiChart"></div>
 
@@ -91,7 +91,7 @@
                     <div class="in-sec">
 
                         <div class="row mt-3 text-center">
-                            <h3> Sector-wise Carbon Emission by Cities </h3>
+                            <h3> Sector-wise Carbon Emission by Cities ( tCO2e/day )</h3>
                         </div>
                         <div class="row mt-3 justify-content-center">
 
@@ -100,7 +100,7 @@
                             </div>
                             <div class="form-group col-md-3">
                                 <select class="form-control" id="sectionType" onchange="secEmiChart();">
-                                    <option disabled selected>Select Section</option>
+                                    <option disabled selected>Select Sector</option>
                                     <option value="Electricity">Electricity</option>
                                     <option value="Transport">Transport</option>
 
@@ -131,7 +131,7 @@
                 <div class="col-md-12 col-lg-12  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
                         <div id="chartName">
-                            <h3> Pollutants-wise Carbon Contribution by Cities </h3>
+                            <h3> Pollutant-wise Carbon Contribution by Cities ( tons/day )</h3>
                         </div>
                         <div id="polluEmi"></div>
 
@@ -145,7 +145,7 @@
                     <div class="in-sec">
 
                         <div class="row mt-3 text-center">
-                            <h3> Pollutants-wise Carbon Emission by Cities </h3>
+                            <h3> Pollutants-wise Carbon Emission by Cities ( tons/day )</h3>
                         </div>
                         <div class="row mt-3 justify-content-center">
 
