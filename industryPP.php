@@ -41,10 +41,10 @@ require "php/session.php";
   ======================================================== -->
 
     <style>
-    #indusppChart {
+    /* #indusppChart {
         width: 300px;
         height: 300px;
-    }
+    } */
     </style>
 
 </head>
@@ -59,14 +59,14 @@ require "php/session.php";
     <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
-            <input type="text" class="form-control" id="sectionType" value="indusppChart" hidden>
+            <!-- <input type="text" class="form-control" id="sectionType" value="indusppChart" hidden> -->
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
             
             <div class="row justify-content-center">
 
                 
 
-                <div class="col-md-12 col-lg-5  mb-3" data-aos-delay="200">
+                <div class="col-md-12 col-lg-12  mb-3" data-aos-delay="200">
                     <div class="in-sec">
                         <h6 class="text-center">Industrial Process and Product</h6>
                         <marquee width="100%" direction="left" height="30px">
@@ -110,7 +110,7 @@ require "php/session.php";
                     </div>
                 </div>
 
-                <div class="col-md-12 col-lg-7  mb-3" data-aos-delay="200">
+                <!-- <div class="col-md-12 col-lg-7  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">
                         <h3 class="text-center">Carbon Emission from IPPU Sector</h3>
                         <ul style="margin-left: 10px;">
@@ -123,7 +123,7 @@ require "php/session.php";
                         </div>
 
                     </div>
-                </div>
+                </div> -->
             </div>
 
             
@@ -187,7 +187,7 @@ require "php/session.php";
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap-show-modal.js"></script>
 
-    <script src="js/induGraph.js"></script>
+    <!-- <script src="js/induGraph.js"></script> -->
 <script src="js/industryPPModel.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
