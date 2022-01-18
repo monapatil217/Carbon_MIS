@@ -36,7 +36,7 @@ function showLoginDesign(id) {
             + '<input type="text" class="form-control"  id="username" name="username" placeholder="User Id" required>'
             + '</div>'
             + '<div class="form-group">'
-            + '<input id="password-field" type="password" class="form-control" placeholder="Password" required>'
+            + '<input id="password-field" type="password" class="form-control" name="password" placeholder="Password" required>'
             + '<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>'
             + '</div>'
             + '<div class="form-group">'

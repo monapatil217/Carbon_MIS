@@ -53,7 +53,7 @@
                     </div>
                     <div class="in-sec">
                         <div class="social d-flex text-center">
-                            <a href="#" class="px-2 py-2 mr-md-1 rounded" id="user" onclick="showLoginDesign('user')"><span class="ion-logo-facebook mr-2"></span> User</a>
+                            <a href="#" class="px-2 py-2 mr-md-1 rounded" id="user" onclick="showLoginDesign('user')"><span class="ion-logo-facebook mr-2"></span>Amrut City</a>
                             <a href="#" class="px-2 py-2 ml-md-1 rounded" id="admin" onclick="showLoginDesign('admin')"><span class="ion-logo-twitter mr-2"></span> Admin</a>
                         </div>
                         <form class="needs-validation" action="php/loginId.php" method="POST">
