@@ -12,9 +12,9 @@
 
                 <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> -->
 
-                <li><a class="nav-link scrollto" href="commGhraphPage.php">Graph</a></li>
-                <li><a class="nav-link scrollto" href="allSectionGraph.php">Sector Graph </a></li>
-
+                <li><a class="nav-link scrollto" href="commGhraphPage.php"> Data Analysis</a></li>
+                <li><a class="nav-link scrollto" href="allSectionGraph.php"> Raw Data </a></li>
+                <li><a class="nav-link scrollto" href="emiGraph.php">Carbon Emission</a></li>
 
                 <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                 <li><a class="getstarted scrollto" href="login.php">Logout</a></li>

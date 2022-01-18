@@ -25,7 +25,7 @@
                         <li class="dropdown"><a><span>Agriculture</span> <i class="bi bi-chevron-right"></i></a>
                             <ul>
                                 <li><a href="cropLand.php">Crop Land</a></li>
-                                <li><a href="livestock.php">Live Stack</a></li>
+                                <li><a href="livestock.php">Live Stock</a></li>
                             </ul>
                         </li>
                         <li><a href="forestLand.php">Forest</a></li>

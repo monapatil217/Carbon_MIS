@@ -37,21 +37,29 @@ require "php/session.php";
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+    <style>
+        #livesChart {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
 </head>
 
 <body>
-
     <?php
     include 'header.php';
     ?>
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
+    <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+
+            <input type="text" class="form-control" id="sectionType" value="livesChart" hidden>
 
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
 
             <div class="row justify-content-center">
-                
+
                 <div class="col-md-12 col-lg-5" data-aos-delay="200">
                     <div class="in-sec">
 
@@ -63,7 +71,7 @@ require "php/session.php";
                                     <button class="btn btn-primary " type="button" onclick="saveLiveData();">NEXT</button>
                                 </div>
                             </div>
-                            
+
                         </form>
 
                         <div class="row align-items-center justify-content-center" id="moreInfo">
@@ -74,16 +82,19 @@ require "php/session.php";
                                 </div>
                             </div>
                         </div>
-                       
+
                     </div>
                 </div>
 
                 <div class="col-md-12 col-lg-7  mb-2" data-aos-delay="200">
                     <div class="in-sec infoFont">
-                            <h3 class="text-center">Carbon Emission from Live Stock</h3>
-                            <ul style="margin-left: 10px;">
-                                <li class="popupli"> It has been estimated that over 200 million tonnes of CO2 equivalents are released by Indian livestock each year. </li>
-                            </ul>
+                        <h3 class="text-center">Carbon Emission from Livestock</h3>
+                        <ul style="margin-left: 10px;">
+                            <li class="popupli"> It has been estimated that over 200 million tonnes of CO2 equivalents are released by Indian livestock each year. </li>
+                        </ul>
+
+                        <div id="livesChart"></div>
+
                     </div>
                 </div>
             </div>
@@ -128,6 +139,13 @@ require "php/session.php";
         })();
     </script>
 
+
+    <!-- Resources -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
@@ -140,8 +158,8 @@ require "php/session.php";
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-
     <script src="js/liveStock.js"></script>
+    <script src="js/induGraph.js"></script>
 </body>
 
 </html>
