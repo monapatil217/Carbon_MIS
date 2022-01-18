@@ -30,7 +30,7 @@ if ($type == "Electricity") {
             array_push($finalArray, $mainArray);
         }
     }
-}else if ($type == "Forest") {
+} else if ($type == "Forest") {
 
     $query2 = "SELECT * FROM forest_data WHERE b_id='" . $basicId . "'";
 
@@ -51,7 +51,7 @@ if ($type == "Electricity") {
             array_push($finalArray, $mainArray);
         }
     }
-}else if ($type == "CropLand") {
+} else if ($type == "CropLand") {
 
     $query2 = "SELECT * FROM crop_data WHERE b_id='" . $basicId . "'";
 
@@ -72,7 +72,7 @@ if ($type == "Electricity") {
             array_push($finalArray, $mainArray);
         }
     }
-}else if ($type == "Transport") {
+} else if ($type == "Transport") {
 
     $query2 = "SELECT * FROM trans_data WHERE b_id='" . $basicId . "'";
 
@@ -100,7 +100,7 @@ if ($type == "Electricity") {
             array_push($finalArray, $mainArray);
         }
     }
-}else if ($type == "Livestock") { // pending
+} else if ($type == "Livestock") { // pending
 
     $query2 = "SELECT * FROM live_data WHERE b_id='" . $basicId . "'";
 
@@ -115,7 +115,7 @@ if ($type == "Electricity") {
             $mainArray['check'] = "true";
             $deleData = array();
             $eleData = [];
-             $eleData['ind_cat'] = $row['ind_cat'];
+            $eleData['ind_cat'] = $row['ind_cat'];
             $eleData['cross_cat'] = $row['cross_cat'];
             $eleData['buff'] = $row['buff'];
             $eleData['sheep'] = $row['sheep'];
@@ -130,7 +130,7 @@ if ($type == "Electricity") {
             array_push($finalArray, $mainArray);
         }
     }
-}else if ($type == "LandUse") { // pending
+} else if ($type == "LandUse") { // pending
 
     $query2 = "SELECT * FROM land_data WHERE b_id='" . $basicId . "'";
 
@@ -160,7 +160,7 @@ if ($type == "Electricity") {
             array_push($finalArray, $mainArray);
         }
     }
-}else if ($type == "SolidWaste") { // pending
+} else if ($type == "SolidWaste") { // pending
 
     $query2 = "SELECT * FROM solid_data WHERE b_id='" . $basicId . "'";
 
@@ -184,7 +184,7 @@ if ($type == "Electricity") {
             array_push($finalArray, $mainArray);
         }
     }
-}else if ($type == "WasteWater") { // pending
+} else if ($type == "WasteWater") { // pending
 
     $query2 = "SELECT * FROM waste_data WHERE b_id='" . $basicId . "'";
 
@@ -192,7 +192,6 @@ if ($type == "Electricity") {
     $rowcount = mysqli_num_rows($result);
     if ($rowcount == 0) {
         $mainArray['check'] = "false";
-        array_push($finalArray, $mainArray);
     } else {
         while ($row = mysqli_fetch_array($result)) {
 
@@ -206,10 +205,32 @@ if ($type == "Electricity") {
             $cData['n_stp'] = $row['n_stp'];
             array_push($deleData, $cData);
             $mainArray['cData'] =   $deleData;
-            array_push($finalArray, $mainArray);
         }
     }
-}else if ($type == "Energy") {
+
+    $query3 = "SELECT * FROM stp WHERE b_id='" . $basicId . "'";
+    $result = mysqli_query($conn, $query3)  or die(mysqli_error($conn));
+    $rowcount = mysqli_num_rows($result);
+    $stpData = [];
+    if ($rowcount == 0) {
+        $mainArray['stpData'] =   $stpData;
+    } else {
+        while ($row = mysqli_fetch_array($result)) {
+
+            $cData = [];
+            $cData['cap'] = $row['cap'];
+            $cData['lat'] = $row['lat'];
+            $cData['long'] = $row['long'];
+            $cData['tech'] = $row['tech'];
+            $cData['recycle'] = $row['recycle'];
+            $cData['dispose'] = $row['dispose'];
+
+            array_push($stpData, $cData);
+        }
+        $mainArray['stpData'] =   $stpData;
+    }
+    array_push($finalArray, $mainArray);
+} else if ($type == "Energy") {
 
     $query2 = "SELECT * FROM indu_eng_data WHERE b_id='" . $basicId . "'";
 

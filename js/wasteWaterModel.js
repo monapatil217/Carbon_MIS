@@ -41,7 +41,9 @@ function showWaterInput() {
                 var check = element.check;
 
                 if (check == "true") {
+                    var i = 1;
                     var eledata = element.cData;
+                    var stpdata = element.stpData;
                     $.each(eledata, function (index, element1) {
 
                         html = '<div class="row justify-content-center">'
@@ -95,8 +97,71 @@ function showWaterInput() {
                             + '</div>'
 
 
-                            + '<div class="row justify-content-center" id="adddstp"> </div>';
+                            + '<div class="row justify-content-center" id="adddstp">';
+
+                        $.each(stpdata, function (index, element2) {
+
+                            html += '<hr>'
+                                + '<div class="row  text-center ">'
+                                + '<h4>Details About STP ' + i + ' </h4>'
+
+                                + ' </div>'
+                                + '<div class="row justify-content-center">'
+                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+
+                                + '<label for="capacity" class="form-label"> Capacity</label>'
+                                + '<div class="input-group mb-2">'
+                                + '<input type="text" id="capacity" name="capacity" class="form-control" placeholder="Capacity" value="' + element2.cap + '"  aria-label="Residential" aria-describedby="basic-addon2">'
+                                + '</div>'
+
+                                + '</div>'
+                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+
+                                + '<label for="latitude" class="form-label"> Latitude</label>'
+                                + '<div class="input-group mb-2">'
+                                + '<input type="text" id="latitude" name="latitude" class="form-control" placeholder="Latitude" value="' + element2.lat + '"  aria-label="Residential" aria-describedby="basic-addon2">'
+                                + '</div>'
+
+                                + '</div>'
+                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+
+                                + '<label for="logitude" class="form-label"> Logitude</label>'
+                                + '<div class="input-group mb-2">'
+                                + '<input type="text" id="logitude" name="logitude" class="form-control" placeholder="Logitude" value="' + element2.long + '"  aria-label="Residential" aria-describedby="basic-addon2">'
+                                + '</div>'
+
+                                + '</div>'
+                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+
+                                + '<label for="technology" class="form-label"> Technology</label>'
+                                + '<div class="input-group mb-2">'
+                                + '<input type="text" id="technology" name="technology" class="form-control" placeholder="Technology" value="' + element2.tech + '"   aria-label="Residential" aria-describedby="basic-addon2">'
+                                + '</div>'
+
+                                + '</div>'
+                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+
+                                + '<label for="waterRecycle" class="form-label"> Recycling Water</label>'
+                                + '<div class="input-group mb-2">'
+                                + '<input type="text" id="waterRecycle" name="waterRecycle" class="form-control" placeholder="Recycling Water" value="' + element2.recycle + '"  aria-label="Residential" aria-describedby="basic-addon2">'
+                                + '</div>'
+
+                                + '</div>'
+                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+
+                                + '<label for="waterDisposal" class="form-label">Disposal of Waste</label>'
+                                + '<div class="input-group mb-2">'
+                                + '<input type="text" id="waterDisposal" name="waterDisposal" class="form-control" placeholder="Disposal of Waste" value="' + element2.dispose + '"  aria-label="Residential" aria-describedby="basic-addon2">'
+                                + '</div>'
+
+                                + ' </div>'
+                                + '  </div>';
+                            i++;
+                        });
+
+                        html += '</div>';
                     });
+
                 }
                 else {
 
