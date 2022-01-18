@@ -65,12 +65,12 @@ require "php/session.php";
 
                 <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
                     <div class="in-sec">
-
-                        <form class="needs-validation" novalidate>
-                            <marquee width="100%" direction="left" height="30px">
-                                t - tons / d - day / FO - Fuel Oil / LDO - Light Diesel Oil / HSD - High Speed
+                            <marquee width="100%" direction="left" height="30px" scrollamount="2">
+                                MTD - Metric ton per day /  FO - Fuel Oil / LDO - Light Diesel Oil / HSD - High Speed
                                 Diesel / PNG - Piped Natural gas / NG - Natural Gas
                             </marquee>
+                        <form class="needs-validation" novalidate>
+                            
 
                             <div id="energyIndInput"></div>
                             <div class="row ">
@@ -93,7 +93,7 @@ require "php/session.php";
                 </div>
                 <div class="col-md-12 col-lg-8 mb-3" data-aos-delay="200">
                     <div class="in-sec">
-                        <h3 class="text-center">Carbon Emission from Energy</h3>
+                        <h3 class="text-center">Carbon Emission from  Industrial Energy Use</h3>
                         <div class="row justify-content-center">
                             <div id="chartName">
                             </div>

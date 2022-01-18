@@ -70,9 +70,9 @@ function showlandUse() {
                             + '    </div>'
 
                             + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + '        <label for="defence" class="form-label"> Defence Area</label>'
+                            + '        <label for="public" class="form-label"> Public </label>'
                             + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="defence" name="defence" class="form-control" value="' + element1.defence + '" placeholder="Defence" aria-label="Defence" aria-describedby="basic-addon2">'
+                            + '            <input type="text" id="public" name="public" class="form-control" value="' + element1.public + '" placeholder="Public" aria-label="Public" aria-describedby="basic-addon2">'
                             + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                             + '        </div>'
                             + '    </div>'
@@ -80,17 +80,17 @@ function showlandUse() {
 
                             + '<div class="row justify-content-center">'
                             + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + '        <label for="agriculture" class="form-label"> Agriculture Area</label>'
+                            + '        <label for="pUtility" class="form-label"> Public Utilities Area</label>'
                             + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="agriculture" name="agriculture" class="form-control" value="' + element1.agri + '" placeholder="Agriculture" aria-label="Agriculture" aria-describedby="basic-addon2">'
+                            + '            <input type="text" id="pUtility" name="pUtility" class="form-control" value="' + element1.p_utility + '" placeholder="pUtility" aria-label="pUtility" aria-describedby="basic-addon2">'
                             + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                             + '        </div>'
                             + '    </div>'
 
                             + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + '        <label for="vacentLand" class="form-label"> Vacant Land Area</label>'
+                            + '        <label for="transport" class="form-label"> Transport</label>'
                             + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="vacentLand" name="vacentLand" class="form-control" value="' + element1.vaca + '" placeholder="Vacant Land" aria-label="Vacant Land" aria-describedby="basic-addon2">'
+                            + '            <input type="text" id="transport" name="transport" class="form-control" value="' + element1.transport + '" placeholder="Transport" aria-label="Transport" aria-describedby="basic-addon2">'
                             + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                             + '        </div>'
                             + '    </div>'
@@ -98,16 +98,16 @@ function showlandUse() {
 
                             + '<div class="row justify-content-center">'
                             + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + '        <label for="roadArea" class="form-label"> Under Road Area</label>'
+                            + '        <label for="greenArea" class="form-label">Green Area</label>'
                             + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="roadArea" name="roadArea" class="form-control" value="' + element1.u_road + '" placeholder="Under Road" aria-label="Under Road" aria-describedby="basic-addon2">'
+                            + '            <input type="text" id="greenArea" name="greenArea" class="form-control" value="' + element1.green_a + '" placeholder="Green" aria-label="Green" aria-describedby="basic-addon2">'
                             + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                             + '        </div>'
                             + '    </div>'
                             + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + '        <label for="greenArea" class="form-label"> Under Green Area</label>'
+                            + '        <label for="rCreational" class="form-label"> Recreational  Area</label>'
                             + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="greenArea" name="greenArea" class="form-control" value="' + element1.u_green + '" placeholder="Under Green" aria-label="Under Green" aria-describedby="basic-addon2">'
+                            + '            <input type="text" id="rCreational" name="rCreational" class="form-control" value="' + element1.r_creational + '" placeholder="Recreational  Area" aria-label="Recreational  Area" aria-describedby="basic-addon2">'
                             + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                             + '        </div>'
                             + '    </div>'
@@ -123,9 +123,9 @@ function showlandUse() {
                             + '    </div>'
 
                             + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + '        <label for="slum" class="form-label"> Slum Area</label>'
+                            + '        <label for="hills" class="form-label"> Hills and Hill Slopes Area</label>'
                             + '            <div class="input-group mb-2">'
-                            + '                <input type="text" id="slum" name="slum" class="form-control" value="' + element1.slum + '" placeholder="Slum" aria-label="Slum" aria-describedby="basic-addon2">'
+                            + '                <input type="text" id="hills" name="hills" class="form-control" value="' + element1.hills + '" placeholder="Hills and Hill Slopes" aria-label="Hills and Hill Slopes" aria-describedby="basic-addon2">'
                             + '                <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                             + '            </div>'
                             + '        </div>'
@@ -163,9 +163,35 @@ function showlandUse() {
                         + '    </div>'
 
                         + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + '        <label for="defence" class="form-label"> Defence Area</label>'
+                        + '        <label for="public" class="form-label"> Public and Semi Public</label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="defence" name="defence" class="form-control" placeholder="Defence" aria-label="Defence" aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="public" name="public" class="form-control" placeholder="Public and Semi Public" aria-label="Public and Semi Public" aria-describedby="basic-addon2">'
+                        + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                        + '        </div>'
+                        + '    </div>'
+                        + '</div>'
+
+                        + '<div class="row justify-content-center">'
+                        // + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                        // + '        <label for="agriculture" class="form-label"> Semi Public Area</label>'
+                        // + '        <div class="input-group mb-2">'
+                        // + '            <input type="text" id="agriculture" name="agriculture" class="form-control" placeholder="Semi Public" aria-label="Semi Public" aria-describedby="basic-addon2">'
+                        // + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                        // + '        </div>'
+                        // + '    </div>'
+
+                        + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                        + '        <label for="pUtility" class="form-label"> Public Utilities Area</label>'
+                        + '        <div class="input-group mb-2">'
+                        + '            <input type="text" id="pUtility" name="pUtility" class="form-control" placeholder="Public Utilities" aria-label="Public Utilities" aria-describedby="basic-addon2">'
+                        + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
+                        + '        </div>'
+                        + '    </div>'
+
+                        + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
+                        + '        <label for="transport" class="form-label"> Transport</label>'
+                        + '        <div class="input-group mb-2">'
+                        + '            <input type="text" id="transport" name="transport" class="form-control" placeholder="Transport " aria-label="Transport " aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                         + '        </div>'
                         + '    </div>'
@@ -173,34 +199,16 @@ function showlandUse() {
 
                         + '<div class="row justify-content-center">'
                         + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + '        <label for="agriculture" class="form-label"> Agriculture Area</label>'
+                        + '        <label for="green" class="form-label"> Green Area</label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="agriculture" name="agriculture" class="form-control" placeholder="Agriculture" aria-label="Agriculture" aria-describedby="basic-addon2">'
-                        + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
-                        + '        </div>'
-                        + '    </div>'
-
-                        + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + '        <label for="vacentLand" class="form-label"> Vacant Land Area</label>'
-                        + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="vacentLand" name="vacentLand" class="form-control" placeholder="Vacant Land" aria-label="Vacant Land" aria-describedby="basic-addon2">'
-                        + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
-                        + '        </div>'
-                        + '    </div>'
-                        + '</div>'
-
-                        + '<div class="row justify-content-center">'
-                        + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + '        <label for="roadArea" class="form-label"> Under Road Area</label>'
-                        + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="roadArea" name="roadArea" class="form-control" placeholder="Under Road" aria-label="Under Road" aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="green" name="green" class="form-control" placeholder="Green Area " aria-label="Green Area " aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                         + '        </div>'
                         + '    </div>'
                         + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + '        <label for="greenArea" class="form-label"> Under Green Area</label>'
+                        + '        <label for="reCreational" class="form-label"> Recreational  Area</label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="greenArea" name="greenArea" class="form-control" placeholder="Under Green" aria-label="Under Green" aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="reCreational " name="reCreational" class="form-control" placeholder="Recreational " aria-label="Recreational" aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                         + '        </div>'
                         + '    </div>'
@@ -216,14 +224,15 @@ function showlandUse() {
                         + '    </div>'
 
                         + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + '        <label for="slum" class="form-label"> Slum Area</label>'
+                        + '        <label for="hills" class="form-label">Hills and Hill Slopes Area</label>'
                         + '            <div class="input-group mb-2">'
-                        + '                <input type="text" id="slum" name="slum" class="form-control" placeholder="Slum" aria-label="Slum" aria-describedby="basic-addon2">'
+                        + '                <input type="text" id="hills" name="hills" class="form-control" placeholder="Hills" aria-label="Hills" aria-describedby="basic-addon2">'
                         + '                <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                         + '            </div>'
                         + '        </div>'
                         + '    </div>'
-                        + '</div>';
+                        + '</div>'
+                        ;
                 }
             });
         }
@@ -244,30 +253,30 @@ function saveLandData() {
 
     var waterBodies = document.getElementById("waterBodies").value;
 
-    var defence = document.getElementById("defence").value;
+    var public = document.getElementById("public").value;
 
-    var agriculture = document.getElementById("agriculture").value;
+    var pUtility = document.getElementById("pUtility").value;
 
-    var vacentLand = document.getElementById("vacentLand").value;
+    var transport = document.getElementById("transport").value;
 
-    var roadArea = document.getElementById("roadArea").value;
+    var reCreational = document.getElementById("reCreational").value;
 
     var greenArea = document.getElementById("greenArea").value;
 
     var industrial = document.getElementById("industrial").value;
 
-    var slum = document.getElementById("slum").value;
+    var hills = document.getElementById("hills").value;
 
     landData["residential"] = residential;
     landData["commercial"] = commercial;
     landData["waterBodies"] = waterBodies;
-    landData["defence"] = defence;
-    landData["agriculture"] = agriculture;
-    landData["vacentLand"] = vacentLand;
-    landData["roadArea"] = roadArea;
+    landData["public"] = public;
+    landData["pUtility"] = pUtility;
+    landData["transport"] = transport;
+    landData["reCreational"] = reCreational;
     landData["greenArea"] = greenArea;
     landData["industrial"] = industrial;
-    landData["slum"] = slum;
+    landData["hills"] = hills;
 
 
 
@@ -312,7 +321,7 @@ function showLandUInfo() {
         + '<div class="row mt-2 mb-3">'
         + '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'
         + '<ul style="margin-left: 10px;">'
-        // + '<li class="popupli">Total Emissions in 2019 = 6,558 Million Metric Tons of CO2 equivalent.</li>'
+        + '<li class="popupli">Human activities impact terrestrial sinks, through land use, land-use change and forestry (LULUCF) activities, consequently, the exchange of CO2 (carbon cycle) between the terrestrial biosphere system and the atmosphere is altered.Mitigation can be achieved through activities in the LULUCF sector that increase the removals of greenhouse gases (GHGs) from the atmosphere or decrease emissions by halting the loss of carbon stocks .</li>'
         // + '<li class="popupli">Globally cotton cultivation accounts for 220 million metric tons of CO2 per year.</li>'
         // + '<li class="popupli">Cropland-based agricultural activities account for 24.17 percent of India’s total methane and 95.84 percent of the total nitrous oxide emission from the agricultural sector.</li>'
         + '</ul>'

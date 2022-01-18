@@ -92,9 +92,7 @@ require "php/session.php";
                         <h3 class="text-center">Carbon Emission from Land Use Sector </h3>
 
                          <ul style="margin-left: 10px;">
-                                <li class="popupli"> It has been defined as "the purposes and activities through which people interact
-                                with land and terrestrial ecosystems the total of arrangements, activities,
-                                and inputs that people undertake in a certain land type.</li>
+                                <li class="popupli"> Land plays an important role in global cycles of greenhouse gases (GHGs, the major GHGs are carbon dioxide (CO2), methane (CH4) and nitrous oxide (N2O)). Land use activities can result in emissions of such greenhouse gases to the atmosphere or removal of greenhouse gases from the atmosphere.</li>
                             </ul>
                             <div class="row justify-content-center">
                                 <div id="chartName">

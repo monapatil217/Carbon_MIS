@@ -114,8 +114,7 @@ require "php/session.php";
                     <div class="in-sec infoFont">
                         <h3 class="text-center">Carbon Emission from IPPU Sector</h3>
                         <ul style="margin-left: 10px;">
-                            <li class="popupli"> Total Emissions in 2019 = 6,558 Million Metric Tons of CO2 equivalent.
-                            </li>
+                            <li class="popupli"> Industries contribute approximately one-fourth of India’s total GHG emissions. The Industrial sector emissions have been developed using a systematic approach of assessing a wide range of fuel consumption, industrial process, and product use from more than two lacs industrial units.</li>
                         </ul>
                         <div class="row justify-content-center">
                             <div id="chartName">

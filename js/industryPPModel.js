@@ -536,27 +536,21 @@ function showTransInput() {
 
 function saveIndPPData() {
 
-    window.location.replace("fueluseincity.php");
+    var flag = 0;
+    var ppData = {};
 
-    // var flag = 0;
-    // var userData = {};
+    var relec = document.getElementById("relec").value;
 
-    // var relec = document.getElementById("relec").value;
-    // flag += customInputValidator(relec, "relec");
+    var celec = document.getElementById("celec").value;
 
-    // var celec = document.getElementById("celec").value;
-    // flag += customInputValidator(celec, "celec");
+    var selec = document.getElementById("selec").value;
 
-    // var selec = document.getElementById("selec").value;
-    // flag += customInputValidator(selec, "selec");
+    var slelec = document.getElementById("slelec").value;
 
-    // var slelec = document.getElementById("slelec").value;
-    // flag += customInputValidator(slelec, "slelec");
-
-    // userData["relec"] = relec;
-    // userData["celec"] = celec;
-    // userData["selec"] = selec;
-    // userData["slelec"] = slelec;
+    ppData["relec"] = relec;
+    ppData["celec"] = celec;
+    ppData["selec"] = selec;
+    ppData["slelec"] = slelec;
 
     // if (flag == 0) {
     //     $.ajax({
@@ -564,7 +558,7 @@ function saveIndPPData() {
     //         async: false,
     //         url: "php/.php",
     //         contentType: "application/json",
-    //         data: JSON.stringify(userData),
+    //         data: JSON.stringify(ppData),
     //         success: function (data) {
     //             // var data1 = JSON.parse(data);
     //             // if (data1 == "success") {
@@ -577,6 +571,8 @@ function saveIndPPData() {
     //         }
     //     });
     // }
+
+    window.location.replace("fueluseincity.php");
 
 }
 
@@ -598,11 +594,11 @@ function showPPInfo() {
         + '<div class="row mt-2 mb-3">'
         + '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'
         + '<ul style="margin-left: 10px;">'
-        + '<li class="popupli">Total Emissions in 2019 = 6,558 Million Metric Tons of CO2 equivalent.</li>'
-        + '<li class="popupli">CO2 accounts for about 76 percent of total greenhouse gas emissions. Methane, primarily from agriculture, contributes 16 percent of greenhouse . </li>'
-        + '<li class="popupli">Gas emissions and nitrous oxide, mostly from industry and agriculture, contributes 6 percent to global emissions.</li>'
-        + '<li class="popupli">Carbon dioxide emissions from fossil fuel and industrial purposes in India totaled 2,412 million metric tons in 2020.</li>'
-        + '<li class="popupli">This was a reduction of six percent compared with 2019 levels, a year in which emissions in India peaked.</li>'
+        + '<li class="popupli">Over the past few years, GHG emissions from the manufacturing activities in India have increased at a rapid rate of 8 per cent (CAGR); rising from ~315 Million Tonnes (MMT) of carbon dioxide equivalent (CO2e) in 2005, to ~623 MMT in 2013. This includes combined emissions from energy use, as well as industrial process and product use (IPPU).</li>'
+        // + '<li class="popupli">CO2 accounts for about 76 percent of total greenhouse gas emissions. Methane, primarily from agriculture, contributes 16 percent of greenhouse . </li>'
+        // + '<li class="popupli">Gas emissions and nitrous oxide, mostly from industry and agriculture, contributes 6 percent to global emissions.</li>'
+        // + '<li class="popupli">Carbon dioxide emissions from fossil fuel and industrial purposes in India totaled 2,412 million metric tons in 2020.</li>'
+        // + '<li class="popupli">This was a reduction of six percent compared with 2019 levels, a year in which emissions in India peaked.</li>'
         + '</ul>'
         // +'<br>Despite its soaring energy needs, India has one of the lowest per capita rates of consumption of power in the world - 734 units as compared to a world average of 2,429 units. </b></p>'
         // +'<center> <a class="my-3" href="http://www.ghgplatform-india.org/emissionestimates-phase2" target="_blank" rel="noopener noreferrer">Reference</a></center>' 

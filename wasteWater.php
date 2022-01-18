@@ -68,6 +68,9 @@ require "php/session.php";
 
                 <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
                     <div class="in-sec">
+                        <marquee width="100%" direction="left" height="30px" scrollamount="2">
+                             CMD - Cubic meter per day
+                        </marquee>
                         <form class="needs-validation" novalidate>
 
                             <div id="waterInput"></div>
@@ -76,9 +79,9 @@ require "php/session.php";
                                     <button class="btn btn-primary " type="button" onclick="saveWaterData();">NEXT</button>
                                 </div>
                             </div>
-
+<!--  -->
                             <!-- <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                     <label for="waterConsumption" class="form-label">Water Consumption</label>
                                     <div class="input-group mb-3">
                                         <input type="text" id="waterConsumption" class="form-control"
@@ -86,10 +89,7 @@ require "php/session.php";
                                         <span class="input-group-text" id="basic-addon2">CMD</span>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                     <label for="waterGenration" class="form-label">Waste water Generated</label>
                                     <div class="input-group mb-3">
                                         <input type="text" id="waterGenration" class="form-control"
@@ -97,10 +97,11 @@ require "php/session.php";
                                         <span class="input-group-text" id="basic-addon2">CMD</span>
                                     </div>
                                 </div>
+
                             </div>
 
                             <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                     <label for="waterCollection" class="form-label">Waste water Collection</label>
                                     <div class="input-group mb-3">
                                         <input type="text" id="waterCollection" class="form-control"
@@ -108,10 +109,8 @@ require "php/session.php";
                                         <span class="input-group-text" id="basic-addon2">CMD</span>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                     <label for="waterTreat" class="form-label">Qty of treat waste water</label>
                                     <div class="input-group mb-3">
                                         <input type="text" id="waterTreat" class="form-control"
@@ -122,13 +121,17 @@ require "php/session.php";
                             </div>
 
                             <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
+                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                     <label for="noSTP" class="form-label">No of STP</label>
                                     <div class="input-group mb-3">
                                         <input type="text" id="noSTP" class="form-control" placeholder="STP"
                                             aria-label="Area" aria-describedby="basic-addon2">
                                         <span class="input-group-text" id="basic-addon2">CMD</span>
                                     </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
+                                    
                                 </div>
                             </div> -->
 
@@ -193,7 +196,11 @@ require "php/session.php";
                 </div>
                 <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
-                    <h3 class="text-center">Carbon Emission from Waste Water Sector</h3>
+                    <h3 class="text-center">Carbon Emission from Wastewater  Sector</h3>
+
+                        <ul style="margin-left: 10px;">
+                            <li class="popupli">The operation of wastewater treatment plants results in direct emissions, from the biological processes, of greenhouse gases (GHG) such as carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O), as well as indirect emissions resulting from energy generation.</li>
+                        </ul>
                         <div class="row justify-content-center">
                             <div id="chartName">
                             </div>

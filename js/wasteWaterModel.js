@@ -219,7 +219,7 @@ function showWaterInfo() {
         + '<div class="row mt-2 mb-3">'
         + '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">'
         + '<ul style="margin-left: 10px;">'
-        + '<li class="popupli"> Currently, India has the capacity to treat approximately 37% of its wastewater, or 22,963 million litres per day (MLD), against a daily sewage generation of approximately 61, 754 MLD according to the 2015 report of the Central Pollution Control Board..</li>'
+        + '<li class="popupli"> In India, the present treatment plants of capacity 15 997 million litres per day (MLD) contributes towards GHG emissions of 7.3 Mt of CO2-eq/year.</li>'
         // + '<li class="popupli">Whereas petrol has a lower carbon content and produces about 2.39 kgs of co2 per liter.</li>'
         // + '<li class="popupli">Around 60.9% installed generation capacity is due to fossil fuel. </li>'
         // + '<li class="popupli">Around 37.9% installed generation capacity is due to renewable energy sources.</li>'

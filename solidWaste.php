@@ -80,37 +80,45 @@ require "php/session.php";
 
                             <!-- The below section will open after adding js -->
 
-                            <!-- <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="areaDumping" placeholder="Arera of Dumping Yard" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
+                           <!-- <div class="row justify-content-center">
+                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
+                                    <label for="aDumping" class="form-label"> Arera of Dumping Yard</label>
+                                    <div class="input-group mb-2">
+                                    <input type="text" id="aDumping" name="aDumping" class="form-control" placeholder="Arera of Dumping Yard" aria-label="Arera of Dumping Yard" aria-describedby="basic-addon2">
+                                    <span class="input-group-text" id="basic-addon2">sq.km</span>
+                                    </div>
+                                    
                                 </div>
-                                <label for="areaDumping">Arera of Dumping Yard</label>
+
+                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
+                                    <label for="latitude" class="form-label"> Latitude</label>
+                                    <div class="input-group mb-2">
+                                    <input type="text" id="latitude" name="latitude" class="form-control" placeholder="Latitude" aria-label="Latitude" aria-describedby="basic-addon2">
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="latitude" placeholder="Latitude" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
+                                    <label for="logitude" class="form-label"> Logitude</label>
+                                    <div class="input-group mb-2">
+                                    <input type="text" id="logitude" name="logitude" class="form-control" placeholder="Logitude" aria-label="Logitude" aria-describedby="basic-addon2">
+                                    </div>
                                 </div>
-                                <label for="latitude">Latitude</label>
-                            </div>
 
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="logitude" placeholder="Logitude" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
+                                <div class="col-md-6 col-lg-10 col-xl-6 col-10">
+                                    <label for="appWaste" class="form-label">Approximate Waste</label>
+                                    <div class="input-group mb-2">
+                                    <input type="text" id="appWaste" name="appWaste" class="form-control" placeholder="Approximate Waste" aria-label="Approximate Waste" aria-describedby="basic-addon2">
+                                   <span class="input-group-text" id="basic-addon2">MTD</span>
+                                    </div>
+                                    
                                 </div>
-                                <label for="logitude">Logitude</label>
-                            </div>
-
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="AppWaste" placeholder="Approximate Waste" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid data.
-                                </div>
-                                <label for="AppWaste">Approximate Waste</label>
                             </div> -->
+
+                            
+
+                            
                         </form>
                         <div class="row align-items-center justify-content-center" id="moreInfo">
                             <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
