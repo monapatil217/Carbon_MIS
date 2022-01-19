@@ -39,11 +39,11 @@ require "php/session.php";
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-    <style>
+    <!-- <style>
     #solidChart {
         width: 300px;
         height: 300px;
-    }
+    } -->
     </style>
 
 </head>
@@ -59,14 +59,14 @@ require "php/session.php";
     <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
-            <input type="text" class="form-control" id="sectionType" value="solidChart" hidden>
+            <!-- <input type="text" class="form-control" id="sectionType" value="solidChart" hidden> -->
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
 
             <div class="row justify-content-center">
 
                
 
-                <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
+                <div class="col-md-12 col-lg-12 mb-3" data-aos-delay="200">
                     <div class="in-sec">
                         <!-- <h4 class="text-center mb-2">Solid Waste</h4> -->
                         <form class="needs-validation" novalidate>
@@ -130,7 +130,7 @@ require "php/session.php";
 
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
+                <!-- <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
                     <h3 class="text-center">Carbon Emission from Solid Waste Sector</h3>
                         <div class="row justify-content-center">
@@ -139,7 +139,7 @@ require "php/session.php";
                             <div id="solidChart"></div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section><!-- End Hero -->
@@ -203,7 +203,7 @@ require "php/session.php";
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-    <script src="js/induGraph.js"></script>
+    <!-- <script src="js/induGraph.js"></script> -->
      <script src="js/solidWasteModel.js"></script>
 </body>
 

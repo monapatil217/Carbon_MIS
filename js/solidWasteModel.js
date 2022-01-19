@@ -86,45 +86,171 @@ function showSolidInput() {
                 }
                 else {
 
-                    html = '<div class="row justify-content-center">'
-                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                        + '<label for="solidGen" class="form-label">Solid waste Generation</label>'
+                    html = '<div id="faq_pp" class="faq section-bg_pp">'
+                        + '<div class="faq-list faq_list_e">'
+                        + '<ul>'
+
+                        + '<li data-aos="fade-up">'
+                        + '<a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Municipal Solid Waste <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>'
+                        + '<div id="faq-list-1" class="collapse show extra" data-bs-parent=".faq-list">'
+                        + '<h6 class="text-center">Quantity of Municipal Solid Waste </h6> '
+
+                        + '<div class="row">'
+                        + '    <div class="col-md-6 col-lg-4 col-xl-4 col-10 mt-3">'
+                        + '        <label for="generated" class="form-label">Generation </label>'
+                        + '        <div class="input-group mb-2">'
+                        + '            <input type="text" id="generated" name="generated" class="form-control" placeholder="Generation" aria-label="Generation" aria-describedby="basic-addon2">'
+                        + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+                        + '        </div>'
+                        + '    </div>'
+
+                        + '    <div class="col-md-6 col-lg-4 col-xl-4 col-10 mt-3">'
+                        + '        <label for="collection" class="form-label"> Collection</label>'
+                        + '        <div class="input-group mb-2">'
+                        + '            <input type="text" id="collection" name="collection" class="form-control" placeholder="Collection" aria-label="Collection" aria-describedby="basic-addon2">'
+                        + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+                        + '        </div>'
+                        + '    </div>'
+
+                        + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10 mt-3">'
+                        + '        <label for="treatment" class="form-label">Treatment</label>'
+                        + '        <div class="form-group col-md-2  col-xl-10">'
+                        + '             <select class="form-control" id = "treatment" onchange = "addTreatmentType();" >'
+                        + '                 <option disabled selected> Treatment Type</option>'
+                        + '                 <option value="Composted">Composted</option>'
+                        + '                 <option value="Disposal">Disposal</option>'
+                        + '                 <option value="Incineration">Incineration</option>'
+                        + '             </select >'
+                        + '         </div >'
+                        + '    </div>'
+                        + '</div>'
+
+                        + '<div class="row">'
+                        + '<div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+                        + '<div id="comp">'
+
+                        + '   </div>'
+                        + '   </div>'
+
+                        + '<div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+                        + '<div id="disp">'
+
+                        + '   </div>'
+                        + '   </div>'
+
+                        + '<div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+
+                        + '<div id="incine">'
+
+                        + '   </div>'
+                        + '   </div>'
+                        + '</div>'
+
+                        + '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                        + '<label for="dumpingYard" class="form-label">No. of Dumping Yard</label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="solidGen" name="solidGen" class="form-control" placeholder="Generation" aria-label="Area" aria-describedby="basic-addon2">'
-                        + '<span class="input-group-text" id="basic-addon2">MTD</span>'
+                        + '<input type="text" id="dumpingYard" name="dumpingYard" class="form-control" placeholder="Dumping Yard"  onchange="addDumpingYard();" aria-label="Dumping Yard" aria-describedby="basic-addon2">'
+                        // + '<span class="input-group-text" id="basic-addon2">CMD</span>'
                         + '</div>'
                         + '</div>'
                         + '</div>'
 
-                        + '<div class="row justify-content-center">'
-                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                        + '<label for="solidColl" class="form-label">Solid Waste Collection</label>'
-                        + '<div class="input-group mb-2">'
-                        + '<input type="text" id="solidColl" name="solidColl" class="form-control" placeholder="Collection" aria-label="Area" aria-describedby="basic-addon2">'
-                        + '<span class="input-group-text" id="basic-addon2">MTD</span>'
-                        + '</div>'
-                        + '</div>'
+                        + '<div class="row justify-content-center" id="adddDYard"> </div>'
+
+                        + ' <div class="row">'
+                        + '<div class="col-md-12 mb-3 mt-3 text-center">'
+                        + ' <button class="btn btn-primary " type="button" >SAVE</button>'
+                        + ' </div>'
+                        + ' </div >'
+
+                        + ' </div>'
+                        + '</li>'
+
+                        + '<li data-aos="fade-up" data-aos-delay="100">'
+                        + '<a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Biomedical Waste <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>'
+                        + '<div id="faq-list-2" class="collapse extra" data-bs-parent=".faq-list">'
+                        + '<h6 class="text-center">Quantity of Biomedical Waste </h6> '
+
+                        + '<div class="row">'
+                        + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+                        + '        <label for="generated" class="form-label"> Generated </label>'
+                        + '        <div class="input-group mb-2">'
+                        + '            <input type="text" id="generated" name="generated" class="form-control" placeholder="Generated" aria-label="Generated" aria-describedby="basic-addon2">'
+                        + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+                        + '        </div>'
+                        + '    </div>'
+
+                        + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+                        + '        <label for="collected" class="form-label"> Collected</label>'
+                        + '        <div class="input-group mb-2">'
+                        + '            <input type="text" id="collected" name="collected" class="form-control" placeholder="Collected" aria-label="Collected" aria-describedby="basic-addon2">'
+                        + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+                        + '        </div>'
+                        + '    </div>'
+
+                        + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+                        + '        <label for="treated" class="form-label"> Treated </label>'
+                        + '        <div class="input-group mb-2">'
+                        + '            <input type="text" id="treated" name="treated" class="form-control" placeholder="Treated" aria-label="Treated" aria-describedby="basic-addon2">'
+                        + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+                        + '        </div>'
+                        + '    </div>'
                         + '</div>'
 
-                        + '<div class="row justify-content-center">'
-                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                        + '<label for="solidTreat" class="form-label">Solid Waste Treatement</label>'
-                        + '<div class="input-group mb-2">'
-                        + '<input type="text" id="solidTreat" name="solidTreat" class="form-control" placeholder="Treatement"aria-label="Area" aria-describedby="basic-addon2">'
-                        + '<span class="input-group-text" id="basic-addon2">MTD</span>'
+                        + ' <div class="row">'
+                        + '<div class="col-md-12 mb-3 text-center">'
+                        + ' <button class="btn btn-primary " type="button" >SAVE</button>'
+                        + ' </div>'
+                        + ' </div >'
+
                         + '</div>'
-                        + '</div>'
+                        + '</li>'
+
+                        + '<li data-aos="fade-up" data-aos-delay="200">'
+                        + '<a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Hazardous Waste<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>'
+                        + '<div id="faq-list-3" class="collapse extra" data-bs-parent=".faq-list">'
+                        + '<h6 class="text-center">Quantity of Hazardous Waste </h6> '
+
+                        + '<div class="row">'
+                        + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+                        + '        <label for="generated" class="form-label"> Generated </label>'
+                        + '        <div class="input-group mb-2">'
+                        + '            <input type="text" id="generated" name="generated" class="form-control" placeholder="Generated" aria-label="Generated" aria-describedby="basic-addon2">'
+                        + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+                        + '        </div>'
+                        + '    </div>'
+
+                        + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+                        + '        <label for="collected" class="form-label"> Collected</label>'
+                        + '        <div class="input-group mb-2">'
+                        + '            <input type="text" id="collected" name="collected" class="form-control" placeholder="Collected" aria-label="Collected" aria-describedby="basic-addon2">'
+                        + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+                        + '        </div>'
+                        + '    </div>'
+
+                        + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+                        + '        <label for="treated" class="form-label"> Treated </label>'
+                        + '        <div class="input-group mb-2">'
+                        + '            <input type="text" id="treated" name="treated" class="form-control" placeholder="Treated" aria-label="Treated" aria-describedby="basic-addon2">'
+                        + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+                        + '        </div>'
+                        + '    </div>'
                         + '</div>'
 
-                        + '<div class="row justify-content-center">'
-                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                        + '<label for="dumpingYard" class="form-label">Dumping yard Present</label>'
-                        + ' <div class="input-group mb-2">'
-                        + '<input type="text" id="dumpingYard" name="dumpingYard" class="form-control" placeholder=" Dumping yard" aria-label="Area" aria-describedby="basic-addon2">'
-                        + '<span class="input-group-text" id="basic-addon2">MTD</span>'
+                        + ' <div class="row">'
+                        + '<div class="col-md-12 mb-3 mt-3 text-center">'
+                        + ' <button class="btn btn-primary " type="button" >SAVE</button>'
+                        + ' </div>'
+                        + ' </div >'
+
                         + '</div>'
+                        + '</li>'
+
                         + '</div>'
-                        + '</div>';
+                        + '</li>'
+                        + '</ul>'
+                        + '</div> </div>';
                 }
             });
         }
@@ -134,6 +260,100 @@ function showSolidInput() {
 
 }
 
+function addTreatmentType() {
+
+    var treatType = document.getElementById("treatment").value;
+    var html = '';
+
+    if (treatType == "Composted") {
+        $("#comp").empty();
+        html = '   <label for="composted" class="form-label"> Composted </label>'
+            + '        <div class="input-group mb-2">'
+            + '            <input type="text" id="composted" name="composted" class="form-control" placeholder="Composted" aria-label="Composted" aria-describedby="basic-addon2">'
+            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
+            + '    </div>';
+        $("#comp").append(html);
+    }
+
+    if (treatType == "Disposal") {
+        $("#disp").empty();
+        html = '   <label for="disposal" class="form-label"> Disposal on landfill</label>'
+            + '        <div class="input-group mb-2">'
+            + '            <input type="text" id="disposal" name="disposal" class="form-control" placeholder="Disposal on landfill" aria-label="Disposal on landfill" aria-describedby="basic-addon2">'
+            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
+            + '    </div>';
+
+        $("#disp").append(html);
+    }
+
+    if (treatType == "Incineration") {
+        $("#incine").empty();
+        html = '   <label for="incinerated" class="form-label"> Incinerated</label>'
+            + '        <div class="input-group mb-2">'
+            + '            <input type="text" id="incinerated" name="incinerated" class="form-control" placeholder="Incinerated" aria-label="Incinerated" aria-describedby="basic-addon2">'
+            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
+            + '    </div>';
+
+        $("#incine").append(html);
+    }
+}
+
+
+function addDumpingYard() {
+
+    $("#adddDYard").empty();
+
+    var dumpingYard = document.getElementById("dumpingYard").value;
+    var html = '';
+    for (var i = 1; i <= dumpingYard; i++) {
+        html += '<hr>'
+            + '<div class="row  text-center ">'
+            + '<h4>Details About Dumping Yard ' + i + ' </h4>'
+
+            + ' </div>'
+            + '<div class="row justify-content-center">'
+            + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+
+            + '<label for="area" class="form-label"> Arera of Dumping Yard</label>'
+            + '<div class="input-group mb-2">'
+            + '<input type="text" id="area" name="area" class="form-control" placeholder="Arera of Dumping Yard" aria-label="Arera of Dumping Yard" aria-describedby="basic-addon2">'
+            + ' <span class="input-group-text" id="basic-addon2">sq.km</span>'
+            + '</div>'
+
+            + '</div>'
+            + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+
+            + '<label for="latitude" class="form-label"> Latitude</label>'
+            + '<div class="input-group mb-2">'
+            + '<input type="text" id="latitude" name="latitude" class="form-control" placeholder="Latitude" aria-label="Residential" aria-describedby="basic-addon2">'
+            + '</div>'
+
+            + '</div>'
+            + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+
+            + '<label for="logitude" class="form-label"> Logitude</label>'
+            + '<div class="input-group mb-2">'
+            + '<input type="text" id="logitude" name="logitude" class="form-control" placeholder="Logitude" aria-label="Residential" aria-describedby="basic-addon2">'
+            + '</div>'
+
+            + '</div>'
+            + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+
+            + '<label for="apxWaste" class="form-label"> Approximate Waste</label>'
+            + '<div class="input-group mb-2">'
+            + '<input type="text" id="apxWaste" name="apxWaste" class="form-control" placeholder="Approximate Waste" aria-label="Approximate Waste" aria-describedby="basic-addon2">'
+            + ' <span class="input-group-text" id="basic-addon2">MTD</span>'
+            + '</div>'
+
+            + '</div>'
+            + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+
+            + '  </div>';
+    }
+
+    $("#adddDYard").append(html);
+
+}
 
 function saveSolidData() {
 

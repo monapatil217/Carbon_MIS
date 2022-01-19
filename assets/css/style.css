@@ -2623,4 +2623,8 @@ textarea.form-control {
   .checkbox-primary input:checked ~ .checkmark:after {
     color: #fbceb5; }
 
+.extra{
+  padding: 10px 50px;
+}
+
 /* End Login Page */
