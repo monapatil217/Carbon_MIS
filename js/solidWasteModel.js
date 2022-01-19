@@ -43,45 +43,171 @@ function showSolidInput() {
                     var eledata = element.cData;
                     $.each(eledata, function (index, element1) {
 
-                        html = '<div class="row justify-content-center">'
-                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                            + '<label for="solidGen" class="form-label">Solid waste Generation</label>'
+                        html = '<div id="faq_pp" class="faq section-bg_pp">'
+                            + '<div class="faq-list faq_list_e">'
+                            + '<ul>'
+
+                            + '<li data-aos="fade-up">'
+                            + '<a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Municipal Solid Waste <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>'
+                            + '<div id="faq-list-1" class="collapse show extra" data-bs-parent=".faq-list">'
+                            + '<h6 class="text-center">Quantity of Municipal Solid Waste </h6> '
+
+                            + '<div class="row">'
+                            + '    <div class="col-md-6 col-lg-4 col-xl-4 col-10 mt-3">'
+                            + '        <label for="generated" class="form-label">Generation </label>'
+                            + '        <div class="input-group mb-2">'
+                            + '            <input type="text" id="generated" name="generated" class="form-control" placeholder="Generation" aria-label="Generation" aria-describedby="basic-addon2">'
+                            + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+                            + '        </div>'
+                            + '    </div>'
+
+                            + '    <div class="col-md-6 col-lg-4 col-xl-4 col-10 mt-3">'
+                            + '        <label for="collection" class="form-label"> Collection</label>'
+                            + '        <div class="input-group mb-2">'
+                            + '            <input type="text" id="collection" name="collection" class="form-control" placeholder="Collection" aria-label="Collection" aria-describedby="basic-addon2">'
+                            + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+                            + '        </div>'
+                            + '    </div>'
+
+                            + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10 mt-3">'
+                            + '        <label for="treatment" class="form-label">Treatment</label>'
+                            + '        <div class="form-group col-md-2  col-xl-10">'
+                            + '             <select class="form-control" id = "treatment" onchange = "addTreatmentType();" >'
+                            + '                 <option disabled selected> Treatment Type</option>'
+                            + '                 <option value="Composted">Composted</option>'
+                            + '                 <option value="Disposal">Disposal</option>'
+                            + '                 <option value="Incineration">Incineration</option>'
+                            + '             </select >'
+                            + '         </div >'
+                            + '    </div>'
+                            + '</div>'
+
+                            + '<div class="row">'
+                            + '<div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+                            + '<div id="comp">'
+
+                            + '   </div>'
+                            + '   </div>'
+
+                            + '<div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+                            + '<div id="disp">'
+
+                            + '   </div>'
+                            + '   </div>'
+
+                            + '<div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+
+                            + '<div id="incine">'
+
+                            + '   </div>'
+                            + '   </div>'
+                            + '</div>'
+
+                            + '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                            + '<label for="dumpingYard" class="form-label">No. of Dumping Yard</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="solidGen" name="solidGen" class="form-control" value="' + element1.sw_gen + '" placeholder="Generation" aria-label="Area" aria-describedby="basic-addon2">'
-                            + '<span class="input-group-text" id="basic-addon2">MTD</span>'
+                            + '<input type="text" id="dumpingYard" name="dumpingYard" class="form-control" placeholder="Dumping Yard"  onchange="addDumpingYard();" aria-label="Dumping Yard" aria-describedby="basic-addon2">'
+                            // + '<span class="input-group-text" id="basic-addon2">CMD</span>'
                             + '</div>'
                             + '</div>'
                             + '</div>'
 
-                            + '<div class="row justify-content-center">'
-                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                            + '<label for="solidColl" class="form-label">Solid Waste Collection</label>'
-                            + '<div class="input-group mb-2">'
-                            + '<input type="text" id="solidColl" name="solidColl" class="form-control" value="' + element1.sw_col + '" placeholder="Collection" aria-label="Area" aria-describedby="basic-addon2">'
-                            + '<span class="input-group-text" id="basic-addon2">MTD</span>'
-                            + '</div>'
-                            + '</div>'
+                            + '<div class="row justify-content-center" id="adddDYard"> </div>'
+
+                            + ' <div class="row">'
+                            + '<div class="col-md-12 mb-3 mt-3 text-center">'
+                            + ' <button class="btn btn-primary " type="button"  onclick="showMSWData();">SAVE</button>'
+                            + ' </div>'
+                            + ' </div >'
+
+                            + ' </div>'
+                            + '</li>'
+
+                            + '<li data-aos="fade-up" data-aos-delay="100">'
+                            + '<a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Biomedical Waste <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>'
+                            + '<div id="faq-list-2" class="collapse extra" data-bs-parent=".faq-list">'
+                            + '<h6 class="text-center">Quantity of Biomedical Waste </h6> '
+
+                            + '<div class="row">'
+                            + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+                            + '        <label for="generated" class="form-label"> Generated </label>'
+                            + '        <div class="input-group mb-2">'
+                            + '            <input type="text" id="generated" name="generated" class="form-control" placeholder="Generated" aria-label="Generated" aria-describedby="basic-addon2">'
+                            + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+                            + '        </div>'
+                            + '    </div>'
+
+                            + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+                            + '        <label for="collected" class="form-label"> Collected</label>'
+                            + '        <div class="input-group mb-2">'
+                            + '            <input type="text" id="collected" name="collected" class="form-control" placeholder="Collected" aria-label="Collected" aria-describedby="basic-addon2">'
+                            + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+                            + '        </div>'
+                            + '    </div>'
+
+                            + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+                            + '        <label for="treated" class="form-label"> Treated </label>'
+                            + '        <div class="input-group mb-2">'
+                            + '            <input type="text" id="treated" name="treated" class="form-control" placeholder="Treated" aria-label="Treated" aria-describedby="basic-addon2">'
+                            + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+                            + '        </div>'
+                            + '    </div>'
                             + '</div>'
 
-                            + '<div class="row justify-content-center">'
-                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                            + '<label for="solidTreat" class="form-label">Solid Waste Treatement</label>'
-                            + '<div class="input-group mb-2">'
-                            + '<input type="text" id="solidTreat" name="solidTreat" class="form-control" value="' + element1.sw_treat + '" placeholder="Treatement"aria-label="Area" aria-describedby="basic-addon2">'
-                            + '<span class="input-group-text" id="basic-addon2">MTD</span>'
+                            + ' <div class="row">'
+                            + '<div class="col-md-12 mb-3 text-center">'
+                            + ' <button class="btn btn-primary " type="button"  onclick="showBMWData();">SAVE</button>'
+                            + ' </div>'
+                            + ' </div >'
+
                             + '</div>'
-                            + '</div>'
+                            + '</li>'
+
+                            + '<li data-aos="fade-up" data-aos-delay="200">'
+                            + '<a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Hazardous Waste<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>'
+                            + '<div id="faq-list-3" class="collapse extra" data-bs-parent=".faq-list">'
+                            + '<h6 class="text-center">Quantity of Hazardous Waste </h6> '
+
+                            + '<div class="row">'
+                            + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+                            + '        <label for="generated" class="form-label"> Generated </label>'
+                            + '        <div class="input-group mb-2">'
+                            + '            <input type="text" id="generated" name="generated" class="form-control" placeholder="Generated" aria-label="Generated" aria-describedby="basic-addon2">'
+                            + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+                            + '        </div>'
+                            + '    </div>'
+
+                            + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+                            + '        <label for="collected" class="form-label"> Collected</label>'
+                            + '        <div class="input-group mb-2">'
+                            + '            <input type="text" id="collected" name="collected" class="form-control" placeholder="Collected" aria-label="Collected" aria-describedby="basic-addon2">'
+                            + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+                            + '        </div>'
+                            + '    </div>'
+
+                            + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+                            + '        <label for="treated" class="form-label"> Treated </label>'
+                            + '        <div class="input-group mb-2">'
+                            + '            <input type="text" id="treated" name="treated" class="form-control" placeholder="Treated" aria-label="Treated" aria-describedby="basic-addon2">'
+                            + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+                            + '        </div>'
+                            + '    </div>'
                             + '</div>'
 
-                            + '<div class="row justify-content-center">'
-                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                            + '<label for="dumpingYard" class="form-label">Dumping yard Present</label>'
-                            + ' <div class="input-group mb-2">'
-                            + '<input type="text" id="dumpingYard" name="dumpingYard" class="form-control" value="' + element1.n_yard + '" placeholder=" Dumping yard" aria-label="Area" aria-describedby="basic-addon2">'
-                            + '<span class="input-group-text" id="basic-addon2">MTD</span>'
+                            + ' <div class="row">'
+                            + '<div class="col-md-12 mb-3 mt-3 text-center">'
+                            + ' <button class="btn btn-primary " type="button"  onclick="showHWData();">SAVE</button>'
+                            + ' </div>'
+                            + ' </div >'
+
                             + '</div>'
+                            + '</li>'
+
                             + '</div>'
-                            + '</div>';
+                            + '</li>'
+                            + '</ul>'
+                            + '</div> </div>';
                     });
                 }
                 else {
@@ -160,7 +286,7 @@ function showSolidInput() {
 
                         + ' <div class="row">'
                         + '<div class="col-md-12 mb-3 mt-3 text-center">'
-                        + ' <button class="btn btn-primary " type="button" >SAVE</button>'
+                        + ' <button class="btn btn-primary " type="button" onclick="showMSWData();">SAVE</button>'
                         + ' </div>'
                         + ' </div >'
 
@@ -200,7 +326,7 @@ function showSolidInput() {
 
                         + ' <div class="row">'
                         + '<div class="col-md-12 mb-3 text-center">'
-                        + ' <button class="btn btn-primary " type="button" >SAVE</button>'
+                        + ' <button class="btn btn-primary " type="button" onclick="showBMWData();">SAVE</button>'
                         + ' </div>'
                         + ' </div >'
 
@@ -240,7 +366,7 @@ function showSolidInput() {
 
                         + ' <div class="row">'
                         + '<div class="col-md-12 mb-3 mt-3 text-center">'
-                        + ' <button class="btn btn-primary " type="button" >SAVE</button>'
+                        + ' <button class="btn btn-primary " type="button" onclick="showHWData();">SAVE</button>'
                         + ' </div>'
                         + ' </div >'
 
@@ -352,6 +478,127 @@ function addDumpingYard() {
     }
 
     $("#adddDYard").append(html);
+
+}
+
+function showMSWData() {
+    var flag = 0;
+    var mswData = {};
+
+    var generated = document.getElementById("generated").value;
+
+    var collected = document.getElementById("collected").value;
+
+    var treated = document.getElementById("treated").value;
+
+    var dumpingYard = document.getElementById("dumpingYard").value;
+
+
+    mswData["generated"] = generated;
+    mswData["collected"] = collected;
+    mswData["treated"] = treated;
+    mswData["dumpingYard"] = dumpingYard;
+
+    // if (flag == 0) {
+    //     $.ajax({
+    //         type: "POST",
+    //         async: false,
+    //         url: "php/.php",
+    //         contentType: "application/json",
+    //         data: JSON.stringify(mswData),
+    //         success: function (data) {
+    //             // var data1 = JSON.parse(data);
+    //             // if (data1 == "success") {
+    //             //     alert("Data Save Succesfuly");
+    //             //     window.location.replace("menuPage.php");
+    //             // } else {
+    //             //     alert("Data not Save Succesfuly")
+    //             // }
+    //             window.location.replace("fueluseincity.php");
+    //         }
+    //     });
+    // }
+    $("#faq-list-1").removeClass("show");
+    $("#faq-list-2").addClass("show");
+}
+
+function showBMWData() {
+
+    var flag = 0;
+    var bmwData = {};
+
+    var generated = document.getElementById("generated").value;
+
+    var collected = document.getElementById("collected").value;
+
+    var treated = document.getElementById("treated").value;
+
+
+    bmwData["generated"] = generated;
+    bmwData["collected"] = collected;
+    bmwData["treated"] = treated;
+
+    // if (flag == 0) {
+    //     $.ajax({
+    //         type: "POST",
+    //         async: false,
+    //         url: "php/.php",
+    //         contentType: "application/json",
+    //         data: JSON.stringify(bmwData),
+    //         success: function (data) {
+    //             // var data1 = JSON.parse(data);
+    //             // if (data1 == "success") {
+    //             //     alert("Data Save Succesfuly");
+    //             //     window.location.replace("menuPage.php");
+    //             // } else {
+    //             //     alert("Data not Save Succesfuly")
+    //             // }
+    //             window.location.replace("fueluseincity.php");
+    //         }
+    //     });
+    // }
+    $("#faq-list-2").removeClass("show");
+    $("#faq-list-3").addClass("show");
+
+}
+
+function showHWData() {
+
+    var flag = 0;
+    var hwData = {};
+
+    var generated = document.getElementById("generated").value;
+
+    var collected = document.getElementById("collected").value;
+
+    var treated = document.getElementById("treated").value;
+
+
+    hwData["generated"] = generated;
+    hwData["collected"] = collected;
+    hwData["treated"] = treated;
+
+    // if (flag == 0) {
+    //     $.ajax({
+    //         type: "POST",
+    //         async: false,
+    //         url: "php/.php",
+    //         contentType: "application/json",
+    //         data: JSON.stringify(hwData),
+    //         success: function (data) {
+    //             // var data1 = JSON.parse(data);
+    //             // if (data1 == "success") {
+    //             //     alert("Data Save Succesfuly");
+    //             //     window.location.replace("menuPage.php");
+    //             // } else {
+    //             //     alert("Data not Save Succesfuly")
+    //             // }
+    //             window.location.replace("fueluseincity.php");
+    //         }
+    //     });
+    // }
+    // $("#faq-list-3").removeClass("show");
+    // $("#faq-list-4").addClass("show");
 
 }
 
