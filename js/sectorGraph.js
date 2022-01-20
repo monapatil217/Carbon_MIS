@@ -1,13 +1,9 @@
 $(document).ready(function () {
     getCity();
-    document.getElementById("sectorInfo").style.display = "none";
-    addChart();
 
 })
 
 function addCityChart() {
-
-    document.getElementById("sectorInfo").style.display = "block";
 
     var type = document.getElementById("cityList").value;
 
@@ -147,6 +143,8 @@ function addCityChart() {
 
     }); // end am5.ready()
 
+
+    showInput();
 }
 
 function getCity() {
