@@ -6,19 +6,23 @@ $data = json_decode($json);
 
 //basic info table
 $basicId = $data->basicId;
-$area = $data->area;
+$areaForest = $data->areaForest;
+$roundWood = $data->roundWood;
+$fuelWood = $data->fuelWood;
+$disturbance = $data->disturbance;
+$organicSo = $data->organicSo;
 
         $query2 = "SELECT * FROM forest_data WHERE b_id='" . $basicId . "'";
         $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
 
         $rowcount = mysqli_num_rows($result);
         if ($rowcount == 0) {
-            $query = "INSERT INTO forest_data(b_id,area)
-            VALUES ($basicId,$area)";
+            $query = "INSERT INTO forest_data(b_id,areaForest,roundWood,fuelWood,disturbance,organicSo)
+            VALUES ($basicId,$areaForest,$roundWood,$fuelWood,$disturbance,$organicSo)";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         }else{
-            $query = "UPDATE  forest_data set area=$area
-                       WHERE b_id='".$basicId."'";
+            $query = "UPDATE  forest_data set areaForest=$areaForest,roundWood=$roundWood,
+                      fuelWood=$fuelWood,disturbance=$disturbance,organicSo=$organicSo WHERE b_id='".$basicId."'";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         }
         echo  "success";
