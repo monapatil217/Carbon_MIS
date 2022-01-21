@@ -101,7 +101,7 @@ function showEnergyIndInput() {
 
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + '<label for="amtBriquette" class="form-label"> Brique>tte</label>'
+                            + '<label for="amtBriquette" class="form-label"> Briquette</label>'
                             + '<div class="input-group mb-2">'
                             + '<input type="text" id="amtBriquette" name="amtBriquette" class="form-control" value="' + element1.briq + '" placeholder="Briquette" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">MTD</span>'

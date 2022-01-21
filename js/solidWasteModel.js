@@ -41,6 +41,7 @@ function showSolidInput() {
 
                 if (check == "true") {
                     var eledata = element.cData;
+                    var yardData = element.yardData;
                     $.each(eledata, function (index, element1) {
 
                         html = '<div id="faq_pp" class="faq section-bg_pp">'
@@ -113,9 +114,59 @@ function showSolidInput() {
                             + '</div>'
                             + '</div>'
 
-                            + '<div class="row justify-content-center" id="adddDYard"> </div>'
+                            + '<div class="row justify-content-center" id="adddDYard">';
+                        $.each(yardData, function (index, element2) {
 
-                            + ' <div class="row">'
+                            html += '<hr>'
+                                + '<div class="row  text-center ">'
+                                + '<h4>Details About Dumping Yard ' + i + ' </h4>'
+
+                                + ' </div>'
+                                + '<div class="row justify-content-center">'
+                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+
+                                + '<label for="area' + i + '" class="form-label"> Arera of Dumping Yard</label>'
+                                + '<div class="input-group mb-2">'
+                                + '<input type="text" id="area' + i + '" name="area' + i + '" class="form-control" placeholder="Arera of Dumping Yard" aria-label="Arera of Dumping Yard" aria-describedby="basic-addon2">'
+                                + ' <span class="input-group-text" id="basic-addon2">sq.km</span>'
+                                + '</div>'
+
+                                + '</div>'
+                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+
+                                + '<label for="latitude' + i + '" class="form-label"> Latitude</label>'
+                                + '<div class="input-group mb-2">'
+                                + '<input type="text" id="latitude' + i + '" name="latitude' + i + '" class="form-control" placeholder="Latitude" aria-label="Residential" aria-describedby="basic-addon2">'
+                                + '</div>'
+
+                                + '</div>'
+                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+
+                                + '<label for="longitude' + i + '" class="form-label"> Longitude</label>'
+                                + '<div class="input-group mb-2">'
+                                + '<input type="text" id="longitude' + i + '" name="longitude' + i + '" class="form-control" placeholder="Longitude" aria-label="Longitude" aria-describedby="basic-addon2">'
+                                + '</div>'
+
+                                + '</div>'
+                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+
+                                + '<label for="apxWaste' + i + '" class="form-label"> Approximate Waste</label>'
+                                + '<div class="input-group mb-2">'
+                                + '<input type="text" id="apxWaste' + i + '" name="apxWaste' + i + '" class="form-control" placeholder="Approximate Waste" aria-label="Approximate Waste" aria-describedby="basic-addon2">'
+                                + ' <span class="input-group-text" id="basic-addon2">MTD</span>'
+                                + '</div>'
+
+                                + '</div>'
+                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+
+                                + '  </div>';
+                            i++;
+                        });
+
+                        html += '</div>';
+
+
+                        html += ' <div class="row">'
                             + '<div class="col-md-12 mb-3 mt-3 text-center">'
                             + ' <button class="btn btn-primary " type="button"  onclick="showMSWData();">SAVE</button>'
                             + ' </div>'
@@ -225,7 +276,7 @@ function showSolidInput() {
                         + '    <div class="col-md-6 col-lg-4 col-xl-4 col-10 mt-3">'
                         + '        <label for="generated" class="form-label">Generation </label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="generated" name="generated" class="form-control" placeholder="Generation" aria-label="Generation" aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="generatedM" name="generated" class="form-control" placeholder="Generation" aria-label="Generation" aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
                         + '        </div>'
                         + '    </div>'
@@ -233,7 +284,7 @@ function showSolidInput() {
                         + '    <div class="col-md-6 col-lg-4 col-xl-4 col-10 mt-3">'
                         + '        <label for="collection" class="form-label"> Collection</label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="collection" name="collection" class="form-control" placeholder="Collection" aria-label="Collection" aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="collectionM" name="collection" class="form-control" placeholder="Collection" aria-label="Collection" aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
                         + '        </div>'
                         + '    </div>'
@@ -241,10 +292,10 @@ function showSolidInput() {
                         + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10 mt-3">'
                         + '        <label for="treatment" class="form-label">Treatment</label>'
                         + '        <div class="form-group col-md-2  col-xl-10">'
-                        + '             <select class="form-control" id = "treatment" onchange = "addTreatmentType();" >'
+                        + '             <select class="form-control" id = "treatmentM" onchange = "addTreatmentType();" >'
                         + '                 <option disabled selected> Treatment Type</option>'
-                        + '                 <option value="Composted">Composted</option>'
-                        + '                 <option value="Disposal">Disposal</option>'
+                        + '                 <option value="Composting">Composting</option>'
+                        + '                 <option value="Landfill">Landfill</option>'
                         + '                 <option value="Incineration">Incineration</option>'
                         + '             </select >'
                         + '         </div >'
@@ -274,9 +325,9 @@ function showSolidInput() {
 
                         + '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
-                        + '<label for="dumpingYard" class="form-label">No. of Dumping Yard</label>'
+                        + '<label for="dumpingYard" class="form-label">No. of Dumping Yards</label>'
                         + '<div class="input-group mb-2">'
-                        + '<input type="text" id="dumpingYard" name="dumpingYard" class="form-control" placeholder="Dumping Yard"  onchange="addDumpingYard();" aria-label="Dumping Yard" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="dumpingYard" name="dumpingYard" class="form-control" placeholder="Dumping Yards"  onchange="addDumpingYard();" aria-label="Dumping Yards" aria-describedby="basic-addon2">'
                         // + '<span class="input-group-text" id="basic-addon2">CMD</span>'
                         + '</div>'
                         + '</div>'
@@ -302,7 +353,7 @@ function showSolidInput() {
                         + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
                         + '        <label for="generated" class="form-label"> Generated </label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="generated" name="generated" class="form-control" placeholder="Generated" aria-label="Generated" aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="generatedB" name="generated" class="form-control" placeholder="Generated" aria-label="Generated" aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
                         + '        </div>'
                         + '    </div>'
@@ -310,7 +361,7 @@ function showSolidInput() {
                         + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
                         + '        <label for="collected" class="form-label"> Collected</label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="collected" name="collected" class="form-control" placeholder="Collected" aria-label="Collected" aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="collectedB" name="collected" class="form-control" placeholder="Collected" aria-label="Collected" aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
                         + '        </div>'
                         + '    </div>'
@@ -318,7 +369,7 @@ function showSolidInput() {
                         + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
                         + '        <label for="treated" class="form-label"> Treated </label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="treated" name="treated" class="form-control" placeholder="Treated" aria-label="Treated" aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="treatedB" name="treated" class="form-control" placeholder="Treated" aria-label="Treated" aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
                         + '        </div>'
                         + '    </div>'
@@ -342,7 +393,7 @@ function showSolidInput() {
                         + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
                         + '        <label for="generated" class="form-label"> Generated </label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="generated" name="generated" class="form-control" placeholder="Generated" aria-label="Generated" aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="generatedH" name="generated" class="form-control" placeholder="Generated" aria-label="Generated" aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
                         + '        </div>'
                         + '    </div>'
@@ -350,7 +401,7 @@ function showSolidInput() {
                         + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
                         + '        <label for="collected" class="form-label"> Collected</label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="collected" name="collected" class="form-control" placeholder="Collected" aria-label="Collected" aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="collectedH" name="collected" class="form-control" placeholder="Collected" aria-label="Collected" aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
                         + '        </div>'
                         + '    </div>'
@@ -358,7 +409,7 @@ function showSolidInput() {
                         + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
                         + '        <label for="treated" class="form-label"> Treated </label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="treated" name="treated" class="form-control" placeholder="Treated" aria-label="Treated" aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="treatedH" name="treated" class="form-control" placeholder="Treated" aria-label="Treated" aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
                         + '        </div>'
                         + '    </div>'
@@ -386,41 +437,52 @@ function showSolidInput() {
 
 }
 
+var comp = 0;
+var land = 0;
+var incine = 0;
+
 function addTreatmentType() {
 
-    var treatType = document.getElementById("treatment").value;
+    comp = 0;
+    land = 0;
+    incine = 0;
+
+    var treatType = document.getElementById("treatmentM").value;
     var html = '';
 
-    if (treatType == "Composted") {
+    if (treatType == "Composting") {
         $("#comp").empty();
-        html = '   <label for="composted" class="form-label"> Composted </label>'
+        html = '   <label for="composted" class="form-label"> Qty of MSW Composted </label>'
             + '        <div class="input-group mb-2">'
             + '            <input type="text" id="composted" name="composted" class="form-control" placeholder="Composted" aria-label="Composted" aria-describedby="basic-addon2">'
-            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
+            + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
             + '    </div>';
         $("#comp").append(html);
+        comp++;
     }
 
-    if (treatType == "Disposal") {
+    if (treatType == "Landfill") {
         $("#disp").empty();
-        html = '   <label for="disposal" class="form-label"> Disposal on landfill</label>'
+        html = '   <label for="disposal" class="form-label"> Qty of MSW sent to Landfill</label>'
             + '        <div class="input-group mb-2">'
-            + '            <input type="text" id="disposal" name="disposal" class="form-control" placeholder="Disposal on landfill" aria-label="Disposal on landfill" aria-describedby="basic-addon2">'
-            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
+            + '            <input type="text" id="disposal" name="disposal" class="form-control" placeholder="Landfill" aria-label="landfill" aria-describedby="basic-addon2">'
+            + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
             + '    </div>';
 
         $("#disp").append(html);
+        land++;
     }
 
     if (treatType == "Incineration") {
         $("#incine").empty();
-        html = '   <label for="incinerated" class="form-label"> Incinerated</label>'
+        html = '   <label for="incinerated" class="form-label"> Qty of MSW Incinerated</label>'
             + '        <div class="input-group mb-2">'
             + '            <input type="text" id="incinerated" name="incinerated" class="form-control" placeholder="Incinerated" aria-label="Incinerated" aria-describedby="basic-addon2">'
-            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
+            + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
             + '    </div>';
 
         $("#incine").append(html);
+        incine++;
     }
 }
 
@@ -440,34 +502,34 @@ function addDumpingYard() {
             + '<div class="row justify-content-center">'
             + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-            + '<label for="area" class="form-label"> Arera of Dumping Yard</label>'
+            + '<label for="area' + i + '" class="form-label"> Arera of Dumping Yard</label>'
             + '<div class="input-group mb-2">'
-            + '<input type="text" id="area" name="area" class="form-control" placeholder="Arera of Dumping Yard" aria-label="Arera of Dumping Yard" aria-describedby="basic-addon2">'
+            + '<input type="text" id="area' + i + '" name="area' + i + '" class="form-control" placeholder="Arera of Dumping Yard" aria-label="Arera of Dumping Yard" aria-describedby="basic-addon2">'
             + ' <span class="input-group-text" id="basic-addon2">sq.km</span>'
             + '</div>'
 
             + '</div>'
             + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-            + '<label for="latitude" class="form-label"> Latitude</label>'
+            + '<label for="latitude' + i + '" class="form-label"> Latitude</label>'
             + '<div class="input-group mb-2">'
-            + '<input type="text" id="latitude" name="latitude" class="form-control" placeholder="Latitude" aria-label="Residential" aria-describedby="basic-addon2">'
+            + '<input type="text" id="latitude' + i + '" name="latitude' + i + '" class="form-control" placeholder="Latitude" aria-label="Residential" aria-describedby="basic-addon2">'
             + '</div>'
 
             + '</div>'
             + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-            + '<label for="logitude" class="form-label"> Logitude</label>'
+            + '<label for="longitude' + i + '" class="form-label"> Longitude</label>'
             + '<div class="input-group mb-2">'
-            + '<input type="text" id="logitude" name="logitude" class="form-control" placeholder="Logitude" aria-label="Residential" aria-describedby="basic-addon2">'
+            + '<input type="text" id="longitude' + i + '" name="longitude' + i + '" class="form-control" placeholder="Longitude" aria-label="Longitude" aria-describedby="basic-addon2">'
             + '</div>'
 
             + '</div>'
             + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-            + '<label for="apxWaste" class="form-label"> Approximate Waste</label>'
+            + '<label for="apxWaste' + i + '" class="form-label"> Approximate Waste</label>'
             + '<div class="input-group mb-2">'
-            + '<input type="text" id="apxWaste" name="apxWaste" class="form-control" placeholder="Approximate Waste" aria-label="Approximate Waste" aria-describedby="basic-addon2">'
+            + '<input type="text" id="apxWaste' + i + '" name="apxWaste' + i + '" class="form-control" placeholder="Approximate Waste" aria-label="Approximate Waste" aria-describedby="basic-addon2">'
             + ' <span class="input-group-text" id="basic-addon2">MTD</span>'
             + '</div>'
 
@@ -484,20 +546,62 @@ function addDumpingYard() {
 function showMSWData() {
     var flag = 0;
     var mswData = {};
+    var yardData = [];
 
-    var generated = document.getElementById("generated").value;
+    var generatedM = document.getElementById("generatedM").value;
 
-    var collected = document.getElementById("collected").value;
-
-    var treated = document.getElementById("treated").value;
+    var collectionM = document.getElementById("collectionM").value;
 
     var dumpingYard = document.getElementById("dumpingYard").value;
 
+    if (comp == 1) {
+        var composted = document.getElementById("composted").value;
+        mswData["composted"] = composted;
+    } else {
+        mswData["composted"] = 0;
+    }
 
-    mswData["generated"] = generated;
-    mswData["collected"] = collected;
-    mswData["treated"] = treated;
+    if (land == 1) {
+        var disposal = document.getElementById("disposal").value;
+        mswData["disposal"] = disposal;
+    } else {
+        mswData["disposal"] = 0;
+    }
+
+    if (incine == 1) {
+        var incinerated = document.getElementById("incinerated").value;
+        mswData["incinerated"] = incinerated;
+    } else {
+        mswData["incinerated"] = 0;
+    }
+
+
+
+    for (var i = 1; i <= dumpingYard; i++) {
+
+        var yardDetails = {};
+
+        var area = document.getElementById("area" + i).value;
+
+        var longitude = document.getElementById("longitude" + i).value;
+
+        var latitude = document.getElementById("latitude" + i).value;
+
+        var apxWaste = document.getElementById("apxWaste" + i).value;
+
+        yardDetails["area"] = area;
+        yardDetails["longitude"] = longitude;
+        yardDetails["latitude"] = latitude;
+        yardDetails["apxWaste"] = apxWaste;
+
+        yardData.push(yardDetails);
+    }
+
+    mswData["generatedM"] = generatedM;
+    mswData["collectionM"] = collectionM;
     mswData["dumpingYard"] = dumpingYard;
+    mswData["yardData"] = yardData;
+    console.log(mswData);
 
     // if (flag == 0) {
     //     $.ajax({
@@ -527,16 +631,18 @@ function showBMWData() {
     var flag = 0;
     var bmwData = {};
 
-    var generated = document.getElementById("generated").value;
+    var generatedB = document.getElementById("generatedB").value;
 
-    var collected = document.getElementById("collected").value;
+    var collectedB = document.getElementById("collectedB").value;
 
-    var treated = document.getElementById("treated").value;
+    var treatedB = document.getElementById("treatedB").value;
 
 
-    bmwData["generated"] = generated;
-    bmwData["collected"] = collected;
-    bmwData["treated"] = treated;
+    bmwData["generatedB"] = generatedB;
+    bmwData["collectedB"] = collectedB;
+    bmwData["treatedB"] = treatedB;
+    console.log(bmwData);
+
 
     // if (flag == 0) {
     //     $.ajax({
@@ -567,16 +673,16 @@ function showHWData() {
     var flag = 0;
     var hwData = {};
 
-    var generated = document.getElementById("generated").value;
+    var generatedH = document.getElementById("generatedH").value;
 
-    var collected = document.getElementById("collected").value;
+    var collectedH = document.getElementById("generatedH").value;
 
-    var treated = document.getElementById("treated").value;
+    var treatedH = document.getElementById("generatedH").value;
 
 
-    hwData["generated"] = generated;
-    hwData["collected"] = collected;
-    hwData["treated"] = treated;
+    hwData["generatedH"] = generatedH;
+    hwData["collectedH"] = collectedH;
+    hwData["treatedH"] = treatedH;
 
     // if (flag == 0) {
     //     $.ajax({
@@ -604,21 +710,21 @@ function showHWData() {
 
 function saveSolidData() {
 
-    var flag = 0;
-    var solidData = {};
+    // var flag = 0;
+    // var solidData = {};
 
-    var solidGen = document.getElementById("solidGen").value;
+    // var solidGen = document.getElementById("solidGen").value;
 
-    var solidColl = document.getElementById("solidColl").value;
+    // var solidColl = document.getElementById("solidColl").value;
 
-    var solidTreat = document.getElementById("solidTreat").value;
+    // var solidTreat = document.getElementById("solidTreat").value;
 
-    var dumpingYard = document.getElementById("dumpingYard").value;
+    // var dumpingYard = document.getElementById("dumpingYard").value;
 
-    solidData["solidGen"] = solidGen;
-    solidData["solidColl"] = solidColl;
-    solidData["solidTreat"] = solidTreat;
-    solidData["dumpingYard"] = dumpingYard;
+    // solidData["solidGen"] = solidGen;
+    // solidData["solidColl"] = solidColl;
+    // solidData["solidTreat"] = solidTreat;
+    // solidData["dumpingYard"] = dumpingYard;
 
 
 

@@ -5,9 +5,9 @@ $(document).ready(function () {
 function showLoginDesign(id) {
     $("#addUserDesign").empty();
     if (id == "user") {
-        var html = '<div class="row mx-auto mt-5">'
-            +'<input type="hidden" id="role" name="role" value="user">'
-            + '<div class="form-group mb-3">'
+        var html = '<div class="form-group mx-auto mt-5">'
+            + '<input type="hidden" id="role" name="role" value="user">'
+            + '<div class=" mb-3 ">'
             + '<select class="form-select" id="username" name="username" required>'
             + '<option selected disabled value="">Choose City</option>'
             + '</select>'
@@ -31,8 +31,8 @@ function showLoginDesign(id) {
 
     $("#addAdminDesign").empty();
     if (id == "admin") {
-        var html =  '<div class="form-group mt-3">'
-            +'<input type="hidden" id="role" name="role" value="Admin">'
+        var html = '<div class="form-group mt-3">'
+            + '<input type="hidden" id="role" name="role" value="Admin">'
             + '<input type="text" class="form-control"  id="username" name="username" placeholder="User Id" required>'
             + '</div>'
             + '<div class="form-group">'

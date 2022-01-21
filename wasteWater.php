@@ -71,8 +71,9 @@ require "php/session.php";
 
                 <div class="col-md-12 col-lg-12  mb-3  s" data-aos-delay="200">
                     <div class="in-sec">
+                    <h5 class="text-center">Wastewater</h5>
                         <marquee width="100%" direction="left" height="30px" scrollamount="2">
-                            CMD - Cubic meter per day
+                            CMD - Cubic meter per day / MLD - Millions liter per day
                         </marquee>
                         <form class="needs-validation" novalidate>
 
