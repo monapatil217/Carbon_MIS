@@ -168,7 +168,46 @@ if ($type == "Electricity") {
             array_push($finalArray, $mainArray);
         }
     }
-} else if ($type == "SolidWaste") { // pending
+} else if ($type == "MSW") { // pending
+
+    $query2 = "SELECT * FROM msw_data WHERE b_id='" . $basicId . "'";
+
+    $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
+    $rowcount = mysqli_num_rows($result);
+    if ($rowcount == 0) {
+        $mainArray['check'] = "false";
+        array_push($finalArray, $mainArray);
+    } else {
+        while ($row = mysqli_fetch_array($result)) {
+
+            $mainArray['check'] = "true";
+            $deleData = array();
+            $cData = [];
+            $mswid = $row['id'];
+            $cData['msw_gen'] = $row['msw_gen'];
+            $cData['msw_col'] = $row['msw_col'];
+            $cData['t_comp'] = $row['t_comp'];
+            $cData['t_disp'] = $row['t_disp'];
+            $cData['t_incin'] = $row['t_incin'];
+            $cData['n_yard'] = $row['n_yard'];
+                $query2 = "SELECT * FROM yard WHERE b_id='" . $basicId . "' AND msw_id=$mswid";
+                $YardList=array();
+                $yard=[];
+                $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
+                while ($row = mysqli_fetch_array($result)) {
+                    $yard['area'] = $row['area'];
+                    $yard['lat'] = $row['lat'];
+                    $yard['loong'] = $row['loong'];
+                    $yard['app_waste'] = $row['app_waste'];
+                    array_push($YardList, $yard);
+                }
+                $cData['YardData'] = $YardList;
+            array_push($deleData, $cData);
+            $mainArray['cData'] =   $deleData;
+            array_push($finalArray, $mainArray);
+        }
+    }
+}else if ($type == "BMW") { // pending
 
     $query2 = "SELECT * FROM bmw_data WHERE b_id='" . $basicId . "'";
 
@@ -183,16 +222,42 @@ if ($type == "Electricity") {
             $mainArray['check'] = "true";
             $deleData = array();
             $cData = [];
-            $cData['sw_gen'] = $row['sw_gen'];
-            $cData['sw_col'] = $row['sw_col'];
-            $cData['sw_treat'] = $row['sw_treat'];
-            $cData['n_yard'] = $row['n_yard'];
+            $mswid = $row['id'];
+            $cData['bmw_gen'] = $row['bmw_gen'];
+            $cData['bmw_coll'] = $row['bmw_coll'];
+            $cData['bmw_treat'] = $row['bmw_treat'];
+               
             array_push($deleData, $cData);
             $mainArray['cData'] =   $deleData;
             array_push($finalArray, $mainArray);
         }
     }
-} else if ($type == "WasteWater") { // pending
+} else if ($type == "HW") { 
+
+    $query2 = "SELECT * FROM hw_data WHERE b_id='" . $basicId . "'";
+
+    $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
+    $rowcount = mysqli_num_rows($result);
+    if ($rowcount == 0) {
+        $mainArray['check'] = "false";
+        array_push($finalArray, $mainArray);
+    } else {
+        while ($row = mysqli_fetch_array($result)) {
+
+            $mainArray['check'] = "true";
+            $deleData = array();
+            $cData = [];
+            $mswid = $row['id'];
+            $cData['hw_gen'] = $row['hw_gen'];
+            $cData['hw_coll'] = $row['hw_coll'];
+            $cData['hw_treat'] = $row['hw_treat'];
+               
+            array_push($deleData, $cData);
+            $mainArray['cData'] =   $deleData;
+            array_push($finalArray, $mainArray);
+        }
+    }
+}  else if ($type == "WasteWater") { // pending
 
     $query2 = "SELECT * FROM waste_data WHERE b_id='" . $basicId . "'";
 
