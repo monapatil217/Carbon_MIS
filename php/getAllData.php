@@ -45,7 +45,11 @@ if ($type == "Electricity") {
             $mainArray['check'] = "true";
             $deleData = array();
             $eleData = [];
-            $eleData['area'] = $row['area'];
+           $eleData['areaForest'] = $row['areaForest'];
+            $eleData['roundWood'] = $row['roundWood'];
+            $eleData['fuelWood'] = $row['fuelWood'];
+            $eleData['disturbance'] = $row['disturbance'];
+            $eleData['organicSo'] = $row['organicSo'];
             array_push($deleData, $eleData);
             $mainArray['cData'] =   $deleData;
             array_push($finalArray, $mainArray);
@@ -66,7 +70,11 @@ if ($type == "Electricity") {
             $mainArray['check'] = "true";
             $deleData = array();
             $eleData = [];
-            $eleData['area'] = $row['area'];
+            $eleData['areaForest'] = $row['areaForest'];
+            $eleData['roundWood'] = $row['roundWood'];
+            $eleData['fuelWood'] = $row['fuelWood'];
+            $eleData['disturbance'] = $row['disturbance'];
+            $eleData['organicSo'] = $row['organicSo'];
             array_push($deleData, $eleData);
             $mainArray['cData'] =   $deleData;
             array_push($finalArray, $mainArray);
@@ -162,7 +170,7 @@ if ($type == "Electricity") {
     }
 } else if ($type == "SolidWaste") { // pending
 
-    $query2 = "SELECT * FROM solid_data WHERE b_id='" . $basicId . "'";
+    $query2 = "SELECT * FROM bmw_data WHERE b_id='" . $basicId . "'";
 
     $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
     $rowcount = mysqli_num_rows($result);
@@ -257,5 +265,35 @@ if ($type == "Electricity") {
             array_push($finalArray, $mainArray);
         }
     }
+}else if ($type == "Cooking") { // pending
+    $arrayfule =array();
+    $fuelList = ["LPG","MNGL","KERO","WOOD"];
+    for($i=0;$i<sizeOf($fuelList);$i++){
+        $query2 = "SELECT * FROM fule_data WHERE b_id='" . $basicId . "' AND  type='". $fuelList[$i] ."'";
+            // echo $fuelList[$i];
+        $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
+        $rowcount = mysqli_num_rows($result);
+        if ($rowcount == 0) {
+            $mainArray['check'] = "false";
+            array_push($finalArray, $mainArray);
+        } else {
+            while ($row = mysqli_fetch_array($result)) {
+
+                $mainArray['check'] = "true";
+                $deleData = array();
+                $cData = [];
+                $cData['resi'] = $row['resi'];
+                $cData['comm'] = $row['comm'];
+                $cData['type'] = $row['type'];
+
+                 $deleData[$fuelList[$i]] = $cData;
+                  array_push($arrayfule, $cData);
+               
+            }
+        }
+    }
+     $mainArray['cData'] =   $arrayfule;
+    array_push($finalArray, $mainArray);
+    
 }
 echo  json_encode($finalArray);
