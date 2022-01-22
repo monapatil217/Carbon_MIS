@@ -71,7 +71,6 @@ if ($rowcount == 0) {
     }
     $allData['transport'] =   $finalArray;
 
-
     $query2 = "SELECT * FROM crop_data WHERE b_id='" . $basicId . "'";
     $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
     $rowcount = mysqli_num_rows($result);
@@ -209,27 +208,25 @@ if ($rowcount == 0) {
     $rowcount = mysqli_num_rows($result);
     $mainArray = array();
     $finalArray = array();
+    $deleData = array();
     if ($rowcount == 0) {
         $mainArray['check'] = "false";
         array_push($finalArray, $mainArray);
     } else {
         while ($row = mysqli_fetch_array($result)) {
 
-            $mainArray['check'] = "true";
-            $deleData = array();
             $cData = [];
             $cData['area'] = $row['area'];
             $cData['lat'] = $row['lat'];
-            $cData['long'] = $row['long'];
+            $cData['long'] = $row['loong'];
             $cData['app_waste'] = $row['app_waste'];
             array_push($deleData, $cData);
-            $mainArray['cData'] =   $deleData;
-            array_push($finalArray, $mainArray);
         }
+        $mainArray['check'] = "true";
+        $mainArray['cData'] =   $deleData;
+        array_push($finalArray, $mainArray);
     }
     $allData['yard'] =   $finalArray;
-
-
 
     $query2 = "SELECT * FROM waste_data WHERE b_id='" . $basicId . "'";
     $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
@@ -264,22 +261,24 @@ if ($rowcount == 0) {
     $finalArray = array();
     $stpData = [];
     if ($rowcount == 0) {
-        $mainArray['stpData'] =   $stpData;
+        $mainArray['check'] = "false";
         array_push($finalArray, $mainArray);
     } else {
+
         while ($row = mysqli_fetch_array($result)) {
 
             $cData = [];
             $cData['cap'] = $row['cap'];
             $cData['lat'] = $row['lat'];
-            $cData['long'] = $row['long'];
+            $cData['long'] = $row['loong'];
             $cData['tech'] = $row['tech'];
             $cData['recycle'] = $row['recycle'];
             $cData['dispose'] = $row['dispose'];
 
             array_push($stpData, $cData);
         }
-        $mainArray['stpData'] =   $stpData;
+        $mainArray['check'] = "true";
+        $mainArray['cData'] =   $stpData;
         array_push($finalArray, $mainArray);
     }
     $allData['stp'] =   $finalArray;
@@ -309,7 +308,7 @@ if ($rowcount == 0) {
     }
     $allData['hazwaste'] =   $finalArray;
 
-    $query2 = "SELECT * FROM hw_data WHERE b_id='" . $basicId . "'";
+    $query2 = "SELECT * FROM bmw_data WHERE b_id='" . $basicId . "'";
     $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
     $rowcount = mysqli_num_rows($result);
     $mainArray = array();
@@ -354,6 +353,7 @@ if ($rowcount == 0) {
             $cData['ido'] = $row['ido'];
             $cData['briq'] = $row['briq'];
             $cData['hsd'] = $row['hsd'];
+            $cData['wood'] = $row['wood'];
             array_push($deleData, $cData);
             $mainArray['cData'] =   $deleData;
             array_push($finalArray, $mainArray);
@@ -451,25 +451,24 @@ if ($rowcount == 0) {
     $rowcount = mysqli_num_rows($result);
     $mainArray = array();
     $finalArray = array();
+    $deleData = array();
     if ($rowcount == 0) {
         $mainArray['check'] = "false";
         array_push($finalArray, $mainArray);
     } else {
         while ($row = mysqli_fetch_array($result)) {
 
-            $mainArray['check'] = "true";
-            $deleData = array();
             $cData = [];
             $cData['resi'] = $row['resi'];
             $cData['comm'] = $row['comm'];
             $cData['type'] = $row['type'];
             array_push($deleData, $cData);
-            $mainArray['cData'] =   $deleData;
-            array_push($finalArray, $mainArray);
         }
+        $mainArray['check'] = "true";
+        $mainArray['cData'] =   $deleData;
+        array_push($finalArray, $mainArray);
     }
     $allData['cooking'] =   $finalArray;
-
 
     $final = array();
     array_push($final, $allData);

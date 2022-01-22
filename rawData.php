@@ -77,14 +77,15 @@
                             </div>
                         </div>
 
-                        <div id="secChart"></div>
+                        <div id="chartDiv">
+                            <div id="secChart"></div>
+                        </div>
 
                     </div>
                     <div id="sectorInfo">
 
-
-
                     </div>
+
                 </div>
             </div>
         </div>
