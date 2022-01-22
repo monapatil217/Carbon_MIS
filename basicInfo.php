@@ -51,7 +51,7 @@ require "php/session.php";
                     <h1> Information</h1>
                 </div>
             </div>
-
+        <div class="row">
             <div class="col-md-12 col-lg-6  mb-3" data-aos-delay="200">
                 <div class="in-sec">
                     <form class="needs-validation" novalidate>
@@ -129,6 +129,8 @@ require "php/session.php";
                         </div>
                     </form>
                 </div>
+            </div>
+            <div class="col-md-6 col-lg-6" id="map"></div>
             </div>
         </div>
 

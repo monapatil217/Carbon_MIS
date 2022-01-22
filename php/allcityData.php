@@ -4,9 +4,8 @@ $json = file_get_contents('php://input');
 $data = json_decode($json);
 $type = $data->type;
 $finalDataArray = [];
-$tablearray = ["ele_data", "fc_land_data", "fule_data", "indu_eng_data", "land_data", "live_data", "solid_data", "trans_data", "waste_data"];
-$tableEmiarray = ["ele_emi", "fc_land_emi", "fule_emi", "indu_eng_emi", "land_emi", "live_emi", "solid_emi", "trans_emi", "waste_emi"];
-
+$tablearray = ["ele_data", "bmw_data","crop_data","forest_data","hw_data","indu_cem_data","indu_chem_data","fule_data", "indu_eng_data","indu_other","land_data", "live_data", "msw_data", "trans_data", "waste_data"];
+$tableEmiarray =  ["ele_emi", "bmw_emi","crop_emi","forest_emi","hw_emi","indu_cem_emi","indu_chem_emi","fule_emi", "indu_eng_emi","indu_other","land_emi", "live_emi", "msw_emi", "trans_emi", "waste_emi"];
 $query2 = "SELECT Distinct(name) FROM city_name";
 $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
 
