@@ -29,6 +29,7 @@ require "php/session.php";
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/jbox/jBox.all.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -40,7 +41,7 @@ require "php/session.php";
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
     <!-- <style>
-    #solidChart {
+    #solidWaste {
         width: 300px;
         height: 300px;
     } -->
@@ -59,7 +60,7 @@ require "php/session.php";
     <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
-            <!-- <input type="text" class="form-control" id="sectionType" value="solidChart" hidden> -->
+            <!-- <input type="text" class="form-control" id="sectionType" value="solidWaste" hidden> -->
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
 
             <div class="row justify-content-center">
@@ -76,44 +77,37 @@ require "php/session.php";
                         <form class="needs-validation" novalidate>
 
                         <div id="faq_pp" class="faq section-bg_pp">
-                        <div class="faq-list faq_list_e">
-                        <ul>
+                            <div class="faq-list faq_list_e">
+                                <ul>
+                                    <li data-aos="fade-up">
+                                        <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Municipal Solid Waste <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                        <div id="faq-list-1" class="collapse show extra" data-bs-parent=".faq-list">
+                                            <h6 class="text-center">Quantity of Municipal Solid Waste </h6> 
+                                            <div id="mswInput"></div>
+                                        </div>
+                                    </li>
 
-                        <li data-aos="fade-up">
-                        <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Municipal Solid Waste <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                        <div id="faq-list-1" class="collapse show extra" data-bs-parent=".faq-list">
-                        <h6 class="text-center">Quantity of Municipal Solid Waste </h6> 
+                                    <li data-aos="fade-up" data-aos-delay="100">
+                                        <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Biomedical Waste <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                        <div id="faq-list-2" class="collapse extra" data-bs-parent=".faq-list">
+                                            <h6 class="text-center">Quantity of Biomedical Waste </h6> 
+                                            <div id="bmwInput"></div>
+                                        </div>
+                                    </li>
 
-                         <div id="mswInput"></div>
+                                    <li data-aos="fade-up" data-aos-delay="200">
+                                        <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Hazardous Waste<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                        <div id="faq-list-3" class="collapse extra" data-bs-parent=".faq-list">
+                                            <h6 class="text-center">Quantity of Hazardous Waste </h6> 
+                                            <div id="hwInput"></div>
+                                        </div>
+                                    </li>
 
-                         </div>
-                        </li>
-
-                        <li data-aos="fade-up" data-aos-delay="100">
-                        <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Biomedical Waste <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                        <div id="faq-list-2" class="collapse extra" data-bs-parent=".faq-list">
-                        <h6 class="text-center">Quantity of Biomedical Waste </h6> 
-
-                         <div id="bmwInput"></div>
-
+                                    <!-- </div>
+                                    </li> -->
+                                </ul>
+                            </div>
                         </div>
-                        </li>
-
-                        <li data-aos="fade-up" data-aos-delay="200">
-                        <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Hazardous Waste<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                        <div id="faq-list-3" class="collapse extra" data-bs-parent=".faq-list">
-                        <h6 class="text-center">Quantity of Hazardous Waste </h6> 
-
-                        
-                            <div id="hwInput"></div>
-
-                        </div>
-                        </li>
-
-                        </div>
-                        </li>
-                        </ul>
-                        </div> </div>
 
                            
                            
@@ -140,7 +134,7 @@ require "php/session.php";
                         <div class="row justify-content-center">
                             <div id="chartName">
                             </div>
-                            <div id="solidChart"></div>
+                            <div id="solidWaste"></div>
                         </div>
                     </div>
                 </div> -->
@@ -199,16 +193,20 @@ require "php/session.php";
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
-
-   
-
+    <!-- Our JS Files -->
+    <script src="assets/js/jspdf.min.js"></script>
+    <script src="assets/js/html2canvas.js"></script>
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/vendor/jbox/jBox.all.min.js"></script>
     <script src="assets/js/bootstrap-show-modal.js"></script>
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    
+    <!-- Our JS File -->
     <!-- <script src="js/induGraph.js"></script> -->
      <script src="js/solidWasteModel.js"></script>
+     <script src="js/common.js"></script>
 </body>
 
 </html>

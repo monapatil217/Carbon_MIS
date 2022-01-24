@@ -190,19 +190,20 @@ require "php/session.php";
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
-    <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script src="assets/js/jspdf.min.js"></script>
+    <script src="assets/js/html2canvas.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/vendor/jbox/jBox.all.min.js"></script>
-    <!-- <script src="assets/js/bootstrap-show-modal.js"></script> -->
+    <script src="assets/js/bootstrap-show-modal.js"></script>
 
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Our JS Files -->
     <script src="js/induGraph.js"></script>
     <script src="js/energyElectricityModel.js"></script>
     <script src="js/common.js"></script>
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
-    <!-- <script src="js/common.js"></script> -->
-    <script>
+<script>
 
 
     </script>

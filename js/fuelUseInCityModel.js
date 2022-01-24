@@ -23,7 +23,7 @@ function showCookingFuel() {
     var html = '';
 
     var basicId = document.getElementById("basicId").value;
-    $("#cookingFuel").empty();
+    $("#cookingFuelInput").empty();
 
     var myobj = {};
     myobj["type"] = "Cooking";
@@ -202,8 +202,7 @@ function showCookingFuel() {
             });
         }
     });
-    // $("#cookingFuel").append(html1); $("#cookingFuel").append(html2); $("#cookingFuel").append(html3);
-    $("#cookingFuel").append(html);
+    $("#cookingFuelInput").append(html);
 
 }
 
@@ -263,27 +262,14 @@ function saveCookingData() {
                 // var data1 = JSON.parse(data);
                 if (data == "success") {
                     alert("Data Save Succesfuly");
-                    // window.location.replace("menuPage.php");
+                    window.location.replace("graph.php");
                 } else {
                     alert("Data not Save Succesfuly")
                 }
-                // window.location.replace("fueluseincity.php");
             }
         });
     }
-    // $("#faq-list-3").removeClass("show");
-    // $("#faq-list-4").addClass("show");
-
 }
-
-// function redirect() {
-
-//     window.location.replace("graph.php");
-
-// }
-
-// var div = document.getElementById("popup-btn");
-// div.style.display = "block";
 
 function showCookingFuelInfo() {
     var div = document.getElementById("moreInfo");

@@ -540,8 +540,6 @@ function showMSWData() {
         mswData["t_incin"] = 0;
     }
 
-
-
     for (var i = 1; i <= dumpingYardM; i++) {
 
         var yardDetails = {};
@@ -581,7 +579,7 @@ function showMSWData() {
                     alert("Data Save Succesfuly");
                     $("#faq-list-1").removeClass("show");
                     $("#faq-list-2").addClass("show");
-                    // window.location.replace("fueluseincity.php");
+
                 } else {
                     alert("Data not Save Succesfuly")
                 }
@@ -608,8 +606,6 @@ function showBMWData() {
     bmwData["bmw_gen"] = generatedB;
     bmwData["bmw_coll"] = collectedB;
     bmwData["bmw_treat"] = treatedB;
-    // console.log(bmwData);
-
 
     if (flag == 0) {
         $.ajax({
@@ -619,16 +615,13 @@ function showBMWData() {
             contentType: "application/json",
             data: JSON.stringify(bmwData),
             success: function (data) {
-                // var data1 = JSON.parse(data);
                 if (data == "success") {
                     alert("Data Save Succesfuly");
                     $("#faq-list-2").removeClass("show");
                     $("#faq-list-3").addClass("show");
-                    // window.location.replace("menuPage.php");
                 } else {
                     alert("Data not Save Succesfuly")
                 }
-                // window.location.replace("fueluseincity.php");
             }
         });
     }
@@ -662,73 +655,18 @@ function showHWData() {
             contentType: "application/json",
             data: JSON.stringify(hwData),
             success: function (data) {
-                // var data1 = JSON.parse(data);
                 if (data == "success") {
                     alert("Data Save Succesfuly");
-                    // window.location.replace("menuPage.php");
+                    window.location.replace("wasteWater.php");
                 } else {
                     alert("Data not Save Succesfuly")
                 }
-                // window.location.replace("fueluseincity.php");
             }
         });
     }
-    // $("#faq-list-3").removeClass("show");
-    // $("#faq-list-4").addClass("show");
 
 }
 
-function saveSolidData() {
-
-    // var flag = 0;
-    // var solidData = {};
-
-    // var solidGen = document.getElementById("solidGen").value;
-
-    // var solidColl = document.getElementById("solidColl").value;
-
-    // var solidTreat = document.getElementById("solidTreat").value;
-
-    // var dumpingYard = document.getElementById("dumpingYard").value;
-
-    // solidData["solidGen"] = solidGen;
-    // solidData["solidColl"] = solidColl;
-    // solidData["solidTreat"] = solidTreat;
-    // solidData["dumpingYard"] = dumpingYard;
-
-
-
-    // if (flag == 0) {
-    //     $.ajax({
-    //         type: "POST",
-    //         async: false,
-    //         url: "php/.php",
-    //         contentType: "application/json",
-    //         data: JSON.stringify(userData),
-    //         success: function (data) {
-    //             // var data1 = JSON.parse(data);
-    //             // if (data1 == "success") {
-    //             //     alert("Data Save Succesfuly");
-    //             //     window.location.replace("menuPage.php");
-    //             // } else {
-    //             //     alert("Data not Save Succesfuly")
-    //             // }
-    //             
-    //         }
-    //     });
-    // }
-    window.location.replace("wasteWater.php");
-
-}
-
-// var div = document.getElementById("moreInfo");
-// div.style.display = "none";
-
-// function redirect() {
-
-//     window.location.replace("wasteWater.php");
-
-// }
 
 function showSolidInfo() {
     var div = document.getElementById("moreInfo");

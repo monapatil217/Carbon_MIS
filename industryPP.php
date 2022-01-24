@@ -29,6 +29,7 @@ require "php/session.php";
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/jbox/jBox.all.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -41,7 +42,7 @@ require "php/session.php";
   ======================================================== -->
 
     <style>
-    /* #indusppChart {
+    /* #product {
         width: 300px;
         height: 300px;
     } */
@@ -59,7 +60,7 @@ require "php/session.php";
     <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
-            <!-- <input type="text" class="form-control" id="sectionType" value="indusppChart" hidden> -->
+            <!-- <input type="text" class="form-control" id="sectionType" value="product" hidden> -->
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
             
             <div class="row justify-content-center">
@@ -120,12 +121,12 @@ require "php/session.php";
 
 
 
-
+<!-- 
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
                                     <button class="btn btn-primary " type="button" onclick="saveIndPPData();">NEXT</button>
                                 </div>
-                            </div>
+                            </div> -->
                         </form>
 
                         <div class="row align-items-center justify-content-center" id="moreInfo">
@@ -148,7 +149,7 @@ require "php/session.php";
                         <div class="row justify-content-center">
                             <div id="chartName">
                             </div>
-                            <div id="indusppChart"></div>
+                            <div id="product"></div>
                         </div>
 
                     </div>
@@ -211,15 +212,20 @@ require "php/session.php";
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
-    
-
+    <script src="assets/js/jspdf.min.js"></script>
+    <script src="assets/js/html2canvas.js"></script>
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/vendor/jbox/jBox.all.min.js"></script>
     <script src="assets/js/bootstrap-show-modal.js"></script>
 
-    <!-- <script src="js/induGraph.js"></script> -->
-<script src="js/industryPPModel.js"></script>
+    
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Our js File  -->
+    <script src="js/industryPPModel.js"></script>
+    <script src="js/common.js"></script>
+    <!-- <script src="js/induGraph.js"></script> -->
 
 </body>
 
