@@ -173,7 +173,7 @@ function saveEleData() {
                 // var data1 = JSON.parse(data);
                 if (data == "success") {
                     alert("Data Save Succesfuly");
-                    window.location.replace("transport.php");
+                    // window.location.replace("transport.php");
                 } else {
                     alert("Data not Save Succesfuly")
                 }
@@ -217,8 +217,8 @@ function showEleInfo() {
     $("#popUpData").append(html1);
 }
 
-// function redirect() {
+function redirect() {
 
-//     window.location.replace("transport.php");
+    window.location.replace("transport.php");
 
-// }
+}
