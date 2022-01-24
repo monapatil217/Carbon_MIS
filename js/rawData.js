@@ -1,8 +1,13 @@
+
+$(document).ready(function () {
+    document.getElementById("dataDownload").style.display = "none";
+})
+
 function showInput() {
     var html = '';
 
     var city = document.getElementById("cityList").value;
-    $("#eleInput").empty();
+    $("#sectorInfo").empty();
 
     var myobj = {};
     myobj["city"] = city;
@@ -43,15 +48,18 @@ function showInput() {
 
                 var cooking = element1.cooking;
 
+                document.getElementById("dataDownload").style.display = "block";
+
                 $.each(electricity, function (index, element2) {
+
                     if (element2.check == "true") {
 
                         $.each(element2.cData, function (index, element) {
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
                                 + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
                                 + '    <div class="in-sec">'
-                                + '        <h3 class="text-center mb-2"> Input Values of Electricity Sector</h3>'
-                                + '        <table class="table text-center">'
+                                + '        <h3 id="ele-header" class="text-center mb-2"> Input Values of Electricity Sector</h3>'
+                                + '        <table class="table text-center" id="ele-table">'
                                 + '           <thead>'
                                 + '               <tr>'
                                 + '                    <th scope="col">Sr.No</th>'
@@ -105,8 +113,8 @@ function showInput() {
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
                                 + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
                                 + ' <div class="in-sec">'
-                                + '     <h3 class="text-center mb-2"> Input Values of Transport Sector</h3>'
-                                + '    <table class="table text-center">'
+                                + '     <h3 id="trans-header" class="text-center mb-2"> Input Values of Transport Sector</h3>'
+                                + '    <table class="table text-center" id="trans-table">'
                                 + '       <thead>'
                                 + '            <tr>'
                                 + '                <th scope="col">Sr.No</th>'
@@ -179,8 +187,8 @@ function showInput() {
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
                                 + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
                                 + '  <div class="in-sec">'
-                                + '      <h3 class="text-center mb-2"> Input Values of Crop Land Sector</h3>'
-                                + '      <table class="table text-center">'
+                                + '      <h3 id="crop-header" class="text-center mb-2"> Input Values of Crop Land Sector</h3>'
+                                + '      <table class="table text-center" id="crop-table">'
                                 + '           <thead>'
                                 + '               <tr>'
                                 + '                   <th scope="col">Sr.No</th>'
@@ -217,8 +225,8 @@ function showInput() {
                             html += ' <div class="row  align-items-center justify-content-center mt-3">'
                                 + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
                                 + '  <div class="in-sec">'
-                                + '     <h3 class="text-center mb-2"> Input Values of Livestock Sector</h3>'
-                                + '    <table class="table text-center">'
+                                + '     <h3  id="live-header" class="text-center mb-2"> Input Values of Livestock Sector</h3>'
+                                + '    <table class="table text-center"  id="live-table">'
                                 + '        <thead>'
                                 + '            <tr>'
                                 + '               <th scope="col">Sr.No</th>'
@@ -298,11 +306,11 @@ function showInput() {
                 $.each(forest, function (index, element2) {
                     if (element2.check == "true") {
                         $.each(element2.cData, function (index, element) {
-                            html + '<div class="row  align-items-center justify-content-center mt-3">'
+                            html += '<div class="row  align-items-center justify-content-center mt-3">'
                                 + '   <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
                                 + '     <div class="in-sec">'
-                                + '      <h3 class="text-center mb-2"> Input Values of Forest Land Sector</h3>'
-                                + '      <table class="table text-center">'
+                                + '      <h3 id="forest-header" class="text-center mb-2"> Input Values of Forest Land Sector</h3>'
+                                + '      <table class="table text-center"  id="forest-table">'
                                 + '          <thead>'
                                 + '             <tr>'
                                 + '                 <th scope="col">Sr.No</th>'
@@ -339,8 +347,8 @@ function showInput() {
                             html += '  <div class="row  align-items-center justify-content-center mt-3">'
                                 + '  <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
                                 + '     <div class="in-sec">'
-                                + '       <h3 class="text-center mb-2"> Input Values of Land Use Sector</h3>'
-                                + '      <table class="table text-center">'
+                                + '       <h3 id="land-header" class="text-center mb-2"> Input Values of Land Use Sector</h3>'
+                                + '      <table class="table text-center" id="land-table">'
                                 + '         <thead>'
                                 + '            <tr>'
                                 + '              <th scope="col">Sr.No</th>'
@@ -423,8 +431,8 @@ function showInput() {
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
                                 + '   <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
                                 + '      <div class="in-sec">'
-                                + '        <h3 class="text-center mb-2"> Input Values of Municipal Solid Waste Sector</h3>'
-                                + '      <table class="table text-center">'
+                                + '        <h3 id="solid-header" class="text-center mb-2"> Input Values of Municipal Solid Waste Sector</h3>'
+                                + '      <table class="table text-center" id="solid-table">'
                                 + '          <thead>'
                                 + '             <tr>'
                                 + '                 <th scope="col">Sr.No</th>'
@@ -486,8 +494,8 @@ function showInput() {
                         html += '<div class="row  align-items-center justify-content-center mt-3">'
                             + '   <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
                             + '      <div class="in-sec">'
-                            + '       <h3 class="text-center mb-2"> Input Values of Dumping Yards</h3>'
-                            + '      <table class="table text-center">'
+                            + '       <h3 id="yard-header" class="text-center mb-2"> Input Values of Dumping Yards</h3>'
+                            + '      <table class="table text-center" id="yard-table">'
                             + '          <thead>'
                             + '             <tr>'
                             + '                <th scope="col">Sr.No.</th>'
@@ -533,8 +541,8 @@ function showInput() {
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
                                 + '   <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
                                 + '       <div class="in-sec">'
-                                + '          <h3 class="text-center mb-2"> Input Values of Biomedical Waste Sector</h3>'
-                                + '        <table class="table text-center">'
+                                + '          <h3  id="bio-header" class="text-center mb-2"> Input Values of Biomedical Waste Sector</h3>'
+                                + '        <table class="table text-center"  id="bio-table">'
                                 + '            <thead>'
                                 + '                <tr>'
                                 + '                   <th scope="col">Sr.No</th>'
@@ -581,8 +589,8 @@ function showInput() {
                             html += '     <div class="row  align-items-center justify-content-center mt-3">'
                                 + '      <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
                                 + '      <div class="in-sec">'
-                                + '        <h3 class="text-center mb-2"> Input Values of Hazardous Waste Sector</h3>'
-                                + '     <table class="table text-center">'
+                                + '        <h3   id="haz-header" class="text-center mb-2"> Input Values of Hazardous Waste Sector</h3>'
+                                + '     <table class="table text-center" id="haz-table">'
                                 + '         <thead>'
                                 + '                 <tr>'
                                 + '                     <th scope="col">Sr.No.</th>'
@@ -629,8 +637,8 @@ function showInput() {
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
                                 + '    <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
                                 + '   <div class="in-sec">'
-                                + '     <h3 class="text-center mb-2"> Input Values of Wastewater Sector</h3>'
-                                + '    <table class="table text-center">'
+                                + '     <h3 id="ww-header" class="text-center mb-2"> Input Values of Wastewater Sector</h3>'
+                                + '    <table class="table text-center" id="ww-table">'
                                 + '        <thead>'
                                 + '          <tr>'
                                 + '             <th scope="col">Sr.No</th>'
@@ -685,10 +693,10 @@ function showInput() {
                     if (element2.check == "true") {
 
                         html += '<div class="row  align-items-center justify-content-center mt-3">'
-                            + '   <div class="col-md-8 col-lg-8 mb-3" data-aos-delay="200">'
+                            + '   <div class="col-md-8 col-lg-7 mb-3" data-aos-delay="200">'
                             + '    <div class="in-sec">'
-                            + '        <h3 class="text-center mb-2"> Input Values of STP</h3>'
-                            + '       <table class="table text-center">'
+                            + '        <h3 id="stp-header" class="text-center mb-2"> Input Values of STP</h3>'
+                            + '       <table class="table text-center" id="stp-table">'
                             + '          <thead>'
                             + '             <tr>'
                             + '                <th scope="col">STP No.</th>'
@@ -715,7 +723,6 @@ function showInput() {
                             stpi++;
                         });
 
-
                         html += '   </tbody>'
                             + '   </table>'
                             + '  </div>'
@@ -739,8 +746,8 @@ function showInput() {
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
                                 + '     <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
                                 + '<div class="in-sec">'
-                                + '    <h3 class="text-center mb-2"> Input Values of Industrial Energy Use Sector</h3>'
-                                + '    <table class="table text-center">'
+                                + '    <h3 id="ie-header" class="text-center mb-2"> Input Values of Industrial Energy Use Sector</h3>'
+                                + '    <table class="table text-center" id="ie-table">'
                                 + '        <thead>'
                                 + '            <tr>'
                                 + '                 <th scope="col">Sr.No</th>'
@@ -813,8 +820,8 @@ function showInput() {
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
                                 + '     <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
                                 + '       <div class="in-sec">'
-                                + '          <h3 class="text-center mb-2"> Input Values of Industrial Process and Product (Cement) Sector</h3>'
-                                + '         <table class="table text-center">'
+                                + '          <h3 id="cpp-header"  class="text-center mb-2"> Input Values of Industrial Process and Product (Cement) Sector</h3>'
+                                + '         <table class="table text-center" id="cpp-table" >'
                                 + '               <thead>'
                                 + '                  <tr>'
                                 + '                      <th scope="col">Sr.No</th>'
@@ -872,8 +879,8 @@ function showInput() {
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
                                 + '    <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
                                 + '     <div class="in-sec">'
-                                + '        <h3 class="text-center mb-2"> Input Values of Industrial Process and Product (Chemical) Sector</h3>'
-                                + '        <table class="table text-center">'
+                                + '        <h3 id="chpp-header"  class="text-center mb-2"> Input Values of Industrial Process and Product (Chemical) Sector</h3>'
+                                + '        <table class="table text-center" id="chpp-table">'
                                 + '          <thead>'
                                 + '              <tr>'
                                 + '                  <th scope="col">Sr.No</th>'
@@ -970,8 +977,8 @@ function showInput() {
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
                                 + '    <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
                                 + '   <div class="in-sec">'
-                                + '       <h3 class="text-center mb-2"> Input Values of Industrial Process and Product (Aluminium) Sector</h3>'
-                                + '      <table class="table text-center">'
+                                + '       <h3  id="alu-header"  class="text-center mb-2"> Input Values of Industrial Process and Product (Aluminium) Sector</h3>'
+                                + '      <table class="table text-center"  id="alu-table" >'
                                 + '          <thead>'
                                 + '             <tr>'
                                 + '                <th scope="col">Sr.No</th>'
@@ -993,8 +1000,8 @@ function showInput() {
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
                                 + '   <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
                                 + '   <div class="in-sec">'
-                                + '      <h3 class="text-center mb-2"> Input Values of Industrial Process and Product (Lead) Sector</h3>'
-                                + '       <table class="table  text-center">'
+                                + '      <h3 id="ld-header" class="text-center mb-2"> Input Values of Industrial Process and Product (Lead) Sector</h3>'
+                                + '       <table class="table  text-center" id="ld-table">'
                                 + '       <thead>'
                                 + '          <tr>'
                                 + '             <th scope="col">Sr.No</th>'
@@ -1016,8 +1023,8 @@ function showInput() {
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
                                 + '   <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
                                 + '     <div class="in-sec">'
-                                + '       <h3 class="text-center mb-2"> Input Values of Industrial Process and Product (Zinc) Sector</h3>'
-                                + '        <table class="table text-center">'
+                                + '       <h3  id="zg-header" class="text-center mb-2"> Input Values of Industrial Process and Product (Zinc) Sector</h3>'
+                                + '        <table class="table text-center"  id="zg-table">'
                                 + '           <thead>'
                                 + '               <tr>'
                                 + '                   <th scope="col">Sr.No</th>'
@@ -1056,8 +1063,8 @@ function showInput() {
                         html += '<div class="row  align-items-center justify-content-center mt-3">'
                             + ' <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
                             + '    <div class="in-sec">'
-                            + '       <h3 class="text-center mb-2"> Input Values of Cooking Fuel Sector</h3>'
-                            + '      <table class="table text-center">'
+                            + '       <h3 id="ck-header" class="text-center mb-2"> Input Values of Cooking Fuel Sector</h3>'
+                            + '      <table class="table text-center" id="ck-table">'
                             + '          <thead>'
                             + '              <tr>'
                             + '                  <th scope="col">Sr.No</th>'

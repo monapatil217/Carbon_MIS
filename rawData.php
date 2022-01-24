@@ -60,7 +60,7 @@
 
             <div class="row">
 
-                <div class="col-md-12 col-lg-12  mb-3 s " data-aos-delay="200">
+                <div class="col-md-12 col-lg-12 s " data-aos-delay="200">
                     <div class="in-sec">
                         <div id="chartName">
                             <h3>Amrut City all Sectors Graph</h3>
@@ -72,7 +72,6 @@
                             <div class="form-group col-md-2">
                                 <select class="form-control" id="cityList" name="cityList" onchange="addCityChart();">
                                     <option selected disabled value="">Choose City</option>
-
                                 </select>
                             </div>
                         </div>
@@ -82,16 +81,51 @@
                         </div>
 
                     </div>
-                    <div id="sectorInfo">
-
-                    </div>
-
+                    <!-- <div id="sectorInfo"> </div> -->
                 </div>
             </div>
-        </div>
+
+            <div class="balance-summary">
+                <section id="balance-title" class="text-center">
+                    <h2></h2>
+                    <p></p>
+                </section>
+                <div id="dataDownload">
+                    <div class="row align-items-center justify-content-center">
+                        <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <h6> Click here to download Data - </h6>
+                        </div>
+                        <div class=" col-lg-1 col-md-1 col-sm-1 col-xs-1">
+
+                            <input type="button" class="btn btn-primary " value="download" onclick="convertTableToPDF( 'Balance_Report1','balance-title',
+        ['ele-table','trans-table','crop-table','live-table','forest-table','land-table','solid-table','yard-table','bio-table','haz-table','ww-table'
+        ,'stp-table','ie-table','cpp-table','chpp-table','alu-table','ld-table','zg-table','ck-table'],
+        ['ele-header','trans-header','crop-header','live-header','forest-header','land-header','solid-header','yard-header','bio-header','haz-header','ww-header'
+        ,'stp-header' ,'ie-header' ,'cpp-header' ,'chpp-header' ,'alu-header','ld-header','zg-header','ck-header'] );" />
+
+                        </div>
+                    </div>
+                </div>
+                <section class="balance-report">
+                    <article>
+                        <div id="sectorInfo"> </div>
+                    </article>
+                </section>
+
+            </div>
+
+
 
         </div>
     </section><!-- End Hero -->
+    <!-- Adding Javascripts -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.4.1/jspdf.plugin.autotable.min.js"></script>
+    <script type="text/javascript" src="js/jsTABLE.js"></script>
+
+
+
 
 
     <script>
