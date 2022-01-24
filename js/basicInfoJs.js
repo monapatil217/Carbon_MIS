@@ -77,7 +77,7 @@ function allMap() {
                 var data1 = $.parseJSON(data)
                 var html = '';
                 $.each(data1, function (index, element) {
-                    html += element.url
+                   html +='<iframe src="'+element.url+'" width="640" height="480"></iframe>';
                 });
                 $("#map").append(html);
             }
