@@ -216,10 +216,10 @@ function showLiveStock() {
 }
 
 function saveLiveData() {
-
-
     var flag = 0;
     var liveData = {};
+
+    var basicId = document.getElementById("basicId").value;
 
     var indCattle = document.getElementById("indCattle").value;
 
@@ -227,7 +227,7 @@ function saveLiveData() {
 
     var buffalo = document.getElementById("buffalo").value;
 
-    var Sheep = document.getElementById("Sheep").value;
+    var sheep = document.getElementById("Sheep").value;
 
     var goat = document.getElementById("goat").value;
 
@@ -241,39 +241,38 @@ function saveLiveData() {
 
     var poultry = document.getElementById("poultry").value;
 
-    liveData["indCattle"] = indCattle;
-    liveData["crossBread"] = crossBread;
-    liveData["buffalo"] = buffalo;
-    liveData["Sheep"] = Sheep;
+    liveData["basicId"] = basicId;
+    liveData["ind_cat"] = indCattle;
+    liveData["cross_cat"] = crossBread;
+    liveData["buff"] = buffalo;
+    liveData["sheep"] = sheep;
     liveData["goat"] = goat;
-    liveData["horses"] = horses;
-    liveData["donkeys"] = donkeys;
-    liveData["camels"] = camels;
+    liveData["hors"] = horses;
+    liveData["donk"] = donkeys;
+    liveData["came"] = camels;
     liveData["pig"] = pig;
-    liveData["poultry"] = poultry;
+    liveData["poul"] = poultry;
 
+    if (flag == 0) {
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: "php/saveLivestoks.php",
+            contentType: "application/json",
+            data: JSON.stringify(liveData),
+            success: function (data) {
+                // var data1 = JSON.parse(data);
+                if (data == "success") {
+                    alert("Data Save Succesfuly");
+                    window.location.replace("forestLand.php");
+                } else {
+                    alert("Data not Save Succesfuly")
+                }
 
-
-    // if (flag == 0) {
-    //     $.ajax({
-    //         type: "POST",
-    //         async: false,
-    //         url: "php/.php",
-    //         contentType: "application/json",
-    //         data: JSON.stringify(liveData),
-    //         success: function (data) {
-    //             // var data1 = JSON.parse(data);
-    //             // if (data1 == "success") {
-    //             //     alert("Data Save Succesfuly");
-    //             //     window.location.replace("menuPage.php");
-    //             // } else {
-    //             //     alert("Data not Save Succesfuly")
-    //             // }
-
-    //         }
-    //     });
-    // }
-    window.location.replace("forestLand.php");
+            }
+        });
+    }
+    // window.location.replace("forestLand.php");
 
 }
 

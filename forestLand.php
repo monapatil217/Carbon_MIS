@@ -66,8 +66,8 @@ require "php/session.php";
                 <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
                     <div class="in-sec">
                         <h4 class="text-center mb-2">Forest Land</h4>
-                        <marquee width="100%" direction="left" height="30px">
-                            sq.km - square kilometre.
+                        <marquee width="100%" direction="left" height="30px" scrollamount="2">
+                            sq.km - square kilometer / mᶟ - meter cube
                         </marquee>
                         <form class="needs-validation" novalidate>
                         <div id="forestLand"></div>

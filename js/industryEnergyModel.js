@@ -111,7 +111,7 @@ function showEnergyIndInput() {
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + ' <label for="amtWood" class="form-label"> Wood</label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="amtWood" class="form-control" value="' + element1.sw_col + '" placeholder="Wood" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="amtWood" class="form-control" value="' + element1.wood + '" placeholder="Wood" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">MTD</span>'
                             + '</div>'
                             + '</div>'
@@ -208,6 +208,8 @@ function saveEnergyIData() {
     var flag = 0;
     var energyData = {};
 
+    var basicId = document.getElementById("basicId").value;
+
     var amtCoal = document.getElementById("amtCoal").value;
 
     var amtFO = document.getElementById("amtFO").value;
@@ -222,37 +224,41 @@ function saveEnergyIData() {
 
     var amtBriquette = document.getElementById("amtBriquette").value;
 
-    energyData["amtCoal"] = amtCoal;
-    energyData["amtFO"] = amtFO;
-    energyData["amtLDO"] = amtLDO;
-    energyData["amtHSD"] = amtHSD;
-    energyData["amtPNG"] = amtPNG;
-    energyData["amtNG"] = amtNG;
-    energyData["amtBriquette"] = amtBriquette;
+    var amtWood = document.getElementById("amtWood").value;
+
+    energyData["basicId"] = basicId;
+    energyData["coal"] = amtCoal;
+    energyData["fo"] = amtFO;
+    energyData["ido"] = amtLDO;
+    energyData["hsd"] = amtHSD;
+    energyData["png"] = amtPNG;
+    energyData["ng"] = amtNG;
+    energyData["briq"] = amtBriquette;
+    energyData["wood"] = amtWood;
 
 
 
-    // if (flag == 0) {
-    //     $.ajax({
-    //         type: "POST",
-    //         async: false,
-    //         url: "php/.php",
-    //         contentType: "application/json",
-    //         data: JSON.stringify(energyData),
-    //         success: function (data) {
-    //             // var data1 = JSON.parse(data);
-    //             // if (data1 == "success") {
-    //             //     alert("Data Save Succesfuly");
-    //             //     window.location.replace("menuPage.php");
-    //             // } else {
-    //             //     alert("Data not Save Succesfuly")
-    //             // }
-    //             
-    //         }
-    //     });
-    // }
+    if (flag == 0) {
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: "php/saveInduEng.php",
+            contentType: "application/json",
+            data: JSON.stringify(energyData),
+            success: function (data) {
+                // var data1 = JSON.parse(data);
+                if (data == "success") {
+                    alert("Data Save Succesfuly");
+                    window.location.replace("industryPP.php");
+                } else {
+                    alert("Data not Save Succesfuly")
+                }
 
-    window.location.replace("industryPP.php");
+            }
+        });
+    }
+
+    // window.location.replace("industryPP.php");
 
 }
 

@@ -80,9 +80,9 @@ function showTransInput() {
 
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                            + '<label for="temp" class="form-label"> LCV </label>'
+                            + '<label for="tempo" class="form-label"> LCV </label>'
                             + '<div class="input-group mb-2">'
-                            + '<input type="text" id="temp" name="temp" class="form-control" value="' + element1.tempo + '" placeholder="Tempo" aria-label="Tempo" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="tempo" name="tempo" class="form-control" value="' + element1.tempo + '" placeholder="Tempo" aria-label="Tempo" aria-describedby="basic-addon2">'
                             + '</div>'
                             + '</div>'
 
@@ -187,9 +187,11 @@ function showTransInput() {
 
 function saveTransData() {
 
-    window.location.replace("cropLand.php");
+
     var flag = 0;
     var transData = {};
+
+    var basicId = document.getElementById("basicId").value;
 
     var w2 = document.getElementById("w2").value;
 
@@ -207,6 +209,7 @@ function saveTransData() {
 
     var flight = document.getElementById("flight").value;
 
+    transData["basicId"] = basicId;
     transData["w2"] = w2;
     transData["w3"] = w3;
     transData["w4"] = w4;
@@ -222,22 +225,22 @@ function saveTransData() {
         $.ajax({
             type: "POST",
             async: false,
-            url: "php/.php",
+            url: "php/saveTransport.php",
             contentType: "application/json",
             data: JSON.stringify(transData),
             success: function (data) {
                 // var data1 = JSON.parse(data);
-                // if (data1 == "success") {
-                //     alert("Data Save Succesfuly");
-                //     window.location.replace("menuPage.php");
-                // } else {
-                //     alert("Data not Save Succesfuly")
-                // }
+                if (data == "success") {
+                    alert("Data Save Succesfuly");
+                    window.location.replace("cropLand.php");
+                } else {
+                    alert("Data not Save Succesfuly")
+                }
 
             }
         });
     }
-
+    // window.location.replace("cropLand.php");
 }
 
 

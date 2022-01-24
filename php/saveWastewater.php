@@ -8,7 +8,7 @@ $data = json_decode($json);
 $basicId = $data->basicId;
 $w_cons = $data->w_cons;
 $w_gen = $data->w_gen;
-$w_coll = $data->w_coll;
+// $w_coll = $data->w_coll;
 $q_treat = $data->q_treat;
 $n_stp = $data->n_stp;
 $stpData = $data->stpData;
@@ -18,8 +18,8 @@ $last_id=0;
        
         $rowcount = mysqli_num_rows($result);
         if ($rowcount == 0) {
-            $query = "INSERT INTO waste_data(b_id,w_cons,w_gen,w_coll,q_treat,n_stp)
-            VALUES ($basicId,$w_cons,$w_gen,$w_coll,$q_treat,$n_stp)";
+            $query = "INSERT INTO waste_data(b_id,w_cons,w_gen,q_treat,n_stp)
+            VALUES ($basicId,$w_cons,$w_gen,$q_treat,$n_stp)";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
             $last_id = mysqli_insert_id($conn);
             for($i=0;$i<sizeof($stpData);$i++){
@@ -36,7 +36,7 @@ $last_id=0;
         }else{
             $row = mysqli_fetch_array($result);
             $last_id = $row['id'];
-            $query = "UPDATE  waste_data set w_cons=$w_cons,w_gen=$w_gen,w_coll=$w_coll,
+            $query = "UPDATE  waste_data set w_cons=$w_cons,w_gen=$w_gen,
                        q_treat=$q_treat,n_stp=$n_stp WHERE b_id='".$basicId."'";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
             for($i=0;$i<sizeof($stpData);$i++){

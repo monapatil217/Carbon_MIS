@@ -199,16 +199,16 @@ function showlandUse() {
 
                         + '<div class="row justify-content-center">'
                         + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
-                        + '        <label for="green" class="form-label"> Green Area</label>'
+                        + '        <label for="greenArea" class="form-label"> Green Area</label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="green" name="green" class="form-control" placeholder="Green Area " aria-label="Green Area " aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="greenArea" name="greenArea" class="form-control" placeholder="Green Area " aria-label="Green Area " aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                         + '        </div>'
                         + '    </div>'
                         + '    <div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                         + '        <label for="reCreational" class="form-label"> Recreational  Area</label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="reCreational " name="reCreational" class="form-control" placeholder="Recreational " aria-label="Recreational" aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="rCreate" name="reCreational" class="form-control" placeholder="Recreational " aria-label="Recreational" aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">sq. km</span>'
                         + '        </div>'
                         + '    </div>'
@@ -247,6 +247,8 @@ function saveLandData() {
     var flag = 0;
     var landData = {};
 
+    var basicId = document.getElementById("basicId").value;
+
     var residential = document.getElementById("residential").value;
 
     var commercial = document.getElementById("commercial").value;
@@ -259,7 +261,7 @@ function saveLandData() {
 
     var transport = document.getElementById("transport").value;
 
-    var reCreational = document.getElementById("reCreational").value;
+    var rCreate = document.getElementById("rCreate").value;
 
     var greenArea = document.getElementById("greenArea").value;
 
@@ -267,38 +269,37 @@ function saveLandData() {
 
     var hills = document.getElementById("hills").value;
 
-    landData["residential"] = residential;
-    landData["commercial"] = commercial;
-    landData["waterBodies"] = waterBodies;
+    landData["basicId"] = basicId;
+    landData["resi"] = residential;
+    landData["com"] = commercial;
+    landData["w_body"] = waterBodies;
     landData["public"] = public;
-    landData["pUtility"] = pUtility;
+    landData["p_utility"] = pUtility;
     landData["transport"] = transport;
-    landData["reCreational"] = reCreational;
-    landData["greenArea"] = greenArea;
-    landData["industrial"] = industrial;
+    landData["r_creational"] = rCreate;
+    landData["green_a"] = greenArea;
+    landData["indu"] = industrial;
     landData["hills"] = hills;
 
-
-
-    // if (flag == 0) {
-    //     $.ajax({
-    //         type: "POST",
-    //         async: false,
-    //         url: "php/.php",
-    //         contentType: "application/json",
-    //         data: JSON.stringify(landData),
-    //         success: function (data) {
-    //             // var data1 = JSON.parse(data);
-    //             // if (data1 == "success") {
-    //             //     alert("Data Save Succesfuly");
-    //             //     window.location.replace("menuPage.php");
-    //             // } else {
-    //             //     alert("Data not Save Succesfuly")
-    //             // }
-    //             window.location.replace("transport.php");
-    //         }
-    //     });
-    // }
+    if (flag == 0) {
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: "php/saveLanduse.php",
+            contentType: "application/json",
+            data: JSON.stringify(landData),
+            success: function (data) {
+                // var data1 = JSON.parse(data);
+                if (data == "success") {
+                    alert("Data Save Succesfuly");
+                    window.location.replace("solidWaste.php");
+                } else {
+                    alert("Data not Save Succesfuly")
+                }
+                // window.location.replace("transport.php");
+            }
+        });
+    }
     window.location.replace("solidWaste.php");
 
 }

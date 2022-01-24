@@ -8,7 +8,7 @@
      <meta charset="utf-8">
      <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-     <title>Fuel use in city</title>
+     <title>Cooking Fuel</title>
      <meta content="" name="description">
      <meta content="" name="keywords">
 
@@ -57,121 +57,25 @@
      <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
          <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
              <input type="text" class="form-control" id="sectionType" value="fuelChart" hidden>
+             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
 
              <div class="row justify-content-center">
 
-                 <div class="col-md-12 col-lg-4  mb-3  s" data-aos-delay="200">
+                 <div class="col-md-12 col-lg-5  mb-3  s" data-aos-delay="200">
                      <div class="in-sec">
                          <form class="needs-validation" novalidate>
                              <h6 class="text-center"> Cooking Fuel</h6>
-                             <!-- <div class="row">
-                                <div class="col-md-3">
-                                    <label for="popu">Fuel</label>
-                                    <div class="invalid-feedback">
-                                        Please provide a valid data.
-                                    </div>
+                             <marquee width="100%" direction="left" height="30px" scrollamount="2">
+                                SCM - Standard Cubic Meter  / m - month / t - ton
+                            </marquee>
+
+                              <div id="cookingFuel"></div>
+
+                            <div class="row ">
+                                <div class="col-md-12 mb-3 text-center">
+                                    <button class="btn btn-primary " type="button" onclick="saveCookingData();">NEXT</button>
                                 </div>
-
-                                <div class="form-group col-md-6">
-                                    <select class="form-control" id="fuelType" onchange="addTypeDiv();">
-                                        <option disabled selected> Types</option>
-                                        <option value="LPG">LPG</option>
-                                        <option value="MNGL">MNGL</option>
-                                        <option value="Kerosene">Kerosene</option>
-                                        <option value="Wood">Wood</option>
-                                    </select>
-                                </div>
-
-                            </div> -->
-
-
-
-                             <div class="row">
-                                 <div class="form-floating col-6 mt-3 mb-3">
-                                     <input type="text" class="form-control" id="lpginr" placeholder="Residential LPG" required>
-                                     <div class="invalid-feedback">
-                                         Please provide a valid data.
-                                     </div>
-                                     <label for="lpginr">Residential LPG</label>
-                                 </div>
-
-                                 <div class="form-floating col-6 mt-3 mb-3">
-                                     <input type="text" class="form-control" id="lpginc" placeholder="Commercial LPG" required>
-                                     <div class="invalid-feedback">
-                                         Please provide a valid data.
-                                     </div>
-                                     <label for="lpginc">Commercial LPG</label>
-                                 </div>
-                             </div>
-
-
-                             <div class="row">
-                                 <div class="form-floating col-6 mt-3 mb-3">
-                                     <input type="text" class="form-control" id="mnglinr" placeholder="Residential MNGL" required>
-                                     <div class="invalid-feedback">
-                                         Please provide a valid data.
-                                     </div>
-                                     <label for="mnglinr">Residential MNGL</label>
-                                 </div>
-
-                                 <div class="form-floating col-6 mt-3 mb-3">
-                                     <input type="text" class="form-control" id="mnglinc" placeholder="Commercial MNGL" required>
-                                     <div class="invalid-feedback">
-                                         Please provide a valid data.
-                                     </div>
-                                     <label for="mnglinc">Commercial MNGL</label>
-                                 </div>
-                             </div>
-
-
-                             <div class="row">
-                                 <div class="form-floating col-6 mt-3 mb-3">
-                                     <input type="text" class="form-control" id="keroseneinr" placeholder="Residential Kerosene" required>
-                                     <div class="invalid-feedback">
-                                         Please provide a valid data.
-                                     </div>
-                                     <label for="keroseneinr">Residential Kerosene</label>
-                                 </div>
-
-                                 <div class="form-floating col-6 mt-3 mb-3">
-                                     <input type="text" class="form-control" id="keroseneinc" placeholder="Commercial Kerosene" required>
-                                     <div class="invalid-feedback">
-                                         Please provide a valid data.
-                                     </div>
-                                     <label for="keroseneinc">Commercial Kerosene</label>
-                                 </div>
-                             </div>
-
-                             <div class="row">
-                                 <div class="form-floating col-6 mt-3 mb-3">
-                                     <input type="text" class="form-control" id="woodinr" placeholder="Residential Wood" required>
-                                     '<div class="invalid-feedback">
-                                         Please provide a valid data.
-                                     </div>
-                                     <label for="woodinr">Residential Wood</label>
-                                 </div>
-
-                                 <div class="form-floating col-6 mt-3 mb-3">
-                                     <input type="text" class="form-control" id="woodinc" placeholder="Commercial Wood" required>
-                                     <div class="invalid-feedback">
-                                         Please provide a valid data.
-                                     </div>
-                                     <label for="woodinc">Commercial wood</label>
-                                 </div>
-                             </div>
-
-
-                             <!--             
-                             <div id="lpg"></div>
-                             <div id="mngl"></div>
-                             <div id="kerosene"></div>
-                             <div id="wood"></div> -->
-
-                             <div class="row ">
-                                 <div class="col-md-12 mb-3 text-center">
-                                     <button class="btn btn-primary " type="button" onclick="redirect();">Next</button>
-                                 </div>
-                             </div>
+                            </div>
                          </form>
 
                          <!-- Start PopUp div -->
@@ -185,13 +89,12 @@
                          <!-- End PopUp div -->
                      </div>
                  </div>
-                 <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
+                 <div class="col-md-12 col-lg-7 mb-3 s " data-aos-delay="200">
                      <div class="in-sec">
                          <h3 class="text-center">Carbon Emission from Cooking Fuel</h3>
                          <ul style="margin-left: 10px;">
-                             <li class="popupli"> 454 grammes of carbon per liter of LPG. In order to combust this carbon to CO2,
-                                 1211 grammes of oxygen is needed .</li>
-                             <li class="popupli">The sum is then 454 + 1211 = 1665 grammes of CO2/liter of LPG.</li>
+                             <li class="popupli">We know GHG emissions from home cooking can be reduced by choosing which foods we eat and minimising cooking time and appliance use. Even combining a more environmentally friendly cooking method, such as using a microwave to part-cook food then roasting to finish in the oven, can cut our GHG emissions substantially.</li>
+                             <!-- <li class="popupli">The sum is then 454 + 1211 = 1665 grammes of CO2/liter of LPG.</li> -->
                          </ul>
                          <div class="row justify-content-center">
                              <div id="chartName">
@@ -259,12 +162,13 @@
      <script src="assets/js/bootstrap-show-modal.js"></script>
 
      <script src="js/induGraph.js"></script>
-     <script src="js/fueltype.js"></script>
+     <!-- <script src="js/fueltype.js"></script> -->
+   
 
      <!-- Template Main JS File -->
      <script src="assets/js/main.js"></script>
 
-
+ <script src="js/fuelUseInCityModel.js"></script>
  </body>
 
  </html>

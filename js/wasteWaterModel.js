@@ -43,8 +43,10 @@ function showWaterInput() {
                 if (check == "true") {
                     var i = 1;
                     var eledata = element.cData;
-                    var stpdata = element.stpData;
+
                     $.each(eledata, function (index, element1) {
+                        var n_stp = element1.n_stp;
+                        var stpdata = element1.stpData;
 
                         html = '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-6 col-xl-3 col-10">'
@@ -86,65 +88,66 @@ function showWaterInput() {
                             + '<div class="row justify-content-center" id="adddstp">';
 
                         $.each(stpdata, function (index, element2) {
+                            for (var i = 1; i <= n_stp; i++) {
+                                html += '<hr>'
+                                    + '<div class="row  text-center ">'
+                                    + '<h4>Details About STP ' + i + ' </h4>'
 
-                            html += '<hr>'
-                                + '<div class="row  text-center ">'
-                                + '<h4>Details About STP ' + i + ' </h4>'
+                                    + ' </div>'
+                                    + '<div class="row justify-content-center">'
+                                    + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-                                + ' </div>'
-                                + '<div class="row justify-content-center">'
-                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                                    + '<label for="capacity" class="form-label"> Capacity</label>'
+                                    + '<div class="input-group mb-2">'
+                                    + '<input type="text" id="capacity" name="capacity" class="form-control" placeholder="Capacity" value="' + element2.cap + '"  aria-label="Residential" aria-describedby="basic-addon2">'
+                                    + '</div>'
 
-                                + '<label for="capacity" class="form-label"> Capacity</label>'
-                                + '<div class="input-group mb-2">'
-                                + '<input type="text" id="capacity" name="capacity" class="form-control" placeholder="Capacity" value="' + element2.cap + '"  aria-label="Residential" aria-describedby="basic-addon2">'
-                                + '</div>'
+                                    + '</div>'
+                                    + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-                                + '</div>'
-                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                                    + '<label for="latitude" class="form-label"> Latitude</label>'
+                                    + '<div class="input-group mb-2">'
+                                    + '<input type="text" id="latitude" name="latitude" class="form-control" placeholder="Latitude" value="' + element2.lat + '"  aria-label="Residential" aria-describedby="basic-addon2">'
+                                    + '</div>'
 
-                                + '<label for="latitude" class="form-label"> Latitude</label>'
-                                + '<div class="input-group mb-2">'
-                                + '<input type="text" id="latitude" name="latitude" class="form-control" placeholder="Latitude" value="' + element2.lat + '"  aria-label="Residential" aria-describedby="basic-addon2">'
-                                + '</div>'
+                                    + '</div>'
+                                    + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-                                + '</div>'
-                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                                    + '<label for="longitude" class="form-label"> Longitude</label>'
+                                    + '<div class="input-group mb-2">'
+                                    + '<input type="text" id="longitude" name="longitude" class="form-control" placeholder="Longitude" value="' + element2.long + '"  aria-label="Residential" aria-describedby="basic-addon2">'
+                                    + '</div>'
 
-                                + '<label for="longitude" class="form-label"> Longitude</label>'
-                                + '<div class="input-group mb-2">'
-                                + '<input type="text" id="longitude" name="longitude" class="form-control" placeholder="Longitude" value="' + element2.long + '"  aria-label="Residential" aria-describedby="basic-addon2">'
-                                + '</div>'
+                                    + '</div>'
+                                    + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-                                + '</div>'
-                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                                    + '<label for="technology" class="form-label"> Technology</label>'
+                                    + '<div class="input-group mb-2">'
+                                    + '<input type="text" id="technology" name="technology" class="form-control" placeholder="Technology" value="' + element2.tech + '"   aria-label="Residential" aria-describedby="basic-addon2">'
+                                    + '</div>'
 
-                                + '<label for="technology" class="form-label"> Technology</label>'
-                                + '<div class="input-group mb-2">'
-                                + '<input type="text" id="technology" name="technology" class="form-control" placeholder="Technology" value="' + element2.tech + '"   aria-label="Residential" aria-describedby="basic-addon2">'
-                                + '</div>'
+                                    + '</div>'
+                                    + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-                                + '</div>'
-                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                                    + '<label for="waterRecycle" class="form-label"> Qty of Recycled Water</label>'
+                                    + '<div class="input-group mb-2">'
+                                    + '<input type="text" id="waterRecycle" name="waterRecycle" class="form-control" placeholder="Recycled Water" value="' + element2.recycle + '"  aria-label="Residential" aria-describedby="basic-addon2">'
+                                    + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                                    + '</div>'
 
-                                + '<label for="waterRecycle" class="form-label"> Qty of Recycled Water</label>'
-                                + '<div class="input-group mb-2">'
-                                + '<input type="text" id="waterRecycle" name="waterRecycle" class="form-control" placeholder="Recycled Water" value="' + element2.recycle + '"  aria-label="Residential" aria-describedby="basic-addon2">'
-                                + '<span class="input-group-text" id="basic-addon2">CMD</span>'
-                                + '</div>'
+                                    + '</div>'
+                                    + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-                                + '</div>'
-                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                                    + '<label for="waterDisposal" class="form-label">Qty of Water Disposal </label>'
+                                    + '<div class="input-group mb-2">'
+                                    + '<input type="text" id="waterDisposal" name="waterDisposal" class="form-control" placeholder="Disposal of Waste" value="' + element2.dispose + '"  aria-label="Residential" aria-describedby="basic-addon2">'
+                                    + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                                    + '</div>'
 
-                                + '<label for="waterDisposal" class="form-label">Qty of Water Disposal </label>'
-                                + '<div class="input-group mb-2">'
-                                + '<input type="text" id="waterDisposal" name="waterDisposal" class="form-control" placeholder="Disposal of Waste" value="' + element2.dispose + '"  aria-label="Residential" aria-describedby="basic-addon2">'
-                                + '<span class="input-group-text" id="basic-addon2">CMD</span>'
-                                + '</div>'
-
-                                + ' </div>'
-                                + '  </div>';
-                            i++;
+                                    + ' </div>'
+                                    + '  </div>';
+                                i++;
+                            }
                         });
 
                         html += '</div>';
@@ -277,6 +280,8 @@ function saveWaterData() {
     var waterData = {};
     var stpData = [];
 
+    var basicId = document.getElementById("basicId").value;
+
     var waterCon = document.getElementById("waterCon").value;
 
     var waterGen = document.getElementById("waterGen").value;
@@ -301,45 +306,45 @@ function saveWaterData() {
 
         var waterDisposal = document.getElementById("waterDisposal" + i).value;
 
-        stpDetails["capacity"] = capacity;
-        stpDetails["latitude"] = latitude;
-        stpDetails["longitude"] = longitude;
-        stpDetails["technology"] = technology;
-        stpDetails["waterRecycle"] = waterRecycle;
-        stpDetails["waterDisposal"] = waterDisposal;
+        stpDetails["cap"] = capacity;
+        stpDetails["lat"] = latitude;
+        stpDetails["long"] = longitude;
+        stpDetails["tech"] = technology;
+        stpDetails["recycle"] = waterRecycle;
+        stpDetails["dispose"] = waterDisposal;
 
         stpData.push(stpDetails);
     }
 
 
-
-    waterData["waterCon"] = waterCon;
-    waterData["waterGen"] = waterGen;
-    waterData["waterTreat"] = waterTreat;
-    waterData["noSTP"] = noSTP;
+    waterData["basicId"] = basicId;
+    waterData["w_cons"] = waterCon;
+    waterData["w_gen"] = waterGen;
+    waterData["q_treat"] = waterTreat;
+    waterData["n_stp"] = noSTP;
     waterData["stpData"] = stpData;
-    console.log(waterData);
+    // console.log(waterData);
 
-    // if (flag == 0) {
-    //     $.ajax({
-    //         type: "POST",
-    //         async: false,
-    //         url: "php/.php",
-    //         contentType: "application/json",
-    //         data: JSON.stringify(userData),
-    //         success: function (data) {
-    //             // var data1 = JSON.parse(data);
-    //             // if (data1 == "success") {
-    //             //     alert("Data Save Succesfuly");
-    //             //     window.location.replace("menuPage.php");
-    //             // } else {
-    //             //     alert("Data not Save Succesfuly")
-    //             // }
-    //             
-    //         }
-    //     });
-    // }
-    window.location.replace("industryEnergy.php");
+    if (flag == 0) {
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: "php/saveWastewater.php",
+            contentType: "application/json",
+            data: JSON.stringify(waterData),
+            success: function (data) {
+                // var data1 = JSON.parse(data);
+                if (data == "success") {
+                    alert("Data Save Succesfuly");
+                    window.location.replace("industryEnergy.php");
+                } else {
+                    alert("Data not Save Succesfuly")
+                }
+
+            }
+        });
+    }
+    // window.location.replace("industryEnergy.php");
 
 }
 

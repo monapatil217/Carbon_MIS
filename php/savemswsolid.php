@@ -28,7 +28,7 @@ $last_id=0;
                    $lat = $yardData[$i]->lat;
                    $long = $yardData[$i]->long;
                    $app_waste = $yardData[$i]->app_waste;
-                $query = "INSERT INTO yard(b_id,s_id,area,lat,loong,app_waste)
+                $query = "INSERT INTO yard(b_id,msw_id,area,lat,loong,app_waste)
                 VALUES ($basicId,$last_id,$area,$lat,$long,$app_waste)";
                 $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
             }
@@ -44,7 +44,7 @@ $last_id=0;
                     $long = $yardData[$i]->long;
                     $app_waste = $yardData[$i]->app_waste;
                 $query = "UPDATE yard set area=$area,lat=$lat,loong=$long,
-                  app_waste=$app_waste WHERE b_id='".$basicId."' AND s_id=$last_id";
+                  app_waste=$app_waste WHERE b_id='".$basicId."' AND msw_id=$last_id";
                 $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
             }
         }

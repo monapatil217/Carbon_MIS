@@ -68,35 +68,64 @@ require "php/session.php";
 
                 <div class="col-md-12 col-lg-12  mb-3" data-aos-delay="200">
                     <div class="in-sec">
-                        <h6 class="text-center">Industrial Process and Product</h6>
+                        <h6 class="text-center">Industrial Processes and Product Used</h6>
                         <marquee width="100%" direction="left" height="30px">
                             t - tons
                         </marquee>
                         <form class="needs-validation" novalidate>
 
-                            <div id="IndPPLand"></div>
+                            <!-- <div id="IndPPLand"></div> -->
+
+                        <div id="faq_pp" class="faq section-bg_pp">
+                        <div class="faq-list faq_list_e">
+                        <ul>
+
+                        <li data-aos="fade-up">
+                        <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Cement <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-1" class="collapse show extra" data-bs-parent=".faq-list">
+                        <!-- <h6 class="text-center">Quantity of Municipal Solid Waste </h6>  -->
+
+                         <div id="cementInput"></div>
+
+                         </div>
+                        </li>
+
+                        <li data-aos="fade-up" data-aos-delay="100">
+                        <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Chemical <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-2" class="collapse extra" data-bs-parent=".faq-list">
+                        <!-- <h6 class="text-center">Quantity of Biomedical Waste </h6>  -->
+
+                         <div id="chemicalInput"></div>
+
+                        </div>
+                        </li>
+
+                        <li data-aos="fade-up" data-aos-delay="200">
+                        <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Other<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-3" class="collapse extra" data-bs-parent=".faq-list">
+                        <!-- <h6 class="text-center">Quantity of Hazardous Waste </h6>  -->
+
+                        
+                            <div id="otherInput"></div>
+
+                        </div>
+                        </li>
+
+                        </div>
+                        </li>
+                        </ul>
+                        </div> </div>
+
+
+
+
+
 
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
                                     <button class="btn btn-primary " type="button" onclick="saveIndPPData();">NEXT</button>
                                 </div>
                             </div>
-                        
-                            <!-- <div class="row justify-content-center">
-                                <div class="col-md-6 col-lg-10 col-xl-9 col-10">
-                                    <label for="amtProd" class="form-label">  Amount of Product Manufacture</label>
-                                    <div class="input-group mb-2">
-                                        <input type="text" id="amtProd" class="form-control" placeholder="Product" aria-label="Area" aria-describedby="basic-addon2">
-                                        <span class="input-group-text" id="basic-addon2">t/year</span>
-                                    </div>
-                                </div>
-                            </div> -->
-
-                            <!-- <div class="row ">
-                                <div class="col-md-12 mb-3 text-center">
-                                    <button class="btn btn-primary " type="button" onclick="saveIndPPData();">NEXT</button>
-                                </div>
-                            </div> -->
                         </form>
 
                         <div class="row align-items-center justify-content-center" id="moreInfo">

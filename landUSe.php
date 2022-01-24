@@ -62,7 +62,7 @@ require "php/session.php";
 
                 <div class="col-md-12 col-lg-5  mb-3" data-aos-delay="200">
                     <div class="in-sec">
-                        <marquee width="100%" direction="left" height="30px">
+                        <marquee width="100%" direction="left" height="30px" scrollamount="2">
                             sq.km - Square Kilometre.
                         </marquee>
                         <form class="needs-validation" novalidate>

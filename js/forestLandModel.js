@@ -47,8 +47,46 @@ function showForestLand() {
                             + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                             + '<label for="areaForest" class="form-label"> Area under Forest Land </label >'
                             + '<div class="input-group mb-3">'
-                            + '<input type="text" id="areaForest" class="form-control" value="' + element1.area + '" placeholder="Area" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="areaForest" class="form-control" value="' + element1.areaForest + '" placeholder="Area" aria-label="Area" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">sq.km </span >'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>'
+                            + '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '<label for="roundWood" class="form-label"> Annual Rounded Removal </label >'
+                            + '<div class="input-group mb-3">'
+                            + '<input type="text" id="roundWood" name="roundWood" class="form-control" value="' + element1.roundWood + '" placeholder="Annual Rounded Removal" aria-label="Annual Rounded Removal" aria-describedby="basic-addon2">'
+                            + '<span class="input-group-text" id="basic-addon2">m3/year </span >'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>'
+
+                            + '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '<label for="fuelWood" class="form-label"> Annual Fuelwood Removal </label >'
+                            + '<div class="input-group mb-3">'
+                            + '<input type="text" id="fuelWood" name="fuelWood" class="form-control" value="' + element1.fuelWood + '" placeholder="Annual Fuelwood Removal" aria-label="Annual Fuelwood Removal" aria-describedby="basic-addon2">'
+                            + '<span class="input-group-text" id="basic-addon2">mᶟ/year </span >'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>'
+
+                            + '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '<label for="disturbance" class="form-label"> Forest area affected by Disturbance </label >'
+                            + '<div class="input-group mb-3">'
+                            + '<input type="text" id="disturbance" name="disturbance" class="form-control" value="' + element1.disturbance + '" placeholder="affected by distrbance" aria-label="affected by distrbance" aria-describedby="basic-addon2">'
+                            + '<span class="input-group-text" id="basic-addon2">ha/year </span >'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>'
+                            + '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '<label for="organicSo" class="form-label"> Forest area with organic soil </label >'
+                            + '<div class="input-group mb-3">'
+                            + '<input type="text" id="organicSo" name="organicSo" class="form-control" value="' + element1.organicSo + '" placeholder="organic soil" aria-label="organic soil" aria-describedby="basic-addon2">'
+                            + '<span class="input-group-text" id="basic-addon2">ha/year </span >'
                             + '</div>'
                             + '</div>'
                             + '</div>';
@@ -64,6 +102,42 @@ function showForestLand() {
                         + '<span class="input-group-text" id="basic-addon2">sq.km </span >'
                         + '</div>'
                         + '</div>'
+                        + '</div>'
+                        + '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '<label for="roundWood" class="form-label"> Annual Round Wood Removal </label >'
+                        + '<div class="input-group mb-3">'
+                        + '<input type="text" id="roundWood" name="roundWood" class="form-control" placeholder="Annual Round Wood Removal" aria-label="Annual Round Wood Removal" aria-describedby="basic-addon2">'
+                        + '<span class="input-group-text" id="basic-addon2">mᶟ/year </span >'
+                        + '</div>'
+                        + '</div>'
+                        + '</div>'
+                        + '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '<label for="fuelWood" class="form-label"> Annual Fuelwood Removal </label >'
+                        + '<div class="input-group mb-3">'
+                        + '<input type="text" id="fuelWood" name="fuelWood" class="form-control" placeholder="Annual Fuelwood Removal" aria-label="Annual Fuelwood Removal" aria-describedby="basic-addon2">'
+                        + '<span class="input-group-text" id="basic-addon2">mᶟ/year </span >'
+                        + '</div>'
+                        + '</div>'
+                        + '</div>'
+                        + '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '<label for="disturbance" class="form-label"> Forest Area Affected by Disturbance </label >'
+                        + '<div class="input-group mb-3">'
+                        + '<input type="text" id="disturbance" name="disturbance" class="form-control" placeholder="Affected by Disturbance" aria-label="Affected by Disturbance" aria-describedby="basic-addon2">'
+                        + '<span class="input-group-text" id="basic-addon2">sq.km </span >'
+                        + '</div>'
+                        + '</div>'
+                        + '</div>'
+                        + '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '<label for="organicSo" class="form-label"> Forest area with organic soil </label >'
+                        + '<div class="input-group mb-3">'
+                        + '<input type="text" id="organicSo" name="organicSo" class="form-control" placeholder="organic soil" aria-label="organic soil" aria-describedby="basic-addon2">'
+                        + '<span class="input-group-text" id="basic-addon2">sq.km </span >'
+                        + '</div>'
+                        + '</div>'
                         + '</div>';
                 }
             });
@@ -76,56 +150,60 @@ function showForestLand() {
 
 function saveForestData() {
 
-    window.location.replace("landUSe.php");
-    // var flag = 0;
-    // var userData = {};
+    // window.location.replace("landUSe.php");
+    var flag = 0;
+    var forestData = {};
 
-    // var relec = document.getElementById("relec").value;
-    // flag += customInputValidator(relec, "relec");
+    var basicId = document.getElementById("basicId").value;
 
-    // var celec = document.getElementById("celec").value;
-    // flag += customInputValidator(celec, "celec");
+    var areaForest = document.getElementById("areaForest").value;
 
-    // var selec = document.getElementById("selec").value;
-    // flag += customInputValidator(selec, "selec");
+    var roundWood = document.getElementById("roundWood").value;
 
-    // var slelec = document.getElementById("slelec").value;
-    // flag += customInputValidator(slelec, "slelec");
+    var fuelWood = document.getElementById("fuelWood").value;
 
-    // userData["relec"] = relec;
-    // userData["celec"] = celec;
-    // userData["selec"] = selec;
-    // userData["slelec"] = slelec;
+    var disturbance = document.getElementById("disturbance").value;
+
+    var organicSo = document.getElementById("organicSo").value;
 
 
+    forestData["basicId"] = basicId;
+    forestData["areaForest"] = areaForest;
+    forestData["roundWood"] = roundWood;
+    forestData["fuelWood"] = fuelWood;
+    forestData["disturbance"] = disturbance;
+    forestData["organicSo"] = organicSo;
 
-    // if (flag == 0) {
-    //     $.ajax({
-    //         type: "POST",
-    //         async: false,
-    //         url: "php/.php",
-    //         contentType: "application/json",
-    //         data: JSON.stringify(userData),
-    //         success: function (data) {
-    //             // var data1 = JSON.parse(data);
-    //             // if (data1 == "success") {
-    //             //     alert("Data Save Succesfuly");
-    //             //     window.location.replace("menuPage.php");
-    //             // } else {
-    //             //     alert("Data not Save Succesfuly")
-    //             // }
 
-    //         }
-    //     });
-    // }
 
-}
 
-function redirect() {
+    if (flag == 0) {
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: "php/saveForest.php",
+            contentType: "application/json",
+            data: JSON.stringify(forestData),
+            success: function (data) {
+                //  var data1 = JSON.parse(data);
+                if (data == "success") {
+                    alert("Data Save Succesfuly");
+                    window.location.replace("landUSe.php");
+                } else {
+                    alert("Data not Save Succesfuly")
+                }
 
-    window.location.replace(".php");
+            }
+        });
+    }
 
 }
+
+// function redirect() {
+
+//     window.location.replace(".php");
+
+// }
 
 function showforestLInfo() {
     var div = document.getElementById("moreInfo");

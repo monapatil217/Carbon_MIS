@@ -70,11 +70,11 @@ if ($type == "Electricity") {
             $mainArray['check'] = "true";
             $deleData = array();
             $eleData = [];
-            $eleData['areaForest'] = $row['areaForest'];
-            $eleData['roundWood'] = $row['roundWood'];
-            $eleData['fuelWood'] = $row['fuelWood'];
-            $eleData['disturbance'] = $row['disturbance'];
-            $eleData['organicSo'] = $row['organicSo'];
+            $eleData['perennial'] = $row['perennial'];
+            $eleData['harwested'] = $row['harwested'];
+            $eleData['mineralS'] = $row['mineralS'];
+            $eleData['organicS'] = $row['organicS'];
+            // $eleData['organicSo'] = $row['organicSo'];
             array_push($deleData, $eleData);
             $mainArray['cData'] =   $deleData;
             array_push($finalArray, $mainArray);
@@ -258,49 +258,43 @@ if ($type == "Electricity") {
         }
     }
 }  else if ($type == "WasteWater") { // pending
-
     $query2 = "SELECT * FROM waste_data WHERE b_id='" . $basicId . "'";
-
     $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
     $rowcount = mysqli_num_rows($result);
     if ($rowcount == 0) {
         $mainArray['check'] = "false";
     } else {
         while ($row = mysqli_fetch_array($result)) {
-
             $mainArray['check'] = "true";
             $deleData = array();
             $cData = [];
             $cData['w_cons'] = $row['w_cons'];
             $cData['w_gen'] = $row['w_gen'];
-            $cData['w_coll'] = $row['w_coll'];
+            // $cData['w_coll'] = $row['w_coll'];
             $cData['q_treat'] = $row['q_treat'];
             $cData['n_stp'] = $row['n_stp'];
+                $query3 = "SELECT * FROM stp WHERE b_id='" . $basicId . "'";
+                $result = mysqli_query($conn, $query3)  or die(mysqli_error($conn));
+                $rowcount = mysqli_num_rows($result);
+                $stpData = [];
+                if ($rowcount == 0) {
+                    $mainArray['stpData'] =   $stpData;
+                } else {
+                    while ($row = mysqli_fetch_array($result)) {
+                        $stp = [];
+                        $stp['cap'] = $row['cap'];
+                        $stp['lat'] = $row['lat'];
+                        $stp['long'] = $row['loong'];
+                        $stp['tech'] = $row['tech'];
+                        $stp['recycle'] = $row['recycle'];
+                        $stp['dispose'] = $row['dispose'];
+                        array_push($stpData, $stp);
+                    }
+                    $cData['stpData'] =   $stpData;
+                }
             array_push($deleData, $cData);
             $mainArray['cData'] =   $deleData;
         }
-    }
-
-    $query3 = "SELECT * FROM stp WHERE b_id='" . $basicId . "'";
-    $result = mysqli_query($conn, $query3)  or die(mysqli_error($conn));
-    $rowcount = mysqli_num_rows($result);
-    $stpData = [];
-    if ($rowcount == 0) {
-        $mainArray['stpData'] =   $stpData;
-    } else {
-        while ($row = mysqli_fetch_array($result)) {
-
-            $cData = [];
-            $cData['cap'] = $row['cap'];
-            $cData['lat'] = $row['lat'];
-            $cData['long'] = $row['long'];
-            $cData['tech'] = $row['tech'];
-            $cData['recycle'] = $row['recycle'];
-            $cData['dispose'] = $row['dispose'];
-
-            array_push($stpData, $cData);
-        }
-        $mainArray['stpData'] =   $stpData;
     }
     array_push($finalArray, $mainArray);
 } else if ($type == "Energy") {
@@ -325,6 +319,79 @@ if ($type == "Electricity") {
             $cData['ido'] = $row['ido'];
             $cData['briq'] = $row['briq'];
             $cData['hsd'] = $row['hsd'];
+            $cData['wood'] = $row['wood'];
+            array_push($deleData, $cData);
+            $mainArray['cData'] =   $deleData;
+            array_push($finalArray, $mainArray);
+        }
+    }
+}else if ($type == "Cement") {
+    $query2 = "SELECT * FROM indu_cem_data WHERE b_id='" . $basicId . "'";
+    $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
+    $rowcount = mysqli_num_rows($result);
+    if ($rowcount == 0) {
+        $mainArray['check'] = "false";
+        array_push($finalArray, $mainArray);
+    } else {
+        while ($row = mysqli_fetch_array($result)) {
+            $mainArray['check'] = "true";
+            $deleData = array();
+            $cData = [];
+            $cData['cem_opc'] = $row['cem_opc'];
+            $cData['cem_ppc'] = $row['cem_ppc'];
+            $cData['cem_pbfs'] = $row['cem_pbfs'];
+            $cData['cem_src'] = $row['cem_src'];
+            $cData['cem_irst40'] = $row['cem_irst40'];
+            array_push($deleData, $cData);
+            $mainArray['cData'] =   $deleData;
+            array_push($finalArray, $mainArray);
+        }
+    }
+} else if ($type == "Chemical") {
+    $query2 = "SELECT * FROM indu_chem_data WHERE b_id='" . $basicId . "'";
+    $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
+    $rowcount = mysqli_num_rows($result);
+    if ($rowcount == 0) {
+        $mainArray['check'] = "false";
+        array_push($finalArray, $mainArray);
+    } else {
+        while ($row = mysqli_fetch_array($result)) {
+            $mainArray['check'] = "true";
+            $deleData = array();
+            $cData = [];
+            $cData['ammo'] = $row['ammo'];
+            $cData['inorg_a'] = $row['inorg_a'];
+            $cData['amides'] = $row['amides'];
+            $cData['aldeh'] = $row['aldeh'];
+            $cData['organic'] = $row['organic'];
+            $cData['carb'] = $row['carb'];
+            $cData['sodaa'] = $row['sodaa'];
+            $cData['alco'] = $row['alco'];
+            $cData['alke'] = $row['alke'];
+            $cData['orgo_charo'] = $row['orgo_charo'];
+            $cData['oxideC'] = $row['oxideC'];
+            $cData['cyanideC'] = $row['cyanideC'];
+            $cData['carbonB'] = $row['carbonB'];
+            array_push($deleData, $cData);
+            $mainArray['cData'] =   $deleData;
+            array_push($finalArray, $mainArray);
+        }
+    }
+} else if ($type == "otherIndu") {
+    $query2 = "SELECT * FROM indu_other WHERE b_id='" . $basicId . "'";
+    $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
+    $rowcount = mysqli_num_rows($result);
+    if ($rowcount == 0) {
+        $mainArray['check'] = "false";
+        array_push($finalArray, $mainArray);
+    } else {
+        while ($row = mysqli_fetch_array($result)) {
+            $mainArray['check'] = "true";
+            $deleData = array();
+            $cData = [];
+            $cData['other_aluminium'] = $row['other_aluminium'];
+            $cData['other_lead'] = $row['other_lead'];
+            $cData['other_zinc'] = $row['other_zinc'];
             array_push($deleData, $cData);
             $mainArray['cData'] =   $deleData;
             array_push($finalArray, $mainArray);
@@ -332,9 +399,7 @@ if ($type == "Electricity") {
     }
 }else if ($type == "Cooking") { // pending
     $arrayfule =array();
-    $fuelList = ["LPG","MNGL","KERO","WOOD"];
-    for($i=0;$i<sizeOf($fuelList);$i++){
-        $query2 = "SELECT * FROM fule_data WHERE b_id='" . $basicId . "' AND  type='". $fuelList[$i] ."'";
+        $query2 = "SELECT * FROM fule_data WHERE b_id='" . $basicId . "' ORDER BY id";
             // echo $fuelList[$i];
         $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
         $rowcount = mysqli_num_rows($result);
@@ -349,14 +414,13 @@ if ($type == "Electricity") {
                 $cData = [];
                 $cData['resi'] = $row['resi'];
                 $cData['comm'] = $row['comm'];
-                $cData['type'] = $row['type'];
+                $cData['type'] = $row['fuletype'];
 
-                 $deleData[$fuelList[$i]] = $cData;
                   array_push($arrayfule, $cData);
                
             }
         }
-    }
+    
      $mainArray['cData'] =   $arrayfule;
     array_push($finalArray, $mainArray);
     

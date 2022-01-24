@@ -44,9 +44,36 @@ function showCropLand() {
 
                         html = '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                            + '<label for="areaCrop" class="form-label"> Area Occupied by Agricultural Land </label>'
+                            + '<label for="perennial" class="form-label">Woody Perennial Cover </label>'
                             + '<div class="input-group mb-3">'
-                            + '<input type="text" id="areaCrop" class="form-control" value="' + element1.area + '" placeholder="Area" aria-label="Area" aria-describedby="basic-addon2">'
+                            + '<input type="text" id="perennial" name="perennial" value="' + element1.perennial + '"  class="form-control" placeholder="Woody Perennial Cover" aria-label="Woody Perennial Cover" aria-describedby="basic-addon2">'
+                            + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>'
+                            + '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '<label for="harwested" class="form-label"> Harwested Land  </label>'
+                            + '<div class="input-group mb-3">'
+                            + '<input type="text" id="harwested" name="harwested" value="' + element1.harwested + '"  class="form-control" placeholder=" Harwested Land " aria-label=" Harwested Land " aria-describedby="basic-addon2">'
+                            + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>'
+                            + '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '<label for="mineralS" class="form-label"> Area of cropland on mineral soil </label>'
+                            + '<div class="input-group mb-3">'
+                            + '<input type="text" id="mineralS" name="mineralS" value="' + element1.mineralS + '"  class="form-control" placeholder="Mineral soil" aria-label="Mineral soil" aria-describedby="basic-addon2">'
+                            + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
+                            + '</div>'
+                            + '</div>'
+                            + '</div>'
+                            + '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '<label for="organicS" class="form-label"> Area of cropland on organic soil </label>'
+                            + '<div class="input-group mb-3">'
+                            + '<input type="text" id="organicS" name="organicS" value="' + element1.organicS + '"  class="form-control" placeholder="Organic Soil" aria-label="Organic Soil" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
                             + '</div>'
                             + '</div>'
@@ -57,9 +84,36 @@ function showCropLand() {
 
                     html = '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                        + '<label for="areaCrop" class="form-label"> Area Occupied by Agricultural Land </label>'
+                        + '<label for="perennial" class="form-label">Woody Perennial Cover </label>'
                         + '<div class="input-group mb-3">'
-                        + '<input type="text" id="areaCrop" class="form-control" placeholder="Area" aria-label="Area" aria-describedby="basic-addon2">'
+                        + '<input type="text" id="perennial" name="perennial" class="form-control" placeholder="Woody Perennial Cover" aria-label="Woody Perennial Cover" aria-describedby="basic-addon2">'
+                        + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
+                        + '</div>'
+                        + '</div>'
+                        + '</div>'
+                        + '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '<label for="harwested" class="form-label"> Harvested Land  </label>'
+                        + '<div class="input-group mb-3">'
+                        + '<input type="text" id="harwested" name="harwested" class="form-control" placeholder=" Harvested Land " aria-label=" Harwested Land " aria-describedby="basic-addon2">'
+                        + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
+                        + '</div>'
+                        + '</div>'
+                        + '</div>'
+                        + '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '<label for="mineralS" class="form-label"> Area of cropland on mineral soil </label>'
+                        + '<div class="input-group mb-3">'
+                        + '<input type="text" id="mineralS" name="mineralS" class="form-control" placeholder="Mineral soil" aria-label="Mineral soil" aria-describedby="basic-addon2">'
+                        + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
+                        + '</div>'
+                        + '</div>'
+                        + '</div>'
+                        + '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '<label for="organicS" class="form-label"> Area of cropland on organic soil </label>'
+                        + '<div class="input-group mb-3">'
+                        + '<input type="text" id="organicS" name="organicS" class="form-control" placeholder="Organic Soil" aria-label="Organic Soil" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
                         + '</div>'
                         + '</div>'
@@ -75,48 +129,50 @@ function showCropLand() {
 
 function saveCropData() {
 
-    window.location.replace("livestock.php");
-    // var flag = 0;
-    // var userData = {};
 
-    // var relec = document.getElementById("relec").value;
-    // flag += customInputValidator(relec, "relec");
+    var flag = 0;
 
-    // var celec = document.getElementById("celec").value;
-    // flag += customInputValidator(celec, "celec");
+    var cropData = {};
 
-    // var selec = document.getElementById("selec").value;
-    // flag += customInputValidator(selec, "selec");
+    var basicId = document.getElementById("basicId").value;
 
-    // var slelec = document.getElementById("slelec").value;
-    // flag += customInputValidator(slelec, "slelec");
+    var perennial = document.getElementById("perennial").value;
 
-    // userData["relec"] = relec;
-    // userData["celec"] = celec;
-    // userData["selec"] = selec;
-    // userData["slelec"] = slelec;
+    var harwested = document.getElementById("harwested").value;
+
+    var mineralS = document.getElementById("mineralS").value;
+
+    var organicS = document.getElementById("organicS").value;
+
+    cropData["basicId"] = basicId;
+    cropData["perennial"] = perennial;
+    cropData["harwested"] = harwested;
+    cropData["mineralS"] = mineralS;
+    cropData["organicS"] = organicS;
 
 
 
-    // if (flag == 0) {
-    //     $.ajax({
-    //         type: "POST",
-    //         async: false,
-    //         url: "php/.php",
-    //         contentType: "application/json",
-    //         data: JSON.stringify(userData),
-    //         success: function (data) {
-    //             // var data1 = JSON.parse(data);
-    //             // if (data1 == "success") {
-    //             //     alert("Data Save Succesfuly");
-    //             //     window.location.replace("menuPage.php");
-    //             // } else {
-    //             //     alert("Data not Save Succesfuly")
-    //             // }
+    if (flag == 0) {
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: "php/savecropland.php",
+            contentType: "application/json",
+            data: JSON.stringify(cropData),
+            success: function (data) {
+                // var data1 = JSON.parse(data);
+                if (data == "success") {
+                    alert("Data Save Succesfuly");
+                    window.location.replace("livestock.php");
+                } else {
+                    alert("Data not Save Succesfuly")
+                }
 
-    //         }
-    //     });
-    // }
+            }
+        });
+    }
+
+    // window.location.replace("livestock.php");
 
 }
 function redirect() {

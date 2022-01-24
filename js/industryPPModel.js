@@ -15,17 +15,19 @@ window.onclick = function (event) {
 }
 
 $(document).ready(function () {
-    showTransInput();
+    showCementInput();
+    showChemicalInput();
+    showOtherInput();
 })
 
-function showTransInput() {
+function showCementInput() {
     var html = '';
 
     var basicId = document.getElementById("basicId").value;
-    $("#IndPPLand").empty();
+    $("#cementInput").empty();
 
     var myobj = {};
-    myobj["type"] = "Transport";
+    myobj["type"] = "Cement";
     myobj["basicId"] = basicId;
 
     $.ajax({
@@ -43,19 +45,11 @@ function showTransInput() {
                     var eledata = element.cData;
                     $.each(eledata, function (index, element1) {
 
-                        html = '<div id="faq_pp" class="faq section-bg_pp">'
-                            + '<div class="faq-list faq_list_e">'
-                            + '<ul>'
-
-                            + '<li data-aos="fade-up">'
-                            + '<a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Cement <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>'
-                            + '<div id="faq-list-1" class="collapse show extra" data-bs-parent=".faq-list">'
-
-                            + '<div class="row">'
+                        html = '<div class="row">'
                             + '    <div class="col-md-6 col-lg-4 col-xl-3 col-10 mt-3">'
                             + '        <label for="opc" class="form-label"> O.P.C.</label>'
                             + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="opc" name="opc" class="form-control" placeholder=" O.P.C." aria-label="O.P.C." aria-describedby="basic-addon2">'
+                            + '            <input type="text" id="opc" name="opc" value="' + element1.cem_opc + '" class="form-control" placeholder=" O.P.C." aria-label="O.P.C." aria-describedby="basic-addon2">'
                             + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
                             + '        </div>'
                             + '    </div>'
@@ -63,7 +57,7 @@ function showTransInput() {
                             + '    <div class="col-md-6 col-lg-4 col-xl-3 col-10 mt-3">'
                             + '        <label for="ppc" class="form-label"> P.P.C.</label>'
                             + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="ppc" name="ppc" class="form-control" placeholder="P.P.C." aria-label="P.P.C." aria-describedby="basic-addon2">'
+                            + '            <input type="text" id="ppc" name="ppc" value="' + element1.cem_ppc + '" class="form-control" placeholder="P.P.C." aria-label="P.P.C." aria-describedby="basic-addon2">'
                             + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
                             + '        </div>'
                             + '    </div>'
@@ -71,7 +65,7 @@ function showTransInput() {
                             + '    <div class="col-md-6 col-lg-4 col-xl-3 col-10 mt-3">'
                             + '        <label for="pbfs" class="form-label"> P.B.F.S.</label>'
                             + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="pbfs" name="pbfs" class="form-control" placeholder="S.R.C." aria-label="P.B.F.S." aria-describedby="basic-addon2">'
+                            + '            <input type="text" id="pbfs" name="pbfs" value="' + element1.cem_pbfs + '" class="form-control" placeholder="S.R.C." aria-label="P.B.F.S." aria-describedby="basic-addon2">'
                             + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
                             + '        </div>'
                             + '    </div>'
@@ -81,7 +75,7 @@ function showTransInput() {
                             + '    <div class="col-md-6 col-lg-4 col-xl-3 col-10">'
                             + '        <label for="src" class="form-label">S.R.C.</label>'
                             + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="src" name="src" class="form-control" placeholder="S.R.C.." aria-label="S.R.C." aria-describedby="basic-addon2">'
+                            + '            <input type="text" id="src" name="src" value="' + element1.cem_src + '" class="form-control" placeholder="S.R.C.." aria-label="S.R.C." aria-describedby="basic-addon2">'
                             + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
                             + '        </div>'
                             + '    </div>'
@@ -89,7 +83,7 @@ function showTransInput() {
                             + '    <div class="col-md-6 col-lg-4 col-xl-3 col-10">'
                             + '        <label for="irst" class="form-label"> I.R.S.T.40</label>'
                             + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="irst" name="irst" class="form-control" placeholder="I.R.S.T.40" aria-label="I.R.S.T.40" aria-describedby="basic-addon2">'
+                            + '            <input type="text" id="irst" name="irst" value="' + element1.cem_irst40 + '" class="form-control" placeholder="I.R.S.T.40" aria-label="I.R.S.T.40" aria-describedby="basic-addon2">'
                             + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
                             + '        </div>'
                             + '    </div>'
@@ -101,231 +95,14 @@ function showTransInput() {
 
                             + ' <div class="row">'
                             + '<div class="col-md-12 mb-3 mt-3 text-center">'
-                            + ' <button class="btn btn-primary " type="button" >SAVE</button>'
+                            + ' <button class="btn btn-primary " type="button" onclick="showCementData();">SAVE</button>'
                             + ' </div>'
-                            + ' </div >'
-
-                            + ' </div>'
-                            + '</li>'
-
-                            + '<li data-aos="fade-up" data-aos-delay="100">'
-                            + '<a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Chemical <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>'
-                            + '<div id="faq-list-2" class="collapse extra" data-bs-parent=".faq-list">'
-
-                            + '<div class="row">'
-                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
-                            + '        <label for="ammonia" class="form-label"> Ammonia </label>'
-                            + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="ammonia" name="ammonia" class="form-control" placeholder="Ammonia" aria-label="Ammonia" aria-describedby="basic-addon2">'
-                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
-                            + '        </div>'
-                            + '    </div>'
-
-                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
-                            + '        <label for="inorganic" class="form-label"> Inorganic Acids</label>'
-                            + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="inorganic" name="inorganic" class="form-control" placeholder="Inorganic Acids" aria-label="Inorganic Acids" aria-describedby="basic-addon2">'
-                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
-                            + '        </div>'
-                            + '    </div>'
-
-                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
-                            + '        <label for="amides" class="form-label"> Amides </label>'
-                            + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="amides" name="amides" class="form-control" placeholder="Amides" aria-label="Amides" aria-describedby="basic-addon2">'
-                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
-                            + '        </div>'
-                            + '    </div>'
-                            + '     <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
-                            + '        <label for="aldehydes" class="form-label"> Aldehydes </label>'
-                            + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="aldehydes" name="aldehydes" class="form-control" placeholder="Aldehydes" aria-label="Aldehydes" aria-describedby="basic-addon2">'
-                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
-                            + '        </div>'
-                            + '    </div>'
-                            + '</div>'
-
-                            + '<div class="row">'
-                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
-                            + '        <label for="organic" class="form-label"> Organic Acids</label>'
-                            + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="organic" name="organic" class="form-control" placeholder="Organic Acids" aria-label="Organic Acids" aria-describedby="basic-addon2">'
-                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
-                            + '        </div>'
-                            + '    </div>'
-                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
-                            + '        <label for="carbides" class="form-label"> Carbides </label>'
-                            + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="carbides" name="carbides" class="form-control" placeholder="Carbides" aria-label="Carbides" aria-describedby="basic-addon2">'
-                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
-                            + '        </div>'
-                            + '    </div>'
-
-                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
-                            + '        <label for="sodaAsh" class="form-label"> Soda Ash</label>'
-                            + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="sodaAsh" name="sodaAsh" class="form-control" placeholder="Soda Ash" aria-label="Soda Ash" aria-describedby="basic-addon2">'
-                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
-                            + '        </div>'
-                            + '    </div>'
-                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
-                            + '        <label for="alcohols" class="form-label"> Alcohols </label>'
-                            + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="alcohols" name="alcohols" class="form-control" placeholder="Alcohols" aria-label="Alcohols" aria-describedby="basic-addon2">'
-                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
-                            + '        </div>'
-                            + '    </div>'
-                            + '</div>'
-
-                            + '<div class="row">'
-                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
-                            + '        <label for="alkenes" class="form-label"> Alkenes</label>'
-                            + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="alkenes" name="alkenes" class="form-control" placeholder="Alkenes" aria-label="Alkenes" aria-describedby="basic-addon2">'
-                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
-                            + '        </div>'
-                            + '    </div>'
-                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
-                            + '        <label for="organoc" class="form-label"> Organochlorides </label>'
-                            + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="organoc" name="organoc" class="form-control" placeholder="Organochlorides" aria-label="Organochlorides" aria-describedby="basic-addon2">'
-                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
-                            + '        </div>'
-                            + '    </div>'
-
-                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
-                            + '        <label for="oxideC" class="form-label"> Oxide Compounds</label>'
-                            + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="oxideC" name="oxideC" class="form-control" placeholder="Oxide Compounds" aria-label="Oxide Compounds" aria-describedby="basic-addon2">'
-                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
-                            + '        </div>'
-                            + '    </div>'
-                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
-                            + '        <label for="cyanideC" class="form-label"> Cyanide Compounds </label>'
-                            + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="cyanideC" name="cyanideC" class="form-control" placeholder="Cyanide Compounds" aria-label="Cyanide Compounds" aria-describedby="basic-addon2">'
-                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
-                            + '        </div>'
-                            + '    </div>'
-                            + '</div>'
-
-                            + '<div class="row justify-content-center">'
-                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
-                            + '        <label for="carbonB" class="form-label"> Carbon Black</label>'
-                            + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="carbonB" name="carbonB" class="form-control" placeholder="Carbon Black" aria-label="Carbon Black" aria-describedby="basic-addon2">'
-                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
-                            + '        </div>'
-                            + '    </div>'
-                            + '    <div class="col-md-6 col-lg-6 col-xl-9 col-10">'
-
-                            + '    </div>'
-                            + '</div>'
-
-                            + ' <div class="row">'
-                            + '<div class="col-md-12 mb-3 text-center">'
-                            + ' <button class="btn btn-primary " type="button" >SAVE</button>'
-                            + ' </div>'
-                            + ' </div >'
-
-                            + '</div>'
-                            + '</li>'
-
-                            + '<li data-aos="fade-up" data-aos-delay="200">'
-                            + '<a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Aluminium<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>'
-                            + '<div id="faq-list-3" class="collapse extra" data-bs-parent=".faq-list">'
-
-                            + '<div class="row">'
-                            + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
-                            + '         <label for="aluminium" class="form-label"> Aluminium</label>'
-                            + '         <div class="input-group mb-2">'
-                            + '              <input type="text" id="aluminium" name="aluminium"  class="form-control" placeholder="Aluminium" aria-label="Aluminium" aria-describedby="basic-addon2">'
-                            + '              <span class="input-group-text" id="basic-addon2">MW/m</span>'
-                            + '         </div>'
-                            + '    </div>'
-
-                            + '    <div class="col-md-6 col-lg-6 col-xl-9 col-10">'
-
-                            + '    </div>'
-                            + '</div>'
-
-                            + ' <div class="row">'
-                            + '<div class="col-md-12 mb-3 mt-3 text-center">'
-                            + ' <button class="btn btn-primary " type="button" >SAVE</button>'
-                            + ' </div>'
-                            + ' </div >'
-
-                            + '</div>'
-                            + '</li>'
-
-                            + '<li data-aos="fade-up" data-aos-delay="300">'
-                            + '<a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Lead <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>'
-                            + '<div id="faq-list-4" class="collapse extra" data-bs-parent=".faq-list">'
-
-                            + '<div class="row">'
-                            + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
-                            + '         <label for="lead" class="form-label"> Lead</label>'
-                            + '         <div class="input-group mb-2">'
-                            + '              <input type="text" id="lead" name="lead"  class="form-control" placeholder="Lead" aria-label="Lead" aria-describedby="basic-addon2">'
-                            + '              <span class="input-group-text" id="basic-addon2">MW/m</span>'
-                            + '         </div>'
-                            + '    </div>'
-
-                            + '    <div class="col-md-6 col-lg-6 col-xl-9 col-10">'
-
-                            + '    </div>'
-                            + '</div>'
-
-                            + ' <div class="row">'
-                            + '<div class="col-md-12 mb-3 mt-3 text-center">'
-                            + ' <button class="btn btn-primary " type="button" >SAVE</button>'
-                            + ' </div>'
-                            + ' </div >'
-
-                            + '</div>'
-                            + '</li>'
-
-                            + '<li data-aos="fade-up" data-aos-delay="300">'
-                            + '<a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Zinc <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>'
-                            + '<div id="faq-list-5" class="collapse extra" data-bs-parent=".faq-list">'
-
-                            + '<div class="row">'
-                            + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
-                            + '         <label for="zinc" class="form-label"> Zinc</label>'
-                            + '         <div class="input-group mb-2">'
-                            + '              <input type="text" id="zinc" name="zinc"  class="form-control" placeholder="Zinc" aria-label="Zinc" aria-describedby="basic-addon2">'
-                            + '              <span class="input-group-text" id="basic-addon2">MW/m</span>'
-                            + '         </div>'
-                            + '    </div>'
-
-                            + '    <div class="col-md-6 col-lg-6 col-xl-9 col-10">'
-
-                            + '    </div>'
-                            + '</div>'
-
-                            + ' <div class="row">'
-                            + '<div class="col-md-12 mb-3 mt-3 text-center">'
-                            + ' <button class="btn btn-primary " type="button" >SAVE</button>'
-                            + ' </div>'
-                            + ' </div >'
-                            + '</div>'
-                            + '</li>'
-                            + '</ul>'
-                            + '</div> </div>';
-
+                            + ' </div>';
                     });
                 }
                 else {
 
-                    html = '<div id="faq_pp" class="faq section-bg_pp">'
-                        + '<div class="faq-list faq_list_e">'
-                        + '<ul>'
-
-                        + '<li data-aos="fade-up">'
-                        + '<a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Cement <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>'
-                        + '<div id="faq-list-1" class="collapse show extra" data-bs-parent=".faq-list">'
-
-                        + '<div class="row">'
+                    html = '<div class="row">'
                         + '    <div class="col-md-6 col-lg-4 col-xl-3 col-10 mt-3">'
                         + '        <label for="opc" class="form-label"> O.P.C.</label>'
                         + '        <div class="input-group mb-2">'
@@ -355,7 +132,7 @@ function showTransInput() {
                         + '    <div class="col-md-6 col-lg-4 col-xl-3 col-10">'
                         + '        <label for="src" class="form-label">S.R.C.</label>'
                         + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="src" name="src" class="form-control" placeholder="S.R.C.." aria-label="S.R.C." aria-describedby="basic-addon2">'
+                        + '            <input type="text" id="src" name="src" class="form-control" placeholder="S.R.C." aria-label="S.R.C." aria-describedby="basic-addon2">'
                         + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
                         + '        </div>'
                         + '    </div>'
@@ -375,18 +152,162 @@ function showTransInput() {
 
                         + ' <div class="row">'
                         + '<div class="col-md-12 mb-3 mt-3 text-center">'
-                        + ' <button class="btn btn-primary " type="button" >SAVE</button>'
+                        + ' <button class="btn btn-primary " type="button" onclick="showCementData();">SAVE</button>'
                         + ' </div>'
-                        + ' </div >'
+                        + ' </div>';
+                }
+            });
+        }
+    });
 
-                        + ' </div>'
-                        + '</li>'
+    $("#cementInput").append(html);
+}
 
-                        + '<li data-aos="fade-up" data-aos-delay="100">'
-                        + '<a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Chemical <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>'
-                        + '<div id="faq-list-2" class="collapse extra" data-bs-parent=".faq-list">'
+function showChemicalInput() {
+    var html = '';
 
-                        + '<div class="row">'
+    var basicId = document.getElementById("basicId").value;
+    $("#chemicalInput").empty();
+
+    var myobj = {};
+    myobj["type"] = "Chemical";
+    myobj["basicId"] = basicId;
+
+    $.ajax({
+        type: "POST",
+        async: false,
+        url: "php/getAllData.php",
+        contentType: "application/json",
+        data: JSON.stringify(myobj),
+        success: function (data) {
+            var divList = JSON.parse(data);
+            $.each(divList, function (index, element) {
+                var check = element.check;
+
+                if (check == "true") {
+                    var eledata = element.cData;
+                    $.each(eledata, function (index, element1) {
+
+                        html = '<div class="row">'
+                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
+                            + '        <label for="ammonia" class="form-label"> Ammonia </label>'
+                            + '        <div class="input-group mb-2">'
+                            + '            <input type="text" id="ammonia" name="ammonia" value="' + element1.ammo + '" class="form-control" placeholder="Ammonia" aria-label="Ammonia" aria-describedby="basic-addon2">'
+                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
+                            + '        </div>'
+                            + '    </div>'
+
+                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
+                            + '        <label for="inorganic" class="form-label"> Inorganic Acids</label>'
+                            + '        <div class="input-group mb-2">'
+                            + '            <input type="text" id="inorganic" name="inorganic" value="' + element1.inorg_a + '" class="form-control" placeholder="Inorganic Acids" aria-label="Inorganic Acids" aria-describedby="basic-addon2">'
+                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
+                            + '        </div>'
+                            + '    </div>'
+
+                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
+                            + '        <label for="amides" class="form-label"> Amides </label>'
+                            + '        <div class="input-group mb-2">'
+                            + '            <input type="text" id="amides" name="amides" value="' + element1.amides + '" class="form-control" placeholder="Amides" aria-label="Amides" aria-describedby="basic-addon2">'
+                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
+                            + '        </div>'
+                            + '    </div>'
+                            + '     <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
+                            + '        <label for="aldehydes" class="form-label"> Aldehydes </label>'
+                            + '        <div class="input-group mb-2">'
+                            + '            <input type="text" id="aldehydes" name="aldehydes" value="' + element1.aldeh + '" class="form-control" placeholder="Aldehydes" aria-label="Aldehydes" aria-describedby="basic-addon2">'
+                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
+                            + '        </div>'
+                            + '    </div>'
+                            + '</div>'
+
+                            + '<div class="row">'
+                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
+                            + '        <label for="organic" class="form-label"> Organic Acids</label>'
+                            + '        <div class="input-group mb-2">'
+                            + '            <input type="text" id="organic" name="organic" value="' + element1.organic + '" class="form-control" placeholder="Organic Acids" aria-label="Organic Acids" aria-describedby="basic-addon2">'
+                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
+                            + '        </div>'
+                            + '    </div>'
+                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
+                            + '        <label for="carbides" class="form-label"> Carbides </label>'
+                            + '        <div class="input-group mb-2">'
+                            + '            <input type="text" id="carbides" name="carbides"  value="' + element1.carb + '" class="form-control" placeholder="Carbides" aria-label="Carbides" aria-describedby="basic-addon2">'
+                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
+                            + '        </div>'
+                            + '    </div>'
+
+                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
+                            + '        <label for="sodaAsh" class="form-label"> Soda Ash</label>'
+                            + '        <div class="input-group mb-2">'
+                            + '            <input type="text" id="sodaAsh" name="sodaAsh" value="' + element1.sodaa + '" class="form-control"  placeholder="Soda Ash" aria-label="Soda Ash" aria-describedby="basic-addon2">'
+                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
+                            + '        </div>'
+                            + '    </div>'
+                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
+                            + '        <label for="alcohols" class="form-label"> Alcohols </label>'
+                            + '        <div class="input-group mb-2">'
+                            + '            <input type="text" id="alcohols" name="alcohols" value="' + element1.alco + '" class="form-control"  placeholder="Alcohols" aria-label="Alcohols" aria-describedby="basic-addon2">'
+                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
+                            + '        </div>'
+                            + '    </div>'
+                            + '</div>'
+
+                            + '<div class="row">'
+                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
+                            + '        <label for="alkenes" class="form-label"> Alkenes</label>'
+                            + '        <div class="input-group mb-2">'
+                            + '            <input type="text" id="alkenes" name="alkenes" value="' + element1.alke + '" class="form-control"  placeholder="Alkenes" aria-label="Alkenes" aria-describedby="basic-addon2">'
+                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
+                            + '        </div>'
+                            + '    </div>'
+                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
+                            + '        <label for="organoc" class="form-label"> Organochlorides </label>'
+                            + '        <div class="input-group mb-2">'
+                            + '            <input type="text" id="organoc" name="organoc"  value="' + element1.orgo_charo + '" class="form-control" placeholder="Organochlorides" aria-label="Organochlorides" aria-describedby="basic-addon2">'
+                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
+                            + '        </div>'
+                            + '    </div>'
+
+                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
+                            + '        <label for="oxideC" class="form-label"> Oxide Compounds</label>'
+                            + '        <div class="input-group mb-2">'
+                            + '            <input type="text" id="oxideC" name="oxideC"  value="' + element1.oxideC + '" class="form-control" placeholder="Oxide Compounds" aria-label="Oxide Compounds" aria-describedby="basic-addon2">'
+                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
+                            + '        </div>'
+                            + '    </div>'
+                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
+                            + '        <label for="cyanideC" class="form-label"> Cyanide Compounds </label>'
+                            + '        <div class="input-group mb-2">'
+                            + '            <input type="text" id="cyanideC" name="cyanideC"  value="' + element1.cyanideC + '" class="form-control" placeholder="Cyanide Compounds" aria-label="Cyanide Compounds" aria-describedby="basic-addon2">'
+                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
+                            + '        </div>'
+                            + '    </div>'
+                            + '</div>'
+
+                            + '<div class="row justify-content-center">'
+                            + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
+                            + '        <label for="carbonB" class="form-label"> Carbon Black</label>'
+                            + '        <div class="input-group mb-2">'
+                            + '            <input type="text" id="carbonB" name="carbonB"  value="' + element1.carbonB + '" class="form-control" placeholder="Carbon Black" aria-label="Carbon Black" aria-describedby="basic-addon2">'
+                            + '            <span class="input-group-text" id="basic-addon-2">t/year</span>'
+                            + '        </div>'
+                            + '    </div>'
+                            + '    <div class="col-md-6 col-lg-6 col-xl-9 col-10">'
+
+                            + '    </div>'
+                            + '</div>'
+
+                            + ' <div class="row">'
+                            + '<div class="col-md-12 mb-3 text-center">'
+                            + ' <button class="btn btn-primary " type="button" onclick="showChemicalData();">SAVE</button>'
+                            + ' </div>'
+                            + ' </div >';
+                    });
+                }
+                else {
+
+                    html = '<div class="row">'
                         + '    <div class="col-md-6 col-lg-6 col-xl-3 col-10">'
                         + '        <label for="ammonia" class="form-label"> Ammonia </label>'
                         + '        <div class="input-group mb-2">'
@@ -498,18 +419,76 @@ function showTransInput() {
 
                         + ' <div class="row">'
                         + '<div class="col-md-12 mb-3 text-center">'
-                        + ' <button class="btn btn-primary " type="button" >SAVE</button>'
+                        + ' <button class="btn btn-primary " type="button" onclick="showChemicalData();">SAVE</button>'
                         + ' </div>'
-                        + ' </div >'
+                        + ' </div >';
+                }
+            });
+        }
+    });
 
-                        + '</div>'
-                        + '</li>'
+    $("#chemicalInput").append(html);
+}
 
-                        + '<li data-aos="fade-up" data-aos-delay="200">'
-                        + '<a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Aluminium<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>'
-                        + '<div id="faq-list-3" class="collapse extra" data-bs-parent=".faq-list">'
+function showOtherInput() {
+    var html = '';
 
-                        + '<div class="row">'
+    var basicId = document.getElementById("basicId").value;
+    $("#otherInput").empty();
+
+    var myobj = {};
+    myobj["type"] = "otherIndu";
+    myobj["basicId"] = basicId;
+
+    $.ajax({
+        type: "POST",
+        async: false,
+        url: "php/getAllData.php",
+        contentType: "application/json",
+        data: JSON.stringify(myobj),
+        success: function (data) {
+            var divList = JSON.parse(data);
+            $.each(divList, function (index, element) {
+                var check = element.check;
+
+                if (check == "true") {
+                    var eledata = element.cData;
+                    $.each(eledata, function (index, element1) {
+
+                        html = '<div class="row">'
+                            + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+                            + '         <label for="aluminium" class="form-label"> Aluminium</label>'
+                            + '         <div class="input-group mb-2">'
+                            + '              <input type="text" id="aluminium" name="aluminium" value="' + element1.other_aluminium + '"  class="form-control" placeholder="Aluminium" aria-label="Aluminium" aria-describedby="basic-addon2">'
+                            + '              <span class="input-group-text" id="basic-addon2">MW/m</span>'
+                            + '         </div>'
+                            + '    </div>'
+
+                            + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+                            + '         <label for="lead" class="form-label"> Lead</label>'
+                            + '         <div class="input-group mb-2">'
+                            + '              <input type="text" id="lead" name="lead" value="' + element1.other_lead + '"  class="form-control" placeholder="Lead" aria-label="Lead" aria-describedby="basic-addon2">'
+                            + '              <span class="input-group-text" id="basic-addon2">MW/m</span>'
+                            + '         </div>'
+                            + '    </div>'
+                            + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+                            + '         <label for="zinc" class="form-label"> Zinc</label>'
+                            + '         <div class="input-group mb-2">'
+                            + '              <input type="text" id="zinc" name="zinc" value="' + element1.other_zinc + '"  class="form-control" placeholder="Zinc" aria-label="Zinc" aria-describedby="basic-addon2">'
+                            + '              <span class="input-group-text" id="basic-addon2">t/year</span>'
+                            + '         </div>'
+                            + '    </div>'
+                            + '</div>'
+                            + ' <div class="row">'
+                            + '<div class="col-md-12 mb-3 text-center">'
+                            + ' <button class="btn btn-primary " type="button" onclick="showOtherData();">SAVE</button>'
+                            + ' </div>'
+                            + ' </div >';
+                    });
+                }
+                else {
+
+                    html += '<div class="row">'
                         + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
                         + '         <label for="aluminium" class="form-label"> Aluminium</label>'
                         + '         <div class="input-group mb-2">'
@@ -518,25 +497,6 @@ function showTransInput() {
                         + '         </div>'
                         + '    </div>'
 
-                        + '    <div class="col-md-6 col-lg-6 col-xl-9 col-10">'
-
-                        + '    </div>'
-                        + '</div>'
-
-                        + ' <div class="row">'
-                        + '<div class="col-md-12 mb-3 mt-3 text-center">'
-                        + ' <button class="btn btn-primary " type="button" >SAVE</button>'
-                        + ' </div>'
-                        + ' </div >'
-
-                        + '</div>'
-                        + '</li>'
-
-                        + '<li data-aos="fade-up" data-aos-delay="300">'
-                        + '<a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Lead <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>'
-                        + '<div id="faq-list-4" class="collapse extra" data-bs-parent=".faq-list">'
-
-                        + '<div class="row">'
                         + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
                         + '         <label for="lead" class="form-label"> Lead</label>'
                         + '         <div class="input-group mb-2">'
@@ -544,100 +504,180 @@ function showTransInput() {
                         + '              <span class="input-group-text" id="basic-addon2">MW/m</span>'
                         + '         </div>'
                         + '    </div>'
-
-                        + '    <div class="col-md-6 col-lg-6 col-xl-9 col-10">'
-
-                        + '    </div>'
-                        + '</div>'
-
-                        + ' <div class="row">'
-                        + '<div class="col-md-12 mb-3 mt-3 text-center">'
-                        + ' <button class="btn btn-primary " type="button" >SAVE</button>'
-                        + ' </div>'
-                        + ' </div >'
-
-                        + '</div>'
-                        + '</li>'
-
-                        + '<li data-aos="fade-up" data-aos-delay="300">'
-                        + '<a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Zinc <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>'
-                        + '<div id="faq-list-5" class="collapse extra" data-bs-parent=".faq-list">'
-
-                        + '<div class="row">'
                         + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
                         + '         <label for="zinc" class="form-label"> Zinc</label>'
                         + '         <div class="input-group mb-2">'
                         + '              <input type="text" id="zinc" name="zinc"  class="form-control" placeholder="Zinc" aria-label="Zinc" aria-describedby="basic-addon2">'
-                        + '              <span class="input-group-text" id="basic-addon2">MW/m</span>'
+                        + '              <span class="input-group-text" id="basic-addon2">t/year</span>'
                         + '         </div>'
                         + '    </div>'
-
-                        + '    <div class="col-md-6 col-lg-6 col-xl-9 col-10">'
-
-                        + '    </div>'
                         + '</div>'
-
                         + ' <div class="row">'
-                        + '<div class="col-md-12 mb-3 mt-3 text-center">'
-                        + ' <button class="btn btn-primary " type="button" >SAVE</button>'
+                        + '<div class="col-md-12 mb-3 text-center">'
+                        + ' <button class="btn btn-primary " type="button" onclick="showOtherData();">SAVE</button>'
                         + ' </div>'
-                        + ' </div >'
-                        + '</div>'
-                        + '</li>'
-                        + '</ul>'
-                        + '</div> </div>';
+                        + ' </div >';
                 }
             });
         }
     });
 
-    $("#IndPPLand").append(html);
+    $("#otherInput").append(html);
+}
+
+
+function showCementData() {
+    var flag = 0;
+    var cementData = {};
+    var basicId = document.getElementById("basicId").value;
+
+    var opc = document.getElementById("opc").value;
+
+    var ppc = document.getElementById("ppc").value;
+
+    var pbfs = document.getElementById("pbfs").value;
+
+    var src = document.getElementById("src").value;
+
+    var irst = document.getElementById("irst").value;
+
+    cementData["basicId"] = basicId;
+    cementData["cem_opc"] = opc;
+    cementData["cem_ppc"] = ppc;
+    cementData["cem_pbfs"] = pbfs;
+    cementData["cem_src"] = src;
+    cementData["cem_irst40"] = irst;
+
+    if (flag == 0) {
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: "php/saveIndCem.php",
+            contentType: "application/json",
+            data: JSON.stringify(cementData),
+            success: function (data) {
+                // var data1 = JSON.parse(data);
+                if (data == "success") {
+                    alert("Data Save Succesfuly");
+                    $("#faq-list-1").removeClass("show");
+                    $("#faq-list-2").addClass("show");
+                    // window.location.replace("menuPage.php");
+                } else {
+                    alert("Data not Save Succesfuly")
+                }
+                // window.location.replace("fueluseincity.php");
+            }
+        });
+    }
 
 }
 
-// var div = document.getElementById("popup-btn");
-// div.style.display = "block";
-
-function saveIndPPData() {
+function showChemicalData() {
 
     var flag = 0;
-    var ppData = {};
+    var chemicalData = {};
 
-    var relec = document.getElementById("relec").value;
+    var basicId = document.getElementById("basicId").value;
 
-    var celec = document.getElementById("celec").value;
+    var ammonia = document.getElementById("ammonia").value;
 
-    var selec = document.getElementById("selec").value;
+    var inorganic = document.getElementById("inorganic").value;
 
-    var slelec = document.getElementById("slelec").value;
+    var amides = document.getElementById("amides").value;
 
-    ppData["relec"] = relec;
-    ppData["celec"] = celec;
-    ppData["selec"] = selec;
-    ppData["slelec"] = slelec;
+    var aldehydes = document.getElementById("aldehydes").value;
 
-    // if (flag == 0) {
-    //     $.ajax({
-    //         type: "POST",
-    //         async: false,
-    //         url: "php/.php",
-    //         contentType: "application/json",
-    //         data: JSON.stringify(ppData),
-    //         success: function (data) {
-    //             // var data1 = JSON.parse(data);
-    //             // if (data1 == "success") {
-    //             //     alert("Data Save Succesfuly");
-    //             //     window.location.replace("menuPage.php");
-    //             // } else {
-    //             //     alert("Data not Save Succesfuly")
-    //             // }
-    //             window.location.replace("fueluseincity.php");
-    //         }
-    //     });
-    // }
+    var organic = document.getElementById("organic").value;
 
-    window.location.replace("fueluseincity.php");
+    var carbides = document.getElementById("carbides").value;
 
+    var sodaAsh = document.getElementById("sodaAsh").value;
+
+    var alcohols = document.getElementById("alcohols").value;
+
+    var alkenes = document.getElementById("alkenes").value;
+
+    var organoc = document.getElementById("organoc").value;
+
+    var oxideC = document.getElementById("oxideC").value;
+
+    var cyanideC = document.getElementById("cyanideC").value;
+
+    var carbonB = document.getElementById("carbonB").value;
+
+    chemicalData["basicId"] = basicId;
+    chemicalData["ammo"] = ammonia;
+    chemicalData["inorg_a"] = inorganic;
+    chemicalData["amides"] = amides;
+    chemicalData["aldeh"] = aldehydes;
+    chemicalData["organic"] = organic;
+    chemicalData["carb"] = carbides;
+    chemicalData["sodaa"] = sodaAsh;
+    chemicalData["alco"] = alcohols;
+    chemicalData["alke"] = alkenes;
+    chemicalData["orgo_charo"] = organoc;
+    chemicalData["oxideC"] = oxideC;
+    chemicalData["cyanideC"] = cyanideC;
+    chemicalData["carbonB"] = carbonB;
+
+    if (flag == 0) {
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: "php/saveIndChem.php",
+            contentType: "application/json",
+            data: JSON.stringify(chemicalData),
+            success: function (data) {
+                // var data1 = JSON.parse(data);
+                if (data == "success") {
+                    alert("Data Save Succesfuly");
+                    $("#faq-list-2").removeClass("show");
+                    $("#faq-list-3").addClass("show");
+                } else {
+                    alert("Data not Save Succesfuly")
+                }
+                // window.location.replace("fueluseincity.php");
+            }
+        });
+    }
+
+
+}
+
+function showOtherData() {
+
+    var flag = 0;
+    var aluminiumData = {};
+    var basicId = document.getElementById("basicId").value;
+    var aluminium = document.getElementById("aluminium").value;
+    var lead = document.getElementById("lead").value;
+    var zinc = document.getElementById("zinc").value;
+
+    aluminiumData["basicId"] = basicId;
+    aluminiumData["other_aluminium"] = aluminium;
+    aluminiumData["other_lead"] = lead;
+    aluminiumData["other_zinc"] = zinc;
+
+    if (flag == 0) {
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: "php/saveIndOther.php",
+            contentType: "application/json",
+            data: JSON.stringify(aluminiumData),
+            success: function (data) {
+                // var data1 = JSON.parse(data);
+                if (data == "success") {
+                    alert("Data Save Succesfuly");
+                    // window.location.replace("menuPage.php");
+                    window.location.replace("fueluseincity.php");
+                } else {
+                    alert("Data not Save Succesfuly")
+                }
+
+            }
+        });
+    }
 }
 
 // function redirect() {

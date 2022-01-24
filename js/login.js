@@ -5,7 +5,7 @@ $(document).ready(function () {
 function showLoginDesign(id) {
     $("#addUserDesign").empty();
     if (id == "user") {
-        var html = '<div class="form-group mx-auto mt-5">'
+        var html = '<div class="form-group mx-auto mt-3">'
             + '<input type="hidden" id="role" name="role" value="user">'
             + '<div class=" mb-3 ">'
             + '<select class="form-select" id="username" name="username" required>'
@@ -15,7 +15,7 @@ function showLoginDesign(id) {
             + '</div>'
             + '</div>'
             + '<div class="row">'
-            + '<div class="form-group mb-3">'
+            + '<div class="form-group mb-2">'
             + '<input type="password" class="form-control" id="password" name="password" placeholder="Password" required>'
             + '<div class="invalid-feedback">Please provide a valid data.</div>'
             + '</div>'
@@ -24,7 +24,7 @@ function showLoginDesign(id) {
             + '<div class="col-md-12 mb-3 text-center form-group">'
             + '<button class="btn btn-primary btn-get-started scrollto " type="submit"> LOGIN </button>'
             + '</div>'
-            + '</div>'
+            + '</div>';
         $("#addUserDesign").append(html);
         getCity();
     }
@@ -35,14 +35,19 @@ function showLoginDesign(id) {
             + '<input type="hidden" id="role" name="role" value="Admin">'
             + '<input type="text" class="form-control"  id="username" name="username" placeholder="User Id" required>'
             + '</div>'
-            + '<div class="form-group">'
+            + '<div class="form-group mb-2">'
             + '<input id="password-field" type="password" class="form-control" name="password" placeholder="Password" required>'
             + '<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>'
             + '</div>'
-            + '<div class="form-group">'
-            + '<button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>'
-            + '</div >';
-        + '<div class="row mb-3 px-3 justify-content-center"> <button type="submit" id="myBtn" class="btn btn-blue text-center" onclick=loginDetail("number")>Login</button> </div>';
+            + '<div class="row ">'
+            + '<div class="col-md-12 mb-3 text-center form-group">'
+            + '<button class="btn btn-primary btn-get-started scrollto " type="submit"> LOGIN </button>'
+            + '</div>'
+            + '</div>';
+        // + '<div class="form-group mb-3">'
+        // + '<button type="submit" class="form-control btn btn-primary submit px-3">LOGIN</button>'
+        // + '</div >';
+        // + '<div class="row mb-3 px-3 justify-content-center"> <button type="submit" id="myBtn" class="btn btn-blue text-center" onclick=loginDetail("number")>Login</button> </div>';
 
         $("#addAdminDesign").append(html);
     }

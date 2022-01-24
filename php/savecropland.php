@@ -17,7 +17,7 @@ $organicS = $data->organicS;
         $rowcount = mysqli_num_rows($result);
         if ($rowcount == 0) {
             $query = "INSERT INTO crop_data(b_id,perennial,harwested,mineralS,organicS)
-            VALUES ($basicId,$perennial,$harwested,$mineralS$organicS)";
+            VALUES ($basicId,$perennial,$harwested,$mineralS,$organicS)";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         }else{
             $query = "UPDATE  crop_data set perennial=$perennial,harwested=$harwested

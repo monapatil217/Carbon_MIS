@@ -142,47 +142,47 @@ function showEleInput() {
 
 function saveEleData() {
 
-    window.location.replace("transport.php");
-
     var flag = 0;
-    var userData = {};
+
+    var eleData = {};
+
+    var basicId = document.getElementById("basicId").value;
 
     var relec = document.getElementById("relec").value;
-    flag += customInputValidator(relec, "relec");
 
     var celec = document.getElementById("celec").value;
-    flag += customInputValidator(celec, "celec");
 
     var selec = document.getElementById("selec").value;
-    flag += customInputValidator(selec, "selec");
 
     var slelec = document.getElementById("slelec").value;
-    flag += customInputValidator(slelec, "slelec");
 
-    userData["relec"] = relec;
-    userData["celec"] = celec;
-    userData["selec"] = selec;
-    userData["slelec"] = slelec;
+    eleData["basicId"] = basicId;
+    eleData["r_elec"] = relec;
+    eleData["c_elec"] = celec;
+    eleData["s_elec"] = selec;
+    eleData["sl_elec"] = slelec;
 
     if (flag == 0) {
         $.ajax({
             type: "POST",
             async: false,
-            url: "php/.php",
+            url: "php/saveElectricity.php",
             contentType: "application/json",
-            data: JSON.stringify(userData),
+            data: JSON.stringify(eleData),
             success: function (data) {
                 // var data1 = JSON.parse(data);
-                // if (data1 == "success") {
-                //     alert("Data Save Succesfuly");
-                //     window.location.replace("menuPage.php");
-                // } else {
-                //     alert("Data not Save Succesfuly")
-                // }
-                window.location.replace("transport.php");
+                if (data == "success") {
+                    alert("Data Save Succesfuly");
+                    window.location.replace("transport.php");
+                } else {
+                    alert("Data not Save Succesfuly")
+                }
+                // window.location.replace(".php");
             }
         });
     }
+
+    // window.location.replace("transport.php");
 
 }
 
@@ -222,45 +222,3 @@ function showEleInfo() {
 //     window.location.replace("transport.php");
 
 // }
-
-
-function customSelectValidator(eleValue, eleName) {
-    var flag = 0;
-    var errSelector = ".invalid-feedback";
-    if (eleValue == "") {
-        if (eleName[0] == '#') {
-            $(eleName).parent().find(errSelector).addClass("d-block");
-        } else {
-            $("[name=" + eleName + "]").parent().find(errSelector).addClass("d-block");
-        }
-        flag--;
-    } else {
-        if (eleName[0] == '#') {
-            $("#" + eleName).parent().find(errSelector).removeClass("d-block");
-        } else {
-            $("[name=" + eleName + "]").parent().find(errSelector).removeClass("d-block");
-        }
-    }
-    return flag;
-}
-
-function customInputValidator(eleValue, eleName) {
-    var flag = 0;
-    if (eleValue == "") {
-        if (eleName[0] == '#') {
-            $(eleName).addClass("is-invalid");
-
-        } else {
-            $("input[name=" + eleName + "]").addClass("is-invalid");
-        }
-        flag--;
-
-    } else {
-        if (eleName[0] == '#') {
-            $(eleName).removeClass("is-invalid");
-        } else {
-            $("input[name=" + eleName + "]").removeClass("is-invalid");
-        }
-    }
-    return flag;
-}

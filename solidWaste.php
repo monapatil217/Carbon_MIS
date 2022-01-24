@@ -44,7 +44,7 @@ require "php/session.php";
         width: 300px;
         height: 300px;
     } -->
-    </style>
+    <!-- </style> -->
 
 </head>
 
@@ -68,15 +68,60 @@ require "php/session.php";
 
                 <div class="col-md-12 col-lg-12 mb-3" data-aos-delay="200">
                     <div class="in-sec">
+                    <h3 class="text-center mb-2">Carbon Emission of Solid Waste</h3>
+                     <marquee width="100%" direction="left" height="30px" scrollamount="2">
+                            sq.km - Square Kilometre / MTD -  Metric ton per day
+                        </marquee>
                         <!-- <h4 class="text-center mb-2">Solid Waste</h4> -->
                         <form class="needs-validation" novalidate>
 
-                            <div id="solidInput"></div>
-                            <div class="row ">
+                        <div id="faq_pp" class="faq section-bg_pp">
+                        <div class="faq-list faq_list_e">
+                        <ul>
+
+                        <li data-aos="fade-up">
+                        <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Municipal Solid Waste <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-1" class="collapse show extra" data-bs-parent=".faq-list">
+                        <h6 class="text-center">Quantity of Municipal Solid Waste </h6> 
+
+                         <div id="mswInput"></div>
+
+                         </div>
+                        </li>
+
+                        <li data-aos="fade-up" data-aos-delay="100">
+                        <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Biomedical Waste <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-2" class="collapse extra" data-bs-parent=".faq-list">
+                        <h6 class="text-center">Quantity of Biomedical Waste </h6> 
+
+                         <div id="bmwInput"></div>
+
+                        </div>
+                        </li>
+
+                        <li data-aos="fade-up" data-aos-delay="200">
+                        <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Hazardous Waste<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-3" class="collapse extra" data-bs-parent=".faq-list">
+                        <h6 class="text-center">Quantity of Hazardous Waste </h6> 
+
+                        
+                            <div id="hwInput"></div>
+
+                        </div>
+                        </li>
+
+                        </div>
+                        </li>
+                        </ul>
+                        </div> </div>
+
+                           
+                           
+                            <!-- <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
                                     <button class="btn btn-primary " type="button" onclick="saveSolidData();">NEXT</button>
                                 </div>
-                            </div>
+                            </div> -->
 
                         </form>
                         <div class="row align-items-center justify-content-center" id="moreInfo">

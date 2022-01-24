@@ -65,10 +65,11 @@ require "php/session.php";
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-4  mb-3" data-aos-delay="200">
                     <div class="in-sec">
-                        <marquee width="100%" direction="left" height="30px">
+                       
+                        <form class="needs-validation" novalidate>
+                         <marquee width="100%" direction="left" height="30px">
                             sq.km - square kilometer.
                         </marquee>
-                        <form class="needs-validation" novalidate>
                             <div id="cropInput"></div>
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
