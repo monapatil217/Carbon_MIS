@@ -113,7 +113,6 @@ require "php/session.php";
                             </div>
                             <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button>
-
                             </div>
                         </div>
                         <div></div>
@@ -203,7 +202,7 @@ require "php/session.php";
     <script src="js/induGraph.js"></script>
     <script src="js/energyElectricityModel.js"></script>
     <script src="js/common.js"></script>
-<script>
+    <script>
 
 
     </script>

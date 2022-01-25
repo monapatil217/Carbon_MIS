@@ -27,7 +27,7 @@ require "php/session.php";
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-     <link href="assets/vendor/jbox/jBox.all.min.css" rel="stylesheet">
+    <link href="assets/vendor/jbox/jBox.all.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -69,7 +69,7 @@ require "php/session.php";
                             <div id="liveStockInput"></div>
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
-                                    <button class="btn btn-primary " type="button" onclick="saveLiveData();">NEXT</button>
+                                    <button class="btn btn-primary " type="button" onclick="saveLiveData();">SAVE</button>
                                 </div>
                             </div>
 
@@ -94,7 +94,23 @@ require "php/session.php";
                             <li class="popupli"> It has been estimated that over 200 million tonnes of CO2 equivalents are released by Indian livestock each year. </li>
                         </ul>
 
-                        <div id="liveStock"></div>
+                        <div class="row align-items-center justify-content-center">
+                            <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <div class="row justify-content-center">
+                                    <div id="chartName"></div>
+                                    <div id="liveStock"></div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('liveStock')">Print</button>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center justify-content-center">
+                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <button type="button" class="btn btn-primary" onclick="redirect();">NEXT ➡</button>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
@@ -117,7 +133,6 @@ require "php/session.php";
 
         </div>
     </div>
-
 
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields

@@ -40,7 +40,7 @@ require "php/session.php";
   ======================================================== -->
 
     <style>
-        #transport {
+        #transChart {
             width: 100%;
             height: 300px;
         }
@@ -57,7 +57,7 @@ require "php/session.php";
     <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
-            <input type="text" class="form-control" id="sectionType" value="transport" hidden>
+            <input type="text" class="form-control" id="sectionType" value="transChart" hidden>
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
 
             <div class="row justify-content-center">
@@ -97,7 +97,7 @@ require "php/session.php";
                         <div class="row justify-content-center">
                             <div id="chartName">
                             </div>
-                            <div id="transport"></div>
+                            <div id="transChart"></div>
                         </div>
                     </div>
                 </div>
@@ -164,8 +164,8 @@ require "php/session.php";
     <script src="assets/js/jspdf.min.js"></script>
     <script src="assets/js/html2canvas.js"></script>
     <script src="assets/js/jquery.min.js"></script>
-    
-     <script src="assets/vendor/jbox/jBox.all.min.js"></script>
+
+    <script src="assets/vendor/jbox/jBox.all.min.js"></script>
     <!-- Our js File  -->
     <script src="js/energyTransportModel.js"></script>
     <script src="js/common.js"></script>
@@ -173,8 +173,8 @@ require "php/session.php";
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-     
-      
+
+
     <script src="assets/js/bootstrap-show-modal.js"></script>
 
 

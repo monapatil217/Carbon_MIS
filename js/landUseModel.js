@@ -292,7 +292,7 @@ function saveLandData() {
                 // var data1 = JSON.parse(data);
                 if (data == "success") {
                     alert("Data Save Succesfuly");
-                    window.location.replace("solidWaste.php");
+                    // window.location.replace("solidWaste.php");
                 } else {
                     alert("Data not Save Succesfuly")
                 }
@@ -304,11 +304,9 @@ function saveLandData() {
 
 }
 
-// function redirect() {
-
-//     window.location.replace("solidWaste.php");
-
-// }
+function redirect() {
+    window.location.replace("solidWaste.php");
+}
 
 function showLandUInfo() {
     var div = document.getElementById("moreInfo");

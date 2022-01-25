@@ -87,6 +87,8 @@ function showEleInput() {
                             + '</div>'
                             ;
                     });
+
+                    addChart();
                 }
                 else {
 
@@ -173,6 +175,7 @@ function saveEleData() {
                 // var data1 = JSON.parse(data);
                 if (data == "success") {
                     alert("Data Save Succesfuly");
+                    addChart();
                     // window.location.replace("transport.php");
                 } else {
                     alert("Data not Save Succesfuly")

@@ -188,7 +188,7 @@ function saveForestData() {
                 //  var data1 = JSON.parse(data);
                 if (data == "success") {
                     alert("Data Save Succesfuly");
-                    window.location.replace("landUSe.php");
+                    // window.location.replace("landUSe.php");
                 } else {
                     alert("Data not Save Succesfuly")
                 }
@@ -199,11 +199,10 @@ function saveForestData() {
 
 }
 
-// function redirect() {
+function redirect() {
+    window.location.replace("landUSe.php");
 
-//     window.location.replace(".php");
-
-// }
+}
 
 function showforestLInfo() {
     var div = document.getElementById("moreInfo");

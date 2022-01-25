@@ -59,7 +59,7 @@ require "php/session.php";
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
             <input type="text" class="form-control" id="sectionType" value="forest" hidden>
-            
+
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
 
             <div class="row  justify-content-center">
@@ -71,16 +71,16 @@ require "php/session.php";
                             sq.km - square kilometer / mᶟ - meter cube
                         </marquee>
                         <form class="needs-validation" novalidate>
-                        <div id="forestLand"></div>
+                            <div id="forestLand"></div>
 
-                        <div class="row ">
-                            <div class="col-md-12 mb-3 text-center">
-                                <button class="btn btn-primary " type="button" onclick="saveForestData();">NEXT</button>
+                            <div class="row ">
+                                <div class="col-md-12 mb-3 text-center">
+                                    <button class="btn btn-primary " type="button" onclick="saveForestData();">SAVE</button>
+                                </div>
                             </div>
-                        </div>
                         </form>
 
-                         <!-- Start PopUp div -->
+                        <!-- Start PopUp div -->
                         <div class="row align-items-center justify-content-center" id="moreInfo">
 
                             <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
@@ -101,11 +101,27 @@ require "php/session.php";
                         <ul style="margin-left: 10px;">
                             <li class="popupli"> Forest carbon stock is the amount of carbon that has been sequestered from the atmosphere and is now stored within the forest ecosystem, mainly within living biomass and soil, and to a lesser extent also in dead wood and litter. </li>
                         </ul>
-                        <div class="row justify-content-center">
-                            <div id="chartName">
+
+                        <div class="row align-items-center justify-content-center">
+                            <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <div class="row justify-content-center">
+                                    <div id="chartName"></div>
+                                    <div id="forest"></div>
+                                </div>
                             </div>
-                            <div id="forest"></div>
+                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('forest')">Print</button>
+                            </div>
                         </div>
+
+                        <div class="row align-items-center justify-content-center">
+                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <button type="button" class="btn btn-primary" onclick="redirect();">NEXT ➡</button>
+                            </div>
+                        </div>
+
+
+
                     </div>
                 </div>
             </div>
@@ -117,7 +133,7 @@ require "php/session.php";
 
             <div class="row align-items-center justify-content-center">
                 <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                       
+
                 </div>
                 <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="btn-container">
@@ -171,7 +187,7 @@ require "php/session.php";
     <script src="assets/vendor/jbox/jBox.all.min.js"></script>
     <script src="assets/js/bootstrap-show-modal.js"></script>
 
-   
+
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>

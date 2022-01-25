@@ -232,7 +232,7 @@ function saveTransData() {
                 // var data1 = JSON.parse(data);
                 if (data == "success") {
                     alert("Data Save Succesfuly");
-                    window.location.replace("cropLand.php");
+                    // window.location.replace("cropLand.php");
                 } else {
                     alert("Data not Save Succesfuly")
                 }
@@ -243,6 +243,11 @@ function saveTransData() {
     // window.location.replace("cropLand.php");
 }
 
+function redirect() {
+
+    window.location.replace("cropLand.php");
+
+}
 
 // var div = document.getElementById("moreInfo");
 // div.style.display = "none";

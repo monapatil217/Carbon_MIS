@@ -264,7 +264,7 @@ function saveLiveData() {
                 // var data1 = JSON.parse(data);
                 if (data == "success") {
                     alert("Data Save Succesfuly");
-                    window.location.replace("forestLand.php");
+                    // window.location.replace("forestLand.php");
                 } else {
                     alert("Data not Save Succesfuly")
                 }
@@ -305,8 +305,8 @@ function showLiveStockInfo() {
     $("#popUpData").append(html1);
 }
 
-// function redirect() {
+function redirect() {
 
-//     window.location.replace("forestLand.php");
+    window.location.replace("forestLand.php");
 
-// }
+}

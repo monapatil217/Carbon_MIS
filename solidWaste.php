@@ -17,9 +17,7 @@ require "php/session.php";
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -65,52 +63,50 @@ require "php/session.php";
 
             <div class="row justify-content-center">
 
-               
+
 
                 <div class="col-md-12 col-lg-12 mb-3" data-aos-delay="200">
                     <div class="in-sec">
-                    <h3 class="text-center mb-2">Carbon Emission of Solid Waste</h3>
-                     <marquee width="100%" direction="left" height="30px" scrollamount="2">
-                            sq.km - Square Kilometre / MTD -  Metric ton per day
+                        <h3 class="text-center mb-2">Carbon Emission of Solid Waste</h3>
+                        <marquee width="100%" direction="left" height="30px" scrollamount="2">
+                            sq.km - Square Kilometre / MTD - Metric ton per day
                         </marquee>
                         <!-- <h4 class="text-center mb-2">Solid Waste</h4> -->
                         <form class="needs-validation" novalidate>
 
-                        <div id="faq_pp" class="faq section-bg_pp">
-                            <div class="faq-list faq_list_e">
-                                <ul>
-                                    <li data-aos="fade-up">
-                                        <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Municipal Solid Waste <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                                        <div id="faq-list-1" class="collapse show extra" data-bs-parent=".faq-list">
-                                            <h6 class="text-center">Quantity of Municipal Solid Waste </h6> 
-                                            <div id="mswInput"></div>
-                                        </div>
-                                    </li>
+                            <div id="faq_pp" class="faq section-bg_pp">
+                                <div class="faq-list faq_list_e">
+                                    <ul>
+                                        <li data-aos="fade-up">
+                                            <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Municipal Solid Waste <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                            <div id="faq-list-1" class="collapse show extra" data-bs-parent=".faq-list">
+                                                <h6 class="text-center">Quantity of Municipal Solid Waste </h6>
+                                                <div id="mswInput"></div>
+                                            </div>
+                                        </li>
 
-                                    <li data-aos="fade-up" data-aos-delay="100">
-                                        <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Biomedical Waste <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                                        <div id="faq-list-2" class="collapse extra" data-bs-parent=".faq-list">
-                                            <h6 class="text-center">Quantity of Biomedical Waste </h6> 
-                                            <div id="bmwInput"></div>
-                                        </div>
-                                    </li>
+                                        <li data-aos="fade-up" data-aos-delay="100">
+                                            <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Biomedical Waste <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                            <div id="faq-list-2" class="collapse extra" data-bs-parent=".faq-list">
+                                                <h6 class="text-center">Quantity of Biomedical Waste </h6>
+                                                <div id="bmwInput"></div>
+                                            </div>
+                                        </li>
 
-                                    <li data-aos="fade-up" data-aos-delay="200">
-                                        <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Hazardous Waste<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                                        <div id="faq-list-3" class="collapse extra" data-bs-parent=".faq-list">
-                                            <h6 class="text-center">Quantity of Hazardous Waste </h6> 
-                                            <div id="hwInput"></div>
-                                        </div>
-                                    </li>
+                                        <li data-aos="fade-up" data-aos-delay="200">
+                                            <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Hazardous Waste<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                            <div id="faq-list-3" class="collapse extra" data-bs-parent=".faq-list">
+                                                <h6 class="text-center">Quantity of Hazardous Waste </h6>
+                                                <div id="hwInput"></div>
+                                            </div>
+                                        </li>
 
-                                    <!-- </div>
+                                        <!-- </div>
                                     </li> -->
-                                </ul>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
 
-                           
-                           
                             <!-- <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
                                     <button class="btn btn-primary " type="button" onclick="saveSolidData();">NEXT</button>
@@ -158,24 +154,24 @@ require "php/session.php";
     </div>
 
     <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    })();
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
     </script>
 
 
@@ -202,11 +198,11 @@ require "php/session.php";
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-    
+
     <!-- Our JS File -->
     <!-- <script src="js/induGraph.js"></script> -->
-     <script src="js/solidWasteModel.js"></script>
-     <script src="js/common.js"></script>
+    <script src="js/solidWasteModel.js"></script>
+    <script src="js/common.js"></script>
 </body>
 
 </html>

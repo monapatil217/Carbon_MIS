@@ -27,7 +27,7 @@ require "php/session.php";
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-     <link href="assets/vendor/jbox/jBox.all.min.css" rel="stylesheet">
+    <link href="assets/vendor/jbox/jBox.all.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -66,15 +66,15 @@ require "php/session.php";
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-4  mb-3" data-aos-delay="200">
                     <div class="in-sec">
-                       
+
                         <form class="needs-validation" novalidate>
-                         <marquee width="100%" direction="left" height="30px">
-                            sq.km - square kilometer.
-                        </marquee>
+                            <marquee width="100%" direction="left" height="30px">
+                                sq.km - square kilometer.
+                            </marquee>
                             <div id="cropInput"></div>
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
-                                    <button class="btn btn-primary " type="button" onclick="saveCropData();">NEXT</button>
+                                    <button class="btn btn-primary " type="button" onclick="saveCropData();">SAVE</button>
                                 </div>
                             </div>
                         </form>
@@ -89,40 +89,57 @@ require "php/session.php";
                         <!-- End PopUp div -->
                     </div>
                 </div>
-                
+
                 <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">
-                    <h3 class="text-center mb-2">Carbon Emission of Crop Land</h3>
+
+                        <h3 class="text-center mb-2">Carbon Emission of Crop Land</h3>
                         <ul style="margin-left: 10px;">
                             <li class="popupli">Stabilizing greenhouse gas (GHG) emissions from croplands as agricultural demand grows is a critical component of climate change mitigation.</li>
                             <li class="popupli">Agricultural production is a major emitter of GHGs, currently accounting for 18% of total GHG emissions in India . </li>
                         </ul>
-                        <div class="row justify-content-center">
-                            <div id="chartName"></div>
-                            <div id="cropLand"></div>
+
+                        <div class="row align-items-center justify-content-center">
+                            <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <div class="row justify-content-center">
+                                    <div id="chartName"></div>
+                                    <div id="cropLand"></div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('cropLand')">Print</button>
+                            </div>
                         </div>
+
+                        <div class="row align-items-center justify-content-center">
+                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <button type="button" class="btn btn-primary" onclick="redirect();">NEXT ➡</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Sub Hero -->
+    <div id="popup-wrapper" class="popup-container">
+        <div class="popup-content">
+
+            <div class="row align-items-center justify-content-center">
+                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                </div>
+                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="btn-container">
+                        <a href="#" id="close" class="btn-gotit">Got It</a>
                     </div>
                 </div>
             </div>
 
         </div>
-    </section><!-- End Sub Hero -->
-                       <div id="popup-wrapper" class="popup-container">
-                            <div class="popup-content">
-
-                                <div class="row align-items-center justify-content-center">
-                                    <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                       
-                                    </div>
-                                    <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="btn-container">
-                                            <a href="#" id="close" class="btn-gotit">Got It</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
+    </div>
 
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -165,8 +182,8 @@ require "php/session.php";
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/vendor/jbox/jBox.all.min.js"></script>
     <script src="assets/js/bootstrap-show-modal.js"></script>
-     <!-- Our js File  -->
-     <script src="js/induGraph.js"></script>
+    <!-- Our js File  -->
+    <script src="js/induGraph.js"></script>
     <script src="js/cropLandModel.js"></script>
     <script src="js/common.js"></script>
     <!-- Template Main JS File -->

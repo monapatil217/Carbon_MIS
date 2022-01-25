@@ -71,7 +71,7 @@ require "php/session.php";
 
                 <div class="col-md-12 col-lg-12  mb-3  s" data-aos-delay="200">
                     <div class="in-sec">
-                    <h5 class="text-center">Wastewater</h5>
+                        <h5 class="text-center">Wastewater</h5>
                         <marquee width="100%" direction="left" height="30px" scrollamount="2">
                             CMD - Cubic meter per day / MLD - Millions liter per day
                         </marquee>
@@ -94,7 +94,7 @@ require "php/session.php";
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
+                <!-- <div class="col-md-12 col-lg-8  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
                         <h3 class="text-center">Carbon Emission from Wastewater Sector</h3>
 
@@ -107,7 +107,7 @@ require "php/session.php";
                             <div id="wasteWater"></div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
         </div>
@@ -172,8 +172,8 @@ require "php/session.php";
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <!-- Our JS File -->
-     <script src="js/common.js"></script>
-    <script src="js/induGraph.js"></script>
+    <script src="js/common.js"></script>
+    <!-- <script src="js/induGraph.js"></script> -->
     <script src="js/wasteWaterModel.js"></script>
 
 </body>

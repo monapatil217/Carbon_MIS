@@ -60,7 +60,7 @@ require "php/session.php";
             <input type="text" class="form-control" id="sectionType" value="landUse" hidden>
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
             <div class="row">
-                
+
 
                 <div class="col-md-12 col-lg-5  mb-3" data-aos-delay="200">
                     <div class="in-sec">
@@ -69,10 +69,10 @@ require "php/session.php";
                         </marquee>
                         <form class="needs-validation" novalidate>
 
-                        <div id="landUseInput"></div>
+                            <div id="landUseInput"></div>
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
-                                    <button class="btn btn-primary " type="button" onclick="saveLandData();">NEXT</button>
+                                    <button class="btn btn-primary " type="button" onclick="saveLandData();">SAVE</button>
                                 </div>
                             </div>
                         </form>
@@ -93,17 +93,30 @@ require "php/session.php";
                     <div class="in-sec infoFont">
                         <h3 class="text-center">Carbon Emission from Land Use Sector </h3>
 
-                         <ul style="margin-left: 10px;">
-                                <li class="popupli"> Land plays an important role in global cycles of greenhouse gases (GHGs, the major GHGs are carbon dioxide (CO2), methane (CH4) and nitrous oxide (N2O)). Land use activities can result in emissions of such greenhouse gases to the atmosphere or removal of greenhouse gases from the atmosphere.</li>
-                            </ul>
-                            <div class="row justify-content-center">
-                                <div id="chartName">
+                        <ul style="margin-left: 10px;">
+                            <li class="popupli"> Land plays an important role in global cycles of greenhouse gases (GHGs, the major GHGs are carbon dioxide (CO2), methane (CH4) and nitrous oxide (N2O)). Land use activities can result in emissions of such greenhouse gases to the atmosphere or removal of greenhouse gases from the atmosphere.</li>
+                        </ul>
+
+                        <div class="row align-items-center justify-content-center">
+                            <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <div class="row justify-content-center">
+                                    <div id="chartName"></div>
+                                    <div id="landUse"></div>
                                 </div>
-                                <div id="landUse"></div>
                             </div>
+                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('landUse')">Print</button>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center justify-content-center">
+                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <button type="button" class="btn btn-primary" onclick="redirect();">NEXT ➡</button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                
             </div>
 
         </div>
@@ -166,7 +179,7 @@ require "php/session.php";
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/vendor/jbox/jBox.all.min.js"></script>
     <script src="assets/js/bootstrap-show-modal.js"></script>
- 
+
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 
