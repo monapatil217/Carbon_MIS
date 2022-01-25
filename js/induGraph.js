@@ -66,6 +66,11 @@ function addChart() {
                             renderer: xRenderer,
                             tooltip: am5.Tooltip.new(root, {})
                         }));
+                        xAxis.children.moveValue(am5.Label.new(root, {
+                            text: "Pollutant",
+                            x: am5.p50,
+                            centerX: am5.p50
+                          }), xAxis.children.length - 1);
 
                         xRenderer.grid.template.set("visible", false);
 
@@ -76,7 +81,12 @@ function addChart() {
                             extraMax: 0.1,
                             renderer: yRenderer
                         }));
-
+                        yAxis.children.moveValue(am5.Label.new(root, {
+                            rotation: -90,
+                            text: "Emmisions(tons/month)",
+                            y: am5.p50,
+                            centerX: am5.p50
+                          }), 0);
                         yRenderer.grid.template.setAll({
                             strokeDasharray: [2, 2]
                         });
