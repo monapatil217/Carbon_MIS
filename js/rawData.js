@@ -1,9 +1,36 @@
 
 $(document).ready(function () {
-    document.getElementById("dataDownload").style.display = "none";
+
+    // showInput();
+
+    // Get the element with id="defaultOpen" and click on it
+    // document.getElementById("defaultOpen").click();
+
+    document.getElementById("addModel").style.display = "none";
+
 })
 
+
+function openCity(cityName, elmnt, color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(cityName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+
+
 function showInput() {
+
+    document.getElementById("addModel").style.display = "block";
+
     var html = '';
 
     var city = document.getElementById("cityList").value;
@@ -48,17 +75,19 @@ function showInput() {
 
                 var cooking = element1.cooking;
 
-                document.getElementById("dataDownload").style.display = "block";
+                // document.getElementById("dataDownload").style.display = "block";
 
                 $.each(electricity, function (index, element2) {
 
                     if (element2.check == "true") {
 
                         $.each(element2.cData, function (index, element) {
-                            html += '<div class="row  align-items-center justify-content-center mt-3">'
-                                + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                                + '    <div class="in-sec">'
-                                + '        <h3 id="ele-header" class="text-center mb-2"> Input Values of Electricity Sector</h3>'
+                            html += '         <div id="Electricity" class="tabcontent">'
+                                // + ' <h1>Electricity</h1>'
+                                + '  <div class="row  align-items-center justify-content-center mt-3">'
+                                // + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
+                                // + '    <div class="in-sec">'
+                                + '        <h3 id="ele-header" class="text-center mb-2"> Electricity </h3>'
                                 + '        <table class="table text-center" id="ele-table">'
                                 + '           <thead>'
                                 + '               <tr>'
@@ -91,29 +120,30 @@ function showInput() {
                                 + '    </tbody>'
                                 + '     </table>'
 
-                                + '  </div>'
-                                + '   </div>'
-                                + ' </div> ';
+                                // + '  </div>'
+                                // + '  </div>'
+                                + '   </div> '
+                                + '   </div> ';
                         });
                     }
                     else {
-                        html += '<div class="row  align-items-center justify-content-center mt-3">'
+                        html += ' <div id="Electricity" class="tabcontent"><div class="row  align-items-center justify-content-center mt-3">'
                             + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                            + '  <div class="in-sec">'
+                            // + '  <div class="in-sec">'
                             + '      <h3 class="text-center mb-2"> Data NOT Found</h3>'
-                            + '      </div>'
+                            // + '      </div>'
                             + '</div>'
-                            + ' </div>';
+                            + ' </div></div>';
                     }
 
                 });
                 $.each(transport, function (index, element2) {
                     if (element2.check == "true") {
                         $.each(element2.cData, function (index, element) {
-                            html += '<div class="row  align-items-center justify-content-center mt-3">'
-                                + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                                + ' <div class="in-sec">'
-                                + '     <h3 id="trans-header" class="text-center mb-2"> Input Values of Transport Sector</h3>'
+                            html += ' <div id="Transport" class="tabcontent"><div class="row  align-items-center justify-content-center mt-3">'
+                                // + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
+                                // + ' <div class="in-sec">'
+                                + '     <h3 id="trans-header" class="text-center mb-2"> Transport </h3>'
                                 + '    <table class="table text-center" id="trans-table">'
                                 + '       <thead>'
                                 + '            <tr>'
@@ -166,28 +196,30 @@ function showInput() {
                                 + '  </tbody>'
                                 + ' </table>'
 
-                                + '  </div>'
-                                + '   </div>'
-                                + ' </div>';
+                                // + '  </div>'
+                                // + '   </div>'
+                                + '  </div></div>';
                         });
                     }
                     else {
-                        html += '<div class="row  align-items-center justify-content-center mt-3">'
+                        html += ' <div id="Transport" class="tabcontent"><div class="row  align-items-center justify-content-center mt-3">'
                             + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                            + '  <div class="in-sec">'
+                            // + '  <div class="in-sec">'
                             + '      <h3 class="text-center mb-2"> Data NOT Found</h3>'
-                            + '      </div>'
+                            // + '      </div>'
                             + '</div>'
-                            + ' </div>';
+                            + ' </div></div>';
                     }
                 });
+
+                html += '<div id="AFOLU" class="tabcontent">';
                 $.each(cropland, function (index, element2) {
                     if (element2.check == "true") {
                         $.each(element2.cData, function (index, element) {
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
-                                + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                                + '  <div class="in-sec">'
-                                + '      <h3 id="crop-header" class="text-center mb-2"> Input Values of Crop Land Sector</h3>'
+                                // + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
+                                // + '  <div class="in-sec">'
+                                + '      <h3 id="crop-header" class="text-center mb-2">Crop Land</h3>'
                                 + '      <table class="table text-center" id="crop-table">'
                                 + '           <thead>'
                                 + '               <tr>'
@@ -204,28 +236,28 @@ function showInput() {
                                 + '                 </tr>'
                                 + '             </tbody>'
                                 + '         </table>'
-                                + '      </div>'
-                                + '</div>'
-                                + ' </div>';
+                                // + '      </div>'
+                                // + '</div>'
+                                + '</div>';
                         });
                     }
                     else {
                         html += '<div class="row  align-items-center justify-content-center mt-3">'
                             + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                            + '  <div class="in-sec">'
+                            // + '  <div class="in-sec">'
                             + '      <h3 class="text-center mb-2"> Data NOT Found</h3>'
-                            + '      </div>'
+                            // + '      </div>'
                             + '</div>'
-                            + ' </div>';
+                            + '</div>';
                     }
                 });
                 $.each(livestock, function (index, element2) {
                     if (element2.check == "true") {
                         $.each(element2.cData, function (index, element) {
-                            html += ' <div class="row  align-items-center justify-content-center mt-3">'
-                                + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                                + '  <div class="in-sec">'
-                                + '     <h3  id="live-header" class="text-center mb-2"> Input Values of Livestock Sector</h3>'
+                            html += '<div class="row  align-items-center justify-content-center mt-3">'
+                                // + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
+                                // + '  <div class="in-sec">'
+                                + '     <h3  id="live-header" class="text-center mb-2"> Livestock </h3>'
                                 + '    <table class="table text-center"  id="live-table">'
                                 + '        <thead>'
                                 + '            <tr>'
@@ -288,28 +320,28 @@ function showInput() {
                                 + '  </tbody>'
                                 + '  </table>'
 
-                                + ' </div>'
-                                + '  </div>'
-                                + '   </div>';
+                                // + ' </div>'
+                                // + '  </div>'
+                                + '</div>';
                         });
                     }
                     else {
-                        html += '<div class="row  align-items-center justify-content-center mt-3">'
+                        html += '<div id="LiveStock" class="tabcontent"><div class="row  align-items-center justify-content-center mt-3">'
                             + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                            + '  <div class="in-sec">'
+                            // + '  <div class="in-sec">'
                             + '      <h3 class="text-center mb-2"> Data NOT Found</h3>'
-                            + '      </div>'
+                            // + '      </div>'
                             + '</div>'
-                            + ' </div>';
+                            + '</div>';
                     }
                 });
                 $.each(forest, function (index, element2) {
                     if (element2.check == "true") {
                         $.each(element2.cData, function (index, element) {
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
-                                + '   <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                                + '     <div class="in-sec">'
-                                + '      <h3 id="forest-header" class="text-center mb-2"> Input Values of Forest Land Sector</h3>'
+                                // + '   <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
+                                // + '     <div class="in-sec">'
+                                + '      <h3 id="forest-header" class="text-center mb-2"> Forest Land </h3>'
                                 + '      <table class="table text-center"  id="forest-table">'
                                 + '          <thead>'
                                 + '             <tr>'
@@ -326,28 +358,28 @@ function showInput() {
                                 + '            </tr>'
                                 + '        </tbody>'
                                 + '     </table>'
-                                + '    </div>'
-                                + '    </div>'
-                                + '   </div>';
+                                // + '    </div>'
+                                // + '    </div>'
+                                + ' </div>';
                         });
                     }
                     else {
                         html += '<div class="row  align-items-center justify-content-center mt-3">'
                             + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                            + '  <div class="in-sec">'
+                            // + '  <div class="in-sec">'
                             + '      <h3 class="text-center mb-2"> Data NOT Found</h3>'
-                            + '      </div>'
+                            // + '      </div>'
                             + '</div>'
-                            + ' </div>';
+                            + '</div>';
                     }
                 });
                 $.each(landuse, function (index, element2) {
                     if (element2.check == "true") {
                         $.each(element2.cData, function (index, element) {
-                            html += '  <div class="row  align-items-center justify-content-center mt-3">'
-                                + '  <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                                + '     <div class="in-sec">'
-                                + '       <h3 id="land-header" class="text-center mb-2"> Input Values of Land Use Sector</h3>'
+                            html += '<div class="row  align-items-center justify-content-center mt-3">'
+                                // + '  <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
+                                // + '     <div class="in-sec">'
+                                + '       <h3 id="land-header" class="text-center mb-2"> Land Use </h3>'
                                 + '      <table class="table text-center" id="land-table">'
                                 + '         <thead>'
                                 + '            <tr>'
@@ -410,28 +442,31 @@ function showInput() {
 
                                 + ' </tbody>'
                                 + '  </table>'
-                                + '  </div>'
-                                + ' </div>'
-                                + '  </div>';
+                                // + '  </div>'
+                                // + ' </div>'
+                                + ' </div></div>';
                         });
                     }
                     else {
-                        html += '<div class="row  align-items-center justify-content-center mt-3">'
+                        html += ' <div class="row  align-items-center justify-content-center mt-3">'
                             + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                            + '  <div class="in-sec">'
+                            // + '  <div class="in-sec">'
                             + '      <h3 class="text-center mb-2"> Data NOT Found</h3>'
                             + '      </div>'
-                            + '</div>'
-                            + ' </div>';
+                            // + '</div>'
+                            + '</div>  </div>';
                     }
                 });
+
+                html += '</div>';
+                html += '<div id="Solidwaste" class="tabcontent">';
                 $.each(solidwaste, function (index, element2) {
                     if (element2.check == "true") {
                         $.each(element2.cData, function (index, element) {
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
-                                + '   <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                                + '      <div class="in-sec">'
-                                + '        <h3 id="solid-header" class="text-center mb-2"> Input Values of Municipal Solid Waste Sector</h3>'
+                                // + '   <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
+                                // + '      <div class="in-sec">'
+                                + '        <h3 id="solid-header" class="text-center mb-2"> Municipal Solid Waste </h3>'
                                 + '      <table class="table text-center" id="solid-table">'
                                 + '          <thead>'
                                 + '             <tr>'
@@ -473,28 +508,28 @@ function showInput() {
                                 + '               </tr>'
                                 + '            </tbody>'
                                 + '        </table>'
-                                + '     </div>'
-                                + '   </div>'
+                                // + '     </div>'
+                                // + '   </div>'
                                 + ' </div>';
                         });
                     }
                     else {
                         html += '<div class="row  align-items-center justify-content-center mt-3">'
                             + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                            + '  <div class="in-sec">'
+                            // + '  <div class="in-sec">'
                             + '      <h3 class="text-center mb-2"> Data NOT Found</h3>'
-                            + '      </div>'
+                            // + '      </div>'
                             + '</div>'
-                            + ' </div>';
+                            + '</div>';
                     }
                 });
                 $.each(yard, function (index, element2) {
                     if (element2.check == "true") {
 
                         html += '<div class="row  align-items-center justify-content-center mt-3">'
-                            + '   <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                            + '      <div class="in-sec">'
-                            + '       <h3 id="yard-header" class="text-center mb-2"> Input Values of Dumping Yards</h3>'
+                            // + '   <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
+                            // + '      <div class="in-sec">'
+                            + '       <h3 id="yard-header" class="text-center mb-2"> Dumping Yards</h3>'
                             + '      <table class="table text-center" id="yard-table">'
                             + '          <thead>'
                             + '             <tr>'
@@ -520,28 +555,28 @@ function showInput() {
 
                         html += '      </tbody>'
                             + '   </table>'
-                            + '   </div>'
-                            + '   </div>'
-                            + '   </div>';
+                            // + '   </div>'
+                            // + '   </div>'
+                            + '</div>';
 
                     }
                     else {
                         html += '<div class="row  align-items-center justify-content-center mt-3">'
                             + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                            + '  <div class="in-sec">'
+                            // + '  <div class="in-sec">'
                             + '      <h3 class="text-center mb-2"> Data NOT Found</h3>'
-                            + '      </div>'
+                            // + '      </div>'
                             + '</div>'
-                            + ' </div>';
+                            + '</div>';
                     }
                 });
                 $.each(biomwaste, function (index, element2) {
                     if (element2.check == "true") {
                         $.each(element2.cData, function (index, element) {
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
-                                + '   <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                                + '       <div class="in-sec">'
-                                + '          <h3  id="bio-header" class="text-center mb-2"> Input Values of Biomedical Waste Sector</h3>'
+                                // + '   <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
+                                // + '       <div class="in-sec">'
+                                + '          <h3  id="bio-header" class="text-center mb-2"> Biomedical Waste </h3>'
                                 + '        <table class="table text-center"  id="bio-table">'
                                 + '            <thead>'
                                 + '                <tr>'
@@ -568,28 +603,28 @@ function showInput() {
                                 + '                  </tr>'
                                 + '              </tbody>'
                                 + '        </table>'
-                                + '      </div>'
-                                + '     </div>'
-                                + '     </div>';
+                                // + '      </div>'
+                                // + '     </div>'
+                                + '</div>';
                         });
                     }
                     else {
                         html += '<div class="row  align-items-center justify-content-center mt-3">'
                             + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                            + '  <div class="in-sec">'
+                            // + '  <div class="in-sec">'
                             + '      <h3 class="text-center mb-2"> Data NOT Found</h3>'
-                            + '      </div>'
+                            // + '      </div>'
                             + '</div>'
-                            + ' </div>';
+                            + '</div>';
                     }
                 });
                 $.each(hazwaste, function (index, element2) {
                     if (element2.check == "true") {
                         $.each(element2.cData, function (index, element) {
-                            html += '     <div class="row  align-items-center justify-content-center mt-3">'
-                                + '      <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                                + '      <div class="in-sec">'
-                                + '        <h3   id="haz-header" class="text-center mb-2"> Input Values of Hazardous Waste Sector</h3>'
+                            html += '<div class="row  align-items-center justify-content-center mt-3">'
+                                // + '      <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
+                                // + '      <div class="in-sec">'
+                                + '        <h3   id="haz-header" class="text-center mb-2">Hazardous Waste </h3>'
                                 + '     <table class="table text-center" id="haz-table">'
                                 + '         <thead>'
                                 + '                 <tr>'
@@ -616,28 +651,31 @@ function showInput() {
                                 + '                 </tr>'
                                 + '              </tbody>'
                                 + '         </table>'
-                                + '      </div>'
-                                + '   </div>'
-                                + '  </div>';
+                                // + '      </div>'
+                                // + '   </div>'
+                                + '</div>';
                         });
                     }
                     else {
                         html += '<div class="row  align-items-center justify-content-center mt-3">'
                             + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                            + '  <div class="in-sec">'
+                            // + '  <div class="in-sec">'
                             + '      <h3 class="text-center mb-2"> Data NOT Found</h3>'
-                            + '      </div>'
+                            // + '      </div>'
                             + '</div>'
-                            + ' </div>';
+                            + '</div>';
                     }
                 });
+
+                html += '</div>';
+                html += '<div id="WasteWater" class="tabcontent">';
                 $.each(wastewater, function (index, element2) {
                     if (element2.check == "true") {
                         $.each(element2.cData, function (index, element) {
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
-                                + '    <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                                + '   <div class="in-sec">'
-                                + '     <h3 id="ww-header" class="text-center mb-2"> Input Values of Wastewater Sector</h3>'
+                                // + '    <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
+                                // + '   <div class="in-sec">'
+                                + '     <h3 id="ww-header" class="text-center mb-2">Wastewater </h3>'
                                 + '    <table class="table text-center" id="ww-table">'
                                 + '        <thead>'
                                 + '          <tr>'
@@ -674,28 +712,28 @@ function showInput() {
                                 + '     </tr>'
                                 + '    </tbody>'
                                 + '    </table>'
-                                + '   </div>'
-                                + '   </div>'
-                                + '     </div>';
+                                // + '   </div>'
+                                // + '   </div>'
+                                + '</div>';
                         });
                     }
                     else {
                         html += '<div class="row  align-items-center justify-content-center mt-3">'
                             + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                            + '  <div class="in-sec">'
+                            // + '  <div class="in-sec">'
                             + '      <h3 class="text-center mb-2"> Data NOT Found</h3>'
-                            + '      </div>'
+                            // + '      </div>'
                             + '</div>'
-                            + ' </div>';
+                            + '</div>';
                     }
                 });
                 $.each(stp, function (index, element2) {
                     if (element2.check == "true") {
 
                         html += '<div class="row  align-items-center justify-content-center mt-3">'
-                            + '   <div class="col-md-8 col-lg-7 mb-3" data-aos-delay="200">'
-                            + '    <div class="in-sec">'
-                            + '        <h3 id="stp-header" class="text-center mb-2"> Input Values of STP</h3>'
+                            // + '   <div class="col-md-8 col-lg-7 mb-3" data-aos-delay="200">'
+                            // + '    <div class="in-sec">'
+                            + '        <h3 id="stp-header" class="text-center mb-2"> STP</h3>'
                             + '       <table class="table text-center" id="stp-table">'
                             + '          <thead>'
                             + '             <tr>'
@@ -725,28 +763,32 @@ function showInput() {
 
                         html += '   </tbody>'
                             + '   </table>'
-                            + '  </div>'
-                            + '   </div>'
-                            + '  </div>';
+                            // + '  </div>'
+                            // + '   </div>'
+                            + ' </div>';
 
                     }
                     else {
                         html += '<div class="row  align-items-center justify-content-center mt-3">'
                             + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                            + '  <div class="in-sec">'
+                            // + '  <div class="in-sec">'
                             + '      <h3 class="text-center mb-2"> Data NOT Found</h3>'
-                            + '      </div>'
+                            // + '      </div>'
                             + '</div>'
-                            + ' </div>';
+                            + '</div>';
                     }
                 });
+
+                html += '</div>';
+                html += '<div id="Industry" class="tabcontent">';
+
                 $.each(energyindu, function (index, element2) {
                     if (element2.check == "true") {
                         $.each(element2.cData, function (index, element) {
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
-                                + '     <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                                + '<div class="in-sec">'
-                                + '    <h3 id="ie-header" class="text-center mb-2"> Input Values of Industrial Energy Use Sector</h3>'
+                                // + '     <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
+                                // + '<div class="in-sec">'
+                                + '    <h3 id="ie-header" class="text-center mb-2"> Industrial Energy </h3>'
                                 + '    <table class="table text-center" id="ie-table">'
                                 + '        <thead>'
                                 + '            <tr>'
@@ -799,28 +841,28 @@ function showInput() {
                                 + '              </tbody>'
                                 + '           </table>'
 
-                                + '       </div>'
-                                + '    </div>'
-                                + ' </div>';
+                                // + '       </div>'
+                                // + '    </div>'
+                                + '</div>';
                         });
                     }
                     else {
                         html += '<div class="row  align-items-center justify-content-center mt-3">'
                             + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                            + '  <div class="in-sec">'
+                            // + '  <div class="in-sec">'
                             + '      <h3 class="text-center mb-2"> Data NOT Found</h3>'
-                            + '      </div>'
+                            // + '      </div>'
                             + '</div>'
-                            + ' </div>';
+                            + '</div>';
                     }
                 });
                 $.each(ppcement, function (index, element2) {
                     if (element2.check == "true") {
                         $.each(element2.cData, function (index, element) {
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
-                                + '     <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                                + '       <div class="in-sec">'
-                                + '          <h3 id="cpp-header"  class="text-center mb-2"> Input Values of Industrial Process and Product (Cement) Sector</h3>'
+                                // + '     <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
+                                // + '       <div class="in-sec">'
+                                + '          <h3 id="cpp-header"  class="text-center mb-2">Industrial Process and Product (Cement) </h3>'
                                 + '         <table class="table text-center" id="cpp-table" >'
                                 + '               <thead>'
                                 + '                  <tr>'
@@ -858,28 +900,28 @@ function showInput() {
                                 + '         </tbody>'
                                 + '        </table>'
 
-                                + '      </div>'
-                                + '    </div>'
-                                + '  </div>';
+                                // + '      </div>'
+                                // + '    </div>'
+                                + '</div>';
                         });
                     }
                     else {
                         html += '<div class="row  align-items-center justify-content-center mt-3">'
                             + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                            + '  <div class="in-sec">'
+                            // + '  <div class="in-sec">'
                             + '      <h3 class="text-center mb-2"> Data NOT Found</h3>'
-                            + '      </div>'
+                            // + '      </div>'
                             + '</div>'
-                            + ' </div>';
+                            + '</div>';
                     }
                 });
                 $.each(ppchemical, function (index, element2) {
                     if (element2.check == "true") {
                         $.each(element2.cData, function (index, element) {
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
-                                + '    <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                                + '     <div class="in-sec">'
-                                + '        <h3 id="chpp-header"  class="text-center mb-2"> Input Values of Industrial Process and Product (Chemical) Sector</h3>'
+                                // + '    <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
+                                // + '     <div class="in-sec">'
+                                + '        <h3 id="chpp-header"  class="text-center mb-2"> Industrial Process and Product (Chemical) </h3>'
                                 + '        <table class="table text-center" id="chpp-table">'
                                 + '          <thead>'
                                 + '              <tr>'
@@ -956,28 +998,28 @@ function showInput() {
                                 + '   </tr>'
                                 + '   </tbody>'
                                 + '    </table>'
-                                + '   </div>'
-                                + '   </div>'
-                                + '  </div>';
+                                // + '   </div>'
+                                // + '   </div>'
+                                + '</div>';
                         });
                     }
                     else {
                         html += '<div class="row  align-items-center justify-content-center mt-3">'
                             + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                            + '  <div class="in-sec">'
+                            // + '  <div class="in-sec">'
                             + '      <h3 class="text-center mb-2"> Data NOT Found</h3>'
-                            + '      </div>'
+                            // + '      </div>'
                             + '</div>'
-                            + ' </div>';
+                            + '</div>';
                     }
                 });
                 $.each(indu_other, function (index, element2) {
                     if (element2.check == "true") {
                         $.each(element2.cData, function (index, element) {
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
-                                + '    <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                                + '   <div class="in-sec">'
-                                + '       <h3  id="alu-header"  class="text-center mb-2"> Input Values of Industrial Process and Product (Aluminium) Sector</h3>'
+                                // + '    <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
+                                // + '   <div class="in-sec">'
+                                + '       <h3  id="alu-header"  class="text-center mb-2">Industrial Process and Product (Aluminium) </h3>'
                                 + '      <table class="table text-center"  id="alu-table" >'
                                 + '          <thead>'
                                 + '             <tr>'
@@ -994,13 +1036,13 @@ function showInput() {
                                 + '        </tr>'
                                 + '     </tbody>'
                                 + '     </table>'
-                                + '   </div>'
-                                + '   </div>'
+                                // + '   </div>'
+                                // + '   </div>'
                                 + '     </div>';
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
-                                + '   <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                                + '   <div class="in-sec">'
-                                + '      <h3 id="ld-header" class="text-center mb-2"> Input Values of Industrial Process and Product (Lead) Sector</h3>'
+                                // + '   <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
+                                // + '   <div class="in-sec">'
+                                + '      <h3 id="ld-header" class="text-center mb-2"> Industrial Process and Product (Lead) </h3>'
                                 + '       <table class="table  text-center" id="ld-table">'
                                 + '       <thead>'
                                 + '          <tr>'
@@ -1017,13 +1059,13 @@ function showInput() {
                                 + '       </tr>'
                                 + '    </tbody>'
                                 + '   </table>'
-                                + '   </div>'
-                                + '   </div>'
+                                // + '   </div>'
+                                // + '   </div>'
                                 + ' </div>';
                             html += '<div class="row  align-items-center justify-content-center mt-3">'
-                                + '   <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                                + '     <div class="in-sec">'
-                                + '       <h3  id="zg-header" class="text-center mb-2"> Input Values of Industrial Process and Product (Zinc) Sector</h3>'
+                                // + '   <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
+                                // + '     <div class="in-sec">'
+                                + '       <h3  id="zg-header" class="text-center mb-2"> Industrial Process and Product (Zinc) </h3>'
                                 + '        <table class="table text-center"  id="zg-table">'
                                 + '           <thead>'
                                 + '               <tr>'
@@ -1040,30 +1082,31 @@ function showInput() {
                                 + '             </tr>'
                                 + '          </tbody>'
                                 + '       </table>'
-                                + '     </div>'
-                                + '    </div>'
-                                + '  </div>';
+                                // + '     </div>'
+                                // + '    </div>'
+                                + '</div>';
                         });
                     }
                     else {
                         html += '<div class="row  align-items-center justify-content-center mt-3">'
                             + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                            + '  <div class="in-sec">'
+                            // + '  <div class="in-sec">'
                             + '      <h3 class="text-center mb-2"> Data NOT Found</h3>'
-                            + '      </div>'
+                            // + '      </div>'
                             + '</div>'
-                            + ' </div>';
+                            + '</div>';
                     }
                 });
 
+                html += '</div>';
                 $.each(cooking, function (index, element2) {
 
                     if (element2.check == "true") {
 
-                        html += '<div class="row  align-items-center justify-content-center mt-3">'
-                            + ' <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                            + '    <div class="in-sec">'
-                            + '       <h3 id="ck-header" class="text-center mb-2"> Input Values of Cooking Fuel Sector</h3>'
+                        html += '  <div id="CookingFuel" class="tabcontent"><div class="row  align-items-center justify-content-center mt-3">'
+                            // + ' <div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
+                            // + '    <div class="in-sec">'
+                            + '       <h3 id="ck-header" class="text-center mb-2">Cooking Fuel </h3>'
                             + '      <table class="table text-center" id="ck-table">'
                             + '          <thead>'
                             + '              <tr>'
@@ -1129,19 +1172,19 @@ function showInput() {
                         html += '  </tbody>'
                             + ' </table>'
 
-                            + ' </div>'
-                            + '   </div>'
-                            + ' </div>';
+                            // + ' </div>'
+                            // + '   </div>'
+                            + ' </div></div>';
 
                     }
                     else {
-                        html += '<div class="row  align-items-center justify-content-center mt-3">'
+                        html += ' <div id="CookingFuel" class="tabcontent"><div class="row  align-items-center justify-content-center mt-3">'
                             + '<div class="col-md-6 col-lg-6 mb-3" data-aos-delay="200">'
-                            + '  <div class="in-sec">'
+                            // + '  <div class="in-sec">'
                             + '      <h3 class="text-center mb-2"> Data NOT Found</h3>'
-                            + '      </div>'
+                            // + '      </div>'
                             + '</div>'
-                            + ' </div>';
+                            + ' </div></div>';
                     }
                 });
 
@@ -1149,6 +1192,8 @@ function showInput() {
         }
     });
 
+
     $("#sectorInfo").append(html);
+
 
 }
