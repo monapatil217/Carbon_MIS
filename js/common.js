@@ -53,8 +53,13 @@ function abc() {
     var msg = "<div class='progress'>"
         + "<div class='progress-bar' role='progressbar' style='width:" + percentFinal + "% ;' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'>" + percentFinal + " % </div>"
         + "</div>"
+    if (percentFinal != 100) {
+        jBoxBottomRightBigNotice("Warning <br> Please Fill the Remaining Data ", msg, "yellow", "600000000");
+    } else {
+        var msg = "";
+        jBoxBottomRightBigNotice("Thank You  <br> Data Successfully Submited ", msg, "green", "4000");
+    }
 
-    jBoxBottomRightBigNotice("Warning", msg, "yellow", "600000000");
 
 }
 
