@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title> demo</title>
+    <title> Raw Data</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -245,7 +245,7 @@
                         </div>
                         <!-- <div id="sectorInfo"> </div> -->
                     </div>
-                </div>s
+                </div>
 
                 <div class="balance-summary">
                     <section id="balance-title" class="text-center">
@@ -346,7 +346,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap-show-modal.js"></script>
 
-    <script src="js/demoRaw.js"></script>
+    <script src="js/rawData.js"></script>
     <script src="js/sectorGraph.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
