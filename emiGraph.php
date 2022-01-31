@@ -46,7 +46,66 @@
             width: 100%;
             height: 500px;
         }
+
+        /* * {
+            box-sizing: border-box
+        }
+
+    
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial;
+        } */
+
+        /* Style tab links */
+        .tablink {
+            background-color: #555;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 20%;
+        }
+
+        .tablink:hover {
+            background-color: #777;
+        }
+
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            color: white;
+            display: none;
+            padding: 100px 20px;
+            height: 100%;
+        }
+
+        #Home {
+            background-color: #FFFF;
+        }
+
+        #News {
+            background-color: #FFFF;
+        }
+
+        #Contact {
+            background-color: #FFFF;
+        }
+
+        #About {
+            background-color: #FFFF;
+        }
+
+        #About1 {
+            background-color: #FFFF;
+        }
     </style>
+
+
 
 </head>
 
@@ -62,13 +121,96 @@
 
             <!-- <input type="text" class="form-control" id="sectionType" value="commChart" hidden> -->
 
+
+            <div class="row">
+                <div class="col-md-12 col-lg-12  mb-3 s " data-aos-delay="200">
+                    <div class="in-sec">
+
+                        <button class="tablink" onclick="openPage('Home', this, '#888')">allEmiChart</button>
+                        <button class="tablink" onclick="openPage('News', this, '#888')" id="defaultOpen">allsecEmiChart</button>
+                        <button class="tablink" onclick="openPage('Contact', this, '#88')"> Sector-wise </button>
+                        <button class="tablink" onclick="openPage('About', this, '#888')">Pollutant-wise</button>
+                        <button class="tablink" onclick="openPage('About1', this, '#888')">Pollutants-wise</button>
+
+                        <div id="Home" class="tabcontent">
+                            <div id="allEmiChart"></div>
+                        </div>
+
+                        <div id="News" class="tabcontent">
+                            <div id="allsecEmiChart"></div>
+                        </div>
+
+                        <div id="Contact" class="tabcontent">
+                            <div class="row mt-3 justify-content-center">
+
+                                <div class="form-group col-md-2">
+                                    <label> Select Sector : </label>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <select class="form-control" id="sectionType" onchange="secEmiChart();">
+                                        <option disabled selected>Select Sector</option>
+                                        <option value="Electricity">Electricity</option>
+                                        <option value="Transport">Transport</option>
+
+                                        <option value="LiveStock">LiveStock</option>
+                                        <option value="CropLand">CropLand</option>
+                                        <option value="Forest">Forest</option>
+                                        <option value="LandUse">LandUse</option>
+
+                                        <option value="SolidWaste">SolidWaste</option>
+                                        <option value="WasteWater">WasteWater</option>
+
+                                        <option value="Energy">Industry Energy</option>
+                                        <option value="Product">Industry Process & Product</option>
+
+                                        <option value="CookingFuel">Cooking Fuel</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div id="secChartDiv">
+                                <div id="secEmiChart"></div>
+                            </div>
+                        </div>
+
+                        <div id="About" class="tabcontent">
+                            <div id="polluEmi"></div>
+                        </div>
+
+                        <div id="About1" class="tabcontent">
+                            <div class="row mt-3 justify-content-center">
+
+                                <div class="form-group col-md-2">
+                                    <label> Select Pollutants : </label>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <select class="form-control" id="pollutantType" onchange="poluEmiChart();">
+                                        <option disabled selected>Select Pollutants</option>
+                                        <option value="co2">CO2</option>
+                                        <option value="ch4">CH4</option>
+                                        <option value="n2o">N2O</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div id="poluChartDiv">
+                                <div id="poluEmiChart"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 
             <div class="row">
                 <div class="col-md-12 col-lg-12  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
                         <div id="chartName">
                             <h3> Carbon Contribution by Cities ( tCO2e/day )</h3>
                         </div>
-                        <div id="allEmiChart"></div>
+                      <div id="allEmiChart"></div>
 
                     </div>
                 </div>
@@ -79,7 +221,7 @@
                         <div id="chartName">
                             <h3> Carbon Contribution by Cities in Different Sector ( tCO2e/day )</h3>
                         </div>
-                        <div id="allsecEmiChart"></div>
+                      <div id="allsecEmiChart"></div> 
 
                     </div>
                 </div>
@@ -121,7 +263,7 @@
                         </div>
 
                         <div id="secChartDiv">
-                            <div id="secEmiChart"></div>
+                       <div id="secEmiChart"></div> 
                         </div>
                     </div>
                 </div>
@@ -133,7 +275,7 @@
                         <div id="chartName">
                             <h3> Pollutant-wise Carbon Contribution by Cities ( tons/day )</h3>
                         </div>
-                        <div id="polluEmi"></div>
+                       <div id="polluEmi"></div>
 
                     </div>
                 </div>
@@ -169,13 +311,29 @@
 
                     </div>
                 </div>
-            </div>
-
-
+            </div>-->
 
         </div>
     </section><!-- End Hero -->
 
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
 
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
