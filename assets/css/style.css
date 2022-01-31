@@ -2797,6 +2797,34 @@ textarea.form-control {
   margin-top: 30px;
   /* padding: 30px 0; */
 }
+
+#admin_dash{
+  margin-top: 20px;
+}
+/* 
+.colData{
+  margin: 20px 0;
+  padding: 10px;
+} */
+
+.colData{
+padding: 10px;
+
+}
+
+#mapSection{
+   margin-top: 30px;
+}
+
+
+.table{
+  position: absolute;
+  table-layout: auto;
+  /* border: 1px solid black; */
+  width: 40%;
+  /* top:70%; */
+  /* left: 10%; */
+}
 /*
 .swiper_slide_change{
   padding: 20px 60px;
