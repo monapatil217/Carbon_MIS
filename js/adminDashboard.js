@@ -2,7 +2,6 @@ $(document).ready(function () {
     addTable();
     $('#example').DataTable();
 })
-
 function addTable() {
     var city = "Vasai";
     var emission = "20 mton/day";
@@ -16,8 +15,6 @@ function addTable() {
             + '</tr>';
     }
     $("#example").append(html);
-
-
     // }
     // });
 }
