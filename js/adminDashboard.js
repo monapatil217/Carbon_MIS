@@ -15,6 +15,5 @@ function addTable() {
             + '</tr>';
     }
     $("#example").append(html);
-    // }
-    // });
+
 }
