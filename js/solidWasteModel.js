@@ -146,6 +146,7 @@ function showMSWInput() {
                         // + ' </div>'
                         // + '</li>'
                     });
+                    // addChart();
                 }
                 else {
 
@@ -264,6 +265,7 @@ function showBMWInput() {
                             + ' </div>'
                             + ' </div >';
                     });
+                    // addChart();
                 }
                 else {
 
@@ -363,6 +365,7 @@ function showHWInput() {
                             + ' </div>'
                             + ' </div >';
                     });
+                    // addChart();
                 }
                 else {
 
@@ -514,6 +517,7 @@ function showMSWData() {
     var basicId = document.getElementById("basicId").value;
 
     var generatedM = document.getElementById("generatedM").value;
+    // flag += customInputValidator(generatedM, "generatedM");
 
     var collectionM = document.getElementById("collectionM").value;
 
@@ -578,7 +582,10 @@ function showMSWData() {
                 if (data == "success") {
                     alert("Data Save Succesfuly");
                     $("#faq-list-1").removeClass("show");
+                    $("#fa1").addClass("collapsed");
+                    $("#fa2").removeClass("collapsed");
                     $("#faq-list-2").addClass("show");
+                    addChart();
 
                 } else {
                     alert("Data not Save Succesfuly")
@@ -618,7 +625,10 @@ function showBMWData() {
                 if (data == "success") {
                     alert("Data Save Succesfuly");
                     $("#faq-list-2").removeClass("show");
+                    $("#fa2").addClass("collapsed");
+                    $("#fa3").removeClass("collapsed");
                     $("#faq-list-3").addClass("show");
+                    addChart();
                 } else {
                     alert("Data not Save Succesfuly")
                 }
@@ -657,6 +667,7 @@ function showHWData() {
             success: function (data) {
                 if (data == "success") {
                     alert("Data Save Succesfuly");
+                    // addChart();
                     window.location.replace("wasteWater.php");
                 } else {
                     alert("Data not Save Succesfuly")
@@ -665,6 +676,10 @@ function showHWData() {
         });
     }
 
+}
+
+function redirect() {
+    window.location.replace("transport.php");
 }
 
 

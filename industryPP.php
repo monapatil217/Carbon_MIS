@@ -82,7 +82,7 @@ require "php/session.php";
                         <ul>
 
                         <li data-aos="fade-up">
-                        <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Cement <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <a data-bs-toggle="collapse" id="fa1" class="collapse" data-bs-target="#faq-list-1">Cement <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                         <div id="faq-list-1" class="collapse show extra" data-bs-parent=".faq-list">
                         <!-- <h6 class="text-center">Quantity of Municipal Solid Waste </h6>  -->
 
@@ -92,7 +92,7 @@ require "php/session.php";
                         </li>
 
                         <li data-aos="fade-up" data-aos-delay="100">
-                        <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Chemical <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <a data-bs-toggle="collapse" id="fa2" data-bs-target="#faq-list-2" class="collapsed">Chemical <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                         <div id="faq-list-2" class="collapse extra" data-bs-parent=".faq-list">
                         <!-- <h6 class="text-center">Quantity of Biomedical Waste </h6>  -->
 
@@ -102,7 +102,7 @@ require "php/session.php";
                         </li>
 
                         <li data-aos="fade-up" data-aos-delay="200">
-                        <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Other<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <a data-bs-toggle="collapse" id="fa3" data-bs-target="#faq-list-3" class="collapsed">Other<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                         <div id="faq-list-3" class="collapse extra" data-bs-parent=".faq-list">
                         <!-- <h6 class="text-center">Quantity of Hazardous Waste </h6>  -->
 

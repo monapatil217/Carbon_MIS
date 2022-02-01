@@ -85,7 +85,10 @@ if ($rowcount == 0) {
             $mainArray['check'] = "true";
             $deleData = array();
             $eleData = [];
-            $eleData['area'] = $row['area'];
+            $eleData['perennial'] = $row['perennial'];
+            $eleData['harwested'] = $row['harwested'];
+            $eleData['mineralS'] = $row['mineralS'];
+            $eleData['organicS'] = $row['organicS'];
             array_push($deleData, $eleData);
             $mainArray['cData'] =   $deleData;
             array_push($finalArray, $mainArray);
@@ -137,7 +140,11 @@ if ($rowcount == 0) {
             $mainArray['check'] = "true";
             $deleData = array();
             $eleData = [];
-            $eleData['area'] = $row['area'];
+            $eleData['areaForest'] = $row['areaForest'];
+            $eleData['roundWood'] = $row['roundWood'];
+            $eleData['fuelWood'] = $row['fuelWood'];
+            $eleData['disturbance'] = $row['disturbance'];
+            $eleData['organicSo'] = $row['organicSo'];
             array_push($deleData, $eleData);
             $mainArray['cData'] =   $deleData;
             array_push($finalArray, $mainArray);
@@ -461,7 +468,7 @@ if ($rowcount == 0) {
             $cData = [];
             $cData['resi'] = $row['resi'];
             $cData['comm'] = $row['comm'];
-            $cData['type'] = $row['type'];
+            $cData['type'] = $row['fuletype'];
             array_push($deleData, $cData);
         }
         $mainArray['check'] = "true";

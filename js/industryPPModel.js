@@ -99,6 +99,7 @@ function showCementInput() {
                             + ' </div>'
                             + ' </div>';
                     });
+                    addChart();
                 }
                 else {
 
@@ -304,6 +305,8 @@ function showChemicalInput() {
                             + ' </div>'
                             + ' </div >';
                     });
+                    addChart();
+
                 }
                 else {
 
@@ -485,6 +488,7 @@ function showOtherInput() {
                             + ' </div>'
                             + ' </div >';
                     });
+                    addChart();
                 }
                 else {
 
@@ -556,16 +560,16 @@ function showCementData() {
             contentType: "application/json",
             data: JSON.stringify(cementData),
             success: function (data) {
-                // var data1 = JSON.parse(data);
                 if (data == "success") {
                     alert("Data Save Succesfuly");
                     $("#faq-list-1").removeClass("show");
+                    $("#fa1").addClass("collapsed");
+                    $("#fa2").removeClass("collapsed");
                     $("#faq-list-2").addClass("show");
-                    // window.location.replace("menuPage.php");
+                    addChart();
                 } else {
                     alert("Data not Save Succesfuly")
                 }
-                // window.location.replace("fueluseincity.php");
             }
         });
     }
@@ -628,15 +632,16 @@ function showChemicalData() {
             contentType: "application/json",
             data: JSON.stringify(chemicalData),
             success: function (data) {
-                // var data1 = JSON.parse(data);
                 if (data == "success") {
                     alert("Data Save Succesfuly");
                     $("#faq-list-2").removeClass("show");
+                    $("#fa2").addClass("collapsed");
+                    $("#fa3").removeClass("collapsed");
                     $("#faq-list-3").addClass("show");
+                    addChart();
                 } else {
                     alert("Data not Save Succesfuly")
                 }
-                // window.location.replace("fueluseincity.php");
             }
         });
     }
@@ -669,8 +674,9 @@ function showOtherData() {
                 // var data1 = JSON.parse(data);
                 if (data == "success") {
                     alert("Data Save Succesfuly");
+                    addChart();
                     // window.location.replace("menuPage.php");
-                    window.location.replace("fueluseincity.php");
+                    // window.location.replace("fueluseincity.php");
                 } else {
                     alert("Data not Save Succesfuly")
                 }
