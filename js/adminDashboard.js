@@ -5,17 +5,6 @@ $(document).ready(function () {
 
 function addTable() {
 
-    // var myobj = {};
-    // myobj["type"] = "data";
-
-    // $.ajax({
-    //     type: "POST",
-    //     async: false,
-    // url: "php/allcityData.php",
-    // contentType: "application/json",
-    //     data: JSON.stringify(myobj),
-    //         success: function (data) {
-    // var divList = JSON.parse(data);
 
     var city = "Vasai";
     var emission = "20 mton/day";
