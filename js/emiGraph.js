@@ -64,11 +64,28 @@ function addEmiChart() {
                     renderer: am5xy.AxisRendererX.new(root, {}),
                     tooltip: am5.Tooltip.new(root, {})
                 }));
+                xAxis.children.moveValue(am5.Label.new(root, {
+                    text: "Amrut City",
+                    x: am5.p50,
+                    centerX: am5.p50
+                  }), xAxis.children.length - 1);
+
+
                 xAxis.data.setAll(data);
+
                 var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
                     min: 0,
                     renderer: am5xy.AxisRendererY.new(root, {})
                 }));
+                yAxis.children.moveValue(am5.Label.new(root, {
+                    rotation: -90,
+                    text: "Emissions(tCO2e/day)",
+                    y: am5.p50,
+                    centerX: am5.p50
+                  }), 0);
+
+
+
                 // Add legend
                 // https://www.amcharts.com/docs/v5/charts/xy-chart/legend-xy-series/
                 var legend = chart.children.push(am5.Legend.new(root, {
@@ -166,11 +183,25 @@ function addChart() {
                     renderer: am5xy.AxisRendererX.new(root, {}),
                     tooltip: am5.Tooltip.new(root, {})
                 }));
+
+                xAxis.children.moveValue(am5.Label.new(root, {
+                    text: "Amrut City",
+                    x: am5.p50,
+                    centerX: am5.p50
+                  }), xAxis.children.length - 1);
+
+
                 xAxis.data.setAll(data);
                 var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
                     min: 0,
                     renderer: am5xy.AxisRendererY.new(root, {})
                 }));
+                yAxis.children.moveValue(am5.Label.new(root, {
+                    rotation: -90,
+                    text: "Emissions(tCO2e/day)",
+                    y: am5.p50,
+                    centerX: am5.p50
+                  }), 0);
                 // Add legend
                 // https://www.amcharts.com/docs/v5/charts/xy-chart/legend-xy-series/
                 var legend = chart.children.push(am5.Legend.new(root, {
@@ -327,11 +358,28 @@ function viewGraph(divId, divList) {
             categoryField: "country",
             renderer: xRenderer
         }));
+
+        xAxis.children.moveValue(am5.Label.new(root, {
+            text: "Amrut City",
+            x: am5.p50,
+            centerX: am5.p50
+          }), xAxis.children.length - 1);
+
+
         var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
             maxDeviation: 0.3,
             min: 0,
             renderer: am5xy.AxisRendererY.new(root, {})
         }));
+
+        yAxis.children.moveValue(am5.Label.new(root, {
+            rotation: -90,
+            text: "Emissions(tCO2e/day)",
+            y: am5.p50,
+            centerX: am5.p50
+          }), 0);
+
+
         //     // Add cursor
         //     // https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
         var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
