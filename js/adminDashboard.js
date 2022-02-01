@@ -18,7 +18,6 @@ function addTable() {
     $("#example").append(html);
 
 
-
     // }
     // });
 }
