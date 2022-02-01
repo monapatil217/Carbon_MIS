@@ -4,8 +4,6 @@ $(document).ready(function () {
 })
 
 function addTable() {
-
-
     var city = "Vasai";
     var emission = "20 mton/day";
     var indexNo = 20;
