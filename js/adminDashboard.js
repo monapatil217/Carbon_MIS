@@ -14,6 +14,7 @@ function addTable() {
             + '<td>' + emission + '</td>'
             + '</tr>';
     }
-    $("#example").append(html);
+    $("#example").append(html);//monali
+
 
 }
