@@ -74,7 +74,7 @@
 
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
-                                    <button class="btn btn-primary " type="button" onclick="saveCookingData();">NEXT</button>
+                                    <button class="btn btn-primary " type="button" onclick="saveCookingData();">SAVE</button>
                                 </div>
                             </div>
                          </form>
@@ -97,11 +97,30 @@
                              <li class="popupli">We know GHG emissions from home cooking can be reduced by choosing which foods we eat and minimising cooking time and appliance use. Even combining a more environmentally friendly cooking method, such as using a microwave to part-cook food then roasting to finish in the oven, can cut our GHG emissions substantially.</li>
                              <!-- <li class="popupli">The sum is then 454 + 1211 = 1665 grammes of CO2/liter of LPG.</li> -->
                          </ul>
-                         <div class="row justify-content-center">
-                             <div id="chartName">
-                             </div>
-                             <div id="cookingFuel"></div>
-                         </div>
+
+                          <!-- next button and print bitton -->
+                         <div class="row align-items-center justify-content-center">
+                            <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+
+                                <div id="chartName">
+                                    <!-- <h3>Carbon emission of Electricity</h3> -->
+                                </div>
+                                <div id="cookingFuel"></div>
+                            </div>
+                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('cookingFuel')">Print</button>
+
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center justify-content-center">
+                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <button type="button" class="btn btn-primary" onclick="redirect();">NEXT➡</button>
+                            </div>
+                        </div>
+
+
+
                      </div>
                  </div>
              </div>

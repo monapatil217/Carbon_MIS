@@ -79,6 +79,7 @@ function showCropLand() {
                             + '</div>'
                             + '</div>';
                     });
+                    addChart();
                 }
                 else {
 
@@ -163,7 +164,8 @@ function saveCropData() {
                 // var data1 = JSON.parse(data);
                 if (data == "success") {
                     alert("Data Save Succesfuly");
-                    window.location.replace("livestock.php");
+                    addChart();
+                    // window.location.replace("livestock.php");
                 } else {
                     alert("Data not Save Succesfuly")
                 }

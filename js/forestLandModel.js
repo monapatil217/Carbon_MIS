@@ -91,6 +91,7 @@ function showForestLand() {
                             + '</div>'
                             + '</div>';
                     });
+                    addChart();
                 }
                 else {
 
@@ -188,6 +189,7 @@ function saveForestData() {
                 //  var data1 = JSON.parse(data);
                 if (data == "success") {
                     alert("Data Save Succesfuly");
+                    addChart();
                     // window.location.replace("landUSe.php");
                 } else {
                     alert("Data not Save Succesfuly")

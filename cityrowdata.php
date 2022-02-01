@@ -66,12 +66,6 @@
         clear: both;
     }
     </style>
-    <style>
-    #commChart {
-        width: 100%;
-        height: 500px;
-    }
-    </style>
 </head>
 
 <body>
@@ -89,35 +83,63 @@
                 disabled>
 
             <div class="row">
-                <div class="col-md-12 col-lg-12  mb-3 s " data-aos-delay="200">
+
+                <div class="col-md-12 col-lg-6 s " data-aos-delay="200">
                     <div class="in-sec">
                         <div id="chartName">
-                            <h3>City-wise Data Analytics </h3>
+
                         </div>
-                        <div id="commChart"></div>
+                        <div class="row mt-3 justify-content-center">
+                            <div class="form-group col-md-3">
+                                <h5>Select City :</h5>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <select class="form-control" id="cityList" name="cityList" onchange="addCityChart();">
+                                    <option selected disabled value="">Choose City</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="chartDiv">
+                            <div id="secChart">
 
+                            </div>
+                        </div>
                     </div>
+
                 </div>
-            </div>
-
-            <div class="row">
-
-
-                <div class="col-md-12 col-lg-10 " data-aos-delay="200">
-
-                    <!--Google map-->
-                    <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 400px">
-                        <iframe
-                            src="https://www.google.com/maps/d/embed?mid=18zd1wuy9DmrOb4KkXpY0quUUY1Pkjv1p&ehbc=2E312F"
-                            width="1200" height="500"></iframe>
-                    </div>
-
-                    <!--Google Maps-->
-                </div>
-
                 <!-- <div id="sectorInfo"> </div> -->
-                <div class="col-md-12 col-lg-4 " data-aos-delay="200">
+                <div class="col-md-12 col-lg-6 s " data-aos-delay="200">
                     <div class="in-sec">
+                        <table class="table table-striped table-dark">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
 
                     </div>
@@ -211,8 +233,6 @@
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap-show-modal.js"></script>
-
-    <script src="js/commGraphDemo.js"></script>
 
     <script src="js/rawData.js"></script>
     <script src="js/sectorGraph.js"></script>

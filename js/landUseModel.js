@@ -132,6 +132,7 @@ function showlandUse() {
                             + '    </div>'
                             + '</div>';
                     });
+                    addChart();
                 }
                 else {
 
@@ -292,6 +293,7 @@ function saveLandData() {
                 // var data1 = JSON.parse(data);
                 if (data == "success") {
                     alert("Data Save Succesfuly");
+                    addChart();
                     // window.location.replace("solidWaste.php");
                 } else {
                     alert("Data not Save Succesfuly")

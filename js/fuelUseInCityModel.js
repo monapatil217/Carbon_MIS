@@ -122,6 +122,7 @@ function showCookingFuel() {
                                 + ' </div>';
                         }
                     });
+                    addChart();
                 }
                 else {
 
@@ -262,7 +263,8 @@ function saveCookingData() {
                 // var data1 = JSON.parse(data);
                 if (data == "success") {
                     alert("Data Save Succesfuly");
-                    window.location.replace("graph.php");
+                    addChart();
+                    // window.location.replace("graph.php");
                 } else {
                     alert("Data not Save Succesfuly")
                 }
@@ -292,4 +294,10 @@ function showCookingFuelInfo() {
         '</div>' +
         '</div></div>';
     $("#popUpData").append(html1);
+}
+
+function redirect() {
+
+    window.location.replace("graph.php");
+
 }

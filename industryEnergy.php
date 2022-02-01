@@ -76,7 +76,7 @@ require "php/session.php";
                             <div id="energyIndInput"></div>
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
-                                    <button class="btn btn-primary " type="button" onclick="saveEnergyIData();">NEXT</button>
+                                    <button class="btn btn-primary " type="button" onclick="saveEnergyIData();">SAVE</button>
                                 </div>
                             </div>
                         </form>
@@ -95,12 +95,32 @@ require "php/session.php";
                 <div class="col-md-12 col-lg-8 mb-3" data-aos-delay="200">
                     <div class="in-sec">
                         <h3 class="text-center">Carbon Emission from  Industrial Energy Use</h3>
-                        <div class="row justify-content-center">
-                            <div id="chartName">
+                       
+                    
+
+                    
+                           <!-- next button and print bitton -->
+                           <div class="row align-items-center justify-content-center">
+                            <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+
+                                <div id="chartName">
+                                    <!-- <h3>Carbon emission of Electricity</h3> -->
+                                </div>
+                                <div id="energy"></div>
                             </div>
-                            <div id="energy"></div>
+                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('energy')">Print</button>
+
+                            </div>
                         </div>
-                    </div>
+
+                        <div class="row align-items-center justify-content-center">
+                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <button type="button" class="btn btn-primary" onclick="redirect();">NEXT➡</button>
+                            </div>
+                        </div>
+                        </div>
+
                 </div>
             </div>
             
@@ -150,6 +170,7 @@ require "php/session.php";
     <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="//cdn.amcharts.com/lib/5/themes/Micro.js"></script>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter.js"></script>

@@ -117,6 +117,7 @@ function showEnergyIndInput() {
                             + '</div>'
                             + '</div>';
                     });
+                    addChart();
                 }
                 else {
 
@@ -249,7 +250,8 @@ function saveEnergyIData() {
                 // var data1 = JSON.parse(data);
                 if (data == "success") {
                     alert("Data Save Succesfuly");
-                    window.location.replace("industryPP.php");
+                    addChart();
+                    // window.location.replace("industryPP.php");
                 } else {
                     alert("Data not Save Succesfuly")
                 }
@@ -297,4 +299,10 @@ function showIndFInfo() {
         + '</div>'
         + '</div></div>';
     $("#popUpData").append(html1);
+}
+
+function redirect() {
+
+    window.location.replace("industryPP.php");
+
 }

@@ -48,19 +48,19 @@
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="assets/img/Slide3.jpg" class="rounded d-block mx-auto" alt="App">
+                        <img src="assets/img/Slide1.jpg" class="rounded d-block mx-auto" alt="App">
                     </div>
                     <div class="carousel-item">
                         <img src="assets/img/Slide3.jpg" class="rounded d-block mx-auto" alt="App">
                     </div>
                     <div class="carousel-item">
-                        <img src="assets/img/Slide3.jpg" class="rounded d-block mx-auto" alt="App">
+                        <img src="assets/img/Slide1.jpg" class="rounded d-block mx-auto" alt="App">
                     </div>
                     <div class="carousel-item">
                         <img src="assets/img/Slide3.jpg" class="rounded d-block mx-auto" alt="App">
                     </div>
                     <div class="carousel-item">
-                        <img src="assets/img/Slide3.jpg" class="rounded d-block mx-auto" alt="App">
+                        <img src="assets/img/Slide1.jpg" class="rounded d-block mx-auto" alt="App">
                     </div>
                 </div>
             </div>

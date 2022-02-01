@@ -124,6 +124,7 @@ function showLiveStock() {
                             + '</div>'
                             + '</div>';
                     });
+                    addChart();
                 }
                 else {
                     html = '<h6 class="text-center mt-3"> Enter Number of Animals </h6>'
@@ -264,6 +265,7 @@ function saveLiveData() {
                 // var data1 = JSON.parse(data);
                 if (data == "success") {
                     alert("Data Save Succesfuly");
+                    addChart();
                     // window.location.replace("forestLand.php");
                 } else {
                     alert("Data not Save Succesfuly")
