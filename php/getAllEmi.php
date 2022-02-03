@@ -12,7 +12,7 @@ if ($type == 'electricity') {
     array_push($tableArray, "ele_emi");
 } else if ($type == 'transport') {
     $tableName = 'trans_emi';
-    array_push($tableArray, "ele_emi");
+    array_push($tableArray, "trans_emi");
 } else if ($type == 'liveStock') {
     array_push($tableArray, "live_emi");
 } else if ($type == 'cropLand') {
