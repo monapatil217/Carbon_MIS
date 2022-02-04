@@ -17,9 +17,7 @@
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
@@ -42,10 +40,10 @@
     <link href="assets/css/style.css" rel="stylesheet">
 
     <style>
-    #adminPie {
-        width: 50%;
-        height: 500px;
-    }
+        #adminPie {
+            width: 100%;
+            height: 500px;
+        }
     </style>
 
     <!-- =======================================================
@@ -60,7 +58,7 @@
 <body>
 
     <?php
-      include 'adminHeader.php';
+    include 'adminHeader.php';
     ?>
 
     <main id="main">
@@ -71,77 +69,77 @@
             <div class="container" id="admin_dash" data-aos="fade-up">
                 <div class="row" data-aos="fade-up">
 
-                <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4 adminInfo">
-                    <div class="card">
-                        <div class="card-header p-3 pt-2">
-                            <div class="bg-light bg-gradient rounded mt-n4 position-absolute iconAdmin">
-                                <img class="" id="" src="img/flat.png">
+                    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4 adminInfo">
+                        <div class="card">
+                            <div class="card-header p-3 pt-2">
+                                <div class="bg-light bg-gradient rounded mt-n4 position-absolute iconAdmin">
+                                    <img class="" id="" src="img/flat.png">
+                                </div>
+                                <div class="text-end pt-1">
+                                    <p class="text-sm mb-0 text-capitalize">Amrut City</p>
+                                    <h4 class="mb-0">43</h4>
+                                </div>
                             </div>
-                        <div class="text-end pt-1">
-                            <p class="text-sm mb-0 text-capitalize">Amrut City</p>
-                            <h4 class="mb-0">43</h4>
+                            <hr class="dark horizontal my-0">
+                            <div class="card-footer p-3">
+                                <p class="mb-0"><span class="text-success text-sm font-weight-bolder"><i class="fas fa-check"></i> </span> Just Updated</p>
+                            </div>
                         </div>
                     </div>
-                        <hr class="dark horizontal my-0">
-                        <div class="card-footer p-3">
-                            <p class="mb-0"><span class="text-success text-sm font-weight-bolder"><i class="fas fa-check"></i>  </span> Just Updated</p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4 adminInfo">
-                    <div class="card">
-                        <div class="card-header p-3 pt-2">
-                            <div class="bg-light bg-gradient rounded mt-n4 position-absolute iconAdmin">
-                                <img class="" id="" src="img/user.png">
+                    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4 adminInfo">
+                        <div class="card">
+                            <div class="card-header p-3 pt-2">
+                                <div class="bg-light bg-gradient rounded mt-n4 position-absolute iconAdmin">
+                                    <img class="" id="" src="img/user.png">
+                                </div>
+                                <div class="text-end pt-1">
+                                    <p class="text-sm mb-0 text-capitalize">User</p>
+                                    <h4 class="mb-0">20</h4>
+                                </div>
                             </div>
-                        <div class="text-end pt-1">
-                            <p class="text-sm mb-0 text-capitalize">User</p>
-                            <h4 class="mb-0">20</h4>
+                            <hr class="dark horizontal my-0">
+                            <div class="card-footer p-3">
+                                <p class="mb-0"><span class="text-success text-sm font-weight-bolder"><i class="fas fa-check"></i> </span> Just Updated</p>
+                            </div>
                         </div>
                     </div>
-                        <hr class="dark horizontal my-0">
-                        <div class="card-footer p-3">
-                            <p class="mb-0"><span class="text-success text-sm font-weight-bolder"><i class="fas fa-check"></i>  </span> Just Updated</p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4 adminInfo">
-                    <div class="card">
-                        <div class="card-header p-3 pt-2">
-                            <div class="bg-light bg-gradient rounded mt-n4 position-absolute iconAdmin">
-                                <img class="" id="" src="img/pie-chart.png">
+                    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4 adminInfo">
+                        <div class="card">
+                            <div class="card-header p-3 pt-2">
+                                <div class="bg-light bg-gradient rounded mt-n4 position-absolute iconAdmin">
+                                    <img class="" id="" src="img/pie-chart.png">
+                                </div>
+                                <div class="text-end pt-1">
+                                    <p class="text-sm mb-0 text-capitalize">Sector</p>
+                                    <h4 class="mb-0">11</h4>
+                                </div>
                             </div>
-                        <div class="text-end pt-1">
-                            <p class="text-sm mb-0 text-capitalize">Sector</p>
-                            <h4 class="mb-0">11</h4>
+                            <hr class="dark horizontal my-0">
+                            <div class="card-footer p-3">
+                                <p class="mb-0"><span class="text-success text-sm font-weight-bolder"><i class="fas fa-check"></i> </span> Just Updated</p>
+                            </div>
                         </div>
                     </div>
-                        <hr class="dark horizontal my-0">
-                        <div class="card-footer p-3">
-                            <p class="mb-0"><span class="text-success text-sm font-weight-bolder"><i class="fas fa-check"></i>  </span> Just Updated</p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4 adminInfo">
-                    <div class="card">
-                        <div class="card-header p-3 pt-2">
-                            <div class="bg-light bg-gradient rounded mt-n4 position-absolute iconAdmin">
-                                <img class="" id="" src="img/analysis.png">
+                    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4 adminInfo">
+                        <div class="card">
+                            <div class="card-header p-3 pt-2">
+                                <div class="bg-light bg-gradient rounded mt-n4 position-absolute iconAdmin">
+                                    <img class="" id="" src="img/analysis.png">
+                                </div>
+                                <div class="text-end pt-1">
+                                    <p class="text-sm mb-0 text-capitalize">Data</p>
+                                    <h4 class="mb-0">1000</h4>
+                                </div>
                             </div>
-                        <div class="text-end pt-1">
-                            <p class="text-sm mb-0 text-capitalize">Data</p>
-                            <h4 class="mb-0">1000</h4>
+                            <hr class="dark horizontal my-0">
+                            <div class="card-footer p-3">
+                                <p class="mb-0"><span class="text-success text-sm font-weight-bolder"><i class="fas fa-check"></i> </span> Just Updated</p>
+                            </div>
                         </div>
                     </div>
-                        <hr class="dark horizontal my-0">
-                        <div class="card-footer p-3">
-                            <p class="mb-0"><span class="text-success text-sm font-weight-bolder"><i class="fas fa-check"></i>  </span> Just Updated</p>
-                        </div>
-                    </div>
-                </div>
 
                 </div>
 
@@ -153,7 +151,8 @@
                                 <tr>
                                     <th>Id</th>
                                     <th>City</th>
-                                    <th>Emission</th>
+                                    <th>Emission tCO2e/year</th>
+                                    <th>Data</th>
                                     <!-- <th>Age</th> -->
                                 </tr>
                             </thead>
@@ -168,8 +167,9 @@
                         </table>
 
                     </div>
-                    <div class="col-md-6 col-lg-6" id="adminPie">
-
+                    <div class="col-md-6 col-lg-6">
+                        <div id="adminPie">
+                        </div>
                     </div>
                 </div>
 
@@ -189,8 +189,7 @@
     <!-- End Footer -->
 
     <div id="preloader"></div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- Resources -->
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
@@ -221,14 +220,14 @@
     <script src="assets/js/main.js"></script>
 
     <script type="text/javascript">
-    // $(function() {
-    //     $('.chart').easyPieChart({
-    //     });
-    // });
+        // $(function() {
+        //     $('.chart').easyPieChart({
+        //     });
+        // });
 
-    $(document).ready(function() {
-        $('#example').DataTable();
-    });
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
     </script>
 
 

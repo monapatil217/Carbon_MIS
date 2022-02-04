@@ -28,7 +28,7 @@ while ($row = mysqli_fetch_array($result)) {
                 $dataresult = mysqli_query($conn, $dataQuery)  or die(mysqli_error($conn));
                 $rowcount = mysqli_num_rows($dataresult);
                 if ($rowcount != 0) {
-                    $value += 9.9;
+                    $value += 6.66;
                 }
             }
         } else if ($type == 'emission') {

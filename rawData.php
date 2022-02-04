@@ -122,8 +122,6 @@
             background-color: #FFAAA6;
         } */
 
-
-
         #WasteWater {
             background-color: #FF8C94;
         }
@@ -131,8 +129,6 @@
         #STP {
             background-color: #FF8C94;
         }
-
-
 
         #Industry {
             background-color: #9DE0AD;
@@ -204,7 +200,6 @@
     <?php
     include 'adminHeader.php';
     ?>
-                   n  
     <!-- ======= Hero Section ======= -->
     <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
