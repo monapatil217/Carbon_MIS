@@ -16,6 +16,9 @@ window.onclick = function (event) {
 
 $(document).ready(function () {
     showForestLand();
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
 })
 
 function showForestLand() {
@@ -45,16 +48,18 @@ function showForestLand() {
 
                         html = '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                            + '<label for="areaForest" class="form-label">Green Cover </label >'
+                            + '<label for="areaForest" class="form-label"> Green Cover </label >'
+                            + '<i class="bi-info-circle-fill" data-toggle="tooltip" data-placement="top" title="It is area occupied by bushland, \ngardens, parks,biodiversity corridors, nature reserves,\n street trees and rooftop gardens."></i>'
                             + '<div class="input-group mb-3">'
                             + '<input type="text" id="areaForest" class="form-control" value="' + element1.areaForest + '" placeholder="Area" aria-label="Area" aria-describedby="basic-addon2">'
-                            + '<span class="input-group-text" id="basic-addon2">ha </span >'
+                            + '<span class="input-group-text" id="basic-addon2">hectare</span >'
                             + '</div>'
                             + '</div>'
                             + '</div>'
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                             + '<label for="roundWood" class="form-label"> Annual Timber Harvest </label >'
+                            + '<i class="bi-info-circle-fill" data-toggle="tooltip" data-placement="top" title="It is the quantity of timber harvested \n annually in a particular city/region."></i>'
                             + '<div class="input-group mb-3">'
                             + '<input type="text" id="roundWood" name="roundWood" class="form-control" value="' + element1.roundWood + '" placeholder="Annual Rounded Removal" aria-label="Annual Rounded Removal" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">m3/year </span >'
@@ -65,6 +70,7 @@ function showForestLand() {
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                             + '<label for="fuelWood" class="form-label"> Annual Firewood Removal </label >'
+                            + '<i class="bi-info-circle-fill" data-toggle="tooltip" data-placement="top" title=" It is the quantity of firewood harvested annually\n in a particular city/region."></i>'
                             + '<div class="input-group mb-3">'
                             + '<input type="text" id="fuelWood" name="fuelWood" class="form-control" value="' + element1.fuelWood + '" placeholder="Annual Fuelwood Removal" aria-label="Annual Fuelwood Removal" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">mᶟ/year </span >'
@@ -98,6 +104,7 @@ function showForestLand() {
                     html = '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                         + '<label for="areaForest" class="form-label"> Green Cover </label >'
+                        + '<i class="bi-info-circle-fill" data-toggle="tooltip" data-placement="top" title="It is area occupied by bushland, \ngardens, parks,biodiversity corridors, nature reserves,\n street trees and rooftop gardens."></i>'
                         + '<div class="input-group mb-3">'
                         + '<input type="text" id="areaForest" class="form-control" placeholder="Area" aria-label="Area" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">ha </span >'
@@ -107,6 +114,7 @@ function showForestLand() {
                         + '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                         + '<label for="roundWood" class="form-label"> Annual Timber Harvest </label >'
+                        + '<i class="bi-info-circle-fill" data-toggle="tooltip" data-placement="top" title="It is the quantity of timber harvested \n annually in a particular city/region."></i>'
                         + '<div class="input-group mb-3">'
                         + '<input type="text" id="roundWood" name="roundWood" class="form-control" placeholder="Annual Round Wood Removal" aria-label="Annual Round Wood Removal" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">mᶟ/year </span >'
@@ -116,6 +124,7 @@ function showForestLand() {
                         + '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                         + '<label for="fuelWood" class="form-label"> Annual Firewood Removal </label >'
+                        + '<i class="bi-info-circle-fill" data-toggle="tooltip" data-placement="top" title=" It is the quantity of firewood harvested annually\n in a particular city/region."></i>'
                         + '<div class="input-group mb-3">'
                         + '<input type="text" id="fuelWood" name="fuelWood" class="form-control" placeholder="Annual Fuelwood Removal" aria-label="Annual Fuelwood Removal" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">mᶟ/year </span >'
