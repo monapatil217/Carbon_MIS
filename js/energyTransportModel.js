@@ -110,7 +110,7 @@ function showTransInput() {
                             + '</div>';
 
                     });
-                    addChart();
+                    // addChart();
                 }
                 else {
 

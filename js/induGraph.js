@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // addChart();
+    addChart();
 })
 
 function addChart() {
@@ -70,7 +70,7 @@ function addChart() {
                             text: "Pollutant",
                             x: am5.p50,
                             centerX: am5.p50
-                          }), xAxis.children.length - 1);
+                        }), xAxis.children.length - 1);
 
                         xRenderer.grid.template.set("visible", false);
 
@@ -86,8 +86,8 @@ function addChart() {
                             text: "Emissions(tons/month)",
                             y: am5.p50,
                             centerX: am5.p50
-                          }), 0);
-                          
+                        }), 0);
+
                         yRenderer.grid.template.setAll({
                             strokeDasharray: [2, 2]
                         });

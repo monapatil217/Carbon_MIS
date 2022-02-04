@@ -199,8 +199,9 @@ require "php/session.php";
     <script src="assets/js/main.js"></script>
 
     <!-- Our JS Files -->
-    <script src="js/induGraph.js"></script>
+    
     <script src="js/energyElectricityModel.js"></script>
+    <script src="js/induGraph.js"></script>
     <script src="js/common.js"></script>
     <script>
 

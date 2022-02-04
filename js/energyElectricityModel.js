@@ -87,8 +87,6 @@ function showEleInput() {
                             + '</div>'
                             ;
                     });
-
-                    addChart();
                 }
                 else {
 

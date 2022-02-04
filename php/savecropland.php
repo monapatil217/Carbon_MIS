@@ -20,7 +20,7 @@ $organicS = $data->organicS;
             VALUES ($basicId,$perennial,$harwested,$mineralS,$organicS)";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         }else{
-            $query = "UPDATE  crop_data set perennial=$perennial,harwested=$harwested
+            $query = "UPDATE  crop_data set perennial=$perennial,harwested=$harwested,
                       mineralS=$mineralS,organicS=$organicS WHERE b_id='".$basicId."'";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         }

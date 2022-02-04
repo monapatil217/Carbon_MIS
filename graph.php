@@ -56,8 +56,8 @@ require "php/session.php";
         #wasteWater,
         #cookingFuel,
         #carbonGharph {
-            width: 70%;
-            height: 500px;
+            width: 100%;
+            height: 400px;
         }
 
         /* 
@@ -105,6 +105,13 @@ require "php/session.php";
             display: none;
             padding: 100px 20px;
             height: 100%;
+
+             margin:auto;
+            width:50%;
+            padding:63px;
+            text-align:center;
+            /* // */
+             
         }
 
         #t1 {
@@ -165,7 +172,7 @@ require "php/session.php";
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-12  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
-                        <h3>Carbon Emission</h3>
+                        <h3><center>Carbon Emission </center></h3>
                         <div id="carbonGharph"></div>
                     </div>
                 </div>
@@ -174,24 +181,28 @@ require "php/session.php";
 
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-12  mb-3 s " data-aos-delay="200">
+
+                
                     <div class="in-sec">
+                   
 
                         <button class="tablink" onclick="openPage('t1', this, '#888')" id="defaultOpen">Electricity</button>
                         <button class="tablink" onclick="openPage('t2', this, '#888')">Transport</button>
-                        <button class="tablink" onclick="openPage('t31', this, '#88')">liveStock </button>
-                        <button class="tablink" onclick="openPage('t32', this, '#88')">cropLand </button>
-                        <button class="tablink" onclick="openPage('t33', this, '#88')">forest </button>
-                        <button class="tablink" onclick="openPage('t34', this, '#88')">landUse </button>
+                        <button class="tablink" onclick="openPage('t31', this, '#888')">liveStock </button>
+                        <button class="tablink" onclick="openPage('t32', this, '#888')">cropLand </button>
+                        <button class="tablink" onclick="openPage('t33', this, '#888')">forest </button>
+                        <button class="tablink" onclick="openPage('t34', this, '#888')">landUse </button>
                         <button class="tablink" onclick="openPage('t4', this, '#888')">SolidWaste</button>
                         <button class="tablink" onclick="openPage('t5', this, '#888')">WasteWater</button>
                         <button class="tablink" onclick="openPage('t6', this, '#888')">Industry</button>
                         <button class="tablink" onclick="openPage('t7', this, '#888')">cookingFuel</button>
 
-                        <div id="t1" class="tabcontent">
-                            <div id="chartName">
+                        <div id="t1"  class="tabcontent">
+                            <div id="chartName" class="text-center col-md-4 col-md-offset-4">
+                                    
                                 <h3> Electricity Graph</h3>
                             </div>
-                            <div id="electricity"></div>
+                            <div id="electricity" ></div>
                         </div>
                         <div id="t2" class="tabcontent">
                             <div id="chartName">
@@ -260,6 +271,7 @@ require "php/session.php";
                 </div>
             </div>
 
+
             <!-- <div class="row">
                 <div class="col-md-12 col-lg-6  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
@@ -313,7 +325,7 @@ require "php/session.php";
                 tablinks[i].style.backgroundColor = "";
             }
             document.getElementById(pageName).style.display = "block";
-            elmnt.style.backgroundColor = color;
+            elmnt.style.backgroundColor ="#2b2b2b";
         }
 
         // Get the element with id="defaultOpen" and click on it

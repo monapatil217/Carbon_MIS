@@ -117,7 +117,7 @@ function showEnergyIndInput() {
                             + '</div>'
                             + '</div>';
                     });
-                    addChart();
+                    // addChart();
                 }
                 else {
 

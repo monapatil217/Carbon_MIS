@@ -122,7 +122,7 @@ function showCookingFuel() {
                                 + ' </div>';
                         }
                     });
-                    addChart();
+                    // addChart();
                 }
                 else {
 

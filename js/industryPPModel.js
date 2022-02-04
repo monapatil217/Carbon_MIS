@@ -99,7 +99,7 @@ function showCementInput() {
                             + ' </div>'
                             + ' </div>';
                     });
-                    addChart();
+                    // addChart();
                 }
                 else {
 
@@ -305,7 +305,7 @@ function showChemicalInput() {
                             + ' </div>'
                             + ' </div >';
                     });
-                    addChart();
+                    // addChart();
 
                 }
                 else {
@@ -488,7 +488,7 @@ function showOtherInput() {
                             + ' </div>'
                             + ' </div >';
                     });
-                    addChart();
+                    // addChart();
                 }
                 else {
 
@@ -566,7 +566,7 @@ function showCementData() {
                     $("#fa1").addClass("collapsed");
                     $("#fa2").removeClass("collapsed");
                     $("#faq-list-2").addClass("show");
-                    addChart();
+                    // addChart();
                 } else {
                     alert("Data not Save Succesfuly")
                 }
@@ -638,7 +638,7 @@ function showChemicalData() {
                     $("#fa2").addClass("collapsed");
                     $("#fa3").removeClass("collapsed");
                     $("#faq-list-3").addClass("show");
-                    addChart();
+                    // addChart();
                 } else {
                     alert("Data not Save Succesfuly")
                 }

@@ -91,7 +91,7 @@ function showForestLand() {
                             + '</div>'
                             + '</div>';
                     });
-                    addChart();
+                    // addChart();
                 }
                 else {
 

@@ -99,7 +99,7 @@ function showWaterInput() {
 
                                     + '<label for="capacity" class="form-label"> Capacity</label>'
                                     + '<div class="input-group mb-2">'
-                                    + '<input type="text" id="capacity" name="capacity" class="form-control" placeholder="Capacity" value="' + element2.cap + '"  aria-label="Residential" aria-describedby="basic-addon2">'
+                                    + '<input type="text" id="capacity' + i + '" name="capacity" class="form-control" placeholder="Capacity" value="' + element2.cap + '"  aria-label="Residential" aria-describedby="basic-addon2">'
                                     + '</div>'
 
                                     + '</div>'
@@ -107,7 +107,7 @@ function showWaterInput() {
 
                                     + '<label for="latitude" class="form-label"> Latitude</label>'
                                     + '<div class="input-group mb-2">'
-                                    + '<input type="text" id="latitude" name="latitude" class="form-control" placeholder="Latitude" value="' + element2.lat + '"  aria-label="Residential" aria-describedby="basic-addon2">'
+                                    + '<input type="text" id="latitude' + i + '" name="latitude" class="form-control" placeholder="Latitude" value="' + element2.lat + '"  aria-label="Residential" aria-describedby="basic-addon2">'
                                     + '</div>'
 
                                     + '</div>'
@@ -115,7 +115,7 @@ function showWaterInput() {
 
                                     + '<label for="longitude" class="form-label"> Longitude</label>'
                                     + '<div class="input-group mb-2">'
-                                    + '<input type="text" id="longitude" name="longitude" class="form-control" placeholder="Longitude" value="' + element2.long + '"  aria-label="Residential" aria-describedby="basic-addon2">'
+                                    + '<input type="text" id="longitude' + i + '" name="longitude" class="form-control" placeholder="Longitude" value="' + element2.long + '"  aria-label="Residential" aria-describedby="basic-addon2">'
                                     + '</div>'
 
                                     + '</div>'
@@ -123,7 +123,7 @@ function showWaterInput() {
 
                                     + '<label for="technology" class="form-label"> Technology</label>'
                                     + '<div class="input-group mb-2">'
-                                    + '<input type="text" id="technology" name="technology" class="form-control" placeholder="Technology" value="' + element2.tech + '"   aria-label="Residential" aria-describedby="basic-addon2">'
+                                    + '<input type="text" id="technology' + i + '" name="technology" class="form-control" placeholder="Technology" value="' + element2.tech + '"   aria-label="Residential" aria-describedby="basic-addon2">'
                                     + '</div>'
 
                                     + '</div>'
@@ -131,7 +131,7 @@ function showWaterInput() {
 
                                     + '<label for="waterRecycle" class="form-label"> Qty of Recycled Water</label>'
                                     + '<div class="input-group mb-2">'
-                                    + '<input type="text" id="waterRecycle" name="waterRecycle" class="form-control" placeholder="Recycled Water" value="' + element2.recycle + '"  aria-label="Residential" aria-describedby="basic-addon2">'
+                                    + '<input type="text" id="waterRecycle' + i + '" name="waterRecycle" class="form-control" placeholder="Recycled Water" value="' + element2.recycle + '"  aria-label="Residential" aria-describedby="basic-addon2">'
                                     + '<span class="input-group-text" id="basic-addon2">CMD</span>'
                                     + '</div>'
 
@@ -140,7 +140,7 @@ function showWaterInput() {
 
                                     + '<label for="waterDisposal" class="form-label">Qty of Water Disposal </label>'
                                     + '<div class="input-group mb-2">'
-                                    + '<input type="text" id="waterDisposal" name="waterDisposal" class="form-control" placeholder="Disposal of Waste" value="' + element2.dispose + '"  aria-label="Residential" aria-describedby="basic-addon2">'
+                                    + '<input type="text" id="waterDisposal' + i + '" name="waterDisposal" class="form-control" placeholder="Disposal of Waste" value="' + element2.dispose + '"  aria-label="Residential" aria-describedby="basic-addon2">'
                                     + '<span class="input-group-text" id="basic-addon2">CMD</span>'
                                     + '</div>'
 

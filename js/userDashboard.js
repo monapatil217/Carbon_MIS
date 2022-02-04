@@ -117,7 +117,7 @@ function addDesign() {
         + '<a href="industryPP.php" style="display: block">'
         + '<div class="col-6 col-sm-4 col-md-6 col-lg-11">'
         + '<div class="chart" data-percent="20" data-scale-color="#0847b5">20%</div>'
-        + '<div>Process and Product</div>'
+        + '<div>Process & Product</div>'
         + '</div>'
         + '</a>'
         + '</div>'

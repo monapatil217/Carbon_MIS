@@ -132,7 +132,7 @@ function showlandUse() {
                             + '    </div>'
                             + '</div>';
                     });
-                    addChart();
+                    // addChart();
                 }
                 else {
 

@@ -30,8 +30,23 @@ session_start();
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
+    <!-- add files -->
     <link href="assets/css/style.css" rel="stylesheet">
 
+    <link  href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+  </style>
     <!-- =======================================================
   * Template Name: OnePage - v4.7.0
   * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
@@ -88,6 +103,52 @@ session_start();
 
     <main id="main">
 
+
+
+    <section id="image_slidshow">
+
+<!-- <section id="image_slidshow" class="image_slidshow"> -->
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner" >
+  
+    <div class="carousel-item active">
+      <img src="assets/img/1.jpg" alt="Los Angeles" width="1500" height="500">
+      <!-- <video id="video" class="" src="assets/img/1.jpg" muted autoplay playsinline> -->
+    </div>
+
+    <div class="carousel-item">
+     <img src="assets/img/2.jpg" alt="Los Angeles" width="1500" height="500">
+       <!-- <video id="video" class="" src="assets/img/2.jpg" muted autoplay playsinline> -->
+    </div>
+
+    <div class="carousel-item">
+      <img src="assets/img/3.jpg" alt="Los Angeles" width="1500" height="500">
+      <!-- <video id="video" class="" src="assets/img/3.jpg" muted autoplay playsinline> -->
+  </div>
+
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+    </section>
+
+    <!-- /////////// -->
+     
         <!-- ======= About Section ======= -->
         <!-- <section id="about" class="about">
       <div class="container" data-aos="fade-up">

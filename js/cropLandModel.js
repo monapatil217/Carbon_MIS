@@ -79,7 +79,7 @@ function showCropLand() {
                             + '</div>'
                             + '</div>';
                     });
-                    addChart();
+
                 }
                 else {
 
