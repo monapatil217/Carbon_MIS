@@ -45,16 +45,16 @@ function showForestLand() {
 
                         html = '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                            + '<label for="areaForest" class="form-label"> Area under Forest Land </label >'
+                            + '<label for="areaForest" class="form-label">Green Cover </label >'
                             + '<div class="input-group mb-3">'
                             + '<input type="text" id="areaForest" class="form-control" value="' + element1.areaForest + '" placeholder="Area" aria-label="Area" aria-describedby="basic-addon2">'
-                            + '<span class="input-group-text" id="basic-addon2">sq.km </span >'
+                            + '<span class="input-group-text" id="basic-addon2">ha </span >'
                             + '</div>'
                             + '</div>'
                             + '</div>'
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                            + '<label for="roundWood" class="form-label"> Annual Rounded Removal </label >'
+                            + '<label for="roundWood" class="form-label"> Annual Timber Harvest </label >'
                             + '<div class="input-group mb-3">'
                             + '<input type="text" id="roundWood" name="roundWood" class="form-control" value="' + element1.roundWood + '" placeholder="Annual Rounded Removal" aria-label="Annual Rounded Removal" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">m3/year </span >'
@@ -64,7 +64,7 @@ function showForestLand() {
 
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                            + '<label for="fuelWood" class="form-label"> Annual Fuelwood Removal </label >'
+                            + '<label for="fuelWood" class="form-label"> Annual Firewood Removal </label >'
                             + '<div class="input-group mb-3">'
                             + '<input type="text" id="fuelWood" name="fuelWood" class="form-control" value="' + element1.fuelWood + '" placeholder="Annual Fuelwood Removal" aria-label="Annual Fuelwood Removal" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">mᶟ/year </span >'
@@ -80,16 +80,16 @@ function showForestLand() {
                             + '<span class="input-group-text" id="basic-addon2">ha/year </span >'
                             + '</div>'
                             + '</div>'
-                            + '</div>'
-                            + '<div class="row justify-content-center">'
-                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                            + '<label for="organicSo" class="form-label"> Forest area with organic soil </label >'
-                            + '<div class="input-group mb-3">'
-                            + '<input type="text" id="organicSo" name="organicSo" class="form-control" value="' + element1.organicSo + '" placeholder="organic soil" aria-label="organic soil" aria-describedby="basic-addon2">'
-                            + '<span class="input-group-text" id="basic-addon2">ha/year </span >'
-                            + '</div>'
-                            + '</div>'
                             + '</div>';
+                        // + '<div class="row justify-content-center">'
+                        // + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        // + '<label for="organicSo" class="form-label"> Forest area with organic soil </label >'
+                        // + '<div class="input-group mb-3">'
+                        // + '<input type="text" id="organicSo" name="organicSo" class="form-control" value="' + element1.organicSo + '" placeholder="organic soil" aria-label="organic soil" aria-describedby="basic-addon2">'
+                        // + '<span class="input-group-text" id="basic-addon2">ha/year </span >'
+                        // + '</div>'
+                        // + '</div>'
+                        // + '</div>';
                     });
                     // addChart();
                 }
@@ -97,16 +97,16 @@ function showForestLand() {
 
                     html = '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                        + '<label for="areaForest" class="form-label"> Area under Forest Land </label >'
+                        + '<label for="areaForest" class="form-label"> Green Cover </label >'
                         + '<div class="input-group mb-3">'
                         + '<input type="text" id="areaForest" class="form-control" placeholder="Area" aria-label="Area" aria-describedby="basic-addon2">'
-                        + '<span class="input-group-text" id="basic-addon2">sq.km </span >'
+                        + '<span class="input-group-text" id="basic-addon2">ha </span >'
                         + '</div>'
                         + '</div>'
                         + '</div>'
                         + '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                        + '<label for="roundWood" class="form-label"> Annual Round Wood Removal </label >'
+                        + '<label for="roundWood" class="form-label"> Annual Timber Harvest </label >'
                         + '<div class="input-group mb-3">'
                         + '<input type="text" id="roundWood" name="roundWood" class="form-control" placeholder="Annual Round Wood Removal" aria-label="Annual Round Wood Removal" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">mᶟ/year </span >'
@@ -115,7 +115,7 @@ function showForestLand() {
                         + '</div>'
                         + '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                        + '<label for="fuelWood" class="form-label"> Annual Fuelwood Removal </label >'
+                        + '<label for="fuelWood" class="form-label"> Annual Firewood Removal </label >'
                         + '<div class="input-group mb-3">'
                         + '<input type="text" id="fuelWood" name="fuelWood" class="form-control" placeholder="Annual Fuelwood Removal" aria-label="Annual Fuelwood Removal" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">mᶟ/year </span >'
@@ -130,16 +130,16 @@ function showForestLand() {
                         + '<span class="input-group-text" id="basic-addon2">sq.km </span >'
                         + '</div>'
                         + '</div>'
-                        + '</div>'
-                        + '<div class="row justify-content-center">'
-                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                        + '<label for="organicSo" class="form-label"> Forest area with organic soil </label >'
-                        + '<div class="input-group mb-3">'
-                        + '<input type="text" id="organicSo" name="organicSo" class="form-control" placeholder="organic soil" aria-label="organic soil" aria-describedby="basic-addon2">'
-                        + '<span class="input-group-text" id="basic-addon2">sq.km </span >'
-                        + '</div>'
-                        + '</div>'
                         + '</div>';
+                    // + '<div class="row justify-content-center">'
+                    // + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                    // + '<label for="organicSo" class="form-label"> Forest area with organic soil </label >'
+                    // + '<div class="input-group mb-3">'
+                    // + '<input type="text" id="organicSo" name="organicSo" class="form-control" placeholder="organic soil" aria-label="organic soil" aria-describedby="basic-addon2">'
+                    // + '<span class="input-group-text" id="basic-addon2">sq.km </span >'
+                    // + '</div>'
+                    // + '</div>'
+                    // + '</div>';
                 }
             });
         }
@@ -165,7 +165,7 @@ function saveForestData() {
 
     var disturbance = document.getElementById("disturbance").value;
 
-    var organicSo = document.getElementById("organicSo").value;
+    // var organicSo = document.getElementById("organicSo").value;
 
 
     forestData["basicId"] = basicId;
@@ -173,7 +173,7 @@ function saveForestData() {
     forestData["roundWood"] = roundWood;
     forestData["fuelWood"] = fuelWood;
     forestData["disturbance"] = disturbance;
-    forestData["organicSo"] = organicSo;
+    // forestData["organicSo"] = organicSo;
 
 
 

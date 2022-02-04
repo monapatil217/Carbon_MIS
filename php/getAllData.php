@@ -49,7 +49,7 @@ if ($type == "Electricity") {
             $eleData['roundWood'] = $row['roundWood'];
             $eleData['fuelWood'] = $row['fuelWood'];
             $eleData['disturbance'] = $row['disturbance'];
-            $eleData['organicSo'] = $row['organicSo'];
+            // $eleData['organicSo'] = $row['organicSo'];
             array_push($deleData, $eleData);
             $mainArray['cData'] =   $deleData;
             array_push($finalArray, $mainArray);
@@ -72,8 +72,8 @@ if ($type == "Electricity") {
             $eleData = [];
             $eleData['perennial'] = $row['perennial'];
             $eleData['harwested'] = $row['harwested'];
-            $eleData['mineralS'] = $row['mineralS'];
-            $eleData['organicS'] = $row['organicS'];
+            // $eleData['mineralS'] = $row['mineralS'];
+            // $eleData['organicS'] = $row['organicS'];
             // $eleData['organicSo'] = $row['organicSo'];
             array_push($deleData, $eleData);
             $mainArray['cData'] =   $deleData;

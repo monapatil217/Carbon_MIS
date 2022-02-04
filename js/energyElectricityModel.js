@@ -45,8 +45,8 @@ function showEleInput() {
                     var eledata = element.cData;
                     $.each(eledata, function (index, element1) {
 
-                        html = '<h6 class="text-center">Amount of Electricity Used by Different Sectors</h6>'
-                            + '<div class="row justify-content-center">'
+                        // html = '<h6 class="text-center">Amount of Electricity Used by Different Sectors</h6>'
+                        html = '<div class="row justify-content-center">'
                             + '   <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                             + '       <label for="relec" class="form-label"> Residential</label>'
                             + '       <div class="input-group mb-2">'

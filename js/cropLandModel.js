@@ -59,25 +59,25 @@ function showCropLand() {
                             + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
                             + '</div>'
                             + '</div>'
-                            + '</div>'
-                            + '<div class="row justify-content-center">'
-                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                            + '<label for="mineralS" class="form-label"> Area of cropland on mineral soil </label>'
-                            + '<div class="input-group mb-3">'
-                            + '<input type="text" id="mineralS" name="mineralS" value="' + element1.mineralS + '"  class="form-control" placeholder="Mineral soil" aria-label="Mineral soil" aria-describedby="basic-addon2">'
-                            + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
-                            + '</div>'
-                            + '</div>'
-                            + '</div>'
-                            + '<div class="row justify-content-center">'
-                            + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                            + '<label for="organicS" class="form-label"> Area of cropland on organic soil </label>'
-                            + '<div class="input-group mb-3">'
-                            + '<input type="text" id="organicS" name="organicS" value="' + element1.organicS + '"  class="form-control" placeholder="Organic Soil" aria-label="Organic Soil" aria-describedby="basic-addon2">'
-                            + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
-                            + '</div>'
-                            + '</div>'
                             + '</div>';
+                        // + '<div class="row justify-content-center">'
+                        // + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        // + '<label for="mineralS" class="form-label"> Area of cropland on mineral soil </label>'
+                        // + '<div class="input-group mb-3">'
+                        // + '<input type="text" id="mineralS" name="mineralS" value="' + element1.mineralS + '"  class="form-control" placeholder="Mineral soil" aria-label="Mineral soil" aria-describedby="basic-addon2">'
+                        // + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
+                        // + '</div>'
+                        // + '</div>'
+                        // + '</div>'
+                        // + '<div class="row justify-content-center">'
+                        // + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        // + '<label for="organicS" class="form-label"> Area of cropland on organic soil </label>'
+                        // + '<div class="input-group mb-3">'
+                        // + '<input type="text" id="organicS" name="organicS" value="' + element1.organicS + '"  class="form-control" placeholder="Organic Soil" aria-label="Organic Soil" aria-describedby="basic-addon2">'
+                        // + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
+                        // + '</div>'
+                        // + '</div>'
+                        // + '</div>';
                     });
 
                 }
@@ -100,25 +100,25 @@ function showCropLand() {
                         + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
                         + '</div>'
                         + '</div>'
-                        + '</div>'
-                        + '<div class="row justify-content-center">'
-                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                        + '<label for="mineralS" class="form-label"> Area of cropland on mineral soil </label>'
-                        + '<div class="input-group mb-3">'
-                        + '<input type="text" id="mineralS" name="mineralS" class="form-control" placeholder="Mineral soil" aria-label="Mineral soil" aria-describedby="basic-addon2">'
-                        + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
-                        + '</div>'
-                        + '</div>'
-                        + '</div>'
-                        + '<div class="row justify-content-center">'
-                        + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                        + '<label for="organicS" class="form-label"> Area of cropland on organic soil </label>'
-                        + '<div class="input-group mb-3">'
-                        + '<input type="text" id="organicS" name="organicS" class="form-control" placeholder="Organic Soil" aria-label="Organic Soil" aria-describedby="basic-addon2">'
-                        + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
-                        + '</div>'
-                        + '</div>'
                         + '</div>';
+                    // + '<div class="row justify-content-center">'
+                    // + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                    // + '<label for="mineralS" class="form-label"> Area of cropland on mineral soil </label>'
+                    // + '<div class="input-group mb-3">'
+                    // + '<input type="text" id="mineralS" name="mineralS" class="form-control" placeholder="Mineral soil" aria-label="Mineral soil" aria-describedby="basic-addon2">'
+                    // + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
+                    // + '</div>'
+                    // + '</div>'
+                    // + '</div>'
+                    // + '<div class="row justify-content-center">'
+                    // + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                    // + '<label for="organicS" class="form-label"> Area of cropland on organic soil </label>'
+                    // + '<div class="input-group mb-3">'
+                    // + '<input type="text" id="organicS" name="organicS" class="form-control" placeholder="Organic Soil" aria-label="Organic Soil" aria-describedby="basic-addon2">'
+                    // + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
+                    // + '</div>'
+                    // + '</div>'
+                    // + '</div>';
                 }
             });
         }
@@ -141,15 +141,15 @@ function saveCropData() {
 
     var harwested = document.getElementById("harwested").value;
 
-    var mineralS = document.getElementById("mineralS").value;
+    // var mineralS = document.getElementById("mineralS").value;
 
-    var organicS = document.getElementById("organicS").value;
+    // var organicS = document.getElementById("organicS").value;
 
     cropData["basicId"] = basicId;
     cropData["perennial"] = perennial;
     cropData["harwested"] = harwested;
-    cropData["mineralS"] = mineralS;
-    cropData["organicS"] = organicS;
+    // cropData["mineralS"] = mineralS;
+    // cropData["organicS"] = organicS;
 
 
 

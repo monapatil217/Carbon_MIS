@@ -10,19 +10,19 @@ $areaForest = $data->areaForest;
 $roundWood = $data->roundWood;
 $fuelWood = $data->fuelWood;
 $disturbance = $data->disturbance;
-$organicSo = $data->organicSo;
+// $organicSo = $data->organicSo;
 
         $query2 = "SELECT * FROM forest_data WHERE b_id='" . $basicId . "'";
         $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
 
         $rowcount = mysqli_num_rows($result);
         if ($rowcount == 0) {
-            $query = "INSERT INTO forest_data(b_id,areaForest,roundWood,fuelWood,disturbance,organicSo)
-            VALUES ($basicId,$areaForest,$roundWood,$fuelWood,$disturbance,$organicSo)";
+            $query = "INSERT INTO forest_data(b_id,areaForest,roundWood,fuelWood,disturbance)
+            VALUES ($basicId,$areaForest,$roundWood,$fuelWood,$disturbance)";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         }else{
             $query = "UPDATE  forest_data set areaForest=$areaForest,roundWood=$roundWood,
-                      fuelWood=$fuelWood,disturbance=$disturbance,organicSo=$organicSo WHERE b_id='".$basicId."'";
+                      fuelWood=$fuelWood,disturbance=$disturbance WHERE b_id='".$basicId."'";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         }
         echo  "success";
