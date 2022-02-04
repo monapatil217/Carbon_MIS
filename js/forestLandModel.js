@@ -18,7 +18,7 @@ $(document).ready(function () {
     showForestLand();
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
-      })
+    })
 })
 
 function showForestLand() {
@@ -62,7 +62,7 @@ function showForestLand() {
                             + '<i class="bi-info-circle-fill" data-toggle="tooltip" data-placement="top" title="It is the quantity of timber harvested \n annually in a particular city/region."></i>'
                             + '<div class="input-group mb-3">'
                             + '<input type="text" id="roundWood" name="roundWood" class="form-control" value="' + element1.roundWood + '" placeholder="Annual Rounded Removal" aria-label="Annual Rounded Removal" aria-describedby="basic-addon2">'
-                            + '<span class="input-group-text" id="basic-addon2">m3/year </span >'
+                            + '<span class="input-group-text" id="basic-addon2">mᶟ/year </span >'
                             + '</div>'
                             + '</div>'
                             + '</div>'

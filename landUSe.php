@@ -79,7 +79,7 @@ require "php/session.php";
                 </div>
                 <div class="col-md-12 col-lg-7  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">
-                        <h3 class="text-center">Carbon Emission from Land Use Sector </h3>
+                        <h3 class="text-center">Carbon Emission From Land Use Sector </h3>
                         <ul style="margin-left: 10px;">
                             <li class="popupli"> Land plays an important role in global cycles of greenhouse gases
                                 (GHGs, the major GHGs are carbon dioxide (CO2), methane (CH4) and nitrous oxide (N2O)).
