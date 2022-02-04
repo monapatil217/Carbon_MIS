@@ -15,6 +15,9 @@ window.onclick = function (event) {
 }
 $(document).ready(function () {
     showCropLand();
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
 })
 
 function showCropLand() {
@@ -45,6 +48,7 @@ function showCropLand() {
                         html = '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                             + '<label for="perennial" class="form-label">Woody Perennial Cover </label>'
+                            + '<i class="bi-info-circle-fill" data-toggle="tooltip" data-placement="top" title="This is the area occupied by woody\n perennial crops like mango, citrus crops,\n cashew , coconut, bael, jackfruit, banana."></i>'
                             + '<div class="input-group mb-3">'
                             + '<input type="text" id="perennial" name="perennial" value="' + element1.perennial + '"  class="form-control" placeholder="Woody Perennial Cover" aria-label="Woody Perennial Cover" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
@@ -54,6 +58,7 @@ function showCropLand() {
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                             + '<label for="harwested" class="form-label"> Harwested Land  </label>'
+                            + '<i class="bi-info-circle-fill" data-toggle="tooltip" data-placement="top" title=" It is the land used to produce agricultural \ncrops like rice, bajra,wheat,pulses,\nsugarcane,cotton,vegetables,etc."></i>'
                             + '<div class="input-group mb-3">'
                             + '<input type="text" id="harwested" name="harwested" value="' + element1.harwested + '"  class="form-control" placeholder=" Harwested Land " aria-label=" Harwested Land " aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
@@ -86,6 +91,7 @@ function showCropLand() {
                     html = '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                         + '<label for="perennial" class="form-label">Woody Perennial Cover </label>'
+                        + '<i class="bi-info-circle-fill" data-toggle="tooltip" data-placement="top" title="This is the area occupied by woody\n perennial crops like mango, citrus crops,\n cashew , coconut, bael, jackfruit, banana."></i>'
                         + '<div class="input-group mb-3">'
                         + '<input type="text" id="perennial" name="perennial" class="form-control" placeholder="Woody Perennial Cover" aria-label="Woody Perennial Cover" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
@@ -95,6 +101,7 @@ function showCropLand() {
                         + '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                         + '<label for="harwested" class="form-label"> Harvested Land  </label>'
+                        + '<i class="bi-info-circle-fill" data-toggle="tooltip" data-placement="top" title=" It is the land used to produce agricultural \ncrops like rice, bajra,wheat,pulses,\nsugarcane,cotton,vegetables,etc."></i>'
                         + '<div class="input-group mb-3">'
                         + '<input type="text" id="harwested" name="harwested" class="form-control" placeholder=" Harvested Land " aria-label=" Harwested Land " aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">sq.km</span>'
