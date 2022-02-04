@@ -2801,14 +2801,10 @@ textarea.form-control {
 #admin_dash{
   margin-top: 20px;
 }
-/* 
-.colData{
-  margin: 20px 0;
-  padding: 10px;
-} */
 
 .colData{
 padding: 10px;
+height: 150px;
 
 }
 
@@ -2816,15 +2812,29 @@ padding: 10px;
    margin-top: 30px;
 }
 
+.iconAdmin{
+  height: 50px;
+  width: 50px;
+}
 
-.table{
+.iconAdmin img{
+  height: 50px;
+  width: 50px;
+}
+
+.adminInfo{
+  background-color: #fff ;
+  background-clip: border-box;
+  border-radius: 1rem;
+}
+
+
+/* .table{
   position: absolute;
   table-layout: auto;
-  /* border: 1px solid black; */
   width: 40%;
-  /* top:70%; */
-  /* left: 10%; */
-}
+ 
+} */
 /*
 .swiper_slide_change{
   padding: 20px 60px;
