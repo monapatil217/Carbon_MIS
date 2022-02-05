@@ -68,7 +68,7 @@
                          </form>
                          <!-- Start PopUp div -->
                          <div class="row align-items-center justify-content-center" id="moreInfo">
-                             <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12"
+                             <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12"
                                  data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                  <div class="fade-to-img" onclick="showCookingFuelInfo();">
                                      <img class="reggot" id="popup-btn" src="img/cookingfuel.png" width="80"

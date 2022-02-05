@@ -63,7 +63,7 @@ require "php/session.php";
                     <div class="in-sec">
                         <h5 class="text-center">Wastewater</h5>
                         <marquee width="100%" direction="left" height="30px" scrollamount="2"> CMD - Cubic meter per day
-                            / MLD - Millions liter per day </marquee>
+                        </marquee>
                         <form class="needs-validation" novalidate>
                             <div id="waterInput"></div>
                             <div class="row ">
@@ -74,7 +74,7 @@ require "php/session.php";
                             </div>
                         </form>
                         <div class="row align-items-center justify-content-center" id="moreInfo">
-                            <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12"
+                            <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <div class=" fade-to-img" onclick="showWaterInfo();">
                                     <img class="reggot" id="popup-btn" src="img/water-drop.png" width="80" height="80">

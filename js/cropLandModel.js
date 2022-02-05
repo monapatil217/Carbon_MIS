@@ -17,7 +17,7 @@ $(document).ready(function () {
     showCropLand();
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
-      })
+    })
 })
 
 function showCropLand() {

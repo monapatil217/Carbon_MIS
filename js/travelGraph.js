@@ -82,14 +82,30 @@ function addTravelChart() {
             renderer: am5xy.AxisRendererX.new(root, {}),
             tooltip: am5.Tooltip.new(root, {})
         }));
-
         xAxis.data.setAll(data);
+
+
+        xAxis.children.moveValue(am5.Label.new(root, {
+            text: "Vehicles",
+            x: am5.p50,
+            centerX: am5.p50
+        }), xAxis.children.length - 1);
+
+        // xRenderer.grid.template.set("visible", false);
+
+
 
         var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
             min: 0,
             renderer: am5xy.AxisRendererY.new(root, {})
         }));
 
+        yAxis.children.moveValue(am5.Label.new(root, {
+            rotation: -90,
+            text: "Emissions(tons/month)",
+            y: am5.p50,
+            centerX: am5.p50
+        }), 0);
 
         // Add legend
         // https://www.amcharts.com/docs/v5/charts/xy-chart/legend-xy-series/

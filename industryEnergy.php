@@ -68,7 +68,7 @@ require "php/session.php";
                         </form>
                         <!-- Start PopUp div -->
                         <div class="row align-items-center justify-content-center" id="moreInfo">
-                            <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12"
+                            <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <div class="fade-to-img" onclick="showIndFInfo();">
                                     <img class="reggot" id="popup-btn" src="img/barrel.png" width="80" height="80">
@@ -80,7 +80,7 @@ require "php/session.php";
                 </div>
                 <div class="col-md-12 col-lg-8 mb-3" data-aos-delay="200">
                     <div class="in-sec">
-                        <h3 class="text-center">Carbon Emission from Industrial Energy Use</h3>
+                        <h3 class="text-center">Carbon Emission From Industrial Energy Use</h3>
                         <!-- next button and print bitton -->
                         <div class="row align-items-center justify-content-center">
                             <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6"

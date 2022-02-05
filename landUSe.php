@@ -54,6 +54,7 @@ require "php/session.php";
             <div class="row">
                 <div class="col-md-12 col-lg-5  mb-3" data-aos-delay="200">
                     <div class="in-sec">
+                        <!-- <h4 class="text-center mb-2">Land Use</h4> -->
                         <marquee width="100%" direction="left" height="30px" scrollamount="2"> sq.km - Square Kilometre.
                         </marquee>
                         <form class="needs-validation" novalidate>
@@ -67,7 +68,7 @@ require "php/session.php";
                         </form>
                         <!-- Start PopUp div -->
                         <div class="row align-items-center justify-content-center" id="moreInfo">
-                            <div class=" col-lg-8 col-md-8 col-sm-12 col-xs-12"
+                            <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <div class="fade-to-img" onclick="showLandUInfo();">
                                     <img class="reggot" id="popup-btn" src="img/architect.png" width="80" height="80">
