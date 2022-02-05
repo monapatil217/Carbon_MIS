@@ -30,6 +30,7 @@ function openCity(cityName, elmnt, color) {
 function showInput() {
 
     document.getElementById("addModel").style.display = "block";
+    document.getElementById("addImg").style.display = "none";
 
     var html = '';
 
