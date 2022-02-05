@@ -1,5 +1,5 @@
 <?php
-// require "php/session.php";
+require "php/session.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,6 +67,8 @@
         <!-- Image Slide Show Start -->
         <section id="image_slidshow" class="image_slidshow">
             <div class="container" id="admin_dash" data-aos="fade-up">
+
+                <input type="text" id="userC" class="form-control" value="<?php echo $_SESSION["userC"]; ?>" hidden>
                 <div class="row" data-aos="fade-up">
 
                     <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4 adminInfo">
@@ -95,7 +97,9 @@
                                 </div>
                                 <div class="text-end pt-1">
                                     <p class="text-sm mb-0 text-capitalize">User</p>
-                                    <h4 class="mb-0">20</h4>
+                                    <div id="userCount">
+                                        <h4 class="mb-0"> <?php echo $_SESSION["userC"]; ?> </h4>
+                                    </div>
                                 </div>
                             </div>
                             <hr class="dark horizontal my-0">
@@ -152,7 +156,7 @@
                                     <th>Id</th>
                                     <th>City</th>
                                     <th>Emission tCO2e/year</th>
-                                    <th>Data</th>
+                                    <th>Data %</th>
                                     <!-- <th>Age</th> -->
                                 </tr>
                             </thead>

@@ -116,6 +116,12 @@ function addPieChart() {
                 series.data.setAll(data);
 
 
+                xAxis.children.moveValue(am5.Label.new(root, {
+                    text: "Data in %",
+                    x: am5.p20,
+                    centerX: am5.p50
+                }), xAxis.children.length - 1);
+
                 // Make stuff animate on load
                 // https://www.amcharts.com/docs/v5/concepts/animations/
                 series.appear(1000);

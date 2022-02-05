@@ -2,8 +2,8 @@
 <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-        <h3><a><b>Carbon</b></a></h3><br>
-        <h5>Neutral Amrut City MIS</h5>
+        <h3><a><b>Carbon Neutral Amrut City MIS</b></a></h3><br>
+        <h5></h5>
 
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -75,11 +75,17 @@
                     </li> -->
 
                 <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                <?php if(isset($_SESSION['cityName'])){?>
+                <?php if (isset($_SESSION['cityName'])) { ?>
                     <li><a class="getstarted scrollto" href="php/logout.php">Logout</a></li>
-               <?php }else{ ?>
-                <li><a class="getstarted scrollto" href="php/logout.php">Log In</a></li>
-               <?php }?>
+
+                    <a mdbBtn floating="true" size="sm" gradient="blue" mdbWavesEffect>
+                        <?php echo $_SESSION["cityName"]; ?>
+                    </a>
+
+
+                <?php } else { ?>
+                    <li><a class="getstarted scrollto" href="php/logout.php">Log In</a></li>
+                <?php } ?>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->

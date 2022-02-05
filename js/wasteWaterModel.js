@@ -86,68 +86,67 @@ function showWaterInput() {
 
 
                             + '<div class="row justify-content-center" id="adddstp">';
-
+                        var stpi = 1;
                         $.each(stpdata, function (index, element2) {
-                            for (var i = 1; i <= n_stp; i++) {
-                                html += '<hr>'
-                                    + '<div class="row  text-center ">'
-                                    + '<h4>Details About STP ' + i + ' </h4>'
+                            html += '<hr>'
+                                + '<div class="row  text-center ">'
+                                + '<h4>Details About STP ' + stpi + ' </h4>'
 
-                                    + ' </div>'
-                                    + '<div class="row justify-content-center">'
-                                    + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                                + ' </div>'
+                                + '<div class="row justify-content-center">'
+                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-                                    + '<label for="capacity" class="form-label"> Capacity</label>'
-                                    + '<div class="input-group mb-2">'
-                                    + '<input type="text" id="capacity' + i + '" name="capacity" class="form-control" placeholder="Capacity" value="' + element2.cap + '"  aria-label="Residential" aria-describedby="basic-addon2">'
-                                    + '</div>'
+                                + '<label for="capacity" class="form-label"> Capacity</label>'
+                                + '<div class="input-group mb-2">'
+                                + '<input type="text" id="capacity' + stpi + '" name="capacity" class="form-control" placeholder="Capacity" value="' + element2.cap + '"  aria-label="Residential" aria-describedby="basic-addon2">'
+                                + '</div>'
 
-                                    + '</div>'
-                                    + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                                + '</div>'
+                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-                                    + '<label for="latitude" class="form-label"> Latitude</label>'
-                                    + '<div class="input-group mb-2">'
-                                    + '<input type="text" id="latitude' + i + '" name="latitude" class="form-control" placeholder="Latitude" value="' + element2.lat + '"  aria-label="Residential" aria-describedby="basic-addon2">'
-                                    + '</div>'
+                                + '<label for="latitude" class="form-label"> Latitude</label>'
+                                + '<div class="input-group mb-2">'
+                                + '<input type="text" id="latitude' + stpi + '" name="latitude" class="form-control" placeholder="Latitude" value="' + element2.lat + '"  aria-label="Residential" aria-describedby="basic-addon2">'
+                                + '</div>'
 
-                                    + '</div>'
-                                    + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                                + '</div>'
+                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-                                    + '<label for="longitude" class="form-label"> Longitude</label>'
-                                    + '<div class="input-group mb-2">'
-                                    + '<input type="text" id="longitude' + i + '" name="longitude" class="form-control" placeholder="Longitude" value="' + element2.long + '"  aria-label="Residential" aria-describedby="basic-addon2">'
-                                    + '</div>'
+                                + '<label for="longitude" class="form-label"> Longitude</label>'
+                                + '<div class="input-group mb-2">'
+                                + '<input type="text" id="longitude' + stpi + '" name="longitude" class="form-control" placeholder="Longitude" value="' + element2.long + '"  aria-label="Residential" aria-describedby="basic-addon2">'
+                                + '</div>'
 
-                                    + '</div>'
-                                    + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                                + '</div>'
+                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-                                    + '<label for="technology" class="form-label"> Technology</label>'
-                                    + '<div class="input-group mb-2">'
-                                    + '<input type="text" id="technology' + i + '" name="technology" class="form-control" placeholder="Technology" value="' + element2.tech + '"   aria-label="Residential" aria-describedby="basic-addon2">'
-                                    + '</div>'
+                                + '<label for="technology" class="form-label"> Technology</label>'
+                                + '<div class="input-group mb-2">'
+                                + '<input type="text" id="technology' + stpi + '" name="technology" class="form-control" placeholder="Technology" value="' + element2.tech + '"   aria-label="Residential" aria-describedby="basic-addon2">'
+                                + '</div>'
 
-                                    + '</div>'
-                                    + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                                + '</div>'
+                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-                                    + '<label for="waterRecycle" class="form-label"> Qty of Recycled Water</label>'
-                                    + '<div class="input-group mb-2">'
-                                    + '<input type="text" id="waterRecycle' + i + '" name="waterRecycle" class="form-control" placeholder="Recycled Water" value="' + element2.recycle + '"  aria-label="Residential" aria-describedby="basic-addon2">'
-                                    + '<span class="input-group-text" id="basic-addon2">CMD</span>'
-                                    + '</div>'
+                                + '<label for="waterRecycle" class="form-label"> Qty of Recycled Water</label>'
+                                + '<div class="input-group mb-2">'
+                                + '<input type="text" id="waterRecycle' + stpi + '" name="waterRecycle" class="form-control" placeholder="Recycled Water" value="' + element2.recycle + '"  aria-label="Residential" aria-describedby="basic-addon2">'
+                                + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                                + '</div>'
 
-                                    + '</div>'
-                                    + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                                + '</div>'
+                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-                                    + '<label for="waterDisposal" class="form-label">Qty of Water Disposal </label>'
-                                    + '<div class="input-group mb-2">'
-                                    + '<input type="text" id="waterDisposal' + i + '" name="waterDisposal" class="form-control" placeholder="Disposal of Waste" value="' + element2.dispose + '"  aria-label="Residential" aria-describedby="basic-addon2">'
-                                    + '<span class="input-group-text" id="basic-addon2">CMD</span>'
-                                    + '</div>'
+                                + '<label for="waterDisposal" class="form-label">Qty of Water Disposal </label>'
+                                + '<div class="input-group mb-2">'
+                                + '<input type="text" id="waterDisposal' + stpi + '" name="waterDisposal" class="form-control" placeholder="Disposal of Waste" value="' + element2.dispose + '"  aria-label="Residential" aria-describedby="basic-addon2">'
+                                + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                                + '</div>'
 
-                                    + ' </div>'
-                                    + '  </div>';
-                                i++;
-                            }
+                                + ' </div>'
+                                + '  </div>';
+                            stpi++;
+
                         });
 
                         html += '</div>';

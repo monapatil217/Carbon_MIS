@@ -50,7 +50,7 @@ while ($row = mysqli_fetch_array($result)) {
 
     $mainData['id'] = $id;
     $mainData['city'] = $cityName;
-    $mainData['emission'] = $emid;
+    $mainData['emission'] = round($emid, 2);
     $mainData['data'] = $dvalue;
     array_push($finalDataArray, $mainData);
 }

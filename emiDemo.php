@@ -126,49 +126,25 @@
                 <div class="col-md-12 col-lg-12  mb-3 s " data-aos-delay="200">
                     <div class="in-sec">
 
-                        <button class="tablink" onclick="openPage('Home', this, '#888')">Total Emissions</button>
-                        <button class="tablink" onclick="openPage('News', this, '#888')" id="defaultOpen">Sectoral Stack</button>
-                        <button class="tablink" onclick="openPage('Contact', this, '#888')">Sectoral Emission </button>
-                        <button class="tablink" onclick="openPage('About', this, '#888')">Pollutant Stack</button>
-                        <button class="tablink" onclick="openPage('About1', this, '#888')">GHG Emission</button>
+                        <button class="tablink" onclick="openPage('Home', this, '#888')">allEmiChart</button>
+                        <button class="tablink" onclick="openPage('News', this, '#888')" id="defaultOpen">allsecEmiChart</button>
+                        <button class="tablink" onclick="openPage('Contact', this, '#88')"> Sector-wise </button>
+                        <button class="tablink" onclick="openPage('About', this, '#888')">Pollutant-wise</button>
+                        <button class="tablink" onclick="openPage('About1', this, '#888')">Pollutants-wise</button>
 
                         <div id="Home" class="tabcontent">
-                            <div class="row">
-                                <div class="col-11">
-                                    <h3 class="text-dark"> Total Carbon Emissions ( tCO2e/day )</h3>
-                                </div>
-                                <div class="col-1">
-                                    <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button>
-                                </div>
-                            </div>
-
                             <div id="allEmiChart"></div>
                         </div>
 
                         <div id="News" class="tabcontent">
-                            <div class="row">
-                                <div class="col-11">
-                                    <h3 class="text-dark"> Sector wise Carbon Emissions ( tCO2e/day )</h3>
-                                </div>
-                                <div class="col-1">
-                                    <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button>
-                                </div>
-                            </div>
                             <div id="allsecEmiChart"></div>
                         </div>
 
                         <div id="Contact" class="tabcontent">
                             <div class="row mt-3 justify-content-center">
-                                <div class="row">
-                                    <div class="col-11">
-                                        <h3 class="text-dark">Carbon Emissions by Different Sector( tCO2e/day )</h3>
-                                    </div>
-                                    <div class="col-1">
-                                        <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button>
-                                    </div>
-                                </div>
+
                                 <div class="form-group col-md-2">
-                                    <!-- <label class="text-dark"> Select Sector : </label> -->
+                                    <label> Select Sector : </label>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <select class="form-control" id="sectionType" onchange="secEmiChart();">
@@ -198,29 +174,14 @@
                         </div>
 
                         <div id="About" class="tabcontent">
-                            <div class="row">
-                                <div class="col-11">
-                                    <h3 class="text-dark"> Pollutant-wise Emissions ( tons/day )</h3>
-                                </div>
-                                <div class="col-1">
-                                    <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button>
-                                </div>
-                            </div>
                             <div id="polluEmi"></div>
                         </div>
 
                         <div id="About1" class="tabcontent">
                             <div class="row mt-3 justify-content-center">
-                                <div class="row">
-                                    <div class="col-11">
-                                        <h3 class="text-dark"> Total Emissions by Different GHG ( tons/day )</h3>
-                                    </div>
-                                    <div class="col-1">
-                                        <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button>
-                                    </div>
-                                </div>
+
                                 <div class="form-group col-md-2">
-                                    <!-- <label class="text-dark"> Select Pollutants : </label> -->
+                                    <label> Select Pollutants : </label>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <select class="form-control" id="pollutantType" onchange="poluEmiChart();">
