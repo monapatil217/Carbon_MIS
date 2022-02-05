@@ -40,7 +40,7 @@ require "php/session.php";
   ======================================================== -->
 
     <style>
-        #transChart {
+        #transport {
             width: 100%;
             height: 300px;
         }
@@ -57,7 +57,7 @@ require "php/session.php";
     <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
-            <input type="text" class="form-control" id="sectionType" value="transChart" hidden>
+            <input type="text" class="form-control" id="sectionType" value="transport" hidden>
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
 
             <div class="row justify-content-center">
@@ -88,7 +88,7 @@ require "php/session.php";
                     </div>
                 </div>
 
-                <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
+                <!-- <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">
                         <h3 class="text-center">Carbon Emission from Transport Sector</h3>
                         <ul style="margin-left: 10px;">
@@ -97,7 +97,40 @@ require "php/session.php";
                         <div class="row justify-content-center">
                             <div id="chartName">
                             </div>
-                            <div id="transChart"></div>
+                            <div id="transport"></div>
+                        </div>
+                    </div>
+                </div> -->
+
+
+                <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
+                    <div class="in-sec infoFont">
+                        <!-- <h3>Electricity</h3> -->
+                        <h3 class="text-center mb-2">Carbon Emission from Transport Sector</h3>
+                        <ul style="margin-left: 10px;">
+                            <li class="popupli"> India's transport sector is responsible for 13.5 per cent of the country’s energy-related CO2 emissions, with road transport accounting for 90 percent of the sector’s final energy consumption.</li>
+                        
+                        </ul>
+                        <div class="row align-items-center justify-content-center">
+                            <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6"
+                                data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <div id="chartName">
+                                    <!-- <h3>Carbon emission of Electricity</h3> -->
+                                </div>
+                                <div id="transport"></div>
+                            </div>
+                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2"
+                                data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <button id="cmd" class="btn btn-primary "
+                                    onclick="CreatePDFfromHTML('transport')">Print</button>
+                            </div>
+                        </div>
+                        <div></div>
+                        <div class="row align-items-center justify-content-center">
+                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2"
+                                data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <button type="button" class="btn btn-primary" onclick="redirect();">NEXT ➡</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -166,16 +199,17 @@ require "php/session.php";
     <script src="assets/js/jquery.min.js"></script>
 
     <script src="assets/vendor/jbox/jBox.all.min.js"></script>
-    <!-- Our js File  -->
-    <script src="js/energyTransportModel.js"></script>
-    <script src="js/common.js"></script>
-    <script src="js/travelGraph.js"></script>
-
+   
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-
-
     <script src="assets/js/bootstrap-show-modal.js"></script>
+
+     <!-- Our js File  -->
+     <script src="js/energyTransportModel.js"></script> 
+    <script src="js/induGraph.js"></script>   
+    <script src="js/common.js"></script>
+    
+    <!-- <script src="js/travelGraph.js"></script> -->
 
 
 </body>
