@@ -5,7 +5,7 @@ require "php/session.php";
 <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-        <h3><a><b>Carbon Neutral Amrut City MIS</b></a></h3><br>
+        <h3><a><b>Carbon Neutral Amrut Cities MIS</b></a></h3><br>
         <h5></h5>
 
         <!-- Uncomment below if you prefer to use an image logo -->
@@ -79,13 +79,18 @@ require "php/session.php";
 
                 <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                 <?php if (isset($_SESSION['cityName'])) { ?>
-                    <li><a class="getstarted scrollto" href="php/logout.php">Logout</a></li>
-
-                    <a mdbBtn floating="true" size="sm" gradient="blue" mdbWavesEffect>
-                        <?php echo $_SESSION["cityName"]; ?>
-                    </a>
+                <li><a class="getstarted scrollto" href="php/logout.php">Logout</a></li>
+                <li><a>
+                    <div id="gmailprofileletter">
+                        <div id="cityname">
+                            <?php
+                             $string = $_SESSION["cityName"];
+                             echo $string[0]; ?>
+                        </div>
+                    </div></a>
+                </li>
                 <?php } else { ?>
-                    <li><a class="getstarted scrollto" href="php/logout.php">Log In</a></li>
+                <li><a class="getstarted scrollto" href="php/logout.php">Log In</a></li>
                 <?php } ?>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
