@@ -10,6 +10,7 @@
      <title>Cooking Fuel</title>
      <meta content="" name="description">
      <meta content="" name="keywords">
+     <meta name='viewport' content='width=device-width, initial-scale=1'>
      <!-- Favicons -->
      <link href="assets/img/favicon.png" rel="icon">
      <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -55,7 +56,7 @@
                  <div class="col-md-12 col-lg-5  mb-3  s" data-aos-delay="200">
                      <div class="in-sec">
                          <form class="needs-validation" novalidate>
-                             <h6 class="text-center"> Cooking Fuel</h6>
+                             <!-- <h6 class="text-center"> Cooking Fuel</h6> -->
                              <marquee width="100%" direction="left" height="30px" scrollamount="2"> SCM - Standard Cubic
                                  Meter / m - Month / t - ton / MNGL - Maharashtra Natural Gas Ltd.</marquee>
                              <div id="cookingFuelInput"></div>
@@ -90,7 +91,7 @@
                              <!-- <li class="popupli">The sum is then 454 + 1211 = 1665 grammes of CO2/liter of LPG.</li> -->
                          </ul>
                          <!-- next button and print bitton -->
-                         <div class="row align-items-center justify-content-center">
+                         <div class="row justify-content-center">
                              <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6"
                                  data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                  <div id="chartName">
@@ -100,15 +101,18 @@
                              </div>
                              <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2"
                                  data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                                 <button id="cmd" class="btn btn-primary "
-                                     onclick="CreatePDFfromHTML('cookingFuel')">Print</button>
+                                 <!-- <button id="cmd" class="btn btn-primary "
+                                     onclick="CreatePDFfromHTML('cookingFuel')">Print</button> -->
+                                 <i class="fa fa-download" style="font-size:24px;color:#67b7dc" class="btn btn-primary "
+                                     value="download" onclick="CreatePDFfromHTML('cookingFuel')"></i>
                              </div>
                          </div>
                          <div class="row align-items-center justify-content-center">
                              <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2"
                                  data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                                 <button type="button" class="btn btn-primary" onclick="redirect();">NEXT➡</button>
-                             </div>
+                                 <button type="button" class="btn btn-primary" onclick="redirect();">NEXT <i
+                                         class="fa fa-angle-double-right"
+                                         style='font-size:18px;color:gray'></i></button> </div>
                          </div>
                      </div>
                  </div>
@@ -153,6 +157,7 @@
      <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
      <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
      <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
      <!-- Vendor JS Files -->
      <script src="assets/vendor/purecounter/purecounter.js"></script>
      <script src="assets/vendor/aos/aos.js"></script>

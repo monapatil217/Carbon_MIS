@@ -10,6 +10,7 @@ require "php/session.php";
     <title>Forest Land</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -86,7 +87,7 @@ require "php/session.php";
                                 from the atmosphere and is now stored within the forest ecosystem, mainly within living
                                 biomass and soil, and to a lesser extent also in dead wood and litter. </li>
                         </ul>
-                        <div class="row align-items-center justify-content-center">
+                        <div class="row justify-content-center">
                             <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <div class="row justify-content-center">
@@ -96,14 +97,17 @@ require "php/session.php";
                             </div>
                             <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                                <button id="cmd" class="btn btn-primary "
-                                    onclick="CreatePDFfromHTML('forest')">Print</button>
+                                <!-- <button id="cmd" class="btn btn-primary "
+                                    onclick="CreatePDFfromHTML('forest')">Print</button> -->
+                                <i class="fa fa-download" style="font-size:24px;color:#67b7dc" class="btn btn-primary "
+                                    value="download" onclick="CreatePDFfromHTML('forest')"></i>
                             </div>
                         </div>
                         <div class="row align-items-center justify-content-center">
                             <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                                <button type="button" class="btn btn-primary" onclick="redirect();">NEXT ➡</button>
+                                <button type="button" class="btn btn-primary" onclick="redirect();">NEXT <i
+                                        class="fa fa-angle-double-right" style='font-size:18px;color:gray'></i></button>
                             </div>
                         </div>
                     </div>
@@ -149,6 +153,7 @@ require "php/session.php";
     <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>

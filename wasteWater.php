@@ -10,6 +10,7 @@ require "php/session.php";
     <title>Waste Water</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -68,8 +69,11 @@ require "php/session.php";
                             <div id="waterInput"></div>
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
-                                    <button class="btn btn-primary " type="button"
-                                        onclick="saveWaterData();">NEXT</button>
+                                    <!-- <button class="btn btn-primary " type="button"
+                                        onclick="saveWaterData();">NEXT</button> -->
+                                    <button type="button" class="btn btn-primary" onclick="saveWaterData();">NEXT <i
+                                            class="fa fa-angle-double-right"
+                                            style='font-size:18px;color:gray'></i></button>
                                 </div>
                             </div>
                         </form>
@@ -138,6 +142,7 @@ require "php/session.php";
     <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
