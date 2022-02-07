@@ -22,7 +22,6 @@ if (isset($_POST["username"])) {
             } else {
                 $_SESSION["userC"] = 0;
             }
-
             header("Location:../adminDb.php");
         } else {
             header("Location:../login.php");
@@ -30,16 +29,13 @@ if (isset($_POST["username"])) {
     } else {
         $query = "SELECT * FROM city_name WHERE name ='" . $_POST["username"] . "' and password = '" . $_POST["password"] . "'";
         $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
-
         $row  = mysqli_fetch_array($result);
         if (is_array($row)) {
             $_SESSION["cityId"] = $row['id'];
             $_SESSION["cityName"] = $row['name'];
         }
-
         $query = "SELECT * FROM basic_info WHERE city='" . $_SESSION["cityName"] . "'";
         $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
-
         $row  = mysqli_fetch_array($result);
         if (is_array($row)) {
             $_SESSION["basicId"] = $row['id'];
