@@ -53,7 +53,7 @@
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="assets/img/Slide1.png" class="rounded d-block mx-auto" alt="App">
+                        <img src="assets/img/slider1.jpg" class="rounded d-block mx-auto" alt="App">
                     </div>
                     <div class="carousel-item">
                         <img src="assets/img/Slide2.png" class="rounded d-block mx-auto" alt="App">
@@ -62,7 +62,7 @@
                         <img src="assets/img/Slide3.png" class="rounded d-block mx-auto" alt="App">
                     </div>
                 </div>
-            </div>
+            </div>testimonials
         </div>
         <!--  -->
     </section>
@@ -70,7 +70,7 @@
     <main id="main">
         <!-- ***** Features Big Item Start ***** -->
         <!-- ======= Testimonials Section ======= -->
-        <section id="testimonials" class="testimonials">
+        <section id="" class="testimonials">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2>DATA FILLED</h2>

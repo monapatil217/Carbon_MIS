@@ -512,7 +512,7 @@ TRY IT ... with or without CENTER CENTER
     /* display: flex; */
     align-items: center;
     justify-content: center;
-    background-image: url(../img/imgu.jpg);
+    background-image: url(../img/backgroundimage4.jpg);
     /* background-color: #cccf99; */
     background-repeat: no-repeat;
     /*
@@ -527,7 +527,7 @@ TRY IT ... with or without CENTER CENTER
 }
 #subHero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.301);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -598,7 +598,7 @@ TRY IT ... with or without CENTER CENTER
   padding: 30px 30px;
   position: relative;
   overflow: hidden;
-  background:#ffff;
+  background:rgba(255, 255, 255, 0.884);
   box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
   border-radius: 8px;
   z-index: 1;
@@ -925,7 +925,12 @@ section {
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
+
+.main{
+  background-image: url(../img/backgroundimage4.jpg);
+}
 .testimonials .testimonials-carousel, .testimonials .testimonials-slider {
+
   overflow: hidden;
 }
 
@@ -2871,4 +2876,4 @@ background-color: #f8fbfe;
   color: white;
   font-size: 40px;
   line-height: 40px;
-}
+   }
