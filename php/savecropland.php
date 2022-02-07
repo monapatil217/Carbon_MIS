@@ -10,6 +10,11 @@ $perennial = $data->perennial;
 $harwested = $data->harwested;
 // $mineralS = $data->mineralS;
 // $organicS = $data->organicS;
+$totalcrop = $perennial +$harwested;
+//calculation for cropland emi
+$carbonco2;$carbonch4;$carbonn2o;
+
+//end calculation
 
         $query2 = "SELECT * FROM crop_data WHERE b_id='" . $basicId . "'";
         $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
@@ -19,9 +24,16 @@ $harwested = $data->harwested;
             $query = "INSERT INTO crop_data(b_id,perennial,harwested)
             VALUES ($basicId,$perennial,$harwested)";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+            $cropId = mysqli_insert_id($conn);
+            $query = "INSERT INTO crop_emi(b_id,co2,ch4,n2o)
+            VALUES ($basicId,$carbonco2,$carbonch4,$carbonn2o)";
+            $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         }else{
             $query = "UPDATE  crop_data set perennial=$perennial,harwested=$harwested
                        WHERE b_id='".$basicId."'";
+            $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+            $query = "UPDATE  crop_emi set co2=$carbonco2,ch4=$carbonch4,n2o=$carbonn2o
+            WHERE b_id='".$basicId."'";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         }
         echo  "success";

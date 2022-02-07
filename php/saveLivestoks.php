@@ -17,6 +17,16 @@ $came = $data->came;
 $pig = $data->pig;
 $poul = $data->poul;
 
+//start calculation
+  $carbonco2=0;$carbonch4=0;$carbonn2o=0;
+  $liveStockArray= array();
+  array_push($liveStockArray,$ind_cat,$cross_cat,$buff,$sheep,$goat,$hors,$donk,$came,$pig,$poul);
+   for($i=0;$i<=sizeof($liveStockArray);$i++){
+
+   }
+//end calculation
+
+
         $query2 = "SELECT * FROM live_data WHERE b_id='" . $basicId . "'";
         $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
 
@@ -25,9 +35,16 @@ $poul = $data->poul;
             $query = "INSERT INTO live_data(b_id,ind_cat,cross_cat,buff,sheep,goat,hors,donk,came,pig,poul)
             VALUES ($basicId,$ind_cat,$cross_cat,$buff,$sheep,$goat,$hors,$donk,$came,$pig,$poul)";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+            $liveId = mysqli_insert_id($conn);
+            $query = "INSERT INTO live_emi(b_id,live_id,co2,ch4,n2o)
+            VALUES ($basicId,$liveId,$carbonco2,$carbonch4,$carbonn2o)";
+            $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         }else{
             $query = "UPDATE  live_data set ind_cat=$ind_cat,cross_cat=$cross_cat,buff=$buff,sheep=$sheep,
                       goat=$goat,hors=$hors,donk=$donk,came=$came,pig=$pig,poul=$poul WHERE b_id='".$basicId."'";
+            $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+            $query = "UPDATE  live_emi set co2=$carbonco2,ch4=$carbonch4,n2o=$carbonn2o
+            WHERE b_id='".$basicId."'";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         }
         
