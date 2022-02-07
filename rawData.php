@@ -264,7 +264,7 @@
                                             <p>Click on the buttons inside the tabbed menu to see Tables :</p>
                                         </div>
                                         <div class="col-sm col-lg-1">
-                                            <i class="fa fa-download" style="font-size:48px;color:blue"
+                                            <i class="fa fa-download" style="font-size:36px;color:#67b7dc"
                                                 class="btn btn-primary " value="download"
                                                 onclick="convertTableToPDF( 'Balance_Report','balance-title',
                                 ['ele-table','trans-table','crop-table','live-table','forest-table','land-table','solid-table','yard-table','bio-table','haz-table','ww-table'
