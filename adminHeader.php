@@ -1,3 +1,6 @@
+<?php
+require "php/session.php";
+?>
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
@@ -17,7 +20,8 @@
                 <li><a class="nav-link scrollto" href="emiGraph.php">Carbon Emission</a></li>
 
                 <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                <li><a class="getstarted scrollto" href="login.php">Logout</a></li>
+                <li><a class="getstarted scrollto" href="php/logout.php">Logout</a></li>
+
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
