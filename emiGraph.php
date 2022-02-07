@@ -11,6 +11,7 @@
     <title>Emission Graph</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
@@ -138,7 +139,8 @@
                                     <h3 class="text-dark"> Total Carbon Emissions ( tCO2e/day )</h3>
                                 </div>
                                 <div class="col-1">
-                                    <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button>
+                                    <!-- <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button> -->
+                                    <i id="cmd" onclick="CreatePDFfromHTML('electricity')" class='fas fa-print' style='font-size:36px;color:blue'></i>
                                 </div>
                             </div>
 
@@ -151,7 +153,8 @@
                                     <h3 class="text-dark"> Sector wise Carbon Emissions ( tCO2e/day )</h3>
                                 </div>
                                 <div class="col-1">
-                                    <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button>
+                                    <!-- <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button> -->
+                                    <i id="cmd" onclick="CreatePDFfromHTML('electricity')" class='fas fa-print' style='font-size:36px;color:blue'></i>
                                 </div>
                             </div>
                             <div id="allsecEmiChart"></div>
@@ -164,7 +167,8 @@
                                         <h3 class="text-dark">Carbon Emissions by Different Sector( tCO2e/day )</h3>
                                     </div>
                                     <div class="col-1">
-                                        <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button>
+                                        <!-- <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button> -->
+                                        <i id="cmd" onclick="CreatePDFfromHTML('electricity')" class='fas fa-print' style='font-size:36px;color:blue'></i>
                                     </div>
                                 </div>
                                 <div class="form-group col-md-2">
@@ -203,7 +207,8 @@
                                     <h3 class="text-dark"> Pollutant-wise Emissions ( tons/day )</h3>
                                 </div>
                                 <div class="col-1">
-                                    <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button>
+                                    <!-- <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button> -->
+                                    <i id="cmd" onclick="CreatePDFfromHTML('electricity')" class='fas fa-print' style='font-size:36px;color:blue'></i>
                                 </div>
                             </div>
                             <div id="polluEmi"></div>
@@ -216,7 +221,8 @@
                                         <h3 class="text-dark"> Total Emissions by Different GHG ( tons/day )</h3>
                                     </div>
                                     <div class="col-1">
-                                        <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button>
+                                        <!-- <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button> -->
+                                        <i id="cmd" onclick="CreatePDFfromHTML('electricity')" class='fas fa-print' style='font-size:36px;color:blue'></i>
                                     </div>
                                 </div>
                                 <div class="form-group col-md-2">
@@ -400,6 +406,7 @@
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter.js"></script>
@@ -409,6 +416,7 @@
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
+
 
 
     <script src="assets/js/jquery.min.js"></script>
