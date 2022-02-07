@@ -23,7 +23,7 @@ if (isset($_POST["username"])) {
                 $_SESSION["userC"] = 0;
             }
 
-            header("Location:../commGhraphPage.php");
+            header("Location:../adminDb.php");
         } else {
             header("Location:../login.php");
         }

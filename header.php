@@ -1,3 +1,6 @@
+<?php
+require "php/session.php";
+?>
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
@@ -81,8 +84,6 @@
                     <a mdbBtn floating="true" size="sm" gradient="blue" mdbWavesEffect>
                         <?php echo $_SESSION["cityName"]; ?>
                     </a>
-
-
                 <?php } else { ?>
                     <li><a class="getstarted scrollto" href="php/logout.php">Log In</a></li>
                 <?php } ?>

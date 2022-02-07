@@ -146,7 +146,11 @@ require "php/session.php";
                     </div>
 
                 </div>
-
+                <div class="row justify-content-center">
+                    <div class="col-md-2 col-lg-2 s mt-2 mb-2 " data-aos-delay="200">
+                        <h4><b> Data Summary</b></h4>
+                    </div>
+                </div>
                 <div class="row" id="mapSection" data-aos="fade-up">
                     <div class="col-6">
 
