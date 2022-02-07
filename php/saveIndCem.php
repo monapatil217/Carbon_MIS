@@ -40,7 +40,15 @@ $cemArray['name'] =  "cem_irst40";
 $cemArray['value'] = $cem_irst40;
 array_push($finalArraycem, $cemArray);
 
-for ($i = 0; $i <= sizeof($finalArraycem); $i++) { }
+foreach ($finalArrayforest as $row) {
+        $name =  $row['name'];
+        $value =  $row['value'];
+        $query2 = "SELECT * FROM ef_fuel where fuel_name='" . $name . "'";
+        $result = mysqli_query($conn, $query2);
+        while ($row = mysqli_fetch_array($result)) {
+                $co2G =  $row['ncv'];
+        }
+}
 //end calculation
 
 

@@ -35,8 +35,15 @@ $mswArray['name'] =  "t_incin";
 $mswArray['value'] = $t_incin;
 array_push($finalArrayMsw, $mswArray);
 
-for ($i = 0; $i <= sizeof($finalArrayMsw); $i++) { }
-
+foreach ($finalArrayforest as $row) {
+        $name =  $row['name'];
+        $value =  $row['value'];
+        $query2 = "SELECT * FROM ef_fuel where fuel_name='" . $name . "'";
+        $result = mysqli_query($conn, $query2);
+        while ($row = mysqli_fetch_array($result)) {
+                $co2G =  $row['ncv'];
+        }
+}
 //end calculation
 
 

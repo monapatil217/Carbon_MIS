@@ -27,7 +27,15 @@ $cropArray['name'] =  "harwested";
 $cropArray['value'] = $harwested;
 array_push($finalArrayCrop, $cropArray);
 
-for ($i = 0; $i <= sizeof($finalArrayCrop); $i++) { }
+foreach ($finalArrayforest as $row) {
+        $name =  $row['name'];
+        $value =  $row['value'];
+        $query2 = "SELECT * FROM ef_fuel where fuel_name='" . $name . "'";
+        $result = mysqli_query($conn, $query2);
+        while ($row = mysqli_fetch_array($result)) {
+                $co2G =  $row['ncv'];
+        }
+}
 //end calculation
 
 

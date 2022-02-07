@@ -14,6 +14,7 @@ $carbonco2 = 0;
 $carbonch4 = 0;
 $carbonn2o = 0;
 
+
 $query2 = "SELECT * FROM bmw_data WHERE b_id='" . $basicId . "'";
 $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
 
