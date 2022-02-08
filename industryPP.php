@@ -44,7 +44,7 @@ require "php/session.php";
         include 'header.php';
         ?>
     <!-- ======= Hero Section ======= -->
-    <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
+    <section id="subHero" class="d-flex  justify-content-center textc" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
             <!-- <input type="text" class="form-control" id="sectionType" value="product" hidden> -->
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>

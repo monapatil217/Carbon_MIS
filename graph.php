@@ -106,12 +106,12 @@ require "php/session.php";
             padding: 100px 20px;
             height: 100%;
 
-             margin:auto;
-            width:50%;
-            padding:63px;
-            text-align:center;
+            margin: auto;
+            width: 50%;
+            padding: 63px;
+            text-align: center;
             /* // */
-             
+
         }
 
         #t1 {
@@ -164,7 +164,7 @@ require "php/session.php";
     ?>
 
     <!-- ======= Hero Section ======= -->
-    <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
+    <section id="subHero" class="d-flex  justify-content-center textc" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
@@ -172,7 +172,9 @@ require "php/session.php";
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-12  mb-3 s " data-aos-delay="200">
                     <div class="">
-                        <h3><center>Carbon Emission </center></h3>
+                        <h3>
+                            <center>Carbon Emission </center>
+                        </h3>
                         <div id="carbonGharph"></div>
                     </div>
                 </div>
@@ -195,71 +197,71 @@ require "php/session.php";
                         <button class="tablink" onclick="openPage('t6', this, '#888')">Industry</button>
                         <button class="tablink" onclick="openPage('t7', this, '#888')">cookingFuel</button>
 
-                        <div id="t1"  class="tabcontent">
+                        <div id="t1" class="tabcontent">
                             <div id="chartName" class="text-center col-md-4 col-md-offset-4">
                             </div>
-                            <div id="electricity" ></div>
-                            
+                            <div id="electricity"></div>
+
                         </div>
                         <div id="t2" class="tabcontent">
                             <div id="chartName">
-                                
+
                             </div>
                             <div id="transport"></div>
                         </div>
 
                         <div id="t31" class="tabcontent">
                             <div id="chartName">
-                                
+
                             </div>
                             <div id="liveStock"></div>
                         </div>
                         <div id="t32" class="tabcontent">
                             <div id="chartName">
-                                
+
                             </div>
                             <div id="cropLand"></div>
                         </div>
                         <div id="t33" class="tabcontent">
                             <div id="chartName">
-                                
+
                             </div>
                             <div id="forest"></div>
                         </div>
                         <div id="t34" class="tabcontent">
                             <div id="chartName">
-                                
+
                             </div>
                             <div id="landUse"></div>
                         </div>
 
                         <div id="t4" class="tabcontent">
                             <div id="chartName">
-                               
+
                             </div>
                             <div id="solidWaste"></div>
                         </div>
                         <div id="t5" class="tabcontent">
                             <div id="chartName">
-                               
+
                             </div>
                             <div id="wasteWater"></div>
                         </div>
                         <div id="t6" class="tabcontent">
                             <div id="chartName">
-                               
+
                             </div>
                             <div id="energy"></div>
                         </div>
                         <div id="t6" class="tabcontent">
                             <div id="chartName">
-                                
+
                             </div>
                             <div id="product"></div>
                         </div>
                         <div id="t7" class="tabcontent">
                             <div id="chartName">
-                                
+
                             </div>
                             <div id="cookingFuel"></div>
                         </div>
@@ -322,7 +324,7 @@ require "php/session.php";
                 tablinks[i].style.backgroundColor = "";
             }
             document.getElementById(pageName).style.display = "block";
-            elmnt.style.backgroundColor ="#2b2b2b";
+            elmnt.style.backgroundColor = "#2b2b2b";
         }
 
         // Get the element with id="defaultOpen" and click on it
