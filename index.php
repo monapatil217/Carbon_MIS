@@ -11,9 +11,7 @@
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -45,8 +43,8 @@
 </head>
 
 <body> <?php
-    include 'header.php';
-    ?>
+        include 'header.php';
+        ?>
     <!-- Image Slide Show Start -->
     <section id="image_slidshow" class="image_slidshow">
         <div class="" id="about_dash" data-aos="fade-up">
@@ -62,7 +60,7 @@
                         <img src="assets/img/Slide3.png" class="rounded d-block mx-auto" alt="App">
                     </div>
                 </div>
-            </div>testimonials
+            </div>
         </div>
         <!--  -->
     </section>
@@ -84,11 +82,10 @@
             </div>
         </section><!-- End Testimonials Section -->
         <!-- ***** Features Big Item Start ***** -->
-        <section class="section" id="about">
-            <div class="container" id="">
+        <section class="" id="">
+            <div class="" id="">
                 <div class="row">
-                    <div class="col-lg-7 col-md-12 col-sm-12"
-                        data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <div class="col-lg-7 col-md-12 col-sm-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
                         <img src="assets/img/carbongraphic1.jpg" class="rounded img-fluid d-block mx-auto" alt="App">
                     </div>
                     <div class="right-text col-lg-5 col-md-12 col-sm-12 mobile-top-fix">
@@ -122,10 +119,7 @@
                 <div class="faq-list extraC">
                     <ul>
                         <li data-aos="fade-up">
-                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
-                                data-bs-target="#faq-list-1">Why focus first on carbon dioxide? <i
-                                    class="bx bx-chevron-down icon-show"></i><i
-                                    class="bx bx-chevron-up icon-close"></i></a>
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Why focus first on carbon dioxide? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
                                 <p> Carbon dioxide is released in greater amounts and represents 50% of the warming
                                     attributed to greenhouse gases. As the major contributor of global warming, any
@@ -135,10 +129,8 @@
                             </div>
                         </li>
                         <li data-aos="fade-up" data-aos-delay="100">
-                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                                data-bs-target="#faq-list-2" class="collapsed">Why do I need to know my carbon footprint
-                                and what does it mean <i class="bx bx-chevron-down icon-show"></i><i
-                                    class="bx bx-chevron-up icon-close"></i></a>
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Why do I need to know my carbon footprint
+                                and what does it mean <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
                                 <p> Your carbon footprint represents the impact you are having on climate change. Your
                                     footprint is defined as the total greenhouse gas emissions, expressed as carbon
@@ -149,10 +141,8 @@
                             </div>
                         </li>
                         <li data-aos="fade-up" data-aos-delay="200">
-                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                                data-bs-target="#faq-list-3" class="collapsed">I am only one person, can I really make
-                                that much of a difference <i class="bx bx-chevron-down icon-show"></i><i
-                                    class="bx bx-chevron-up icon-close"></i></a>
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">I am only one person, can I really make
+                                that much of a difference <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
                                 <p> Yes you can! You are a part of a greater movement. In the app we show you the
                                     collective impact of the entire community, so you can see how all of our individual
@@ -162,10 +152,7 @@
                             </div>
                         </li>
                         <li data-aos="fade-up" data-aos-delay="300">
-                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                                data-bs-target="#faq-list-4" class="collapsed">How does calculate my carbon footprint <i
-                                    class="bx bx-chevron-down icon-show"></i><i
-                                    class="bx bx-chevron-up icon-close"></i></a>
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">How does calculate my carbon footprint <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
                                 <p> Your carbon footprint is the carbon emissions that are created by your consumption
                                     and lifestyle choices. A carbon footprint is measured in kgs of carbon dioxide
@@ -174,10 +161,8 @@
                             </div>
                         </li>
                         <li data-aos="fade-up" data-aos-delay="400">
-                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                                data-bs-target="#faq-list-5" class="collapsed">What is the solution for the greenhouse
-                                problem?<i class="bx bx-chevron-down icon-show"></i><i
-                                    class="bx bx-chevron-up icon-close"></i></a>
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">What is the solution for the greenhouse
+                                problem?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
                                 <p> The solution is a significant reduction of the greenhouse gases produced by mankind.
                                     This can be achieved by coordinating participation on government, industry,
@@ -201,8 +186,7 @@
                         in iste officiis commodi quidem hic quas.</p> -->
                 </div>
                 <div>
-                    <iframe src="https://www.google.co.in/maps/d/embed?mid=1GNIIOkKoqwk6Ov4SDpa6x93hdRmRmTd6"
-                        width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe src="https://www.google.co.in/maps/d/embed?mid=1GNIIOkKoqwk6Ov4SDpa6x93hdRmRmTd6" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
                     <!-- <iframe style="border:0; width: 100%; height: 270px;"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
             frameborder="0" allowfullscreen></iframe> -->
@@ -233,21 +217,17 @@
                         <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                             <div class="row">
                                 <div class="col-md-6 form-group mt-3">
-                                    <input type="text" name="name" class="form-control" id="name"
-                                        placeholder="Your Name" required>
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                                 </div>
                                 <div class="col-md-6 form-group mt-3 mt-md-3">
-                                    <input type="email" class="form-control" name="email" id="email"
-                                        placeholder="Your Email" required>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                                 </div>
                             </div>
                             <div class="form-group mt-3">
-                                <input type="text" class="form-control" name="subject" id="subject"
-                                    placeholder="Subject" required>
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
                             </div>
                             <div class="form-group mt-3">
-                                <textarea class="form-control" name="message" rows="5" placeholder="Message"
-                                    required></textarea>
+                                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
                             </div>
                             <div class="my-3">
                                 <div class="loading">Loading</div>
@@ -262,12 +242,11 @@
         </section><!-- End Contact Section -->
     </main><!-- End #main -->
     <!-- ***** Footer Start ***** --> <?php
-    include 'footer.php';
-    ?>
+                                        include 'footer.php';
+                                        ?>
     <!-- End Footer -->
     <div id="preloader"></div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>

@@ -677,14 +677,15 @@ section {
   padding: 80px 0;
   overflow: hidden;
 }
-
+/* 
 .section-bg {
   background-color: #f8fbfe;
-}
+} */
 
 .section-title {
   text-align: center;
   padding-bottom: 30px;
+  color: #fff;
 }
 .section-title h2 {
   font-size: 32px;
@@ -694,11 +695,11 @@ section {
   padding-bottom: 0;
   color: #124265;
 }
-.section-title p {
+/* .section-title p {
   margin-bottom: 0;
   font-size: 14px;
   color: #919191;
-}
+} */
 
 /*--------------------------------------------------------------
 # About
@@ -958,7 +959,7 @@ section {
 }
 .testimonials .testimonial-item h4 {
   font-size: 14px;
-  color: #999;
+  color: #fff;
   margin: 0;
 }
 .testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
@@ -1510,7 +1511,7 @@ section {
 } */
 
 .faq .extraC{
-   padding: 0 100px;
+   padding: 0 10px;
 }
 .faq .faq-list ul {
   padding: 0;
@@ -1988,9 +1989,9 @@ section {
 
 
 
-.section_bg_pp {
+/* .section_bg_pp {
   background-color: #f8fbfe;
-}
+} */
 
 
 /********************************* Changes done by Monika ****************************************/
@@ -2853,10 +2854,9 @@ height: 150px;
    width: 150px;
 } */
 
-.testimonials{
+/* .testimonials{
 background-color: #f8fbfe;
-
-}
+} */
 
 /* .easyPieChart canvas{
   left: 20px;
@@ -2876,4 +2876,9 @@ background-color: #f8fbfe;
   color: white;
   font-size: 40px;
   line-height: 40px;
+   }
+
+   .textc{
+color: #fff;
+
    }
