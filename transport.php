@@ -91,10 +91,10 @@ require "php/session.php";
                 <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">
                         <!-- <h3>Electricity</h3> -->
-                        <h3 class="text-center mb-2">Carbon Emission from Transport Sector</h3>
+                        <h3 class="text-center mb-2">Carbon Emissions from Transport Sector</h3>
                         <ul style="margin-left: 10px;">
-                            <li class="popupli"> India's transport sector is responsible for 13.5 percent of the
-                                country’s energy-related CO2 emissions, with road transport accounting for 90 percent of
+                            <li class="popupli"> India's transport sector is responsible for 13.5 % of the
+                                country’s energy-related CO2 emissions, with road transport accounting for 90 % of
                                 the sector’s final energy consumption.</li>
                         </ul>
                         <div class="row justify-content-center">

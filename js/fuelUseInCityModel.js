@@ -236,14 +236,14 @@ function saveCookingData() {
 
     var keroseneinr = document.getElementById("keroseneinr").value;
     var keroseneinc = document.getElementById("keroseneinc").value;
-    keroDetails["type"] = "KERO";
+    keroDetails["type"] = "Kerosene";
     keroDetails["resi"] = keroseneinr;
     keroDetails["comm"] = keroseneinc;
     fuelData.push(keroDetails);
 
     var woodinr = document.getElementById("woodinr").value;
     var woodinc = document.getElementById("woodinc").value;
-    woodDetails["type"] = "WOOD";
+    woodDetails["type"] = "Wood";
     woodDetails["resi"] = woodinr;
     woodDetails["comm"] = woodinc;
     fuelData.push(woodDetails);

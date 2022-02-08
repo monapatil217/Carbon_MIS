@@ -12,16 +12,31 @@ $carbonco2 = 0;
 $carbonch4 = 0;
 $carbonn2o = 0;
 
-foreach ($finalArrayforest as $row) {
-        $name =  $row['name'];
-        $value =  $row['value'];
+for($i=0;$i<=sizeof($fuleData);$i++) {
+        $name =  $fuleData->type;
+        $resi =  $fuleData->resi;
+        $comm =  $fuleData->comm;
+        $value = $resi+$comm;
+        if($name == "LPG"){
+           $value = ($value*14.2)/1000;
+        }else if($name == "MNGL"){
+            $value = ($value*0.9)/1000;
+        }else if($name == "Kerosene"){
+            $value = ($value*0.78)/1000;
+        }
+        
         $query2 = "SELECT * FROM ef_fuel where fuel_name='" . $name . "'";
         $result = mysqli_query($conn, $query2);
         while ($row = mysqli_fetch_array($result)) {
-                $co2G =  $row['ncv'];
+            $ncv =  $row['ncv'];
+            $co2 =  $row['co2'];
+            $ch4 =  $row['ch4'];
+            $n2o =  $row['n2o'];
+           $carbonco2 += ($value* $ncv * $co2)*12;
+           $carbonch4 += ($value* $ncv * $ch*21)*12;
+           $carbonn2o += ($value*$ncv * $n2o *310)*12;
         }
 }
-
 
 for ($i = 0; $i < sizeof($fuleData); $i++) {
     $type = $fuleData[$i]->type;

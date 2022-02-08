@@ -80,7 +80,7 @@ function showForestLand() {
 
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                            + '<label for="disturbance" class="form-label"> Forest area affected by Disturbance </label >'
+                            + '<label for="disturbance" class="form-label"> Forest area affected by Disturbances </label >'
                             + '<div class="input-group mb-3">'
                             + '<input type="text" id="disturbance" name="disturbance" class="form-control" value="' + element1.disturbance + '" placeholder="affected by distrbance" aria-label="affected by distrbance" aria-describedby="basic-addon2">'
                             + '<span class="input-group-text" id="basic-addon2">ha/year </span >'
@@ -133,7 +133,7 @@ function showForestLand() {
                         + '</div>'
                         + '<div class="row justify-content-center">'
                         + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                        + '<label for="disturbance" class="form-label"> Forest Area Affected by Disturbance </label >'
+                        + '<label for="disturbance" class="form-label"> Forest Area Affected by Disturbances </label >'
                         + '<div class="input-group mb-3">'
                         + '<input type="text" id="disturbance" name="disturbance" class="form-control" placeholder="Affected by Disturbance" aria-label="Affected by Disturbance" aria-describedby="basic-addon2">'
                         + '<span class="input-group-text" id="basic-addon2">sq.km </span >'

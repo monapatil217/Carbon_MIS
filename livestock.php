@@ -76,7 +76,7 @@ require "php/session.php";
                 </div>
                 <div class="col-md-12 col-lg-7  mb-2" data-aos-delay="200">
                     <div class="in-sec infoFont">
-                        <h3 class="text-center">Carbon Emission from Livestock</h3>
+                        <h3 class="text-center">Carbon Emissions from Livestock</h3>
                         <ul style="margin-left: 10px;">
                             <li class="popupli"> It has been estimated that over 200 million tonnes of CO2 equivalents
                                 are released by Indian livestock each year. </li>

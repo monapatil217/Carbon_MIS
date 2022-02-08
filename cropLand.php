@@ -79,7 +79,7 @@ require "php/session.php";
                 </div>
                 <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">
-                        <h3 class="text-center mb-2">Carbon Emission of Crop Land</h3>
+                        <h3 class="text-center mb-2">Carbon Emissions from Crop Land</h3>
                         <ul style="margin-left: 10px;">
                             <li class="popupli">Stabilizing greenhouse gas (GHG) emissions from croplands as
                                 agricultural demand grows is a critical component of climate change mitigation.</li>

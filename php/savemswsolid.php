@@ -5,14 +5,14 @@ $json = file_get_contents('php://input');
 $data = json_decode($json);
 
 //basic info table
-// $basicId = $data->basicId;
-// $msw_gen = $data->msw_gen;
-// $msw_col = $data->msw_col;
+$basicId = $data->basicId;
+$msw_gen = $data->msw_gen;
+$msw_col = $data->msw_col;
  $t_comp = $data->t_comp;
  $t_disp = $data->t_disp;
-// $n_yard = $data->n_yard;
+$n_yard = $data->n_yard;
 $t_incin = $data->t_incin;
-// $yardData = $data->yardData;
+$yardData = $data->yardData;
 $last_id = 0;
 
 
@@ -21,19 +21,7 @@ $carbonch4 = 0;
 $carbonn2o = 0;
 
 //strart calaculation
-// $finalArrayMsw = array();
-// $mswArray = array();
-// $mswArray['name'] =  "t_comp";
-// $mswArray['value'] = $t_comp;
-// array_push($finalArrayMsw, $mswArray);
-// $mswArray = array();
-// $mswArray['name'] =  "t_disp";
-// $mswArray['value'] = $t_disp;
-// array_push($finalArrayMsw, $mswArray);
-// $mswArray = array();
-// $mswArray['name'] =  "t_incin";
-// $mswArray['value'] = $t_incin;
-// array_push($finalArrayMsw, $mswArray);
+
 
 //compost calculation
   $carbonch4=($t_comp*1000*4*21*365)/1000000;

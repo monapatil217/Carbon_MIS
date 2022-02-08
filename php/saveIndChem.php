@@ -83,13 +83,18 @@ $chemArray['name'] =  "carbonB";
 $chemArray['value'] = $carbonB;
 array_push($finalArraychem, $chemArray);
 
-foreach ($finalArrayforest as $row) {
+foreach ($finalArraychem as $row) {
         $name =  $row['name'];
         $value =  $row['value'];
         $query2 = "SELECT * FROM ef_fuel where fuel_name='" . $name . "'";
         $result = mysqli_query($conn, $query2);
         while ($row = mysqli_fetch_array($result)) {
-                $co2G =  $row['ncv'];
+                $co2 =  $row['co2'];
+                $ch4 =  $row['ch4'];
+                $n2o =  $row['n2o'];
+                $carbonco2 += $value*$co2;
+                $carbonch4 += $value*$ch4*21;
+                $carbonn2o +=$value*$n2o*310;
         }
 }
 //end calculation
@@ -99,22 +104,22 @@ $query2 = "SELECT * FROM indu_chem_data WHERE b_id='" . $basicId . "'";
 $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
 
 $rowcount = mysqli_num_rows($result);
-if ($rowcount == 0) {
-    $query = "INSERT INTO indu_chem_data(b_id,ammo,inorg_a,amides,aldeh,organic,carb,sodaa,alco,alke,orgo_charo,oxideC,cyanideC,carbonB)
-            VALUES ($basicId,$ammo,$inorg_a,$amides,$aldeh,$organic,$carb,$sodaa,$alco,$alke,$orgo_charo,$oxideC,$cyanideC,$carbonB)";
-    $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
-    $chem_id = mysqli_insert_id($conn);
+        if ($rowcount == 0) {
+            $query = "INSERT INTO indu_chem_data(b_id,ammo,inorg_a,amides,aldeh,organic,carb,sodaa,alco,alke,orgo_charo,oxideC,cyanideC,carbonB)
+                    VALUES ($basicId,$ammo,$inorg_a,$amides,$aldeh,$organic,$carb,$sodaa,$alco,$alke,$orgo_charo,$oxideC,$cyanideC,$carbonB)";
+            $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+            $chem_id = mysqli_insert_id($conn);
 
-    $query = "INSERT INTO indu_chem_emi(b_id,chem_id,co2,ch4,n2o)
-    VALUES ($basicId, $chem_id,$carbonco2,$carbonch4,$carbonn2o)";
-    $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
-} else {
-    $query = "UPDATE  indu_chem_data set ammo=$ammo,inorg_a=$inorg_a,amides=$amides,aldeh=$aldeh,organic=$organic,carb=$carb,sodaa=$sodaa,
-               alco=$alco,alke=$alke,orgo_charo=$orgo_charo,oxideC=$oxideC,cyanideC=$cyanideC,carbonB=$carbonB WHERE b_id='" . $basicId . "'";
-    $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+            $query = "INSERT INTO indu_chem_emi(b_id,chem_id,co2,ch4,n2o)
+            VALUES ($basicId, $chem_id,$carbonco2,$carbonch4,$carbonn2o)";
+            $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+        } else {
+            $query = "UPDATE  indu_chem_data set ammo=$ammo,inorg_a=$inorg_a,amides=$amides,aldeh=$aldeh,organic=$organic,carb=$carb,sodaa=$sodaa,
+                    alco=$alco,alke=$alke,orgo_charo=$orgo_charo,oxideC=$oxideC,cyanideC=$cyanideC,carbonB=$carbonB WHERE b_id='" . $basicId . "'";
+            $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
-    $query = "UPDATE  indu_chem_emi set co2=$carbonco2,ch4=$carbonch4,n2o=$carbonn2o
-    WHERE b_id='" . $basicId . "'";
-    $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
-}
+            $query = "UPDATE  indu_chem_emi set co2=$carbonco2,ch4=$carbonch4,n2o=$carbonn2o
+            WHERE b_id='" . $basicId . "'";
+            $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+        }
 echo  "success";
