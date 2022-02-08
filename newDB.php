@@ -60,6 +60,7 @@ require "php/session.php";
                         <div class="right-text col-lg-5 col-md-12 col-sm-12 mobile-top-fix">
                             <div class="textc">
                                 <h5>Start Measuring your Carbon Emissions!</h5>
+                                <!-- fhvbhdfbdfdb -->
                             </div>
                             <div class="textc">
                                 <p> Today carbon dioxide levels are the highest they’ve ever been in human history, and
