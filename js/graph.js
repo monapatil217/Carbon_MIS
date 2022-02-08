@@ -55,6 +55,7 @@ function carbonGharph() {
             { value: 3, category: "Industry" },
             { value: 1, category: "FuelType" },
         ]);
+       
 
 
         // Create legend
@@ -65,8 +66,13 @@ function carbonGharph() {
             marginTop: 15,
             marginBottom: 15
         }));
+        series.labels.template.setAll({
+            fill: am5.color(0xFFFFFF),
+            text: "{category}"
+          });
 
         legend.data.setAll(series.dataItems);
+
 
 
         // Play initial series animation
@@ -166,7 +172,7 @@ function addChart(divType) {
 
                         yAxis.children.moveValue(am5.Label.new(root, {
                             rotation: -90,
-                            text: "Emissions(tons/month)",
+                            text: "Emissions(tons/year)",
                             fill: am5.color(0xFFFFFF),
                             y: am5.p50,
                             centerX: am5.p50
