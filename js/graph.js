@@ -146,11 +146,15 @@ function addChart(divType) {
 
                         xAxis.children.moveValue(am5.Label.new(root, {
                             text: "Pollutant",
+                            fill: am5.color(0xFFF44F),
                             x: am5.p50,
                             centerX: am5.p50
                         }), xAxis.children.length - 1);
 
                         xRenderer.grid.template.set("visible", false);
+                        xRenderer.labels.template.setAll({
+                            fill: am5.color(0xFFF44F)
+                          });
 
                         var yRenderer = am5xy.AxisRendererY.new(root, {});
                         var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
@@ -163,6 +167,7 @@ function addChart(divType) {
                         yAxis.children.moveValue(am5.Label.new(root, {
                             rotation: -90,
                             text: "Emissions(tons/month)",
+                            fill: am5.color(0xFFF44F),
                             y: am5.p50,
                             centerX: am5.p50
                         }), 0);
@@ -170,6 +175,9 @@ function addChart(divType) {
                         yRenderer.grid.template.setAll({
                             strokeDasharray: [2, 2]
                         });
+                        yRenderer.labels.template.setAll({
+                            fill: am5.color(0xFFF44F)
+                          });
 
                         // Create series
                         // https://www.amcharts.com/docs/v5/charts/xy-chart/series/

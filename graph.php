@@ -119,39 +119,39 @@ require "php/session.php";
         }
 
         #t2 {
-            background-color: #FFFF;
+            /* background-color: #FFFF; */
         }
 
         #t31 {
-            background-color: #FFFF;
+            /* background-color: #FFFF; */
         }
 
         #t32 {
-            background-color: #FFFF;
+            /* background-color: #FFFF; */
         }
 
         #t33 {
-            background-color: #FFFF;
+            /* background-color: #FFFF; */
         }
 
         #t34 {
-            background-color: #FFFF;
+            /* background-color: #FFFF; */
         }
 
         #t4 {
-            background-color: #FFFF;
+            /* background-color: #FFFF; */
         }
 
         #t5 {
-            background-color: #FFFF;
+            /* background-color: #FFFF; */
         }
 
         #t6 {
-            background-color: #FFFF;
+            /* background-color: #FFFF; */
         }
 
         #t7 {
-            background-color: #FFFF;
+            /* background-color: #FFFF; */
         }
     </style>
 
@@ -197,70 +197,69 @@ require "php/session.php";
 
                         <div id="t1"  class="tabcontent">
                             <div id="chartName" class="text-center col-md-4 col-md-offset-4">
-                                    
-                                <h3> Electricity Graph</h3>
                             </div>
                             <div id="electricity" ></div>
+                            
                         </div>
                         <div id="t2" class="tabcontent">
                             <div id="chartName">
-                                <h3> Transport Graph</h3>
+                                
                             </div>
                             <div id="transport"></div>
                         </div>
 
                         <div id="t31" class="tabcontent">
                             <div id="chartName">
-                                <h3> LiveStock Graph</h3>
+                                
                             </div>
                             <div id="liveStock"></div>
                         </div>
                         <div id="t32" class="tabcontent">
                             <div id="chartName">
-                                <h3> CropLand Graph</h3>
+                                
                             </div>
                             <div id="cropLand"></div>
                         </div>
                         <div id="t33" class="tabcontent">
                             <div id="chartName">
-                                <h3> Forest Graph</h3>
+                                
                             </div>
                             <div id="forest"></div>
                         </div>
                         <div id="t34" class="tabcontent">
                             <div id="chartName">
-                                <h3> LandUse Graph</h3>
+                                
                             </div>
                             <div id="landUse"></div>
                         </div>
 
                         <div id="t4" class="tabcontent">
                             <div id="chartName">
-                                <h3> SolidWaste Graph</h3>
+                               
                             </div>
                             <div id="solidWaste"></div>
                         </div>
                         <div id="t5" class="tabcontent">
                             <div id="chartName">
-                                <h3> WasteWater Graph</h3>
+                               
                             </div>
                             <div id="wasteWater"></div>
                         </div>
                         <div id="t6" class="tabcontent">
                             <div id="chartName">
-                                <h3> Industry Graph</h3>
+                               
                             </div>
                             <div id="energy"></div>
                         </div>
                         <div id="t6" class="tabcontent">
                             <div id="chartName">
-                                <h3> Industry Graph</h3>
+                                
                             </div>
                             <div id="product"></div>
                         </div>
                         <div id="t7" class="tabcontent">
                             <div id="chartName">
-                                <h3> cookingFuel Graph</h3>
+                                
                             </div>
                             <div id="cookingFuel"></div>
                         </div>

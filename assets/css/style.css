@@ -346,7 +346,7 @@ h1, h2, h3, h4, h5, h6 {
     /* display: flex; */
     align-items: center;
     justify-content: center;
-    background-image: url(../img/hero-bg.jpg);
+    background-image: url(../img/loginbg.png);
     background-repeat: no-repeat;
     /*
 TRY IT ... with or without CENTER CENTER
@@ -421,8 +421,8 @@ TRY IT ... with or without CENTER CENTER
   padding: 20px 20px;
   position: relative;
   overflow: hidden;
-  background: rgb(199, 233, 231);
-  box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
+  background: rgba(199, 233, 231, 0.945);
+  /* box-shadow: 0 0 29px 0 rgba(255, 255, 255, 0.808); */
   border-radius: 8px;
   z-index: 1;
 }
@@ -432,7 +432,7 @@ TRY IT ... with or without CENTER CENTER
   position: relative;
   overflow: hidden;
   background: #fff;
-  box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
+  /* box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08); */
   border-radius: 8px;
   z-index: 1;
 }
@@ -514,6 +514,7 @@ TRY IT ... with or without CENTER CENTER
     justify-content: center;
     background-image: url(../img/backgroundimage4.jpg);
     /* background-color: #cccf99; */
+    color: #FFF44F;
     background-repeat: no-repeat;
     /*
 TRY IT ... with or without CENTER CENTER

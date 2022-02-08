@@ -43,7 +43,7 @@
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center" style="height: 100vh">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-            <div class="row justify-content-center">
+            <div class="row justify-content-end">
                 <div class="col-xl-5 col-lg-9 text-center">
 
                     <div class="loginup">
