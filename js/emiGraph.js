@@ -66,6 +66,7 @@ function addEmiChart() {
                 }));
                 xAxis.children.moveValue(am5.Label.new(root, {
                     text: "Amrut City",
+                    fill: am5.color(0xFFFFFF),
                     x: am5.p50,
                     centerX: am5.p50
                   }), xAxis.children.length - 1);
@@ -79,7 +80,8 @@ function addEmiChart() {
                 }));
                 yAxis.children.moveValue(am5.Label.new(root, {
                     rotation: -90,
-                    text: "Emissions(tCO2e/day)",
+                    text: "Emissions(tCO2e/year)",
+                    fill: am5.color(0xFFFFFF),
                     y: am5.p50,
                     centerX: am5.p50
                   }), 0);
@@ -186,6 +188,7 @@ function addChart() {
 
                 xAxis.children.moveValue(am5.Label.new(root, {
                     text: "Amrut City",
+                    fill: am5.color(0xFFFFFF),
                     x: am5.p50,
                     centerX: am5.p50
                   }), xAxis.children.length - 1);
@@ -198,7 +201,8 @@ function addChart() {
                 }));
                 yAxis.children.moveValue(am5.Label.new(root, {
                     rotation: -90,
-                    text: "Emissions(tCO2e/day)",
+                    text: "Emissions(tCO2e/year)",
+                    fill: am5.color(0xFFFFFF),
                     y: am5.p50,
                     centerX: am5.p50
                   }), 0);
@@ -353,6 +357,9 @@ function viewGraph(divId, divList) {
             paddingRight: 15
         });
         xRenderer.grid.template.set("visible", false);
+        xRenderer.labels.template.setAll({
+            fill: am5.color(0xFFFFFF)
+          });
         var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
             maxDeviation: 0.3,
             categoryField: "country",
@@ -361,23 +368,28 @@ function viewGraph(divId, divList) {
 
         xAxis.children.moveValue(am5.Label.new(root, {
             text: "Amrut City",
+            fill: am5.color(0xFFFFFF),
             x: am5.p50,
             centerX: am5.p50
           }), xAxis.children.length - 1);
 
-
+          var yRenderer = am5xy.AxisRendererY.new(root, {});
         var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
             maxDeviation: 0.3,
             min: 0,
-            renderer: am5xy.AxisRendererY.new(root, {})
+            renderer: yRenderer
         }));
 
         yAxis.children.moveValue(am5.Label.new(root, {
             rotation: -90,
-            text: "Emissions(tCO2e/day)",
+            text: "Emissions(tCO2e/year)",
+            fill: am5.color(0xFFFFFF),
             y: am5.p50,
             centerX: am5.p50
           }), 0);
+          yRenderer.labels.template.setAll({
+            fill: am5.color(0xFFFFFF)
+          });
 
 
         //     // Add cursor

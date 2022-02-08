@@ -60,12 +60,12 @@ function carbonGharph() {
 
         // Create legend
         // https://www.amcharts.com/docs/v5/charts/percent-charts/legend-percent-series/
-        var legend = chart.children.push(am5.Legend.new(root, {
-            centerX: am5.percent(50),
-            x: am5.percent(50),
-            marginTop: 15,
-            marginBottom: 15
-        }));
+        // var legend = chart.children.push(am5.Legend.new(root, {
+        //     centerX: am5.percent(50),
+        //     x: am5.percent(50),
+        //     marginTop: 15,
+        //     marginBottom: 15
+        // }));
         series.labels.template.setAll({
             fill: am5.color(0xFFFFFF),
             text: "{category}"
