@@ -11,9 +11,9 @@ $harwested = $data->harwested;
 // $mineralS = $data->mineralS;
 // $organicS = $data->organicS;
 //calculation for cropland emi
-$carbonco2;
-$carbonch4;
-$carbonn2o;
+$carbonco2=0;
+$carbonch4=0;
+$carbonn2o=0;
 
 $finalArrayCrop = array();
 
@@ -33,7 +33,6 @@ $finalArrayCrop = array();
         $hrsv = $loss * $harwested*100;
     }
    $carbonco2 =  abs($peri-$hrsv);
-   echo $carbonco2;
    
 //end calculation
 
@@ -50,8 +49,8 @@ $rowcount = mysqli_num_rows($result);
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
             $cropId = mysqli_insert_id($conn);
 
-            $query = "INSERT INTO crop_emi(b_id,co2,ch4,n2o)
-                    VALUES ($basicId,$carbonco2,$carbonch4,$carbonn2o)";
+            $query = "INSERT INTO crop_emi(b_id,c_id,co2,ch4,n2o)
+                    VALUES ($basicId,$cropId,$carbonco2,$carbonch4,$carbonn2o)";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         } else {
             $query = "UPDATE  crop_data set perennial=$perennial,harwested=$harwested

@@ -53,7 +53,7 @@ $rowcount = mysqli_num_rows($result);
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         }
 
-        $query = "INSERT INTO msw_emi(b_id,fc_id,co2,ch4,n2o)
+        $query = "INSERT INTO msw_emi(b_id,msw_id,co2,ch4,n2o)
         VALUES ($basicId,$last_id,$carbonco2,$carbonch4,$carbonn2o)";
         $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
     } else {
