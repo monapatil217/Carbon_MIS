@@ -49,8 +49,8 @@ $rowcount = mysqli_num_rows($result);
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
             $cropId = mysqli_insert_id($conn);
 
-            $query = "INSERT INTO crop_emi(b_id,co2,ch4,n2o)
-                    VALUES ($basicId,$carbonco2,$carbonch4,$carbonn2o)";
+            $query = "INSERT INTO crop_emi(b_id,c_id,co2,ch4,n2o)
+                    VALUES ($basicId,$cropId,$carbonco2,$carbonch4,$carbonn2o)";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         } else {
             $query = "UPDATE  crop_data set perennial=$perennial,harwested=$harwested

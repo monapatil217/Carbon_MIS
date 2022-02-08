@@ -6,12 +6,11 @@ $data = json_decode($json);
 
 //basic info table
 $basicId = $data->basicId;
-// $w_cons = $data->w_cons;
+$w_cons = $data->w_cons;
 $w_gen = $data->w_gen;
-
-// $q_treat = $data->q_treat;
-// $n_stp = $data->n_stp;
-// $stpData = $data->stpData;
+$q_treat = $data->q_treat;
+$n_stp = $data->n_stp;
+$stpData = $data->stpData;
 $last_id = 0;
 
 $carbonco2 = 0;
@@ -42,9 +41,8 @@ if (is_array($row)){
           $addMethane += $typevalue;
      }
      $wateremission = ($addMethane / 1000) * 21;
-     echo "ch4---->".$wateremission."</br>";
      $preYearpop = $population-((3.20/100)*$population);
-     //echo $preYearpop;
+
      $nitrogen = 1;
      $query3 = "SELECT * FROM nitrogen ";
      $result = mysqli_query($conn, $query3) or die(mysqli_error($conn));
@@ -54,7 +52,6 @@ if (is_array($row)){
      }
 
      $eff = (($population *  $nitrogen) / 1000) * 310;
-     echo "n2o---->".$eff."</br>";
      $totalemmition = ($wateremission + $eff) / 365;
 
 $query2 = "SELECT * FROM waste_data WHERE b_id='" . $basicId . "'";
