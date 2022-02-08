@@ -549,7 +549,7 @@ TRY IT ... with or without CENTER CENTER
   font-family: "Poppins", sans-serif;
 }
 #subHero h2 {
-  color: #5e5e5e;
+  color: #ffffff;
   margin: 10px 0 0 0;
   font-size: 22px;
 }
@@ -665,6 +665,7 @@ TRY IT ... with or without CENTER CENTER
   #subHero h2 {
     font-size: 18px;
     line-height: 24px;
+  
   }
 }
 
@@ -693,14 +694,18 @@ section {
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 0;
-  color: #124265;
+  color: #fff;
 }
-/* .section-title p {
+.section-title p {
   margin-bottom: 0;
   font-size: 14px;
-  color: #919191;
-} */
+  color: #fff;
+}
 
+#h2{
+  
+  color: #fff;
+}
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -2879,6 +2884,6 @@ background-color: #f8fbfe;
    }
 
    .textc{
-color: #fff;
+color: #ffffff;
 
    }
