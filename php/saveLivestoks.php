@@ -16,20 +16,43 @@ $donk = $data->donk;
 $came = $data->came;
 $pig = $data->pig;
 $poul = $data->poul;
-
+$cattle = $ind_cat+$cross_cat;
+$finalArrayforest=array();
 //start calculation
+$forestArray=array();
+$forestArray['name'] =  "buffalo";
+$forestArray['value'] =$buff;
+array_push($finalArrayforest,$forestArray);
+$forestArray=array();
+$forestArray['name'] =  "sheep";
+$forestArray['value'] =$sheep;
+array_push($finalArrayforest,$forestArray);
+$forestArray=array();
+$forestArray['name'] =  "goat";
+$forestArray['value'] =$goat;
+array_push($finalArrayforest,$forestArray);
+$forestArray=array();
+$forestArray['name'] =  "cattle";
+$forestArray['value'] =$cattle;
+array_push($finalArrayforest,$forestArray);
+$forestArray=array();
+$forestArray['name'] =  "pig";
+$forestArray['value'] =$pig;
+array_push($finalArrayforest,$forestArray);
+//print_r($finalArrayforest);
+
   $carbonco2=0;$carbonch4=0;$carbonn2o=0;
-  $liveStockArray= array();
-  array_push($liveStockArray,$ind_cat,$cross_cat,$buff,$sheep,$goat,$hors,$donk,$came,$pig,$poul);
-   foreach ($finalArrayforest as $row) {
-        $name =  $row['name'];
-        $value =  $row['value'];
-        $query2 = "SELECT * FROM ef_fuel where fuel_name='" . $name . "'";
-        $result = mysqli_query($conn, $query2);
-        while ($row = mysqli_fetch_array($result)) {
-                $co2G =  $row['ncv'];
+        foreach ($finalArrayforest as $row) {
+            $name =  $row['name'];
+            $value =  $row['value'];
+            $query2 = "SELECT * FROM ef_fuel where fuel_name='".$name."'";
+                $result = mysqli_query($conn, $query2);
+                while ($row = mysqli_fetch_array($result)) {
+                    $co2e =  $row['ncv'];
+                    $carbonco2 +=  $co2e * $value;
+                }
         }
-}
+        $carbonco2 = $carbonco2*21;
 //end calculation
 
 
