@@ -514,7 +514,7 @@ TRY IT ... with or without CENTER CENTER
     justify-content: center;
     background-image: url(../img/backgroundimage4.jpg);
     /* background-color: #cccf99; */
-    color: #FFF44F;
+    /* color: #FFF44F; */
     background-repeat: no-repeat;
     /*
 TRY IT ... with or without CENTER CENTER
@@ -536,7 +536,7 @@ TRY IT ... with or without CENTER CENTER
   right: 0;
 }
 #subHero .container {
-  padding-top: 80px;
+  padding-top: 0px;
 }
  
   /* background: url("../img/hero-bg.jpg") top center; */
@@ -1533,7 +1533,17 @@ section {
   position: relative;
 }
 
-
+.card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: rgba(255, 255, 255, 0.623);
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
 
 .faq .faq-list a {
   display: block;
