@@ -527,7 +527,7 @@ TRY IT ... with or without CENTER CENTER
 }
 #subHero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.301);
+  background: rgba(78, 66, 66, 0.774);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -598,7 +598,7 @@ TRY IT ... with or without CENTER CENTER
   padding: 30px 30px;
   position: relative;
   overflow: hidden;
-  background:rgba(255, 255, 255, 0.884);
+  background:rgba(255, 255, 255, 0);
   box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
   border-radius: 8px;
   z-index: 1;

@@ -115,7 +115,7 @@ require "php/session.php";
         }
 
         #t1 {
-            background-color: #FFFF;
+            /* background-color: #FFFF; */
         }
 
         #t2 {
@@ -164,14 +164,14 @@ require "php/session.php";
     ?>
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
+    <section id="subHero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
 
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-12  mb-3 s " data-aos-delay="200">
-                    <div class="in-sec">
+                    <div class="">
                         <h3><center>Carbon Emission </center></h3>
                         <div id="carbonGharph"></div>
                     </div>
@@ -182,9 +182,7 @@ require "php/session.php";
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-12  mb-3 s " data-aos-delay="200">
 
-                
                     <div class="in-sec">
-                   
 
                         <button class="tablink" onclick="openPage('t1', this, '#888')" id="defaultOpen">Electricity</button>
                         <button class="tablink" onclick="openPage('t2', this, '#888')">Transport</button>
