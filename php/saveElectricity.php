@@ -14,7 +14,7 @@ $sl_elec = $data->sl_elec;
 $ele = $r_elec+$c_elec+$s_elec+$sl_elec;
 $emissionPerDay;
 $carbonco2;$carbonch4;$carbonn2o;
-$value = $ele * 0.7;
+$value = $ele * 700;
 $value1 = $value * 0.64;
 $totalfuel = $value1 / 1000;
 $query1 = "SELECT * FROM ef_fuel where fuel_name='NonCookingCoal'";
@@ -33,11 +33,9 @@ while ($row = mysqli_fetch_array($result)) {
         $n2oG =  $row['n2o'];
         $carbonch4 = $totalfuel * $ncv * $ch4 * $ch4G;
         $carbonn2o = $totalfuel * $n2o * $ncv * $n2oG;
-        $emissionPerDay = (($carbonco2 + $carbonch4 + $carbonn2o) / 30);
+        $emissionPerDay = (($carbonco2 + $carbonch4 + $carbonn2o));
     }
 }
-
-
         $query2 = "SELECT * FROM ele_data WHERE b_id='" . $basicId . "'";
         $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
 
