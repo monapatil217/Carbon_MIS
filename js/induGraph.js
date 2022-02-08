@@ -98,7 +98,7 @@ function addChart() {
                             
                         });
                         yRenderer.labels.template.setAll({
-                            fill: am5.color(0xFFFFFF)
+                            fill: am5.color(0xFFF44F)
                           });
 
                         // Create series
