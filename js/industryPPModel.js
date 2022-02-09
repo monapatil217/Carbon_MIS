@@ -676,7 +676,7 @@ function showOtherData() {
                     alert("Data Save Succesfuly");
                     addChart();
                     // window.location.replace("menuPage.php");
-                    // window.location.replace("fueluseincity.php");
+                    window.location.replace("fueluseincity.php");
                 } else {
                     alert("Data not Save Succesfuly")
                 }

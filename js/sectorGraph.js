@@ -65,12 +65,27 @@ function addCityChart() {
                     tooltip: am5.Tooltip.new(root, {})
                 }));
 
-                xAxis.data.setAll(data);
+                xAxis.children.moveValue(am5.Label.new(root, {
+                    text: "sectors",
+                    fill: am5.color(0xFFFFFF),
+                    x: am5.p50,
+                    centerX: am5.p50
+                }), xAxis.children.length - 1);
 
+
+                xAxis.data.setAll(data);
+                var yRenderer = am5xy.AxisRendererY.new(root, {});
                 var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
                     min: 0,
-                    renderer: am5xy.AxisRendererY.new(root, {})
+                    renderer: yRenderer
                 }));
+                yAxis.children.moveValue(am5.Label.new(root, {
+                    rotation: -90,
+                    text: "Emissions(tons/year)",
+                    fill: am5.color(0xFFFFFF),
+                    y: am5.p50,
+                    centerX: am5.p50
+                }), 0);              
 
 
                 // Add legend
@@ -91,12 +106,14 @@ function addCityChart() {
                         valueYField: fieldName,
                         categoryXField: "sector"
                     }));
+                    
 
                     series.columns.template.setAll({
                         tooltipText: "{name}, {categoryX}: {valueY}",
                         tooltipY: am5.percent(10)
                     });
                     series.data.setAll(data);
+                    
 
                     // Make stuff animate on load
                     // https://www.amcharts.com/docs/v5/concepts/animations/

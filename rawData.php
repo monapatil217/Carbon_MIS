@@ -198,7 +198,7 @@ require "php/session.php";
                     <!-- <div class="in-sec"> -->
                     <div class="row mt-3 justify-content-center">
                         <div class="form-group col-md-2 ">
-                            <h5>Select City :</h5>
+                            <h5 style="color:white;">Select City :</h5>
                         </div>
                         <div class="form-group col-md-3">
                             <select class="form-control" id="cityList" name="cityList" onchange="addCityChart();">
@@ -223,7 +223,7 @@ require "php/session.php";
                     <div class="col-md-10 col-lg-10 s " data-aos-delay="200">
                         <div class="in-sec">
                             <div class="row mt-3 justify-content-center">
-                                <h3>Amrut City all Sectors Graph</h3>
+                                <h3 style="color:white;">Amrut City all Sectors Graph</h3>
                             </div>
                             <div id="chartDiv">
                                 <div id="secChart"></div>
@@ -258,7 +258,7 @@ require "php/session.php";
                                 <div class="in-sec demo">
                                     <div class="row">
                                         <div class="col-sm col-lg-11">
-                                            <p>Click on the buttons inside the tabbed menu to see Tables :</p>
+                                            <p style="color:white;">Click on the buttons inside the tabbed menu to see Tables :</p>
                                         </div>
                                         <div class="col-sm col-lg-1">
                                             <i class="fa fa-download" style="font-size:36px;color:#67b7dc" class="btn btn-primary " value="download" onclick="convertTableToPDF( 'Balance_Report','balance-title',

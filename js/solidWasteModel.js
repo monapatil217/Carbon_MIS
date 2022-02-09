@@ -101,7 +101,7 @@ function showMSWInput() {
                                     + '<div class="row justify-content-center">'
 
                                     + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
-                                    + '<label for="area' + i + '" class="form-label"> Arera of Dumping Yard</label>'
+                                    + '<label for="area' + i + '" class="form-label"> Area of Dumping Yard</label>'
                                     + '<div class="input-group mb-2">'
                                     + '<input type="text" id="area' + i + '" name="area' + i + '" value="' + element2.area + '"  class="form-control" placeholder="Arera of Dumping Yard" aria-label="Arera of Dumping Yard" aria-describedby="basic-addon2">'
                                     + ' <span class="input-group-text" id="basic-addon2">sq.km</span>'
