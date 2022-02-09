@@ -169,7 +169,7 @@ require "php/session.php";
 
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
 
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mt-5">
                 <div class="col-md-12 col-lg-12  mb-3 s " data-aos-delay="200">
                     <div class="">
                         <h3>

@@ -463,7 +463,7 @@ function showOtherInput() {
                             + '         <label for="aluminium" class="form-label"> Aluminium</label>'
                             + '         <div class="input-group mb-2">'
                             + '              <input type="text" id="aluminium" name="aluminium" value="' + element1.other_aluminium + '"  class="form-control" placeholder="Aluminium" aria-label="Aluminium" aria-describedby="basic-addon2">'
-                            + '              <span class="input-group-text" id="basic-addon2">MW/m</span>'
+                            + '              <span class="input-group-text" id="basic-addon2">t/year</span>'
                             + '         </div>'
                             + '    </div>'
 
@@ -471,7 +471,7 @@ function showOtherInput() {
                             + '         <label for="lead" class="form-label"> Lead</label>'
                             + '         <div class="input-group mb-2">'
                             + '              <input type="text" id="lead" name="lead" value="' + element1.other_lead + '"  class="form-control" placeholder="Lead" aria-label="Lead" aria-describedby="basic-addon2">'
-                            + '              <span class="input-group-text" id="basic-addon2">MW/m</span>'
+                            + '              <span class="input-group-text" id="basic-addon2">t/year</span>'
                             + '         </div>'
                             + '    </div>'
                             + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'

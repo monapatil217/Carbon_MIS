@@ -83,7 +83,7 @@ function showCookingFuel() {
                                 + '</div>';
                         }
 
-                        if (type == "KERO") {
+                        if (type == "Kerosene") {
                             html += '<div class="row">'
                                 + '<h6 class="text-center mt-2 mb-2">Qty of Kerosene Used</h6>'
                                 + '<div class="col-md-6 col-lg-6 col-xl-6 col-10">'
@@ -102,7 +102,7 @@ function showCookingFuel() {
                                 + '</div>'
                                 + '</div>';
                         }
-                        if (type == "WOOD") {
+                        if (type == "Wood") {
                             html += '<div class="row">'
                                 + '<h6 class="text-center mt-2 mb-2">Qty of Wood Used</h6>'
                                 + '<div class="col-md-6 col-lg-6 col-xl-6 col-10">'

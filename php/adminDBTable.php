@@ -51,7 +51,7 @@ while ($row = mysqli_fetch_array($result)) {
     $mainData['id'] = $id;
     $mainData['city'] = $cityName;
     $mainData['emission'] = round($emid, 2);
-    $mainData['data'] = $dvalue;
+    $mainData['data'] = round($dvalue);
     array_push($finalDataArray, $mainData);
 }
 echo  json_encode($finalDataArray);

@@ -44,15 +44,15 @@ require "php/session.php";
         include 'header.php';
         ?>
     <!-- ======= Hero Section ======= -->
-    <section id="subHero" class="d-flex  justify-content-center textc" style="height: auto ; min-height: 100vh;">
+    <section id="subHero" class="d-flex  justify-content-center " style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
             <!-- <input type="text" class="form-control" id="sectionType" value="solidWaste" hidden> -->
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-12 mb-3" data-aos-delay="200">
                     <div class="in-sec">
-                        <h3 class="text-center mb-2">Carbon Emission of Solid Waste</h3>
-                        <marquee width="100%" direction="left" height="30px" scrollamount="2"> sq.km - Square Kilometre
+                        <h3 class="text-center textc mb-2">Carbon Emission of Solid Waste</h3>
+                        <marquee width="100%" class="textc" direction="left" height="30px" scrollamount="2"> sq.km - Square Kilometre
                             / MTD - Metric ton per day </marquee>
                         <!-- <h4 class="text-center mb-2">Solid Waste</h4> -->
                         <form class="needs-validation" novalidate>

@@ -44,15 +44,15 @@ require "php/session.php";
         include 'header.php';
         ?>
     <!-- ======= Hero Section ======= -->
-    <section id="subHero" class="d-flex  justify-content-center textc" style="height: auto ; min-height: 100vh;">
+    <section id="subHero" class="d-flex  justify-content-center " style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
             <!-- <input type="text" class="form-control" id="sectionType" value="product" hidden> -->
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-12  mb-3" data-aos-delay="200">
                     <div class="in-sec">
-                        <h6 class="text-center">Industrial Processes and Product Used</h6>
-                        <marquee width="100%" direction="left" height="30px"> t - tons </marquee>
+                        <h6 class="text-center textc">Industrial Processes and Product Used</h6>
+                        <marquee width="100%" class="textc" direction="left" height="30px"> t - tons </marquee>
                         <form class="needs-validation" novalidate>
                             <!-- <div id="IndPPLand"></div> -->
                             <div id="faq_pp" class="faq section-bg_pp">

@@ -24,7 +24,7 @@ for ($i = 0; $i < sizeof($fuleData); $i++) {
     }else if($name == "Kerosene"){
         $value = ($value*0.78)/1000;
     }
-    
+     
     $query2 = "SELECT * FROM ef_fuel where fuel_name='" . $name . "'";
     $result = mysqli_query($conn, $query2);
     while ($row = mysqli_fetch_array($result)) {
