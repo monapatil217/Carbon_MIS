@@ -137,7 +137,7 @@
                     <div id="Home" class="tabcontent">
                         <div class="row">
                             <div class="col-11">
-                                <h3 class="text-dark"> Total Carbon Emissions ( tCO2e/day )</h3>
+                                <h3 class=".text-white"> Total Carbon Emissions ( tCO2e/day )</h3>
                             </div>
                             <div class="col-1">
                                 <!-- <button  class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button> -->
@@ -151,7 +151,7 @@
                     <div id="News" class="tabcontent">
                         <div class="row">
                             <div class="col-11">
-                                <h3 class="text-dark"> Sector wise Carbon Emissions ( tCO2e/day )</h3>
+                                <h3 class="text-white"> Sector wise Carbon Emissions ( tCO2e/day )</h3>
                             </div>
                             <div class="col-1">
                                 <!-- <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button> -->
@@ -165,7 +165,7 @@
                         <div class="row mt-3 justify-content-center">
                             <div class="row">
                                 <div class="col-8">
-                                    <h3 class="text-dark">Carbon Emissions by Different Sector(tCO2e/day)</h3>
+                                    <h3 class="text-white">Carbon Emissions by Different Sector(tCO2e/day)</h3>
                                 </div>
 
                                 <div class="col-3 form-group col-md-3">
@@ -207,7 +207,7 @@
                     <div id="About" class="tabcontent">
                         <div class="row">
                             <div class="col-11">
-                                <h3 class="text-dark"> Pollutant-wise Emissions ( tons/day )</h3>
+                                <h3 class="text-white"> Pollutant-wise Emissions ( tons/day )</h3>
                             </div>
                             <div class="col-1">
                                 <!-- <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button> -->
@@ -221,7 +221,7 @@
                         <div class="row mt-3 justify-content-center">
                             <div class="row">
                                 <div class="col-8">
-                                    <h3 class="text-dark"> Total Emissions by Different GHG (tons/day)</h3>
+                                    <h3 class="text-white"> Total Emissions by Different GHG (tons/day)</h3>
                                 </div>
                                 <div class="col-2 form-group col-md-3">
                                     <select class="form-control" id="pollutantType" onchange="poluEmiChart();">
