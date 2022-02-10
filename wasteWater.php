@@ -64,7 +64,7 @@ require "php/session.php";
                     <div class="in-sec">
                         <h5 class="text-center">Wastewater</h5>
                         <marquee width="100%" direction="left" height="30px" scrollamount="2"> CMD - Cubic meter per day
-                        </marquee>
+                            /MLD-Millions of liter per day </marquee>
                         <form class="needs-validation" novalidate>
                             <div id="waterInput"></div>
                             <div class="row ">

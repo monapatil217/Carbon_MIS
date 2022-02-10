@@ -71,7 +71,7 @@ $rowcount = mysqli_num_rows($result);
                 $recycle = $stpData[$i]->recycle;
                 $dispose = $stpData[$i]->dispose;
                 $query = "INSERT INTO stp(b_id,w_id,cap,lat,loong,tech,recycle,dispose)
-                VALUES ($basicId,$last_id,$cap,$lat,$long,$tech,$recycle,$dispose)";
+                VALUES ($basicId,$last_id,$cap,$lat,$long,'".$tech."',$recycle,$dispose)";
                 $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
             }
 
@@ -92,7 +92,7 @@ $rowcount = mysqli_num_rows($result);
                 $recycle = $stpData[$i]->recycle;
                 $dispose = $stpData[$i]->dispose;
                 $query = "UPDATE stp set cap=$cap,lat=$lat,loong=$long,
-                        tech=$tech,recycle=$recycle,dispose=$dispose WHERE b_id='" . $basicId . "' AND w_id=$last_id";
+                        tech='".$tech."',recycle=$recycle,dispose=$dispose WHERE b_id='" . $basicId . "' AND w_id=$last_id";
                 $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
             }
             $query = "UPDATE  waste_emi set co2=$carbonco2,ch4=$carbonch4,n2o=$carbonn2o

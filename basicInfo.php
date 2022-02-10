@@ -38,7 +38,7 @@ require "php/session.php";
 
 <body>
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
+    <section class="d-flex  justify-content-center" style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100" style="padding-top: 0px;">
             <div class="row text-center">
                 <div class="col-md-12 col-lg-12" data-aos-delay="200">

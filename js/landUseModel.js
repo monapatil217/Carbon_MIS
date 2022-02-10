@@ -302,7 +302,7 @@ function saveLandData() {
             }
         });
     }
-    window.location.replace("solidWaste.php");
+    // window.location.replace("solidWaste.php");
 
 }
 

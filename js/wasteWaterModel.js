@@ -99,6 +99,7 @@ function showWaterInput() {
                                 + '<label for="capacity" class="form-label"> Capacity</label>'
                                 + '<div class="input-group mb-2">'
                                 + '<input type="text" id="capacity' + stpi + '" name="capacity" class="form-control" placeholder="Capacity" value="' + element2.cap + '"  aria-label="Residential" aria-describedby="basic-addon2">'
+                                + '<span class="input-group-text" id="basic-addon2">MLD</span>'
                                 + '</div>'
 
                                 + '</div>'
@@ -321,7 +322,9 @@ function saveWaterData() {
     waterData["w_gen"] = waterGen;
     waterData["q_treat"] = waterTreat;
     waterData["n_stp"] = noSTP;
+
     waterData["stpData"] = stpData;
+
     // console.log(waterData);
 
     if (flag == 0) {
