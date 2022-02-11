@@ -15,7 +15,9 @@ require "php/session.php";
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -34,10 +36,10 @@ require "php/session.php";
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
     <style>
-        #electricity {
-            width: 400px;
-            height: 300px;
-        }
+    #electricity {
+        width: 400px;
+        height: 300px;
+    }
     </style>
 </head>
 
@@ -46,15 +48,14 @@ require "php/session.php";
         ?>
     <!-- ======= subHero Section ======= -->
     <section id="subHero" class="d-flex  justify-content-center " style="height: auto ; min-height: 100vh;">
-        <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-
-
-
+        <div class="container position-relative " data-aos="fade-up" data-aos-delay="100">
             <section class="section" id="about">
-                <div class="container" id="">
+                <div class="container " id="">
                     <div class="row">
-                        <div class="col-lg-7 col-md-12 col-sm-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                            <img src="assets/img/carbongraphic1-removebg-preview.png" class="rounded img-fluid d-block mx-auto" alt="App">
+                        <div class="col-lg-7 col-md-12 col-sm-12"
+                            data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                            <img src="assets/img/carbongraphic1-removebg-preview.png"
+                                class="rounded img-fluid d-block mx-auto" alt="App">
                         </div>
                         <div class="right-text col-lg-5 col-md-12 col-sm-12 mobile-top-fix">
                             <div class="textc">
@@ -74,7 +75,6 @@ require "php/session.php";
                     </div>
                 </div>
             </section>
-
             <div class="row">
                 <div id="" class="testimonials">
                     <div class="container" data-aos="fade-up">
@@ -90,7 +90,6 @@ require "php/session.php";
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
-
             <!-- ======= Frequently Asked Questions Section ======= -->
             <section id="faq" class="faq section-bg">
                 <div class="container" data-aos="fade-up">
@@ -102,8 +101,10 @@ require "php/session.php";
                             <div class="faq-list extraC">
                                 <ul>
                                     <li data-aos="fade-up">
-                                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Why focus first on carbon
-                                            dioxide? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                            class="collapse" data-bs-target="#faq-list-1">Why focus first on carbon
+                                            dioxide? <i class="bx bx-chevron-down icon-show"></i><i
+                                                class="bx bx-chevron-up icon-close"></i></a>
                                         <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
                                             <p> Carbon dioxide is released in greater amounts and represents 50% of the
                                                 warming attributed to greenhouse gases. As the major contributor of
@@ -114,8 +115,11 @@ require "php/session.php";
                                         </div>
                                     </li>
                                     <li data-aos="fade-up" data-aos-delay="100">
-                                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Why do I need to know my
-                                            carbon footprint and what does it mean <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                            data-bs-target="#faq-list-2" class="collapsed">Why do I need to know my
+                                            carbon footprint and what does it mean <i
+                                                class="bx bx-chevron-down icon-show"></i><i
+                                                class="bx bx-chevron-up icon-close"></i></a>
                                         <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
                                             <p> Your carbon footprint represents the impact you are having on climate
                                                 change. Your footprint is defined as the total greenhouse gas emissions,
@@ -127,8 +131,11 @@ require "php/session.php";
                                         </div>
                                     </li>
                                     <li data-aos="fade-up" data-aos-delay="200">
-                                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">I am only one person, can I
-                                            really make that much of a difference <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                            data-bs-target="#faq-list-3" class="collapsed">I am only one person, can I
+                                            really make that much of a difference <i
+                                                class="bx bx-chevron-down icon-show"></i><i
+                                                class="bx bx-chevron-up icon-close"></i></a>
                                         <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
                                             <p> Yes you can! You are a part of a greater movement. In the app we show
                                                 you the collective impact of the entire community, so you can see how
@@ -138,8 +145,10 @@ require "php/session.php";
                                         </div>
                                     </li>
                                     <li data-aos="fade-up" data-aos-delay="300">
-                                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">How does calculate my carbon
-                                            footprint <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                            data-bs-target="#faq-list-4" class="collapsed">How does calculate my carbon
+                                            footprint <i class="bx bx-chevron-down icon-show"></i><i
+                                                class="bx bx-chevron-up icon-close"></i></a>
                                         <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
                                             <p> Your carbon footprint is the carbon emissions that are created by your
                                                 consumption and lifestyle choices. A carbon footprint is measured in kgs
@@ -148,8 +157,10 @@ require "php/session.php";
                                         </div>
                                     </li>
                                     <li data-aos="fade-up" data-aos-delay="400">
-                                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">What is the solution for the
-                                            greenhouse problem?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                            data-bs-target="#faq-list-5" class="collapsed">What is the solution for the
+                                            greenhouse problem?<i class="bx bx-chevron-down icon-show"></i><i
+                                                class="bx bx-chevron-up icon-close"></i></a>
                                         <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
                                             <p> The solution is a significant reduction of the greenhouse gases produced
                                                 by mankind. This can be achieved by coordinating participation on
@@ -165,7 +176,10 @@ require "php/session.php";
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6  mt-5">
                             <div>
-                                <iframe src="https://www.google.co.in/maps/d/embed?mid=1GNIIOkKoqwk6Ov4SDpa6x93hdRmRmTd6" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                <iframe
+                                    src="https://www.google.co.in/maps/d/embed?mid=1GNIIOkKoqwk6Ov4SDpa6x93hdRmRmTd6"
+                                    width="100%" height="500px" frameborder="0" style="border:0"
+                                    allowfullscreen></iframe>
                                 <!-- <iframe style="border:0; width: 100%; height: 270px;"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
             frameborder="0" allowfullscreen></iframe> -->
@@ -174,17 +188,13 @@ require "php/session.php";
                     </div>
                 </div>
             </section><!-- End Frequently Asked Questions Section -->
-
-
-
             <!--Section: Contact v.2-->
-            <section class="mb-4">
-
+            <section class="mb-1">
                 <!--Section heading-->
                 <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
                 <!--Section description-->
-                <p class="text-center w-responsive mx-auto mb-5 textc">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
-                    a matter of hours to help you.</p>
+                <p class="text-center w-responsive mx-auto mb-5 textc">Do you have any questions? Please do not hesitate
+                    to contact us directly. Our team will come back to you within a matter of hours to help you.</p>
                 <div class="row align-items-center justify-content-center">
                     <!--Grid column-->
                     <div class="col-md-7 mb-md-0 mb-5">
@@ -194,7 +204,8 @@ require "php/session.php";
                                 <!--Grid column-->
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
-                                        <input type="text" id="name" name="name" class="form-control" placeholder="Name">
+                                        <input type="text" id="name" name="name" class="form-control"
+                                            placeholder="Name">
                                         <label for="name" class="textc">Your Name</label>
                                     </div>
                                 </div>
@@ -202,7 +213,8 @@ require "php/session.php";
                                 <!--Grid column-->
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
-                                        <input type="text" id="email" name="email" class="form-control" placeholder="email">
+                                        <input type="text" id="email" name="email" class="form-control"
+                                            placeholder="email">
                                         <label for="email" class="textc">Your email</label>
                                     </div>
                                 </div>
@@ -213,7 +225,8 @@ require "php/session.php";
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="md-form mb-0">
-                                        <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject...">
+                                        <input type="text" id="subject" name="subject" class="form-control"
+                                            placeholder="Subject...">
                                         <label for="subject" class="textc">Subject</label>
                                     </div>
                                 </div>
@@ -224,7 +237,9 @@ require "php/session.php";
                                 <!--Grid column-->
                                 <div class="col-md-12">
                                     <div class="md-form">
-                                        <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Write message here..."></textarea>
+                                        <textarea type="text" id="message" name="message" rows="2"
+                                            class="form-control md-textarea"
+                                            placeholder="Write message here..."></textarea>
                                         <label for="message" class="textc">Your message</label>
                                     </div>
                                 </div>
@@ -241,24 +256,21 @@ require "php/session.php";
                     <div class="col-md-3 text-center">
                         <ul class="list-unstyled mb-0">
                             <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                                <p class="textc">Kalpataru Point, 3rd and 4th floor,opp. PVR Theater ,Sion Circle, Mumbai,
-                                    Maharashtra 400022</p>
+                                <p class="textc" align="left">Kalpataru Point, 3rd and 4th floor,opp. PVR Theater ,Sion
+                                    Circle, Mumbai, Maharashtra 400022</p>
                             </li>
                             <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                                <p class="textc">Call : 022- 24020781</p>
+                                <p class="textc , bi bi-telephone-fill" align="left"> Call : 022- 24020781</p>
                             </li>
-                            <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                                <p class="textc">mpcb@gmail.com</p>
+                            <li>
+                                <p class="textc ,bi bi-envelope-fill " align="left"> mpcb@gmail.com</p>
                             </li>
                         </ul>
                     </div>
                     <!--Grid column-->
-
                 </div>
             </section>
             <!--Section: Contact v.2-->
-
-
     </section><!-- End Hero -->
     <!-- ***** Footer Start ***** --> <?php
                                         include 'footer.php';
@@ -266,7 +278,8 @@ require "php/session.php";
     <!-- End Footer -->
     <!-- End Footer -->
     <div id="preloader"></div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
@@ -280,7 +293,6 @@ require "php/session.php";
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="js/userDashboard.js"></script>
-
 </body>
 
 </html>

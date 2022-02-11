@@ -66,8 +66,8 @@ foreach ($finalArrayEe as $row) {
                 $ch4 =  $row['ch4'];
                 $n2o =  $row['n2o'];
                $carbonco2 += $value* $ncv * $co2*0.001*1;
-               $carbonch4 += $value* $ncv * $ch4 *0.001*1*21;
-               $carbonn2o += $value*$ncv * $n2o *0.001*1*310;
+               $carbonch4 += $value* $ncv * $ch4 *0.001*1;
+               $carbonn2o += $value*$ncv * $n2o *0.001*1;
         }
 }
 //end calculation

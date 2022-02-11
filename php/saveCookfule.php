@@ -33,8 +33,8 @@ for ($i = 0; $i < sizeof($fuleData); $i++) {
         $ch4 =  $row['ch4'];
         $n2o =  $row['n2o'];
        $carbonco2 += ($value * $ncv * $co2)*12;
-       $carbonch4 += ($value * $ncv * $ch4*21)*12;
-       $carbonn2o += ($value * $ncv * $n2o *310)*12;
+       $carbonch4 += ($value * $ncv * $ch4)*12;
+       $carbonn2o += ($value * $ncv * $n2o )*12;
     }
     $query2 = "SELECT * FROM fule_data WHERE b_id='" . $basicId . "' AND fuletype='" . $name . "'";
     $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));

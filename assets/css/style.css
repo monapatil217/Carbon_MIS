@@ -676,7 +676,7 @@ TRY IT ... with or without CENTER CENTER
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 80px 0;
+  padding: 20px 0;
   overflow: hidden;
 }
 /* 
@@ -2376,7 +2376,7 @@ h1 {
   border-radius: 40px;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
-  font-size: 15px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 .btn:hover, .btn:active, .btn:focus 

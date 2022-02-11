@@ -110,8 +110,8 @@ foreach ($dataArray as $row) {
             $ch4ef = $row['ch4ef'];
             $n2oef = $row['n2oef'];
             $carbonco2 += $km1 *$vkt *  $approx_fuel * $density * $ncv * $co2ef;
-            $carbonch4 += $km1*$vkt *  $approx_fuel * $density * $ncv * $ch4ef * 21;
-            $carbonn2o += $km1 *$vkt*  $approx_fuel * $density * $ncv * $n2oef * 310;
+            $carbonch4 += $km1*$vkt *  $approx_fuel * $density * $ncv * $ch4ef;
+            $carbonn2o += $km1 *$vkt*  $approx_fuel * $density * $ncv * $n2oef;
         }
     }
 }

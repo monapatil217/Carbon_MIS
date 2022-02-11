@@ -24,14 +24,14 @@ $carbonn2o = 0;
 
 
 //compost calculation
-  $carbonch4=($t_comp*1000*4*21*365)/1000000;
-  $carbonn2o=($t_comp*1000*0.24*365*310)/1000000;
+  $carbonch4=($t_comp*1000*4*365)/1000000;
+  $carbonn2o=($t_comp*1000*0.24*365)/1000000;
 //inenration calculation
   $carbonco2=$t_incin*0.001*0.5*0.3*0.36*3.66*1000*365;
-  $carbonch4+=($t_incin*0.001*0.2*21*365)/1000;
-  $carbonn2o+=($t_incin*0.001*50*310*365)/1000;
+  $carbonch4+=($t_incin*0.001*0.2*365)/1000;
+  $carbonn2o+=($t_incin*0.001*50*365)/1000;
 //landfiled
-  $carbonch4+=$t_disp*0.001*0.18*0.25*0.6*(16/12)*1000*21*365;
+  $carbonch4+=$t_disp*0.001*0.18*0.25*0.6*(16/12)*1000*365;
   
 //end calculation
 $query2 = "SELECT * FROM msw_data WHERE b_id='" . $basicId . "'";
