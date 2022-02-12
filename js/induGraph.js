@@ -111,7 +111,7 @@ function addChart() {
                             valueYField: "value",
                             sequencedInterpolation: true,
                             categoryXField: "name",
-                            tooltip: am5.Tooltip.new(root, { dy: -25, labelText: "{valueY}" })
+                            tooltip: am5.Tooltip.new(root, { dx: -20, labelText: "{valueY}" })
                         }));
 
 
