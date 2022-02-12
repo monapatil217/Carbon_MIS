@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    carbonGharph();
+   getPieGraphEmi();
     addChart("electricity");
     addChart("transport");
     addChart("liveStock");
@@ -14,8 +14,27 @@ $(document).ready(function () {
     addChart("cookingFuel");
 
 })
+function getPieGraphEmi(){
+    var myobj = {};
+    var basicId = document.getElementById("basicId").value;
+    myobj["basicId"] = basicId;
+    $.ajax({
+        type: "POST",
+        async: false,
+        url: "php/emiPieChart.php",
+        contentType: "application/json",
+        data: JSON.stringify(myobj),
+        success: function (data) {
+            var divList = JSON.parse(data);
+            carbonGharph(divList);
+        }
+    });
+}
 
-function carbonGharph() {
+
+function carbonGharph(data) {
+
+
 
     am5.ready(function () {
 
@@ -46,15 +65,7 @@ function carbonGharph() {
 
         // Set data
         // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
-        series.data.setAll([
-            { value: 10, category: "Energy" },
-            { value: 9, category: "Transport" },
-            { value: 6, category: "AFOLU" },
-            { value: 5, category: "SolidWaste" },
-            { value: 4, category: "WasteWater" },
-            { value: 3, category: "Industry" },
-            { value: 1, category: "FuelType" },
-        ]);
+        series.data.setAll(data);
 
 
 
@@ -69,6 +80,7 @@ function carbonGharph() {
         series.labels.template.setAll({
             fill: am5.color(0xFFFFFF),
             text: "{category}"
+            
         });
 
         legend.data.setAll(series.dataItems);
