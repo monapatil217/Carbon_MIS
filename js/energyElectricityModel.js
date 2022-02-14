@@ -45,7 +45,6 @@ function showEleInput() {
                     var eledata = element.cData;
                     $.each(eledata, function (index, element1) {
 
-                        // html = '<h6 class="text-center">Amount of Electricity Used by Different Sectors</h6>'
                         html = '<div class="row justify-content-center">'
                             + '   <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                             + '       <label for="relec" class="form-label"> Residential</label>'
@@ -170,20 +169,19 @@ function saveEleData() {
             contentType: "application/json",
             data: JSON.stringify(eleData),
             success: function (data) {
-                // var data1 = JSON.parse(data);
+
                 if (data == "success") {
                     alert("Data Save Succesfuly");
                     addChart();
-                    // window.location.replace("transport.php");
+
                 } else {
                     alert("Data not Save Succesfuly")
                 }
-                // window.location.replace(".php");
+
             }
         });
     }
 
-    // window.location.replace("transport.php");
 
 }
 
@@ -205,10 +203,7 @@ function showEleInfo() {
         + '<li class="popupli"> India is the third largest producer of electricity in the world .</li>'
         + '<li class="popupli"> The national electric grid in India has an installed capacity of 388.134 GW as of 31 August 2021.</li>'
         + '<li class="popupli"> Renewable power plants, which also include large hydroelectric plants, constitute 37% of India' + "'" + 's total installed capacity. </li>'
-        // + '<li class="popupli"> The government' + "'" + 's National Electricity Plan of 2018 states that the country does not need more non - renewable power plants in the utility sector until 2027, with the commissioning of 50, 025 MW coal - based power plants under construction and addition of 275, 000 MW total renewable power capacity after the retirement of nearly 48, 000 MW old coal - fired plants.</li>'
-        // + '<li class="popupli"> It is expected that non-fossil fuels generation contribution is likely to be around 44.7% of the total gross electricity generation by the year 2029-30.</li>'
         + '</ul>'
-        // +'<br>Despite its soaring energy needs, India has one of the lowest per capita rates of consumption of power in the world - 734 units as compared to a world average of 2,429 units. </b></p>'
         + '<center> <a class="my-3" href="http://www.ghgplatform-india.org/emissionestimates-phase2" target="_blank" rel="noopener noreferrer">Reference</a></center>'
         + '<center><a class="my-3" href="http://www.technogreen.co.in/Survey/files/Estimates-Energy-National.xlsx" target="_blank" rel="noopener noreferrer">Reference</a></center>'
 

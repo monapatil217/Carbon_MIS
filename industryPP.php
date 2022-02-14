@@ -14,7 +14,9 @@ require "php/session.php";
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +35,7 @@ require "php/session.php";
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
     <style>
-        /* #product {
+    /* #product {
         width: 300px;
         height: 300px;
     } */
@@ -47,7 +49,8 @@ require "php/session.php";
     <section id="subHero" class="d-flex  justify-content-center " style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
             <!-- <input type="text" class="form-control" id="sectionType" value="product" hidden> -->
-            <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
+            <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden
+                disabled>
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-12  mb-3" data-aos-delay="200">
                     <div class="in-sec">
@@ -59,21 +62,29 @@ require "php/session.php";
                                 <div class="faq-list faq_list_e">
                                     <ul>
                                         <li data-aos="fade-up">
-                                            <a data-bs-toggle="collapse" id="fa1" class="collapse" data-bs-target="#faq-list-1">Cement <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                            <a data-bs-toggle="collapse" id="fa1" class="collapse"
+                                                data-bs-target="#faq-list-1">Cement <i
+                                                    class="bx bx-chevron-down icon-show"></i><i
+                                                    class="bx bx-chevron-up icon-close"></i></a>
                                             <div id="faq-list-1" class="collapse show extra" data-bs-parent=".faq-list">
                                                 <!-- <h6 class="text-center">Quantity of Municipal Solid Waste </h6>  -->
                                                 <div id="cementInput"></div>
                                             </div>
                                         </li>
                                         <li data-aos="fade-up" data-aos-delay="100">
-                                            <a data-bs-toggle="collapse" id="fa2" data-bs-target="#faq-list-2" class="collapsed">Chemical <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                            <a data-bs-toggle="collapse" id="fa2" data-bs-target="#faq-list-2"
+                                                class="collapsed">Chemical <i
+                                                    class="bx bx-chevron-down icon-show"></i><i
+                                                    class="bx bx-chevron-up icon-close"></i></a>
                                             <div id="faq-list-2" class="collapse extra" data-bs-parent=".faq-list">
                                                 <!-- <h6 class="text-center">Quantity of Biomedical Waste </h6>  -->
                                                 <div id="chemicalInput"></div>
                                             </div>
                                         </li>
                                         <li data-aos="fade-up" data-aos-delay="200">
-                                            <a data-bs-toggle="collapse" id="fa3" data-bs-target="#faq-list-3" class="collapsed">Other<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                            <a data-bs-toggle="collapse" id="fa3" data-bs-target="#faq-list-3"
+                                                class="collapsed">Other<i class="bx bx-chevron-down icon-show"></i><i
+                                                    class="bx bx-chevron-up icon-close"></i></a>
                                             <div id="faq-list-3" class="collapse extra" data-bs-parent=".faq-list">
                                                 <!-- <h6 class="text-center">Quantity of Hazardous Waste </h6>  -->
                                                 <div id="otherInput"></div>
@@ -83,22 +94,21 @@ require "php/session.php";
                                 </li>
                                 </ul>
                             </div>
-
                             <!-- 
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
                                     <button class="btn btn-primary " type="button" onclick="saveIndPPData();">NEXT</button>
                                 </div>
                             </div> -->
-
                             <div class="row align-items-center justify-content-center" id="moreInfo">
-                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                                    data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                     <div class="fade-to-img" onclick="showPPInfo();">
-                                        <img class="reggot" id="popup-btn" src="img/distributed.png" width="80" height="80">
+                                        <img class="reggot" id="popup-btn" src="img/distributed.png" width="80"
+                                            height="80">
                                     </div>
                                 </div>
                             </div>
-
                         </form>
                     </div>
                 </div>
@@ -133,24 +143,24 @@ require "php/session.php";
         </div>
     </div>
     <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
     </script>
     <!-- Resources -->
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>

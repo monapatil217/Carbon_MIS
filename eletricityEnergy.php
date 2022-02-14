@@ -37,7 +37,7 @@ require "php/session.php";
   ======================================================== -->
     <style>
     #electricity {
-        width: 400px;
+        width: 300px;
         height: 300px;
     }
     </style>
