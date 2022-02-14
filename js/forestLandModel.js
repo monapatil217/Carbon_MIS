@@ -169,8 +169,16 @@ function saveForestData() {
     var areaForest = document.getElementById("areaForest").value;
 
     var roundWood = document.getElementById("roundWood").value;
+    if (areaForest < roundWood) {
+        alert("filled Data not valide number");
+       flag++;
+      }
 
     var fuelWood = document.getElementById("fuelWood").value;
+    if (areaForest < fuelWood) {
+        alert("filled Data not valide number");
+       flag++;
+      }
 
     var disturbance = document.getElementById("disturbance").value;
 

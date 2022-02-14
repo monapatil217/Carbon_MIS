@@ -288,6 +288,11 @@ function saveWaterData() {
 
     var waterTreat = document.getElementById("waterTreat").value;
 
+    if (waterCon < waterGen || waterGen < waterTreat) {
+        alert("filled Data not valide number");
+       flag++;
+      }
+
     var noSTP = document.getElementById("noSTP").value;
 
     for (var i = 1; i <= noSTP; i++) {
