@@ -37,7 +37,7 @@ require "php/session.php";
   ======================================================== -->
     <style>
     #transport {
-        width: 100%;
+        width: 300px;
         height: 300px;
     }
     </style>

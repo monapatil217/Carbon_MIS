@@ -523,6 +523,16 @@ function showMSWData() {
 
     var dumpingYardM = document.getElementById("dumpingYardM").value;
 
+    //validation
+    if (generatedM < collectionM) {
+        alert("Genrated value is less than collected value.");
+        flag++;
+    }
+
+
+
+
+
     if (comp == 1) {
         var compostedM = document.getElementById("compostedM").value;
         mswData["t_comp"] = compostedM;
@@ -543,6 +553,15 @@ function showMSWData() {
     } else {
         mswData["t_incin"] = 0;
     }
+    //validation
+
+    var addtreat = (parseInt(compostedM) + parseInt(disposalM) + parseInt(incineratedM));
+    if (collectionM < addtreat) {
+        alert("Collected value is less than treatment value.");
+        flag++;
+    }
+
+
 
     for (var i = 1; i <= dumpingYardM; i++) {
 
@@ -609,10 +628,20 @@ function showBMWData() {
 
     var treatedB = document.getElementById("treatedB").value;
 
+    //validation
+    if (generatedB < collectedB || collectedB < treatedB) {
+        alert("Genrated value is less than collected value.");
+        flag++;
+    }
+
+
+
     bmwData["basicId"] = basicId;
     bmwData["bmw_gen"] = generatedB;
     bmwData["bmw_coll"] = collectedB;
     bmwData["bmw_treat"] = treatedB;
+
+
 
     if (flag == 0) {
         $.ajax({
@@ -651,6 +680,16 @@ function showHWData() {
     var collectedH = document.getElementById("collectedH").value;
 
     var treatedH = document.getElementById("treatedH").value;
+
+    //validation
+    if (generatedH < collectedH || collectedH < treatedH) {
+
+        alert("Genrated value is less than collected value.");
+        flag++;
+    }
+
+
+
 
     hwData["basicId"] = basicId;
     hwData["hw_gen"] = generatedH;
