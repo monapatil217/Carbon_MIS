@@ -1,6 +1,5 @@
 <?php
 // require "php/session.php";
-session_start();
 ?>
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top">
