@@ -4,7 +4,7 @@ $json = file_get_contents('php://input');
 $data = json_decode($json);
 $type = $data->type;
 $finalDataArray = [];
-$tableEmiarray = ["ele_emi", "fc_land_emi", "fule_emi", "indu_eng_emi", "land_emi", "live_emi", "solid_emi", "trans_emi", "waste_emi"];
+$tableEmiarray = ["ele_emi", "fc_land_emi", "fule_emi", "indu_eng_emi", "land_emi", "live_emi", "msw_emi", "trans_emi", "waste_emi"];
 $tableName = "";
 if ($type == 'Electricity') {
     $tableName  = 'ele_emi';
@@ -23,7 +23,7 @@ if ($type == 'Electricity') {
 } else if ($type == 'Product') {
     $tableName = 'trans_emi';
 } else if ($type == 'SolidWaste') {
-    $tableName = 'solid_emi';
+    $tableName = 'msw_emi';
 } else if ($type == 'WasteWater') {
     $tableName = 'waste_emi';
 } else if ($type == 'CookingFuel') {

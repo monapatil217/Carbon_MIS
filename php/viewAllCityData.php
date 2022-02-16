@@ -248,7 +248,7 @@ if ($rowcount == 0) {
             $cData = [];
             $cData['w_cons'] = $row['w_cons'];
             $cData['w_gen'] = $row['w_gen'];
-            $cData['w_coll'] = $row['w_coll'];
+           
             $cData['q_treat'] = $row['q_treat'];
             $cData['n_stp'] = $row['n_stp'];
             array_push($deleData, $cData);

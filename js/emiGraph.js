@@ -20,7 +20,7 @@ function addsectrolChart() {
         }
     });
 }
-
+/////////////
 function addEmiChart() {
 
     $.ajax({
@@ -69,7 +69,7 @@ function addEmiChart() {
                     fill: am5.color(0xFFFFFF),
                     x: am5.p50,
                     centerX: am5.p50
-                  }), xAxis.children.length - 1);
+                }), xAxis.children.length - 1);
 
 
                 xAxis.data.setAll(data);
@@ -84,7 +84,7 @@ function addEmiChart() {
                     fill: am5.color(0xFFFFFF),
                     y: am5.p50,
                     centerX: am5.p50
-                  }), 0);
+                }), 0);
 
 
 
@@ -180,6 +180,9 @@ function addChart() {
 
                 // Create axes
                 // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+                // xRenderer.labels.template.setAll({
+                //     fill: am5.color(0xFFFFFF)
+                // });
                 var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
                     categoryField: "country",
                     renderer: am5xy.AxisRendererX.new(root, {}),
@@ -191,7 +194,16 @@ function addChart() {
                     fill: am5.color(0xFFFFFF),
                     x: am5.p50,
                     centerX: am5.p50
-                  }), xAxis.children.length - 1);
+                }), xAxis.children.length - 1);
+
+
+
+                // xAxis.labels.template.setAll({
+                //     fill: am5.color(0xFFFFFF)
+                // });
+                // xAxis.children.setAll({
+                //     fill: am5.color(0xFFFFFF)
+                // })
 
 
                 xAxis.data.setAll(data);
@@ -205,7 +217,7 @@ function addChart() {
                     fill: am5.color(0xFFFFFF),
                     y: am5.p50,
                     centerX: am5.p50
-                  }), 0);
+                }), 0);
                 // Add legend
                 // https://www.amcharts.com/docs/v5/charts/xy-chart/legend-xy-series/
                 var legend = chart.children.push(am5.Legend.new(root, {
@@ -359,7 +371,7 @@ function viewGraph(divId, divList) {
         xRenderer.grid.template.set("visible", false);
         xRenderer.labels.template.setAll({
             fill: am5.color(0xFFFFFF)
-          });
+        });
         var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
             maxDeviation: 0.3,
             categoryField: "country",
@@ -371,9 +383,9 @@ function viewGraph(divId, divList) {
             fill: am5.color(0xFFFFFF),
             x: am5.p50,
             centerX: am5.p50
-          }), xAxis.children.length - 1);
+        }), xAxis.children.length - 1);
 
-          var yRenderer = am5xy.AxisRendererY.new(root, {});
+        var yRenderer = am5xy.AxisRendererY.new(root, {});
         var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
             maxDeviation: 0.3,
             min: 0,
@@ -386,10 +398,10 @@ function viewGraph(divId, divList) {
             fill: am5.color(0xFFFFFF),
             y: am5.p50,
             centerX: am5.p50
-          }), 0);
-          yRenderer.labels.template.setAll({
+        }), 0);
+        yRenderer.labels.template.setAll({
             fill: am5.color(0xFFFFFF)
-          });
+        });
 
 
         //     // Add cursor
@@ -403,7 +415,8 @@ function viewGraph(divId, divList) {
             xAxis: xAxis,
             yAxis: yAxis,
             valueYField: "value",
-            categoryXField: "country"
+            categoryXField: "country",
+            tooltip: am5.Tooltip.new(root, { dx: -20, labelText: "{valueY}" })
         }));
         // Rounded corners for columns
         series.columns.template.setAll({
@@ -422,7 +435,7 @@ function viewGraph(divId, divList) {
             return am5.Bullet.new(root, {
                 locationY: 1,
                 sprite: am5.Label.new(root, {
-                    text: "{valueYWorking.formatNumber('#.')}",
+                    //text: "{valueYWorking.formatNumber('#.')}",  //display number on bar
                     fill: root.interfaceColors.get("alternativeText"),
                     centerY: 0,
                     centerX: am5.p50,

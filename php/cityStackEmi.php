@@ -3,7 +3,7 @@ include 'conn.php';
 $json = file_get_contents('php://input');
 $data = json_decode($json);
 $finalDataArray=[];
-$tableEmiarray = ["ele_emi","crop_emi","forest_emi","fule_emi","indu_eng_emi","land_emi","live_emi","solid_emi","trans_emi","waste_emi"];
+$tableEmiarray = ["ele_emi","crop_emi","forest_emi","fule_emi","indu_eng_emi","land_emi","live_emi","msw_emi","trans_emi","waste_emi"];
 $query2 = "SELECT Distinct(name) FROM city_name";
 $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
 
