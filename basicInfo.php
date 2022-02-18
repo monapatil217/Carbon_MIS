@@ -169,7 +169,7 @@ require "php/session.php";
     <script src="assets/vendor/jbox/jBox.all.min.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-    <script src="js/common.js"></script>
+    <!-- <script src="js/common.js"></script> -->
     <script src="js/basicInfoJs.js"></script>
 </body>
 

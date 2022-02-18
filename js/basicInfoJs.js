@@ -77,10 +77,30 @@ function allMap() {
                 var data1 = $.parseJSON(data)
                 var html = '';
                 $.each(data1, function (index, element) {
-                   html +='<iframe src="'+element.url+'" width="640" height="480"></iframe>';
+                    html += '<iframe src="' + element.url + '" width="640" height="480"></iframe>';
                 });
                 $("#map").append(html);
             }
         });
     }
+}
+function customInputValidator(eleValue, eleName) {
+    var flag = 0;
+    if (eleValue == "") {
+        if (eleName[0] == '#') {
+            $(eleName).addClass("is-invalid");
+
+        } else {
+            $("input[name=" + eleName + "]").addClass("is-invalid");
+        }
+        flag--;
+
+    } else {
+        if (eleName[0] == '#') {
+            $(eleName).removeClass("is-invalid");
+        } else {
+            $("input[name=" + eleName + "]").removeClass("is-invalid");
+        }
+    }
+    return flag;
 }
