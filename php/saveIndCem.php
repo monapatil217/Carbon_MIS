@@ -20,7 +20,7 @@ $carbonco2 += $cem_opc *0.537*0.95;
 $carbonco2 += $cem_ppc *0.537*0.68;
 $carbonco2 += $cem_pbfs *0.537*0.6;
 $carbonco2 += $cem_src *0.537*0.95;
-$carbonco2 += $cem_irst40 *0.537*0.95;
+$carbonco2 += ($cem_irst40 *0.537*0.95)/1000000;
 
 //end calculation
 

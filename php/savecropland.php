@@ -32,7 +32,7 @@ $finalArrayCrop = array();
         $loss =  $row['ncv'];
         $hrsv = $loss * $harwested*100;
     }
-   $carbonco2 =  abs($peri-$hrsv);
+   $carbonco2 =  abs(($peri-$hrsv)/1000000);
    
 //end calculation
 

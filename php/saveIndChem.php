@@ -92,9 +92,9 @@ foreach ($finalArraychem as $row) {
                 $co2 =  $row['co2'];
                 $ch4 =  $row['ch4'];
                 $n2o =  $row['n2o'];
-                $carbonco2 += $value*$co2;
-                $carbonch4 += $value*$ch4*21;
-                $carbonn2o +=$value*$n2o*310;
+                $carbonco2 += ($value*$co2)/1000000;
+                $carbonch4 += ($value*$ch4*21)/1000000;
+                $carbonn2o +=($value*$n2o*310)/1000000;
         }
 }
 //end calculation

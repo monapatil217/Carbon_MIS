@@ -27,7 +27,7 @@ $carbonn2o = 0;
   $carbonch4=($t_comp*1000*4*365)/1000000;
   $carbonn2o=($t_comp*1000*0.24*365)/1000000;
 //inenration calculation
-  $carbonco2=$t_incin*0.001*0.5*0.3*0.36*3.66*1000*365;
+  $carbonco2=($t_incin*0.001*0.5*0.3*0.36*3.66*1000*365)/1000000;
   $carbonch4+=($t_incin*0.001*0.2*365)/1000;
   $carbonn2o+=($t_incin*0.001*50*365)/1000;
 //landfiled

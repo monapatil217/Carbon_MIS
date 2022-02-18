@@ -24,15 +24,15 @@ while ($row = mysqli_fetch_array($result)) {
     $co2 =  $row['co2'];
     $ch4 =  $row['ch4'];
     $n2o =  $row['n2o'];
-    $carbonco2 = $totalfuel * $ncv * $co2;
+    $carbonco2 = ($totalfuel * $ncv * $co2)/1000000;
     $query2 = "SELECT * FROM ef_fuel where fuel_name='GWP'";
     $result = mysqli_query($conn, $query2);
     while ($row = mysqli_fetch_array($result)) {
         $co2G =  $row['co2'];
         $ch4G =  $row['ch4'];
         $n2oG =  $row['n2o'];
-        $carbonch4 = $totalfuel * $ncv * $ch4 * $ch4G;
-        $carbonn2o = $totalfuel * $n2o * $ncv * $n2oG;
+        $carbonch4 = ($totalfuel * $ncv * $ch4 * $ch4G)/1000000;
+        $carbonn2o = ($totalfuel * $n2o * $ncv * $n2oG)/1000000;
         $emissionPerDay = (($carbonco2 + $carbonch4 + $carbonn2o));
     }
 }

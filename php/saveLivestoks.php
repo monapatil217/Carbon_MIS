@@ -41,7 +41,9 @@ $forestArray['value'] =$pig;
 array_push($finalArrayforest,$forestArray);
 //print_r($finalArrayforest);
 
-  $carbonco2=0;$carbonch4=0;$carbonn2o=0;
+  $carbonco2=0;
+  $carbonch4=0;
+  $carbonn2o=0;
         foreach ($finalArrayforest as $row) {
             $name =  $row['name'];
             $value =  $row['value'];
@@ -52,7 +54,7 @@ array_push($finalArrayforest,$forestArray);
                     $carbonco2 +=  $co2e * $value;
                 }
         }
-        $carbonco2 = $carbonco2*21;
+        $carbonco2 = ($carbonco2*21)/1000000;
 //end calculation
 
 
