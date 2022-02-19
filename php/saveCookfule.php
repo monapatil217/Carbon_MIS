@@ -18,11 +18,11 @@ for ($i = 0; $i < sizeof($fuleData); $i++) {
     $comm = $fuleData[$i]->comm;
     $value = $resi+$comm;
     if($name == "LPG"){
-       $value = ($value*14.2)/1000;
+       $value = ($value*14.2)/1000000;
     }else if($name == "MNGL"){
-        $value = ($value*0.9)/1000;
+        $value = ($value*0.9)/1000000;
     }else if($name == "Kerosene"){
-        $value = ($value*0.78)/1000;
+        $value = ($value*0.78)/1000000;
     }
      
     $query2 = "SELECT * FROM ef_fuel where fuel_name='" . $name . "'";

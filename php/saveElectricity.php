@@ -16,7 +16,7 @@ $emissionPerDay;
 $carbonco2;$carbonch4;$carbonn2o;
 $value = $ele * 700;
 $value1 = $value * 0.64;
-$totalfuel = $value1 / 1000;
+$totalfuel = $value1 / 1000000;
 $query1 = "SELECT * FROM ef_fuel where fuel_name='NonCookingCoal'";
 $result = mysqli_query($conn, $query1);
 while ($row = mysqli_fetch_array($result)) {

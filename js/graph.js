@@ -1,5 +1,5 @@
 $(document).ready(function () {
-   getPieGraphEmi();
+    getPieGraphEmi();
     addChart("electricity");
     addChart("transport");
     addChart("liveStock");
@@ -14,7 +14,7 @@ $(document).ready(function () {
     addChart("cookingFuel");
 
 })
-function getPieGraphEmi(){
+function getPieGraphEmi() {
     var myobj = {};
     var basicId = document.getElementById("basicId").value;
     myobj["basicId"] = basicId;
@@ -80,7 +80,7 @@ function carbonGharph(data) {
         series.labels.template.setAll({
             fill: am5.color(0xFFFFFF),
             text: "{category}"
-            
+
         });
 
         legend.data.setAll(series.dataItems);
@@ -206,7 +206,7 @@ function addChart(divType) {
                             valueYField: "value",
                             sequencedInterpolation: true,
                             categoryXField: "name",
-                            tooltip: am5.Tooltip.new(root, { dy: -25, labelText: "{valueY}" })
+                            tooltip: am5.Tooltip.new(root, { dx: -15, labelText: "{valueY}" })
                         }));
 
 
