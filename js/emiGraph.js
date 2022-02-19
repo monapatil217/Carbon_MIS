@@ -80,7 +80,7 @@ function addEmiChart() {
                 }));
                 yAxis.children.moveValue(am5.Label.new(root, {
                     rotation: -90,
-                    text: "Emissions(tCO2e/year)",
+                    text: "Emissions(MtCO2e/year)",
                     fill: am5.color(0xFFFFFF),
                     y: am5.p50,
                     centerX: am5.p50
@@ -213,7 +213,7 @@ function addChart() {
                 }));
                 yAxis.children.moveValue(am5.Label.new(root, {
                     rotation: -90,
-                    text: "Emissions(tCO2e/year)",
+                    text: "Emissions(MtCO2e/year)",
                     fill: am5.color(0xFFFFFF),
                     y: am5.p50,
                     centerX: am5.p50
@@ -394,7 +394,7 @@ function viewGraph(divId, divList) {
 
         yAxis.children.moveValue(am5.Label.new(root, {
             rotation: -90,
-            text: "Emissions(tCO2e/year)",
+            text: "Emissions(MtCO2e/year)",
             fill: am5.color(0xFFFFFF),
             y: am5.p50,
             centerX: am5.p50
