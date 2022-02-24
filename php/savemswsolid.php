@@ -8,8 +8,8 @@ $data = json_decode($json);
 $basicId = $data->basicId;
 $msw_gen = $data->msw_gen;
 $msw_col = $data->msw_col;
- $t_comp = $data->t_comp;
- $t_disp = $data->t_disp;
+$t_comp = $data->t_comp;
+$t_disp = $data->t_disp;
 $n_yard = $data->n_yard;
 $t_incin = $data->t_incin;
 $yardData = $data->yardData;
@@ -24,15 +24,14 @@ $carbonn2o = 0;
 
 
 //compost calculation
-  $carbonch4=($t_comp*1000*4*365)/1000000;
-  $carbonn2o=($t_comp*1000*0.24*365)/1000000;
+  $carbonch4 =((($t_comp*1000*4*365)/1000000))/1000000;
+  $carbonn2o =(($t_comp*1000*0.24*365)/1000000)/1000000;
 //inenration calculation
   $carbonco2=($t_incin*0.001*0.5*0.3*0.36*3.66*1000*365)/1000000;
-  $carbonch4+=($t_incin*0.001*0.2*365)/1000;
-  $carbonn2o+=($t_incin*0.001*50*365)/1000;
+  $carbonch4 +=(($t_incin*0.001*0.2*365)/1000)/1000000;
+  $carbonn2o +=(($t_incin*0.001*50*365)/1000)/1000000;
 //landfiled
-  $carbonch4+=$t_disp*0.001*0.18*0.25*0.6*(16/12)*1000*365;
-  
+  $carbonch4+=($t_disp*0.001*0.18*0.25*0.6*(16/12)*1000*365)/1000000;
 //end calculation
 $query2 = "SELECT * FROM msw_data WHERE b_id='" . $basicId . "'";
 $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
@@ -76,4 +75,4 @@ $rowcount = mysqli_num_rows($result);
         WHERE b_id='" . $basicId . "'";
         $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
     }
-echo  "success";
+//echo  "success";

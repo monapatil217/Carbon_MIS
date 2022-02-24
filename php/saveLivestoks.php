@@ -67,7 +67,7 @@ array_push($finalArrayforest,$forestArray);
                     $carbonco2 +=  $co2e * $value;
                 }
         }
-        $carbonco2 = ($carbonco2*21)/1000000;
+        $carbonco2 = round((($carbonco2*21)/1000000),2);
 //end calculation
 
 
