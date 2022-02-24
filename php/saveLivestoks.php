@@ -39,6 +39,19 @@ $forestArray=array();
 $forestArray['name'] =  "pig";
 $forestArray['value'] =$pig;
 array_push($finalArrayforest,$forestArray);
+
+$forestArray=array();
+$forestArray['name'] =  "hors";
+$forestArray['value'] =$hors;
+array_push($finalArrayforest,$forestArray);
+$forestArray=array();
+$forestArray['name'] =  "donk";
+$forestArray['value'] =$donk;
+array_push($finalArrayforest,$forestArray);
+$forestArray=array();
+$forestArray['name'] =  "came";
+$forestArray['value'] =$came;
+array_push($finalArrayforest,$forestArray);
 //print_r($finalArrayforest);
 
   $carbonco2=0;
