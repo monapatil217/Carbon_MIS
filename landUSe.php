@@ -100,7 +100,7 @@ require "php/session.php";
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <!-- <button id="cmd" class="btn btn-primary "
                                     onclick="CreatePDFfromHTML('landUse')">Print</button> -->
-                                <i class="bi bi-box-arrow-in-down" style="font-size:24px;color:#67b7dc"
+                                <i class="bi bi-download" style="font-size:24px;color:#FFFFFF"
                                     class="btn btn-primary " value="download"
                                     onclick="CreatePDFfromHTML('landUse')"></i>
                             </div>

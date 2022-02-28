@@ -263,7 +263,7 @@ require "php/session.php";
                                                 Tables :</p>
                                         </div>
                                         <div class="col-sm col-lg-1">
-                                            <i class="bi bi-box-arrow-in-down" style="font-size:36px;color:#67b7dc"
+                                            <i class="bi bi-download" style="font-size:36px;color:#FFFFFF"
                                                 class="btn btn-primary " value="download"
                                                 onclick="convertTableToPDF( 'Balance_Report','balance-title',
                                 ['ele-table','trans-table','crop-table','live-table','forest-table','land-table','solid-table','yard-table','bio-table','haz-table','ww-table'

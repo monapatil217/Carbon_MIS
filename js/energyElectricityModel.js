@@ -77,7 +77,7 @@ function showEleInput() {
 
                             + '<div class="row justify-content-center">'
                             + '      <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                            + '          <label for="slelec" class="form-label"> Street light</label>'
+                            + '          <label for="slelec" class="form-label"> Other</label>'
                             + '          <div class="input-group mb-2">'
                             + '              <input type="text" id="slelec" name="slelec"   class="form-control"   value="' + element1.sl_elec + '"    placeholder="Street light" aria-label="Slum" aria-describedby="basic-addon2">'
                             + '                  <span class="input-group-text" id="basic-addon2">MW/m</span>'
@@ -121,7 +121,7 @@ function showEleInput() {
 
                         + '  <div class="row justify-content-center">'
                         + '      <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                        + '          <label for="slelec" class="form-label"> Street light</label>'
+                        + '          <label for="slelec" class="form-label"> Other</label>'
                         + '          <div class="input-group mb-2">'
                         + '              <input type="text" id="slelec" name="slelec"   class="form-control" placeholder="Street light" aria-label="Slum" aria-describedby="basic-addon2">'
                         + '                  <span class="input-group-text" id="basic-addon2">MW/m</span>'

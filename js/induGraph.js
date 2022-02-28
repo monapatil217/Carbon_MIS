@@ -48,7 +48,7 @@ function addChart() {
                             wheelX: "none",
                             wheelY: "none"
                         }));
-     
+
 
 
                         // Add cursor
@@ -77,7 +77,7 @@ function addChart() {
                         xRenderer.grid.template.set("visible", false);
                         xRenderer.labels.template.setAll({
                             fill: am5.color(0xFFFFFF)
-                          });
+                        });
 
                         var yRenderer = am5xy.AxisRendererY.new(root, {});
                         var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
@@ -96,11 +96,11 @@ function addChart() {
 
                         yRenderer.grid.template.setAll({
                             strokeDasharray: [2, 2],
-                            
+
                         });
                         yRenderer.labels.template.setAll({
                             fill: am5.color(0xFFFFFF)
-                          });
+                        });
 
                         // Create series
                         // https://www.amcharts.com/docs/v5/charts/xy-chart/series/

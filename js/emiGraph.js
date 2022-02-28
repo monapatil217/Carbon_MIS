@@ -268,6 +268,10 @@ function addChart() {
                 makeSeries("Transport", "trans_emi");
                 makeSeries("WasteWater", "waste_emi");
 
+
+
+
+
                 // Make stuff animate on load
                 // https://www.amcharts.com/docs/v5/concepts/animations/
                 chart.appear(1000, 100);
@@ -408,15 +412,18 @@ function viewGraph(divId, divList) {
         //     // https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
         var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
         cursor.lineY.set("visible", false);
-        // Add series
+
         // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
         var series = chart.series.push(am5xy.ColumnSeries.new(root, {
-            name: "Series 1",
+            name: "country",
+            // name: name,
             xAxis: xAxis,
             yAxis: yAxis,
             valueYField: "value",
             categoryXField: "country",
-            tooltip: am5.Tooltip.new(root, { dx: -20, labelText: "{valueY}" })
+            tooltip: am5.Tooltip.new(root, { dx: -20, labelText: "{valueY},{categoryX}" })
+
+            //  tooltipText: "{name}, {categoryX}: {valueY}",
         }));
         // Rounded corners for columns
         series.columns.template.setAll({

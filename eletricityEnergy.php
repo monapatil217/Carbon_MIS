@@ -37,8 +37,8 @@ require "php/session.php";
   ======================================================== -->
     <style>
     #electricity {
-        width: 300px;
-        height: 300px;
+        width: 470px;
+        height: 350px;
     }
     </style>
 </head>
@@ -90,25 +90,33 @@ require "php/session.php";
                                 emissions.</li>
                             <!-- <li class="popupli">Burning 1 kg of bituminous coal will produce 2.42 kg of carbon dioxide.</li> -->
                             <li class="popupli">The emissions per unit of electricity are estimated to be in the range
-                                of 0.91 to 0.95 kg/kWh for CO2 </li>
+                                of 0.91 to 0.95 kg/kWh for CO2. </li>
                         </ul>
-                        <div class="row  justify-content-center">
-                            <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6"
+                        
+                        <div class="row justify-content-center">
+                        
+                            <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-7"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                
                                 <div id="chartName">
                                     <!-- <h3>Carbon emission of Electricity</h3> -->
                                 </div>
+                                
                                 <div id="electricity"></div>
+                                
                             </div>
+                          
                             <!-- for print btn symbol -->
-                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2"
-                                data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                                <!-- <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button> -->
-                                <i class="bi bi-box-arrow-in-down" style="font-size:24px;color:#67b7dc"
-                                    class="btn btn-primary " value="download"
+                            <div class=" col-lg-1 col-md-1 col-sm-1 col-xs-1  "
+                                data-scroll-reveal="enter right move 60px over 0.6s after 0.4s">
+                                <!--bi bi-box-arrow-in-down <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button> -->
+                                <i class="bi bi-download" style="font-size:24px;color:#FFFFFF
                                     onclick="CreatePDFfromHTML('electricity')"></i>
+                            
                             </div>
                         </div>
+                        
+                        
                         <div></div>
                         <!-- Next btn symbol -->
                         <div class="row align-items-center justify-content-center">
@@ -183,7 +191,8 @@ require "php/session.php";
     <script src="assets/js/main.js"></script>
     <!-- Our JS Files -->
     <script src="js/energyElectricityModel.js"></script>
-    <script src="js/induGraph.js"></script>
+    <!-- <script src="js/induGraph.js"></script> -->
+     <script src="js/combinegraph.js"></script>
     <script src="js/common.js"></script>
     <script>
     </script>

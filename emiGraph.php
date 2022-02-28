@@ -125,7 +125,7 @@
                             </div>
                             <div class="col-1">
                                 <!-- <button  class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button> -->
-                                <i id="cmd" class="bi bi-box-arrow-in-down" style="font-size:36px;color:#67b7dc"
+                                <i id="cmd" class="bi bi-download" style="font-size:36px;color:#FFFFFF"
                                     class="btn btn-primary " value="download"
                                     onclick="CreatePDFfromHTML('allEmiChart')"></i>
                             </div>
@@ -139,7 +139,7 @@
                             </div>
                             <div class="col-1">
                                 <!-- <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button> -->
-                                <i id="cmd" class="bi bi-box-arrow-in-down" style="font-size:36px;color:#67b7dc"
+                                <i id="cmd" class="bi bi-download" style="font-size:36px;color:#FFFFFF"
                                     class="btn btn-primary " value="download"
                                     onclick="CreatePDFfromHTML('allsecEmiChart')"></i>
                             </div>
@@ -170,7 +170,7 @@
                                 </div>
                                 <div class="col-1">
                                     <!-- <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button> -->
-                                    <i id="cmd" class="bi bi-box-arrow-in-down" style="font-size:36px;color:#67b7dc"
+                                    <i id="cmd" class="bi bi-download" style="font-size:36px;color:#FFFFFF"
                                         class="btn btn-primary " value="download"
                                         onclick="CreatePDFfromHTML('secEmiChart')"></i>
                                 </div>
@@ -190,7 +190,7 @@
                             </div>
                             <div class="col-1">
                                 <!-- <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button> -->
-                                <i id="cmd" class="bi bi-box-arrow-in-down" style="font-size:36px;color:#67b7dc"
+                                <i id="cmd" class="bi bi-download" style="font-size:36px;color:#FFFFFF"
                                     class="btn btn-primary " value="download"
                                     onclick="CreatePDFfromHTML('polluEmi')"></i>
                             </div>
@@ -213,7 +213,7 @@
                                 </div>
                                 <div class="col-1">
                                     <!-- <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button> -->
-                                    <i id="cmd" class="bi bi-box-arrow-in-down" style="font-size:36px;color:#67b7dc"
+                                    <i id="cmd" class="bi bi-download" style="font-size:36px;color:#FFFFFF"
                                         value="download" onclick="CreatePDFfromHTML('poluChartDiv')"></i>
 
                                      

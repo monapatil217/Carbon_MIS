@@ -91,7 +91,7 @@ require "php/session.php";
                             </div>
                             <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                                <i class="bi bi-box-arrow-in-down" style="font-size:24px;color:#67b7dc"
+                                <i class="bi bi-download" style="font-size:24px;color:#FFFFFF"
                                     class="btn btn-primary " value="download"
                                     onclick="CreatePDFfromHTML('liveStock')"></i>
                             </div>
