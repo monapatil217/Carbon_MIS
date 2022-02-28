@@ -15,9 +15,7 @@ require "php/session.php";
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -31,180 +29,205 @@ require "php/session.php";
     <link href="assets/css/style.css" rel="stylesheet">
     <!-- sectors icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css">
+    <script type='text/javascript' src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
+    <script src="colored.slider.js"></script>
+
+
     <style>
-#actionchart {
-   width:auto;
-  height:500px;
-}
-</style>
+        #actionchart {
+            width: auto;
+            height: 500px;
+        }
+    </style>
 </head>
 
 <body> <?php
-    include 'header.php';
-    ?>
-  
-    
+        include 'header.php';
+        ?>
+
+
     <!-- ======= subHero Section ======= -->
     <section id="subHero" class="d-flex  justify-content-center textc" style=" height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-         <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
-        <h3 class="text-center mt-5">Take Action</h3>
-        <div class="row">
-        
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-               
-                        <div class="row">
-                           <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
-                            <center><h4 class="text-center mt-3">Electricity Sector</h4></center>
-  
-                                <div id="democontainer">
-                                    <p>
-                                        How many used solar energy.
-                                    </p>
-                                    <p>
-                                        The new block will appear below this paragraph.
-                                    </p>
-                                    <p>
-                                        The new block will appear below this paragraph.
-                                    </p>
-                                    <p>
-                                        The new block will appear below this paragraph.
-                                    </p>
-                                </div>
-                        </div> 
-                        </div>
+            <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
+            <h3 class="text-center mt-5">Take Action</h3>
+            <div class="row">
 
-                        <div class="row">
-                           <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
-                            <center><h4 class="text-center mb-2">transport Sector</h4></center>
-  
-                                <div id="democontainer">
-                                    <p>
-                                        How many used public vehicle.
-                                    </p>
-                                    <p>
-                                        The new block will appear below this paragraph.
-                                    </p>
-                                    <p>
-                                        The new block will appear below this paragraph.
-                                    </p>
-                                    <p>
-                                        The new block will appear below this paragraph.
-                                    </p>
-                                </div>
-                        </div> 
-                        </div>
+                <div class="col-lg-5 col-md-4 col-sm-4 col-xs-4">
 
-                        <div class="row">
-                           <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
-                            <center><h4 class="text-center mb-2">AFOLU Sector</h4></center>
-                                <div id="democontainer">
-                                    <p>
-                                        How many used solar energy.
-                                    </p>
-                                    <p>
-                                        The new block will appear below this paragraph.
-                                    </p>
-                                    <p>
-                                        The new block will appear below this paragraph.
-                                    </p>
-                                    <p>
-                                        The new block will appear below this paragraph.
-                                    </p>    
-                                </div>
-                        </div> 
-                        </div>
+                    <div class="row">
+                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
+                            <center>
+                                <h4 class="text-center mt-3">Electricity Sector</h4>
+                            </center>
 
-                        <div class="row">
-                           <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
-                            <center><h4 class="text-center mb-2">Waste Sector</h4></center>
-                                <div id="democontainer">
-                                    <p>
-                                        How many daily wastage.
-                                    </p>
-                                    <p>
-                                        The new block will appear below this paragraph.
-                                    </p>
-                                    <p>
-                                        The new block will appear below this paragraph.
-                                    </p>
-                                    <p>
-                                        The new block will appear below this paragraph.
-                                    </p>
-                                </div>
-                        </div> 
-                        </div>
-
-                        <div class="row">
-                           <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
-                            <center><h4 class="text-center mb-2">Industry Sector</h4></center>
-                                <div id="democontainer">
-                                    <p>
-                                        what is the energy type of used your idustry.
-                                    </p>
-                                    <p>
-                                        The new block will appear below this paragraph.
-                                    </p>
-                                    <p>
-                                        The new block will appear below this paragraph.
-                                    </p>
-                                    <p>
-                                        The new block will appear below this paragraph.
-                                    </p>
-                                </div>
-                        </div> 
-                        </div>
-                </div>
-            
-                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" id="actionGraphdiv"> 
-            
-                 <div class="row">
-                    
-                         <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 mt-3" data-aos-delay="200">
-                          <div class="card">
-                            <div class="card-header p-3 pt-2">
-                                <div class="rounded mt-n4 position-absolute iconAdmin">
-                                    <center><i class="fa fa-bolt mt-2 " aria-hidden="true" style="font-size:36px;color:black"></i></center>
-                                </div>
-                                <div class="text-end pt-1">
-                                    <p class="text-sm mb-0 text-capitalize">Electricity</p>
-                                    <h4 class="mb-0">10200 tons/year</h4>
-                                </div>
+                            <div id="democontainer">
+                                <p>
+                                    How many used solar energy.(in %)
+                                    <label for="slider"></label>
+                                    <input type="range" name="sliders" id="slider0" value="93" min="0" max="100" data-highlight="true">
+                                </p>
+                                <p>
+                                    The new block will appear below this paragraph.
+                                </p>
+                                <p>
+                                    The new block will appear below this paragraph.
+                                </p>
+                                <p>
+                                    The new block will appear below this paragraph.
+                                </p>
                             </div>
-                           
                         </div>
+                    </div>
+
+                    <div class="row">
+                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
+                            <center>
+                                <h4 class="text-center mb-2">transport Sector</h4>
+                            </center>
+
+                            <div id="democontainer">
+                                <p>
+                                    How many used public vehicle.(in %)
+                                    <label for="slider"></label>
+                                    <input type="range" name="sliders" id="slider0" value="93" min="0" max="100" data-highlight="true">
+                                </p>
+                                <p>
+                                    The new block will appear below this paragraph.
+                                </p>
+                                <p>
+                                    The new block will appear below this paragraph.
+                                </p>
+                                <p>
+                                    The new block will appear below this paragraph.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
+                            <center>
+                                <h4 class="text-center mb-2">AFOLU Sector</h4>
+                            </center>
+                            <div id="democontainer">
+                                <p>
+                                    How many used solar energy.(in %)
+                                    <label for="slider"></label>
+                                    <input type="range" name="sliders" id="slider0" value="93" min="0" max="100" data-highlight="true">
+                                </p>
+                                <p>
+                                    The new block will appear below this paragraph.
+                                </p>
+                                <p>
+                                    The new block will appear below this paragraph.
+                                </p>
+                                <p>
+                                    The new block will appear below this paragraph.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
+                            <center>
+                                <h4 class="text-center mb-2">Waste Sector</h4>
+                            </center>
+                            <div id="democontainer">
+                                <p>
+                                    How many daily wastage.(in %)
+                                    <label for="slider"></label>
+                                    <input type="range" name="sliders" id="slider0" value="93" min="0" max="100" data-highlight="true">
+                                </p>
+                                <p>
+                                    The new block will appear below this paragraph.
+                                </p>
+                                <p>
+                                    The new block will appear below this paragraph.
+                                </p>
+                                <p>
+                                    The new block will appear below this paragraph.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
+                            <center>
+                                <h4 class="text-center mb-2">Industry Sector</h4>
+                            </center>
+                            <div id="democontainer">
+                                <p>
+                                    what is the energy type of used your idustry.(in %)
+                                    <label for="slider"></label>
+                                    <input type="range" name="sliders" id="slider0" value="93" min="0" max="100" data-highlight="true">
+                                </p>
+                                <p>
+                                    The new block will appear below this paragraph.
+                                </p>
+                                <p>
+                                    The new block will appear below this paragraph.
+                                </p>
+                                <p>
+                                    The new block will appear below this paragraph.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 col-md-8 col-sm-8 col-xs-8" id="actionGraphdiv">
+
+                    <div class="row">
+
+                        <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 mt-3" data-aos-delay="200">
+                            <div class="card">
+                                <div class="card-header p-3 pt-2">
+                                    <div class="rounded mt-n4 position-absolute iconAdmin">
+                                        <center><i class="fa fa-bolt mt-2 " aria-hidden="true" style="font-size:36px;color:black"></i></center>
+                                    </div>
+                                    <div class="text-end pt-1">
+                                        <p class="text-sm mb-0 text-capitalize">Electricity</p>
+                                        <h6 class="mb-0">10200 tons/year</h6>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                         <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 mt-3" data-aos-delay="200">
-                         <div class="card">
-                            <div class="card-header p-3 pt-2">
-                                <div class="rounded mt-n4 position-absolute iconAdmin">
-                                      <center><i class="fa fa-automobile mt-2 " style="font-size:36px;color:black"></i></center>
-                                </div>
-                                <div class="text-end pt-1">
-                                    <p class="text-sm mb-0 text-capitalize">Transport</p>
-                                    <h4 class="mb-0">10200 tons/year</h4>
+                            <div class="card">
+                                <div class="card-header p-3 pt-2">
+                                    <div class="rounded mt-n4 position-absolute iconAdmin">
+                                        <center><i class="fa fa-automobile mt-2 " style="font-size:36px;color:black"></i></center>
+                                    </div>
+                                    <div class="text-end pt-1">
+                                        <p class="text-sm mb-0 text-capitalize">Transport</p>
+                                        <h6 class="mb-0">10200 tons/year</h6>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        </div>
-                     </div>
-                    
-                <div class="row">
+                    </div>
+
+                    <div class="row">
                         <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-4 mt-3" data-aos-delay="200">
-                           <div class="card">
+                            <div class="card">
                                 <div class="card-header p-3 pt-2">
                                     <div class="bg-light bg-gradient rounded mt-n4 position-absolute iconAdmin">
                                         <center><i class="fa fa-tree mt-2 " aria-hidden="true" style="font-size:36px;color:black"></i></center>
-                                        
+
                                     </div>
                                     <div class="text-end pt-1">
                                         <p class="text-sm mb-0 text-capitalize">AFOLU</p>
-                                        <h4 class="mb-0">10200 tons/year</h4>
+                                        <h6 class="mb-0">10200 tons/year</h6>
                                     </div>
                                 </div>
-                             </div>
+                            </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  mt-3">
                             <div class="card">
@@ -214,45 +237,44 @@ require "php/session.php";
                                     </div>
                                     <div class="text-end pt-1">
                                         <p class="text-sm mb-0 text-capitalize">Waste</p>
-                                        <h4 class="mb-0">10200 tons/year</h4>
+                                        <h6 class="mb-0">10200 tons/year</h6>
                                     </div>
                                 </div>
                             </div>
-                                </div>
-                               <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mt-3">
-                                    <div class="card">
-                                        <div class="card-header p-3 pt-2">
-                                                    <div class="bg-light bg-gradient rounded mt-n4 position-absolute iconAdmin">
-                                                        <center><i class="fa fa-industry mt-2 mb-2" aria-hidden="true" style="font-size:36px;color:black"></i></center>
-                                                    </div>
-                                                    <div class="text-end pt-1">
-                                                        <p class="text-sm mb-0 text-capitalize">Industry</p>
-                                                        <h4 class="mb-0">10200 tons/year</h4>
-                                                    </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                </div>
-                        <div class="row">
-                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
-                                                        
-                                            <div id="actionchart">    
-                                            </div>
-                                </div> 
                         </div>
-                     </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mt-3">
+                            <div class="card">
+                                <div class="card-header p-3 pt-2">
+                                    <div class="bg-light bg-gradient rounded mt-n4 position-absolute iconAdmin">
+                                        <center><i class="fa fa-industry mt-2 mb-2" aria-hidden="true" style="font-size:36px;color:black"></i></center>
+                                    </div>
+                                    <div class="text-end pt-1">
+                                        <p class="text-sm mb-0 text-capitalize">Industry</p>
+                                        <h6 class="mb-0">10200 tons/year</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
+
+                            <div id="actionchart">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-      
+        </div>
+
     </section><!-- End Hero -->
-   
+
     <!-- ***** Footer Start ***** --> <?php
-    include 'footer.php';
-    ?>
+                                        include 'footer.php';
+                                        ?>
     <!-- End Footer -->
     <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-   
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
     </script>
     <!-- Resources -->
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
@@ -277,9 +299,26 @@ require "php/session.php";
     <!-- Our JS Files -->
     <!-- <script src="js/energyElectricityModel.js"></script> -->
     <script src="js/actionPlan.js"></script>
-  
+
     <script src="js/common.js"></script>
-   
+    <script src="js/common.js"></script>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
 </body>
 
 </html>
