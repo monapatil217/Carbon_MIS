@@ -39,6 +39,19 @@ $forestArray=array();
 $forestArray['name'] =  "pig";
 $forestArray['value'] =$pig;
 array_push($finalArrayforest,$forestArray);
+
+$forestArray=array();
+$forestArray['name'] =  "hors";
+$forestArray['value'] =$hors;
+array_push($finalArrayforest,$forestArray);
+$forestArray=array();
+$forestArray['name'] =  "donk";
+$forestArray['value'] =$donk;
+array_push($finalArrayforest,$forestArray);
+$forestArray=array();
+$forestArray['name'] =  "came";
+$forestArray['value'] =$came;
+array_push($finalArrayforest,$forestArray);
 //print_r($finalArrayforest);
 
   $carbonco2=0;
@@ -54,7 +67,7 @@ array_push($finalArrayforest,$forestArray);
                     $carbonco2 +=  $co2e * $value;
                 }
         }
-        $carbonco2 = ($carbonco2*21)/1000000;
+        $carbonco2 = round((($carbonco2*21)/1000000),2);
 //end calculation
 
 
