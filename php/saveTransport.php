@@ -102,6 +102,7 @@ foreach ($dataArray as $row) {
         $approx_fuel = $row['approx_fuel'];
         $density = $row['density'];
         $vkt = $row['vkt'];
+        $km1=($km1 *$vkt)/1000;
         $query2 = "SELECT * FROM ef_travel_fuel WHERE type_of_fuel='$fule'";
         $result = mysqli_query($conn, $query2);
         while ($row = mysqli_fetch_array($result)) {
@@ -109,9 +110,9 @@ foreach ($dataArray as $row) {
             $co2ef = $row['co2ef'];
             $ch4ef = $row['ch4ef'];
             $n2oef = $row['n2oef'];
-            $carbonco2 += ($km1 *$vkt *  $approx_fuel * $density * $ncv * $co2ef)/1000000;
-            $carbonch4 += ($km1*$vkt *  $approx_fuel * $density * $ncv * $ch4ef)/1000000;
-            $carbonn2o += ($km1 *$vkt*  $approx_fuel * $density * $ncv * $n2oef)/1000000;
+            $carbonco2 += ($km1 *  $approx_fuel * $density * $ncv * $co2ef)/1000000;
+            $carbonch4 += ($km1 *  $approx_fuel * $density * $ncv * $ch4ef)/1000000;
+            $carbonn2o += ($km1 *  $approx_fuel * $density * $ncv * $n2oef)/1000000;
         }
     }
 }
