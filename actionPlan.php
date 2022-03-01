@@ -40,7 +40,13 @@ require "php/session.php";
         #actionchart {
             width: auto;
             height: 500px;
-        }
+        }       
+        /* #actionGraphdiv {
+        position: fixed;
+        
+        } */
+
+ 
     </style>
 </head>
 
@@ -66,19 +72,21 @@ require "php/session.php";
 
                             <div id="democontainer">
                                 <p>
-                                    How many used solar energy.(in %)
+                                   1.50% renewable energy.
                                     <label for="slider"></label>
-                                    <input type="range" name="sliders" id="slider0" value="93" min="0" max="100" data-highlight="true">
+                                    <input type="range" name="sliders" id="slider1" value="93" min="0" max="100" data-highlight="true">
                                 </p>
                                 <p>
-                                    The new block will appear below this paragraph.
+                                   2.50% carbon capture in TPP .
+                                     <label for="slider"></label>
+                                    <input type="range" name="sliders" id="slider2" value="93" min="0" max="100" data-highlight="true">
                                 </p>
                                 <p>
-                                    The new block will appear below this paragraph.
+                                     3.25% Smart homes and utilities.
+                                     <label for="slider"></label>
+                                    <input type="range" name="sliders" id="slider3" value="93" min="0" max="100" data-highlight="true">
                                 </p>
-                                <p>
-                                    The new block will appear below this paragraph.
-                                </p>
+                               
                             </div>
                         </div>
                     </div>
@@ -90,19 +98,33 @@ require "php/session.php";
                             </center>
 
                             <div id="democontainer">
+                            <p>
+                            Which of the following policies will you apply?
+                            </p>
                                 <p>
-                                    How many used public vehicle.(in %)
+                                   1. EV Policy.
                                     <label for="slider"></label>
-                                    <input type="range" name="sliders" id="slider0" value="93" min="0" max="100" data-highlight="true">
+                                    <input type="range" name="sliders" id="slider11" value="93" min="0" max="100" data-highlight="true">
                                 </p>
                                 <p>
-                                    The new block will appear below this paragraph.
+                                    2. Strengthening and Shared Public Transport.
+                                     <label for="slider"></label>
+                                    <input type="range" name="sliders" id="slider12" value="93" min="0" max="100" data-highlight="true">
                                 </p>
                                 <p>
-                                    The new block will appear below this paragraph.
+                                    3. Subsidisation of Public Transport.
+                                     <label for="slider"></label>
+                                    <input type="range" name="sliders" id="slider13" value="93" min="0" max="100" data-highlight="true">
                                 </p>
                                 <p>
-                                    The new block will appear below this paragraph.
+                                   4. Non-Motorised Transport.
+                                     <label for="slider"></label>
+                                    <input type="range" name="sliders" id="slider14" value="93" min="0" max="100" data-highlight="true">
+                                </p>
+                                <p>
+                                  5. Introduction of Congestion tax.
+                                     <label for="slider"></label>
+                                    <input type="range" name="sliders" id="slider15" value="93" min="0" max="100" data-highlight="true">
                                 </p>
                             </div>
                         </div>
@@ -115,19 +137,17 @@ require "php/session.php";
                             </center>
                             <div id="democontainer">
                                 <p>
-                                    How many used solar energy.(in %)
+                                    1.Sustainable Agriculture : 50% 2030.
                                     <label for="slider"></label>
-                                    <input type="range" name="sliders" id="slider0" value="93" min="0" max="100" data-highlight="true">
+                                    <input type="range" name="sliders" id="slider21" value="93" min="0" max="100" data-highlight="true">
                                 </p>
-                                <p>
-                                    The new block will appear below this paragraph.
+                               
+                                    <p>
+                                   2.Livestock Management : 50% 2030.
+                                     <label for="slider"></label>
+                                    <input type="range" name="sliders" id="slider22" value="93" min="0" max="100" data-highlight="true">
                                 </p>
-                                <p>
-                                    The new block will appear below this paragraph.
-                                </p>
-                                <p>
-                                    The new block will appear below this paragraph.
-                                </p>
+
                             </div>
                         </div>
                     </div>
@@ -141,7 +161,7 @@ require "php/session.php";
                                 <p>
                                     How many daily wastage.(in %)
                                     <label for="slider"></label>
-                                    <input type="range" name="sliders" id="slider0" value="93" min="0" max="100" data-highlight="true">
+                                    <input type="range" name="sliders" id="slider31" value="93" min="0" max="100" data-highlight="true">
                                 </p>
                                 <p>
                                     The new block will appear below this paragraph.
@@ -163,25 +183,27 @@ require "php/session.php";
                             </center>
                             <div id="democontainer">
                                 <p>
-                                    what is the energy type of used your idustry.(in %)
+                                  1.100% FO replaced by PNG.
                                     <label for="slider"></label>
-                                    <input type="range" name="sliders" id="slider0" value="93" min="0" max="100" data-highlight="true">
+                                    <input type="range" name="sliders" id="slider41" value="93" min="0" max="100" data-highlight="true">
                                 </p>
                                 <p>
-                                    The new block will appear below this paragraph.
+                                    2.100% eradication of wood .
+                                    <label for="slider"></label>
+                                    <input type="range" name="sliders" id="slider42" value="93" min="0" max="100" data-highlight="true">
                                 </p>
                                 <p>
-                                    The new block will appear below this paragraph.
+                                   3. 70% replacement of coal by PNG.
+                                   <label for="slider"></label>
+                                    <input type="range" name="sliders" id="slider43" value="93" min="0" max="100" data-highlight="true">
                                 </p>
-                                <p>
-                                    The new block will appear below this paragraph.
-                                </p>
+                               
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-7 col-md-8 col-sm-8 col-xs-8" id="actionGraphdiv">
+                <div class="col-lg-7 col-md-8 col-sm-8 col-xs-8 position-sticky" id="actionGraphdiv">
 
                     <div class="row">
 

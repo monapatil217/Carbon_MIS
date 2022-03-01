@@ -34,7 +34,7 @@ function actionchart() {
 
         var data = [{
             "Sectore": "Electricity",
-            "emission": 3.5,
+            "emission": -3,
             "changeemi": 4.2
         }, {
             "Sectore": "Transport",
@@ -48,10 +48,6 @@ function actionchart() {
             "Sectore": "Waste",
             "emission": 2.6,
             "changeemi": 2.3
-            // }, {
-            //     "Sectore": "Industry",
-            //     "emission": 1.4,
-            //     "changeemi": 2.1
         },
         {
             "Sectore": "Industry",
