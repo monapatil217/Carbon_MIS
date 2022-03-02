@@ -69,7 +69,7 @@ require "php/session.php";
 
 
 
-                <div class="col-lg-6 col-md-8 col-sm-8 col-xs-8 ml-3" id="actionGraphdiv">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ml-3" id="actionGraphdiv">
 
                     <div class="row">
 
@@ -156,7 +156,7 @@ require "php/session.php";
                 <div class="col-lg-1 ">
                 </div>
 
-                <div class="col-lg-5 col-md-4 col-sm-4 col-xs-4 container vertical-scrollable">
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 container vertical-scrollable">
                     <div class="card example-1 scrollbar-ripe-malinka">
                         <div class="card-header p-3 pt-2">
 
