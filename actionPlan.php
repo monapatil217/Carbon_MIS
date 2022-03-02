@@ -30,13 +30,12 @@ require "php/session.php";
     <!-- sectors icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
     <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css">
-    <script type='text/javascript' src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
-    <script src="colored.slider.js"></script>
+    
 
 
-    <style>
+    <!-- <style>
         #actionchart {
             width: auto;
             height: 500px;
@@ -47,7 +46,13 @@ require "php/session.php";
         } */
 
  
-    </style>
+    </style> -->
+    <style>
+        #actionchart {
+            width: 100%;
+            height: 500px;
+        }
+        </style>
 </head>
 
 <body> <?php
@@ -60,150 +65,11 @@ require "php/session.php";
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
             <h3 class="text-center mt-5">Take Action</h3>
-            <div class="row">
+            <div class="row actionPlanText">
 
-                <div class="col-lg-5 col-md-4 col-sm-4 col-xs-4">
+                
 
-                    <div class="row">
-                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
-                            <center>
-                                <h4 class="text-center mt-3">Electricity Sector</h4>
-                            </center>
-
-                            <div id="democontainer">
-                                <p>
-                                   1.50% renewable energy.
-                                    <label for="slider"></label>
-                                    <input type="range" name="sliders" id="slider1" value="93" min="0" max="100" data-highlight="true">
-                                </p>
-                                <p>
-                                   2.50% carbon capture in TPP .
-                                     <label for="slider"></label>
-                                    <input type="range" name="sliders" id="slider2" value="93" min="0" max="100" data-highlight="true">
-                                </p>
-                                <p>
-                                     3.25% Smart homes and utilities.
-                                     <label for="slider"></label>
-                                    <input type="range" name="sliders" id="slider3" value="93" min="0" max="100" data-highlight="true">
-                                </p>
-                               
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
-                            <center>
-                                <h4 class="text-center mb-2">transport Sector</h4>
-                            </center>
-
-                            <div id="democontainer">
-                            <p>
-                            Which of the following policies will you apply?
-                            </p>
-                                <p>
-                                   1. EV Policy.
-                                    <label for="slider"></label>
-                                    <input type="range" name="sliders" id="slider11" value="93" min="0" max="100" data-highlight="true">
-                                </p>
-                                <p>
-                                    2. Strengthening and Shared Public Transport.
-                                     <label for="slider"></label>
-                                    <input type="range" name="sliders" id="slider12" value="93" min="0" max="100" data-highlight="true">
-                                </p>
-                                <p>
-                                    3. Subsidisation of Public Transport.
-                                     <label for="slider"></label>
-                                    <input type="range" name="sliders" id="slider13" value="93" min="0" max="100" data-highlight="true">
-                                </p>
-                                <p>
-                                   4. Non-Motorised Transport.
-                                     <label for="slider"></label>
-                                    <input type="range" name="sliders" id="slider14" value="93" min="0" max="100" data-highlight="true">
-                                </p>
-                                <p>
-                                  5. Introduction of Congestion tax.
-                                     <label for="slider"></label>
-                                    <input type="range" name="sliders" id="slider15" value="93" min="0" max="100" data-highlight="true">
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
-                            <center>
-                                <h4 class="text-center mb-2">AFOLU Sector</h4>
-                            </center>
-                            <div id="democontainer">
-                                <p>
-                                    1.Sustainable Agriculture : 50% 2030.
-                                    <label for="slider"></label>
-                                    <input type="range" name="sliders" id="slider21" value="93" min="0" max="100" data-highlight="true">
-                                </p>
-                               
-                                    <p>
-                                   2.Livestock Management : 50% 2030.
-                                     <label for="slider"></label>
-                                    <input type="range" name="sliders" id="slider22" value="93" min="0" max="100" data-highlight="true">
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
-                            <center>
-                                <h4 class="text-center mb-2">Waste Sector</h4>
-                            </center>
-                            <div id="democontainer">
-                                <p>
-                                    How many daily wastage.(in %)
-                                    <label for="slider"></label>
-                                    <input type="range" name="sliders" id="slider31" value="93" min="0" max="100" data-highlight="true">
-                                </p>
-                                <p>
-                                    The new block will appear below this paragraph.
-                                </p>
-                                <p>
-                                    The new block will appear below this paragraph.
-                                </p>
-                                <p>
-                                    The new block will appear below this paragraph.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
-                            <center>
-                                <h4 class="text-center mb-2">Industry Sector</h4>
-                            </center>
-                            <div id="democontainer">
-                                <p>
-                                  1.100% FO replaced by PNG.
-                                    <label for="slider"></label>
-                                    <input type="range" name="sliders" id="slider41" value="93" min="0" max="100" data-highlight="true">
-                                </p>
-                                <p>
-                                    2.100% eradication of wood .
-                                    <label for="slider"></label>
-                                    <input type="range" name="sliders" id="slider42" value="93" min="0" max="100" data-highlight="true">
-                                </p>
-                                <p>
-                                   3. 70% replacement of coal by PNG.
-                                   <label for="slider"></label>
-                                    <input type="range" name="sliders" id="slider43" value="93" min="0" max="100" data-highlight="true">
-                                </p>
-                               
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-7 col-md-8 col-sm-8 col-xs-8 position-sticky" id="actionGraphdiv">
+                <div class="col-lg-6 col-md-8 col-sm-8 col-xs-8 ml-3" id="actionGraphdiv">
 
                     <div class="row">
 
@@ -211,7 +77,7 @@ require "php/session.php";
                             <div class="card">
                                 <div class="card-header p-3 pt-2">
                                     <div class="rounded mt-n4 position-absolute iconAdmin">
-                                        <center><i class="fa fa-bolt mt-2 " aria-hidden="true" style="font-size:36px;color:black"></i></center>
+                                        <center><i class="fa fa-bolt mt-2 " aria-hidden="true" style="font-size:26px;color:#e9ecef"></i></center>
                                     </div>
                                     <div class="text-end pt-1">
                                         <p class="text-sm mb-0 text-capitalize">Electricity</p>
@@ -225,7 +91,7 @@ require "php/session.php";
                             <div class="card">
                                 <div class="card-header p-3 pt-2">
                                     <div class="rounded mt-n4 position-absolute iconAdmin">
-                                        <center><i class="fa fa-automobile mt-2 " style="font-size:36px;color:black"></i></center>
+                                        <center><i class="fa fa-automobile mt-2 " style="font-size:26px;color:#e9ecef"></i></center>
                                     </div>
                                     <div class="text-end pt-1">
                                         <p class="text-sm mb-0 text-capitalize">Transport</p>
@@ -240,8 +106,8 @@ require "php/session.php";
                         <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-4 mt-3" data-aos-delay="200">
                             <div class="card">
                                 <div class="card-header p-3 pt-2">
-                                    <div class="bg-light bg-gradient rounded mt-n4 position-absolute iconAdmin">
-                                        <center><i class="fa fa-tree mt-2 " aria-hidden="true" style="font-size:36px;color:black"></i></center>
+                                    <div class="rounded mt-n4 position-absolute iconAdmin">
+                                        <center><i class="fa fa-tree mt-2 " aria-hidden="true" style="font-size:26px;color:#e9ecef"></i></center>
 
                                     </div>
                                     <div class="text-end pt-1">
@@ -254,8 +120,8 @@ require "php/session.php";
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  mt-3">
                             <div class="card">
                                 <div class="card-header p-3 pt-2">
-                                    <div class="bg-light bg-gradient rounded mt-n4 position-absolute iconAdmin">
-                                        <center><i class="bi-trash mt-2 " style="font-size:36px;color:black"></i></center>
+                                    <div class="rounded mt-n4 position-absolute iconAdmin">
+                                        <center><i class="bi-trash mt-2 " style="font-size:26px;color:#e9ecef"></i></center>
                                     </div>
                                     <div class="text-end pt-1">
                                         <p class="text-sm mb-0 text-capitalize">Waste</p>
@@ -267,8 +133,8 @@ require "php/session.php";
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mt-3">
                             <div class="card">
                                 <div class="card-header p-3 pt-2">
-                                    <div class="bg-light bg-gradient rounded mt-n4 position-absolute iconAdmin">
-                                        <center><i class="fa fa-industry mt-2 mb-2" aria-hidden="true" style="font-size:36px;color:black"></i></center>
+                                    <div class="rounded mt-n4 position-absolute iconAdmin">
+                                        <center><i class="fa fa-industry mt-2 mb-2" aria-hidden="true" style="font-size:26px;color:#e9ecef"></i></center>
                                     </div>
                                     <div class="text-end pt-1">
                                         <p class="text-sm mb-0 text-capitalize">Industry</p>
@@ -279,6 +145,7 @@ require "php/session.php";
                         </div>
                     </div>
                     <div class="row">
+
                         <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
 
                             <div id="actionchart">
@@ -286,7 +153,169 @@ require "php/session.php";
                         </div>
                     </div>
                 </div>
+                        <div class="col-lg-1 ">
+                        </div>
+
+                <div class="col-lg-5 col-md-4 col-sm-4 col-xs-4 container vertical-scrollable">
+                <div class="card">
+                <div class="card-header p-3 pt-2">
+
+                    <div class="row">
+                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
+                            <center>
+                                <h4 class="text-center mt-3">Electricity</h4>
+                            </center>
+
+                            <div id="democontainer">
+                             <p>                          
+                            Which of the following policies will you apply?
+                            </p>
+                                <p>
+                                    1. Renewable Energy.
+                                    <label for="slider"></label>
+                                    <input type="range" name="sliders" class="input-range input-rangeE1" id="ele1" value="100" min="0" max="100" data-highlight="true">
+                                    <span class="range-value range-valueV1"></span>
+                                </p>
+                                <p>
+                                   2. Carbon Capture in TPP.
+                                     <label for="slider"></label>
+                                    <input type="range" name="sliders" class="input-range  input-rangeE2" id="ele2" value="100" min="0" max="100" data-highlight="true">
+                                    <span class="range-value range-valueV2"></span>
+                                </p>
+                                <p>
+                                     3. Smart homes & utilities.
+                                     <label for="slider"></label>
+                                    <input type="range" name="sliders" class="input-range  input-rangeE3" id="ele3" value="100" min="0" max="100" data-highlight="true">
+                                    <span class="range-value range-valueV3"></span>
+                                </p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="row">
+                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
+                            <center>
+                                <h4 class="text-center mb-2">Transport</h4>
+                            </center>
+
+                            <div id="democontainer">
+                            <p>
+                            Which of the following policies will you apply?
+                            </p>
+                                <p>
+                                   1. EV Policy.
+                                    <label for="slider"></label>
+                                    <input type="range" name="sliders" id="trans1" value="93" min="0" max="100" data-highlight="true">
+                                </p>
+                                <p>
+                                    2. Strengthening and Shared Public Transport.
+                                     <label for="slider"></label>
+                                    <input type="range" name="sliders" id="trans1" value="93" min="0" max="100" data-highlight="true">
+                                </p>
+                                <p>
+                                    3. Subsidisation of Public Transport.
+                                     <label for="slider"></label>
+                                    <input type="range" name="sliders" id="trans2" value="93" min="0" max="100" data-highlight="true">
+                                </p>
+                                <p>
+                                   4. Non-Motorised Transport.
+                                     <label for="slider"></label>
+                                    <input type="range" name="sliders" id="trans3" value="93" min="0" max="100" data-highlight="true">
+                                </p>
+                                <p>
+                                  5. Introduction of Congestion tax.
+                                     <label for="slider"></label>
+                                    <input type="range" name="sliders" id="trans4" value="93" min="0" max="100" data-highlight="true">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                     <hr>
+                    <div class="row">
+                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
+                            <center>
+                                <h4 class="text-center mb-2">AFOLU</h4>
+                            </center>
+                            <div id="democontainer">
+                                <p>
+                                Which of the following policies will you apply?
+                                </p>
+                                <p>
+                                 1. Adopting Sustainable Agricultural Practices .
+                                    <label for="slider"></label>
+                                    <input type="range" name="sliders" id="afolu1" value="93" min="0" max="100" data-highlight="true">
+                                </p>
+                               
+                                    <p>
+                                  2. Livestock Management .
+                                     <label for="slider"></label>
+                                    <input type="range" name="sliders" id="afolu2" value="93" min="0" max="100" data-highlight="true">
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                     <hr>
+                    <div class="row">
+                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
+                            <center>
+                                <h4 class="text-center mb-2">Waste Sector</h4>
+                            </center>
+                            <div id="democontainer">
+                            <p>
+                            Which of the following policies will you apply?
+                            </p>
+                                <p>
+                                   1. Reducing the amount of waste sent to landfill.
+                                    <label for="slider"></label>
+                                    <input type="range" name="sliders" id="waste1" value="93" min="0" max="100" data-highlight="true">
+                                </p>
+                                <p>
+                                   2. Increasing the amount of waste composted.
+                                     <label for="slider"></label>
+                                    <input type="range" name="sliders" id="waste1" value="93" min="0" max="100" data-highlight="true">
+                                </p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                     <hr>
+                    <div class="row">
+                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
+                            <center>
+                                <h4 class="text-center mb-2">Industry Sector</h4>
+                            </center>
+                            <div id="democontainer">
+                            <p>                          
+                            Which of the following policies will you apply?
+                            </p>
+                                <p>
+                                 1. Coal Policy.
+                                    <label for="slider"></label>
+                                    <input type="range" name="sliders" id="indu1" value="93" min="0" max="100" data-highlight="true">
+                                </p>
+                                <p>
+                                   2.FO Policy.
+                                    <label for="slider"></label>
+                                    <input type="range" name="sliders" id="indu2" value="93" min="0" max="100" data-highlight="true">
+                                </p>
+                                <p>
+                                 3.Eradication of Wood .
+                                   <label for="slider"></label>
+                                    <input type="range" name="sliders" id="indu3" value="93" min="0" max="100" data-highlight="true">
+                                </p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                     <hr>
+                </div>
+                 </div>
+                </div>
             </div>
+
         </div>
 
     </section><!-- End Hero -->
@@ -316,6 +345,8 @@ require "php/session.php";
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/vendor/jbox/jBox.all.min.js"></script>
     <script src="assets/js/bootstrap-show-modal.js"></script>
+    <script type='text/javascript' src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
+    <!-- <script src="js/colored.slider.js"></script> -->
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <!-- Our JS Files -->
