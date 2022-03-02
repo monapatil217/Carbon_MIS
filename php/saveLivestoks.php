@@ -64,10 +64,10 @@ array_push($finalArrayforest,$forestArray);
                 $result = mysqli_query($conn, $query2);
                 while ($row = mysqli_fetch_array($result)) {
                     $co2e =  $row['ncv'];
-                    $carbonco2 +=  $co2e * $value;
+                    $carbonch4 +=  $co2e * $value;
                 }
         }
-        $carbonco2 = round((($carbonco2*21)/1000000),2);
+        $carbonch4 = round(($carbonch4/1000),2);
 //end calculation
 
 

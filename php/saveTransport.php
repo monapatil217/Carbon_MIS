@@ -116,9 +116,9 @@ foreach ($dataArray as $row) {
             $co2ef = $row['co2ef'];
             $ch4ef = $row['ch4ef'];
             $n2oef = $row['n2oef'];
-            $carbonco2 += ($km1 *  $approx_fuel * $density * $ncv * $co2ef)/1000000;
-            $carbonch4 += ($km1 *  $approx_fuel * $density * $ncv * $ch4ef)/1000000;
-            $carbonn2o += ($km1 *  $approx_fuel * $density * $ncv * $n2oef)/1000000;
+            $carbonco2 += ($km1 *  $approx_fuel * $density * $ncv * $co2ef *365)/1000;
+            $carbonch4 += ($km1 *  $approx_fuel * $density * $ncv * $ch4ef *365)/1000;
+            $carbonn2o += ($km1 *  $approx_fuel * $density * $ncv * $n2oef *365)/1000;
         }
     }
 }

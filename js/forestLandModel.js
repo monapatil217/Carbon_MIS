@@ -52,7 +52,7 @@ function showForestLand() {
                             + '<i class="bi-info-circle-fill" data-toggle="tooltip" data-placement="top" title="It is area occupied by bushland, \ngardens, parks,biodiversity corridors, nature reserves,\n street trees and rooftop gardens."></i>'
                             + '<div class="input-group mb-3">'
                             + '<input type="text" id="areaForest" class="form-control" value="' + element1.areaForest + '" placeholder="Area" aria-label="Area" aria-describedby="basic-addon2">'
-                            + '<span class="input-group-text" id="basic-addon2">hectare</span >'
+                            + '<span class="input-group-text" id="basic-addon2">ha</span >'
                             + '</div>'
                             + '</div>'
                             + '</div>'
@@ -83,7 +83,7 @@ function showForestLand() {
                             + '<label for="disturbance" class="form-label"> Forest area affected by Disturbances </label >'
                             + '<div class="input-group mb-3">'
                             + '<input type="text" id="disturbance" name="disturbance" class="form-control" value="' + element1.disturbance + '" placeholder="affected by distrbance" aria-label="affected by distrbance" aria-describedby="basic-addon2">'
-                            + '<span class="input-group-text" id="basic-addon2">ha/year </span >'
+                            + '<span class="input-group-text" id="basic-addon2">ha </span >'
                             + '</div>'
                             + '</div>'
                             + '</div>';
@@ -136,7 +136,7 @@ function showForestLand() {
                         + '<label for="disturbance" class="form-label"> Forest Area Affected by Disturbances </label >'
                         + '<div class="input-group mb-3">'
                         + '<input type="text" id="disturbance" name="disturbance" class="form-control" placeholder="Affected by Disturbance" aria-label="Affected by Disturbance" aria-describedby="basic-addon2">'
-                        + '<span class="input-group-text" id="basic-addon2">sq.km </span >'
+                        + '<span class="input-group-text" id="basic-addon2">ha </span >'
                         + '</div>'
                         + '</div>'
                         + '</div>';
@@ -171,14 +171,14 @@ function saveForestData() {
     var roundWood = document.getElementById("roundWood").value;
     if (areaForest < roundWood) {
         alert("filled Data not valide number");
-       flag++;
-      }
+        flag++;
+    }
 
     var fuelWood = document.getElementById("fuelWood").value;
     if (areaForest < fuelWood) {
         alert("filled Data not valide number");
-       flag++;
-      }
+        flag++;
+    }
 
     var disturbance = document.getElementById("disturbance").value;
 
