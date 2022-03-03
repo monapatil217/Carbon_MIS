@@ -65,13 +65,14 @@ foreach ($finalArrayEe as $row) {
                 $co2 =  $row['co2'];
                 $ch4 =  $row['ch4'];
                 $n2o =  $row['n2o'];
-               $carbonco2 += ($value* $ncv * $co2*0.001*1)/1000000;
-               $carbonch4 += ($value* $ncv * $ch4 *0.001*1)/1000000;
-               $carbonn2o += ($value*$ncv * $n2o *0.001*1)/1000000;
+               $carbonco2 += ($value* $ncv * $co2*0.001*1)/1000;
+               $carbonch4 += ($value* $ncv * $ch4 *0.001*1)/1000;
+               $carbonn2o += ($value*$ncv * $n2o *0.001*1)/1000;
+               //echo"<br> ".$name."==".$value."ch4==".$carbonch4."<br>ncv".$ncv."<br>ef".$ch4."<br>  ";
         }
 }
 //end calculation
-
+//echo $carbonco2."<br>ch4".$carbonch4."<br>n2o".$carbonn2o;
 $query2 = "SELECT * FROM indu_eng_data WHERE b_id='" . $basicId . "'";
 $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
 

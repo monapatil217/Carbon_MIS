@@ -40,7 +40,7 @@ if (is_array($row)){
           $typevalue = $notcollected * $fra_methane * $methane * $ef;
           $addMethane += $typevalue;
      }
-     $wateremission = ($addMethane / 1000) * 21;
+     $carbonch4 = ($addMethane / 1000000);
      $preYearpop = $population-((3.20/100)*$population);
 
      $nitrogen = 1;
@@ -51,8 +51,8 @@ if (is_array($row)){
           $nitrogen = $nitrogen * $fac_nitrogen;
      }
 
-     $eff = (($population *  $nitrogen) / 1000) * 310;
-     $totalemmition = ($wateremission + $eff) / 365;
+     $carbonn2o = (($population *  $nitrogen) / 1000000);
+     $totalemmition = ($carbonch4 + $carbonn2o) / 365;
 
 $query2 = "SELECT * FROM waste_data WHERE b_id='" . $basicId . "'";
 $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
