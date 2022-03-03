@@ -13,6 +13,10 @@ $hw_treat = $data->hw_treat;
 $carbonco2 = 0;
 $carbonch4 = 0;
 $carbonn2o = 0;
+$carbonco2 =(($hw_treat/1000)*365)*0.45;
+$carbonch4 = ((($hw_treat/1000)*365)*0.2)/1000000;
+$carbonn2o =((($hw_treat/1000)*365)*100)/1000000;
+
 
 $query2 = "SELECT * FROM hw_data WHERE b_id='" . $basicId . "'";
 $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
