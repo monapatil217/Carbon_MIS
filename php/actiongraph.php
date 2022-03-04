@@ -4,6 +4,7 @@ $json = file_get_contents('php://input');
 $data = json_decode($json);
 $basicId = $data->basicId;
 $finalDataArray = [];
+$dataArray=[];
 $tableEmiarray= array (
     array("ele_emi"),
     array("trans_emi"),
@@ -31,8 +32,10 @@ $tableEmiarray= array (
                 $mainData['Sectore'] = $category[$j];
                 $mainData['emission'] = $value;
                 $mainData['changeemi'] = $value;
-                array_push($finalDataArray, $mainData);
+                array_push($dataArray, $mainData);
 
         }
+        $mainArray["data"]=$dataArray;
+        array_push($finalDataArray, $mainArray);
         echo  json_encode($finalDataArray);
 ?>
