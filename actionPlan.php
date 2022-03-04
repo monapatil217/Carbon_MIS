@@ -27,13 +27,15 @@ require "php/session.php";
     <link href="assets/vendor/jbox/jBox.all.min.css" rel="stylesheet">
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/template-rangebar.css" rel="stylesheet">
+    <link href="assets/css/rangebar.css" rel="stylesheet">
     <!-- sectors icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
     <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css">
 
-
+    <link rel="stylesheet" type="text/css" href="slideControl.css" />
 
     <!-- <style>
         #actionchart {
@@ -168,19 +170,20 @@ require "php/session.php";
 
                                     <div id="democontainer">
                                         <p>
-                                            Which of the following policies will you apply?
+                                            Which of the following policies will you apply?                                
                                         </p>
                                         <p>
+                                            <div class="range-slider">
                                             1. Renewable Energy.
-                                            <label for="slider"></label>
-                                            <input type="range" name="sliders" class="input-range input-rangeE1" id="ele1" value="100" min="0" max="100" data-highlight="true">
-                                            <span class="range-value range-valueV1"></span>
-                                        </p>
+                                             <input class="range-slider__range range-slider__range1" type="range" id="ele1" value="100" min="0" max="100">
+                                                 <span class="range-slider__value1">0</span>
+                                                </div>
                                         <p>
+                                            <div class="range-slider">
                                             2. Carbon Capture in TPP.
-                                            <label for="slider"></label>
-                                            <input type="range" name="sliders" class="input-range  input-rangeE2" id="ele2" value="100" min="0" max="100" data-highlight="true">
-                                            <span class="range-value range-valueV2"></span>
+                                             <input class="range-slider__range range-slider__range2" type="range" id="ele2" value="100" min="0" max="100">
+                                                 <span class="range-slider__value2">0</span>
+                                                </div>
                                         </p>
                                         <p>
                                             3. Smart homes & utilities.
@@ -332,6 +335,8 @@ require "php/session.php";
     <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+ 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
@@ -345,7 +350,7 @@ require "php/session.php";
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/vendor/jbox/jBox.all.min.js"></script>
     <script src="assets/js/bootstrap-show-modal.js"></script>
-    <script type='text/javascript' src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
+    <!-- <script type='text/javascript' src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script> -->
     <!-- <script src="js/colored.slider.js"></script> -->
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
@@ -354,8 +359,7 @@ require "php/session.php";
     <script src="js/actionPlan.js"></script>
 
     <script src="js/common.js"></script>
-    <script src="js/common.js"></script>
-
+    <script src="assets/js/scrollreveal.min.js"></script>
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-36251023-1']);
@@ -371,6 +375,46 @@ require "php/session.php";
             s.parentNode.insertBefore(ga, s);
         })();
     </script>
+
+<script>
+    function updateTextInput(val) {
+          document.getElementById('textInput').value=val; 
+        }
+    </script>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.slideControl.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.slideControl').slideControl();
+});
+</script>
+
+<!-- Range Bar -->
+<script>
+//     var rangeSlider = function(){
+//   var slider = $('.range-slider'),
+//       range = $('.range-slider__range'),
+//       value = $('.range-slider__value');
+    
+//   slider.each(function(){
+
+//     value.each(function(){
+//       var value = $(this).prev().attr('value');
+//       $(this).html(value);
+//     });
+
+//     range.on('input', function(){
+//       $(this).next(value).html(this.value);
+//     });
+//   });
+// };
+
+// rangeSlider();
+    </script>
+
 
 </body>
 

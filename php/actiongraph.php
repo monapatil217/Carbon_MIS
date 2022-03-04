@@ -13,7 +13,7 @@ $tableEmiarray= array (
     array("indu_eng_emi","indu_cem_emi","indu_chem_emi","indu_other_emi"),
    );
    // array("fule_emi"),add cokking data when rquired
-   $category = ["Eletricity","Transport","AFOLU","Solid Waste","Industry"];
+   $category = ["Eletricity","Transport","AFOLU","Waste","Industry"];
 
     for($j = 0; $j<sizeof($tableEmiarray);$j++){
         $value = 0;
@@ -30,8 +30,8 @@ $tableEmiarray= array (
                 
             }
                 $mainData['Sectore'] = $category[$j];
-                $mainData['emission'] = $value;
-                $mainData['changeemi'] = $value;
+                $mainData['emission'] =round($value,2);
+                $mainData['changeemi'] =round($value,2);
                 array_push($dataArray, $mainData);
 
         }
