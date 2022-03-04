@@ -3,11 +3,11 @@
 }
 body {
     font-family: sans-serif;
-    padding: 60px 20px;
+    /* padding: 60px 20px; */
 }
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     body {
-        padding: 60px;
+        /* padding: 60px; */
    }
 }
 .range-slider {
