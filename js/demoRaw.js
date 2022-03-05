@@ -1,12 +1,13 @@
 
 $(document).ready(function () {
 
-    // showInput();
+// showInput();
+
 
     // Get the element with id="defaultOpen" and click on it
     // document.getElementById("defaultOpen").click();
-
-    document.getElementById("addModel").style.display = "none";
+    document.getElementById("addModel").style.display = "none";  
+    
 
 })
 
