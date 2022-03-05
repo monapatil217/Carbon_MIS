@@ -1,20 +1,91 @@
 $(document).ready(function () {
     actionchart();
-    
+
 })
-var range1 = $('.range-slider__range1'),
-value1 = $('.range-slider__value1');
-value1.html(range1.attr('value'));
-range1.on('input', function () {
-    // alert("hii");
-    value1.html(this.value);
-    value2.html(this.value);
-    document.getElementById("ele2").max= this.value;
-    document.getElementById("ele2").value= this.value;
+//Electricity range bar start
+var rangeE1 = $('.range-slider__rangeE1'),
+    valueE1 = $('.range-slider__valueE1');
+valueE1.html(rangeE1.attr('value'));
+rangeE1.on('input', function () {
+    valueE1.html(this.value);
+    valueE2.html(this.value);
+    valueE3.html(this.value);
+    document.getElementById("ele2").max = this.value;
+    document.getElementById("ele3").max = this.value;
 });
-var range2 = $('.range-slider__range2'),
-value2 = $('.range-slider__value2');
-value2.html(range1.attr('value'));
+var rangeE2 = $('.range-slider__rangeE2'),
+    valueE2 = $('.range-slider__valueE2');
+valueE2.html(rangeE1.attr('value'));
+rangeE2.on('input', function () {
+    valueE2.html(this.value);
+    valueE3.html(this.value);
+    document.getElementById("ele3").max = this.value;
+});
+var rangeE3 = $('.range-slider__rangeE3'),
+    valueE3 = $('.range-slider__valueE3');
+valueE3.html(rangeE3.attr('value'));
+rangeE3.on('input', function () {
+    valueE3.html(this.value);
+});
+//Electricity range bar end
+
+//Transport range bar start
+var rangeT1 = $('.range-slider__rangeT1'),
+    valueT1 = $('.range-slider__valueT1');
+valueT1.html(rangeT1.attr('value'));
+rangeT1.on('input', function () {
+    valueT1.html(this.value);
+    valueT2.html(this.value);
+    valueT3.html(this.value);
+    valueT4.html(this.value);
+    valueT5.html(this.value);
+    document.getElementById("trans2").max = this.value;
+    document.getElementById("trans3").max = this.value;
+    document.getElementById("trans4").max = this.value;
+    document.getElementById("trans5").max = this.value;
+});
+var rangeT2 = $('.range-slider__rangeT2'),
+    valueT2 = $('.range-slider__valueT2');
+valueT2.html(rangeT2.attr('value'));
+rangeT2.on('input', function () {
+    valueT2.html(this.value);
+    valueT3.html(this.value);
+    valueT4.html(this.value);
+    valueT5.html(this.value);
+    document.getElementById("trans3").max = this.value;
+    document.getElementById("trans4").max = this.value;
+    document.getElementById("trans5").max = this.value;
+});
+var rangeT3 = $('.range-slider__rangeT3'),
+    valueT3 = $('.range-slider__valueT3');
+valueT3.html(rangeT3.attr('value'));
+rangeT3.on('input', function () {
+    valueT3.html(this.value);
+    valueT4.html(this.value);
+    valueT5.html(this.value);
+    document.getElementById("trans4").max = this.value;
+    document.getElementById("trans5").max = this.value;
+});
+var rangeT4 = $('.range-slider__rangeT4'),
+    valueT4 = $('.range-slider__valueT4');
+valueT4.html(rangeT4.attr('value'));
+rangeT4.on('input', function () {
+    valueT4.html(this.value);
+    valueT5.html(this.value);
+
+    document.getElementById("trans5").max = this.value;
+});
+var rangeT5 = $('.range-slider__rangeT5'),
+    valueT5 = $('.range-slider__valueT5');
+valueT5.html(rangeT5.attr('value'));
+rangeT5.on('input', function () {
+
+    valueT5.html(this.value);
+});
+
+
+
+
 
 
 function actionchart() {

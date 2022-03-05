@@ -170,26 +170,21 @@ require "php/session.php";
 
                                     <div id="democontainer">
                                         <p>
-                                            Which of the following policies will you apply?                                
+                                            Application of Policies in Percentage(%)
                                         </p>
                                         <p>
-                                            <div class="range-slider">
                                             1. Renewable Energy.
-                                             <input class="range-slider__range range-slider__range1" type="range" id="ele1" value="100" min="0" max="100">
-                                                 <span class="range-slider__value1">0</span>
-                                                </div>
+                                             <input class="range-slider__range range-slider__rangeE1" type="range" id="ele1" value="100" min="0" max="100">
+                                                 <span class="range-slider__value range-slider__valueE1"></span>
                                         <p>
-                                            <div class="range-slider">
                                             2. Carbon Capture in TPP.
-                                             <input class="range-slider__range range-slider__range2" type="range" id="ele2" value="100" min="0" max="100">
-                                                 <span class="range-slider__value2">0</span>
-                                                </div>
+                                             <input class="range-slider__range range-slider__rangeE2" type="range" id="ele2" value="100" min="0" max="100">
+                                                 <span class="range-slider__value range-slider__valueE2"></span>
                                         </p>
                                         <p>
                                             3. Smart homes & utilities.
-                                            <label for="slider"></label>
-                                            <input type="range" name="sliders" class="input-range  input-rangeE3" id="ele3" value="100" min="0" max="100" data-highlight="true">
-                                            <span class="range-value range-valueV3"></span>
+                                            <input class="range-slider__range range-slider__rangeE3" type="range" id="ele3" value="100" min="0" max="100">
+                                                 <span class="range-slider__value range-slider__valueE3"></span>
                                         </p>
 
                                     </div>
@@ -205,32 +200,32 @@ require "php/session.php";
 
                                     <div id="democontainer">
                                         <p>
-                                            Which of the following policies will you apply?
+                                            Application of Policies in Percentage(%)
                                         </p>
                                         <p>
                                             1. EV Policy.
-                                            <label for="slider"></label>
-                                            <input type="range" name="sliders" id="trans1" value="93" min="0" max="100" data-highlight="true">
+                                            <input class="range-slider__range range-slider__rangeT1" type="range" id="trans1" value="100" min="0" max="100">
+                                            <span class="range-slider__value range-slider__valueT1"></span>
                                         </p>
                                         <p>
                                             2. Strengthening and Shared Public Transport.
-                                            <label for="slider"></label>
-                                            <input type="range" name="sliders" id="trans1" value="93" min="0" max="100" data-highlight="true">
+                                            <input class="range-slider__range range-slider__rangeT2" type="range" id="trans2" value="100" min="0" max="100">
+                                            <span class="range-slider__value range-slider__valueT2"></span>
                                         </p>
                                         <p>
                                             3. Subsidisation of Public Transport.
-                                            <label for="slider"></label>
-                                            <input type="range" name="sliders" id="trans2" value="93" min="0" max="100" data-highlight="true">
+                                            <input class="range-slider__range range-slider__rangeT3" type="range" id="trans3" value="100" min="0" max="100">
+                                            <span class="range-slider__value range-slider__valueT3"></span>
                                         </p>
                                         <p>
                                             4. Non-Motorised Transport.
-                                            <label for="slider"></label>
-                                            <input type="range" name="sliders" id="trans3" value="93" min="0" max="100" data-highlight="true">
-                                        </p>
+                                            <input class="range-slider__range range-slider__rangeT4" type="range" id="trans4" value="100" min="0" max="100">
+                                            <span class="range-slider__value range-slider__valueT4"></span>
+                                        </p> 
                                         <p>
                                             5. Introduction of Congestion tax.
-                                            <label for="slider"></label>
-                                            <input type="range" name="sliders" id="trans4" value="93" min="0" max="100" data-highlight="true">
+                                            <input class="range-slider__range range-slider__rangeT5" type="range" id="trans5" value="100" min="0" max="100">
+                                            <span class="range-slider__value range-slider__valueT5"></span>
                                         </p>
                                     </div>
                                 </div>
@@ -243,18 +238,18 @@ require "php/session.php";
                                     </center>
                                     <div id="democontainer">
                                         <p>
-                                            Which of the following policies will you apply?
+                                            Application of Policies in Percentage(%)
                                         </p>
                                         <p>
                                             1. Adopting Sustainable Agricultural Practices .
-                                            <label for="slider"></label>
-                                            <input type="range" name="sliders" id="afolu1" value="93" min="0" max="100" data-highlight="true">
+                                            <input class="range-slider__range range-slider__range2" type="range" id="ele3" value="100" min="0" max="100">
+                                            <span class="range-slider__value2">0</span>
                                         </p>
 
                                         <p>
                                             2. Livestock Management .
-                                            <label for="slider"></label>
-                                            <input type="range" name="sliders" id="afolu2" value="93" min="0" max="100" data-highlight="true">
+                                            <input class="range-slider__range range-slider__range2" type="range" id="ele3" value="100" min="0" max="100">
+                                            <span class="range-slider__value2">0</span>
                                         </p>
 
                                     </div>
@@ -268,17 +263,17 @@ require "php/session.php";
                                     </center>
                                     <div id="democontainer">
                                         <p>
-                                            Which of the following policies will you apply?
+                                            Application of Policies in Percentage(%)
                                         </p>
                                         <p>
-                                            1. Reducing the amount of waste sent to landfill.
-                                            <label for="slider"></label>
-                                            <input type="range" name="sliders" id="waste1" value="93" min="0" max="100" data-highlight="true">
+                                                1. Reducing the amount of waste sent to landfill.
+                                                <input class="range-slider__range range-slider__range2" type="range" id="ele3" value="100" min="0" max="100">
+                                                <span class="range-slider__value2">0</span>
                                         </p>
                                         <p>
-                                            2. Increasing the amount of waste composted.
-                                            <label for="slider"></label>
-                                            <input type="range" name="sliders" id="waste1" value="93" min="0" max="100" data-highlight="true">
+                                                2. Increasing the amount of waste composted.
+                                                <input class="range-slider__range range-slider__range2" type="range" id="ele3" value="100" min="0" max="100">
+                                                 <span class="range-slider__value2">0</span>
                                         </p>
 
                                     </div>
@@ -292,22 +287,22 @@ require "php/session.php";
                                     </center>
                                     <div id="democontainer">
                                         <p>
-                                            Which of the following policies will you apply?
+                                            Application of Policies in Percentage(%)
                                         </p>
                                         <p>
-                                            1. Coal Policy.
-                                            <label for="slider"></label>
-                                            <input type="range" name="sliders" id="indu1" value="93" min="0" max="100" data-highlight="true">
+                                                1. Coal Policy.
+                                                <input class="range-slider__range range-slider__range2" type="range" id="ele3" value="100" min="0" max="100">
+                                                <span class="range-slider__value2">0</span>
                                         </p>
                                         <p>
-                                            2.FO Policy.
-                                            <label for="slider"></label>
-                                            <input type="range" name="sliders" id="indu2" value="93" min="0" max="100" data-highlight="true">
+                                                2.FO Policy.
+                                                <input class="range-slider__range range-slider__range2" type="range" id="ele3" value="100" min="0" max="100">
+                                                <span class="range-slider__value2">0</span>
                                         </p>
                                         <p>
-                                            3.Eradication of Wood .
-                                            <label for="slider"></label>
-                                            <input type="range" name="sliders" id="indu3" value="93" min="0" max="100" data-highlight="true">
+                                                3.Eradication of Wood .
+                                                <input class="range-slider__range range-slider__range2" type="range" id="ele3" value="100" min="0" max="100">
+                                                <span class="range-slider__value2">0</span>
                                         </p>
 
                                     </div>
