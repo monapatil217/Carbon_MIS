@@ -4,7 +4,7 @@
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
-        <h3><a><b>Carbon Neutral Amrut Cities MIS</b></a></h3><br>
+        <h4><a><b>Carbon Neutral Amrut Cities MIS</b></a></h4><br>
         <h5></h5>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -67,7 +67,12 @@
                             <li><a href="#">Drop Down 4</a></li>
                         </ul>
                     </li> -->
-                <li><a class="nav-link scrollto" href="graph.php">Graph</a></li>
+                  <li class="dropdown"><a><span>View</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a class="nav-link scrollto" href="graph.php">Graph</a></li>
+                        <li><a class="nav-link scrollto" href="actionPlan.php">Action Plan</a></li>
+                    </ul>
+                </li>
                 <?php if (isset($_SESSION['cityName'])) { ?> <li><a class="getstarted scrollto"
                         href="php/logout.php">Logout</a></li>
                 <li>

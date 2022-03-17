@@ -170,7 +170,7 @@ require "php/session.php";
 
                                     <div id="democontainer">
                                         <p>
-                                            Application of Policies in Percentage(%)
+                                            Application of Policies in Percentage(%).
                                         </p>
                                         <p>
                                             1. Renewable Energy.
@@ -200,7 +200,7 @@ require "php/session.php";
 
                                     <div id="democontainer">
                                         <p>
-                                            Application of Policies in Percentage(%)
+                                            Application of Policies in Percentage(%).
                                         </p>
                                         <p>
                                             1. EV Policy.
@@ -238,18 +238,18 @@ require "php/session.php";
                                     </center>
                                     <div id="democontainer">
                                         <p>
-                                            Application of Policies in Percentage(%)
+                                            Application of Policies in Percentage(%).
                                         </p>
                                         <p>
                                             1. Adopting Sustainable Agricultural Practices .
-                                            <input class="range-slider__range range-slider__range2" type="range" id="ele3" value="100" min="0" max="100">
-                                            <span class="range-slider__value2">0</span>
+                                            <input class="range-slider__range range-slider__rangeAF1" type="range" id="AFOLU1" value="100" min="0" max="100">
+                                            <span class="range-slider__value range-slider__valueAF1"></span>
                                         </p>
 
                                         <p>
                                             2. Livestock Management .
-                                            <input class="range-slider__range range-slider__range2" type="range" id="ele3" value="100" min="0" max="100">
-                                            <span class="range-slider__value2">0</span>
+                                            <input class="range-slider__range range-slider__rangeAF2" type="range" id="AFOLU2" value="100" min="0" max="100">
+                                            <span class="range-slider__value range-slider__valueAF2"></span>
                                         </p>
 
                                     </div>
@@ -267,18 +267,19 @@ require "php/session.php";
                                         </p>
                                         <p>
                                                 1. Reducing the amount of waste sent to landfill.
-                                                <input class="range-slider__range range-slider__range2" type="range" id="ele3" value="100" min="0" max="100">
-                                                <span class="range-slider__value2">0</span>
+                                                <input class="range-slider__range range-slider__rangew1" type="range" id="W1" value="100" min="0" max="100">
+                                                <span class="range-slider__value range-slider__valuew1">0</span>
                                         </p>
                                         <p>
                                                 2. Increasing the amount of waste composted.
-                                                <input class="range-slider__range range-slider__range2" type="range" id="ele3" value="100" min="0" max="100">
-                                                 <span class="range-slider__value2">0</span>
+                                                <input class="range-slider__range range-slider__rangew2" type="range" id="W2" value="100" min="0" max="100">
+                                                 <span class="range-slider__value range-slider__valuew2">0</span>
                                         </p>
 
                                     </div>
                                 </div>
                             </div>
+                            
                             <hr>
                             <div class="row">
                                 <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
@@ -291,23 +292,24 @@ require "php/session.php";
                                         </p>
                                         <p>
                                                 1. Coal Policy.
-                                                <input class="range-slider__range range-slider__range2" type="range" id="ele3" value="100" min="0" max="100">
-                                                <span class="range-slider__value2">0</span>
+                                                <input class="range-slider__range range-slider__rangei1" type="range" id="indu1" value="100" min="0" max="100">
+                                                <span class="range-slider__value range-slider__valuei1"></span>
                                         </p>
                                         <p>
                                                 2.FO Policy.
-                                                <input class="range-slider__range range-slider__range2" type="range" id="ele3" value="100" min="0" max="100">
-                                                <span class="range-slider__value2">0</span>
+                                                <input class="range-slider__range range-slider__rangei2" type="range" id="indu2" value="100" min="0" max="100">
+                                                <span class="range-slider__value range-slider__valuei2"></span>
                                         </p>
                                         <p>
                                                 3.Eradication of Wood .
-                                                <input class="range-slider__range range-slider__range2" type="range" id="ele3" value="100" min="0" max="100">
-                                                <span class="range-slider__value2">0</span>
+                                                <input class="range-slider__range range-slider__rangei3" type="range" id="indu3" value="100" min="0" max="100">
+                                                <span class="range-slider__value range-slider__valuei3"></span>
                                         </p>
 
                                     </div>
                                 </div>
                             </div>
+                         
                             <hr>
                         </div>
                     </div>

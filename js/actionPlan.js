@@ -12,20 +12,36 @@ rangeE1.on('input', function () {
     valueE3.html(this.value);
     document.getElementById("ele2").max = this.value;
     document.getElementById("ele3").max = this.value;
+    // v1 = 100 - this.value;
+    // alert(v1);
+
 });
 var rangeE2 = $('.range-slider__rangeE2'),
     valueE2 = $('.range-slider__valueE2');
-valueE2.html(rangeE1.attr('value'));
+valueE2.html(rangeE2.attr('value'));
 rangeE2.on('input', function () {
+
     valueE2.html(this.value);
+    // valueE1.html(this.value);
     valueE3.html(this.value);
+    // document.getElementById("ele1").max = this.value;
     document.getElementById("ele3").max = this.value;
+    // v1 = 100 - this.value;
+    // alert(v1);
+
 });
 var rangeE3 = $('.range-slider__rangeE3'),
     valueE3 = $('.range-slider__valueE3');
 valueE3.html(rangeE3.attr('value'));
 rangeE3.on('input', function () {
     valueE3.html(this.value);
+    // valueE2.html(this.value);
+    // valueE1.html(this.value);
+    // document.getElementById("ele1").max = this.value;
+    // document.getElementById("ele2").max = this.value;
+
+    // v1 = 100 - this.value;
+    // alert(v1);
 });
 //Electricity range bar end
 
@@ -81,6 +97,66 @@ valueT5.html(rangeT5.attr('value'));
 rangeT5.on('input', function () {
 
     valueT5.html(this.value);
+
+
+});
+
+// AFOLU range bar start
+var rangeAF1 = $('.range-slider__rangeAF1'),
+    valueAF1 = $('.range-slider__valueAF1');
+valueAF1.html(rangeAF1.attr('value'));
+rangeAF1.on('input', function () {
+    valueAF1.html(this.value);
+    valueAF2.html(this.value);
+    document.getElementById("AFOLU2").max = this.value;
+});
+var rangeAF2 = $('.range-slider__rangeAF2'),
+    valueAF2 = $('.range-slider__valueAF2');
+valueAF2.html(rangeAF2.attr('value'));
+rangeAF2.on('input', function () {
+    valueAF2.html(this.value);
+});
+
+// Waste range bar start
+var rangew1 = $('.range-slider__rangew1'),
+    valuew1 = $('.range-slider__valuew1');
+valuew1.html(rangew1.attr('value'));
+rangew1.on('input', function () {
+    valuew1.html(this.value);
+    valuew2.html(this.value);
+    document.getElementById("W2").max = this.value;
+});
+var rangew2 = $('.range-slider__rangew2'),
+    valuew2 = $('.range-slider__valuew2');
+valuew2.html(rangew2.attr('value'));
+rangew2.on('input', function () {
+    valuew2.html(this.value);
+});
+
+// Industry range bar start
+var rangei1 = $('.range-slider__rangei1'),
+    valuei1 = $('.range-slider__valuei1');
+valuei1.html(rangei1.attr('value'));
+rangei1.on('input', function () {
+    valuei1.html(this.value);
+    valuei2.html(this.value);
+    valuei3.html(this.value);
+    document.getElementById("indu2").max = this.value;
+    document.getElementById("indu3").max = this.value;
+});
+var rangei2 = $('.range-slider__rangei2'),
+    valuei2 = $('.range-slider__valuei2');
+valuei2.html(rangei2.attr('value'));
+rangei2.on('input', function () {
+    valuei2.html(this.value);
+    valuei3.html(this.value);
+    document.getElementById("indu3").max = this.value;
+});
+var rangei3 = $('.range-slider__rangei3'),
+    valuei3 = $('.range-slider__valuei3');
+valuei3.html(rangei3.attr('value'));
+rangei3.on('input', function () {
+    valuei3.html(this.value);
 });
 
 
