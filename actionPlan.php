@@ -54,6 +54,7 @@ require "php/session.php";
             width: 100%;
             height: 500px;
         }
+
     </style>
 </head>
 
@@ -155,10 +156,10 @@ require "php/session.php";
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-1 ">
-                </div>
+                <!-- <div class="col-lg-1 ">
+                </div> -->
 
-                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 container vertical-scrollable">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 container vertical-scrollable">
                     <div class="card example-1 scrollbar-ripe-malinka">
                         <div class="card-header p-3 pt-2">
 
@@ -173,18 +174,22 @@ require "php/session.php";
                                             Application of Policies in Percentage(%).
                                         </p>
                                         <p>
-                                            1. Renewable Energy.
-                                             <input class="range-slider__range range-slider__rangeE1" type="range" id="ele1" value="100" min="0" max="100">
-                                                 <span class="range-slider__value range-slider__valueE1"></span>
+                                            1. Renewable Energy.<br>
+                                             <input class="range-slider__range range-slider__rangeE1" type="range" id="ele1" value="100" valueE1="0" min="0" max="100">
+                                                 <span class="range-slider__value range-slider__valueE1"></span> 
+                                                 <span class="range-slider__value range-slider__valueEE1"></span> 
+                                                
                                         <p>
-                                            2. Carbon Capture in TPP.
-                                             <input class="range-slider__range range-slider__rangeE2" type="range" id="ele2" value="100" min="0" max="100">
+                                            2. Carbon Capture in TPP.<br>
+                                             <input class="range-slider__range range-slider__rangeE2" type="range" id="ele2" value="100" valueE2="0" min="0" max="100">
                                                  <span class="range-slider__value range-slider__valueE2"></span>
+                                                 <span class="range-slider__value range-slider__valueEE2"></span>
                                         </p>
                                         <p>
-                                            3. Smart homes & utilities.
-                                            <input class="range-slider__range range-slider__rangeE3" type="range" id="ele3" value="100" min="0" max="100">
+                                            3. Smart homes & utilities.<br>
+                                            <input class="range-slider__range range-slider__rangeE3" type="range" id="ele3" value="100" valueE3="0" min="0" max="100">
                                                  <span class="range-slider__value range-slider__valueE3"></span>
+                                                  <span class="range-slider__value range-slider__valueEE3"></span>
                                         </p>
 
                                     </div>
@@ -203,29 +208,40 @@ require "php/session.php";
                                             Application of Policies in Percentage(%).
                                         </p>
                                         <p>
-                                            1. EV Policy.
-                                            <input class="range-slider__range range-slider__rangeT1" type="range" id="trans1" value="100" min="0" max="100">
+
+                                            1. EV Policy.<br>
+                                           <!-- <input class="range-slider__range range-slider__rangeT1"  type="range" id="trans1" value="100" min="0" max="100" tabindex="0" data-toggle="tooltip" title=trans1> 
+                                            <span class="range-slider__valueT1"></span> -->
+                                            <!-- // -->
+                                            
+                                            <input class="range-slider__range range-slider__rangeT1" type="range" id="trans1" value="100" valueT1="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueT1"></span>
-                                        </p>
+                                            <span class="range-slider__value range-slider__valueTT1"></span>
+
+                                             </p>
                                         <p>
-                                            2. Strengthening and Shared Public Transport.
-                                            <input class="range-slider__range range-slider__rangeT2" type="range" id="trans2" value="100" min="0" max="100">
+                                            2. Strengthening and Shared Public Transport.<br>
+                                            <input class="range-slider__range range-slider__rangeT2" type="range" id="trans2" value="100" valueT="0"min="0" max="100">
                                             <span class="range-slider__value range-slider__valueT2"></span>
+                                            <span class="range-slider__value range-slider__valueTT2"></span>
                                         </p>
                                         <p>
-                                            3. Subsidisation of Public Transport.
-                                            <input class="range-slider__range range-slider__rangeT3" type="range" id="trans3" value="100" min="0" max="100">
+                                            3. Subsidisation of Public Transport.<br>
+                                            <input class="range-slider__range range-slider__rangeT3" type="range" id="trans3" value="100" valueT="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueT3"></span>
+                                             <span class="range-slider__value range-slider__valueTT3"></span>
                                         </p>
                                         <p>
-                                            4. Non-Motorised Transport.
-                                            <input class="range-slider__range range-slider__rangeT4" type="range" id="trans4" value="100" min="0" max="100">
+                                            4. Non-Motorised Transport.<br>
+                                            <input class="range-slider__range range-slider__rangeT4" type="range" id="trans4" value="100" valueT="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueT4"></span>
+                                            <span class="range-slider__value range-slider__valueTT4"></span>
                                         </p> 
                                         <p>
-                                            5. Introduction of Congestion tax.
-                                            <input class="range-slider__range range-slider__rangeT5" type="range" id="trans5" value="100" min="0" max="100">
+                                            5. Introduction of Congestion tax.<br>
+                                            <input class="range-slider__range range-slider__rangeT5" type="range" id="trans5" value="100" valueT="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueT5"></span>
+                                            <span class="range-slider__value range-slider__valueTT5"></span>
                                         </p>
                                     </div>
                                 </div>
@@ -241,15 +257,19 @@ require "php/session.php";
                                             Application of Policies in Percentage(%).
                                         </p>
                                         <p>
-                                            1. Adopting Sustainable Agricultural Practices .
-                                            <input class="range-slider__range range-slider__rangeAF1" type="range" id="AFOLU1" value="100" min="0" max="100">
+                                            1. Adopting Sustainable Agricultural Practices .<br>
+                                            <input class="range-slider__range range-slider__rangeAF1" type="range" id="AFOLU1" value="100" valueAF="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueAF1"></span>
+                                            <span class="range-slider__value range-slider__valueAFF1"></span>
+
                                         </p>
 
                                         <p>
-                                            2. Livestock Management .
-                                            <input class="range-slider__range range-slider__rangeAF2" type="range" id="AFOLU2" value="100" min="0" max="100">
+                                            2. Livestock Management .<br>
+                                            <input class="range-slider__range range-slider__rangeAF2" type="range" id="AFOLU2" value="100" valueAF="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueAF2"></span>
+                                           <span class="range-slider__value range-slider__valueAFF2"></span>
+
                                         </p>
 
                                     </div>
@@ -266,14 +286,17 @@ require "php/session.php";
                                             Application of Policies in Percentage(%)
                                         </p>
                                         <p>
-                                                1. Reducing the amount of waste sent to landfill.
-                                                <input class="range-slider__range range-slider__rangew1" type="range" id="W1" value="100" min="0" max="100">
-                                                <span class="range-slider__value range-slider__valuew1">0</span>
+                                                1. Reducing the amount of waste sent to landfill.<br>
+                                                <input class="range-slider__range range-slider__rangew1" type="range" id="W1" value="100" valueW="0" min="0" max="100">
+                                                <span class="range-slider__value range-slider__valuew1"></span>
+                                                <span class="range-slider__value range-slider__valueww1"></span>
+
                                         </p>
                                         <p>
-                                                2. Increasing the amount of waste composted.
-                                                <input class="range-slider__range range-slider__rangew2" type="range" id="W2" value="100" min="0" max="100">
-                                                 <span class="range-slider__value range-slider__valuew2">0</span>
+                                                2. Increasing the amount of waste composted.<br>
+                                                <input class="range-slider__range range-slider__rangew2" type="range" id="W2" value="100"  valueW="0" min="0" max="100">
+                                                 <span class="range-slider__value range-slider__valuew2"></span>
+                                                <span class="range-slider__value range-slider__valueww2"></span>
                                         </p>
 
                                     </div>
@@ -291,19 +314,24 @@ require "php/session.php";
                                             Application of Policies in Percentage(%)
                                         </p>
                                         <p>
-                                                1. Coal Policy.
-                                                <input class="range-slider__range range-slider__rangei1" type="range" id="indu1" value="100" min="0" max="100">
+                                                1. Coal Policy.<br>
+                                                <input class="range-slider__range range-slider__rangei1" type="range" id="indu1" value="100" valueI="0" min="0" max="100">
                                                 <span class="range-slider__value range-slider__valuei1"></span>
+                                                <span class="range-slider__value range-slider__valueii1"></span>
                                         </p>
                                         <p>
-                                                2.FO Policy.
-                                                <input class="range-slider__range range-slider__rangei2" type="range" id="indu2" value="100" min="0" max="100">
+                                                2.FO Policy.<br>
+                                                <input class="range-slider__range range-slider__rangei2" type="range" id="indu2" value="100" valueI="0" min="0" max="100">
                                                 <span class="range-slider__value range-slider__valuei2"></span>
+                                                <span class="range-slider__value range-slider__valueii2"></span>
+
                                         </p>
                                         <p>
-                                                3.Eradication of Wood .
-                                                <input class="range-slider__range range-slider__rangei3" type="range" id="indu3" value="100" min="0" max="100">
+                                                3.Eradication of Wood .<br>
+                                                <input class="range-slider__range range-slider__rangei3" type="range" id="indu3" value="100" valueI="0" min="0" max="100">
                                                 <span class="range-slider__value range-slider__valuei3"></span>
+                                                <span class="range-slider__value range-slider__valueii3"></span>
+
                                         </p>
 
                                     </div>
@@ -337,6 +365,7 @@ require "php/session.php";
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script> -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
@@ -371,6 +400,11 @@ require "php/session.php";
             var s = document.getElementsByTagName('script')[0];
             s.parentNode.insertBefore(ga, s);
         })();
+
+//         $(function () {
+//         $('[data-toggle="tooltip"]').tooltip()
+
+// })
     </script>
 
 <script>
@@ -380,7 +414,7 @@ require "php/session.php";
     </script>
 
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script> -->
 <script type="text/javascript" src="jquery.slideControl.js"></script>
 
 <script type="text/javascript">
@@ -390,6 +424,11 @@ $(document).ready(function() {
 </script>
 
 <!-- Range Bar -->
+<!-- <script>
+ $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+ </script>-->
 <script>
 //     var rangeSlider = function(){
 //   var slider = $('.range-slider'),
