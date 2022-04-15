@@ -59,9 +59,10 @@ function addEmiChart() {
 
                 // Create axes
                 // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+                var xRenderer = am5xy.AxisRendererX.new(root, {});
                 var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
                     categoryField: "country",
-                    renderer: am5xy.AxisRendererX.new(root, {}),
+                    renderer: xRenderer,
                     tooltip: am5.Tooltip.new(root, {})
                 }));
                 xAxis.children.moveValue(am5.Label.new(root, {
@@ -70,7 +71,9 @@ function addEmiChart() {
                     x: am5.p50,
                     centerX: am5.p50
                 }), xAxis.children.length - 1);
-
+                xRenderer.labels.template.setAll({
+                    fill: am5.color(0xFFFFFF)
+                });
 
                 xAxis.data.setAll(data);
 
@@ -94,6 +97,10 @@ function addEmiChart() {
                     centerX: am5.p50,
                     x: am5.p50
                 }));
+                legend.labels.template.setAll({
+                    fill: am5.color(0xFFFFFF)
+                });
+
                 // Add series
                 // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
                 function makeSeries(name, fieldName) {
@@ -183,9 +190,12 @@ function addChart() {
                 // xRenderer.labels.template.setAll({
                 //     fill: am5.color(0xFFFFFF)
                 // });
+                /////
+                var xRenderer = am5xy.AxisRendererX.new(root, {});
+                ////
                 var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
                     categoryField: "country",
-                    renderer: am5xy.AxisRendererX.new(root, {}),
+                    renderer: xRenderer,
                     tooltip: am5.Tooltip.new(root, {})
                 }));
 
@@ -196,7 +206,9 @@ function addChart() {
                     centerX: am5.p50
                 }), xAxis.children.length - 1);
 
-
+                xRenderer.labels.template.setAll({
+                    fill: am5.color(0xFFFFFF)
+                });
 
                 // xAxis.labels.template.setAll({
                 //     fill: am5.color(0xFFFFFF)
@@ -207,9 +219,10 @@ function addChart() {
 
 
                 xAxis.data.setAll(data);
+                var yRenderer = am5xy.AxisRendererY.new(root, {});
                 var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
                     min: 0,
-                    renderer: am5xy.AxisRendererY.new(root, {})
+                    renderer: yRenderer
                 }));
                 yAxis.children.moveValue(am5.Label.new(root, {
                     rotation: -90,
@@ -218,12 +231,19 @@ function addChart() {
                     y: am5.p50,
                     centerX: am5.p50
                 }), 0);
+                yRenderer.labels.template.setAll({
+                    fill: am5.color(0xFFFFFF)
+                });
                 // Add legend
                 // https://www.amcharts.com/docs/v5/charts/xy-chart/legend-xy-series/
                 var legend = chart.children.push(am5.Legend.new(root, {
                     centerX: am5.p50,
                     x: am5.p50
                 }));
+                legend.labels.template.setAll({
+                    fill: am5.color(0xFFFFFF)
+                });
+
                 // Add series
                 // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
                 function makeSeries(name, fieldName) {

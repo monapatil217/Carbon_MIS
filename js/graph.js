@@ -51,7 +51,8 @@ function carbonGharph(data) {
         // Create chart
         // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
         var chart = root.container.children.push(am5percent.PieChart.new(root, {
-            layout: root.verticalLayout
+            layout: root.verticalLayout,
+
         }));
 
 
@@ -59,9 +60,9 @@ function carbonGharph(data) {
         // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
         var series = chart.series.push(am5percent.PieSeries.new(root, {
             valueField: "value",
+
             categoryField: "category"
         }));
-
 
         // Set data
         // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
@@ -77,11 +78,22 @@ function carbonGharph(data) {
             marginTop: 15,
             marginBottom: 15
         }));
+
+        ///////
+        legend.labels.template.setAll({
+            fill: am5.color(0xFFFFFF)
+        });
+
+        //////
         series.labels.template.setAll({
             fill: am5.color(0xFFFFFF),
             text: "{category}"
 
         });
+
+
+
+
 
         legend.data.setAll(series.dataItems);
 

@@ -37,8 +37,10 @@ require "php/session.php";
   ======================================================== -->
     <style>
     #electricity {
-        width: 470px;
-        height: 350px;
+        /* width: 470px;
+        height: 350px; */
+          width: 360px;
+          height: 360px;
     }
 
     #chartdivsample {
