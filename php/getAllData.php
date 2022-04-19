@@ -278,7 +278,7 @@ if ($type == "Electricity") {
                 $rowcount = mysqli_num_rows($result);
                 $stpData = [];
                 if ($rowcount == 0) {
-                    $mainArray['stpData'] =   $stpData;
+                    $cData['stpData'] =   $stpData;
                 } else {
                     while ($row = mysqli_fetch_array($result)) {
                         $stp = [];
