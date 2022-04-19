@@ -58,7 +58,7 @@
                          <form class="needs-validation" novalidate>
                              <!-- <h6 class="text-center"> Cooking Fuel</h6> -->
                              <marquee width="100%" direction="left" height="30px" scrollamount="2"> SCM - Standard Cubic
-                                 Meter / m - Month / t - ton / MNGL - Maharashtra Natural Gas Ltd.</marquee>
+                                 Meter / MNGL - Maharashtra Natural Gas Ltd.</marquee>
                              <div id="cookingFuelInput"></div>
                              <div class="row ">
                                  <div class="col-md-12 mb-3 text-center">

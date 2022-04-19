@@ -16,6 +16,7 @@ function addsectrolChart() {
         data: JSON.stringify(myobj),
         success: function (data) {
             var divList = JSON.parse(data);
+
             viewGraph("allEmiChart", divList);
         }
     });

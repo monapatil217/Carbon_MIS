@@ -52,7 +52,6 @@ function carbonGharph(data) {
         // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
         var chart = root.container.children.push(am5percent.PieChart.new(root, {
             layout: root.verticalLayout,
-
         }));
 
 
@@ -77,6 +76,7 @@ function carbonGharph(data) {
             x: am5.percent(50),
             marginTop: 15,
             marginBottom: 15
+
         }));
 
         ///////
