@@ -17,7 +17,7 @@ window.onclick = function (event) {
 $(document).ready(function () {
     showMSWInput();
     showBMWInput();
-    showHWInput();
+    // showHWInput();
 })
 
 function showMSWInput() {
@@ -308,105 +308,105 @@ function showBMWInput() {
     $("#bmwInput").append(html);
 }
 
-function showHWInput() {
-    var html = '';
+// function showHWInput() {
+//     var html = '';
 
-    var basicId = document.getElementById("basicId").value;
-    $("#hwInput").empty();
+//     var basicId = document.getElementById("basicId").value;
+//     $("#hwInput").empty();
 
-    var myobj = {};
-    myobj["type"] = "HW";
-    myobj["basicId"] = basicId;
+//     var myobj = {};
+//     myobj["type"] = "HW";
+//     myobj["basicId"] = basicId;
 
-    $.ajax({
-        type: "POST",
-        async: false,
-        url: "php/getAllData.php",
-        contentType: "application/json",
-        data: JSON.stringify(myobj),
-        success: function (data) {
-            var divList = JSON.parse(data);
-            $.each(divList, function (index, element) {
-                var check = element.check;
+//     $.ajax({
+//         type: "POST",
+//         async: false,
+//         url: "php/getAllData.php",
+//         contentType: "application/json",
+//         data: JSON.stringify(myobj),
+//         success: function (data) {
+//             var divList = JSON.parse(data);
+//             $.each(divList, function (index, element) {
+//                 var check = element.check;
 
-                if (check == "true") {
-                    var eledata = element.cData;
-                    $.each(eledata, function (index, element1) {
+//                 if (check == "true") {
+//                     var eledata = element.cData;
+//                     $.each(eledata, function (index, element1) {
 
-                        html = '<div class="row">'
-                            + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
-                            + '        <label for="generatedH" class="form-label"> Generated </label>'
-                            + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="generatedH" name="generatedH"  value="' + element1.hw_gen + '" class="form-control" placeholder="Generated" aria-label="Generated" aria-describedby="basic-addon2">'
-                            + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
-                            + '        </div>'
-                            + '    </div>'
+//                         html = '<div class="row">'
+//                             + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+//                             + '        <label for="generatedH" class="form-label"> Generated </label>'
+//                             + '        <div class="input-group mb-2">'
+//                             + '            <input type="text" id="generatedH" name="generatedH"  value="' + element1.hw_gen + '" class="form-control" placeholder="Generated" aria-label="Generated" aria-describedby="basic-addon2">'
+//                             + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+//                             + '        </div>'
+//                             + '    </div>'
 
-                            + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
-                            + '        <label for="collectedH" class="form-label"> Collected</label>'
-                            + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="collectedH" name="collectedH"  value="' + element1.hw_coll + '" class="form-control" placeholder="Collected" aria-label="Collected" aria-describedby="basic-addon2">'
-                            + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
-                            + '        </div>'
-                            + '    </div>'
+//                             + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+//                             + '        <label for="collectedH" class="form-label"> Collected</label>'
+//                             + '        <div class="input-group mb-2">'
+//                             + '            <input type="text" id="collectedH" name="collectedH"  value="' + element1.hw_coll + '" class="form-control" placeholder="Collected" aria-label="Collected" aria-describedby="basic-addon2">'
+//                             + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+//                             + '        </div>'
+//                             + '    </div>'
 
-                            + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
-                            + '        <label for="treatedH" class="form-label"> Treated </label>'
-                            + '        <div class="input-group mb-2">'
-                            + '            <input type="text" id="treatedH" name="treatedH"  value="' + element1.hw_treat + '" class="form-control" placeholder="Treated" aria-label="Treated" aria-describedby="basic-addon2">'
-                            + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
-                            + '        </div>'
-                            + '    </div>'
-                            + '</div>'
+//                             + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+//                             + '        <label for="treatedH" class="form-label"> Treated </label>'
+//                             + '        <div class="input-group mb-2">'
+//                             + '            <input type="text" id="treatedH" name="treatedH"  value="' + element1.hw_treat + '" class="form-control" placeholder="Treated" aria-label="Treated" aria-describedby="basic-addon2">'
+//                             + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+//                             + '        </div>'
+//                             + '    </div>'
+//                             + '</div>'
 
-                            + ' <div class="row">'
-                            + '<div class="col-md-12 mb-3 mt-3 text-center">'
-                            + ' <button class="btn btn-primary " type="button" onclick="showHWData();">SAVE</button>'
-                            + ' </div>'
-                            + ' </div >';
-                    });
-                    // addChart();
-                }
-                else {
+//                             + ' <div class="row">'
+//                             + '<div class="col-md-12 mb-3 mt-3 text-center">'
+//                             + ' <button class="btn btn-primary " type="button" onclick="showHWData();">SAVE</button>'
+//                             + ' </div>'
+//                             + ' </div >';
+//                     });
+//                     // addChart();
+//                 }
+//                 else {
 
-                    html = '<div class="row">'
-                        + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
-                        + '        <label for="generatedH" class="form-label"> Generated </label>'
-                        + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="generatedH" name="generatedH" class="form-control" placeholder="Generated" aria-label="Generated" aria-describedby="basic-addon2">'
-                        + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
-                        + '        </div>'
-                        + '    </div>'
+//                     html = '<div class="row">'
+//                         + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+//                         + '        <label for="generatedH" class="form-label"> Generated </label>'
+//                         + '        <div class="input-group mb-2">'
+//                         + '            <input type="text" id="generatedH" name="generatedH" class="form-control" placeholder="Generated" aria-label="Generated" aria-describedby="basic-addon2">'
+//                         + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+//                         + '        </div>'
+//                         + '    </div>'
 
-                        + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
-                        + '        <label for="collectedH" class="form-label"> Collected</label>'
-                        + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="collectedH" name="collectedH" class="form-control" placeholder="Collected" aria-label="Collected" aria-describedby="basic-addon2">'
-                        + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
-                        + '        </div>'
-                        + '    </div>'
+//                         + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+//                         + '        <label for="collectedH" class="form-label"> Collected</label>'
+//                         + '        <div class="input-group mb-2">'
+//                         + '            <input type="text" id="collectedH" name="collectedH" class="form-control" placeholder="Collected" aria-label="Collected" aria-describedby="basic-addon2">'
+//                         + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+//                         + '        </div>'
+//                         + '    </div>'
 
-                        + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
-                        + '        <label for="treatedH" class="form-label"> Treated </label>'
-                        + '        <div class="input-group mb-2">'
-                        + '            <input type="text" id="treatedH" name="treatedH" class="form-control" placeholder="Treated" aria-label="Treated" aria-describedby="basic-addon2">'
-                        + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
-                        + '        </div>'
-                        + '    </div>'
-                        + '</div>'
+//                         + '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">'
+//                         + '        <label for="treatedH" class="form-label"> Treated </label>'
+//                         + '        <div class="input-group mb-2">'
+//                         + '            <input type="text" id="treatedH" name="treatedH" class="form-control" placeholder="Treated" aria-label="Treated" aria-describedby="basic-addon2">'
+//                         + '            <span class="input-group-text" id="basic-addon-2">MTD</span>'
+//                         + '        </div>'
+//                         + '    </div>'
+//                         + '</div>'
 
-                        + ' <div class="row">'
-                        + '<div class="col-md-12 mb-3 mt-3 text-center">'
-                        + ' <button class="btn btn-primary " type="button" onclick="showHWData();">SAVE</button>'
-                        + ' </div>'
-                        + ' </div >';
-                }
-            });
-        }
-    });
+//                         + ' <div class="row">'
+//                         + '<div class="col-md-12 mb-3 mt-3 text-center">'
+//                         + ' <button class="btn btn-primary " type="button" onclick="showHWData();">SAVE</button>'
+//                         + ' </div>'
+//                         + ' </div >';
+//                 }
+//             });
+//         }
+//     });
 
-    $("#hwInput").append(html);
-}
+//     $("#hwInput").append(html);
+// }
 
 
 var comp = 0;
@@ -657,55 +657,6 @@ function showBMWData() {
                     $("#fa2").addClass("collapsed");
                     $("#fa3").removeClass("collapsed");
                     $("#faq-list-3").addClass("show");
-                    addChart();
-                } else {
-                    alert("Data not Save Succesfuly")
-                }
-            }
-        });
-    }
-
-
-}
-
-function showHWData() {
-
-    var flag = 0;
-    var hwData = {};
-
-    var basicId = document.getElementById("basicId").value;
-
-    var generatedH = document.getElementById("generatedH").value;
-
-    var collectedH = document.getElementById("collectedH").value;
-
-    var treatedH = document.getElementById("treatedH").value;
-
-    //validation
-    if (generatedH < collectedH || collectedH < treatedH) {
-
-        alert("Genrated value is less than collected value.");
-        flag++;
-    }
-
-
-
-
-    hwData["basicId"] = basicId;
-    hwData["hw_gen"] = generatedH;
-    hwData["hw_coll"] = collectedH;
-    hwData["hw_treat"] = treatedH;
-
-    if (flag == 0) {
-        $.ajax({
-            type: "POST",
-            async: false,
-            url: "php/saveHwSolid.php",
-            contentType: "application/json",
-            data: JSON.stringify(hwData),
-            success: function (data) {
-                if (data == "success") {
-                    alert("Data Save Succesfuly");
                     // addChart();
                     window.location.replace("wasteWater.php");
                 } else {
@@ -715,7 +666,57 @@ function showHWData() {
         });
     }
 
+
 }
+
+// function showHWData() {
+
+//     var flag = 0;
+//     var hwData = {};
+
+//     var basicId = document.getElementById("basicId").value;
+
+//     var generatedH = document.getElementById("generatedH").value;
+
+//     var collectedH = document.getElementById("collectedH").value;
+
+//     var treatedH = document.getElementById("treatedH").value;
+
+//     //validation
+//     if (generatedH < collectedH || collectedH < treatedH) {
+
+//         alert("Genrated value is less than collected value.");
+//         flag++;
+//     }
+
+
+
+
+//     hwData["basicId"] = basicId;
+//     hwData["hw_gen"] = generatedH;
+//     hwData["hw_coll"] = collectedH;
+//     hwData["hw_treat"] = treatedH;
+
+//     if (flag == 0) {
+//         $.ajax({
+//             type: "POST",
+//             async: false,
+//             url: "php/saveHwSolid.php",
+//             contentType: "application/json",
+//             data: JSON.stringify(hwData),
+//             success: function (data) {
+//                 if (data == "success") {
+//                     alert("Data Save Succesfuly");
+//                     // addChart();
+//                     window.location.replace("wasteWater.php");
+//                 } else {
+//                     alert("Data not Save Succesfuly")
+//                 }
+//             }
+//         });
+//     }
+
+// }
 
 function redirect() {
     window.location.replace("transport.php");

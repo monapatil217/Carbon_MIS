@@ -73,13 +73,13 @@ require "php/session.php";
                                                 <div id="bmwInput"></div>
                                             </div>
                                         </li>
-                                        <li data-aos="fade-up" data-aos-delay="200">
+                                        <!-- <li data-aos="fade-up" data-aos-delay="200">
                                             <a data-bs-toggle="collapse" id="fa3" data-bs-target="#faq-list-3" class="collapsed">Hazardous Waste<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                                             <div id="faq-list-3" class="collapse extra" data-bs-parent=".faq-list">
                                                 <h6 class="text-center">Quantity of Hazardous Waste </h6>
                                                 <div id="hwInput"></div>
                                             </div>
-                                        </li>
+                                        </li> -->
                                         <!-- </div>
                                     </li> -->
                                     </ul>

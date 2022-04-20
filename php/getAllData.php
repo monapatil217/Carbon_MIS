@@ -232,32 +232,35 @@ if ($type == "Electricity") {
             array_push($finalArray, $mainArray);
         }
     }
-} else if ($type == "HW") { 
+} 
 
-    $query2 = "SELECT * FROM hw_data WHERE b_id='" . $basicId . "'";
+// else if ($type == "HW") { 
 
-    $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
-    $rowcount = mysqli_num_rows($result);
-    if ($rowcount == 0) {
-        $mainArray['check'] = "false";
-        array_push($finalArray, $mainArray);
-    } else {
-        while ($row = mysqli_fetch_array($result)) {
+//     $query2 = "SELECT * FROM hw_data WHERE b_id='" . $basicId . "'";
 
-            $mainArray['check'] = "true";
-            $deleData = array();
-            $cData = [];
-            $mswid = $row['id'];
-            $cData['hw_gen'] = $row['hw_gen'];
-            $cData['hw_coll'] = $row['hw_coll'];
-            $cData['hw_treat'] = $row['hw_treat'];
+//     $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
+//     $rowcount = mysqli_num_rows($result);
+//     if ($rowcount == 0) {
+//         $mainArray['check'] = "false";
+//         array_push($finalArray, $mainArray);
+//     } else {
+//         while ($row = mysqli_fetch_array($result)) {
+
+//             $mainArray['check'] = "true";
+//             $deleData = array();
+//             $cData = [];
+//             $mswid = $row['id'];
+//             $cData['hw_gen'] = $row['hw_gen'];
+//             $cData['hw_coll'] = $row['hw_coll'];
+//             $cData['hw_treat'] = $row['hw_treat'];
                
-            array_push($deleData, $cData);
-            $mainArray['cData'] =   $deleData;
-            array_push($finalArray, $mainArray);
-        }
-    }
-}  else if ($type == "WasteWater") { // pending
+//             array_push($deleData, $cData);
+//             $mainArray['cData'] =   $deleData;
+//             array_push($finalArray, $mainArray);
+//         }
+//     }
+// } 
+ else if ($type == "WasteWater") { // pending
     $query2 = "SELECT * FROM waste_data WHERE b_id='" . $basicId . "'";
     $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
     $rowcount = mysqli_num_rows($result);
