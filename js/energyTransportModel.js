@@ -62,6 +62,7 @@ function showTransInput() {
                             + '</div>'
                             + '</div>'
                             + '</div >'
+
                             + '<div class="row justify-content-center">'
                             + '<div class="col-md-6 col-lg-10 col-xl-6 col-10">'
                             + '<label for="w4" class="form-label"> Four wheeler</label>'

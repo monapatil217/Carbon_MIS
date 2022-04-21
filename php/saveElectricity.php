@@ -8,10 +8,15 @@ $data = json_decode($json);
 $basicId = $data->basicId;
 $r_elec = $data->r_elec;
 $c_elec = $data->c_elec;
-$s_elec = $data->s_elec;
+
+$agree_elec = $data->agree_elec;
+$indu_elec = $data->indu_elec;
+$munc_elec = $data->munc_elec;
+
+// $s_elec = $data->s_elec;
 $sl_elec = $data->sl_elec;
  
-$ele = $r_elec+$c_elec+$s_elec+$sl_elec;
+$ele = $r_elec+$c_elec+$agree_elec+$indu_elec+$munc_elec+$sl_elec;
 $emissionPerDay;
 $carbonco2;$carbonch4;$carbonn2o;
 $value = $ele * 700;
@@ -36,15 +41,15 @@ $carbonn2o=round($carbonn2o,6);
 
         $rowcount = mysqli_num_rows($result);
         if ($rowcount == 0) {
-            $query = "INSERT INTO ele_data(b_id,r_elec,c_elec,s_elec,sl_elec)
-            VALUES ($basicId,$r_elec,$c_elec,$s_elec,$sl_elec)";
+            $query = "INSERT INTO ele_data(b_id,r_elec,c_elec,agree_elec,indu_elec,munc_elec,sl_elec)
+            VALUES ($basicId,$r_elec,$c_elec,$agree_elec,$indu_elec,$munc_elec,$sl_elec)";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
              $eleid = mysqli_insert_id($conn);
              $query = "INSERT INTO ele_emi(b_id,e_id,co2,ch4,n2o)
             VALUES ($basicId,$eleid,$carbonco2,$carbonch4,$carbonn2o)";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         }else{
-            $query = "UPDATE  ele_data set r_elec=$r_elec,c_elec=$c_elec,s_elec=$s_elec,
+            $query = "UPDATE  ele_data set r_elec=$r_elec,c_elec=$c_elec,agree_elec=$agree_elec,indu_elec=$indu_elec,munc_elec=$munc_elec,
                       sl_elec=$sl_elec WHERE b_id='".$basicId."'";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
             $query = "UPDATE  ele_emi set co2=$carbonco2,ch4=$carbonch4,n2o=$carbonn2o

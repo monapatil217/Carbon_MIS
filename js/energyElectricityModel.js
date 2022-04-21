@@ -44,19 +44,19 @@ function showEleInput() {
                 if (check == "true") {
                     var eledata = element.cData;
                     $.each(eledata, function (index, element1) {
-
                         html = '<div class="row justify-content-center">'
-                            + '   <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                            + '       <label for="relec" class="form-label"> Residential</label>'
-                            + '       <div class="input-group mb-2">'
-                            + '           <input type="text" id="relec" name="relec" class="form-control"  value="' + element1.r_elec + '"   placeholder="Residential" aria-label="Residential" aria-describedby="basic-addon2">'
-                            + '                <span class="input-group-text" id="basic-addon2">MW/m</span>'
-                            + '</div>'
-                            + '</div>'
-                            + '</div>'
+                            + '<div class="col-md-6 col-lg-10 col-xl-6 col-10 mt-2">'
 
-                            + '<div class="row justify-content-center">'
-                            + '       <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + ' <label for="relec" class="form-label"> Residential</label>'
+                            + ' <div class="input-group mb-2">'
+                            + ' <input type="text" id="relec" name="relec" class="form-control"  value="' + element1.r_elec + '"   placeholder="Residential" aria-label="Residential" aria-describedby="basic-addon2">'
+                            + ' <span class="input-group-text" id="basic-addon2">MW/m</span>'
+                            + '</div>'
+                            + '</div>'
+                            // + '</div>'
+
+                            // + '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-6 col-10 mt-2">'
                             + '           <label for="celec" class="form-label"> Commercial</label>'
                             + '               <div class="input-group mb-2">'
                             + '                 <input type="text" id="celec" name="celec"  class="form-control"   value="' + element1.c_elec + '"  placeholder="Commercial" aria-label="Commercial" aria-describedby="basic-addon2">'
@@ -64,19 +64,51 @@ function showEleInput() {
                             + '</div>'
                             + '</div>'
                             + '</div>'
-
+                            ////////////////////
+                            // + '<div class="row justify-content-center">'
+                            // + '              <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            // + '                   <label for="selec" class="form-label"> Slum area</label>'
+                            // + '                  <div class="input-group mb-2">'
+                            // + '                   <input type="text" id="selec" name="selec"  class="form-control"   value="' + element1.s_elec + '"   placeholder="Slum area " aria-label="Slum" aria-describedby="basic-addon2">'
+                            // + '                       <span class="input-group-text" id="basic-addon2">MW/m</span>'
+                            // + ' </div>'
+                            // + '</div>'
+                            // + '</div>'
+                            //////////////
                             + '<div class="row justify-content-center">'
-                            + '              <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                            + '                   <label for="selec" class="form-label"> Slum area</label>'
+                            + '<div class="col-md-6 col-lg-10 col-xl-6 col-10 mt-2">'
+                            + '                   <label for="agri" class="form-label"> Agriculture</label>'
                             + '                  <div class="input-group mb-2">'
-                            + '                   <input type="text" id="selec" name="selec"  class="form-control"   value="' + element1.s_elec + '"   placeholder="Slum area " aria-label="Slum" aria-describedby="basic-addon2">'
+                            + '                   <input type="text" id="agri" name="agri"  class="form-control"   value="' + element1.agree_elec + '"   placeholder="Agriculture" aria-label="Agriculture" aria-describedby="basic-addon2">'
+                            + '                       <span class="input-group-text" id="basic-addon2">MW/m</span>'
+                            + ' </div>'
+                            + '</div>'
+                            // + '</div>'
+
+                            // + '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-6 col-10 mt-2">'
+                            + '                   <label for="indu" class="form-label"> Industrial</label>'
+                            + '                  <div class="input-group mb-2">'
+                            + '                   <input type="text" id="indu" name="indu"  class="form-control"   value="' + element1.indu_elec + '"   placeholder="Industrial" aria-label="Agriculture" aria-describedby="basic-addon2">'
                             + '                       <span class="input-group-text" id="basic-addon2">MW/m</span>'
                             + ' </div>'
                             + '</div>'
                             + '</div>'
 
                             + '<div class="row justify-content-center">'
-                            + '      <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-6 col-10 mt-2">'
+                            + '                   <label for="munci" class="form-label"> Municipal</label>'
+                            + '                  <div class="input-group mb-2">'
+                            + '                   <input type="text" id="munci" name="munci"  class="form-control"   value="' + element1.munc_elec + '"   placeholder="Municipal" aria-label="Agriculture" aria-describedby="basic-addon2">'
+                            + '                       <span class="input-group-text" id="basic-addon2">MW/m</span>'
+                            + ' </div>'
+                            + '</div>'
+                            // + '</div>'
+
+                            //////////////
+
+                            // + '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-6 col-10 mt-2">'
                             + '          <label for="slelec" class="form-label"> Other</label>'
                             + '          <div class="input-group mb-2">'
                             + '              <input type="text" id="slelec" name="slelec"   class="form-control"   value="' + element1.sl_elec + '"    placeholder="Street light" aria-label="Slum" aria-describedby="basic-addon2">'
@@ -90,17 +122,17 @@ function showEleInput() {
                 else {
 
                     html = '<div class="row justify-content-center">'
-                        + '   <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-6 col-10 mt-2">'
                         + '       <label for="relec" class="form-label"> Residential</label>'
                         + '       <div class="input-group mb-2">'
                         + '           <input type="text" id="relec" name="relec" class="form-control" placeholder="Residential" aria-label="Residential" aria-describedby="basic-addon2">'
                         + '                <span class="input-group-text" id="basic-addon2">MW/m</span>'
                         + '       </div>'
                         + '        </div>'
-                        + '     </div>'
+                        // + '     </div>'
 
-                        + '     <div class="row justify-content-center">'
-                        + '       <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        // + '     <div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-6 col-10 mt-2">'
                         + '           <label for="celec" class="form-label"> Commercial</label>'
                         + '               <div class="input-group mb-2">'
                         + '                 <input type="text" id="celec" name="celec"  class="form-control" placeholder="Commercial" aria-label="Commercial" aria-describedby="basic-addon2">'
@@ -109,18 +141,49 @@ function showEleInput() {
                         + '             </div>'
                         + '            </div>'
 
-                        + '           <div class="row justify-content-center">'
-                        + '              <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
-                        + '                   <label for="selec" class="form-label"> Slum area</label>'
+                        // + '           <div class="row justify-content-center">'
+                        // + '              <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        // + '                   <label for="selec" class="form-label"> Slum area</label>'
+                        // + '                  <div class="input-group mb-2">'
+                        // + '                   <input type="text" id="selec" name="selec"  class="form-control" placeholder="Slum area " aria-label="Slum" aria-describedby="basic-addon2">'
+                        // + '                       <span class="input-group-text" id="basic-addon2">MW/m</span>'
+                        // + '  </div>'
+                        // + '                </div>'
+                        // + '          </div>'
+                        ////////////
+                        + '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-6 col-10 mt-2">'
+                        + '<label for="agri" class="form-label"> Agriculture</label>'
                         + '                  <div class="input-group mb-2">'
-                        + '                   <input type="text" id="selec" name="selec"  class="form-control" placeholder="Slum area " aria-label="Slum" aria-describedby="basic-addon2">'
+                        + '                   <input type="text" id="agri" name="agri"  class="form-control"   placeholder="Agriculture" aria-label="Agriculture" aria-describedby="basic-addon2">'
                         + '                       <span class="input-group-text" id="basic-addon2">MW/m</span>'
-                        + '  </div>'
-                        + '                </div>'
-                        + '          </div>'
+                        + ' </div>'
+                        + '</div>'
+                        // + '</div>'
 
-                        + '  <div class="row justify-content-center">'
-                        + '      <div class="col-md-6 col-lg-10 col-xl-9 col-10">'
+                        // + '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-6 col-10 mt-2">'
+                        + '<label for="indu" class="form-label"> Industrial</label>'
+                        + '                  <div class="input-group mb-2">'
+                        + '                   <input type="text" id="indu" name="indu"  class="form-control"     placeholder="Industrial" aria-label="Industrial" aria-describedby="basic-addon2">'
+                        + '                       <span class="input-group-text" id="basic-addon2">MW/m</span>'
+                        + ' </div>'
+                        + '</div>'
+                        + '</div>'
+
+                        + '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-6 col-10 mt-2">'
+                        + '<label for="munci" class="form-label"> Municipal</label>'
+                        + '                  <div class="input-group mb-2">'
+                        + '                   <input type="text" id="munci" name="munci"  class="form-control" placeholder="Municipal" aria-label="Munciple" aria-describedby="basic-addon2">'
+                        + '                       <span class="input-group-text" id="basic-addon2">MW/m</span>'
+                        + ' </div>'
+                        + '</div>'
+                        // + '</div>'
+                        /////////////
+
+                        // + '  <div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-6 col-10 mt-2">'
                         + '          <label for="slelec" class="form-label"> Other</label>'
                         + '          <div class="input-group mb-2">'
                         + '              <input type="text" id="slelec" name="slelec"   class="form-control" placeholder="Street light" aria-label="Slum" aria-describedby="basic-addon2">'
@@ -151,14 +214,26 @@ function saveEleData() {
 
     var celec = document.getElementById("celec").value;
 
-    var selec = document.getElementById("selec").value;
+    // var selec = document.getElementById("selec").value;
+
+    var agri = document.getElementById("agri").value;
+    var indu = document.getElementById("indu").value;
+    var munci = document.getElementById("munci").value;
+
+
 
     var slelec = document.getElementById("slelec").value;
+
+
 
     eleData["basicId"] = basicId;
     eleData["r_elec"] = relec;
     eleData["c_elec"] = celec;
-    eleData["s_elec"] = selec;
+    // eleData["s_elec"] = selec;
+    eleData["agree_elec"] = agri;
+    eleData["indu_elec"] = indu;
+    eleData["munc_elec"] = munci;
+
     eleData["sl_elec"] = slelec;
 
     if (flag == 0) {
