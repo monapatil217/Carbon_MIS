@@ -23,8 +23,15 @@ if ($type == "Electricity") {
             $eleData = [];
             $eleData['r_elec'] = $row['r_elec'];
             $eleData['c_elec'] = $row['c_elec'];
-            $eleData['s_elec'] = $row['s_elec'];
+            // $eleData['s_elec'] = $row['s_elec'];
+
+            $eleData['agree_elec'] = $row['agree_elec'];
+            $eleData['indu_elec'] = $row['indu_elec'];
+            $eleData['munc_elec'] = $row['munc_elec'];
             $eleData['sl_elec'] = $row['sl_elec'];
+
+
+
             array_push($deleData, $eleData);
             $mainArray['cData'] =   $deleData;
             array_push($finalArray, $mainArray);

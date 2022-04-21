@@ -63,7 +63,7 @@ require "php/session.php";
             <input type="text" id="cityName" class="form-control" value="<?php echo $_SESSION["cityName"]; ?>" hidden
                 disabled>
             <div class="row justify-content-center">
-                <div class="col-md-12 col-lg-4 mb-3" data-aos-delay="200">
+                <div class="col-md-12 col-lg-5 mb-3" data-aos-delay="200">
                     <div class="in-sec">
                         <h6 class="text-center mb-1 ">Amount of Electricity Used by Different Sectors</h6>
                         <marquee width="100%" direction="left" height="30px" scrollamount="2"> MW - megawatt / m - month
@@ -72,6 +72,7 @@ require "php/session.php";
                             <div id="eleInput"></div>
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
+
                                     <button class="btn btn-primary " type="button"
                                         onclick="saveEleData();">SAVE</button>
                                 </div>
@@ -87,7 +88,7 @@ require "php/session.php";
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
+                <div class="col-md-12 col-lg-7  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">
                         <!-- <h3>Electricity</h3> -->
                         <h3 class="text-center mb-2">Carbon Emission from Electricity Sector</h3>

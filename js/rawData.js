@@ -24,6 +24,8 @@ function openCity(cityName, elmnt, color) {
     document.getElementById(cityName).style.display = "block";
     elmnt.style.backgroundColor = color;
 
+
+
 }
 
 
@@ -108,11 +110,29 @@ function showInput() {
                                 + '                   <td>Commercial ELEC use</td>'
                                 + '                     <td>' + element.c_elec + '</td>'
                                 + '              </tr>'
-                                + '               <tr>'
-                                + '                 <th scope="row">3</th>'
-                                + '                 <td>Slum area ELEC use</td>'
-                                + '                 <td>' + element.s_elec + '</td>'
-                                + '         </tr>'
+                                // + '               <tr>'
+                                // + '                 <th scope="row">3</th>'
+                                // + '                 <td>Slum area ELEC use</td>'
+                                // + '                 <td>' + element.s_elec + '</td>'
+                                // + '         </tr>'
+                                + '                <tr>'
+                                + '                   <th scope="row">2</th>'
+                                + '                   <td>Agriculture ELEC use</td>'
+                                + '                     <td>' + element.agree_elec + '</td>'
+                                + '              </tr>'
+
+                                + '                <tr>'
+                                + '                   <th scope="row">2</th>'
+                                + '                   <td>Industrial ELEC use</td>'
+                                + '                     <td>' + element.indu_elec + '</td>'
+                                + '              </tr>'
+
+                                + '                <tr>'
+                                + '                   <th scope="row">2</th>'
+                                + '                   <td>Municipal ELEC use</td>'
+                                + '                     <td>' + element.munc_elec + '</td>'
+                                + '              </tr>'
+
                                 + '       <tr>'
                                 + '           <th scope="row">4</th>'
                                 + '           <td>Street light ELEC use</td>'
@@ -161,11 +181,31 @@ function showInput() {
                             + '                   <td>Commercial ELEC use</td>'
                             + '                     <td>0</td>'
                             + '              </tr>'
+                            // + '               <tr>'
+                            // + '                 <th scope="row">3</th>'
+                            // + '                 <td>Slum area ELEC use</td>'
+                            // + '                 <td>0</td>'
+                            // + '         </tr>'
                             + '               <tr>'
                             + '                 <th scope="row">3</th>'
-                            + '                 <td>Slum area ELEC use</td>'
+                            + '                 <td>Agriculture area ELEC use</td>'
                             + '                 <td>0</td>'
                             + '         </tr>'
+
+                            + '               <tr>'
+                            + '                 <th scope="row">3</th>'
+                            + '                 <td>Industrial area ELEC use</td>'
+                            + '                 <td>0</td>'
+                            + '         </tr>'
+                            + '               <tr>'
+                            + '                 <th scope="row">3</th>'
+                            + '                 <td>Municipal area ELEC use</td>'
+                            + '                 <td>0</td>'
+                            + '         </tr>'
+
+
+
+
                             + '       <tr>'
                             + '           <th scope="row">4</th>'
                             + '           <td>Street light ELEC use</td>'
