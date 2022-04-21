@@ -53,7 +53,7 @@ function showWaterInput() {
                             + '<label for="waterCon" class="form-label">Water Consumption</label>'
                             + '<div class="input-group mb-2">'
                             + '<input type="text" id="waterCon" name="waterCon"  class="form-control" value="' + element1.w_cons + '" placeholder="Consumption" aria-label="Area" aria-describedby="basic-addon2">'
-                            + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                            + '<span class="input-group-text" id="basic-addon2">MLD</span>'
                             + '</div>'
                             + '</div>'
 
@@ -61,7 +61,7 @@ function showWaterInput() {
                             + '<label for="waterGen" class="form-label">Wastewater Generated</label>'
                             + '<div class="input-group mb-2">'
                             + '<input type="text" id="waterGen" name="waterGen" class="form-control" value="' + element1.w_gen + '" placeholder="Generation" aria-label="Area" aria-describedby="basic-addon2">'
-                            + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                            + '<span class="input-group-text" id="basic-addon2">MLD</span>'
                             + '</div>'
                             + '</div>'
 
@@ -69,20 +69,17 @@ function showWaterInput() {
                             + '<label for="waterTreat" class="form-label">Qty of wastewater treated</label>'
                             + '<div class="input-group mb-2">'
                             + '<input type="text" id="waterTreat" name="waterTreat" class="form-control" value="' + element1.q_treat + '" placeholder="Treatment" aria-label="Area" aria-describedby="basic-addon2">'
-                            + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                            + '<span class="input-group-text" id="basic-addon2">MLD</span>'
                             + '</div>'
                             + '</div>'
                             + '</div>'
 
-                            + '<div class="row justify-content-center">'
+                            + '<div class="row justify-content-left">'
                             + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
-                            + '<label for="noSTP" class="form-label">No of STP</label>'
-                            + '<div class="input-group mb-2">'
-                            + '<input type="text" id="noSTP" name="noSTP" class="form-control" value="' + element1.n_stp + '" placeholder="STP" onchange="addSTP();" aria-label="Area" aria-describedby="basic-addon2">'
-                            + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                            + '<button  id="noSTP" name="noSTP" value="' + element1.n_stp + '" type="button" class="btn btn-primary" onclick="addSTP();">✚</button>'
                             + '</div>'
                             + '</div>'
-                            + '</div>'
+                            // + '</div>'
 
 
                             + '<div class="row justify-content-center" id="adddstp">';
@@ -132,7 +129,7 @@ function showWaterInput() {
                                 + '<label for="waterRecycle" class="form-label"> Qty of Recycled Water</label>'
                                 + '<div class="input-group mb-2">'
                                 + '<input type="text" id="waterRecycle' + stpi + '" name="waterRecycle" class="form-control" placeholder="Recycled Water" value="' + element2.recycle + '"  aria-label="Residential" aria-describedby="basic-addon2">'
-                                + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                                + '<span class="input-group-text" id="basic-addon2">MLD</span>'
                                 + '</div>'
 
                                 + '</div>'
@@ -141,7 +138,7 @@ function showWaterInput() {
                                 + '<label for="waterDisposal" class="form-label">Qty of Water Disposal </label>'
                                 + '<div class="input-group mb-2">'
                                 + '<input type="text" id="waterDisposal' + stpi + '" name="waterDisposal" class="form-control" placeholder="Disposal of Waste" value="' + element2.dispose + '"  aria-label="Residential" aria-describedby="basic-addon2">'
-                                + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                                + '<span class="input-group-text" id="basic-addon2">MLD</span>'
                                 + '</div>'
 
                                 + ' </div>'
@@ -161,7 +158,7 @@ function showWaterInput() {
                         + '<label for="waterCon" class="form-label">Water Consumption</label>'
                         + '<div class="input-group mb-2">'
                         + '<input type="text" id="waterCon" name="waterCon" class="form-control" placeholder="Consumption" aria-label="Area" aria-describedby="basic-addon2">'
-                        + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                        + '<span class="input-group-text" id="basic-addon2">MLD</span>'
                         + '</div>'
                         + '</div>'
 
@@ -169,7 +166,7 @@ function showWaterInput() {
                         + '<label for="waterGen" class="form-label">Wastewater Generated</label>'
                         + '<div class="input-group mb-2">'
                         + '<input type="text" id="waterGen" name="waterGen" class="form-control" placeholder="Generated" aria-label="Area" aria-describedby="basic-addon2">'
-                        + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                        + '<span class="input-group-text" id="basic-addon2">MLD</span>'
                         + '</div>'
                         + '</div>'
 
@@ -177,20 +174,17 @@ function showWaterInput() {
                         + '<label for="waterTreat" class="form-label">Qty of wastewater treated</label>'
                         + '<div class="input-group mb-2">'
                         + '<input type="text" id="waterTreat" name="waterTreat" class="form-control" placeholder="Water Treat" aria-label="Area" aria-describedby="basic-addon2">'
-                        + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                        + '<span class="input-group-text" id="basic-addon2">MLD</span>'
                         + '</div>'
                         + '</div>'
                         + '</div>'
 
-                        + '<div class="row justify-content-center">'
+                        + '<div class="row justify-content-left">'
                         + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
-                        + '<label for="noSTP" class="form-label">No of STP</label>'
-                        + '<div class="input-group mb-2">'
-                        + '<input type="text" id="noSTP" name="noSTP" class="form-control" placeholder="STP"  onchange="addSTP();" aria-label="Area" aria-describedby="basic-addon2">'
-                        + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+                        + '<button  id="noSTP" name="noSTP" value="" type="button" class="btn btn-primary" onclick="addSTP();">✚</button>'
                         + '</div>'
                         + '</div>'
-                        + '</div>'
+                        // + '</div>'
 
                         + '<div class="row justify-content-center" id="adddstp"> </div>';
                 }
@@ -202,17 +196,15 @@ function showWaterInput() {
 
 }
 
-
+aSTP = 0;
 function addSTP() {
-
-    $("#adddstp").empty();
-
-    var noSTP = document.getElementById("noSTP").value;
+    aSTP++;
+    // $("#adddstp").empty();
+    // var noSTP = document.getElementById("noSTP").value;
     var html = '';
-    for (var i = 1; i <= noSTP; i++) {
         html += '<hr>'
             + '<div class="row  text-center ">'
-            + '<h4>Details About STP ' + i + ' </h4>'
+            + '<h4>Details About STP ' + aSTP + ' </h4>'
 
             + ' </div>'
             + '<div class="row justify-content-center">'
@@ -220,7 +212,7 @@ function addSTP() {
 
             + '<label for="capacity" class="form-label"> Capacity</label>'
             + '<div class="input-group mb-2">'
-            + '<input type="text" id="capacity' + i + '" name="capacity" class="form-control" placeholder="Capacity" aria-label="Residential" aria-describedby="basic-addon2">'
+            + '<input type="text" id="capacity' + aSTP + '" name="capacity" class="form-control" placeholder="Capacity" aria-label="Residential" aria-describedby="basic-addon2">'
             + '<span class="input-group-text" id="basic-addon2">MLD</span>'
             + '</div>'
 
@@ -229,7 +221,7 @@ function addSTP() {
 
             + '<label for="latitude" class="form-label"> Latitude</label>'
             + '<div class="input-group mb-2">'
-            + '<input type="text" id="latitude' + i + '" name="latitude" class="form-control" placeholder="Latitude" aria-label="Latitude" aria-describedby="basic-addon2">'
+            + '<input type="text" id="latitude' + aSTP + '" name="latitude" class="form-control" placeholder="Latitude" aria-label="Latitude" aria-describedby="basic-addon2">'
             + '</div>'
 
             + '</div>'
@@ -237,7 +229,7 @@ function addSTP() {
 
             + '<label for="longitude" class="form-label"> Longitude</label>'
             + '<div class="input-group mb-2">'
-            + '<input type="text" id="longitude' + i + '" name="longitude" class="form-control" placeholder="Longitude" aria-label="Longitude" aria-describedby="basic-addon2">'
+            + '<input type="text" id="longitude' + aSTP + '" name="longitude" class="form-control" placeholder="Longitude" aria-label="Longitude" aria-describedby="basic-addon2">'
             + '</div>'
 
             + '</div>'
@@ -245,7 +237,7 @@ function addSTP() {
 
             + '<label for="technology" class="form-label"> Technology</label>'
             + '<div class="input-group mb-2">'
-            + '<input type="text" id="technology' + i + '" name="technology" class="form-control" placeholder="Technology" aria-label="Technology" aria-describedby="basic-addon2">'
+            + '<input type="text" id="technology' + aSTP + '" name="technology" class="form-control" placeholder="Technology" aria-label="Technology" aria-describedby="basic-addon2">'
             + '</div>'
 
             + '</div>'
@@ -253,8 +245,8 @@ function addSTP() {
 
             + '<label for="waterRecycle" class="form-label"> Qty of Recycled Water</label>'
             + '<div class="input-group mb-2">'
-            + '<input type="text" id="waterRecycle' + i + '" name="waterRecycle" class="form-control" placeholder="Recycled Water" aria-label="Recycled Water" aria-describedby="basic-addon2">'
-            + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+            + '<input type="text" id="waterRecycle' + aSTP + '" name="waterRecycle" class="form-control" placeholder="Recycled Water" aria-label="Recycled Water" aria-describedby="basic-addon2">'
+            + '<span class="input-group-text" id="basic-addon2">MLD</span>'
             + '</div>'
 
             + '</div>'
@@ -262,13 +254,12 @@ function addSTP() {
 
             + '<label for="waterDisposal" class="form-label"> Qty of Water Disposal</label>'
             + '<div class="input-group mb-2">'
-            + '<input type="text" id="waterDisposal' + i + '" name="waterDisposal" class="form-control" placeholder="Disposal of Waste" aria-label="Residential" aria-describedby="basic-addon2">'
-            + '<span class="input-group-text" id="basic-addon2">CMD</span>'
+            + '<input type="text" id="waterDisposal' + aSTP + '" name="waterDisposal" class="form-control" placeholder="Disposal of Waste" aria-label="Residential" aria-describedby="basic-addon2">'
+            + '<span class="input-group-text" id="basic-addon2">MLD</span>'
             + '</div>'
 
             + ' </div>'
             + '  </div>';
-    }
 
     $("#adddstp").append(html);
 
@@ -293,7 +284,7 @@ function saveWaterData() {
        flag++;
       }
 
-    var noSTP = document.getElementById("noSTP").value;
+    var noSTP = aSTP;
 
     for (var i = 1; i <= noSTP; i++) {
 
