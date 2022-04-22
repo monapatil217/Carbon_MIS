@@ -19,6 +19,7 @@ $(document).ready(function () {
     showBMWInput();
     // showHWInput();
 })
+var aDumpingYard = 0;
 
 function showMSWInput() {
     var html = '';
@@ -42,8 +43,9 @@ function showMSWInput() {
                 var check = element.check;
 
                 if (check == "true") {
+                    
                     var eledata = element.cData;
-
+                    
                     $.each(eledata, function (index, element1) {
                         var n_yard = element1.n_yard;
                         var yardData = element1.YardData;
@@ -88,10 +90,13 @@ function showMSWInput() {
                             // + ' </div>'
 
                             + '<div class="row justify-content-center" id="adddDYard">';
+                            var i=1;
                         $.each(yardData, function (index, element2) {
-
-                            for (var i = 1; i <= n_yard; i++) {
+                            
+                           // for (var i = 1; i <= n_yard; i++) {
+                                aDumpingYard++;
                                 html += '<hr>'
+                                    +'<div  id="inputFormRow">'
                                     + '<div class="row  text-center ">'
                                     + '<h4>Details About Dumping Yard ' + i + ' </h4>'
 
@@ -125,6 +130,10 @@ function showMSWInput() {
                                     + '<div class="input-group mb-2">'
                                     + '<input type="text" id="apxWaste' + i + '" name="apxWaste' + i + '" value="' + element2.app_waste + '"  class="form-control" placeholder="Approximate Waste" aria-label="Approximate Waste" aria-describedby="basic-addon2">'
                                     + ' <span class="input-group-text" id="basic-addon2">MTD</span>'
+                                    + '<div >'
+                                    + '<i class="bi bi-trash" style="font-size:24px;color:#FF0000"; onclick="removeYard(this, ' + i + ')"></i>' 
+                                    + '</div>'
+                                    +'</div>'
                                     + '</div></div>'
 
                                     + '</div>';
@@ -132,7 +141,8 @@ function showMSWInput() {
 
                                 // + '</div>';
                                 i++;
-                            }
+                                
+                           // }
                         });
 
                         html += ' </div><div class="row">'
@@ -147,7 +157,6 @@ function showMSWInput() {
                     // addChart();
                 }
                 else {
-
                     html = '<div class="row">'
                         + '<div class="col-md-6 col-lg-4 col-xl-4 col-10 mt-3">'
                         + '<label for="generatedM" class="form-label">Generation </label>'
@@ -447,15 +456,17 @@ function addTreatmentType() {
     }
 }
 
-var aDumpingYard = 0;
+var yardList = [];
 function addDumpingYard() {
 
     // $("#adddDYard").empty();
     aDumpingYard++;
+    yardList.push(aDumpingYard);
     //var dumpingYardM = document.getElementById("dumpingYardM").value;
     var html = '';
         html += '<hr>'
-            + '<div class="row  text-center ">'
+            + '<div  id="inputFormRow">'
+            + '<div class="row  text-center " >'
             + '<h4>Details About Dumping Yard ' + aDumpingYard + ' </h4>'
 
             + ' </div>'
@@ -491,9 +502,13 @@ function addDumpingYard() {
             + '<div class="input-group mb-2">'
             + '<input type="text" id="apxWaste' + aDumpingYard + '" name="apxWaste' + aDumpingYard + '" class="form-control" placeholder="Approximate Waste" aria-label="Approximate Waste" aria-describedby="basic-addon2">'
             + ' <span class="input-group-text" id="basic-addon2">MTD</span>'
+            + '<div >'
+            + '<i class="bi bi-trash" style="font-size:24px;color:#FF0000"; onclick="removeYard(this, ' + aDumpingYard + ')"></i>'
+            + '</div>'
             + '</div>'
 
             + '</div>'
+            +'</div>'
             + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
             + '  </div>';
@@ -503,6 +518,20 @@ function addDumpingYard() {
     $("#adddDYard").append(html);
 
 }
+
+// delete Dumping yard 
+function removeYard(el, yard) {
+    
+     const index = yardList.indexOf(yard);
+    if (index > -1) {
+        yardList.splice(index, 1);
+    }
+    
+    $(el).closest('#inputFormRow').remove();
+    aDumpingYard--;
+}
+
+
 
 function showMSWData() {
     var flag = 0;
@@ -523,10 +552,6 @@ function showMSWData() {
         alert("Genrated value is less than collected value.");
         flag++;
     }
-
-
-
-
 
     if (comp == 1) {
         var compostedM = document.getElementById("compostedM").value;
@@ -562,14 +587,16 @@ function showMSWData() {
 
         var yardDetails = {};
 
-        var area = document.getElementById("area" + i).value;
-
-        var longitude = document.getElementById("longitude" + i).value;
-
-        var latitude = document.getElementById("latitude" + i).value;
-
-        var apxWaste = document.getElementById("apxWaste" + i).value;
-
+            var area = document.getElementById("area" + i).value;
+            console.log(area);
+       
+            var longitude = document.getElementById("longitude" + i).value;
+     
+            var latitude = document.getElementById("latitude" + i).value;
+        
+            var apxWaste = document.getElementById("apxWaste" + i).value;
+        
+    
         yardDetails["area"] = area;
         yardDetails["long"] = longitude;
         yardDetails["lat"] = latitude;

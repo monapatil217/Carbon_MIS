@@ -64,13 +64,17 @@ $rowcount = mysqli_num_rows($result);
         $query = "UPDATE  msw_data set msw_gen=$msw_gen,msw_col=$msw_col,t_comp=$t_comp,
                         t_disp=$t_disp,t_incin=$t_incin,n_yard=$n_yard WHERE b_id='" . $basicId . "'";
         $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+        $delquery = "DELETE FROM yard WHERE b_id='" . $basicId . "'";
+        $result = mysqli_query($conn, $delquery) or die(mysqli_error($conn));
+        $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         for ($i = 0; $i < sizeof($yardData); $i++) {
             $area = $yardData[$i]->area;
             $lat = $yardData[$i]->lat;
             $long = $yardData[$i]->long;
             $app_waste = $yardData[$i]->app_waste;
-            $query = "UPDATE yard set area=$area,lat=$lat,loong=$long,
-                    app_waste=$app_waste WHERE b_id='" . $basicId . "' AND msw_id=$last_id";
+            $query = "INSERT INTO yard(b_id,msw_id,area,lat,loong,app_waste)
+            VALUES ($basicId,$last_id,$area,$lat,$long,$app_waste)";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         }
 

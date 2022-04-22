@@ -197,7 +197,7 @@ if ($type == "Electricity") {
             $cData['t_disp'] = $row['t_disp'];
             $cData['t_incin'] = $row['t_incin'];
             $cData['n_yard'] = $row['n_yard'];
-                $query2 = "SELECT * FROM yard WHERE b_id='" . $basicId . "' AND msw_id=$mswid";
+                $query2 = "SELECT * FROM yard WHERE b_id='" . $basicId . "'";
                 $YardList=array();
                 $yard=[];
                 $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
