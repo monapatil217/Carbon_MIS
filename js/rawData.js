@@ -23,11 +23,8 @@ function openCity(cityName, elmnt, color) {
     }
     document.getElementById(cityName).style.display = "block";
     elmnt.style.backgroundColor = color;
-
-
-
+    // document.body.style.backgroundColor = color;
 }
-
 
 function showInput() {
 
@@ -1922,3 +1919,8 @@ function showInput() {
     $("#sectorInfo").append(html);
 
 }
+
+// {/* <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+// </script>  */}
+
+

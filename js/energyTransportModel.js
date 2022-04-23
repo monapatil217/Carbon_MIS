@@ -267,7 +267,7 @@ function showVehiInfo() {
         + '<div class="row mt-2 mb-3">'
         + '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 infoFont">'
         + '<ul style="margin-left: 10px;">'
-        + '<li class="popupli"> Between 2019-20 and 2020-21, the share of diesel cars in the market fell from 29.5 per cent to 17 per cent while the share of petrol cars rose from 66 per cent to 76 per cent. CNG cars, running mainly in big metros, jumped from 4 to 6 per cent. The share of electric and hybrid vehicles also rose marginally.</li>'
+        + '<li class="popupli"> Between 2019-20 and 2020-21, the share of diesel cars in the market fell from 29.5 percent to 17 percent while the share of petrol cars rose from 66 per cent to 76 per cent. CNG cars, running mainly in big metros, jumped from 4 to 6 per cent. The share of electric and hybrid vehicles also rose marginally.</li>'
         + '<li class="popupli">The greenhouse gas (GHG) emissions in India consisted of 70 % CO2 and 30 % non - CO2 (methane, nitrous oxide, F - gas) emissions(Olivier and Peters 2020).</li > '
         // + '<li class="popupli">Around 60.9% installed generation capacity is due to fossil fuel. </li>'
         // + '<li class="popupli">Around 37.9% installed generation capacity is due to renewable energy sources.</li>'

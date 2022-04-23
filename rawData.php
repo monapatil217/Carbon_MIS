@@ -303,7 +303,7 @@ require "php/session.php";
         </div>
     </section><!-- End Sub Hero -->
     <!-- Adding Javascripts -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+       <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.4.1/jspdf.plugin.autotable.min.js"></script>

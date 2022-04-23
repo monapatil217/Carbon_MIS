@@ -164,7 +164,6 @@ function addCityChart() {
 
     showInput();
     openCity('Electricity', this, '#A8E6CE');
-
 }
 
 function getCity() {
