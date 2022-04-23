@@ -67,7 +67,7 @@ $rowcount = mysqli_num_rows($result);
 
         $delquery = "DELETE FROM yard WHERE b_id='" . $basicId . "'";
         $result = mysqli_query($conn, $delquery) or die(mysqli_error($conn));
-        $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+       // $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         for ($i = 0; $i < sizeof($yardData); $i++) {
             $area = $yardData[$i]->area;
             $lat = $yardData[$i]->lat;

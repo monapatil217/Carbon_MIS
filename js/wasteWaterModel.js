@@ -18,7 +18,7 @@ window.onclick = function (event) {
 $(document).ready(function () {
     showWaterInput();
 })
-
+aSTP = 0;
 function showWaterInput() {
     var html = '';
 
@@ -74,9 +74,15 @@ function showWaterInput() {
                             + '</div>'
                             + '</div>'
 
+                            + '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                            + '<h4>Add STP</h4>'
+                            + '</div>'
+                            + '</div>'
+
                             + '<div class="row justify-content-left">'
                             + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
-                            + '<button  id="noSTP" name="noSTP" value="' + element1.n_stp + '" type="button" class="btn btn-primary" onclick="addSTP();">✚</button>'
+                            + '<button  id="noSTP" name="noSTP" value="' + element1.n_stp + '" type="button" class="btn btn-primary" onclick="addSTP();">No.Of STP ✚</button>'
                             + '</div>'
                             + '</div>'
                             // + '</div>'
@@ -85,7 +91,9 @@ function showWaterInput() {
                             + '<div class="row justify-content-center" id="adddstp">';
                         var stpi = 1;
                         $.each(stpdata, function (index, element2) {
+                            aSTP++;
                             html += '<hr>'
+                                +'<div  id="inputFormRow">'
                                 + '<div class="row  text-center ">'
                                 + '<h4>Details About STP ' + stpi + ' </h4>'
 
@@ -139,9 +147,11 @@ function showWaterInput() {
                                 + '<div class="input-group mb-2">'
                                 + '<input type="text" id="waterDisposal' + stpi + '" name="waterDisposal" class="form-control" placeholder="Disposal of Waste" value="' + element2.dispose + '"  aria-label="Residential" aria-describedby="basic-addon2">'
                                 + '<span class="input-group-text" id="basic-addon2">MLD</span>'
+                                + '<i class="bi bi-trash" style="font-size:24px;color:#FF0000"; onclick="removeSTP(this, ' + stpi + ')"></i>'
                                 + '</div>'
-
+                                
                                 + ' </div>'
+                                + '</div>'
                                 + '  </div>';
                             stpi++;
 
@@ -179,9 +189,15 @@ function showWaterInput() {
                         + '</div>'
                         + '</div>'
 
+                        + '<div class="row justify-content-center">'
+                        + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                        + '<h4>Add STP</h4>'
+                        + '</div>'
+                        + '</div>'
+
                         + '<div class="row justify-content-left">'
                         + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
-                        + '<button  id="noSTP" name="noSTP" value="" type="button" class="btn btn-primary" onclick="addSTP();">✚</button>'
+                        + '<button  id="noSTP" name="noSTP" value="" type="button" class="btn btn-primary" onclick="addSTP();">No.Of STP ✚</button>'
                         + '</div>'
                         + '</div>'
                         // + '</div>'
@@ -196,13 +212,15 @@ function showWaterInput() {
 
 }
 
-aSTP = 0;
+var stpList = [];
 function addSTP() {
     aSTP++;
+    stpList.push(aSTP);
     // $("#adddstp").empty();
     // var noSTP = document.getElementById("noSTP").value;
     var html = '';
         html += '<hr>'
+            +'<div  id="inputFormRow">'
             + '<div class="row  text-center ">'
             + '<h4>Details About STP ' + aSTP + ' </h4>'
 
@@ -256,13 +274,26 @@ function addSTP() {
             + '<div class="input-group mb-2">'
             + '<input type="text" id="waterDisposal' + aSTP + '" name="waterDisposal" class="form-control" placeholder="Disposal of Waste" aria-label="Residential" aria-describedby="basic-addon2">'
             + '<span class="input-group-text" id="basic-addon2">MLD</span>'
+            + '<i class="bi bi-trash" style="font-size:24px;color:#FF0000"; onclick="removeSTP(this, ' + aSTP + ')"></i>'
             + '</div>'
-
+            +'</div>'
             + ' </div>'
             + '  </div>';
 
     $("#adddstp").append(html);
 
+}
+
+// Delete STP 
+function removeSTP(el, stp) {
+    
+    const index = stpList.indexOf(stp);
+   if (index > -1) {
+       stpList.splice(index, 1);
+   }
+   
+   $(el).closest('#inputFormRow').remove();
+   aSTP--;
 }
 
 function saveWaterData() {

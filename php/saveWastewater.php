@@ -84,6 +84,8 @@ $rowcount = mysqli_num_rows($result);
             $query = "UPDATE  waste_data set w_cons=$w_cons,w_gen=$w_gen,
                             q_treat=$q_treat,n_stp=$n_stp WHERE b_id='" . $basicId . "'";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+            $delquery = "DELETE FROM stp WHERE b_id='" . $basicId . "'";
+            $result = mysqli_query($conn, $delquery) or die(mysqli_error($conn));
             for ($i = 0; $i < sizeof($stpData); $i++) {
                 $cap = $stpData[$i]->cap;
                 $lat = $stpData[$i]->lat;
@@ -91,10 +93,11 @@ $rowcount = mysqli_num_rows($result);
                 $tech = $stpData[$i]->tech;
                 $recycle = $stpData[$i]->recycle;
                 $dispose = $stpData[$i]->dispose;
-                $query = "UPDATE stp set cap=$cap,lat=$lat,loong=$long,
-                        tech='".$tech."',recycle=$recycle,dispose=$dispose WHERE b_id='" . $basicId . "' AND w_id=$last_id";
+                $query = "INSERT INTO stp(b_id,w_id,cap,lat,loong,tech,recycle,dispose)
+                VALUES ($basicId,$last_id,$cap,$lat,$long,'".$tech."',$recycle,$dispose)";
                 $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
             }
+
             $query = "UPDATE  waste_emi set co2=$carbonco2,ch4=$carbonch4,n2o=$carbonn2o
             WHERE b_id='" . $basicId . "'";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));

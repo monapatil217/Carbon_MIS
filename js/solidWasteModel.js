@@ -80,11 +80,17 @@ function showMSWInput() {
                             + '</div>'
                             + '<div class="row" id="comp">'
 
+                            + '<div class="row justify-content-center">'
+                            + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                            + '<h4>Add Yard</h4>'
+                            + '</div>'
+                            + '</div>'
+
                             + '</div>'
 
                             + '<div class="row justify-content-left" >'
                             + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
-                            + '<button  id="dumpingYardM" name="dumpingYardM" value="' + element1.n_yard + '" type="button" class="btn btn-primary" onclick="addDumpingYard();">✚</button>'
+                            + '<button  id="dumpingYardM" name="dumpingYardM" value="' + element1.n_yard + '" type="button" class="btn btn-primary" onclick="addDumpingYard();">No.Of Yards ✚</button>'
                             + '</div>'
                             + '</div>'
                             // + ' </div>'
@@ -192,7 +198,7 @@ function showMSWInput() {
 
                         + '<div class="row justify-content-left" >'
                         + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
-                        + '<button  id="dumpingYardM" name="dumpingYardM" value="" type="button" class="btn btn-primary" onclick="addDumpingYard();">✚</button>'
+                        + '<button  id="dumpingYardM" name="dumpingYardM" value="" type="button" class="btn btn-primary" onclick="addDumpingYard();">No.Of Yards ✚</button>'
                         + '</div>'
                         + '</div>'
 

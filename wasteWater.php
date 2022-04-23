@@ -54,7 +54,7 @@ require "php/session.php";
         include 'header.php';
         ?>
     <!-- ======= Hero Section ======= -->
-    <section id="subHero" class="d-flex  justify-content-center textc" style="height: auto ; min-height: 100vh;">
+    <section id="subHero" class="d-flex  justify-content-center " style="height: auto ; min-height: 100vh;">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
             <input type="text" class="form-control" id="sectionType" value="wasteWater" hidden>
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden
@@ -62,11 +62,41 @@ require "php/session.php";
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-12  mb-3  s" data-aos-delay="200">
                     <div class="in-sec">
-                        <h5 class="text-center">Wastewater</h5>
-                        <marquee width="100%" direction="left" height="30px" scrollamount="2"> CMD - Cubic meter per day
+                        <h5 class="text-center text-light">Wastewater</h5>
+                        <marquee width="100%" direction="left" height="30px" scrollamount="2" class="text-light"> CMD - Cubic meter per day
                             /MLD-Millions of liter per day </marquee>
                         <form class="needs-validation" novalidate>
-                            <div id="waterInput"></div>
+                            <div id="faq_pp" class="faq section-bg_pp">
+                                <div class="faq-list faq_list_e">
+                                    <ul>
+                                        <li data-aos="fade-up">
+                                            <a data-bs-toggle="collapse" id="fa1" class="collapse"
+                                                data-bs-target="#faq-list-1"> Municipal Waste Water
+                                                <i class="bx bx-chevron-down icon-show"></i>
+                                                <i class="bx bx-chevron-up icon-close"></i></a>
+                                            <div id="faq-list-1" class="collapse show extra" data-bs-parent=".faq-list">
+                                                <h6 class="text-center">Quantity of Municipal Waste Water</h6>
+                                                <div id="waterInput"></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
                                     <!-- <button class="btn btn-primary " type="button"
