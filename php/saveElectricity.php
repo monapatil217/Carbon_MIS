@@ -35,7 +35,10 @@ while ($row = mysqli_fetch_array($result)) {
 }
 $carbonco2=round($carbonco2,2);
 $carbonch4=round($carbonch4,5);
-$carbonn2o=round($carbonn2o,6);
+$carbonch4=round($carbonn2o,6);
+///2022 before intervention
+$emi2022=$carbonco2+$carbonch4+$carbonch4;
+
         $query2 = "SELECT * FROM ele_data WHERE b_id='" . $basicId . "'";
         $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
 
@@ -72,7 +75,7 @@ $carbonn2o=round($carbonn2o,6);
         $emissionYears[] = $eleUse2030;
         $emissionYears[] = $eleUse2050;
 
-        $carbonGases=0;
+        $beforemi2030=0;
         $emissionYear = array();
         for($i=0;$i<sizeof($emissionYears);$i++){
 
@@ -99,10 +102,11 @@ $carbonn2o=round($carbonn2o,6);
             $carbonch4=round($carbonch4,5);
             $carbonn2o=round($carbonn2o,6);
 
-            $carbonGases = $carbonco2 + $carbonch4 + $carbonn2o;
-            // echo "\n ",$carbonGases."</br>";
+            //BEFORE intervention
+            $beforemi2030 = $carbonco2 + $carbonch4 + $carbonn2o;
+            // echo "\n ",$beforemi2030."</br>";
             
-            $emissionYear[$i]=$carbonGases;
+            $emissionYear[$i]=$beforemi2030;
         }
 
         // Kw into Coal 2030 and 2050
@@ -128,8 +132,9 @@ $carbonn2o=round($carbonn2o,6);
             $carbonch2030=round($carbonch2030,5);
             $carbonn2030=round($carbonn2030,6);
 
+            ///AFTER intervention
             // echo  "\n\n your after intervention 2030 Policy One --> ".$carbonco2030+$carbonch2030+$carbonn2030."";
-            // echo "\n Electricity Coal Policy Use in 2030->",$coalPolicyOne;
+           // echo "\n Electricity Coal Policy Use in 2030->",$coalPolicyOne;
             //Coal Policy One 2030
 
         //Coal Policy Two 2030
@@ -146,8 +151,8 @@ $carbonn2o=round($carbonn2o,6);
         // echo  "\n your after intervention 2030 Policy Three --> ".$coalPolicyThree."";
         $emiPThr2030 = $coalPolicyCoTh2030+$coalPolicyChTh2030 +$coalPolicyNTh2030;
         // echo  "\n your intervention 2030 --> ".$emiPThr2030."";
-        $finalEmi = $carbonCoT2030 - $emiPThr2030;
-        // echo  "\n your Final intervention 2030 --> ".$finalEmi."";
+        $finalEmi2030 = $carbonCoT2030 - $emiPThr2030;
+        // echo  "\n your Final intervention 2030 --> ".$finalEmi2030."";
         //Coal Policy Three 2030
 
         //Coal Policy One 2050
@@ -170,6 +175,7 @@ $carbonn2o=round($carbonn2o,6);
 
             // echo  "\n\n your after intervention 2050 Policy One --> ".$carbonco2050+$carbonch2050+$carbonn2050."";
             // echo "\n Electricity Coal Policy Use in 2030->",$coalPolicyOne;
+            
 
             //Coal Policy One 2050
 
@@ -179,7 +185,7 @@ $carbonn2o=round($carbonn2o,6);
          //$carbonCoT2050=$carboncoPT2050;
         // echo  "\n your after intervention 2050 Policy Two --> ".$carboncoPT2050."";
         //Coal Policy Two 2050
-
+            $beforemi2050=0;
         //Coal Policy Three 2050
         $carbonCoT2050 = $carboncoPT2050*0.13;
         $coalPolicyChTh2050 = $carbonch2050*0.13;
@@ -187,6 +193,7 @@ $carbonn2o=round($carbonn2o,6);
         // echo  "\n your after intervention 2030 Policy Three --> ".$coalPolicyThree."";
         $emiPThr2050 = $carbonCoT2050+$coalPolicyChTh2050 +$coalPolicyNTh2050;
         // echo  "\n your intervention 2050 --> ".$emiPThr2050."";
+        ////after emission 2050
         $finalEmi2050 = $carboncoPT2050 - $emiPThr2050;
         // echo  "\n your Final intervention 2050 --> ".$finalEmi2050."";
         //Coal Policy Three 2050
@@ -197,5 +204,51 @@ $carbonn2o=round($carbonn2o,6);
 
         
         // Emission for 2030 AND 2050
-       // echo  "success";
+      ///////////M///////
+            $dataArray = array();
+
+             $inteArray = array();
+            $inteArray ['ctcyear'] =  "2022";
+            $inteArray ['bauemi'] = $emi2022;
+            $inteArray ['intervemi'] =0;
+            array_push($dataArray, $inteArray);
+
+            $inteArray = array();
+            $inteArray ['ctcyear'] =  "2030";
+            $inteArray ['bauemi'] = $beforemi2030;
+            $inteArray ['intervemi'] =$finalEmi2030;
+            array_push($dataArray, $inteArray);
+           
+            $inteArray = array();
+            $inteArray ['ctcyear'] =  "2050";
+            $inteArray ['bauemi'] = $beforemi2050;
+            $inteArray ['intervemi'] =$finalEmi2050;
+            array_push($dataArray, $inteArray);
+
+        
+          $sizeof = sizeof($dataArray);
+           foreach ($dataArray as $row) {
+           $ctcyear =  $row['ctcyear'];
+           $bauemi =  $row['bauemi'];
+           $intervemi =  $row['intervemi'];
+   
+           
+            $query2 = "SELECT * FROM bau WHERE b_id='" . $basicId . "' AND type='".'Electricity'."' AND ctcyear='".$ctcyear."'";
+            $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
+            $rowcount = mysqli_num_rows($result);
+            if ($rowcount == 0) {           
+            $query = "INSERT INTO bau(b_id,type,ctcyear,bauemi,intervemi)
+            VALUES ($basicId,'".'Electricity'."',$ctcyear,$bauemi,$intervemi)";
+            $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+            }
+
+            else
+            {
+            $query = "UPDATE  bau set bauemi=$bauemi,intervemi=$intervemi
+            WHERE b_id='" . $basicId . "' AND type='".'Electricity'."' AND ctcyear='".$ctcyear."' ";
+            $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+            }
+             
+           }  
+              echo  "success";
 ?>
