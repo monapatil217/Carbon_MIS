@@ -4,6 +4,7 @@ $json = file_get_contents('php://input');
 $data = json_decode($json);
 $basicId = $data->basicId;
 $type = $data->type;
+$city = $data->city;
 $finalArray = array();
 
 $tableArray = array();
@@ -47,28 +48,35 @@ for ($i = 0; $i < sizeof($tableArray); $i++) {
         while ($row = mysqli_fetch_array($result)) {
 
             $mainArray['check'] = "true";
-            $co2 += $row['co2'];
-            $ch4 += $row['ch4'];
-            $n20 += $row['n2o'];
+            $co2 = $row['co2'];
+            $ch4 = $row['ch4'];
+            $n20 = $row['n2o'];
         }
     }
 }
+
+    $query2 = "SELECT * FROM percapita WHERE type='" . $type . "'";
+    $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
+    $rowcount = mysqli_num_rows($result);
+    while ($row = mysqli_fetch_array($result)) {
+
+        $india = $row['india'];
+        $maha = $row['maharastra'];
+    }
+
 $deleData = array();
 
 $eleData = [];
-$eleData['Pollutant'] = "CO2";
-$eleData['Barshi'] = floatval($co2);
-$eleData['Maharashtra'] = 62687.6644;
+$eleData['name'] = $city;
+$eleData['value'] = floatval($co2+$ch4+$n20);
 array_push($deleData, $eleData);
 $eleData = [];
-$eleData['Pollutant'] = "CH4";
-$eleData['Barshi'] = floatval($ch4);
-$eleData['Maharashtra'] =0.6543;
+$eleData['name'] = "Maharashtra";
+$eleData['value'] = floatval($maha);
 array_push($deleData, $eleData);
 $eleData = [];
-$eleData['Pollutant'] = "N2O";
-$eleData['Barshi'] = floatval($n20);
-$eleData['Maharashtra'] =0.9160;
+$eleData['name'] = "India";
+$eleData['value'] = floatval($india);
 array_push($deleData, $eleData);
 
 $mainArray['cData'] =   $deleData;
