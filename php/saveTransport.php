@@ -245,13 +245,20 @@ foreach ($dataArray as $row) {
         //     echo "pop2030:",$population2030;
 
         // Policy
+
+
+        
         //  Two Wheeler
+
         // EV Policy
         //A(BAU)         (Number of Vehicle) = factor * (2030 Population)
         $tw30 = 0.325*$population2030; //A
+
         //B         (EV Applied) 
         $tWP2030= 0.7*($tw30-$w25);
         $tWIT2030 = $w25+$tWP2030;
+
+
         //4POlicy   (Congestion + Non Mension + Subsidizesion + Shared Transport) 
         $conTw2030 = $w25 - $w25*(pow((1-(0.5/100)),5));
         $nonMoterTw2030 = $w25 - $w25*(pow((1-(0.5/100)),5));
@@ -497,15 +504,17 @@ foreach ($dataArray as $row) {
                     $carbonco2beforeEmi2030 += ($km1 *  $approx_fuel * $density * $ncv * $co2ef *365)/1000;
                     $carbonch4beforeEmi2030 += ($km1 *  $approx_fuel * $density * $ncv * $ch4ef *21* 365)/1000;
                     $carbonn2obeforeEmi2030 += ($km1 *  $approx_fuel * $density * $ncv * $n2oef *310* 365)/1000;
-                    $beforeEmi2030 = $carbonco2beforeEmi2030 + $carbonch4beforeEmi2030 + $carbonn2obeforeEmi2030;
+                    $beforeEmi2030 = $carbonco2beforeEmi2030 + $carbonch4beforeEmi2030 + $carbonn2obeforeEmi2030;                  
                      $beforeEmi2030=round($beforeEmi2030,2);
                 }
                
             }
             
         }
-        //    echo "2030BaU:", $beforeEmi2030;
-        // echo"\n\n Before 2030 vehicles list";
+        echo "before Emi 2030:". $beforeEmi2030;
+        // echo"\n\n carbon co2 before Emi 2030--> ".$carbonco2beforeEmi2030;
+        // echo"\n\n carbon ch4 before Emi 2030--> ".$carbonch4beforeEmi2030;
+        // echo"\n\n carbon n2o before Emi 2030--> ".$carbonn2obeforeEmi2030;
         // print_r($dataArrayBefore2030);
   
         // echo "\n\n  Before Emi 2030 -->".$beforeEmi2030;
