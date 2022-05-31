@@ -85,18 +85,6 @@ require "php/session.php";
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
                                     <!-- <button class="btn btn-primary " type="button"

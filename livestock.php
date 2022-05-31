@@ -37,8 +37,8 @@ require "php/session.php";
   ======================================================== -->
     <style>
     #liveStock {
-        width: 300px;
-        height: 300px;
+        width: 360px;
+        height: 360px;
     }
     </style>
 </head>
@@ -51,6 +51,8 @@ require "php/session.php";
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
             <input type="text" class="form-control" id="sectionType" value="liveStock" hidden>
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden
+                disabled>
+            <input type="text" id="cityName" class="form-control" value="<?php echo $_SESSION["cityName"]; ?>" hidden
                 disabled>
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-5" data-aos-delay="200">
@@ -164,7 +166,8 @@ require "php/session.php";
     <!-- Our js File  -->
     <script src="js/common.js"></script>
     <script src="js/liveStock.js"></script>
-    <script src="js/induGraph.js"></script>
+    <script src="js/compareGraph.js"></script>
+    <!-- <script src="js/induGraph.js"></script> -->
 </body>
 
 </html>

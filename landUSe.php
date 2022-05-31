@@ -37,8 +37,8 @@ require "php/session.php";
   ======================================================== -->
     <style>
     #landUse {
-        width: 300px;
-        height: 300px;
+        width: 360px;
+        height:360px;
     }
     </style>
 </head>
@@ -52,8 +52,10 @@ require "php/session.php";
             <input type="text" class="form-control" id="sectionType" value="landUse" hidden>
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden
                 disabled>
+                 <input type="text" id="cityName" class="form-control" value="<?php echo $_SESSION["cityName"]; ?>" hidden
+                disabled>
             <div class="row">
-                <div class="col-md-12 col-lg-5  mb-3" data-aos-delay="200">
+                <div class="col-md-12 col-lg-6  mb-3" data-aos-delay="200">
                     <div class="in-sec">
                         <!-- <h4 class="text-center mb-2">Land Use</h4> -->
                         <marquee width="100%" direction="left" height="30px" scrollamount="2"> sq.km - Square Kilometre.
@@ -79,7 +81,7 @@ require "php/session.php";
                         <!-- End PopUp div -->
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-7  mb-3" data-aos-delay="200">
+                <div class="col-md-12 col-lg-6  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">
                         <h3 class="text-center">Carbon Emissions From Land Use Sector </h3>
                         <ul style="margin-left: 10px;">
@@ -89,7 +91,7 @@ require "php/session.php";
                                 or removal of greenhouse gases from the atmosphere.</li>
                         </ul>
                         <div class="row justify-content-center">
-                            <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6"
+                            <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-7"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <div class="row justify-content-center">
                                     <div id="chartName"></div>
@@ -173,7 +175,8 @@ require "php/session.php";
     <!-- Our js File  -->
     <script src="js/common.js"></script>
     <script src="js/landUseModel.js"></script>
-    <script src="js/induGraph.js"></script>
+    <!-- <script src="js/induGraph.js"></script> -->
+    <script src="js/compareGraph.js"></script>
 </body>
 
 </html>

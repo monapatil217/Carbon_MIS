@@ -21,4 +21,5 @@ $type = $data->type;
 
     }
     echo  json_encode($interdata);
+    
 ?>

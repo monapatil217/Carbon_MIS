@@ -207,6 +207,7 @@ function saveForestData() {
                 if (data == "success") {
                     alert("Data Save Succesfuly");
                     addChart();
+                    aflouData();
                     // window.location.replace("landUSe.php");
                 } else {
                     alert("Data not Save Succesfuly")

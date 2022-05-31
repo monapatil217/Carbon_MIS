@@ -21,7 +21,7 @@ $emissionPerDay;
 $carbonco2;$carbonch4;$carbonn2o;
 $value = $ele * 700;
 $value1 = $value * 0.64;
-$totalfuel = $value1 / 1000;
+$totalfuel = $value1 / 1000000;
 $query1 = "SELECT * FROM ef_fuel where fuel_name='NonCookingCoal'";
 $result = mysqli_query($conn, $query1);
 while ($row = mysqli_fetch_array($result)) {
@@ -30,15 +30,17 @@ while ($row = mysqli_fetch_array($result)) {
     $ch4 =  $row['ch4'];
     $n2o =  $row['n2o'];
     $carbonco2 = ($totalfuel * $ncv * $co2 * 12)/1000000;
-    $carbonch4 = ($totalfuel * $ncv * $ch4  *12)/1000000;
-    $carbonn2o = ($totalfuel * $n2o * $ncv * 12)/1000000;
+    $carbonch4 = ($totalfuel * $ncv * $ch4 * 21 *12)/1000000;
+    $carbonn2o = ($totalfuel * $n2o * 310 * $ncv * 12)/1000000;
 }
 $carbonco2=round($carbonco2,2);
 $carbonch4=round($carbonch4,5);
 $carbonch4=round($carbonn2o,6);
+
 ///2022 before intervention
 $emi2022=$carbonco2+$carbonch4+$carbonch4;
-
+$emi2022=round($emi2022,2);
+// echo "\ 2022:", $emi2022;
         $query2 = "SELECT * FROM ele_data WHERE b_id='" . $basicId . "'";
         $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
 
@@ -66,25 +68,25 @@ $emi2022=$carbonco2+$carbonch4+$carbonch4;
         $t30=2030-date("Y");
         $eleUse30=pow((1+(5/100)),$t30);
         $eleUse2030=$ele*$eleUse30;
+        //  echo $eleUse2030;
 
-        $t50=2050-date("Y");
-        $eleUse50=pow((1+(5/100)),$t50);
-        $eleUse2050=$ele*$eleUse50;
+        // $t50=2050-date("Y");
+        // $eleUse50=pow((1+(5/100)),$t50);
+        // $eleUse2050=$ele*$eleUse50;
 
         $emissionYears = array();
         $emissionYears[] = $eleUse2030;
-        $emissionYears[] = $eleUse2050;
-
-        $beforemi2030=0;
+        // $emissionYears[] = $eleUse2050;       
+        // $beforemi2030=0;
+       
         $emissionYear = array();
-        for($i=0;$i<sizeof($emissionYears);$i++){
-
-            $emissionPerDay;
+        for($i=0;$i<sizeof($emissionYears);$i++){  
+              $emissionPerDay;
             $electricity =  $emissionYears[$i];
             $carbonco2;$carbonch4;$carbonn2o;
             $value = $electricity * 700;
             $value1 = $value * 0.64;
-            $totalfuel = $value1 / 1000;
+            $totalfuel = $value1 / 1000000;
             $query1 = "SELECT * FROM ef_fuel where fuel_name='NonCookingCoal'";
             $result = mysqli_query($conn, $query1);
 
@@ -101,17 +103,87 @@ $emi2022=$carbonco2+$carbonch4+$carbonch4;
             $carbonco2=round($carbonco2,2);
             $carbonch4=round($carbonch4,5);
             $carbonn2o=round($carbonn2o,6);
-
+           
             //BEFORE intervention
-            $beforemi2030 = $carbonco2 + $carbonch4 + $carbonn2o;
-            // echo "\n ",$beforemi2030."</br>";
+         
+          
+            $beforemi2030 = $carbonco2 + $carbonch4 + $carbonn2o;  
+            $emissionYear[$i=0]=$beforemi2030; 
+        //    echo "\B2030:", $beforemi2030;
+            //    $beforemi2050=$carbonco2 + $carbonch4 + $carbonn2o;
+           //     $emissionYear[$i=1]=$beforemi2050;
+                    
+            // echo "\n mmmmm",$beforemi2030."</br>";
+            // echo $beforemi2030;
+            // echo $carbonco2;
             
-            $emissionYear[$i]=$beforemi2030;
+            // echo "\n ",$beforemi2050."</br>";
+            // echo $beforemi2050;
+            //  $emissionYear[$i]=$beforemi2030;
+            // $emissionYear[$i]=$beforemi2050;
+ 
+            //  echo $beforemi2050;
+       
+            //  $beforemi2050=$carbonco2 + $carbonch4 + $carbonn2o;
+            // $emissionYear[$i]=$beforemi2050;
+    
         }
+       
+//         // mmmmmmmmm
+ $t50=2050-date("Y");
+        $eleUse50=pow((1+(5/100)),$t50);
+        $eleUse2050=$ele*$eleUse50;
+
+        $emissionYears = array();
+        // $emissionYears[] = $eleUse2030;
+        $emissionYears[] = $eleUse2050;       
+        // $beforemi2030=0;
+        $emissionYear = array();
+        for($i=0;$i<sizeof($emissionYears);$i++){
+
+            $emissionPerDay;
+            $electricity =  $emissionYears[$i];
+            $carbonco2;$carbonch4;$carbonn2o;
+            $value = $electricity * 700;
+            $value1 = $value * 0.64;
+            $totalfuel = $value1 / 1000000;
+            $query1 = "SELECT * FROM ef_fuel where fuel_name='NonCookingCoal'";
+            $result = mysqli_query($conn, $query1);
+
+            while ($row = mysqli_fetch_array($result)) {
+                $ncv =  $row['ncv'];
+                $co2 =  $row['co2'];
+                $ch4 =  $row['ch4'];
+                $n2o =  $row['n2o'];
+                $carbonco2 = ($totalfuel * $ncv * $co2 * 12)/1000000;
+                $carbonch4 = ($totalfuel * $ncv * $ch4  *12)/1000000;
+                $carbonn2o = ($totalfuel * $n2o * $ncv * 12)/1000000;
+            }
+
+            $carbonco2=round($carbonco2,2);
+            $carbonch4=round($carbonch4,5);
+            $carbonn2o=round($carbonn2o,6);
+           
+            //BEFORE intervention
+            // $beforemi2030 = $carbonco2 + $carbonch4 + $carbonn2o;           
+            // echo "\n mmmmm",$beforemi2030."</br>";
+            // echo $beforemi2030;
+            // echo $carbonco2;
+             $beforemi2050=$carbonco2 + $carbonch4 + $carbonn2o;
+            // echo "\n ",$beforemi2050."</br>";
+            // echo $beforemi2050;
+            $emissionYear[$i]=$beforemi2050;
+            // $emissionYear[$i]=$beforemi2030;
+            //   echo "\B2050:", $beforemi2050;
+            //  echo $beforemi2050;
+        }
+      
+//         // mmmmmmmm
+        // echo "\n ",$beforemi2030."</br>";
 
         // Kw into Coal 2030 and 2050
-        $kwConvert2030=($eleUse2030*700*0.64)/1000;
-        $kwConvert2050=($eleUse2050*700*0.64)/1000;
+        $kwConvert2030=($eleUse2030*700*0.64)/1000000;
+        $kwConvert2050=($eleUse2050*700*0.64)/1000000;
        // Kw into Coal 2030 and 2050
 
        //Coal Policy One 2030
@@ -152,9 +224,10 @@ $emi2022=$carbonco2+$carbonch4+$carbonch4;
         $emiPThr2030 = $coalPolicyCoTh2030+$coalPolicyChTh2030 +$coalPolicyNTh2030;
         // echo  "\n your intervention 2030 --> ".$emiPThr2030."";
         $finalEmi2030 = $carbonCoT2030 - $emiPThr2030;
+         $finalEmi2030=round( $finalEmi2030,2);
         // echo  "\n your Final intervention 2030 --> ".$finalEmi2030."";
         //Coal Policy Three 2030
-
+            //  echo "\I2030:", $finalEmi2030;
         //Coal Policy One 2050
         $coalPolicyOne = $kwConvert2050*0.25;
             $query1 = "SELECT * FROM ef_fuel where fuel_name='NonCookingCoal'";
@@ -185,7 +258,7 @@ $emi2022=$carbonco2+$carbonch4+$carbonch4;
          //$carbonCoT2050=$carboncoPT2050;
         // echo  "\n your after intervention 2050 Policy Two --> ".$carboncoPT2050."";
         //Coal Policy Two 2050
-            $beforemi2050=0;
+            // $beforemi2050=0;
         //Coal Policy Three 2050
         $carbonCoT2050 = $carboncoPT2050*0.13;
         $coalPolicyChTh2050 = $carbonch2050*0.13;
@@ -195,13 +268,14 @@ $emi2022=$carbonco2+$carbonch4+$carbonch4;
         // echo  "\n your intervention 2050 --> ".$emiPThr2050."";
         ////after emission 2050
         $finalEmi2050 = $carboncoPT2050 - $emiPThr2050;
+        $finalEmi2050=round($finalEmi2050,2);
         // echo  "\n your Final intervention 2050 --> ".$finalEmi2050."";
         //Coal Policy Three 2050
 
         // echo "\n\n\n Electricity Use in 2030->",$eleUse2030.'<br>';
         // echo "\n Electricity Use in 2050->",$eleUse2050.'<br>';
         // echo '<pre>'; print_r($emissionYear); echo '</pre>';
-
+            // echo "\I2050:", $finalEmi2050;
         
         // Emission for 2030 AND 2050
       ///////////M///////
@@ -210,7 +284,7 @@ $emi2022=$carbonco2+$carbonch4+$carbonch4;
              $inteArray = array();
             $inteArray ['ctcyear'] =  "2022";
             $inteArray ['bauemi'] = $emi2022;
-            $inteArray ['intervemi'] =0;
+            $inteArray ['intervemi'] =$emi2022;
             array_push($dataArray, $inteArray);
 
             $inteArray = array();

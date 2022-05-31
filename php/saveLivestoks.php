@@ -67,7 +67,7 @@ array_push($finalArrayforest,$forestArray);
                     $carbonch4 +=  $co2e * $value;
                 }
         }
-        $carbonch4 = round(($carbonch4/1000),2);
+        $carbonch4 = round((($carbonch4 * 21)/1000000),2);
 //end calculation
 
 
@@ -92,5 +92,19 @@ array_push($finalArrayforest,$forestArray);
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         }
         
+        // ////before emission
+        // $t30=2030-date("Y");
+        // $liveBau2030=$carbonch4*(pow(1-(1/100)),$t30);
+        // ////After intervention emission 2030
+        // $liveint2030=0.95 * $liveBau2030;
+       
+        // // Before BAU emission 2050
+        //  $t50=2050-date("Y");
+        //  $liveBau2050=$carbonch4*(pow(1-(1/100)),$t50);
+        // /// After intervention emission 2050
+        // $liveint2050=0.4 * $liveBau2050;
+
+
+
         echo  "success";
 ?>

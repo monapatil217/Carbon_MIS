@@ -37,8 +37,8 @@
   ======================================================== -->
      <style>
      #cookingFuel {
-         width: 300px;
-         height: 300px;
+         width: 360px;
+         height: 360px;
      }
      </style>
  </head>
@@ -52,6 +52,8 @@
              <input type="text" class="form-control" id="sectionType" value="cookingFuel" hidden>
              <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden
                  disabled>
+            <input type="text" id="cityName" class="form-control" value="<?php echo $_SESSION["cityName"]; ?>" hidden
+                disabled>
              <div class="row justify-content-center">
                  <div class="col-md-12 col-lg-5  mb-3  s" data-aos-delay="200">
                      <div class="in-sec">
@@ -175,7 +177,8 @@
      <!-- Our js File  -->
      <script src="js/common.js"></script>
      <script src="js/fuelUseInCityModel.js"></script>
-     <script src="js/induGraph.js"></script>
+      <script src="js/compareGraph.js"></script>
+     <!-- <script src="js/induGraph.js"></script> -->
  </body>
 
  </html>

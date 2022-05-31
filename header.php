@@ -71,6 +71,7 @@
                     <ul>
                         <li><a class="nav-link scrollto" href="graph.php">Graph</a></li>
                         <li><a class="nav-link scrollto" href="actionPlan.php">Action Plan</a></li>
+                          <li><a class="nav-link scrollto" href="takeAction.php">Intervention Plan</a></li>
                     </ul>
                 </li>
                 <?php if (isset($_SESSION['cityName'])) { ?> <li><a class="getstarted scrollto"

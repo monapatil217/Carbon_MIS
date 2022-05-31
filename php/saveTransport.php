@@ -139,11 +139,17 @@ foreach ($dataArray as $row) {
             $ch4ef = $row['ch4ef'];
             $n2oef = $row['n2oef'];
             $carbonco2 += ($km1 *  $approx_fuel * $density * $ncv * $co2ef *365)/1000;
-            $carbonch4 += ($km1 *  $approx_fuel * $density * $ncv * $ch4ef *365)/1000;
-            $carbonn2o += ($km1 *  $approx_fuel * $density * $ncv * $n2oef *365)/1000;
+            $carbonch4 += ($km1 *  $approx_fuel * $density * $ncv * $ch4ef *21*365)/1000;
+            $carbonn2o += ($km1 *  $approx_fuel * $density * $ncv * $n2oef *310 *365)/1000;
+
         }
     }
 }
+        ////2022 final emission of tranport.
+        $finalemi2022=$carbonco2 + $carbonch4 + $carbonn2o;
+        $finalemi2022=round($finalemi2022,2);
+        // echo "2022final:", $finalemi2022;
+
 //end calculation
 
         $query2 = "SELECT * FROM trans_data WHERE b_id='" . $basicId . "'";
@@ -202,6 +208,9 @@ foreach ($dataArray as $row) {
             $Msrtc2025= ($msrtcRatio *(pow((1+(2/100)),$bus25)))-$msrtcRatio;
             $Msrtc2025 =($Msrtc2025 * 0.85)+$msrtcRatio;
             $bus2025 = $cityBus2025 + $Msrtc2025;
+            // echo "citybus" ,$cityBus2025;
+            //  echo "Msrtcbus" ,$Msrtc2025;
+
 
             //Four Wheerer $w4=100
             $fw25 =2025-date("Y");
@@ -232,7 +241,8 @@ foreach ($dataArray as $row) {
         $PopYear =2030-date("Y");
         $population2030 = ($CurrentPopulation * (pow((1+(1.164/100)),$PopYear)));
         // find Population 2030 
-
+        //   echo "currentpop:",$CurrentPopulation;
+        //     echo "pop2030:",$population2030;
 
         // Policy
         //  Two Wheeler
@@ -375,8 +385,8 @@ foreach ($dataArray as $row) {
         $vehiArrayFwBeforeBus2030['km'] = $Buses2030;  
         array_push($beforeDataArray2030, $vehiArrayFwBeforeBus2030);
 
-        echo "\n\n BeforeBus2030 of city Buses-->",$cityBuses;
-        echo "\n\n BeforeBus2030 of msrtc-->",$msrtc;
+        // echo "\n\n BeforeBus2030 of city Buses-->",$cityBuses;
+        // echo "\n\n BeforeBus2030 of msrtc-->",$msrtc;
 
         
         
@@ -393,9 +403,10 @@ foreach ($dataArray as $row) {
 
         $totalCityBus = $fWcityBuslIT2030 + $fWMsrtcIT2030;
         // echo "\n\n Intervation Total 2030 City Bus-->",$totalCityBus;
-        echo "\n\n AfterBus2030 of city Buses-->",$fWcityBuslIT2030;
-        echo "\n\n AfterBus2030 of msrtc-->",$fWMsrtcIT2030;
+        // echo "\n\n AfterBus2030 of city Buses-->",$fWcityBuslIT2030;
+        // echo "\n\n AfterBus2030 of msrtc-->",$fWMsrtcIT2030;
 
+        // echo "citybusssssssssss",$fWcityBuslIT2030;
 // end Buses
 
 //end 
@@ -460,6 +471,8 @@ foreach ($dataArray as $row) {
         $vehiArrayFwCNGBefore2030['km'] = $fWCngTaxi;  
         array_push($dataArrayBefore2030, $vehiArrayFwCNGBefore2030);
 
+        // echo "2030busesssss", $Buses2030;
+      
 //strart calaculation beforeEmi2030
         $beforeEmi2030 = 0;
         foreach ($dataArrayBefore2030 as $row) {
@@ -485,15 +498,17 @@ foreach ($dataArray as $row) {
                     $carbonch4beforeEmi2030 += ($km1 *  $approx_fuel * $density * $ncv * $ch4ef *21* 365)/1000;
                     $carbonn2obeforeEmi2030 += ($km1 *  $approx_fuel * $density * $ncv * $n2oef *310* 365)/1000;
                     $beforeEmi2030 = $carbonco2beforeEmi2030 + $carbonch4beforeEmi2030 + $carbonn2obeforeEmi2030;
+                     $beforeEmi2030=round($beforeEmi2030,2);
                 }
                
             }
             
         }
-        echo"\n\n Before 2030 vehicles list";
-        print_r($dataArrayBefore2030);
-
-        echo "\n\n  Before Emi 2030 -->".$beforeEmi2030;
+        //    echo "2030BaU:", $beforeEmi2030;
+        // echo"\n\n Before 2030 vehicles list";
+        // print_r($dataArrayBefore2030);
+  
+        // echo "\n\n  Before Emi 2030 -->".$beforeEmi2030;
        
 //end calculation beforeEmi2030
         
@@ -555,6 +570,15 @@ foreach ($dataArray as $row) {
         $vehiArrayFwCNGAfter2030['vehicleType'] = "4W";
         $vehiArrayFwCNGAfter2030['km'] = $InerTotalCng2030;  
         array_push($dataArrayAfter2030, $vehiArrayFwCNGAfter2030);
+//  echo "vehicle2W:",$InerTotal2030;
+//  echo "vehicle3W:",$InerTotalTrW2030;
+//  echo "tempo:",$lcv30;
+// echo "truck:",$hcv30;
+// echo "busssssssssssssss:",$bus2025;
+// echo "p4W:",$InerTotalPetrol2030;
+// echo "D4W:",$InerTotalDisel2030;
+// echo "CNG4w:",$InerTotalCng2030;
+
 
         //strart calaculation afterEmi2030
         $afterEmi2030 = 0;
@@ -581,16 +605,18 @@ foreach ($dataArray as $row) {
                     $carbonch4afterEmi2030 += ($km1 *  $approx_fuel * $density * $ncv * $ch4ef *21* 365)/1000;
                     $carbonn2oafterEmi2030 += ($km1 *  $approx_fuel * $density * $ncv * $n2oef *310* 365)/1000;
                     $afterEmi2030 = $carbonco2afterEmi2030 + $carbonch4afterEmi2030 + $carbonn2oafterEmi2030;
+                     $afterEmi2030 =round($afterEmi2030 ,2);
                     
                 }
                 
             }
             
         }
-        echo"\n\n After 2030 vehicles list";
-        print_r($dataArrayBefore2030);
+        //  echo "2030after:", $afterEmi2030;
+        // echo"\n\n After 2030 vehicles list";
+        // print_r($dataArrayBefore2030);
 
-        echo "\n\n  After Emi 2030 -->",$afterEmi2030;
+        // echo "\n\n  After Emi 2030 -->",$afterEmi2030;
 
 
 //end calculation beforeEmi2030
@@ -627,6 +653,7 @@ foreach ($dataArray as $row) {
         // echo "\n\n 2050 2W scrap-->",$scrapTw2050;
         // echo "\n\n 2050 2W Total -->",$totalITTw2050
         // end two wheeler
+        
 
 
         //  four Wheeler
@@ -763,13 +790,17 @@ foreach ($dataArray as $row) {
 
         //  HCV 
         // EV Policy 
-        $hcv2050 = (0.0249*$population2050)*0.25; //A
+        $hcvAF2050 = (0.0249*$population2050)*0.25;
+         $hcv2050 = (0.0249*$population2050);
+        //A
         // echo "\n\n Intervation Total 2050 HCV Total Intervantion-->",$hcv2050;
         // end HCV
 
         //  LCV 
         // EV Policy 
-        $lcv2050 = (0.0339*$population2050)*0.4; //A
+        $lcvAF2050 = (0.0339*$population2050)*0.4;
+         $lcv2050 = (0.0339*$population2050); 
+        //A
         // echo "\n\n Intervation Total 2050 LCV Total Intervantion-->",$lcv2050;
         // end LCV
 
@@ -777,8 +808,8 @@ foreach ($dataArray as $row) {
         // EV Policy            
         $cityBuses2050 = 0.0014 * $population2050; //A
         $msrtc2050 = 0.0002 * $population2050; //A
-        echo "\n\n  2050 City Bus-->",$cityBuses2050;
-        echo "\n\n 2050 Msrtc-->",$msrtc2050;
+        // echo "\n\n  2050 City Bus-->",$cityBuses2050;
+        // echo "\n\n 2050 Msrtc-->",$msrtc2050;
 
         $buses2050 = $cityBuses2050 + $msrtc2050;
         // B = A
@@ -793,8 +824,8 @@ foreach ($dataArray as $row) {
         $fWBusesIT2050 = $fWcityBuslIT2050 + $fWMsrtcIT2050;
 
         // echo "\n\n  2030 City Bus-->",$fWcityBuslIT2030;
-        echo "\n\n Intervation Total 2050 City Bus-->",$fWcityBuslIT2050;
-        echo "\n\n Intervation Total 2050 Msrtc-->",$fWMsrtcIT2050;
+        // echo "\n\n Intervation Total 2050 City Bus-->",$fWcityBuslIT2050;
+        // echo "\n\n Intervation Total 2050 Msrtc-->",$fWMsrtcIT2050;
 
         // end Buses
             //end 
@@ -893,16 +924,17 @@ foreach ($dataArray as $row) {
                 $carbonch4beforEmi2050 += ($km1 *  $approx_fuel * $density * $ncv * $ch4ef *21* 365)/1000;
                 $carbonn2obeforEmi2050 += ($km1 *  $approx_fuel * $density * $ncv * $n2oef *310* 365)/1000;
                 $beforEmi2050 = $carbonco2beforEmi2050 + $carbonch4beforEmi2050 + $carbonn2obeforEmi2050;
-                
+                $beforEmi2050=round($beforEmi2050,2); 
             }
            
         }
        
     }
-    echo"\n\n After 2050 vehicles list";
-    print_r($dataArrayBefore2050);
+    // echo " Bau2050:", $beforEmi2050 ;
+    // echo"\n\n After 2050 vehicles list";
+    // print_r($dataArrayBefore2050);
 
-    echo "\n\n  Befor Emi 2050 -->",$beforEmi2050;
+    // echo "\n\n  Befor Emi 2050 -->",$beforEmi2050;
 
 
 //end calculation beforEmi2050
@@ -929,7 +961,7 @@ foreach ($dataArray as $row) {
             $vehiArrayTwAfter2050 = array();
             $vehiArrayTwAfter2050['fuleType'] =  "Diesel";
             $vehiArrayTwAfter2050['vehicleType'] = "tempo";
-            $vehiArrayTwAfter2050['km'] = $lcv2050;
+            $vehiArrayTwAfter2050['km'] = $lcvAF2050;
             array_push($dataArrayAfter2050, $vehiArrayTwAfter2050);
     
     
@@ -937,7 +969,7 @@ foreach ($dataArray as $row) {
             $vehiArrayTwAfter2050 = array();
             $vehiArrayTwAfter2050['fuleType'] =  "Diesel";
             $vehiArrayTwAfter2050['vehicleType'] = "truck";
-            $vehiArrayTwAfter2050['km'] = $hcv2050;
+            $vehiArrayTwAfter2050['km'] = $hcvAF2050;
             array_push($dataArrayAfter2050, $vehiArrayTwAfter2050);
     
             //BUS After 2050
@@ -1001,15 +1033,63 @@ foreach ($dataArray as $row) {
                     $carbonch4afterEmi2050 += ($km1 *  $approx_fuel * $density * $ncv * $ch4ef *21* 365)/1000;
                     $carbonn2oafterEmi2050 += ($km1 *  $approx_fuel * $density * $ncv * $n2oef *310* 365)/1000;
                     $afterEmi2050 = $carbonco2afterEmi2050 + $carbonch4afterEmi2050 + $carbonn2oafterEmi2050;
-                    
+                    $afterEmi2050 =round($afterEmi2050,2);
                 }
                 
             }
            
         }
-        echo"\n\n After 2050 vehicles list";
-        print_r($dataArrayAfter2050);
-        echo "\n\n  After Emi 2050 -->",$afterEmi2050;
+        //  echo "after2050:", $afterEmi2050;
+        // echo"\n\n After 2050 vehicles list";
+        // print_r($dataArrayAfter2050);
+        // echo "\n\n  After Emi 2050 -->",$afterEmi2050;
 
 
     //end calculation afterEmi2050
+        $dataArray = array();
+
+             $inteArray = array();
+            $inteArray ['ctcyear'] =  "2022";
+            $inteArray ['bauemi'] = $finalemi2022;
+            $inteArray ['intervemi'] = $finalemi2022;
+            array_push($dataArray, $inteArray);
+
+            $inteArray = array();
+            $inteArray ['ctcyear'] =  "2030";
+            $inteArray ['bauemi'] = $beforeEmi2030;
+            $inteArray ['intervemi'] =$afterEmi2030;
+            array_push($dataArray, $inteArray);
+           
+            $inteArray = array();
+            $inteArray ['ctcyear'] =  "2050";
+            $inteArray ['bauemi'] = $beforEmi2050;
+            $inteArray ['intervemi'] =$afterEmi2050;
+            array_push($dataArray, $inteArray);
+
+        
+          $sizeof = sizeof($dataArray);
+           foreach ($dataArray as $row) {
+           $ctcyear =  $row['ctcyear'];
+           $bauemi =  $row['bauemi'];
+           $intervemi =  $row['intervemi'];
+   
+           
+            $query2 = "SELECT * FROM bau WHERE b_id='" . $basicId . "' AND type='".'Transport'."' AND ctcyear='".$ctcyear."'";
+            $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
+            $rowcount = mysqli_num_rows($result);
+            if ($rowcount == 0) {           
+            $query = "INSERT INTO bau(b_id,type,ctcyear,bauemi,intervemi)
+            VALUES ($basicId,'".'Transport'."',$ctcyear,$bauemi,$intervemi)";
+            $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+            }
+
+            else
+            {
+            $query = "UPDATE  bau set bauemi=$bauemi,intervemi=$intervemi
+            WHERE b_id='" . $basicId . "' AND type='".'Transport'."' AND ctcyear='".$ctcyear."' ";
+            $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+            }
+             
+           }  
+           echo  "success";
+?>

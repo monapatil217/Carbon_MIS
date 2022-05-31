@@ -1,3 +1,6 @@
+<?php
+require "php/session.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,10 +38,14 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
     <style>
-    #actionchart {
-        width: 100
-        %;
-        height: 300px;
+    #intactionchart {
+        width: 100%;
+        height:350px;
+    }
+    #intervchart {
+        width: 60%;
+        height:350px;
+         padding-left: 250px;
     }
     .center {
   margin: auto;
@@ -46,32 +53,59 @@
   /* border: 3px solid green; */
   padding: 20px;
 }
+#chartdiv1 {
+  width: 100%;
+  height: 500px;
+}
+/* #chartdiv {
+  width: 100%;
+  height: 500px;
+} */
+    #chartdiv2 {
+  width: 60%;
+  height: 500px;
+   padding-left: 250px;
+  
+}
+   p1 {
+color: #73c2fb ;
+}
+.nav {
+  /* background-color: yellow;  */
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
 
-
-    /* #actionchart1 {
-        width: 75%;
-        height: 300px;
-    }
-/*  */
-     /* .olicy {
-      paddping-left : 100px;} */ 
-
-   
+.nav li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 0px;
+}
+.padding
+{
+width:100px;
+height:80px;
+padding: 0px 0px 25px 0px;
+}
+/* p.ex1 {display:  inline-block;} */
 
     </style>
 </head>
 
 <body> <?php
-    include 'header.php';
-    ?>
+        include 'header.php';
+        ?>
 
     <!-- ======= subHero Section ======= -->
     <section id="subHero" class="d-flex  justify-content-center textc" style=" height: auto ; min-height: 100vh;">
-        <div class="container position-relative mt-3" data-aos="fade-up" data-aos-delay="100">
-            <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden
-                disabled>
+        <div class="container position-relative mt-3" data-aos="fade-up" data-aos-delay="100">            
+            <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
             <div class="container">
-                <div class="row">
+            <input type="text" id="cityName" class="form-control" value="<?php echo $_SESSION["cityName"]; ?>" hidden
+                disabled>
+                <div class="row  mt-4">
                     
                     <div class="col container vertical-scrollable">
                      <div class="card example-1 scrollbar-ripe-malinka policy">
@@ -79,73 +113,7 @@
                         <div class="card ">
                             <div class="card-body">
                                 <h3 class="text-center">2030 Interventions</h3>
-                                
-                                
-                                
-                                <!-- <div class="row">
-                                    <ul id="tree1">
-                                        <li><a href="#">2030 Interventions</a>
-
-                                            <ul>
-                                                <li>Electricity
-                                                    <ul>
-                                                        <li>Renewable policy applied (25% of coal demand to be met with
-                                                            solar)
-                                                        </li>
-                                                        <li>Carbon capture Applied (25% of Carbon Emission Captured)
-                                                        </li>
-                                                        <li>Smart homes 20%</li>
-                                                    </ul>
-                                                </li>
-                                                <li>Transport
-                                                    <ul>
-                                                        <li>Proposed EV policy
-                                                            <ul>
-                                                                <li>2w 30%</li>
-                                                                <li>3w 25%</li>
-                                                                <li>4w 10%</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li> Fleet operators
-                                                            <ul>
-                                                                <li>50% Buses</li>
-                                                                <li>city bus 50% </li>
-                                                                <li>msrtc 25%</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li> Govt Vehicles100%
-
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>AFOLU
-                                                    <ul>
-                                                        <li>Cropland 10%
-                                                        </li>
-                                                        <li>Forest 0%</li>
-                                                        <li>Livestock 5%</li>
-                                                    </ul>
-                                                </li>
-                                                <li>MSW
-                                                    <ul>
-                                                        <li>45% od waste reaches landfill</li>
-                                                        <li>18% of wate reaches lanfill (All inert waste included)</li>
-                                                    </ul>
-                                                </li>
-                                                <li>Industries
-                                                    <ul>
-                                                        <li>25% of coal demand to be met with PNG</li>
-                                                        <li>100% replacement of FO with PNG</li>
-                                                        <li>100% replacement ofwood with PNG</li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div> -->
-                                <!-- /////////// -->
-                                <!-- <div class="row"> -->
-                                 
+                                                            
                                     <div class="col-12 ">
                                         <div class="card ">
                                             <div class="card-body">
@@ -390,80 +358,128 @@
                     </div>
                      <div class="row align-items-center justify-content-center">
                       <p><h3><center>Year Wise Total Emission</center></h3></P>
-                    <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2 mt-3" data-aos-delay="200">
+                    <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-3 mt-3" data-aos-delay="200">
                              <div class="card">
                                 <div class="card-header p-3 pt-2">
                                     <!-- <div class="rounded mt-n4 position-absolute iconAdmin">
                                         <center><i class="fa fa-bolt mt-2 " aria-hidden="true" style="font-size:26px;color:#e9ecef"></i></center>
                                     </div> -->
-                                    <P><h4><center>2022 Year</center></h4></p>
+                                    <P><h4><center>2022 Emission</center></h4></p>
                                     <div class="text-end pt-1">
                                         <p class="text-sm mb-0 text-capitalize">
-                                       <center> Your Emission of 2022</center>
-                                        <h6 class="mb-0"><center>10200 tons/year</center></h6>
+                                       <!-- <center> Your Emission of 2022</center> -->
+                                        <h6 class="mb-0"><center><h3><p1>10200</p1></h3> tons/year</center></h6>
                                        </p>
                                     </div>
                                 </div>
                             </div>
                     </div>
 
-                    <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2 mt-3" data-aos-delay="200">
-                             <div class="card">
-                                <div class="card-header p-3 pt-2">
-                                    <!-- <div class="rounded mt-n4 position-absolute iconAdmin">
-                                        <center><i class="fa fa-bolt mt-2 " aria-hidden="true" style="font-size:26px;color:#e9ecef"></i></center>
-                                    </div> -->
-                                    <P><h4><center>2022 Year<h6>(With Take Action)</h6></center></h4></p>
-                                    <div class="text-end pt-1">
-                                        <p class="text-sm mb-0 text-capitalize">Emission of 2022 using Take Action</p>
-                                        <h6 class="mb-0"><center>10200 tons/year</center></h6>
-                                                                                
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                   
 
-                        <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2 mt-3" data-aos-delay="200">
+                          <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-3 mt-3" data-aos-delay="200">
                                   <div class="card">
                                 <div class="card-header p-3 pt-2">
                                     <!-- <div class="rounded mt-n4 position-absolute iconAdmin">
                                         <center><i class="fa fa-bolt mt-2 " aria-hidden="true" style="font-size:26px;color:#e9ecef"></i></center>
                                     </div> -->
-                                <P><h4><center>2030 Year<h6>(With Take Action)</h6></center></h4></p>
+                                <P><h4><center> Intervented 2030 Emission</h6></center></h4></p>
                                     <div class="text-end pt-1">
-                                        <p class="text-sm mb-0 text-capitalize">Emission of 2030 using Take Action</p>
-                                        <h6 class="mb-0"><center>10200 tons/year</center></h6>
+                                        <!-- <p class="text-sm mb-0 text-capitalize">Emission of 2030 using Take Action</p> -->
+                                        <h6 class="mb-0"><center><h3><p1>10200</p1></h3> tons/year</center></h6>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                           <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2 mt-3" data-aos-delay="200">
+                            <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-3 mt-3" data-aos-delay="200">
                             <div class="card">
                                 <div class="card-header p-3 pt-2">
-                                    <!-- <div class="rounded mt-n4 position-absolute iconAdmin">
-                                        <center><i class="fa fa-bolt mt-2 " aria-hidden="true" style="font-size:26px;color:#e9ecef"></i></center>
-                                    </div> -->
-                                     <P><h4><center>2050 Year<h6>(With Take Action)</h6></center></h4></p>
+                                   
+                                     <P><h4><center> Intervented 2050 Emission</center></h4></p>
                                     <div class="text-end pt-1">
-                                        <p class="text-sm mb-0 text-capitalize">Emission of 2050 using Take Action</p>
-                                        <h6 class="mb-0"> <center>0 tons/year</center></h6>
+                                        <!-- <p class="text-sm mb-0 text-capitalize">Emission of 2050 using Take Action</p> -->
+                                        <h6 class="mb-0"> <center><h3><p1>10200</p1></h3> tons/year</center></h6>
                                     </div>
                                 </div>
                             </div>
                         </div>
                 </diV>
-
-                    <div class="row center">
-                   <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3 " data-aos-delay="200">
-                   <!-- <p>combined graph</p> -->
-                   <div id="actionchart">
-
+<!-- ////// -->
+                <div class="row align-items-center justify-content-center" >
+                   <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3 pt-3" data-aos-delay="200">
+                   <div id="intactionchart">
                    </div>
+                   </div>
+                   </div>
+<!-- ////// -->
+                    <div class="row align-items-center justify-content-center" >
+                   <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3 pt-3" data-aos-delay="200">
+                   
+                 
+                    <div class="row align-items-center justify-content-center">
+                   <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 mt-3 " data-aos-delay="200">
+                   </div>
+                   <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 mt-3 " data-aos-delay="200">
+                            <!-- <div class="row">
+                          <h4 id="numberOfTree">After 2050 Equivalent to &nbsp;&nbsp;</h4><img src="assets/img/tt3.png"  width="100px" height="80">
+                            </div> -->
+                            <ul class="nav">
+                            <li><h2 id="numberOfTree">After 2050 Equivalent to &nbsp;</h2></li>                           
+                            <li><img src="assets/img/tt3.png"  width="100px" height="80" class="padding"></li>  
+                          
+                            </ul>
+                    <!-- <h2 id="numberOfTree"></h2> -->
+                    <!-- <img src="assets/img/tt3.png"  width="100px" height="80"> -->
+                   
+                   </div>
+                   </div>
+                    
+                 <div id="intervchart">
+                   </div>
+
                    </div>
                                    
                 </div>
+
+                <!-- ////sector wise graph -->
+             <div class="row align-items-center justify-content-center">
+                    <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3 " data-aos-delay="200">
+                    
+                        <div id="Contact" class="tabcontent">
+                            <div class="row mt-3 justify-content-center">
+                                <div class="row">
+                                        <div class="col-8">
+                                            <h3 class="text-white">Carbon Emissions Sector Wise(tCO2e/day)</h3>
+                                        </div>
+                                                    <div class="col-3 form-group col-md-3">
+                                                        <select class="form-control" id="sectionType" onchange="chartdiv2();">
+                                                            <option disabled selected>Select Sector</option>
+                                                            <option value="Electricity">Electricity</option>
+                                                            <option value="Transport">Transport</option>                                       
+                                                            <option value="WasteWater">WasteWater</option>
+                                                            <option value="AFOLU">AFOLU</option>
+                                                            <option value="energy">Industry</option>                                      
+                                                        </select>
+                                                    </div>
+                                
+                                </div>    
+                            </div>
+                            <!-- <div id="secChartDiv">
+                                <div id="secEmiChart"></div>
+                            </div> -->
+                            <!-- <div id="chartdiv"></div> -->
+                            <!-- <div id="chartdiv1"></div> -->
+                            <div id="SectoralChart">
+                            <div id="chartdiv2"></div>
+                            </div>
+
+                        </div>                                   
+                    </div> 
             </div>
+
+
+
         </div>
 
         </div>
@@ -496,9 +512,10 @@
     <script src="assets/js/main.js"></script>
     <!-- Our JS Files -->
     <script src="js/takeAction.js"></script>
+      <!-- <script src="js/Demolinegraph.js"></script> -->
     <!-- <script src="js/induGraph.js"></script> -->
 
-    <script src="js/combinegraph.js"></script>
+    <!-- <script src="js/combinegraph.js"></script> -->
     <script src="js/common.js"></script>
     <script>
     </script>

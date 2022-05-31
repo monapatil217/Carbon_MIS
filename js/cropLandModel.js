@@ -172,6 +172,7 @@ function saveCropData() {
                 if (data == "success") {
                     alert("Data Save Succesfuly");
                     addChart();
+                    aflouData();
                     // window.location.replace("livestock.php");
                 } else {
                     alert("Data not Save Succesfuly")

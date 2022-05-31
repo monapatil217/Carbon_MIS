@@ -81,10 +81,12 @@ foreach ($finalArrayEe as $row) {
                 $co2 =  $row['co2'];
                 $ch4 =  $row['ch4'];
                 $n2o =  $row['n2o'];
-               $carbonco2 += ($value* $ncv * $co2*0.001*1)/1000;
-               $carbonch4 += ($value* $ncv * $ch4 *0.001*1)/1000;
-               $carbonn2o += ($value*$ncv * $n2o *0.001*1)/1000;
+               $carbonco2 += ($value* $ncv * $co2*0.001*365*1)/1000000;
+               $carbonch4 += ($value* $ncv * $ch4 * 21 * 0.001*365*1)/1000000;
+               $carbonn2o += ($value*$ncv * $n2o * 310 *0.001*365*1)/1000000;
                //echo"<br> ".$name."==".$value."ch4==".$carbonch4."<br>ncv".$ncv."<br>ef".$ch4."<br>  ";
+               $finalemi2022= $carbonco2 + $carbonch4 + $carbonn2o;
+                $finalemi2022=round( $finalemi2022,2);
         }
 }
 //end calculation
@@ -111,7 +113,7 @@ $rowcount = mysqli_num_rows($result);
             WHERE b_id='" . $basicId . "'";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         }
-echo  "success";
+// echo  "success";
         //intervention 
 // Coal $coal;
         //BAU
@@ -287,7 +289,8 @@ echo  "success";
                 }
         }
         $totalItEmiBefore2030 = $carbonco22030  + $carbonch42030 + $carbonn2o2030;
-        echo "\n\n total It Emi Before 2030 -->".$totalItEmiBefore2030;
+        $totalItEmiBefore2030=round($totalItEmiBefore2030,2);
+        // echo "\n\n total It Emi Before 2030 -->".$totalItEmiBefore2030;
         // end Before 2030
 
         //  After 2030
@@ -342,8 +345,9 @@ echo  "success";
                        //echo"<br> ".$name."==".$value."ch4==".$carbonch4."<br>ncv".$ncv."<br>ef".$ch4."<br>  ";
                 }
         }
-        $totalItEmiAfter2050 = ($carboncoAfter22030) + $carbonch4After2030 + $carbonn2oAfter2030;
-        echo "\n\n total It Emi After 2030 -->".$totalItEmiAfter2050;
+        $totalItEmiAfter2030 = ($carboncoAfter22030) + $carbonch4After2030 + $carbonn2oAfter2030;
+        $totalItEmiAfter2030=round($totalItEmiAfter2030,2);
+        // echo "\n\n total It Emi After 2030 -->".$totalItEmiAfter2030;
         // end After 2030
 
 
@@ -400,7 +404,8 @@ echo  "success";
                 }
         }
         $totalItEmiBefore2050 = ($carbonco2Before2050) + $carbonch4Before2050 + $carbonn2oBefore2050;
-        echo "\n\n total It Emi Before 2050 -->".$totalItEmiBefore2050;
+        $totalItEmiBefore2050=round($totalItEmiBefore2050,2);
+        // echo "\n\n total It Emi Before 2050 -->".$totalItEmiBefore2050;
         // end Before 2050
 
         //  After 2050
@@ -455,6 +460,54 @@ echo  "success";
                 }
         }
         $totalItEmiAfter2050 = ($carboncoAAfter22050* 0.25) + $carbonch4After2050 + $carbonn2oAfter2050;
-        echo "\n\n total It Emi After 2050 -->".$totalItEmiAfter2050;
+        $totalItEmiAfter2050=round($totalItEmiAfter2050,2);
+        // echo "\n\n total It Emi After 2050 -->".$totalItEmiAfter2050;
         // end After 2050
+        /////////
+          $dataArray = array();
+
+             $inteArray = array();
+            $inteArray ['ctcyear'] =  "2022";
+            $inteArray ['bauemi'] = $finalemi2022;
+            $inteArray ['intervemi'] =$finalemi2022;
+            array_push($dataArray, $inteArray);
+
+            $inteArray = array();
+            $inteArray ['ctcyear'] =  "2030";
+            $inteArray ['bauemi'] = $totalItEmiBefore2030;
+            $inteArray ['intervemi'] =$totalItEmiAfter2030;
+            array_push($dataArray, $inteArray);
+           
+            $inteArray = array();
+            $inteArray ['ctcyear'] =  "2050";
+            $inteArray ['bauemi'] = $totalItEmiBefore2050;
+            $inteArray ['intervemi'] =$totalItEmiAfter2050;
+            array_push($dataArray, $inteArray);
+
         
+          $sizeof = sizeof($dataArray);
+           foreach ($dataArray as $row) {
+           $ctcyear =  $row['ctcyear'];
+           $bauemi =  $row['bauemi'];
+           $intervemi =  $row['intervemi'];
+   
+           
+            $query2 = "SELECT * FROM bau WHERE b_id='" . $basicId . "' AND type='".'energy'."' AND ctcyear='".$ctcyear."'";
+            $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
+            $rowcount = mysqli_num_rows($result);
+            if ($rowcount == 0) {           
+            $query = "INSERT INTO bau(b_id,type,ctcyear,bauemi,intervemi)
+            VALUES ($basicId,'".'energy'."',$ctcyear,$bauemi,$intervemi)";
+            $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+            }
+
+            else
+            {
+            $query = "UPDATE  bau set bauemi=$bauemi,intervemi=$intervemi
+            WHERE b_id='" . $basicId . "' AND type='".'energy'."' AND ctcyear='".$ctcyear."' ";
+            $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+            }
+             
+           }  
+           echo  "success";
+?>

@@ -32,7 +32,8 @@ $finalArrayCrop = array();
         $loss =  $row['ncv'];
         $hrsv = $loss * $harwested*100;
     }
-   $carbonco2 =  abs(($peri-$hrsv)/1000);
+    //2022 emission
+   $carbonco2 =  abs(($peri-$hrsv)/1000000);
    
 //end calculation
 
@@ -60,4 +61,20 @@ $rowcount = mysqli_num_rows($result);
                     WHERE b_id='" . $basicId . "'";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         }
+
+        /////
+        // ///Before emission 2030
+        // $t30=2030-date("Y");
+        // $cropBau2030=$carbonco2*(pow(1+(0.87/100)),$t30);
+        // ////After intervention emission 2030
+        // $cropint2030=0.9 * $cropBau2030;
+
+        // // Before BAU emission 2050
+        //  $t50=2050-date("Y");
+        //  $cropBau2050=$carbonco2*(pow(1+(0.87/100)),$t50);
+        // /// After intervention emission 2050
+        // $cropint2050=0.4 * $cropBau2050;
+
+
+
 echo  "success";

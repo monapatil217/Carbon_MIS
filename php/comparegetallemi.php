@@ -4,7 +4,6 @@ $json = file_get_contents('php://input');
 $data = json_decode($json);
 $basicId = $data->basicId;
 $type = $data->type;
-$city = $data->city;
 $finalArray = array();
 
 $tableArray = array();
@@ -48,45 +47,32 @@ for ($i = 0; $i < sizeof($tableArray); $i++) {
         while ($row = mysqli_fetch_array($result)) {
 
             $mainArray['check'] = "true";
-            $co2 = $row['co2'];
-            $ch4 = $row['ch4']*21;
-            $n20 = $row['n2o']*310;
+            $co2 += $row['co2'];
+            $ch4 += $row['ch4'];
+            $n20 += $row['n2o'];
         }
     }
 }
-    $india=0;
-    $maha= 0;
-    $query1 = "SELECT * FROM percapita WHERE s_type='" . $type . "'";
-    $result = mysqli_query($conn, $query1)  or die(mysqli_error($conn));
-    $rowcount = mysqli_num_rows($result);
-    while ($row = mysqli_fetch_array($result)) {
-        $india += $row['india'];
-        $maha += $row['maharastra'];
-    }
-
- $query3 = "SELECT popu FROM basic_info WHERE id = '$basicId'";
-        $result = mysqli_query($conn, $query3);
-        while ($row = mysqli_fetch_array($result)) {
-            $CurrentPopulation = $row['popu'];   
-            }
-
-            $eqemi=(($co2+$ch4+$n20)/$CurrentPopulation)*1000000;
-             $eqemi=round($eqemi,2);
+$equivalco2=$co2 + ($ch4 * 21) +  ($n20 * 310);
 
 $deleData = array();
 
 $eleData = [];
-$eleData['name'] = $city;
-// $eleData['value'] = floatval($co2+$ch4+$n20);
-$eleData['value'] = floatval($eqemi);
+$eleData['name'] = "City";
+$eleData['value'] =1.33;
+// $eleData['value'] = floatval($co2);
+
 array_push($deleData, $eleData);
 $eleData = [];
-$eleData['name'] = "Maharashtra";
-$eleData['value'] = floatval($maha);
+$eleData['name'] = "Maha";
+// $eleData['value'] = 28850000; 
+$eleData['value'] =0.58;
+
 array_push($deleData, $eleData);
 $eleData = [];
 $eleData['name'] = "India";
-$eleData['value'] = floatval($india);
+// $eleData['value'] = 258100000;
+$eleData['value'] = 0.18;
 array_push($deleData, $eleData);
 
 $mainArray['cData'] =   $deleData;

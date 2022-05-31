@@ -24,7 +24,7 @@ function addChart() {
             $.each(datalist, function (index, element) {
 
                 var check = element.check;
-                var cityName = "Barshi";
+                var cityName = "This City";
                 var cData = element.cData;
 
 
@@ -97,7 +97,7 @@ function addChart() {
 
                         yAxis.children.moveValue(am5.Label.new(root, {
                             rotation: -90,
-                            text: "Emissions(ktons/year)",
+                            text: "Emissions(milliontons/year)",
                             fill: am5.color(0xFFFFFF),
                             y: am5.p50,
                             centerX: am5.p50

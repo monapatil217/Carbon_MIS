@@ -128,16 +128,16 @@ require "php/session.php";
                             </div>
                         </div>
                             <!-- sample graph -->
-                         <div class="row justify-content-center">
+                         <!-- <div class="row justify-content-center">
                              
                               <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 
                                 <div id="chartdivsample">
-                                    <!-- <h3>Carbon emission of Electricity</h3> -->
+                                    
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                          <!-- End sample graph -->
                         
                         <div></div>
@@ -215,14 +215,17 @@ require "php/session.php";
     <!-- Our JS Files -->
     <script src="js/energyElectricityModel.js"></script>
     <!-- <script src="js/induGraph.js"></script> -->
-     <script src="js/combinegraph.js"></script>
+    <!-- <script src="js/combinegraph.js"></script> -->
+    <script src="js/compareGraph.js"></script>
+    
+    
     <script src="js/common.js"></script>
     <script>
     </script>
     <!-- ////  sample graph-->
     
 
-    <script>
+    <!-- <script>
 am5.ready(function() {
 
 // Create root element
@@ -379,7 +382,7 @@ makeSeries("Maharashtra", "value2");
 // https://www.amcharts.com/docs/v5/concepts/animations/#Forcing_appearance_animation
 chart.appear(1000, 100);
 });
-</script>
+</script> -->
 
 
     <!-- /////  sample graph end-->

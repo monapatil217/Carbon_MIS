@@ -6,15 +6,17 @@ function addChart() {
 
     var type = document.getElementById("sectionType").value;
     var basicId = document.getElementById("basicId").value;
+    var city = document.getElementById("cityName").value;
 
     var myobj = {};
     myobj["type"] = type;
     myobj["basicId"] = basicId;
+    myobj["city"] = city;
 
     $.ajax({
         type: "POST",
         async: true,
-        url: "php/getAllEmi.php",
+        url: "php/ngetallEmi.php",
         contentType: "application/json",
         data: JSON.stringify(myobj),
         success: function (data) {
@@ -88,7 +90,7 @@ function addChart() {
                         }));
                         yAxis.children.moveValue(am5.Label.new(root, {
                             rotation: -90,
-                            text: "Emissions(milliontons/year)",
+                            text: "Emissions(tons/year)",
                             fill: am5.color(0xFFFFFF),
                             y: am5.p50,
                             centerX: am5.p50

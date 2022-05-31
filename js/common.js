@@ -124,3 +124,26 @@ function CreatePDFfromHTML(id) {
         $(".html-content").hide();
     });
 }
+
+/////AFOLU BAU & intervention data
+function aflouData() {
+    var myobj = {};
+    var basicId = document.getElementById("basicId").value;
+    myobj["basicId"] = basicId;
+
+    $.ajax({
+        type: "POST",
+        async: false,
+        url: "php/getAfolu.php",
+        contentType: "application/json",
+        data: JSON.stringify(myobj),
+        success: function (data) {
+            alert("OK");
+
+
+        }
+
+    });
+}
+
+
