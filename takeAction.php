@@ -425,7 +425,7 @@ padding: 0px 0px 25px 0px;
                           <h4 id="numberOfTree">After 2050 Equivalent to &nbsp;&nbsp;</h4><img src="assets/img/tt3.png"  width="100px" height="80">
                             </div> -->
                             <ul class="nav">
-                            <li><h2 id="numberOfTree">After 2050 Equivalent to &nbsp;</h2></li>                           
+                            <li><h2 id="numberOfTree">Equivalent to &nbsp;</h2></li>                           
                             <li><img src="assets/img/tt3.png"  width="100px" height="80" class="padding"></li>  
                           
                             </ul>

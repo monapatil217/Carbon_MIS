@@ -240,6 +240,7 @@ foreach ($dataArray as $row) {
             }
         $PopYear =2030-date("Y");
         $population2030 = ($CurrentPopulation * (pow((1+(1.164/100)),$PopYear)));
+         $population2030=round($population2030,0);
         // find Population 2030 
         //   echo "currentpop:",$CurrentPopulation;
         //     echo "pop2030:",$population2030;
@@ -511,7 +512,7 @@ foreach ($dataArray as $row) {
             }
             
         }
-        echo "before Emi 2030:". $beforeEmi2030;
+        // echo "before Emi 2030:". $beforeEmi2030;
         // echo"\n\n carbon co2 before Emi 2030--> ".$carbonco2beforeEmi2030;
         // echo"\n\n carbon ch4 before Emi 2030--> ".$carbonch4beforeEmi2030;
         // echo"\n\n carbon n2o before Emi 2030--> ".$carbonn2obeforeEmi2030;
@@ -637,6 +638,7 @@ foreach ($dataArray as $row) {
         //2050 intervantion   
         $PopYear =2050-2030;
         $population2050 = ($population2030 * (pow((1+(1.164/100)),$PopYear)));
+        $population2050 =round($population2050,0);
         // echo "\n\n 2050 Population-->",$population2050;
 
         // Policy
