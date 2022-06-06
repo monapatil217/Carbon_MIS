@@ -70,7 +70,7 @@ function addChart() {
                             tooltip: am5.Tooltip.new(root, {})
                         }));
                         xAxis.children.moveValue(am5.Label.new(root, {
-                            text: "Pollutant",
+                            text: "",
                             fill: am5.color(0xFFFFFF),
                             x: am5.p50,
                             centerX: am5.p50
@@ -90,7 +90,7 @@ function addChart() {
                         }));
                         yAxis.children.moveValue(am5.Label.new(root, {
                             rotation: -90,
-                            text: "Per Capita Emission(tons/year)",
+                            text: "Per Capita Emission(tCO2e/year)",
                             fill: am5.color(0xFFFFFF),
                             y: am5.p50,
                             centerX: am5.p50

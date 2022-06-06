@@ -80,7 +80,7 @@ function intervchart() {
                     }));
                     yAxis.children.moveValue(am5.Label.new(root, {
                         rotation: -90,
-                        text: "Emissions(kt/year)",
+                        text: "Emissions(MtCO2e/year)",
                         fill: am5.color(0xFFFFFF),
                         y: am5.p50,
                         centerX: am5.p50
@@ -141,7 +141,7 @@ function intervchart() {
                     series1.appear();
                 });
             });       // end am5.ready())
-            var tottree = (interEmi2050 * 1000000) / 0.021;
+            var tottree = (interEmi2050) / 0.021;
             $("#numberOfTree").append(Math.round(tottree, 0));
             $("#emi2022").append(Math.round(interEmi2022, 0));
             $("#emi2030").append(Math.round(interEmi2030, 0));
@@ -244,7 +244,7 @@ function intactionchart() {
 
                     yAxis.children.moveValue(am5.Label.new(root, {
                         rotation: -90,
-                        text: "Emissions(ktons/year)",
+                        text: "Emissions(MtCO2e/year)",
                         fill: am5.color(0xFFFFFF),
                         y: am5.p50,
                         centerX: am5.p50

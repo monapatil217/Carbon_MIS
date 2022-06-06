@@ -39,7 +39,7 @@ require "php/session.php";
     #electricity {
         /* width: 470px;
         height: 350px; */
-          width: 360px;
+          width: 500px;
           height: 360px;
     }
 

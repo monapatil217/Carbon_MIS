@@ -415,7 +415,7 @@ require "php/session.php";
                                     <center>
                                         <h3>
                                         <p1><h2 id="emi2022"></h2></p1>
-                                        </h3> tons/year
+                                        </h3> MtCO2e/year
                                     </center>
                                 </h6>
                                 </p>
@@ -434,7 +434,7 @@ require "php/session.php";
                                     </div> -->
                             <P>
                             <h4>
-                                <center> Intervented 2030 Emission</h6>
+                                <center> Intervened 2030 Emission</h6>
                                 </center>
                             </h4>
                             </p>
@@ -442,9 +442,9 @@ require "php/session.php";
                                 <!-- <p class="text-sm mb-0 text-capitalize">Emission of 2030 using Take Action</p> -->
                                 <h6 class="mb-0">
                                     <center>
-                                        <h3>
+                                       
                                         <p1><h2 id="emi2030"></h2></p1>
-                                        </h3> tons/year
+                                        MtCO2e/year
                                     </center>
                                 </h6>
                             </div>
@@ -458,7 +458,7 @@ require "php/session.php";
 
                             <P>
                             <h4>
-                                <center> Intervented 2050 Emission</center>
+                                <center> Intervened 2050 Emission</center>
                             </h4>
                             </p>
                             <div class="text-end pt-1">
@@ -467,7 +467,7 @@ require "php/session.php";
                                     <center>
                                         <h3>
                                             <p1><h2 id="emi2050"></h2></p1>
-                                        </h3> tons/year
+                                        </h3> MtCO2e/year
                                     </center>
                                 </h6>
                             </div>
@@ -497,8 +497,9 @@ require "php/session.php";
                             </div> -->
                             <ul class="nav">
                                 <li>
-                                    <h2 id="numberOfTree">Equivalent to &nbsp;</h2>
-                                </li>
+                                   <h2 id="numberOfTree">Equivalent to &nbsp;</h2> </li>
+                                    <li><h2> &nbsp;Million</h2> </li>
+                                <!-- </li> -->
                                 <li><img src="assets/img/tt3.png" width="100px" height="80" class="padding"></li>
 
                             </ul>
@@ -523,7 +524,7 @@ require "php/session.php";
                         <div class="row mt-3 justify-content-center">
                             <div class="row">
                                 <div class="col-8">
-                                    <h3 class="text-white">Carbon Emissions Sector Wise(tCO2e/day)</h3>
+                                    <h3 class="text-white"> Sectoral Carbon Emissions(MtCO2e/year)</h3>
                                 </div>
                                 <div class="col-3 form-group col-md-3">
                                     <select class="form-control" id="sectionType" onchange="chartdiv2();">
