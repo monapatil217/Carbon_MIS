@@ -40,57 +40,63 @@ require "php/session.php";
     <style>
     #intactionchart {
         width: 100%;
-        height:350px;
+        height: 350px;
     }
+
     #intervchart {
         width: 60%;
-        height:350px;
-         padding-left: 250px;
+        height: 350px;
+        padding-left: 250px;
     }
+
     .center {
-  margin: auto;
-  width: 90%;
-  /* border: 3px solid green; */
-  padding: 20px;
-}
-#chartdiv1 {
-  width: 100%;
-  height: 500px;
-}
-/* #chartdiv {
+        margin: auto;
+        width: 90%;
+        /* border: 3px solid green; */
+        padding: 20px;
+    }
+
+    #chartdiv1 {
+        width: 100%;
+        height: 500px;
+    }
+
+    /* #chartdiv {
   width: 100%;
   height: 500px;
 } */
     #chartdiv2 {
-  width: 60%;
-  height: 500px;
-   padding-left: 250px;
-  
-}
-   p1 {
-color: #73c2fb ;
-}
-.nav {
-  /* background-color: yellow;  */
-  list-style-type: none;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
+        width: 60%;
+        height: 500px;
+        padding-left: 250px;
 
-.nav li {
-  display: inline-block;
-  font-size: 20px;
-  padding: 0px;
-}
-.padding
-{
-width:100px;
-height:80px;
-padding: 0px 0px 25px 0px;
-}
-/* p.ex1 {display:  inline-block;} */
+    }
 
+    p1 {
+        color: #73c2fb;
+    }
+
+    .nav {
+        /* background-color: yellow;  */
+        list-style-type: none;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav li {
+        display: inline-block;
+        font-size: 20px;
+        padding: 0px;
+    }
+
+    .padding {
+        width: 100px;
+        height: 80px;
+        padding: 0px 0px 25px 0px;
+    }
+
+    /* p.ex1 {display:  inline-block;} */
     </style>
 </head>
 
@@ -100,31 +106,35 @@ padding: 0px 0px 25px 0px;
 
     <!-- ======= subHero Section ======= -->
     <section id="subHero" class="d-flex  justify-content-center textc" style=" height: auto ; min-height: 100vh;">
-        <div class="container position-relative mt-3" data-aos="fade-up" data-aos-delay="100">            
-            <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden disabled>
-            <div class="container">
-            <input type="text" id="cityName" class="form-control" value="<?php echo $_SESSION["cityName"]; ?>" hidden
+        <div class="container position-relative mt-3" data-aos="fade-up" data-aos-delay="100">
+            <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden
                 disabled>
+            <div class="container">
+                <input type="text" id="cityName" class="form-control" value="<?php echo $_SESSION["cityName"]; ?>"
+                    hidden disabled>
                 <div class="row  mt-4">
-                    
-                    <div class="col container vertical-scrollable">
-                     <div class="card example-1 scrollbar-ripe-malinka policy">
 
-                        <div class="card ">
-                            <div class="card-body">
-                                <h3 class="text-center">2030 Interventions</h3>
-                                                            
+                    <div class="col container vertical-scrollable">
+                        <div class="card example-1 scrollbar-ripe-malinka policy">
+
+                            <div class="card ">
+                                <div class="card-body">
+                                    <h3 class="text-center">2030 Interventions</h3>
+
                                     <div class="col-12 ">
                                         <div class="card ">
                                             <div class="card-body">
                                                 <div class="textc">
-                                                    <h5>Electricity </h5><img src="assets/img/solarpol.png"  width="50px" height="40">
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/img/indu.png"  width="50px" height="40"> 
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/smarthm.png"  width="50px" height="40">
+                                                    <h5>Electricity </h5><img src="assets/img/solarpol.png" width="50px"
+                                                        height="40">
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img
+                                                        src="assets/img/indu.png" width="50px" height="40">
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                                                        src="assets/img/smarthm.png" width="50px" height="40">
                                                 </div>
                                                 <div class="textc">
                                                     <p> Renewable policy applied (25% of coal demand to be met with
-                                                            solar)
+                                                        solar)
                                                         Carbon capture Applied (25% of Carbon Emission Captured)</br>
                                                         Smart homes 20%
                                                     </p>
@@ -132,28 +142,31 @@ padding: 0px 0px 25px 0px;
                                             </div>
                                         </div>
                                     </div>
-  
 
-                                 <div class="col-12 ">
+
+                                    <div class="col-12 ">
 
                                         <div class="card ">
                                             <div class="card-body">
                                                 <div class="textc">
-                                                      <h5>Transport </h5><img src="assets/img/evvehic1.png"  width="50px" height="40">
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/bus4.png"  width="50px" height="40">
-                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/scrap.png"  width="50px" height="40">
-                                                                      </div>
+                                                    <h5>Transport </h5><img src="assets/img/evvehic1.png" width="50px"
+                                                        height="40">
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                                                        src="assets/img/bus4.png" width="50px" height="40">
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                                                        src="assets/img/scrap.png" width="50px" height="40">
+                                                </div>
                                                 <div class="textc">
                                                     <p> Proposed EV policy</br>
-                                                     2W 30%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                3w 25%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                4w 10%     </br>     
-                                                                 Fleet operators</br>
-                                                                50% Buses&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                city bus 50% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                msrtc 25%</br>
-                                                                Govt Vehicles100%
-                                                </p>
+                                                        2W 30%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        3w 25%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        4w 10% </br>
+                                                        Fleet operators</br>
+                                                        50% Buses&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        city bus 50% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        msrtc 25%</br>
+                                                        Govt Vehicles100%
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -164,36 +177,39 @@ padding: 0px 0px 25px 0px;
                                         <div class="card ">
                                             <div class="card-body">
                                                 <div class="textc">
-                                            <h5>AFOLU </h5><img src="assets/img/land2.png"  width="50px" height="40">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/livestock.png"  width="50px" height="40">
+                                                    <h5>AFOLU </h5><img src="assets/img/land2.png" width="50px"
+                                                        height="40">
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                                                        src="assets/img/livestock.png" width="50px" height="40">
 
                                                 </div>
                                                 <div class="textc">
-                                                    <p>                           
-                                                    Cropland 10%  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <p>
+                                                        Cropland 10% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                         Forest 0% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        Livestock 5% 
-                                                    
-                                                </p>
+                                                        Livestock 5%
+
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
 
-                                        <div class="col-12 ">
+                                    <div class="col-12 ">
 
                                         <div class="card ">
                                             <div class="card-body">
                                                 <div class="textc">
-                                                    <h5>MSW</h5><img src="assets/img/waste.png"  width="50px" height="40">                                                      
-                                                    </div>
+                                                    <h5>MSW</h5><img src="assets/img/waste.png" width="50px"
+                                                        height="40">
+                                                </div>
                                                 <div class="textc">
-                                                    <p>                           
+                                                    <p>
                                                         45% od waste reaches landfill</br>
                                                         18% of wate reaches lanfill (All inert waste included)
-                                                     
-                                                </p>
+
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -204,278 +220,335 @@ padding: 0px 0px 25px 0px;
                                         <div class="card ">
                                             <div class="card-body">
                                                 <div class="textc">
-                                                    <h5>Industries</h5><img src="assets/img/industry.png"  width="50px" height="40">                                                </div>
+                                                    <h5>Industries</h5><img src="assets/img/industry.png" width="50px"
+                                                        height="40">
+                                                </div>
                                                 <div class="textc">
-                                                    <p>                           
-                                                       25% of coal demand to be met with PNG</br>
+                                                    <p>
+                                                        25% of coal demand to be met with PNG</br>
                                                         100% replacement of FO with PNG</br>
                                                         100% replacement ofwood with PNG
-                                                </p>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                <!-- ///////////// -->
+                                    <!-- ///////////// -->
+                                </div>
                             </div>
                         </div>
+                        <!-- ////// -->
                     </div>
-                    <!-- ////// -->
-            </div>
 
 
                     <div class="col container vertical-scrollable">
-            <div class="card example-1 scrollbar-ripe-malinka policy">
-                        <div class="card ">
-                            <div class="card-body">
-                                <h3 class="text-center">2050 Interventions</h3>
-                                <div class="row">
-                                    <div class="col-12">
+                        <div class="card example-1 scrollbar-ripe-malinka policy">
+                            <div class="card ">
+                                <div class="card-body">
+                                    <h3 class="text-center">2050 Interventions</h3>
+                                    <div class="row">
+                                        <div class="col-12">
 
-                                        <div class="card ">
-                                            <div class="card-body">
-                                                <div class="textc">
-                                                    <h5>Electricity </h5><img src="assets/img/solarpol.png"  width="50px" height="40">
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/img/indu.png"  width="50px" height="40"> 
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/smarthm.png"  width="50px" height="40">
-                                                </div>
-                                                <div class="textc">
-                                                    <p> Renewable policy applied (75% of coal demand to be met with
-                                                        solar)
-                                                        Carbon capture Applied (75% of Carbon Emission Captured)</br>
-                                                        Smart homes 50%
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="card ">
-                                            <div class="card-body">
-                                                <div class="textc">
-                                                    <h5>Transport </h5><img src="assets/img/evvehic1.png"  width="50px" height="40">
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/bus4.png"  width="50px" height="40">
-                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/scrap.png"  width="50px" height="40">
-
-                                                </div>
-                                                <div class="textc">
-                                                     <p> Proposed EV policy :</br>
-                                                      2w 60% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        3w 50% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        4w 40% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        Fleet operators 75%  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</br>
-                                                        Buses</br>
-                                                        city bus 100%  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        msrtc 50%  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        Govt Vehicles 100%  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</br>
-                                                        Scrappage Policy (15 years older veh scrapped) :</br>
-                                                        Congestion tax (0.5% reduction on 2W and 4 W every year)</br>
-                                                        Non Motorised (0.5% reduction on 2W and 4 W every year)</br>
-                                                        Subsidization (1% reduction on 2W and 4 W every year)</br>
-                                                        Shared transport (1% reduction on 2W and 4 W every year)</br>
-                                                        Introduction of BS VII :</br>
-                                                        3w 60% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        4w 35% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        LMVS 60% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        HCVs 75% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        Buses 50% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-                                                    </p> 
+                                            <div class="card ">
+                                                <div class="card-body">
+                                                    <div class="textc">
+                                                        <h5>Electricity </h5><img src="assets/img/solarpol.png"
+                                                            width="50px" height="40">
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img
+                                                            src="assets/img/indu.png" width="50px" height="40">
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                                                            src="assets/img/smarthm.png" width="50px" height="40">
                                                     </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-
-                                     <div class="w-100"></div>
-
-                                    <div class="col-12 ">
-                                        <div class="card ">
-                                            <div class="card-body">
-                                                <div class="textc">
-                                                    <h5>AFOLU </h5><img src="assets/img/land2.png"  width="50px" height="40">
-                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/livestock.png"  width="50px" height="40">
-                                                </div>
-                                                <div class="textc">
-                                                    <p> Cropland 60% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        Forest 0% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        Livestock 60% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-                                                    </p>
+                                                    <div class="textc">
+                                                        <p> Renewable policy applied (75% of coal demand to be met with
+                                                            solar)
+                                                            Carbon capture Applied (75% of Carbon Emission
+                                                            Captured)</br>
+                                                            Smart homes 50%
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-12 ">
-                                        <div class="card ">
-                                            <div class="card-body">
-                                                <div class="textc">
-                                                    <h5>MSW </h5><img src="assets/img/waste.png"  width="50px" height="40">
-                                                </div>
-                                                <div class="textc">
-                                                    <p> 20% of waste is treated by composting </br>
-                                                        51% of waste is treated by composting (All biodegradable waste
-                                                        included)                                                        
+                                        <div class="col-12">
+                                            <div class="card ">
+                                                <div class="card-body">
+                                                    <div class="textc">
+                                                        <h5>Transport </h5><img src="assets/img/evvehic1.png"
+                                                            width="50px" height="40">
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                                                            src="assets/img/bus4.png" width="50px" height="40">
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                                                            src="assets/img/scrap.png" width="50px" height="40">
 
-                                                    </p>
+                                                    </div>
+                                                    <div class="textc">
+                                                        <p> Proposed EV policy :</br>
+                                                            2w 60% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            3w 50% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            4w 40% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            Fleet operators 75%
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</br>
+                                                            Buses</br>
+                                                            city bus 100% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            msrtc 50% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            Govt Vehicles 100%
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</br>
+                                                            Scrappage Policy (15 years older veh scrapped) :</br>
+                                                            Congestion tax (0.5% reduction on 2W and 4 W every
+                                                            year)</br>
+                                                            Non Motorised (0.5% reduction on 2W and 4 W every year)</br>
+                                                            Subsidization (1% reduction on 2W and 4 W every year)</br>
+                                                            Shared transport (1% reduction on 2W and 4 W every
+                                                            year)</br>
+                                                            Introduction of BS VII :</br>
+                                                            3w 60% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            4w 35% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            LMVS 60% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            HCVs 75% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            Buses 50% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="w-100"></div>
+
+                                        <div class="col-12 ">
+                                            <div class="card ">
+                                                <div class="card-body">
+                                                    <div class="textc">
+                                                        <h5>AFOLU </h5><img src="assets/img/land2.png" width="50px"
+                                                            height="40">
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                                                            src="assets/img/livestock.png" width="50px" height="40">
+                                                    </div>
+                                                    <div class="textc">
+                                                        <p> Cropland 60% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            Forest 0% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            Livestock 60% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                 <!-- Force next columns to break to new line -->
-                                    <div class="w-100"></div>
+                                        <div class="col-12 ">
+                                            <div class="card ">
+                                                <div class="card-body">
+                                                    <div class="textc">
+                                                        <h5>MSW </h5><img src="assets/img/waste.png" width="50px"
+                                                            height="40">
+                                                    </div>
+                                                    <div class="textc">
+                                                        <p> 20% of waste is treated by composting </br>
+                                                            51% of waste is treated by composting (All biodegradable
+                                                            waste
+                                                            included)
 
-                                    <div class="col-12 ">
-                                        <div class="card ">
-                                            <div class="card-body">
-                                                <div class="textc">
-                                                    <h5>Industries </h5><img src="assets/img/industry.png"  width="50px" height="40">
-                                                </div>
-                                                <div class="textc">
-                                                    <p> 75% of coal demand to be met with PNG </br>
-                                                        100% replacement of FO with PNG </br>
-                                                        100% replacement of wood with PNG </br>
-                                                        100% replacement of Briquettes with PNG </br>
-                                                        50% of LDO demand to be met with PNG</br>
-                                                        50% of HSD demand to be met with PNG
-
-                                                    </p>
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                   <!-- <div class="col-6 ">
+                                        <!-- Force next columns to break to new line -->
+                                        <div class="w-100"></div>
+
+                                        <div class="col-12 ">
+                                            <div class="card ">
+                                                <div class="card-body">
+                                                    <div class="textc">
+                                                        <h5>Industries </h5><img src="assets/img/industry.png"
+                                                            width="50px" height="40">
+                                                    </div>
+                                                    <div class="textc">
+                                                        <p> 75% of coal demand to be met with PNG </br>
+                                                            100% replacement of FO with PNG </br>
+                                                            100% replacement of wood with PNG </br>
+                                                            100% replacement of Briquettes with PNG </br>
+                                                            50% of LDO demand to be met with PNG</br>
+                                                            50% of HSD demand to be met with PNG
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="col-6 ">
                                         <div class="card ">
                                                 </div>
                                             </div> -->
-                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             </div>
                         </div>
                     </div>
-                     <div class="row align-items-center justify-content-center">
-                      <p><h3><center>Year Wise Total Emission</center></h3></P>
-                    <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-3 mt-3" data-aos-delay="200">
-                             <div class="card">
-                                <div class="card-header p-3 pt-2">
-                                    <!-- <div class="rounded mt-n4 position-absolute iconAdmin">
+                </div>
+            </div>
+            <!-- Year Wise Total Emission -->
+            <div class="row align-items-center justify-content-center">
+                <p>
+                <h3>
+                    <center>Year Wise Total Emission</center>
+                </h3>
+                </P>
+                <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-3 mt-3" data-aos-delay="200">
+                    <div class="card">
+                        <div class="card-header p-3 pt-2">
+                            <!-- <div class="rounded mt-n4 position-absolute iconAdmin">
                                         <center><i class="fa fa-bolt mt-2 " aria-hidden="true" style="font-size:26px;color:#e9ecef"></i></center>
                                     </div> -->
-                                    <P><h4><center>2022 Emission</center></h4></p>
-                                    <div class="text-end pt-1">
-                                        <p class="text-sm mb-0 text-capitalize">
-                                       <!-- <center> Your Emission of 2022</center> -->
-                                        <h6 class="mb-0"><center><h3><p1>10200</p1></h3> tons/year</center></h6>
-                                       </p>
-                                    </div>
-                                </div>
+                            <P>
+                            <h4>
+                                <center>2022 Emission</center>
+                            </h4>
+                            </p>
+                            <div class="text-end pt-1">
+                                <p class="text-sm mb-0 text-capitalize">
+                                    <!-- <center> Your Emission of 2022</center> -->
+                                <h6 class="mb-0">
+                                    <center>
+                                        <h3>
+                                        <p1><h2 id="emi2022"></h2></p1>
+                                        </h3> tons/year
+                                    </center>
+                                </h6>
+                                </p>
                             </div>
+                        </div>
                     </div>
+                </div>
 
-                   
 
-                          <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-3 mt-3" data-aos-delay="200">
-                                  <div class="card">
-                                <div class="card-header p-3 pt-2">
-                                    <!-- <div class="rounded mt-n4 position-absolute iconAdmin">
+
+                <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-3 mt-3" data-aos-delay="200">
+                    <div class="card">
+                        <div class="card-header p-3 pt-2">
+                            <!-- <div class="rounded mt-n4 position-absolute iconAdmin">
                                         <center><i class="fa fa-bolt mt-2 " aria-hidden="true" style="font-size:26px;color:#e9ecef"></i></center>
                                     </div> -->
-                                <P><h4><center> Intervented 2030 Emission</h6></center></h4></p>
-                                    <div class="text-end pt-1">
-                                        <!-- <p class="text-sm mb-0 text-capitalize">Emission of 2030 using Take Action</p> -->
-                                        <h6 class="mb-0"><center><h3><p1>10200</p1></h3> tons/year</center></h6>
-                                    </div>
-                                </div>
+                            <P>
+                            <h4>
+                                <center> Intervented 2030 Emission</h6>
+                                </center>
+                            </h4>
+                            </p>
+                            <div class="text-end pt-1">
+                                <!-- <p class="text-sm mb-0 text-capitalize">Emission of 2030 using Take Action</p> -->
+                                <h6 class="mb-0">
+                                    <center>
+                                        <h3>
+                                        <p1><h2 id="emi2030"></h2></p1>
+                                        </h3> tons/year
+                                    </center>
+                                </h6>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                            <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-3 mt-3" data-aos-delay="200">
-                            <div class="card">
-                                <div class="card-header p-3 pt-2">
-                                   
-                                     <P><h4><center> Intervented 2050 Emission</center></h4></p>
-                                    <div class="text-end pt-1">
-                                        <!-- <p class="text-sm mb-0 text-capitalize">Emission of 2050 using Take Action</p> -->
-                                        <h6 class="mb-0"> <center><h3><p1>10200</p1></h3> tons/year</center></h6>
-                                    </div>
-                                </div>
+                <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-3 mt-3" data-aos-delay="200">
+                    <div class="card">
+                        <div class="card-header p-3 pt-2">
+
+                            <P>
+                            <h4>
+                                <center> Intervented 2050 Emission</center>
+                            </h4>
+                            </p>
+                            <div class="text-end pt-1">
+                                <!-- <p class="text-sm mb-0 text-capitalize">Emission of 2050 using Take Action</p> -->
+                                <h6 class="mb-0">
+                                    <center>
+                                        <h3>
+                                            <p1><h2 id="emi2050"></h2></p1>
+                                        </h3> tons/year
+                                    </center>
+                                </h6>
                             </div>
                         </div>
-                </diV>
-<!-- ////// -->
-                <div class="row align-items-center justify-content-center" >
-                   <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3 pt-3" data-aos-delay="200">
-                   <div id="intactionchart">
-                   </div>
-                   </div>
-                   </div>
-<!-- ////// -->
-                    <div class="row align-items-center justify-content-center" >
-                   <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3 pt-3" data-aos-delay="200">
-                   
-                 
+                    </div>
+                </div>
+            </diV>
+            <!-- Year Wise Total Emission -->
+            <!-- ////// -->
+            <div class="row align-items-center justify-content-center">
+                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3 pt-3" data-aos-delay="200">
+                    <div id="intactionchart">
+                    </div>
+                </div>
+            </div>
+            <!-- ////// -->
+            <div class="row align-items-center justify-content-center">
+                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3 pt-3" data-aos-delay="200">
+
+
                     <div class="row align-items-center justify-content-center">
-                   <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 mt-3 " data-aos-delay="200">
-                   </div>
-                   <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 mt-3 " data-aos-delay="200">
+                        <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 mt-3 " data-aos-delay="200">
+                        </div>
+                        <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 mt-3 " data-aos-delay="200">
                             <!-- <div class="row">
                           <h4 id="numberOfTree">After 2050 Equivalent to &nbsp;&nbsp;</h4><img src="assets/img/tt3.png"  width="100px" height="80">
                             </div> -->
                             <ul class="nav">
-                            <li><h2 id="numberOfTree">Equivalent to &nbsp;</h2></li>                           
-                            <li><img src="assets/img/tt3.png"  width="100px" height="80" class="padding"></li>  
-                          
-                            </ul>
-                    <!-- <h2 id="numberOfTree"></h2> -->
-                    <!-- <img src="assets/img/tt3.png"  width="100px" height="80"> -->
-                   
-                   </div>
-                   </div>
-                    
-                 <div id="intervchart">
-                   </div>
+                                <li>
+                                    <h2 id="numberOfTree">Equivalent to &nbsp;</h2>
+                                </li>
+                                <li><img src="assets/img/tt3.png" width="100px" height="80" class="padding"></li>
 
-                   </div>
-                                   
+                            </ul>
+                            <!-- <h2 id="numberOfTree"></h2> -->
+                            <!-- <img src="assets/img/tt3.png"  width="100px" height="80"> -->
+
+                        </div>
+                    </div>
+
+                    <div id="intervchart">
+                    </div>
+
                 </div>
 
-                <!-- ////sector wise graph -->
-             <div class="row align-items-center justify-content-center">
-                    <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3 " data-aos-delay="200">
-                    
-                        <div id="Contact" class="tabcontent">
-                            <div class="row mt-3 justify-content-center">
-                                <div class="row">
-                                        <div class="col-8">
-                                            <h3 class="text-white">Carbon Emissions Sector Wise(tCO2e/day)</h3>
-                                        </div>
-                                                    <div class="col-3 form-group col-md-3">
-                                                        <select class="form-control" id="sectionType" onchange="chartdiv2();">
-                                                            <option disabled selected>Select Sector</option>
-                                                            <option value="Electricity">Electricity</option>
-                                                            <option value="Transport">Transport</option>                                       
-                                                            <option value="WasteWater">WasteWater</option>
-                                                            <option value="AFOLU">AFOLU</option>
-                                                            <option value="energy">Industry</option>                                      
-                                                        </select>
-                                                    </div>
-                                
-                                </div>    
+            </div>
+
+            <!-- ////sector wise graph -->
+            <div class="row align-items-center justify-content-center">
+                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3 " data-aos-delay="200">
+
+                    <div id="Contact" class="tabcontent">
+                        <div class="row mt-3 justify-content-center">
+                            <div class="row">
+                                <div class="col-8">
+                                    <h3 class="text-white">Carbon Emissions Sector Wise(tCO2e/day)</h3>
+                                </div>
+                                <div class="col-3 form-group col-md-3">
+                                    <select class="form-control" id="sectionType" onchange="chartdiv2();">
+                                        <option disabled selected>Select Sector</option>
+                                        <option value="Electricity">Electricity</option>
+                                        <option value="Transport">Transport</option>
+                                        <option value="WasteWater">WasteWater</option>
+                                        <option value="AFOLU">AFOLU</option>
+                                        <option value="energy">Industry</option>
+                                    </select>
+                                </div>
+
                             </div>
-                            <!-- <div id="secChartDiv">
+                        </div>
+                        <!-- <div id="secChartDiv">
                                 <div id="secEmiChart"></div>
                             </div> -->
-                            <!-- <div id="chartdiv"></div> -->
-                            <!-- <div id="chartdiv1"></div> -->
-                            <div id="SectoralChart">
+                        <!-- <div id="chartdiv"></div> -->
+                        <!-- <div id="chartdiv1"></div> -->
+                        <div id="SectoralChart">
                             <div id="chartdiv2"></div>
-                            </div>
+                        </div>
 
-                        </div>                                   
-                    </div> 
+                    </div>
+                </div>
             </div>
 
 
@@ -512,7 +585,7 @@ padding: 0px 0px 25px 0px;
     <script src="assets/js/main.js"></script>
     <!-- Our JS Files -->
     <script src="js/takeAction.js"></script>
-      <!-- <script src="js/Demolinegraph.js"></script> -->
+    <!-- <script src="js/Demolinegraph.js"></script> -->
     <!-- <script src="js/induGraph.js"></script> -->
 
     <!-- <script src="js/combinegraph.js"></script> -->

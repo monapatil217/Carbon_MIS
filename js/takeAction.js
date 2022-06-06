@@ -16,10 +16,14 @@ function intervchart() {
         contentType: "application/json",
         data: JSON.stringify(myobj),
         success: function (data) {
+            var interEmi2022 = 0;
+            var interEmi2030 = 0;
             var interEmi2050 = 0;
             var datalist = JSON.parse(data);
             $.each(datalist, function (index, element) {
                 var cData = element.data;
+                interEmi2022 = cData[0].intervemi;
+                interEmi2030 = cData[1].intervemi;
                 interEmi2050 = cData[2].intervemi;
                 am5.ready(function () {
                     // Create root element
@@ -139,12 +143,12 @@ function intervchart() {
             });       // end am5.ready())
             var tottree = (interEmi2050 * 1000000) / 0.021;
             $("#numberOfTree").append(Math.round(tottree, 0));
+            $("#emi2022").append(Math.round(interEmi2022, 0));
+            $("#emi2030").append(Math.round(interEmi2030, 0));
+            $("#emi2050").append(Math.round(interEmi2050, 0));
 
         }
-    });
-
-
-
+    })
 }
 
 
