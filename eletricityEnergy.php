@@ -43,10 +43,10 @@ require "php/session.php";
           height: 360px;
     }
 
-    #chartdivsample {
+    /* #chartdivsample {
   width: 470px;
   height: 350px;
-}
+} */
     </style>
 </head>
 
@@ -122,9 +122,10 @@ require "php/session.php";
                             <div  class=" col-lg-1 col-md-1 col-sm-1 col-xs-1 "
                                 data-scroll-reveal="enter right move 60px over 0.6s after 0.4s">
                                 <!--bi bi-box-arrow-in-down <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button> -->
-                                <i class="bi bi-download" style="font-size:24px;color:#FFFFFF
+                                <i class="bi bi-download" style="font-size:24px;color:#FFFFFF"
+                                  class="btn btn-primary " value="download"
                                     onclick="CreatePDFfromHTML('electricity')"></i>
-                            
+                           
                             </div>
                         </div>
                             <!-- sample graph -->
