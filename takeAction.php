@@ -413,9 +413,11 @@ require "php/session.php";
                                     <!-- <center> Your Emission of 2022</center> -->
                                 <h6 class="mb-0">
                                     <center>
-                                        <h3>
-                                        <p1><h2 id="emi2022"></h2></p1>
-                                        </h3> MtCO2e/year
+                                        <!-- <h3> -->
+                                        <p><h3 id="emi2022"></h3></p>
+                                        <!-- <p1 id="emi2022"></p1> -->
+                                        <!-- </h3> -->
+                                         MtCO2e/year
                                     </center>
                                 </h6>
                                 </p>
@@ -442,8 +444,10 @@ require "php/session.php";
                                 <!-- <p class="text-sm mb-0 text-capitalize">Emission of 2030 using Take Action</p> -->
                                 <h6 class="mb-0">
                                     <center>
-                                       
-                                        <p1><h2 id="emi2030"></h2></p1>
+                                       <!-- <h3> -->
+                                        <p><h3 id="emi2030"></h3></p>
+                                        <!-- <p1  id="emi2030"></p1> -->
+                                       <!-- </h3> -->
                                         MtCO2e/year
                                     </center>
                                 </h6>
@@ -465,9 +469,11 @@ require "php/session.php";
                                 <!-- <p class="text-sm mb-0 text-capitalize">Emission of 2050 using Take Action</p> -->
                                 <h6 class="mb-0">
                                     <center>
-                                        <h3>
-                                            <p1><h2 id="emi2050"></h2></p1>
-                                        </h3> MtCO2e/year
+                                        <!-- <h3> -->
+                                            <p><h3 id="emi2050"></h3></p>
+                                             <!-- <p1 id="emi2050"></p1> -->
+                                        <!-- </h3>  -->
+                                        MtCO2e/year
                                     </center>
                                 </h6>
                             </div>
