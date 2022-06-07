@@ -55,7 +55,7 @@ require "php/session.php";
                  <input type="text" id="cityName" class="form-control" value="<?php echo $_SESSION["cityName"]; ?>" hidden
                 disabled>
             <div class="row">
-                <div class="col-md-12 col-lg-6  mb-3" data-aos-delay="200">
+                <div class="col-md-12 col-lg-5  mb-3" data-aos-delay="200">
                     <div class="in-sec">
                         <!-- <h4 class="text-center mb-2">Land Use</h4> -->
                         <marquee width="100%" direction="left" height="30px" scrollamount="2"> sq.km - Square Kilometre.
@@ -81,7 +81,7 @@ require "php/session.php";
                         <!-- End PopUp div -->
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-6  mb-3" data-aos-delay="200">
+                <div class="col-md-12 col-lg-7  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">
                         <h3 class="text-center">Carbon Emissions From Land Use Sector </h3>
                         <ul style="margin-left: 10px;">
@@ -91,14 +91,14 @@ require "php/session.php";
                                 or removal of greenhouse gases from the atmosphere.</li>
                         </ul>
                         <div class="row justify-content-center">
-                            <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-7"
+                            <div class=" col-lg-8 col-md-8 col-sm-8 col-xs-8 mt-5"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <div class="row justify-content-center">
                                     <div id="chartName"></div>
                                     <div id="landUse"></div>
                                 </div>
                             </div>
-                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2"
+                            <div class=" col-lg-1 col-md-1 col-sm-1 col-xs-1"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <!-- <button id="cmd" class="btn btn-primary "
                                     onclick="CreatePDFfromHTML('landUse')">Print</button> -->

@@ -55,7 +55,7 @@ require "php/session.php";
                  <input type="text" id="cityName" class="form-control" value="<?php echo $_SESSION["cityName"]; ?>" hidden
                 disabled>
             <div class="row justify-content-center">
-                <div class="col-md-12 col-lg-4  mb-3" data-aos-delay="200">
+                <div class="col-md-12 col-lg-5  mb-3" data-aos-delay="200">
                     <div class="in-sec">
                         <!-- <h4 class="text-center mb-2">Transport</h4> -->
                         <form class="needs-validation" novalidate>
@@ -90,7 +90,7 @@ require "php/session.php";
                         </div>
                     </div>
                 </div> -->
-                <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
+                <div class="col-md-12 col-lg-7  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">
                         <!-- <h3>Electricity</h3> -->
                         <h3 class="text-center mb-2">Carbon Emissions from Transport Sector</h3>
@@ -100,14 +100,14 @@ require "php/session.php";
                                 final energy consumption.</li>
                         </ul>
                         <div class="row justify-content-center">
-                            <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 mt-5"
+                            <div class=" col-lg-8 col-md-8 col-sm-8 col-xs-8 mt-5"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <div id="chartName">
                                     <!-- <h3>Carbon emission of Electricity</h3> -->
                                 </div>
                                 <div id="transport"></div>
                             </div>
-                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2"
+                            <div class=" col-lg-1 col-md-1 col-sm-1 col-xs-1"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <i class="bi bi-download" style="font-size:24px;color:#FFFFFF"
                                     class="btn btn-primary " value="download"

@@ -37,8 +37,8 @@ require "php/session.php";
   ======================================================== -->
     <style>
     #cropLand {
-        width: 500px;
-        height: 360px;
+        width:500px;
+        height:360px;
     }
     </style>
 </head>
@@ -89,14 +89,14 @@ require "php/session.php";
                                 for 18% of total GHG emissions in India . </li>
                         </ul>
                         <div class="row justify-content-center">
-                            <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6"
+                            <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-7"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <div class="row justify-content-center">
                                     <div id="chartName"></div>
                                     <div id="cropLand"></div>
                                 </div>
                             </div>
-                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2"
+                            <div class=" col-lg-1 col-md-1 col-sm-1 col-xs-1"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <i  class="bi bi-download" style="font-size:24px;color:#FFFFFF"
                                     class="btn btn-primary " value="download"

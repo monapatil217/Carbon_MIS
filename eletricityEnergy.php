@@ -115,9 +115,6 @@ require "php/session.php";
                                 
                             </div>
 
-                           
-                            
-                          
                             <!-- for print btn symbol -->
                             <div  class=" col-lg-1 col-md-1 col-sm-1 col-xs-1 "
                                 data-scroll-reveal="enter right move 60px over 0.6s after 0.4s">
@@ -139,8 +136,7 @@ require "php/session.php";
                                 </div>
                             </div>
                         </div> -->
-                         <!-- End sample graph -->
-                        
+                         <!-- End sample graph -->                        
                         <div></div>
                         <!-- Next btn symbol -->
                         <div class="row align-items-center justify-content-center">
