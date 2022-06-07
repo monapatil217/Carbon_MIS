@@ -149,6 +149,9 @@ foreach ($dataArray as $row) {
         $finalemi2022=$carbonco2 + $carbonch4 + $carbonn2o;
         $finalemi2022=round($finalemi2022,2);
         // echo "2022final:", $finalemi2022;
+        //  echo "2022final co2:", $carbonco2;
+        //    echo "2022final ch4:", $carbonch4;
+        //    echo "2022final n2o:", $carbonn2o;
 
 //end calculation
 
@@ -1077,7 +1080,8 @@ foreach ($dataArray as $row) {
             $inteArray ['intervemi'] =$afterEmi2050;
             array_push($dataArray, $inteArray);
 
-        
+        // echo "2022 emi----". $finalemi2022;
+
           $sizeof = sizeof($dataArray);
            foreach ($dataArray as $row) {
            $ctcyear =  $row['ctcyear'];
