@@ -138,7 +138,7 @@ function aflouData() {
         contentType: "application/json",
         data: JSON.stringify(myobj),
         success: function (data) {
-            alert("OK");
+            // alert("OK");
 
 
         }

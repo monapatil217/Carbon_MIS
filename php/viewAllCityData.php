@@ -172,7 +172,6 @@ if ($rowcount == 0) {
             $cData['com'] = $row['com'];
             $cData['public'] = $row['public'];
             $cData['w_body'] = $row['w_body'];
-            $cData['green_a'] = $row['green_a'];
             $cData['transport'] = $row['transport'];
             $cData['indu'] = $row['indu'];
             $cData['r_creational'] = $row['r_creational'];

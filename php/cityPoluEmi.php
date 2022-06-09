@@ -12,7 +12,6 @@ $tableEmiarray = array (
     array("indu_eng_emi","indu_cem_emi","indu_chem_emi","indu_other_emi"),
     array("fule_emi"),
    );
-// $mtype = ["co2", "ch4", "n2o"];
 
 $query2 = "SELECT Distinct(name) FROM city_name";
 $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
@@ -31,32 +30,39 @@ while ($row = mysqli_fetch_array($result)) {
                 $polutype = $tbarray[$j];
             }
             $mainData['country'] = $cityName;
-            $mainData[$polutype] = 0;
+             $mainData['ch4'] = 0;
+             $mainData['n2o'] = 0;
+             $mainData['co2'] = 0;
         }
     } else {
         $row = mysqli_fetch_array($basicresult);
         $basicId = $row['id'];
-        $mainData['country'] = $cityName;
-
+        $ch4 = 0;
+        $n2o = 0;
+        $co2 = 0;
         for ($i = 0; $i < sizeof($tableEmiarray); $i++) {
             $polutype = $tableEmiarray[$i];
-            $value = 0;
+           
             $tbarray=$tableEmiarray[$i];
 
             for($j=0;$j<sizeof($tbarray);$j++){
                 $polutype = $tbarray[$j];
 
-                $dataQuery = "SELECT ifnull(ch4, 0) + ifnull(n2o, 0) + ifnull(co2, 0) as ItemSum FROM $polutype WHERE b_id='" . $basicId . "'";
+                $dataQuery = "SELECT ch4 , n2o , co2  FROM $polutype WHERE b_id='" . $basicId . "'";
                 $emiresult = mysqli_query($conn, $dataQuery)  or die(mysqli_error($conn));
                 $rowcount = mysqli_num_rows($emiresult);
                 if ($rowcount != 0) {
                     $row = mysqli_fetch_array($emiresult);
-                    $value += $row['ItemSum'];
+                    $ch4 += $row['ch4'];
+                    $n2o += $row['n2o'];
+                    $co2 += $row['co2'];
                 }
-            }
-             $mainData['country'] = $cityName;
-             $mainData[$polutype] = round($value,1);
+            }   
         }
+        $mainData['country'] = $cityName;
+        $mainData['ch4'] = round($ch4,3);
+        $mainData['n2o'] = round($n2o,3);
+        $mainData['co2'] = round($co2,3);
     }
     array_push($finalDataArray, $mainData);
 }
