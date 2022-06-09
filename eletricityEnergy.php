@@ -104,7 +104,7 @@ require "php/session.php";
                         
                         <div class="row justify-content-center">
                         
-                            <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-7 mt-5"
+                            <div class=" col-lg-8 col-md-8 col-sm-8 col-xs-8"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 
                                 <div id="chartName">
@@ -114,7 +114,8 @@ require "php/session.php";
                                 <div id="electricity"></div>
                                 
                             </div>
-
+                             <div  class=" col-lg-1 col-md-1 col-sm-1 col-xs-1 "
+                                data-scroll-reveal="enter right move 60px over 0.6s after 0.4s"></div>
                             <!-- for print btn symbol -->
                             <div  class=" col-lg-1 col-md-1 col-sm-1 col-xs-1 "
                                 data-scroll-reveal="enter right move 60px over 0.6s after 0.4s">

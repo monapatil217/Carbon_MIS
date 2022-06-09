@@ -91,7 +91,7 @@ require "php/session.php";
                                 or removal of greenhouse gases from the atmosphere.</li>
                         </ul>
                         <div class="row justify-content-center">
-                            <div class=" col-lg-8 col-md-8 col-sm-8 col-xs-8 mt-5"
+                            <div class=" col-lg-8 col-md-8 col-sm-8 col-xs-8"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <div class="row justify-content-center">
                                     <div id="chartName"></div>

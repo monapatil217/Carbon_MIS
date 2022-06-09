@@ -86,7 +86,7 @@ require "php/session.php";
                         <h3 class="text-center">Carbon Emission From Industrial Energy Use</h3>
                         <!-- next button and print bitton -->
                         <div class="row justify-content-center">
-                            <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 mt-5"
+                            <div class=" col-lg-8 col-md-8 col-sm-8 col-xs-8"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <div id="chartName">
                                     <!-- <h3>Carbon emission of Electricity</h3> -->

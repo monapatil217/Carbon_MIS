@@ -94,13 +94,16 @@
                          </ul>
                          <!-- next button and print bitton -->
                          <div class="row justify-content-center">
-                             <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 mt-5"
+                             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
                                  data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                  <div id="chartName">
                                      <!-- <h3>Carbon emission of Electricity</h3> -->
                                  </div>
                                  <div id="cookingFuel"></div>
                              </div>
+                              <div class=" col-lg-1 col-md-1 col-sm-1 col-xs-1"
+                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s"></div>
+
                              <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2"
                                  data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                  <!-- <button id="cmd" class="btn btn-primary "

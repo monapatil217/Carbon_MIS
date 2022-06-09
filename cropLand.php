@@ -89,7 +89,7 @@ require "php/session.php";
                                 for 18% of total GHG emissions in India . </li>
                         </ul>
                         <div class="row justify-content-center">
-                            <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-7"
+                            <div class=" col-lg-8 col-md-8 col-sm-8 col-xs-8"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <div class="row justify-content-center">
                                     <div id="chartName"></div>
