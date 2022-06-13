@@ -43,9 +43,9 @@ function showMSWInput() {
                 var check = element.check;
 
                 if (check == "true") {
-                    
+
                     var eledata = element.cData;
-                    
+
                     $.each(eledata, function (index, element1) {
                         var n_yard = element1.n_yard;
                         var yardData = element1.YardData;
@@ -96,59 +96,59 @@ function showMSWInput() {
                             // + ' </div>'
 
                             + '<div class="row justify-content-center" id="adddDYard">';
-                            var i=1;
+                        var i = 1;
                         $.each(yardData, function (index, element2) {
-                            
-                           // for (var i = 1; i <= n_yard; i++) {
-                                aDumpingYard++;
-                                html += '<hr>'
-                                    +'<div  id="inputFormRow">'
-                                    + '<div class="row  text-center ">'
-                                    + '<h4>Details About Dumping Yard ' + i + ' </h4>'
 
-                                    + ' </div>'
-                                    + '<div class="row justify-content-center">'
+                            // for (var i = 1; i <= n_yard; i++) {
+                            aDumpingYard++;
+                            html += '<hr>'
+                                + '<div  id="inputFormRow">'
+                                + '<div class="row  text-center ">'
+                                + '<h4>Details About Dumping Yard ' + i + ' </h4>'
 
-                                    + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
-                                    + '<label for="area' + i + '" class="form-label"> Area of Dumping Yard</label>'
-                                    + '<div class="input-group mb-2">'
-                                    + '<input type="text" id="area' + i + '" name="area' + i + '" value="' + element2.area + '"  class="form-control" placeholder="Arera of Dumping Yard" aria-label="Arera of Dumping Yard" aria-describedby="basic-addon2">'
-                                    + ' <span class="input-group-text" id="basic-addon2">sq.km</span>'
-                                    + '</div>'
-                                    + '</div>'
+                                + ' </div>'
+                                + '<div class="row justify-content-center">'
 
-                                    + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
-                                    + '<label for="latitude' + i + '" class="form-label"> Latitude</label>'
-                                    + '<div class="input-group mb-2">'
-                                    + '<input type="text" id="latitude' + i + '" name="latitude' + i + '" value="' + element2.lat + '"  class="form-control" placeholder="Latitude" aria-label="Residential" aria-describedby="basic-addon2">'
-                                    + '</div>'
-                                    + '</div>'
+                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                                + '<label for="area' + i + '" class="form-label"> Area of Dumping Yard</label>'
+                                + '<div class="input-group mb-2">'
+                                + '<input type="text" id="area' + i + '" name="area' + i + '" value="' + element2.area + '"  class="form-control" placeholder="Arera of Dumping Yard" aria-label="Arera of Dumping Yard" aria-describedby="basic-addon2">'
+                                + ' <span class="input-group-text" id="basic-addon2">sq.km</span>'
+                                + '</div>'
+                                + '</div>'
 
-                                    + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
-                                    + '<label for="longitude' + i + '" class="form-label"> Longitude</label>'
-                                    + '<div class="input-group mb-2">'
-                                    + '<input type="text" id="longitude' + i + '" name="longitude' + i + '" value="' + element2.loong + '"  class="form-control" placeholder="Longitude" aria-label="Longitude" aria-describedby="basic-addon2">'
-                                    + '</div>'
-                                    + '</div>'
+                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                                + '<label for="latitude' + i + '" class="form-label"> Latitude</label>'
+                                + '<div class="input-group mb-2">'
+                                + '<input type="text" id="latitude' + i + '" name="latitude' + i + '" value="' + element2.lat + '"  class="form-control" placeholder="Latitude" aria-label="Residential" aria-describedby="basic-addon2">'
+                                + '</div>'
+                                + '</div>'
 
-                                    + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
-                                    + '<label for="apxWaste' + i + '" class="form-label"> Approximate Waste</label>'
-                                    + '<div class="input-group mb-2">'
-                                    + '<input type="text" id="apxWaste' + i + '" name="apxWaste' + i + '" value="' + element2.app_waste + '"  class="form-control" placeholder="Approximate Waste" aria-label="Approximate Waste" aria-describedby="basic-addon2">'
-                                    + ' <span class="input-group-text" id="basic-addon2">MTD</span>'
-                                    + '<div >'
-                                    + '<i class="bi bi-trash" style="font-size:24px;color:#FF0000"; onclick="removeYard(this, ' + i + ')"></i>' 
-                                    + '</div>'
-                                    +'</div>'
-                                    + '</div></div>'
+                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                                + '<label for="longitude' + i + '" class="form-label"> Longitude</label>'
+                                + '<div class="input-group mb-2">'
+                                + '<input type="text" id="longitude' + i + '" name="longitude' + i + '" value="' + element2.loong + '"  class="form-control" placeholder="Longitude" aria-label="Longitude" aria-describedby="basic-addon2">'
+                                + '</div>'
+                                + '</div>'
 
-                                    + '</div>';
-                                // + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                                + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+                                + '<label for="apxWaste' + i + '" class="form-label"> Approximate Waste</label>'
+                                + '<div class="input-group mb-2">'
+                                + '<input type="text" id="apxWaste' + i + '" name="apxWaste' + i + '" value="' + element2.app_waste + '"  class="form-control" placeholder="Approximate Waste" aria-label="Approximate Waste" aria-describedby="basic-addon2">'
+                                + ' <span class="input-group-text" id="basic-addon2">MTD</span>'
+                                + '<div >'
+                                + '<i class="bi bi-trash" style="font-size:24px;color:#FF0000"; onclick="removeYard(this, ' + i + ')"></i>'
+                                + '</div>'
+                                + '</div>'
+                                + '</div></div>'
 
-                                // + '</div>';
-                                i++;
-                                
-                           // }
+                                + '</div>';
+                            // + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+
+                            // + '</div>';
+                            i++;
+
+                            // }
                         });
 
                         html += ' </div><div class="row">'
@@ -470,56 +470,56 @@ function addDumpingYard() {
     yardList.push(aDumpingYard);
     //var dumpingYardM = document.getElementById("dumpingYardM").value;
     var html = '';
-        html += '<hr>'
-            + '<div  id="inputFormRow">'
-            + '<div class="row  text-center " >'
-            + '<h4>Details About Dumping Yard ' + aDumpingYard + ' </h4>'
+    html += '<hr>'
+        + '<div  id="inputFormRow">'
+        + '<div class="row  text-center " >'
+        + '<h4>Details About Dumping Yard ' + aDumpingYard + ' </h4>'
 
-            + ' </div>'
-            + '<div class="row justify-content-center">'
-            + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+        + ' </div>'
+        + '<div class="row justify-content-center">'
+        + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-            + '<label for="area' + aDumpingYard + '" class="form-label"> Arera of Dumping Yard</label>'
-            + '<div class="input-group mb-2">'
-            + '<input type="text" id="area' + aDumpingYard + '" name="area' + aDumpingYard + '" class="form-control" placeholder="Arera of Dumping Yard" aria-label="Arera of Dumping Yard" aria-describedby="basic-addon2">'
-            + ' <span class="input-group-text" id="basic-addon2">sq.km</span>'
-            + '</div>'
+        + '<label for="area' + aDumpingYard + '" class="form-label"> Area of Dumping Yard</label>'
+        + '<div class="input-group mb-2">'
+        + '<input type="text" id="area' + aDumpingYard + '" name="area' + aDumpingYard + '" class="form-control" placeholder="Area of Dumping Yard" aria-label="Arera of Dumping Yard" aria-describedby="basic-addon2">'
+        + ' <span class="input-group-text" id="basic-addon2">sq.km</span>'
+        + '</div>'
 
-            + '</div>'
-            + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+        + '</div>'
+        + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-            + '<label for="latitude' + aDumpingYard + '" class="form-label"> Latitude</label>'
-            + '<div class="input-group mb-2">'
-            + '<input type="text" id="latitude' + aDumpingYard + '" name="latitude' + aDumpingYard + '" class="form-control" placeholder="Latitude" aria-label="Residential" aria-describedby="basic-addon2">'
-            + '</div>'
+        + '<label for="latitude' + aDumpingYard + '" class="form-label"> Latitude</label>'
+        + '<div class="input-group mb-2">'
+        + '<input type="text" id="latitude' + aDumpingYard + '" name="latitude' + aDumpingYard + '" class="form-control" placeholder="Latitude" aria-label="Residential" aria-describedby="basic-addon2">'
+        + '</div>'
 
-            + '</div>'
-            + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+        + '</div>'
+        + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-            + '<label for="longitude' + aDumpingYard + '" class="form-label"> Longitude</label>'
-            + '<div class="input-group mb-2">'
-            + '<input type="text" id="longitude' + aDumpingYard + '" name="longitude' + aDumpingYard + '" class="form-control" placeholder="Longitude" aria-label="Longitude" aria-describedby="basic-addon2">'
-            + '</div>'
+        + '<label for="longitude' + aDumpingYard + '" class="form-label"> Longitude</label>'
+        + '<div class="input-group mb-2">'
+        + '<input type="text" id="longitude' + aDumpingYard + '" name="longitude' + aDumpingYard + '" class="form-control" placeholder="Longitude" aria-label="Longitude" aria-describedby="basic-addon2">'
+        + '</div>'
 
-            + '</div>'
-            + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+        + '</div>'
+        + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-            + '<label for="apxWaste' + aDumpingYard + '" class="form-label"> Approximate Waste</label>'
-            + '<div class="input-group mb-2">'
-            + '<input type="text" id="apxWaste' + aDumpingYard + '" name="apxWaste' + aDumpingYard + '" class="form-control" placeholder="Approximate Waste" aria-label="Approximate Waste" aria-describedby="basic-addon2">'
-            + ' <span class="input-group-text" id="basic-addon2">MTD</span>'
-            + '<div >'
-            + '<i class="bi bi-trash" style="font-size:24px;color:#FF0000"; onclick="removeYard(this, ' + aDumpingYard + ')"></i>'
-            + '</div>'
-            + '</div>'
+        + '<label for="apxWaste' + aDumpingYard + '" class="form-label"> Approximate Waste</label>'
+        + '<div class="input-group mb-2">'
+        + '<input type="text" id="apxWaste' + aDumpingYard + '" name="apxWaste' + aDumpingYard + '" class="form-control" placeholder="Approximate Waste" aria-label="Approximate Waste" aria-describedby="basic-addon2">'
+        + ' <span class="input-group-text" id="basic-addon2">MTD</span>'
+        + '<div >'
+        + '<i class="bi bi-trash" style="font-size:24px;color:#FF0000"; onclick="removeYard(this, ' + aDumpingYard + ')"></i>'
+        + '</div>'
+        + '</div>'
 
-            + '</div>'
-            +'</div>'
-            + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+        + '</div>'
+        + '</div>'
+        + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-            + '  </div>';
+        + '  </div>';
 
-            
+
 
     $("#adddDYard").append(html);
 
@@ -527,12 +527,12 @@ function addDumpingYard() {
 
 // delete Dumping yard 
 function removeYard(el, yard) {
-    
-     const index = yardList.indexOf(yard);
+
+    const index = yardList.indexOf(yard);
     if (index > -1) {
         yardList.splice(index, 1);
     }
-    
+
     $(el).closest('#inputFormRow').remove();
     aDumpingYard--;
 }
@@ -593,16 +593,16 @@ function showMSWData() {
 
         var yardDetails = {};
 
-            var area = document.getElementById("area" + i).value;
-            console.log(area);
-       
-            var longitude = document.getElementById("longitude" + i).value;
-     
-            var latitude = document.getElementById("latitude" + i).value;
-        
-            var apxWaste = document.getElementById("apxWaste" + i).value;
-        
-    
+        var area = document.getElementById("area" + i).value;
+        console.log(area);
+
+        var longitude = document.getElementById("longitude" + i).value;
+
+        var latitude = document.getElementById("latitude" + i).value;
+
+        var apxWaste = document.getElementById("apxWaste" + i).value;
+
+
         yardDetails["area"] = area;
         yardDetails["long"] = longitude;
         yardDetails["lat"] = latitude;
@@ -656,11 +656,20 @@ function showBMWData() {
 
     var treatedB = document.getElementById("treatedB").value;
 
-    //validation
+    // validation
     if (generatedB < collectedB || collectedB < treatedB) {
         alert("Genrated value is less than collected value.");
         flag++;
     }
+    // if (generatedB < collectedB) {
+    //     alert("Genrated value is less than collected value.");
+    //     flag++;
+    // }
+
+    // if (collectedB < treatedB) {
+    //     alert("Collected value is less than treated value.");
+    //     flag++;
+    // }
 
 
 

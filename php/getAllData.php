@@ -203,7 +203,7 @@ if ($type == "Electricity") {
             $cData['t_disp'] = $row['t_disp'];
             $cData['t_incin'] = $row['t_incin'];
             $cData['n_yard'] = $row['n_yard'];
-                $query2 = "SELECT * FROM yard WHERE b_id='" . $basicId . "'";
+                $query2 = "SELECT * FROM yard WHERE b_id='" . $basicId . "' ORDER by id" ;
                 $YardList=array();
                 $yard=[];
                 $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
@@ -289,7 +289,7 @@ if ($type == "Electricity") {
             // $cData['w_coll'] = $row['w_coll'];
             $cData['q_treat'] = $row['q_treat'];
             $cData['n_stp'] = $row['n_stp'];
-                $query3 = "SELECT * FROM stp WHERE b_id='" . $basicId . "'";
+                $query3 = "SELECT * FROM stp WHERE b_id='" . $basicId . "' ORDER by id";
                 $result = mysqli_query($conn, $query3)  or die(mysqli_error($conn));
                 $rowcount = mysqli_num_rows($result);
                 $stpData = [];
