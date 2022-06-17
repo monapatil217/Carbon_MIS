@@ -16,6 +16,7 @@ $last_id = 0;
 $carbonco2 = 0;
 $carbonch4 = 0;
 $carbonn2o = 0;
+
 $query2 = "SELECT * FROM basic_info WHERE id='" . $basicId . "'";
 $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
 $row  = mysqli_fetch_array($result);
@@ -41,6 +42,7 @@ if (is_array($row)){
           $addMethane += $typevalue;
      }
      $carbonch4 = ($addMethane / 1000000);
+      $carbonch4=round($carbonch4,2);
      $preYearpop = $population-((3.20/100)*$population);
 
      $nitrogen = 1;
@@ -52,6 +54,7 @@ if (is_array($row)){
      }
 
      $carbonn2o = (($population *  $nitrogen) / 1000000);
+     $carbonn2o =round($carbonn2o ,2);
      $totalemmition = ($carbonch4 + $carbonn2o) / 365;
 
 $query2 = "SELECT * FROM waste_data WHERE b_id='" . $basicId . "'";

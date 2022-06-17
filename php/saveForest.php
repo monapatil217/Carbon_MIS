@@ -20,6 +20,7 @@ $carbonco2=0;$carbonch4=0;$carbonn2o=0;
    $carbonco2 += $disturbance*130*1.28*0.47*0.3;
       //2022 emission
    $carbonco2 =  abs(($areaforest - $carbonco2)/1000000);
+   $carbonco2=round($carbonco2,2);
 //end calculation
 
         $query2 = "SELECT * FROM forest_data WHERE b_id='" . $basicId . "'";

@@ -49,6 +49,8 @@ require "php/session.php";
     <!-- ======= subHero Section ======= -->
     <section id="subHero" class="d-flex  justify-content-center " style="height: auto ; min-height: 100vh;">
         <div class="container position-relative " data-aos="fade-up" data-aos-delay="100">
+         <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden
+                disabled>
             <section class="section" id="about">
                 <div class="container " id="">
                     <div class="row">

@@ -93,7 +93,7 @@ function showWaterInput() {
                         $.each(stpdata, function (index, element2) {
                             aSTP++;
                             html += '<hr>'
-                                +'<div  id="inputFormRow">'
+                                + '<div  id="inputFormRow">'
                                 + '<div class="row  text-center ">'
                                 + '<h4>Details About STP ' + stpi + ' </h4>'
 
@@ -149,7 +149,7 @@ function showWaterInput() {
                                 + '<span class="input-group-text" id="basic-addon2">MLD</span>'
                                 + '<i class="bi bi-trash" style="font-size:24px;color:#FF0000"; onclick="removeSTP(this, ' + stpi + ')"></i>'
                                 + '</div>'
-                                
+
                                 + ' </div>'
                                 + '</div>'
                                 + '  </div>';
@@ -219,66 +219,66 @@ function addSTP() {
     // $("#adddstp").empty();
     // var noSTP = document.getElementById("noSTP").value;
     var html = '';
-        html += '<hr>'
-            +'<div  id="inputFormRow">'
-            + '<div class="row  text-center ">'
-            + '<h4>Details About STP ' + aSTP + ' </h4>'
+    html += '<hr>'
+        + '<div  id="inputFormRow">'
+        + '<div class="row  text-center ">'
+        + '<h4>Details About STP ' + aSTP + ' </h4>'
 
-            + ' </div>'
-            + '<div class="row justify-content-center">'
-            + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+        + ' </div>'
+        + '<div class="row justify-content-center">'
+        + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-            + '<label for="capacity" class="form-label"> Capacity</label>'
-            + '<div class="input-group mb-2">'
-            + '<input type="text" id="capacity' + aSTP + '" name="capacity" class="form-control" placeholder="Capacity" aria-label="Residential" aria-describedby="basic-addon2">'
-            + '<span class="input-group-text" id="basic-addon2">MLD</span>'
-            + '</div>'
+        + '<label for="capacity" class="form-label"> Capacity</label>'
+        + '<div class="input-group mb-2">'
+        + '<input type="text" id="capacity' + aSTP + '" name="capacity" class="form-control" placeholder="Capacity" aria-label="Residential" aria-describedby="basic-addon2">'
+        + '<span class="input-group-text" id="basic-addon2">MLD</span>'
+        + '</div>'
 
-            + '</div>'
-            + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+        + '</div>'
+        + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-            + '<label for="latitude" class="form-label"> Latitude</label>'
-            + '<div class="input-group mb-2">'
-            + '<input type="text" id="latitude' + aSTP + '" name="latitude" class="form-control" placeholder="Latitude" aria-label="Latitude" aria-describedby="basic-addon2">'
-            + '</div>'
+        + '<label for="latitude" class="form-label"> Latitude</label>'
+        + '<div class="input-group mb-2">'
+        + '<input type="text" id="latitude' + aSTP + '" name="latitude" class="form-control" placeholder="Latitude" aria-label="Latitude" aria-describedby="basic-addon2">'
+        + '</div>'
 
-            + '</div>'
-            + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+        + '</div>'
+        + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-            + '<label for="longitude" class="form-label"> Longitude</label>'
-            + '<div class="input-group mb-2">'
-            + '<input type="text" id="longitude' + aSTP + '" name="longitude" class="form-control" placeholder="Longitude" aria-label="Longitude" aria-describedby="basic-addon2">'
-            + '</div>'
+        + '<label for="longitude" class="form-label"> Longitude</label>'
+        + '<div class="input-group mb-2">'
+        + '<input type="text" id="longitude' + aSTP + '" name="longitude" class="form-control" placeholder="Longitude" aria-label="Longitude" aria-describedby="basic-addon2">'
+        + '</div>'
 
-            + '</div>'
-            + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+        + '</div>'
+        + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-            + '<label for="technology" class="form-label"> Technology</label>'
-            + '<div class="input-group mb-2">'
-            + '<input type="text" id="technology' + aSTP + '" name="technology" class="form-control" placeholder="Technology" aria-label="Technology" aria-describedby="basic-addon2">'
-            + '</div>'
+        + '<label for="technology" class="form-label"> Technology</label>'
+        + '<div class="input-group mb-2">'
+        + '<input type="text" id="technology' + aSTP + '" name="technology" class="form-control" placeholder="Technology" aria-label="Technology" aria-describedby="basic-addon2">'
+        + '</div>'
 
-            + '</div>'
-            + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+        + '</div>'
+        + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-            + '<label for="waterRecycle" class="form-label"> Qty of Recycled Water</label>'
-            + '<div class="input-group mb-2">'
-            + '<input type="text" id="waterRecycle' + aSTP + '" name="waterRecycle" class="form-control" placeholder="Recycled Water" aria-label="Recycled Water" aria-describedby="basic-addon2">'
-            + '<span class="input-group-text" id="basic-addon2">MLD</span>'
-            + '</div>'
+        + '<label for="waterRecycle" class="form-label"> Qty of Recycled Water</label>'
+        + '<div class="input-group mb-2">'
+        + '<input type="text" id="waterRecycle' + aSTP + '" name="waterRecycle" class="form-control" placeholder="Recycled Water" aria-label="Recycled Water" aria-describedby="basic-addon2">'
+        + '<span class="input-group-text" id="basic-addon2">MLD</span>'
+        + '</div>'
 
-            + '</div>'
-            + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+        + '</div>'
+        + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-            + '<label for="waterDisposal" class="form-label"> Qty of Water Disposal</label>'
-            + '<div class="input-group mb-2">'
-            + '<input type="text" id="waterDisposal' + aSTP + '" name="waterDisposal" class="form-control" placeholder="Disposal of Waste" aria-label="Residential" aria-describedby="basic-addon2">'
-            + '<span class="input-group-text" id="basic-addon2">MLD</span>'
-            + '<i class="bi bi-trash" style="font-size:24px;color:#FF0000"; onclick="removeSTP(this, ' + aSTP + ')"></i>'
-            + '</div>'
-            +'</div>'
-            + ' </div>'
-            + '  </div>';
+        + '<label for="waterDisposal" class="form-label"> Qty of Water Disposal</label>'
+        + '<div class="input-group mb-2">'
+        + '<input type="text" id="waterDisposal' + aSTP + '" name="waterDisposal" class="form-control" placeholder="Disposal of Waste" aria-label="Residential" aria-describedby="basic-addon2">'
+        + '<span class="input-group-text" id="basic-addon2">MLD</span>'
+        + '<i class="bi bi-trash" style="font-size:24px;color:#FF0000"; onclick="removeSTP(this, ' + aSTP + ')"></i>'
+        + '</div>'
+        + '</div>'
+        + ' </div>'
+        + '  </div>';
 
     $("#adddstp").append(html);
 
@@ -286,14 +286,14 @@ function addSTP() {
 
 // Delete STP 
 function removeSTP(el, stp) {
-    
+
     const index = stpList.indexOf(stp);
-   if (index > -1) {
-       stpList.splice(index, 1);
-   }
-   
-   $(el).closest('#inputFormRow').remove();
-   aSTP--;
+    if (index > -1) {
+        stpList.splice(index, 1);
+    }
+
+    $(el).closest('#inputFormRow').remove();
+    aSTP--;
 }
 
 function saveWaterData() {
@@ -312,8 +312,20 @@ function saveWaterData() {
 
     if (waterCon < waterGen || waterGen < waterTreat) {
         alert("filled Data not valide number");
-       flag++;
-      }
+        flag++;
+    }
+
+    // if (waterCon < waterGen) {
+    //     alert("Water Consumption value is less than water genrated value.");
+    //     flag++;
+    // }
+
+
+
+    // if (waterGen < waterTreat) {
+    //     alert(" water genrated value is less than water treated value.");
+    //     flag++;
+    // }
 
     var noSTP = aSTP;
 

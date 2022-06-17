@@ -34,8 +34,8 @@ while ($row = mysqli_fetch_array($result)) {
     $carbonn2o = ($totalfuel * $n2o * 310 * $ncv * 12)/1000000;
 }
 $carbonco2=round($carbonco2,2);
-$carbonch4=round($carbonch4,5);
-$carbonch4=round($carbonn2o,6);
+$carbonch4=round($carbonch4,2);
+$carbonn2o=round($carbonn2o,2);
 
 ///2022 before intervention
 $emi2022=$carbonco2+$carbonch4+$carbonch4;

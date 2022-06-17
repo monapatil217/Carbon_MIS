@@ -146,6 +146,10 @@ foreach ($dataArray as $row) {
     }
 }
         ////2022 final emission of tranport.
+        $carbonco2=round($carbonco2,2);
+        $carbonch4 =round($carbonch4 ,2);
+        $carbonn2o=round($carbonn2o,2);
+
         $finalemi2022=$carbonco2 + $carbonch4 + $carbonn2o;
         $finalemi2022=round($finalemi2022,2);
         // echo "2022final:", $finalemi2022;

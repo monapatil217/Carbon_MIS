@@ -34,7 +34,7 @@ $finalArrayCrop = array();
     }
     //2022 emission
    $carbonco2 =  abs(($peri-$hrsv)/1000000);
-   
+   $carbonco2=round($carbonco2,2);
 //end calculation
 
 

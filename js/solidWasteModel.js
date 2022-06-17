@@ -535,6 +535,7 @@ function removeYard(el, yard) {
 
     $(el).closest('#inputFormRow').remove();
     aDumpingYard--;
+
 }
 
 
@@ -594,6 +595,7 @@ function showMSWData() {
         var yardDetails = {};
 
         var area = document.getElementById("area" + i).value;
+
         console.log(area);
 
         var longitude = document.getElementById("longitude" + i).value;
@@ -609,6 +611,15 @@ function showMSWData() {
         yardDetails["app_waste"] = apxWaste;
 
         yardData.push(yardDetails);
+
+        // if (area = null) {
+        //     yardData.pop(yardDetails);
+        // }
+        // else {
+
+        //     yardData.push(yardDetails);
+        // }
+
     }
     mswData["basicId"] = basicId;
     mswData["msw_gen"] = generatedM;

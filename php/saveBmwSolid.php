@@ -17,6 +17,10 @@ $carbonco2 =(($bmw_treat/1000)*365)*0.24*44/12;
 $carbonch4 = ((($bmw_treat/1000)*365)*0.2)/1000000;
 $carbonn2o =((($bmw_treat/1000)*365)*57)/1000000;
 
+$carbonco2=round($carbonco2,2);
+$carbonch4 =round($carbonch4 ,2);
+$carbonn2o=round($carbonn2o,2);
+
 $query2 = "SELECT * FROM bmw_data WHERE b_id='" . $basicId . "'";
 $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));
 
