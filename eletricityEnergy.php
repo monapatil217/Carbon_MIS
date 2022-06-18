@@ -41,12 +41,7 @@ require "php/session.php";
         height: 350px; */
           width: 500px;
           height: 360px;
-    }
-
-    /* #chartdivsample {
-  width: 470px;
-  height: 350px;
-} */
+    }   
     </style>
 </head>
 
@@ -72,20 +67,53 @@ require "php/session.php";
                             <div id="eleInput"></div>
                             <div class="row ">
                                 <div class="col-md-12 mb-3 text-center">
-
                                     <button class="btn btn-primary " type="button"
                                         onclick="saveEleData();">SAVE</button>
                                 </div>
                             </div>
                         </form>
-                        <div class="row align-items-center justify-content-center" id="moreInfo">
-                            <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                             <!-- <div class="row align-items-center justify-content-center" >                          
+                             <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-3" id="moreInfo"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <div class="fade-to-img" onclick="showEleInfo();">
-                                    <img class="reggot" id="popup-btn" src="img/idea.png">
-                                </div>
+                                    <img class="reggot" id="popup-btn" src="img/idea.png">                                    
+                                </div>                                
+                            </div>                      
+                           
+                             <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-3 mt-5" id="mypop"
+                                data-scroll-reveal="enter right move 30px over 0.6s after 0.4s" >                                                         
+                                    <div style="text-align:center;" onclick="pop();">
+                                        <a href="#" id="popup-btn1"><u>Computations</u></a>                                      
+                                    </div>
                             </div>
-                        </div>
+
+                                 <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6" >                                                         
+                                   
+                                </div>
+
+
+                            </div>   
+                                                   -->
+
+                             <div class="row align-items-center justify-content-center" >                          
+                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" id="moreInfo"
+                                    data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                    <div class="fade-to-img" onclick="showEleInfo();">
+                                        <img class="reggot" id="popup-btn" src="img/idea.png"> 
+                                                                       
+                                    </div>                                
+                                </div>   
+                            </div>  
+
+                             <div class="row align-items-center justify-content-center" > 
+                                    <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-lg-5" id="mypop"
+                                        data-scroll-reveal="enter right move 30px over 0.6s after 0.4s" >                                                         
+                                            <div style="text-align:left;" onclick="pop();">
+                                                <a href="#" id="popup-btn1"><u>Computations</u></a>                                      
+                                            </div>
+                                    </div>
+                            </div>          
+                        <!-- ////// -->
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-7  mb-3" data-aos-delay="200">
@@ -156,9 +184,9 @@ require "php/session.php";
     <div id="popup-wrapper" class="popup-container">
         <div class="popup-content">
             <div class="row align-items-center justify-content-center">
-                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                </div>
-                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    </div>
+                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                     <div class="btn-container">
                         <a href="#" id="close" class="btn-gotit">Got It</a>
                     </div>
@@ -166,6 +194,22 @@ require "php/session.php";
             </div>
         </div>
     </div>
+
+    <!-- /// -->
+     <div id="popup-wrapper1" class="popup-container">
+        <div class="popup-content">
+            <div class="row align-items-center justify-content-center">
+                <div id="popUpData1" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                </div>                   
+                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="btn-container">
+                        <a href="#" id="close1" class="btn-gotit">Got It</a>
+                    </div>
+                </div>              
+            </div>          
+        </div>
+    </div>
+    <!-- //// -->
     <!-- ***** Footer Start ***** --> <?php
     include 'footer.php';
     ?>
