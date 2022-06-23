@@ -69,7 +69,8 @@ require "php/session.php";
                  <input type="text" id="cityName" class="form-control" value="<?php echo $_SESSION["cityName"]; ?>" hidden
                 disabled>
             <div class="row">
-                <div class="col-md-12 col-lg-5  mb-3" data-aos-delay="200">
+                <!-- <div class="col-md-12 col-lg-5  mb-3" data-aos-delay="200"> -->
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5  mb-3" data-aos-delay="200">
                     <div class="in-sec">
                         <!-- <h4 class="text-center mb-2">Land Use</h4> -->
                         <marquee width="100%" direction="left" height="30px" scrollamount="2"> sq.km - Square Kilometre.
@@ -99,7 +100,7 @@ require "php/session.php";
                         </div>
 
                         <div class="row align-items-center justify-content-center" >                          
-                               <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" id="mypop"
+                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="mypop"
                                         data-scroll-reveal="enter right move 30px over 0.6s after 0.4s" >                                                         
                                             <div style="text-align:left;" onclick="pop();">
                                                 <a href="#" id="popup-btn1"><u>Computations</u></a>                                      
@@ -109,7 +110,8 @@ require "php/session.php";
                         <!-- End PopUp div -->
                     <!-- </div> -->
                 </div>
-                <div class="col-md-12 col-lg-7  mb-3" data-aos-delay="200">
+                <!-- <div class="col-md-12 col-lg-7  mb-3" data-aos-delay="200"> -->
+                <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">
                         <h3 class="text-center">Carbon Emissions From Land Use Sector </h3>
                         <ul style="margin-left: 10px;">
