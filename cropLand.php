@@ -40,6 +40,7 @@ require "php/session.php";
         width:500px;
         height:360px;
     }
+  
     </style>
 </head>
 
@@ -67,17 +68,33 @@ require "php/session.php";
                                 </div>
                             </div>
                         </form>
+                        </div>
                         <!-- Start PopUp div -->
                         <div class="row align-items-center justify-content-center" id="moreInfo">
-                            <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                            <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 containern"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <div class="fade-to-img" onclick="showCropLInfo();">
-                                    <img class="reggot" id="popup-btn" src="img/field.png" width="80" height="80">
+                                    <!-- <img class="reggot" id="popup-btn" src="img/field.png" width="80" height="80"><br><br> -->
+                                     <img id="popup-btn"  src="img/crop1.gif" style="width:50px;height:50px;"><br><br>
+                                     <!-- <img id="popup-btn" src="img/gifcrop.gif" style="width:50px;height:50px;"><br><br> -->
+                                     <div class="overlay">
+                                           <div class="text">Click Here!</div>      
+                                         </div>
                                 </div>
                             </div>
                         </div>
+
+                         <div class="row align-items-center justify-content-center" >                          
+                               <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" id="mypop"
+                                        data-scroll-reveal="enter right move 30px over 0.6s after 0.4s" >                                                         
+                                            <div style="text-align:left;" onclick="pop();">
+                                                <a href="#" id="popup-btn1"><u>Computations</u></a>                                      
+                                            </div>
+                                    </div>
+                            </div>  
+                                         
                         <!-- End PopUp div -->
-                    </div>
+                    <!-- </div> -->
                 </div>
                 <div class="col-md-12 col-lg-8  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">
@@ -131,6 +148,22 @@ require "php/session.php";
             </div>
         </div>
     </div>
+
+     <!-- /// -->
+     <div id="popup-wrapper1" class="popup-container">
+        <div class="popup-content">
+            <div class="row align-items-center justify-content-center">
+                <div id="popUpData1" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                </div>                   
+                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="btn-container">
+                        <a href="#" id="close1" class="btn-gotit">Got It</a>
+                    </div>
+                </div>              
+            </div>          
+        </div>
+    </div>
+    <!-- //// -->
     <script>
     // Example starter JavaScript for disabling form submissions if there are invalid fields
     (function() {

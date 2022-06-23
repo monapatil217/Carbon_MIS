@@ -14,10 +14,10 @@ function addDesign() {
     // \\\\\\\\
 
     var basicId = document.getElementById("basicId").value;
-    $("#cropInput").empty();
+    $("#addDesign").empty();
 
     var myobj = {};
-    myobj["type"] = "CropLand";
+    // myobj["type"] = "CropLand";
     myobj["basicId"] = basicId;
 
     $.ajax({

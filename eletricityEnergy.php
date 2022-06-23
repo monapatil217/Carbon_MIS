@@ -41,7 +41,48 @@ require "php/session.php";
         height: 350px; */
           width: 500px;
           height: 360px;
-    }   
+    } 
+  .blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+/* .tn:hover {  
+    transform: translateY(-10px);
+  } */
+
+  /* ///hover purpose */
+  /* .containern {
+  position: relative;
+  }
+  .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; 
+  opacity: 0;
+  transition: .5s ease;
+ 
+}
+
+  .containern:hover .overlay {
+  opacity: 1;
+}
+.text {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /* text-align: center; */
+} */
+ 
     </style>
 </head>
 
@@ -70,51 +111,65 @@ require "php/session.php";
                                     <button class="btn btn-primary " type="button"
                                         onclick="saveEleData();">SAVE</button>
                                 </div>
-                            </div>
-                        </form>
-                             <!-- <div class="row align-items-center justify-content-center" >                          
-                             <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-3" id="moreInfo"
-                                data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                                <div class="fade-to-img" onclick="showEleInfo();">
-                                    <img class="reggot" id="popup-btn" src="img/idea.png">                                    
-                                </div>                                
                             </div>                      
-                           
-                             <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-3 mt-5" id="mypop"
-                                data-scroll-reveal="enter right move 30px over 0.6s after 0.4s" >                                                         
-                                    <div style="text-align:center;" onclick="pop();">
-                                        <a href="#" id="popup-btn1"><u>Computations</u></a>                                      
-                                    </div>
-                            </div>
-
-                                 <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6" >                                                         
-                                   
-                                </div>
-
-
-                            </div>   
-                                                   -->
-
-                             <div class="row align-items-center justify-content-center" >                          
-                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" id="moreInfo"
+                        </form>
+                    </div>
+                               
+                         <div class="row align-items-center justify-content-center" >
+                               <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 containern" id="moreInfo"
                                     data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                     <div class="fade-to-img" onclick="showEleInfo();">
-                                        <img class="reggot" id="popup-btn" src="img/idea.png"> 
-                                                                       
-                                    </div>                                
-                                </div>   
-                            </div>  
-
-                             <div class="row align-items-center justify-content-center" > 
-                                    <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-lg-5" id="mypop"
+                                        <!-- <img class="reggot" id="popup-btn" src="img/idea.png"><br><br> -->
+                                        <img class="blink_me" id="popup-btn" src="img/idea.png"><br><br>
+                                        <!-- <div class="hide">Click Here.</div>  -->    
+                                         <div class="overlay">
+                                           <div class="text">Click Here!</div>      
+                                         </div>
+                                    </div> 
+                                   
+                                                           
+                                </div>                             
+                                    <!-- <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" id="mypop"
+                                        data-scroll-reveal="enter right move 30px over 0.6s after 0.4s" >                                                         
+                                            <div style="text-align:left;" onclick="pop();">
+                                                <a href="#" id="popup-btn1"><u>Computations</u></a>                                      
+                                            </div>
+                                    </div> -->
+                            </div>       
+                                       
+                             <div class="row align-items-center justify-content-center" >                          
+                               <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" id="mypop"
                                         data-scroll-reveal="enter right move 30px over 0.6s after 0.4s" >                                                         
                                             <div style="text-align:left;" onclick="pop();">
                                                 <a href="#" id="popup-btn1"><u>Computations</u></a>                                      
                                             </div>
                                     </div>
-                            </div>          
+                            </div>  
+                                                    
+
+
+                            <!-- //////m -->
+                             <!-- <div class="row align-items-center justify-content-center" >                             
+                                    <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 " id="mypop"
+                                        data-scroll-reveal="enter right move 30px over 0.6s after 0.4s" >                                                         
+                                            <div style="text-align:left;" onclick="pop();">
+                                                <a href="#" id="popup-btn1"><u>Computations</u></a>                                      
+                                            </div>
+                                    </div>
+                            </div>       
+                                       
+                             <div class="row align-items-center justify-content-center" >                          
+                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" id="moreInfo"
+                                    data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                    <div class="fade-to-img" onclick="showEleInfo();">
+                                        <img class="reggot" id="popup-btn" src="img/idea.png">                                                                       
+                                    </div>                                                              
+                                </div>   
+                            </div>  
+                                                     -->
+                             
                         <!-- ////// -->
-                    </div>
+                    <!-- </div> -->
                 </div>
                 <div class="col-md-12 col-lg-7  mb-3" data-aos-delay="200">
                     <div class="in-sec infoFont">

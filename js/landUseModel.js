@@ -13,6 +13,24 @@ window.onclick = function (event) {
         popup.classList.remove('show');
     }
 }
+
+/////
+var popup1 = document.getElementById('popup-wrapper1');
+var btn1 = document.getElementById("popup-btn1");
+var span1 = document.getElementById("close1");
+btn1.onclick = function () {
+    popup1.classList.add('show');
+}
+span1.onclick = function () {
+    popup1.classList.remove('show');
+}
+
+window.onclick = function (event) {
+    if (event.target == popup1) {
+        popup1.classList.remove('show');
+    }
+}
+////
 $(document).ready(function () {
     showlandUse();
 })
@@ -478,3 +496,30 @@ function showLandUInfo() {
         + '</div></div>';
     $("#popUpData").append(html1);
 }
+
+///calculation steps
+function pop() {
+    var div = document.getElementById("mypop");
+    div.style.display = "block";
+
+
+    $("#popUpData1").empty();
+    var html1 = '<div class="row" >'
+
+        + '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto "><center><h5 class="mt-4">calculations </h5></center>'
+
+        + '<div class="row mt-2 mb-3">'
+        + '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 infoFont">'
+        + '<ul style="margin-left: 10px;">'
+        + '<li class="popupli"> India is the third largest producer of electricity in the world .</li>'
+        + '<li class="popupli"> The national electric grid in India has an installed capacity of 388.134 GW as of 31 August 2021.</li>'
+        + '<li class="popupli"> Renewable power plants, which also include large hydroelectric plants, constitute 37% of India' + "'" + 's total installed capacity. </li>'
+        + '</ul>'
+        // + '<center> <a class="my-3" href="http://www.ghgplatform-india.org/emissionestimates-phase2" target="_blank" rel="noopener noreferrer">Reference</a></center>'
+        // + '<center><a class="my-3" href="http://www.technogreen.co.in/Survey/files/Estimates-Energy-National.xlsx" target="_blank" rel="noopener noreferrer">Reference</a></center>'
+        + '</div> '
+        + '</div>'
+        + '</div></div>';
+    $("#popUpData1").append(html1);
+}
+/////
