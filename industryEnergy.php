@@ -41,21 +41,6 @@ require "php/session.php";
         height: 360px;
     }
 
-/*     
-    .blink {
-  animation: blink 3s infinite;
-    }
-
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    color: blue;
-  }
-} */
-
     </style>
 </head>
 
@@ -117,10 +102,11 @@ require "php/session.php";
                         <div class="row justify-content-center">
                             <div class=" col-lg-8 col-md-8 col-sm-8 col-xs-8"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                                <div id="chartName">
-                                    <!-- <h3>Carbon emission of Electricity</h3> -->
-                                </div>
+                                <div class="row justify-content-center"> 
+                                <div id="chartName"></div>
+                                    <!-- <h3>Carbon emission of Electricity</h3> -->                              
                                 <div id="energy"></div>
+                                </div>
                             </div>
                             <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">

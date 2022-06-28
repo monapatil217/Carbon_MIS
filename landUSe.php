@@ -29,6 +29,9 @@ require "php/session.php";
     <link href="assets/vendor/jbox/jBox.all.min.css" rel="stylesheet">
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" media="screen and (max-width: 1400px)" href="smallscreen.css"> -->
+
+   
     <!-- =======================================================
   * Template Name: OnePage - v4.7.0
   * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
@@ -40,19 +43,6 @@ require "php/session.php";
         width: 500px;
         height:360px;
     }
-     /* .blink {
-  animation: blink 3s infinite;
-    }
-
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    color: blue;
-  }
-} */
 
     </style>
 </head>
@@ -62,7 +52,7 @@ require "php/session.php";
         ?>
     <!-- ======= Hero Section ======= -->
     <section id="subHero" class="d-flex  justify-content-center textc" style="height: auto ; min-height: 100vh;">
-        <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+        <div class="container position-relative" data-aos="fade-up" data-aos-delay="100" >
             <input type="text" class="form-control" id="sectionType" value="landUse" hidden>
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden
                 disabled>
@@ -70,7 +60,9 @@ require "php/session.php";
                 disabled>
             <div class="row">
                 <!-- <div class="col-md-12 col-lg-5  mb-3" data-aos-delay="200"> -->
-                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5  mb-3" data-aos-delay="200">
+                <div class="col-sm-5 col-xs-5 col-md-5 col-lg-6 mb-3" data-aos-delay="200">
+                 <!-- @include media-breakpoint-between(md, xl) { ... } -->
+                <!-- @include media-breakpoint-only(lg) {<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5 col-xl-5 mb-3" data-aos-delay="200">} -->
                     <div class="in-sec">
                         <!-- <h4 class="text-center mb-2">Land Use</h4> -->
                         <marquee width="100%" direction="left" height="30px" scrollamount="2"> sq.km - Square Kilometre.
@@ -87,7 +79,7 @@ require "php/session.php";
                         </div>
                         <!-- Start PopUp div -->
                         <div class="row align-items-center justify-content-center" id="moreInfo">
-                            <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 containern"
+                            <div class=" col-sm-12  col-xs-12 col-md-12 col-lg-12 col-xl-12 containern"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <div class="fade-to-img" onclick="showLandUInfo();">
                                     <img class="blink" id="popup-btn" src="img/architect.png" width="80" height="80"><br><br>
@@ -100,7 +92,7 @@ require "php/session.php";
                         </div>
 
                         <div class="row align-items-center justify-content-center" >                          
-                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="mypop"
+                               <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 col-xl-12" id="mypop"
                                         data-scroll-reveal="enter right move 30px over 0.6s after 0.4s" >                                                         
                                             <div style="text-align:left;" onclick="pop();">
                                                 <a href="#" id="popup-btn1"><u>Computations</u></a>                                      
@@ -111,7 +103,8 @@ require "php/session.php";
                     <!-- </div> -->
                 </div>
                 <!-- <div class="col-md-12 col-lg-7  mb-3" data-aos-delay="200"> -->
-                <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7  mb-3" data-aos-delay="200">
+                <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6  mb-3 ssr" data-aos-delay="200">
+                 <!-- @include media-breakpoint-only(lg) {<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7 col-xl-7 mb-3" data-aos-delay="200">} -->
                     <div class="in-sec infoFont">
                         <h3 class="text-center">Carbon Emissions From Land Use Sector </h3>
                         <ul style="margin-left: 10px;">
@@ -121,14 +114,14 @@ require "php/session.php";
                                 or removal of greenhouse gases from the atmosphere.</li>
                         </ul>
                         <div class="row justify-content-center">
-                            <div class=" col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                            <div class="col-sm-10 col-xs-10 col-md-10 col-lg-10 col-xl-10"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                                <div class="row justify-content-center">
-                                    <div id="chartName"></div>
-                                    <div id="landUse"></div>
-                                </div>
+                                    <div class="row justify-content-center">
+                                        <div id="chartName"></div>
+                                        <div id="landUse"></div>
+                                    </div>
                             </div>
-                            <div class=" col-lg-1 col-md-1 col-sm-1 col-xs-1"
+                            <div class="col-sm-1 col-xs-1 col-md-1 col-lg-1 col-xl-1"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <!-- <button id="cmd" class="btn btn-primary "
                                     onclick="CreatePDFfromHTML('landUse')">Print</button> -->
@@ -137,13 +130,13 @@ require "php/session.php";
                                     onclick="CreatePDFfromHTML('landUse')"></i>
                             </div>
                         </div>
-                        <div class="row align-items-center justify-content-center">
-                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2"
-                                data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                                <button type="button" class="btn btn-primary" onclick="redirect();">NEXT <i
-                                        class="fa fa-angle-double-right" style='font-size:18px;color:gray'></i></button>
-                            </div>
-                        </div>
+                                <div class="row align-items-center justify-content-center">
+                                    <div class="col-sm-2 col-md-2 col-lg-2 col-xs-2"
+                                        data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                        <button type="button" class="btn btn-primary" onclick="redirect();">NEXT <i
+                                                class="fa fa-angle-double-right" style='font-size:18px;color:gray'></i></button>
+                                    </div>
+                                </div>
                     </div>
                 </div>
             </div>
@@ -152,9 +145,9 @@ require "php/session.php";
     <div id="popup-wrapper" class="popup-container">
         <div class="popup-content">
             <div class="row align-items-center justify-content-center">
-                <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div id="popUpData" class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
                 </div>
-                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
                     <div class="btn-container">
                         <a href="#" id="close" class="btn-gotit">Got It</a>
                     </div>
@@ -166,9 +159,9 @@ require "php/session.php";
      <div id="popup-wrapper1" class="popup-container">
         <div class="popup-content">
             <div class="row align-items-center justify-content-center">
-                <div id="popUpData1" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div id="popUpData1" class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
                 </div>                   
-                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
                     <div class="btn-container">
                         <a href="#" id="close1" class="btn-gotit">Got It</a>
                     </div>

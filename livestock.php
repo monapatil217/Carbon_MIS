@@ -98,13 +98,15 @@ require "php/session.php";
                                 are released by Indian livestock each year. </li>
                         </ul>
                         <div class="row justify-content-center">
-                            <div class=" col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                            <div class=" col-lg-10 col-md-10 col-sm-10 col-xs-10"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <div class="row justify-content-center">
                                     <div id="chartName"></div>
                                     <div id="liveStock"></div>
                                 </div>
                             </div>
+                              <div  class=" col-lg-1 col-md-1 col-sm-1 col-xs-1"                             
+                                data-scroll-reveal="enter right move 60px over 0.6s after 0.4s"></div>
                             <div class=" col-lg-1 col-md-1 col-sm-1 col-xs-1"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <i class="bi bi-download" style="font-size:24px;color:#FFFFFF"

@@ -226,8 +226,10 @@ require "php/session.php";
                             <div class="row mt-3 justify-content-center">
                                 <h3 style="color:white;">Amrut City all Sectors Graph</h3>
                             </div>
-                            <div id="chartDiv">
+                              <div class="row justify-content-center">
+                                <div id="chartDiv">
                                 <div id="secChart"></div>
+                            </div>
                             </div>
                         </div>
                         <!-- <div id="sectorInfo"> </div> -->

@@ -118,13 +118,15 @@ require "php/session.php";
                                 biomass and soil, and to a lesser extent also in dead wood and litter. </li>
                         </ul>
                         <div class="row justify-content-center">
-                            <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-7"
+                            <div class=" col-lg-10 col-md-10 col-sm-10 col-xs-10"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <div class="row justify-content-center">
                                     <div id="chartName"></div>
                                     <div id="forest"></div>
                                 </div>
                             </div>
+                            <div  class=" col-lg-1 col-md-1 col-sm-1 col-xs-1"                             
+                                data-scroll-reveal="enter right move 60px over 0.6s after 0.4s"></div>
                             <div class=" col-lg-1 col-md-1 col-sm-1 col-xs-1"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <i class="bi bi-download" style="font-size:24px;color:#FFFFFF"

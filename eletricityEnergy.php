@@ -37,10 +37,10 @@ require "php/session.php";
   ======================================================== -->
     <style>
     #electricity {
-        /* width: 470px;
-        height: 350px; */
-          width: 500px;
-          height: 360px;
+        width: 500px;
+        height: 360px;
+          /* width: 500px;
+          height: 360px; */
     } 
   .blink_me {
   animation: blinker 1s linear infinite;
@@ -81,7 +81,7 @@ require "php/session.php";
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   /* text-align: center; */
-} */
+/* } */
  
     </style>
 </head>
@@ -99,7 +99,8 @@ require "php/session.php";
             <input type="text" id="cityName" class="form-control" value="<?php echo $_SESSION["cityName"]; ?>" hidden
                 disabled>
             <div class="row justify-content-center">
-                <div class="col-md-12 col-lg-5 mb-3" data-aos-delay="200">
+                <!-- <div class="col-md-12 col-lg-5 mb-3" data-aos-delay="200"> -->
+                  <div class="col-12 col-lg-5 col-md-5 col-sm-5 col-xs-5  mb-3" data-aos-delay="200">                  
                     <div class="in-sec">
                         <h6 class="text-center mb-1 ">Amount of Electricity Used by Different Sectors</h6>
                         <marquee width="100%" direction="left" height="30px" scrollamount="2"> MW - megawatt / m - month
@@ -107,7 +108,8 @@ require "php/session.php";
                         <form class="needs-validation" novalidate>
                             <div id="eleInput"></div>
                             <div class="row ">
-                                <div class="col-md-12 mb-3 text-center">
+                                <!-- <div class="col-md-12 mb-3 text-center"> -->
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  mb-3 text-center">
                                     <button class="btn btn-primary " type="button"
                                         onclick="saveEleData();">SAVE</button>
                                 </div>
@@ -125,53 +127,21 @@ require "php/session.php";
                                          <div class="overlay">
                                            <div class="text">Click Here!</div>      
                                          </div>
-                                    </div> 
-                                   
-                                                           
-                                </div>                             
-                                    <!-- <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" id="mypop"
-                                        data-scroll-reveal="enter right move 30px over 0.6s after 0.4s" >                                                         
-                                            <div style="text-align:left;" onclick="pop();">
-                                                <a href="#" id="popup-btn1"><u>Computations</u></a>                                      
-                                            </div>
-                                    </div> -->
-                            </div>       
-                                       
+                                    </div>                                                         
+                                </div>                                                                
+                            </div>                                              
                              <div class="row align-items-center justify-content-center" >                          
-                               <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" id="mypop"
+                               <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xl-12" id="mypop"
                                         data-scroll-reveal="enter right move 30px over 0.6s after 0.4s" >                                                         
                                             <div style="text-align:left;" onclick="pop();">
                                                 <a href="#" id="popup-btn1"><u>Computations</u></a>                                      
                                             </div>
                                     </div>
                             </div>  
-                                                    
-
-
-                            <!-- //////m -->
-                             <!-- <div class="row align-items-center justify-content-center" >                             
-                                    <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 " id="mypop"
-                                        data-scroll-reveal="enter right move 30px over 0.6s after 0.4s" >                                                         
-                                            <div style="text-align:left;" onclick="pop();">
-                                                <a href="#" id="popup-btn1"><u>Computations</u></a>                                      
-                                            </div>
-                                    </div>
-                            </div>       
-                                       
-                             <div class="row align-items-center justify-content-center" >                          
-                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" id="moreInfo"
-                                    data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                                    <div class="fade-to-img" onclick="showEleInfo();">
-                                        <img class="reggot" id="popup-btn" src="img/idea.png">                                                                       
-                                    </div>                                                              
-                                </div>   
-                            </div>  
-                                                     -->
-                             
-                        <!-- ////// -->
-                    <!-- </div> -->
+                           
                 </div>
-                <div class="col-md-12 col-lg-7  mb-3" data-aos-delay="200">
+                <!-- <div class="col-md-12 col-lg-7  mb-3" data-aos-delay="200"> -->               
+                <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 col-xl-7 mb-3" data-aos-delay="200">               
                     <div class="in-sec infoFont">
                         <!-- <h3>Electricity</h3> -->
                         <h3 class="text-center mb-2">Carbon Emission from Electricity Sector</h3>
@@ -185,22 +155,51 @@ require "php/session.php";
                                 of 0.91 to 0.95 kg/kWh for CO2. </li>
                         </ul>
                         
-                        <div class="row justify-content-center">
-                        
-                            <div class=" col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                        <!-- <div class="row justify-content-center">
+                         -->
+                            <!-- <div class=" col-lg-8 col-md-8 col-sm-8 col-xs-8 col-xl-8" -->
+                            <!-- <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-7 col-xl-7"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 
                                 <div id="chartName">
-                                    <!-- <h3>Carbon emission of Electricity</h3> -->
+                                   
                                 </div>
                                 
                                 <div id="electricity"></div>
                                 
                             </div>
-                             <div  class=" col-lg-1 col-md-1 col-sm-1 col-xs-1 "
-                                data-scroll-reveal="enter right move 60px over 0.6s after 0.4s"></div>
+                         
+                           <div  class=" col-lg-1 col-md-1 col-sm-1 col-xs-1"                             
+                                data-scroll-reveal="enter right move 60px over 0.6s after 0.4s"></div> -->
                             <!-- for print btn symbol -->
-                            <div  class=" col-lg-1 col-md-1 col-sm-1 col-xs-1 "
+                            <!-- <div  class=" col-lg-1 col-md-1 col-sm-1 col-xs-1 "
+                                data-scroll-reveal="enter right move 60px over 0.6s after 0.4s"> -->
+                                <!--bi bi-box-arrow-in-down <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button> -->
+                                <!-- <i class="bi bi-download" style="font-size:24px;color:#FFFFFF"
+                                  class="btn btn-primary " value="download"
+                                    onclick="CreatePDFfromHTML('electricity')"></i>
+                           
+                            </div>
+                           
+                        </div> -->
+
+                        <!-- /////m -->
+                          <div class="row">
+                          
+                            <!-- <div class=" col-lg-8 col-md-8 col-sm-8 col-xs-8 col-xl-8" -->
+                             <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10"                          
+                                data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                                  <div class="row justify-content-center  container-fluid">                                  
+                                            <div id="chartName"></div>                                                               
+                                            <div id="electricity"></div>
+                                  </div>
+                               
+                            </div>
+                       
+                           <div  class=" col-lg-1 col-md-1 col-sm-1 col-xs-1"                                   
+                                data-scroll-reveal="enter right move 60px over 0.6s after 0.4s"></div>
+                            <!-- for print btn symbol --> 
+                            <div  class="col-lg-1 col-md-1 col-sm-1 col-xs-1"                          
                                 data-scroll-reveal="enter right move 60px over 0.6s after 0.4s">
                                 <!--bi bi-box-arrow-in-down <button id="cmd" class="btn btn-primary " onclick="CreatePDFfromHTML('electricity')">Print</button> -->
                                 <i class="bi bi-download" style="font-size:24px;color:#FFFFFF"
@@ -208,7 +207,9 @@ require "php/session.php";
                                     onclick="CreatePDFfromHTML('electricity')"></i>
                            
                             </div>
+                          
                         </div>
+                        <!-- //////m -->
                             <!-- sample graph -->
                          <!-- <div class="row justify-content-center">
                              
@@ -224,7 +225,7 @@ require "php/session.php";
                         <div></div>
                         <!-- Next btn symbol -->
                         <div class="row align-items-center justify-content-center">
-                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2"
+                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2 col-xl-2"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <!-- <button type="button" class="btn btn-primary" onclick="redirect();">NEXT ➡</button> -->
                                 <button type="button" class="btn btn-primary" onclick="redirect();">NEXT <i class=""
@@ -239,7 +240,7 @@ require "php/session.php";
     <div id="popup-wrapper" class="popup-container">
         <div class="popup-content">
             <div class="row align-items-center justify-content-center">
-                    <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div id="popUpData" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                     </div>
                 <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                     <div class="btn-container">
@@ -254,9 +255,9 @@ require "php/session.php";
      <div id="popup-wrapper1" class="popup-container">
         <div class="popup-content">
             <div class="row align-items-center justify-content-center">
-                <div id="popUpData1" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div id="popUpData1" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                 </div>                   
-                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                     <div class="btn-container">
                         <a href="#" id="close1" class="btn-gotit">Got It</a>
                     </div>

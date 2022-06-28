@@ -360,7 +360,6 @@ function showlandUse() {
                         + '</div>'
 
                         + '<div class="row justify-content-center">'
-
                         + '    <div class="col-md-4 col-lg-10 col-xl-4 col-10">'
                         + '        <label for="other" class="form-label"> Other</label>'
                         + '            <div class="input-group mb-2">'
