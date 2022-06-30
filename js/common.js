@@ -1,11 +1,21 @@
-window.onload = function () {
+window.onload = function() {
     // getPercentage();
     abc(); //Make sure the function fires as soon as the page is loaded
     // setTimeout(abc, 6000); //Then set it to run again after ten minutes
 }
+
+function validateNumber(e) {
+    const pattern = /^[0-9]$/;
+
+    return pattern.test(e.key)
+}
+
+
+
+
 function customInputValidator(eleValue, eleName) {
     var flag = 0;
-    if (eleValue == "") {
+    if (eleValue == "" || eleValue < 0) {
         if (eleName[0] == '#') {
             $(eleName).addClass("is-invalid");
 
@@ -36,9 +46,9 @@ function getPercentage() {
         url: "php/getDataPercentage.php",
         contentType: "application/json",
         data: JSON.stringify(myobj),
-        success: function (data) {
+        success: function(data) {
             var divList = JSON.parse(data);
-            $.each(divList, function (index, element) {
+            $.each(divList, function(index, element) {
                 percent = element.value;
             });
         }
@@ -50,9 +60,9 @@ function getPercentage() {
 function abc() {
 
     var percentFinal = getPercentage();
-    var msg = "<div class='progress'>"
-        + "<div class='progress-bar' role='progressbar' style='width:" + percentFinal + "% ;' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'>" + percentFinal + " % </div>"
-        + "</div>"
+    var msg = "<div class='progress'>" +
+        "<div class='progress-bar' role='progressbar' style='width:" + percentFinal + "% ;' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'>" + percentFinal + " % </div>" +
+        "</div>"
     if (percentFinal != 100) {
         jBoxBottomRightBigNotice("Warning <br> Please Fill the Remaining Data ", msg, "yellow", "600000000");
     } else {
@@ -96,7 +106,7 @@ function jBoxBottomRightBigNotice(title, msg, color, time) {
 */
 var doc = new jsPDF();
 var specialElementHandlers = {
-    '#editor': function (element, renderer) {
+    '#editor': function(element, renderer) {
         return true;
     }
 };
@@ -112,7 +122,7 @@ function CreatePDFfromHTML(id) {
 
     var totalPDFPages = Math.ceil(HTML_Height / PDF_Height) - 1;
 
-    html2canvas($("#" + id)[0]).then(function (canvas) {
+    html2canvas($("#" + id)[0]).then(function(canvas) {
         var imgData = canvas.toDataURL("image/jpeg", 1.0);
         var pdf = new jsPDF('p', 'pt', [PDF_Width, PDF_Height]);
         pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin, canvas_image_width, canvas_image_height);
@@ -137,7 +147,7 @@ function aflouData() {
         url: "php/getAfolu.php",
         contentType: "application/json",
         data: JSON.stringify(myobj),
-        success: function (data) {
+        success: function(data) {
             // alert("OK");
 
 
@@ -145,5 +155,3 @@ function aflouData() {
 
     });
 }
-
-

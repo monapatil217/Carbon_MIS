@@ -63,9 +63,9 @@ require "php/session.php";
                                         <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                             <label for="hospital" class="form-label">No. of Hospitals</label>
                                             <div class="input-group mb-3">
-                                                <input type="text" id="hospital" class="form-control"
+                                                <input type="number" id="hospital" class="form-control"
                                                     placeholder="Hospital" aria-label="Hospital"
-                                                    aria-describedby="basic-addon2">
+                                                    aria-describedby="basic-addon2" onkeypress="return validateNumber(event)">
                                             </div>
                                         </div>
                                     </div>
@@ -73,16 +73,16 @@ require "php/session.php";
                                         <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                             <label for="popu" class="form-label"> Population</label>
                                             <div class="input-group mb-3">
-                                                <input type="text" id="popu" class="form-control"
+                                                <input type="number" id="popu" class="form-control"
                                                     placeholder="Population" aria-label="Population"
-                                                    aria-describedby="basic-addon2">
+                                                    aria-describedby="basic-addon2" onkeypress="return validateNumber(event)">
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                             <label for="gdp" class="form-label">GDP</label>
                                             <div class="input-group mb-3">
                                                 <input type="text" id="gdp" class="form-control" placeholder="GDP"
-                                                    aria-label="GDP" aria-describedby="basic-addon2">
+                                                    aria-label="GDP" aria-describedby="basic-addon2" >
                                             </div>
                                         </div>
                                     </div>
@@ -90,8 +90,8 @@ require "php/session.php";
                                         <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                             <label for="male" class="form-label"> Male</label>
                                             <div class="input-group mb-3">
-                                                <input type="text" id="male" class="form-control" placeholder="Male"
-                                                    aria-label="Male" aria-describedby="basic-addon2">
+                                                <input type="number" id="male" class="form-control" placeholder="Male"
+                                                    aria-label="Male" aria-describedby="basic-addon2" onkeypress="return validateNumber(event)">
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-lg-10 col-xl-6 col-10">
@@ -108,8 +108,8 @@ require "php/session.php";
                                         <div class="col-md-6 col-lg-10 col-xl-6 col-10">
                                             <label for="female" class="form-label">Female</label>
                                             <div class="input-group mb-3">
-                                                <input type="text" id="female" class="form-control" placeholder="Female"
-                                                    aria-label="Female" aria-describedby="basic-addon2">
+                                                <input type="number" id="female" class="form-control" placeholder="Female"
+                                                    aria-label="Female" aria-describedby="basic-addon2" onkeypress="return validateNumber(event)">
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-lg-10 col-xl-6 col-10">
@@ -169,7 +169,7 @@ require "php/session.php";
     <script src="assets/vendor/jbox/jBox.all.min.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-    <!-- <script src="js/common.js"></script> -->
+    <script src="js/common.js"></script>
     <script src="js/basicInfoJs.js"></script>
 </body>
 
