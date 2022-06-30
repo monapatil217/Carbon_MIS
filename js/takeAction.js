@@ -328,7 +328,7 @@ function intactionchart() {
                     makeSeries("Transport", "Transport");
                     makeSeries("AFOLU", "AFOLU");
                     makeSeries("MSW", "WasteWater");
-                    makeSeries("Industries", "energy");
+                    // makeSeries("Industries", "energy");//remove for temparary add in future->"Industries", "energy"
                     // makeSeries("Africa", "africa");
 
 

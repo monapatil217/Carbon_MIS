@@ -1,12 +1,13 @@
 $(document).ready(function () {
+    getCardData();
     actionchart();
+
 
 })
 //Electricity range bar start
 var rangeE1 = $('.range-slider__rangeE1'),
     valueE1 = $('.range-slider__valueE1');
 valueEE1 = $('.range-slider__valueEE1');
-
 valueE1.html(rangeE1.attr('value'));
 valueEE1.html(rangeE1.attr('valueE1'));
 rangeE1.on('input', function () {
@@ -17,10 +18,19 @@ rangeE1.on('input', function () {
     valueE3.html(this.value);
     document.getElementById("ele2").max = this.value;
     document.getElementById("ele3").max = this.value;
-
     document.getElementById("ele2").value = this.value;
     document.getElementById("ele3").value = this.value;
 
+    valueEE2.html(0);
+    valueEE3.html(0);
+
+    valueRemainEle1 = document.getElementById("ele1").max - this.value;
+    valueRemainEle2 = document.getElementById("ele2").max - document.getElementById("ele2").value;
+    valueRemainEle3 = document.getElementById("ele3").max - document.getElementById("ele3").value;
+
+
+
+    setEleGraph();
 });
 
 var rangeE2 = $('.range-slider__rangeE2'),
@@ -36,6 +46,12 @@ rangeE2.on('input', function () {
     valueE3.html(this.value);
     document.getElementById("ele3").max = this.value;
     document.getElementById("ele3").value = this.value;
+    valueEE3.html(0);
+
+    valueRemainEle1 = document.getElementById("ele1").max - document.getElementById("ele1").value;
+    valueRemainEle2 = document.getElementById("ele2").max - this.value;
+    valueRemainEle3 = document.getElementById("ele3").max - document.getElementById("ele3").value;
+    setEleGraph();
 });
 
 
@@ -49,8 +65,40 @@ valueEE3.html(rangeE3.attr('valueE3'));
 rangeE3.on('input', function () {
     valueE3.html(this.value);
     valueEE3.html(document.getElementById("ele3").max - this.value);
+
+
+    valueRemainEle1 = document.getElementById("ele1").max - document.getElementById("ele1").value;
+    valueRemainEle2 = document.getElementById("ele2").max - document.getElementById("ele2").value;
+    valueRemainEle3 = document.getElementById("ele3").max - this.value;
+    setEleGraph();
 });
 
+
+function setEleGraph() {
+
+    var myArray = [];
+    myArray["pOne"] = valueRemainEle1;
+    myArray["pTwo"] = valueRemainEle2;
+    myArray["pThree"] = valueRemainEle3;
+
+    var basicId = document.getElementById("basicId").value;
+    var rangeBarValue = {};
+    rangeBarValue["basicId"] = basicId;
+    rangeBarValue["sectore"] = "Electricity";
+    rangeBarValue["myArray"] = myArray;
+
+    $.ajax({
+        type: "POST",
+        async: false,
+        url: "php/postIntervantionGraph.php",
+        contentType: "application/json",
+        data: JSON.stringify(rangeBarValue),
+        success: function (data) {
+            var divList = JSON.parse(data);
+            
+        }
+    });
+}
 //Electricity range bar end
 
 //Transport range bar start
@@ -77,7 +125,21 @@ rangeT1.on('input', function () {
     document.getElementById("trans3").value = this.value;
     document.getElementById("trans4").value = this.value;
     document.getElementById("trans5").value = this.value;
+
+    valueT12.html(0);
+    valueT13.html(0);
+    valueT14.html(0);
+    valueT15.html(0);
+
+    valueRemainTrans1 = document.getElementById("trans1").max - this.value;
+    valueRemainTrans2 = document.getElementById("trans2").max - document.getElementById("trans2").value;
+    valueRemainTrans3 = document.getElementById("trans3").max - document.getElementById("trans3").value;
+    valueRemainTrans4 = document.getElementById("trans4").max - document.getElementById("trans4").value;
+    valueRemainTrans5 = document.getElementById("trans5").max - document.getElementById("trans5").value;
+
+    setTransGraph();
 });
+
 var rangeT2 = $('.range-slider__rangeT2'),
     valueT2 = $('.range-slider__valueT2');
 valueT12 = $('.range-slider__valueTT2');
@@ -98,7 +160,21 @@ rangeT2.on('input', function () {
     document.getElementById("trans3").value = this.value;
     document.getElementById("trans4").value = this.value;
     document.getElementById("trans5").value = this.value;
+
+    valueT13.html(0);
+    valueT14.html(0);
+    valueT15.html(0);
+
+    valueRemainTrans1 = document.getElementById("trans1").max - document.getElementById("trans1").value;
+    valueRemainTrans2 = document.getElementById("trans2").max - this.value;
+    valueRemainTrans3 = document.getElementById("trans3").max - document.getElementById("trans3").value;
+    valueRemainTrans4 = document.getElementById("trans4").max - document.getElementById("trans4").value;
+    valueRemainTrans5 = document.getElementById("trans5").max - document.getElementById("trans5").value;
+
+    setTransGraph();
+
 });
+
 var rangeT3 = $('.range-slider__rangeT3'),
     valueT3 = $('.range-slider__valueT3');
 valueT13 = $('.range-slider__valueTT3');
@@ -115,7 +191,19 @@ rangeT3.on('input', function () {
 
     document.getElementById("trans4").value = this.value;
     document.getElementById("trans5").value = this.value;
+
+    valueT14.html(0);
+    valueT15.html(0);
+
+    valueRemainTrans1 = document.getElementById("trans1").max - document.getElementById("trans1").value;
+    valueRemainTrans2 = document.getElementById("trans2").max - document.getElementById("trans2").value;
+    valueRemainTrans3 = document.getElementById("trans3").max - this.value;
+    valueRemainTrans4 = document.getElementById("trans4").max - document.getElementById("trans4").value;
+    valueRemainTrans5 = document.getElementById("trans5").max - document.getElementById("trans5").value;
+
+    setTransGraph();
 });
+
 var rangeT4 = $('.range-slider__rangeT4'),
     valueT4 = $('.range-slider__valueT4');
 valueT14 = $('.range-slider__valueTT4');
@@ -128,7 +216,18 @@ rangeT4.on('input', function () {
     valueT5.html(this.value);
     document.getElementById("trans5").max = this.value;
     document.getElementById("trans5").value = this.value;
+
+    valueT15.html(0);
+
+    valueRemainTrans1 = document.getElementById("trans1").max - document.getElementById("trans1").value;
+    valueRemainTrans2 = document.getElementById("trans2").max - document.getElementById("trans2").value;
+    valueRemainTrans3 = document.getElementById("trans3").max - document.getElementById("trans3").value;
+    valueRemainTrans4 = document.getElementById("trans4").max - this.value;
+    valueRemainTrans5 = document.getElementById("trans5").max - document.getElementById("trans5").value;
+
+    setTransGraph();
 });
+
 var rangeT5 = $('.range-slider__rangeT5'),
     valueT5 = $('.range-slider__valueT5');
 valueT15 = $('.range-slider__valueTT5');
@@ -138,7 +237,42 @@ valueT15.html(rangeT5.attr('valueT'));
 rangeT5.on('input', function () {
     valueT15.html(document.getElementById("trans5").max - this.value);
     valueT5.html(this.value);
+
+    valueRemainTrans1 = document.getElementById("trans1").max - document.getElementById("trans1").value;
+    valueRemainTrans2 = document.getElementById("trans2").max - document.getElementById("trans2").value;
+    valueRemainTrans3 = document.getElementById("trans3").max - document.getElementById("trans3").value;
+    valueRemainTrans4 = document.getElementById("trans4").max - document.getElementById("trans4").value;
+    valueRemainTrans5 = document.getElementById("trans5").max - this.value;
+
+    setTransGraph();
 });
+
+function setTransGraph(){
+    var myArray = [];
+    myArray["0"] = valueRemainTrans1;
+    myArray["1"] = valueRemainTrans2;
+    myArray["2"] = valueRemainTrans3;
+    myArray["3"] = valueRemainTrans4;
+    myArray["4"] = valueRemainTrans5;
+
+    var basicId = document.getElementById("basicId").value;
+    var rangeBarValue = {};
+    rangeBarValue["basicId"] = basicId;
+    rangeBarValue["sectore"] = "Transport";
+    rangeBarValue["myArray"] = myArray;
+
+    $.ajax({
+        type: "POST",
+        async: false,
+        url: "php/postIntervantionGraph.php",
+        contentType: "application/json",
+        data: JSON.stringify(rangeBarValue),
+        success: function (data) {
+            var divList = JSON.parse(data);
+
+        }
+    });
+}
 
 // // AFOLU range bar start
 var rangeAF1 = $('.range-slider__rangeAF1'),
@@ -154,6 +288,12 @@ rangeAF1.on('input', function () {
     valueAF2.html(this.value);
     document.getElementById("AFOLU2").max = this.value;
     document.getElementById("AFOLU2").value = this.value;
+    valueAF12.html(0);
+
+    valueRemainAfolu1 = document.getElementById("AFOLU1").max - this.value;
+    valueRemainAfolu2 = document.getElementById("AFOLU2").max - document.getElementById("AFOLU2").value;
+
+    setAfoluGraph();
 
 });
 var rangeAF2 = $('.range-slider__rangeAF2'),
@@ -164,7 +304,37 @@ valueAF12.html(rangeAF2.attr('valueAF'));
 rangeAF2.on('input', function () {
     valueAF12.html(document.getElementById("AFOLU2").max - this.value);
     valueAF2.html(this.value);
+
+    valueRemainAfolu1 = document.getElementById("AFOLU1").max - document.getElementById("AFOLU1").value;
+    valueRemainAfolu2 = document.getElementById("AFOLU2").max - this.value;
+    setAfoluGraph();
 });
+
+
+function setAfoluGraph() {
+    var myArray = [];
+    myArray["0"] = valueRemainAfolu1;
+    myArray["1"] = valueRemainAfolu2;
+
+    var basicId = document.getElementById("basicId").value;
+    var rangeBarValue = {};
+    rangeBarValue["basicId"] = basicId;
+    rangeBarValue["sectore"] = "AFOLU";
+    rangeBarValue["myArray"] = myArray;
+
+    $.ajax({
+        type: "POST",
+        async: false,
+        url: "php/postIntervantionGraph.php",
+        contentType: "application/json",
+        data: JSON.stringify(rangeBarValue),
+        success: function (data) {
+            var divList = JSON.parse(data);
+
+        }
+    });
+
+}
 
 // // Waste range bar start
 var rangew1 = $('.range-slider__rangew1'),
@@ -180,7 +350,11 @@ rangew1.on('input', function () {
     valuew2.html(this.value);
     document.getElementById("W2").max = this.value;
     document.getElementById("W2").value = this.value;
+    valuew12.html(0);
 
+    valueRemainWaste1 = document.getElementById("W1").max - this.value;
+    valueRemainWaste2 = document.getElementById("W2").max - document.getElementById("W2").value;
+    setWasteGraph();
 });
 var rangew2 = $('.range-slider__rangew2'),
     valuew2 = $('.range-slider__valuew2');
@@ -192,7 +366,35 @@ valuew12.html(rangew2.attr('valueW'));
 rangew2.on('input', function () {
     valuew12.html(document.getElementById("W2").max - this.value);
     valuew2.html(this.value);
+
+    valueRemainWaste1 = document.getElementById("W1").max - document.getElementById("W1").value;
+    valueRemainWaste2 = document.getElementById("W2").max - this.value;
+    setWasteGraph();
 });
+
+function setWasteGraph() {
+    var myArray = [];
+    myArray["0"] = valueRemainWaste1;
+    myArray["1"] = valueRemainWaste2;
+
+    var basicId = document.getElementById("basicId").value;
+    var rangeBarValue = {};
+    rangeBarValue["basicId"] = basicId;
+    rangeBarValue["sectore"] = "Waste";
+    rangeBarValue["myArray"] = myArray;
+
+    $.ajax({
+        type: "POST",
+        async: false,
+        url: "php/postIntervantionGraph.php",
+        contentType: "application/json",
+        data: JSON.stringify(rangeBarValue),
+        success: function (data) {
+            var divList = JSON.parse(data);
+
+        }
+    });
+}
 
 // // Industry range bar start
 var rangei1 = $('.range-slider__rangei1'),
@@ -212,6 +414,16 @@ rangei1.on('input', function () {
     document.getElementById("indu2").value = this.value;
     document.getElementById("indu3").value = this.value;
 
+    valuei21.html(0);
+    valuei31.html(0);
+
+    valueRemainIndu1 = document.getElementById("indu1").max - this.value;
+    valueRemainIndu2 = document.getElementById("indu2").max - document.getElementById("indu2").value;
+    valueRemainIndu3 = document.getElementById("indu3").max - document.getElementById("indu3").value;
+
+
+    setInduGraph();
+
 });
 var rangei2 = $('.range-slider__rangei2'),
     valuei2 = $('.range-slider__valuei2');
@@ -226,7 +438,17 @@ rangei2.on('input', function () {
     document.getElementById("indu3").max = this.value;
     document.getElementById("indu3").value = this.value;
 
+
+    valuei3.html(0);
+
+    valueRemainIndu1 = document.getElementById("indu1").max - document.getElementById("indu1").value;
+    valueRemainIndu2 = document.getElementById("indu2").max - this.value;
+    valueRemainIndu3 = document.getElementById("indu3").max - document.getElementById("indu3").value;
+
+
+    setInduGraph();
 });
+
 var rangei3 = $('.range-slider__rangei3'),
     valuei3 = $('.range-slider__valuei3');
 valuei31 = $('.range-slider__valueii3');
@@ -237,9 +459,37 @@ valuei31.html(rangei3.attr('valueI'));
 rangei3.on('input', function () {
     valuei31.html(document.getElementById("indu3").max - this.value);
     valuei3.html(this.value);
+
+    valueRemainIndu1 = document.getElementById("indu1").max - document.getElementById("indu1").value;
+    valueRemainIndu2 = document.getElementById("indu2").max - document.getElementById("indu2").value;
+    valueRemainIndu3 = document.getElementById("indu3").max - this.value;
+    setInduGraph();
 });
 
+// function setInduGraph(){
+//     var myArray = [];
+//     myArray.push(valueRemainIndu1);
+//     myArray.push(valueRemainIndu2);
+//     myArray.push(valueRemainIndu3);
 
+//     var basicId = document.getElementById("basicId").value;
+//     var rangeBarValue = {};
+//     rangeBarValue["basicId"] = basicId;
+//     rangeBarValue["sectore"] = "Industry";
+//     rangeBarValue["myArray"] = myArray;
+
+//     $.ajax({
+//         type: "POST",
+//         async: false,
+//         url: "php/postIntervantionGraph.php",
+//         contentType: "application/json",
+//         data: JSON.stringify(rangeBarValue),
+//         success: function (data) {
+//             var divList = JSON.parse(data);
+
+//         }
+//     });
+// }
 
 
 
@@ -366,6 +616,28 @@ function actionchart() {
                     series1.appear();
                 });
             });       // end am5.ready())
+        }
+    });
+}
+
+function getCardData() {
+    var myobj = {};
+    var basicId = document.getElementById("basicId").value;
+    myobj["basicId"] = basicId;
+    $.ajax({
+        type: "POST",
+        async: false,
+        url: "php/emiPieChart.php",
+        contentType: "application/json",
+        data: JSON.stringify(myobj),
+        success: function (data) {
+            var divList = JSON.parse(data);
+            $.each(divList, function (index, element) {
+                var category = element.category;
+                var value = element.value;
+                value = value.toFixed(2);
+                $("#" + category).append(value + "&nbsp;tons/year");
+            })
         }
     });
 }

@@ -216,8 +216,8 @@ require "php/session.php";
                                     </div>
 
                                     <div class="col-12 ">
-
-                                        <div class="card ">
+                                    <!-- remove for temparary add in future->"Industry" -->
+                                        <!-- <div class="card ">
                                             <div class="card-body">
                                                 <div class="textc">
                                                     <h5>Industries</h5><img src="assets/img/industry.png" width="50px"
@@ -231,7 +231,7 @@ require "php/session.php";
                                                     </p>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
 
                                     <!-- ///////////// -->
@@ -360,7 +360,8 @@ require "php/session.php";
                                         <div class="w-100"></div>
 
                                         <div class="col-12 ">
-                                            <div class="card ">
+                                        <!-- remove for temparary add in future->"Industry" -->
+                                            <!-- <div class="card ">
                                                 <div class="card-body">
                                                     <div class="textc">
                                                         <h5>Industries </h5><img src="assets/img/industry.png"
@@ -377,7 +378,7 @@ require "php/session.php";
                                                         </p>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <!-- <div class="col-6 ">
                                         <div class="card ">
@@ -539,7 +540,7 @@ require "php/session.php";
                                         <option value="Transport">Transport</option>
                                         <option value="WasteWater">WasteWater</option>
                                         <option value="AFOLU">AFOLU</option>
-                                        <option value="energy">Industry</option>
+                                        <!-- <option value="energy">Industry</option> -->
                                     </select>
                                 </div>
 

@@ -17,8 +17,8 @@ window.onclick = function (event) {
 }
 
 $(document).ready(function () {
-    actionchart();
-    showActionplan();
+    // actionchart();
+    // showActionplan();
 
 })
 
@@ -27,11 +27,10 @@ function showActionplan() {
     var html = '';
     html = '<div class="row align-items-center justify-content-center">'
         + ' <div class="col-md-3 col-lg-3 col-xl-3 col-3 mt-4">'
-        + '  <label for="treatment" class="form-label"><h4>Select  </h4></label>'
+        // + '  <label for="treatment" class="form-label"><h4>Select  </h4></label>'
         + ' <div class="form-group col-md-2  col-xl-10">'
         + ' <select class="form-control" id="syear" onchange="addYear();" >'
         + ' <option disabled selected>Select Year</option>'
-        + ' <option value="2022">2022</option>'
         + '<option value="2030">2030</option>'
         + '<option value="2050">2050</option>'
         + '</select >'
@@ -44,6 +43,75 @@ function showActionplan() {
 
 
 }
+//Electricity range bar start
+var rangeE1 = $('.range-slider__rangeE1'),
+    valueE1 = $('.range-slider__valueE1');
+valueEE1 = $('.range-slider__valueEE1');
+valueE1.html(rangeE1.attr('value'));
+valueEE1.html(rangeE1.attr('valueE1'));
+rangeE1.on('input', function () {
+
+    valueEE1.html(document.getElementById("ele1").max - this.value);
+    valueE1.html(this.value);
+    valueE2.html(this.value);
+    valueE3.html(this.value);
+    document.getElementById("ele2").max = this.value;
+    document.getElementById("ele3").max = this.value;
+    document.getElementById("ele2").value = this.value;
+    document.getElementById("ele3").value = this.value;
+
+    valueEE2.html(0);
+    valueEE3.html(0);
+
+    valueRemainEle1 = document.getElementById("ele1").max - this.value;
+    valueRemainEle2 = document.getElementById("ele2").max - document.getElementById("ele2").value;
+    valueRemainEle3 = document.getElementById("ele3").max - document.getElementById("ele3").value;
+
+
+
+    setEleGraph();
+});
+
+var rangeE2 = $('.range-slider__rangeE2'),
+    valueEE2 = $('.range-slider__valueEE2');
+valueE2 = $('.range-slider__valueE2');
+
+valueEE2.html(rangeE2.attr('valueE2'));
+valueE2.html(rangeE2.attr('value'));
+
+rangeE2.on('input', function () {
+    valueEE2.html(document.getElementById("ele2").max - this.value);
+    valueE2.html(this.value);
+    valueE3.html(this.value);
+    document.getElementById("ele3").max = this.value;
+    document.getElementById("ele3").value = this.value;
+    valueEE3.html(0);
+
+    valueRemainEle1 = document.getElementById("ele1").max - document.getElementById("ele1").value;
+    valueRemainEle2 = document.getElementById("ele2").max - this.value;
+    valueRemainEle3 = document.getElementById("ele3").max - document.getElementById("ele3").value;
+    setEleGraph();
+});
+
+
+var rangeE3 = $('.range-slider__rangeE3'),
+    valueE3 = $('.range-slider__valueE3');
+valueEE3 = $('.range-slider__valueEE3');
+
+valueE3.html(rangeE3.attr('value'));
+valueEE3.html(rangeE3.attr('valueE3'));
+
+rangeE3.on('input', function () {
+    valueE3.html(this.value);
+    valueEE3.html(document.getElementById("ele3").max - this.value);
+
+
+    valueRemainEle1 = document.getElementById("ele1").max - document.getElementById("ele1").value;
+    valueRemainEle2 = document.getElementById("ele2").max - document.getElementById("ele2").value;
+    valueRemainEle3 = document.getElementById("ele3").max - this.value;
+    setEleGraph();
+});
+
 ////////
 function addYear() {
 
@@ -51,7 +119,22 @@ function addYear() {
     var yearType = document.getElementById("syear").value;
     var html = '';
 
-    if (yearType == "2022") {
+    if (yearType == "2030") {
+
+    actionchart();
+    showRangeBarEle();
+    }
+
+    if (yearType == "2050") {
+
+        actionchart();
+        $("#Year").append(html);
+        // incine++;
+    }
+}
+
+
+function showRangeBarEle(){
         // html = ' <div class="col-md-6 col-lg-6 col-xl-4 col-10">  <label for="2022" class="form-label">  </label>'
         //     + '        <div class="input-group mb-2">'
         //     + '            <input type="text" id="y2022" name="y2022" class="form-control"  aria-label="2022" aria-describedby="basic-addon2">'
@@ -230,28 +313,7 @@ function addYear() {
 
         $("#Year").append(html);
         // comp++;
-    }
 
-    if (yearType == "2030") {
-        html = '<div class="col-md-6 col-lg-6 col-xl-4 col-10">   <label for="2030" class="form-label"> </label>'
-            + '        <div class="input-group mb-2">'
-            + '            <input type="text" id="y2030" name="y2030" class="form-control" aria-label="2030" aria-describedby="basic-addon2">'
-
-            + '    </div></div>';
-
-        $("#Year").append(html);
-        // land++;
-    }
-
-    if (yearType == "2050") {
-        html = ' <div class="col-md-6 col-lg-6 col-xl-4 col-10">  <label for="2050" class="form-label"></label>'
-            + '        <div class="input-group mb-2">'
-            + '            <input type="text" id="y2050" name="2050" class="form-control" aria-label="2050" aria-describedby="basic-addon2">'
-            + '    </div></div>';
-
-        $("#Year").append(html);
-        // incine++;
-    }
 }
 
 

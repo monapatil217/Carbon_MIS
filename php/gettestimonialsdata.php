@@ -40,7 +40,7 @@ $tableArray = array (
                 $value = 100;
             }
             // $dataQuery="SELECT count(*) FROM columns WHERE table_name =$tableName";
-            $dataQuery="SELECT COUNT(*) as colnumber FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'carbon_mis_2' AND TABLE_NAME = '".$tableName."'"; 
+            $dataQuery="SELECT COUNT(*) as colnumber FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'carbon_mis' AND TABLE_NAME = '".$tableName."'"; 
                               
                 $result = mysqli_query($conn, $dataQuery) or die(mysqli_error($conn));              
                  $row = mysqli_fetch_array($result);

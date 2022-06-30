@@ -49,8 +49,9 @@ for ($i = 0; $i < sizeof($tableArray); $i++) {
 
             $mainArray['check'] = "true";
             $co2 = $row['co2'];
-            $ch4 = $row['ch4']*21;
-            $n20 = $row['n2o']*310;
+            $ch4 = $row['ch4'];
+            $n20 = $row['n2o'];
+            // echo "Post intervention Electricity:", $co2+$ch4+$n20;
         }
     }
 }
@@ -91,6 +92,8 @@ array_push($deleData, $eleData);
 
 $mainArray['cData'] =   $deleData;
 array_push($finalArray, $mainArray);
+
+
 
 
 echo  json_encode($finalArray);

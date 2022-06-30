@@ -71,6 +71,7 @@
                     <ul>
                         <li><a class="nav-link scrollto" href="graph.php">Graph</a></li>
                         <li><a class="nav-link scrollto" href="actionPlan.php">Action Plan</a></li>
+                        <li><a class="nav-link scrollto" href="NewActionPlan.php">New Action Plan</a></li>
                           <li><a class="nav-link scrollto" href="takeAction.php">Intervention Plan</a></li>
                     </ul>
                 </li>
