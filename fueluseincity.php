@@ -116,6 +116,7 @@
                                  which foods we eat and minimising cooking time and appliance use. Even combining a more
                                  environmentally friendly cooking method, such as using a microwave to part-cook food
                                  then roasting to finish in the oven, can cut our GHG emissions substantially.</li>
+                                  <center><B id="shcity"> </B></center>
                              <!-- <li class="popupli">The sum is then 454 + 1211 = 1665 grammes of CO2/liter of LPG.</li> -->
                          </ul>
                          <!-- next button and print bitton -->
@@ -222,6 +223,12 @@
      <script src="js/common.js"></script>
      <script src="js/fuelUseInCityModel.js"></script>
       <script src="js/compareGraph.js"></script>
+      <script>
+     var city= document.getElementById("cityName").value;
+    var res = city.substring(0, 2);
+    res=res.toUpperCase();
+    $("#shcity").append(res +" - "+city);
+    </script>
      <!-- <script src="js/induGraph.js"></script> -->
  </body>
 

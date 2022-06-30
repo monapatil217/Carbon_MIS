@@ -95,7 +95,15 @@ require "php/session.php";
                                 </li>
                                 </ul>
                             </div>
+                             <div class="row align-items-center  justify-content-center">
+                            <div class=" col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xl-1"
+                                data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">                                                                   
+                                <button type="button" class="btn btn-primary" onclick="redirect();">NEXT <i class=""
+                                        style='font-size:18px;color:gray'></i></button>
+                            </div>
+                        </div>
                               </form>
+                              
                     </div>
                             <!-- 
                             <div class="row ">

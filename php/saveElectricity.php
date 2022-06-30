@@ -38,8 +38,11 @@ $carbonch4=round($carbonch4,2);
 $carbonn2o=round($carbonn2o,2);
 
 ///2022 before intervention
-$emi2022=$carbonco2+$carbonch4+$carbonch4;
+$emi2022=$carbonco2+$carbonch4+$carbonn2o;
 $emi2022=round($emi2022,2);
+// echo "\ 2022co2:", $carbonco2;
+// echo "\ 2022ch4:", $carbonch4;
+// echo "\ 2022n2o:", $carbonn2o;
 // echo "\ 2022:", $emi2022;
         $query2 = "SELECT * FROM ele_data WHERE b_id='" . $basicId . "'";
         $result = mysqli_query($conn, $query2)  or die(mysqli_error($conn));

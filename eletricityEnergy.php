@@ -153,6 +153,13 @@ require "php/session.php";
                             <!-- <li class="popupli">Burning 1 kg of bituminous coal will produce 2.42 kg of carbon dioxide.</li> -->
                             <li class="popupli">The emissions per unit of electricity are estimated to be in the range
                                 of 0.91 to 0.95 kg/kWh for CO2. </li>
+                             <center><B id="shcity"> </B></center>
+                             <!-- $sss=$cityName -->                       
+                             <!-- $str=$_SESSION["cityName"];
+                              $res = str.substring(0, 2);
+                               echo $res; -->
+                              
+                                                                                                                                                  
                         </ul>
                         
                         <!-- <div class="row justify-content-center">
@@ -224,10 +231,9 @@ require "php/session.php";
                          <!-- End sample graph -->                        
                         <div></div>
                         <!-- Next btn symbol -->
-                        <div class="row align-items-center justify-content-center">
+                             <div class="row align-items-center justify-content-center">
                             <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2 col-xl-2"
-                                data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                                <!-- <button type="button" class="btn btn-primary" onclick="redirect();">NEXT ➡</button> -->
+                                data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">                                                                   
                                 <button type="button" class="btn btn-primary" onclick="redirect();">NEXT <i class=""
                                         style='font-size:18px;color:gray'></i></button>
                             </div>
@@ -289,6 +295,7 @@ require "php/session.php";
             });
         }, false);
     })();
+
     </script>
     <!-- Resources -->
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
@@ -319,6 +326,10 @@ require "php/session.php";
     
     <script src="js/common.js"></script>
     <script>
+     var city= document.getElementById("cityName").value;
+    var res = city.substring(0, 2);
+    res=res.toUpperCase();
+    $("#shcity").append(res +" - "+city);
     </script>
     <!-- ////  sample graph-->
     

@@ -112,6 +112,7 @@ require "php/session.php";
                                 (GHGs, the major GHGs are carbon dioxide (CO2), methane (CH4) and nitrous oxide (N2O)).
                                 Land use activities can result in emissions of such greenhouse gases into the atmosphere
                                 or removal of greenhouse gases from the atmosphere.</li>
+                                 <center><B id="shcity"> </B></center>
                         </ul>
                         <div class="row justify-content-center">
                             <div class="col-sm-10 col-xs-10 col-md-10 col-lg-10 col-xl-10"
@@ -212,9 +213,16 @@ require "php/session.php";
     <script src="assets/js/main.js"></script>
     <!-- Our js File  -->
     <script src="js/common.js"></script>
+    <script>
+     var city= document.getElementById("cityName").value;
+    var res = city.substring(0, 2);
+    res=res.toUpperCase();
+    $("#shcity").append(res +" - "+city);
+    </script>
     <script src="js/landUseModel.js"></script>
     <!-- <script src="js/induGraph.js"></script> -->
     <script src="js/compareGraph.js"></script>
+
 </body>
 
 </html>

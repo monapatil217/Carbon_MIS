@@ -16,8 +16,9 @@ function addTable() {
         success: function (data) {
             var divList = JSON.parse(data);
             var html = '';
+            var totalEmi = 0;
             $.each(divList, function (index, element) {
-
+                totalEmi += element.emission;
                 // $("#table").empty();
                 html += '<tr><td> ' + element.id + '</td>'
                     + '<td>' + element.city + '</td>'
@@ -28,6 +29,7 @@ function addTable() {
             });
 
             $("#example").append(html);
+            $("#totemi").append(Math.round(totalEmi / 1000000, 2) + "   Millions/year");
 
         }
     });

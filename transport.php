@@ -118,6 +118,7 @@ require "php/session.php";
                             <li class="popupli"> India's transport sector is responsible for 13.5 % of the country’s
                                 energy-related CO2 emissions, with road transport accounting for 90 % of the sector’s
                                 final energy consumption.</li>
+                                 <center><B id="shcity"> </B></center>
                         </ul>
                         <div class="row justify-content-center">
                             <div class=" col-lg-10 col-md-10 col-sm-10 col-xs-10 "
@@ -229,6 +230,12 @@ require "php/session.php";
     <!-- <script src="js/induGraph.js"></script> -->
     <script src="js/compareGraph.js"></script>
     <script src="js/common.js"></script>
+    <script>
+     var city= document.getElementById("cityName").value;
+    var res = city.substring(0, 2);
+    res=res.toUpperCase();
+    $("#shcity").append(res +" - "+city);
+    </script>
     <!-- <script src="js/travelGraph.js"></script> -->
 </body>
 

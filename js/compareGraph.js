@@ -7,11 +7,16 @@ function addChart() {
     var type = document.getElementById("sectionType").value;
     var basicId = document.getElementById("basicId").value;
     var city = document.getElementById("cityName").value;
+    // var str = city;
+    var res = city.substring(0, 2);
+    res = res.toUpperCase();
+
 
     var myobj = {};
     myobj["type"] = type;
     myobj["basicId"] = basicId;
-    myobj["city"] = city;
+    // myobj["city"] = city;
+    myobj["city"] = res;
 
     $.ajax({
         type: "POST",
@@ -161,7 +166,9 @@ function addChart() {
                         chart.appear(1000, 100);
 
                     }); // end am5.ready()
+
                 }
+
                 else {
 
 

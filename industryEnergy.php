@@ -61,6 +61,7 @@ require "php/session.php";
                         <marquee width="100%" direction="left" height="30px" scrollamount="2"> MTD - Metric ton per day
                             / FO - Fuel Oil / LDO - Light Diesel Oil / HSD - High Speed Diesel / PNG - Piped Natural gas
                             / NG - Natural Gas </marquee>
+                             
                         <form class="needs-validation" novalidate>
                             <div id="energyIndInput"></div>
                             <div class="row ">
@@ -103,6 +104,7 @@ require "php/session.php";
                             <div class=" col-lg-8 col-md-8 col-sm-8 col-xs-8"
                                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                                 <div class="row justify-content-center"> 
+                                <center><B id="shcity"> </B></center>
                                 <div id="chartName"></div>
                                     <!-- <h3>Carbon emission of Electricity</h3> -->                              
                                 <div id="energy"></div>
@@ -203,6 +205,12 @@ require "php/session.php";
     <script src="js/industryEnergyModel.js"></script>
     <!-- <script src="js/induGraph.js"></script> -->
     <script src="js/compareGraph.js"></script>
+     <script>
+     var city= document.getElementById("cityName").value;
+    var res = city.substring(0, 2);
+    res=res.toUpperCase();
+    $("#shcity").append(res +" - "+city);
+    </script>
 </body>
 
 </html>

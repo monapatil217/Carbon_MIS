@@ -96,6 +96,7 @@ require "php/session.php";
                         <ul style="margin-left: 10px;">
                             <li class="popupli"> It has been estimated that over 200 million tonnes of CO2 equivalents
                                 are released by Indian livestock each year. </li>
+                                <center><B id="shcity"> </B></center>
                         </ul>
                         <div class="row justify-content-center">
                             <div class=" col-lg-10 col-md-10 col-sm-10 col-xs-10"
@@ -199,6 +200,12 @@ require "php/session.php";
     <script src="js/liveStock.js"></script>
     <script src="js/compareGraph.js"></script>
     <!-- <script src="js/induGraph.js"></script> -->
+    <script>
+     var city= document.getElementById("cityName").value;
+    var res = city.substring(0, 2);
+    res=res.toUpperCase();
+    $("#shcity").append(res +" - "+city);
+    </script>
 </body>
 
 </html>

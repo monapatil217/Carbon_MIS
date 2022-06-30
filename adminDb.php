@@ -135,7 +135,7 @@ require "php/session.php";
                                 </div>
                                 <div class="text-end pt-1">
                                     <p class="text-sm mb-0 text-capitalize">Emission</p>
-                                    <h4 class="mb-0">10200 tons/year</h4>
+                                    <h4 class="mb-0" id="totemi"></h4>
                                 </div>
                             </div>
                             <hr class="dark horizontal my-0">

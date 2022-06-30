@@ -116,6 +116,7 @@ require "php/session.php";
                             <li class="popupli"> Forest carbon stock is the amount of carbon that has been sequestered
                                 from the atmosphere and is now stored within the forest ecosystem, mainly within living
                                 biomass and soil, and to a lesser extent also in dead wood and litter. </li>
+                                 <center><B id="shcity"> </B></center>
                         </ul>
                         <div class="row justify-content-center">
                             <div class=" col-lg-10 col-md-10 col-sm-10 col-xs-10"
@@ -218,6 +219,12 @@ require "php/session.php";
     <script src="assets/js/main.js"></script>
     <!-- Our js File  -->
     <script src="js/common.js"></script>
+    <script>
+     var city= document.getElementById("cityName").value;
+    var res = city.substring(0, 2);
+    res=res.toUpperCase();
+    $("#shcity").append(res +" - "+city);
+    </script>
     <!-- <script src="js/induGraph.js"></script> -->
     <script src="js/compareGraph.js"></script>
     <script src="js/forestLandModel.js"></script>

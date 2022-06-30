@@ -104,6 +104,7 @@ require "php/session.php";
                                 agricultural demand grows is a critical component of climate change mitigation.</li>
                             <li class="popupli">Agricultural production is a major emitter of GHGs, currently accounting
                                 for 18% of total GHG emissions in India . </li>
+                                <center><B id="shcity"> </B></center>
                         </ul>
                         <div class="row justify-content-center">
                             <div class=" col-lg-10 col-md-10 col-sm-10 col-xs-10"
@@ -214,6 +215,12 @@ require "php/session.php";
     <script src="js/common.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script>
+     var city= document.getElementById("cityName").value;
+    var res = city.substring(0, 2);
+    res=res.toUpperCase();
+    $("#shcity").append(res +" - "+city);
+    </script>
 </body>
 
 </html>
