@@ -33,6 +33,8 @@ require "php/session.php";
     <link href="assets/css/rangebar.css" rel="stylesheet">
     <!-- sectors icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css">
+
 
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
     <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css">
@@ -396,7 +398,9 @@ require "php/session.php";
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/vendor/jbox/jBox.all.min.js"></script>
     <script src="assets/js/bootstrap-show-modal.js"></script>
-    <script async src="//jsfiddle.net/RiteshG09/csd9qey0/5/embed/"></script>
+    <!-- <script async src="//jsfiddle.net/RiteshG09/csd9qey0/5/embed/"></script> -->
+    <!-- <script async src="//jsfiddle.net/vW8zc/307embed/"></script> -->
+     <script async src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
     <!-- <script type='text/javascript' src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script> -->
     <!-- <script src="js/colored.slider.js"></script> -->
     <!-- Template Main JS File -->
