@@ -162,6 +162,7 @@ require "php/session.php";
                                             Application of Policies in Percentage(%).
                                         </p>
                                         <p>
+                                        <!-- //////// -->
                                             1. Renewable Energy.
                                             <input type="text" id="datepicker" />
                                             <input class="range-slider__range range-slider__rangeE1" type="range"
