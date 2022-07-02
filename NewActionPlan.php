@@ -31,9 +31,10 @@ require "php/session.php";
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/template-rangebar.css" rel="stylesheet">
     <link href="assets/css/rangebar.css" rel="stylesheet">
+     <link href="assets/css/datepeaker.css" rel="stylesheet">
     <!-- sectors icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css"> -->
 
 
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
@@ -100,6 +101,16 @@ require "php/session.php";
     #t2 {
         /* background-color: #FFFF; */
     }
+    
+    #datepicker {
+         background-color:#D3D3D3;
+         width:100px;
+       /* background-color:#E0E0E0; */
+        /* background-color:#CCCCCC; */
+    }
+   .bgcl{
+      background-color:#D3D3D3; 
+   }
     </style>
 </head>
 
@@ -113,13 +124,96 @@ require "php/session.php";
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden
                 disabled>
+                    <div class="row">
+                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3" data-aos-delay="200">
+                            <button class="tablink" onclick="openPage('t1', this, '#888')">2030</button><br>
+                            <button class="tablink" onclick="openPage('t2', this, '#888')">2050 </button>
+                        </div>  
+                    </div>  
             <h3 class="text-center mt-5">Take Action</h3>
-            <div class="row actionPlanText">
+            <div class="row actionPlanText1">
 
 
 
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ml-3" id="actionGraphdiv">
+                    <div class="row actionPlanText">
+                         <div class="row">
+
+                        <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 mt-3" data-aos-delay="200">
+                            <div class="card">
+                                <div class="card-header p-3 pt-2">
+                                    <div class="rounded mt-n4 position-absolute iconAdmin">
+                                        <center><i class="fa fa-bolt mt-2 " aria-hidden="true"
+                                                style="font-size:26px;color:#e9ecef"></i></center>
+                                    </div>
+                                    <div class="text-end pt-1">
+                                        <p class="text-sm mb-0 text-capitalize">Electricity</p>
+                                        <h6 class="mb-0" id="Eletricity"></h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 mt-3" data-aos-delay="200">
+                            <div class="card">
+                                <div class="card-header p-3 pt-2">
+                                    <div class="rounded mt-n4 position-absolute iconAdmin">
+                                        <center><i class="fa fa-automobile mt-2 "
+                                                style="font-size:26px;color:#e9ecef"></i></center>
+                                    </div>
+                                    <div class="text-end pt-1">
+                                        <p class="text-sm mb-0 text-capitalize">Transport</p>
+                                        <h6 class="mb-0" id="Transport"></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
+                        <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-4 mt-3" data-aos-delay="200">
+                            <div class="card">
+                                <div class="card-header p-3 pt-2">
+                                    <div class="rounded mt-n4 position-absolute iconAdmin">
+                                        <center><i class="fa fa-tree mt-2 " aria-hidden="true"
+                                                style="font-size:26px;color:#e9ecef"></i></center>
+
+                                    </div>
+                                    <div class="text-end pt-1">
+                                        <p class="text-sm mb-0 text-capitalize">AFOLU</p>
+                                        <h6 class="mb-0" id="AFOLU"></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  mt-3">
+                            <div class="card">
+                                <div class="card-header p-3 pt-2">
+                                    <div class="rounded mt-n4 position-absolute iconAdmin">
+                                        <center><i class="bi-trash mt-2 " style="font-size:26px;color:#e9ecef"></i>
+                                        </center>
+                                    </div>
+                                    <div class="text-end pt-1">
+                                        <p class="text-sm mb-0 text-capitalize">Waste</p>
+                                        <h6 class="mb-0" id="Wastewater"> </h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mt-3">
+                            <div class="card">
+                                <div class="card-header p-3 pt-2">
+                                    <div class="rounded mt-n4 position-absolute iconAdmin">
+                                        <center><i class="fa fa-industry mt-2 mb-2" aria-hidden="true"
+                                                style="font-size:26px;color:#e9ecef"></i></center>
+                                    </div>
+                                    <div class="text-end pt-1">
+                                        <p class="text-sm mb-0 text-capitalize">Industry</p>
+                                        <h6 class="mb-0" id="Industry"> </h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                         <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
 
@@ -147,67 +241,79 @@ require "php/session.php";
                 <!-- <div class="col-lg-1 ">
                 </div> -->
 
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 container vertical-scrollable">
-                    <div class="card example-1 scrollbar-ripe-malinka">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+                    <!-- <div class="card example-1 scrollbar-ripe-malinka"> -->
                         <div class="card-header p-3 pt-2">
 
-                            <div class="row">
-                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
-                                    <center>
-                                        <h4 class="text-center mt-3">Electricity</h4>
-                                    </center>
-
-                                    <div id="democontainer">
-                                        <p>
-                                            Application of Policies in Percentage(%).
-                                        </p>
-                                        <p>
-                                        <!-- //////// -->
-                                            1. Renewable Energy.
-                                            <input type="text" id="datepicker" />
+                            <div class="row ">
+                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 " data-aos-delay="200">
+                                    <!-- //// -->
+                                    <div class="accordion " id="accordionExample">
+                                    <div class="accordion-item bgcl">
+                                    <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                       Electricity
+                                    </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                         <p>
+                                            1.Renewable power generation capacity (MMW)
+                                            <input type="text" id="datepicker" placeholder="select year" size="5"  />
                                             <input class="range-slider__range range-slider__rangeE1" type="range"
                                                 id="ele1" value="100" valueE1="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueE1"></span>
                                             <span class="range-slider__value range-slider__valueEE1"></span>
 
                                         <p>
-                                            2. Carbon Capture in TPP.
-                                            <input type="text" id="datepicker" />
+                                            2.Nuclear power generation capacity (MMW)			
+
+                                            <input type="text" id="datepicker" placeholder="select year" size="5" />
                                         <input class="range-slider__range range-slider__rangeE2" type="range" id="ele2"
                                             value="100" valueE2="0" min="0" max="100">
                                         <span class="range-slider__value range-slider__valueE2"></span>
                                         <span class="range-slider__value range-slider__valueEE2"></span>
                                         </p>
                                         <p>
-                                            3. Smart homes & utilities.
-                                            <input type="text" id="datepicker" />
+                                            3.Implementation of Street Light Control systems			
+.
+                                            <input type="text" id="datepicker" placeholder="select year"  size="5"/>
                                         <input class="range-slider__range range-slider__rangeE3" type="range" id="ele3"
                                             value="100" valueE3="0" min="0" max="100">
                                         <span class="range-slider__value range-slider__valueE3"></span>
                                         <span class="range-slider__value range-slider__valueEE3"></span>
                                         </p>
-
+                                        4.Implementation of Sustainable/Energy Efficient buildins.
+                                            <input type="text" id="datepicker" placeholder="select year" size="5" />
+                                        <input class="range-slider__range range-slider__rangeE3" type="range" id="ele3"
+                                            value="100" valueE3="0" min="0" max="100">
+                                        <span class="range-slider__value range-slider__valueE3"></span>
+                                        <span class="range-slider__value range-slider__valueEE3"></span>
+                                        </p>
+                                        5.% of carbon to be captured at TPP.
+                                            <input type="text" id="datepicker" placeholder="select year" size="5" />
+                                        <input class="range-slider__range range-slider__rangeE3" type="range" id="ele3"
+                                            value="100" valueE3="0" min="0" max="100">
+                                        <span class="range-slider__value range-slider__valueE3"></span>
+                                        <span class="range-slider__value range-slider__valueEE3"></span>
+                                        </p>
+                                    </div>
                                     </div>
                                 </div>
-                            </div>
-                            <hr>
+                                 <div class="accordion-item bgcl">
+                                <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Transport
+                                </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                     <p>
 
-                            <div class="row">
-                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
-                                    <center>
-                                        <h4 class="text-center mb-2">Transport</h4>
-                                    </center>
+                                            1.Number of new buses to be added<br>
+                                            1.1 Expected Modal Shift (in %) for 2W, 4W
 
-                                    <div id="democontainer">
-                                        <p>
-                                            Application of Policies in Percentage(%).
-                                        </p>
-                                        <p>
-
-                                            1. EV Policy.<br>
-                                            <!-- <input class="range-slider__range range-slider__rangeT1"  type="range" id="trans1" value="100" min="0" max="100" tabindex="0" data-toggle="tooltip" title=trans1> 
-                                            <span class="range-slider__valueT1"></span> -->
-                                            <!-- // -->
+                                          
 
                                             <input class="range-slider__range range-slider__rangeT1" type="range"
                                                 id="trans1" value="100" valueT1="0" min="0" max="100">
@@ -216,48 +322,71 @@ require "php/session.php";
 
                                         </p>
                                         <p>
-                                            2. Strengthening and Shared Public Transport.<br>
+                                            2. Number of metro trains to be added<br>
+                                            1.2 Expected Modal Shift (in %) for 2W, 4W
+
                                             <input class="range-slider__range range-slider__rangeT2" type="range"
                                                 id="trans2" value="100" valueT="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueT2"></span>
                                             <span class="range-slider__value range-slider__valueTT2"></span>
                                         </p>
                                         <p>
-                                            3. Subsidisation of Public Transport.<br>
+                                            3. Will the city implement BRT systen<br>
+                                            1.3 Expected Modal Shift (in %) for 2W, 4W
+
                                             <input class="range-slider__range range-slider__rangeT3" type="range"
                                                 id="trans3" value="100" valueT="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueT3"></span>
                                             <span class="range-slider__value range-slider__valueTT3"></span>
                                         </p>
                                         <p>
-                                            4. Non-Motorised Transport.<br>
+                                            4. Subsidisation of Public Transport<br>
+                                           1.4 Expected Modal Shift (in %) for 2W, 4W
+
                                             <input class="range-slider__range range-slider__rangeT4" type="range"
                                                 id="trans4" value="100" valueT="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueT4"></span>
                                             <span class="range-slider__value range-slider__valueTT4"></span>
                                         </p>
                                         <p>
-                                            5. Introduction of Congestion tax.<br>
+                                            5.Subsidisation of Public Transport<br>
                                             <input class="range-slider__range range-slider__rangeT5" type="range"
                                                 id="trans5" value="100" valueT="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueT5"></span>
                                             <span class="range-slider__value range-slider__valueTT5"></span>
                                         </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
-                                    <center>
-                                        <h4 class="text-center mb-2">AFOLU</h4>
-                                    </center>
-                                    <div id="democontainer">
                                         <p>
-                                            Application of Policies in Percentage(%).
+                                            6.Implementation of congestion tax<br>
+                                            <input class="range-slider__range range-slider__rangeT5" type="range"
+                                                id="trans5" value="100" valueT="0" min="0" max="100">
+                                            <span class="range-slider__value range-slider__valueT5"></span>
+                                            <span class="range-slider__value range-slider__valueTT5"></span>
                                         </p>
                                         <p>
-                                            1. Adopting Sustainable Agricultural Practices .<br>
+                                            7.Building special tracks for walking and cycling<br>
+                                            <input class="range-slider__range range-slider__rangeT5" type="range"
+                                                id="trans5" value="100" valueT="0" min="0" max="100">
+                                            <span class="range-slider__value range-slider__valueT5"></span>
+                                            <span class="range-slider__value range-slider__valueTT5"></span>
+                                        </p>
+                                        
+                                </div>
+                                </div>
+                            </div>
+                             <div class="accordion-item bgcl">
+                            <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                AFOLU
+                            </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>
+                                            1.Sustainable Agricultural Practices<br>
+                                            <input type="radio" id="alf" name="afolu" value="afo" >
+                                                <label for="alf">Yes</label>
+                                                <input type="radio" id="alf1" name="afolu" value="afo" >
+                                                <label for="alf1">No</label><br>
                                             <input class="range-slider__range range-slider__rangeAF1" type="range"
                                                 id="AFOLU1" value="100" valueAF="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueAF1"></span>
@@ -266,66 +395,52 @@ require "php/session.php";
                                         </p>
 
                                         <p>
-                                            2. Livestock Management .<br>
+                                            2. Livestock Management Practices<br>
                                             <input class="range-slider__range range-slider__rangeAF2" type="range"
                                                 id="AFOLU2" value="100" valueAF="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueAF2"></span>
                                             <span class="range-slider__value range-slider__valueAFF2"></span>
 
                                         </p>
-
+                                    </div>
                                     </div>
                                 </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
-                                    <center>
-                                        <h4 class="text-center mb-2">Waste Sector</h4>
-                                    </center>
-                                    <div id="democontainer">
-                                        <p>
-                                            Application of Policies in Percentage(%)
-                                        </p>
-                                        <p>
-                                            1. Reducing the amount of waste sent to landfill.<br>
+                                 <div class="accordion-item bgcl">
+                                <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Waste
+                                </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                     <p>
+                                            1. Reducing the amount of waste to landfill<br>
                                             <input class="range-slider__range range-slider__rangew1" type="range"
                                                 id="W1" value="100" valueW="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valuew1"></span>
                                             <span class="range-slider__value range-slider__valueww1"></span>
 
                                         </p>
-                                        <p>
-                                            2. Increasing the amount of waste composted.<br>
-                                            <input class="range-slider__range range-slider__rangew2" type="range"
-                                                id="W2" value="100" valueW="0" min="0" max="100">
-                                            <span class="range-slider__value range-slider__valuew2"></span>
-                                            <span class="range-slider__value range-slider__valueww2"></span>
-                                        </p>
-
-                                    </div>
+                                </div>
                                 </div>
                             </div>
-
-                            <hr>
-                            <div class="row">
-                                <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
-                                    <center>
-                                        <h4 class="text-center mb-2">Industry Sector</h4>
-                                    </center>
-                                    <div id="democontainer">
-                                        <p>
-                                            Application of Policies in Percentage(%)
-                                        </p>
-                                        <p>
-                                            1. Coal Policy.<br>
+                             <div class="accordion-item bgcl">
+                                <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Industry
+                                </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                      <p>
+                                            1. Coal replaced by PNG <br>
                                             <input class="range-slider__range range-slider__rangei1" type="range"
                                                 id="indu1" value="100" valueI="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valuei1"></span>
                                             <span class="range-slider__value range-slider__valueii1"></span>
                                         </p>
                                         <p>
-                                            2.FO Policy.<br>
+                                            2.FO replaced by PNG<br>
                                             <input class="range-slider__range range-slider__rangei2" type="range"
                                                 id="indu2" value="100" valueI="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valuei2"></span>
@@ -333,21 +448,35 @@ require "php/session.php";
 
                                         </p>
                                         <p>
-                                            3.Eradication of Wood .<br>
+                                            3.Briquettes replaced by PNG<br>
                                             <input class="range-slider__range range-slider__rangei3" type="range"
                                                 id="indu3" value="100" valueI="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valuei3"></span>
                                             <span class="range-slider__value range-slider__valueii3"></span>
                                         </p>
-
-                                    </div>
+                                        <p>
+                                            4.HSD replaced by PNG<br>
+                                            <input class="range-slider__range range-slider__rangei4" type="range"
+                                                id="indu3" value="100" valueI="0" min="0" max="100">
+                                            <span class="range-slider__value range-slider__valuei3"></span>
+                                            <span class="range-slider__value range-slider__valueii3"></span>
+                                        </p>
+                                        <p>
+                                           5. LDO replaced by PNG
+                                        <input class="range-slider__range range-slider__rangei5" type="range"
+                                                id="indu3" value="100" valueI="0" min="0" max="100">
+                                            <span class="range-slider__value range-slider__valuei3"></span>
+                                            <span class="range-slider__value range-slider__valueii3"></span>
+                                        </p>
+                                </div>
                                 </div>
                             </div>
-
-                            <hr>
-                        </div>
-                    </div>
-                </div>
+                                </div>
+                                    <!-- ///// -->
+                                    <hr>
+                               
+                                           
+                <!-- </div> -->
             </div>
 
         </div>
@@ -401,7 +530,8 @@ require "php/session.php";
     <script src="assets/js/bootstrap-show-modal.js"></script>
     <!-- <script async src="//jsfiddle.net/RiteshG09/csd9qey0/5/embed/"></script> -->
     <!-- <script async src="//jsfiddle.net/vW8zc/307embed/"></script> -->
-     <script async src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+     <script src="assets/js/jquery.ui.js"></script>
+     <!-- <script async src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script> -->
     <!-- <script type='text/javascript' src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script> -->
     <!-- <script src="js/colored.slider.js"></script> -->
     <!-- Template Main JS File -->
@@ -435,7 +565,7 @@ require "php/session.php";
     </script>
     <script type="text/javascript">
     $(function() {
-        $('#datepicker').datepicker({
+        $('#datepicker,#datepicker1').datepicker({
             changeYear: true,
             showButtonPanel: true,
             dateFormat: 'yy',

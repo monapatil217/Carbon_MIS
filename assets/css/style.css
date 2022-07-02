@@ -1606,6 +1606,7 @@ section {
   border-radius: 4px;
   position: relative;
 }
+
 /* .faq_pp .faq-list_pp ul {
   padding: 0;
   list-style: none;
@@ -2894,7 +2895,12 @@ color: #ffffff;
 {
     color: #E9ECEF;
 }
+ .actionPlanText1
+{
+    color: black;
+     /* background-color: #e2e0e01c; */
 
+}
 /* Scroll bar */
 .scrollbar-deep-purple::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
