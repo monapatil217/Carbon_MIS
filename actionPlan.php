@@ -157,7 +157,6 @@ require "php/session.php";
                     <div class="row">
 
                         <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
-
                             <div id="actionchart">
                             </div>
                         </div>

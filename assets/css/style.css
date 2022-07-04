@@ -2897,7 +2897,8 @@ color: #ffffff;
 }
  .actionPlanText1
 {
-    color: black;
+    /* color: black;	 */
+    color: 	#282828;
      /* background-color: #e2e0e01c; */
 
 }

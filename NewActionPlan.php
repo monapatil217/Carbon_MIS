@@ -34,6 +34,8 @@ require "php/session.php";
      <link href="assets/css/datepeaker.css" rel="stylesheet">
     <!-- sectors icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- /////toggal purpose -->.
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css"> -->
 
 
@@ -64,43 +66,7 @@ require "php/session.php";
     } */
 
 
-    /* Style tab links */
-    .tablink {
-        background-color: #555;
-        color: white;
-        float: left;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        padding: 14px 16px;
-        font-size: 17px;
-        width: 10%;
-    }
-
-    .tablink:hover {
-        background-color: #777;
-    }
-
-    /* Style the tab content (and add height:100% for full page content) */
-    .tabcontent {
-        color: white;
-        display: none;
-        padding: 100px 20px;
-        height: 100%;
-
-        margin: auto;
-        width: auto;
-        padding: 63px;
-        text-align: center;
-    }
-
-    #t1 {
-        /* background-color: #FFFF; */
-    }
-
-    #t2 {
-        /* background-color: #FFFF; */
-    }
+ 
     
     #datepicker {
          background-color:#D3D3D3;
@@ -109,8 +75,10 @@ require "php/session.php";
         /* background-color:#CCCCCC; */
     }
    .bgcl{
-      background-color:#D3D3D3; 
+      background-color:#F0F0F0;	
    }
+  
+  
     </style>
 </head>
 
@@ -124,17 +92,19 @@ require "php/session.php";
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
             <input type="text" id="basicId" class="form-control" value="<?php echo $_SESSION["basicId"]; ?>" hidden
                 disabled>
-                    <div class="row">
-                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3" data-aos-delay="200">
-                            <button class="tablink" onclick="openPage('t1', this, '#888')">2030</button><br>
-                            <button class="tablink" onclick="openPage('t2', this, '#888')">2050 </button>
+                   
+            <h3 class="text-center mt-4">Take Action</h3>
+             <div class="row">
+                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-2" data-aos-delay="200">
+                        <!-- <input type="checkbox" checked data-toggle="toggle" data-style="android" data-onstyle="info"> -->
+                            <!-- <button class="tablink" onclick="openPage('t1', this, '#888')">2030</button><br>
+                            <button class="tablink" onclick="openPage('t2', this, '#888')">2050 </button> -->    
+                          <p> <h4>Switching Here                   
+                            <input type="checkbox" id="data-toggle" data-width="150" data-height="50" checked data-toggle="toggle" data-on="2030" data-onstyle="success"  data-off="2050"  data-onstyle="warning" data-offstyle="info">
+                           </h4> </p> 
                         </div>  
                     </div>  
-            <h3 class="text-center mt-5">Take Action</h3>
             <div class="row actionPlanText1">
-
-
-
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ml-3" id="actionGraphdiv">
                     <div class="row actionPlanText">
                          <div class="row">
@@ -219,22 +189,18 @@ require "php/session.php";
 
                             <!-- <div id="actionchart">
                             </div> -->
-                            <button class="tablink" onclick="openPage('t1', this, '#888')">2030</button>
-                            <button class="tablink" onclick="openPage('t2', this, '#888')">2050 </button>
+                            <!-- <button class="tablink" onclick="openPage('t1', this, '#888')">2030</button>
+                            <button class="tablink" onclick="openPage('t2', this, '#888')">2050 </button> -->
 
-                            <div id="t1" class="tabcontent">
-                                <div id="chartName" class="text-center col-md-4 col-md-offset-4">
-                                </div>
+                                <!-- <div id="t1" class="tabcontent"> -->
+                                <div id="chartName">                             
                                 <div id="actionchart">
                                 </div>
+                                 </div>
+                                 <!-- </div> -->
 
-                            </div>
-                            <div id="t2" class="tabcontent">
-                                <div id="chartName" class="text-center col-md-4 col-md-offset-4">
-                                </div>
-                                <div id="actionchart">
-                                </div>
-                            </div>
+                           
+                            
                         </div>
                     </div>
                 </div>
@@ -243,7 +209,7 @@ require "php/session.php";
 
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
                     <!-- <div class="card example-1 scrollbar-ripe-malinka"> -->
-                        <div class="card-header p-3 pt-2">
+                        <!-- <div class="card-header p-3 pt-2"> -->
 
                             <div class="row ">
                                 <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 " data-aos-delay="200">
@@ -257,49 +223,108 @@ require "php/session.php";
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                         <p>
-                                            1.Renewable power generation capacity (MMW)
-                                            <input type="text" id="datepicker" placeholder="select year" size="5"  />
-                                            <input class="range-slider__range range-slider__rangeE1" type="range"
+                                       <div class="row ">
+                                         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">
+                                         <p>1.Power generation capacity (MMW) </p>
+                                        <div class="row ">
+                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+                                               <p>I.Renewable:
+                                                <input class="form-control" type="text" id="Power"  style="width: 100px; height: 30px;"></p>
+                                          </div>   
+                                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">                                              
+                                             <p> II.Nuclear:<input class="form-control" type="text" id="Power" style="width: 100px; height: 30px;"></p>
+                                                </div>
+                                            </div>    
+                                            </div>
+                                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
+                                            <input type="text" id="datepicker" placeholder="select year" />
+                                            <!-- <input class="range-slider__range range-slider__rangeE1" type="range"
                                                 id="ele1" value="100" valueE1="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueE1"></span>
-                                            <span class="range-slider__value range-slider__valueEE1"></span>
-
+                                            <span class="range-slider__value range-slider__valueEE1"></span> -->
+                                        </div>
+                                        <div class="row ">
+                                         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">
                                         <p>
-                                            2.Nuclear power generation capacity (MMW)			
+                                              2.Implementation of Street Light Control systems</P>
+                                        <div class="row ">
+                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+                                               <input type="radio" id="ele" name="elecc" value="electricity">
+                                                                <label for="ele">Yes</label>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+                                                <input type="radio" id="ele" name="elecc" value="electricity">
+                                                                <label for="ele">No</label><br>
 
-                                            <input type="text" id="datepicker" placeholder="select year" size="5" />
-                                        <input class="range-slider__range range-slider__rangeE2" type="range" id="ele2"
-                                            value="100" valueE2="0" min="0" max="100">
-                                        <span class="range-slider__value range-slider__valueE2"></span>
-                                        <span class="range-slider__value range-slider__valueEE2"></span>
+                                                </div> 
+                                                 <input class="range-slider__range range-slider__rangeE2" type="range" id="ele2"
+                                                 value="100" valueE2="0" min="0" max="100">
+                                                <span class="range-slider__value range-slider__valueE2"></span>
+                                                <span class="range-slider__value range-slider__valueEE2"></span>		
+                                            </div>
+                                            </div>
+                                      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
+                                            <input type="text" id="datepicker" placeholder="select year"  />
+                                       
                                         </p>
-                                        <p>
-                                            3.Implementation of Street Light Control systems			
-.
-                                            <input type="text" id="datepicker" placeholder="select year"  size="5"/>
-                                        <input class="range-slider__range range-slider__rangeE3" type="range" id="ele3"
+                                    </div>
+                                        </div>
+                                       
+                                    <div class="row ">
+                                         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">
+                                           <p> 3.Implementation of Sustainable/Energy Efficient buildings.</p>	
+                                            <div class="row ">
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+                                                    <input type="radio" id="eleEf" name="eleccef" value="electricity">
+                                                                <label for="eleEf">Yes</label>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+
+                                                        <input type="radio" id="eleEf" name="eleccef" value="electricity">
+                                                                <label for="eleEf">No</label>
+                                                    </div>
+                                                    <!-- </div> -->
+                                            </div>	
+                                                <input class="range-slider__range range-slider__rangeE3" type="range" id="ele3"
+                                                value="100" valueE3="0" min="0" max="100">
+                                                <span class="range-slider__value range-slider__valueE3"></span>
+                                                <span class="range-slider__value range-slider__valueEE3"></span>	
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
+                                            <input type="text" id="datepicker" placeholder="select year" />                                                                           
+                                        </div>
+
+                                    </div>
+                                     <div class="row ">
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">
+                                            <p>4.% of carbon to be captured at TPP.</p>
+                                                <input class="range-slider__range range-slider__rangeE3" type="range" id="ele3"
                                             value="100" valueE3="0" min="0" max="100">
-                                        <span class="range-slider__value range-slider__valueE3"></span>
-                                        <span class="range-slider__value range-slider__valueEE3"></span>
-                                        </p>
-                                        4.Implementation of Sustainable/Energy Efficient buildins.
-                                            <input type="text" id="datepicker" placeholder="select year" size="5" />
-                                        <input class="range-slider__range range-slider__rangeE3" type="range" id="ele3"
-                                            value="100" valueE3="0" min="0" max="100">
-                                        <span class="range-slider__value range-slider__valueE3"></span>
-                                        <span class="range-slider__value range-slider__valueEE3"></span>
-                                        </p>
+                                            <span class="range-slider__value range-slider__valueE3"></span>
+                                            <span class="range-slider__value range-slider__valueEE3"></span>
+                                       </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
+                                            <input type="text" id="datepicker" placeholder="select year" />
+                                       </div>
+                                       </div>
+                                      
+                                       <div class="row ">
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">
                                         5.% of carbon to be captured at TPP.
-                                            <input type="text" id="datepicker" placeholder="select year" size="5" />
-                                        <input class="range-slider__range range-slider__rangeE3" type="range" id="ele3"
+                                         <input class="range-slider__range range-slider__rangeE3" type="range" id="ele3"
                                             value="100" valueE3="0" min="0" max="100">
                                         <span class="range-slider__value range-slider__valueE3"></span>
                                         <span class="range-slider__value range-slider__valueEE3"></span>
-                                        </p>
+                                        </div>
+                                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
+                                            <input type="text" id="datepicker" placeholder="select year"/>
+                                        </div>
+                                      </div>  
                                     </div>
                                     </div>
                                 </div>
+                                <!-- <hr> -->
                                  <div class="accordion-item bgcl">
                                 <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -308,68 +333,91 @@ require "php/session.php";
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                     <p>
-
-                                            1.Number of new buses to be added<br>
-                                            1.1 Expected Modal Shift (in %) for 2W, 4W
-
-                                          
-
-                                            <input class="range-slider__range range-slider__rangeT1" type="range"
+                                 <div class="row ">
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">                                    
+                                            1.Model Shiffting for (Bus/Train/BRT)
+                                        <div class="row ">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+                                           I. Modal Shift (in %) for 2W:
+                                           <input type= "text" class="form-control" id="Model" style="width: 100px; height: 30px;">
+                                        </div>
+                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+                                            II. Modal Shift (in %) for 4W:
+                                            <input type= "text" class="form-control" id="Model" style="width: 100px; height: 30px;">
+                                        </div>   
+                                            </div>
+                                            </div>
+                                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
+                                            <!-- <input class="range-slider__range range-slider__rangeT1" type="range"
                                                 id="trans1" value="100" valueT1="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueT1"></span>
-                                            <span class="range-slider__value range-slider__valueTT1"></span>
-
-                                        </p>
+                                            <span class="range-slider__value range-slider__valueTT1"></span> -->
+                                             <input type="text" id="datepicker" placeholder="select year"/>
+                                               </div>                                     
+                                        </div>
+                                        <div class="row ">
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">       
                                         <p>
-                                            2. Number of metro trains to be added<br>
-                                            1.2 Expected Modal Shift (in %) for 2W, 4W
-
-                                            <input class="range-slider__range range-slider__rangeT2" type="range"
+                                            2.Subsidisation of Public Transport<br> </p>
+                                              <input class="range-slider__range range-slider__rangeT2" type="range"
                                                 id="trans2" value="100" valueT="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueT2"></span>
                                             <span class="range-slider__value range-slider__valueTT2"></span>
-                                        </p>
+                                        </div>
+                                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 ">                                         
+                                             <input type="text" id="datepicker" placeholder="select year"/>
+                                             </div>
+                                       
+                                        </div>
+                                          <div class="row ">
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">  
                                         <p>
-                                            3. Will the city implement BRT systen<br>
-                                            1.3 Expected Modal Shift (in %) for 2W, 4W
-
+                                           3.Implementation of congestion tax<br>
+                                        <div class="row ">
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+                                                    <input type="radio" id="cong" name="transp" value="transport">
+                                                                <label for="cong">Yes</label>
+                                                </div> 
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">               
+                                                        <input type="radio" id="cong" name="transp" value="transport">
+                                                                <label for="cong">No</label> </p>
+                                                </div>
+                                        </div>                
                                             <input class="range-slider__range range-slider__rangeT3" type="range"
-                                                id="trans3" value="100" valueT="0" min="0" max="100">
+                                            id="trans3" value="100" valueT="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueT3"></span>
                                             <span class="range-slider__value range-slider__valueTT3"></span>
-                                        </p>
+                                         </div>
+                                          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "> 
+                                                <input type="text" id="datepicker" placeholder="select year" />
+                                           </div>
+                                       
+                                        </div>
+                                         <div class="row ">
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">  
                                         <p>
-                                            4. Subsidisation of Public Transport<br>
-                                           1.4 Expected Modal Shift (in %) for 2W, 4W
-
-                                            <input class="range-slider__range range-slider__rangeT4" type="range"
+                                            4.Building special tracks for walking and cycling.</p>
+                                     <div class="row ">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+                                            <input type="radio" id="walk" name="transp" value="transport">
+                                                         <label for="walk">Yes</label>
+                                        </div>
+                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+                                                   <input type="radio" id="walk" name="transp" value="transport">
+                                                         <label for="walk">No</label> 
+                                        </div>
+                                    </div>
+                                                           <input class="range-slider__range range-slider__rangeT4" type="range"
                                                 id="trans4" value="100" valueT="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueT4"></span>
                                             <span class="range-slider__value range-slider__valueTT4"></span>
-                                        </p>
-                                        <p>
-                                            5.Subsidisation of Public Transport<br>
-                                            <input class="range-slider__range range-slider__rangeT5" type="range"
-                                                id="trans5" value="100" valueT="0" min="0" max="100">
-                                            <span class="range-slider__value range-slider__valueT5"></span>
-                                            <span class="range-slider__value range-slider__valueTT5"></span>
-                                        </p>
-                                        <p>
-                                            6.Implementation of congestion tax<br>
-                                            <input class="range-slider__range range-slider__rangeT5" type="range"
-                                                id="trans5" value="100" valueT="0" min="0" max="100">
-                                            <span class="range-slider__value range-slider__valueT5"></span>
-                                            <span class="range-slider__value range-slider__valueTT5"></span>
-                                        </p>
-                                        <p>
-                                            7.Building special tracks for walking and cycling<br>
-                                            <input class="range-slider__range range-slider__rangeT5" type="range"
-                                                id="trans5" value="100" valueT="0" min="0" max="100">
-                                            <span class="range-slider__value range-slider__valueT5"></span>
-                                            <span class="range-slider__value range-slider__valueTT5"></span>
-                                        </p>
-                                        
+                                        </div>
+                                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "> 
+                                            <input type="text" id="datepicker" placeholder="select year"/>
+                                          </div>
+                                       
+                                       
+                                       </div>
                                 </div>
                                 </div>
                             </div>
@@ -381,27 +429,52 @@ require "php/session.php";
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <p>
-                                            1.Sustainable Agricultural Practices<br>
-                                            <input type="radio" id="alf" name="afolu" value="afo" >
+                             <div class="row ">
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">  
+                                        <p>
+                                             1.Sustainable Agricultural Practices</p>
+                                        <div class="row ">
+                                               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+                                                <input type="radio" id="alf" name="afolu" value="afo" >
                                                 <label for="alf">Yes</label>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
                                                 <input type="radio" id="alf1" name="afolu" value="afo" >
                                                 <label for="alf1">No</label><br>
-                                            <input class="range-slider__range range-slider__rangeAF1" type="range"
+                                                </div>  
+                                                </div>     
+                                                <input class="range-slider__range range-slider__rangeAF1" type="range"
                                                 id="AFOLU1" value="100" valueAF="0" min="0" max="100">
-                                            <span class="range-slider__value range-slider__valueAF1"></span>
-                                            <span class="range-slider__value range-slider__valueAFF1"></span>
-
-                                        </p>
-
+                                                <span class="range-slider__value range-slider__valueAF1"></span>
+                                                <span class="range-slider__value range-slider__valueAFF1"></span>
+                                        </div>
+                                          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "> 
+                                            <input type="text" id="datepicker" placeholder="select year"/>
+                                         </div>
+                                        </div>
+                                        <div class="row ">
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">  
                                         <p>
-                                            2. Livestock Management Practices<br>
+                                            2. Livestock Management Practices </p>
+                                            <div class="row ">
+                                               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+                                                <input type="radio" id="alf" name="afolu" value="afo" >
+                                                <label for="alf">Yes</label>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+                                                <input type="radio" id="alf1" name="afolu" value="afo" >
+                                                <label for="alf1">No</label><br>
+                                                </div>  
+                                                </div>  
                                             <input class="range-slider__range range-slider__rangeAF2" type="range"
                                                 id="AFOLU2" value="100" valueAF="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueAF2"></span>
                                             <span class="range-slider__value range-slider__valueAFF2"></span>
-
-                                        </p>
+                                            </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "> 
+                                            <input type="text" id="datepicker" placeholder="select year"/>
+                                         </div>                                     
+                                        </div>
                                     </div>
                                     </div>
                                 </div>
@@ -413,14 +486,19 @@ require "php/session.php";
                                 </h2>
                                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
+                                 <div class="row ">
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 "> 
                                      <p>
-                                            1. Reducing the amount of waste to landfill<br>
+                                            1. Reducing the amount of waste to landfill</p>
                                             <input class="range-slider__range range-slider__rangew1" type="range"
                                                 id="W1" value="100" valueW="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valuew1"></span>
                                             <span class="range-slider__value range-slider__valueww1"></span>
-
-                                        </p>
+                                             </div>
+                                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "> 
+                                            <input type="text" id="datepicker" placeholder="select year"/>
+                                         </div>                                          
+                                </div>
                                 </div>
                                 </div>
                             </div>
@@ -432,21 +510,37 @@ require "php/session.php";
                                 </h2>
                                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
+                                 <div class="row ">
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 "> 
                                       <p>
-                                            1. Coal replaced by PNG <br>
+                                            1. Coal replaced by PNG 
                                             <input class="range-slider__range range-slider__rangei1" type="range"
                                                 id="indu1" value="100" valueI="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valuei1"></span>
                                             <span class="range-slider__value range-slider__valueii1"></span>
                                         </p>
+                                        </div>
+                                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "> 
+                                            <input type="text" id="datepicker" placeholder="select year"/>
+                                         </div>   
+                                        </div>
+
+                                         <div class="row ">
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 "> 
                                         <p>
-                                            2.FO replaced by PNG<br>
+                                            2.FO replaced by PNG
                                             <input class="range-slider__range range-slider__rangei2" type="range"
                                                 id="indu2" value="100" valueI="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valuei2"></span>
-                                            <span class="range-slider__value range-slider__valueii2"></span>
-
-                                        </p>
+                                            <span class="range-slider__value range-slider__valueii2"></span> </p>
+                                            </div> 
+                                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "> 
+                                            <input type="text" id="datepicker" placeholder="select year"/>
+                                         </div>   
+                                        </div>        
+                                       
+                                        <div class="row ">
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 "> 
                                         <p>
                                             3.Briquettes replaced by PNG<br>
                                             <input class="range-slider__range range-slider__rangei3" type="range"
@@ -454,6 +548,13 @@ require "php/session.php";
                                             <span class="range-slider__value range-slider__valuei3"></span>
                                             <span class="range-slider__value range-slider__valueii3"></span>
                                         </p>
+                                         </div> 
+                                          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "> 
+                                            <input type="text" id="datepicker" placeholder="select year"/>
+                                         </div>   
+                                        </div>
+                                        <div class="row ">
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">  
                                         <p>
                                             4.HSD replaced by PNG<br>
                                             <input class="range-slider__range range-slider__rangei4" type="range"
@@ -461,6 +562,13 @@ require "php/session.php";
                                             <span class="range-slider__value range-slider__valuei3"></span>
                                             <span class="range-slider__value range-slider__valueii3"></span>
                                         </p>
+                                        </div>
+                                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "> 
+                                            <input type="text" id="datepicker" placeholder="select year"/>
+                                         </div> 
+                                         </div>
+                                         <div class="row ">
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 "> 
                                         <p>
                                            5. LDO replaced by PNG
                                         <input class="range-slider__range range-slider__rangei5" type="range"
@@ -468,14 +576,16 @@ require "php/session.php";
                                             <span class="range-slider__value range-slider__valuei3"></span>
                                             <span class="range-slider__value range-slider__valueii3"></span>
                                         </p>
+                                        </div>
+                                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "> 
+                                            <input type="text" id="datepicker" placeholder="select year"/>
+                                         </div> 
+                                         </div>
                                 </div>
                                 </div>
-                            </div>
+                            <!-- </div> -->
                                 </div>
-                                    <!-- ///// -->
-                                    <hr>
-                               
-                                           
+                                    <!-- ///// -->                                       
                 <!-- </div> -->
             </div>
 
@@ -499,6 +609,7 @@ require "php/session.php";
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
     </script>
+    <!-- togglebtn data-on="2030" -->
 
     <!-- ***** Footer Start ***** --> <?php
                                         include 'footer.php';
@@ -530,7 +641,10 @@ require "php/session.php";
     <script src="assets/js/bootstrap-show-modal.js"></script>
     <!-- <script async src="//jsfiddle.net/RiteshG09/csd9qey0/5/embed/"></script> -->
     <!-- <script async src="//jsfiddle.net/vW8zc/307embed/"></script> -->
+    <!-- ///datatimepeaker -->
      <script src="assets/js/jquery.ui.js"></script>
+<!-- toggle btn -->
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
      <!-- <script async src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script> -->
     <!-- <script type='text/javascript' src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script> -->
     <!-- <script src="js/colored.slider.js"></script> -->
@@ -564,20 +678,7 @@ require "php/session.php";
     // }
     </script>
     <script type="text/javascript">
-    $(function() {
-        $('#datepicker,#datepicker1').datepicker({
-            changeYear: true,
-            showButtonPanel: true,
-            dateFormat: 'yy',
-            onClose: function(dateText, inst) {
-                var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
-                $(this).datepicker('setDate', new Date(year, 1));
-            }
-        });
-        $(".date-picker-year").focus(function() {
-            $(".ui-datepicker-month").hide();
-        });
-    });
+  
     </script>
 
     <script>

@@ -95,7 +95,7 @@ function setEleGraph() {
         data: JSON.stringify(rangeBarValue),
         success: function (data) {
             var divList = JSON.parse(data);
-            
+
         }
     });
 }
@@ -247,7 +247,7 @@ rangeT5.on('input', function () {
     setTransGraph();
 });
 
-function setTransGraph(){
+function setTransGraph() {
     var myArray = [];
     myArray["0"] = valueRemainTrans1;
     myArray["1"] = valueRemainTrans2;
@@ -642,5 +642,33 @@ function getCardData() {
     });
 }
 
+document.getElementById('data-toggle').onchange = function (e) {
+    var year = document.getElementById("data-toggle").value;
+    // alert($('#data-toggle').val());
+    // alert('Toggle: ' + $(this).prop('checked'));
+    if ($(this).prop('checked') == true) {
+        actionchart(year);
+        alert("ok");
+    }
+    else {
+        actionchart(year);
+        alert("okkkkkk");
+    }
 
+};
+
+$(function () {
+    $('#datepicker,#datepicker1').datepicker({
+        changeYear: true,
+        showButtonPanel: true,
+        dateFormat: 'yy',
+        onClose: function (dateText, inst) {
+            var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+            $(this).datepicker('setDate', new Date(year, 1));
+        }
+    });
+    $(".date-picker-year").focus(function () {
+        $(".ui-datepicker-month").hide();
+    });
+});
 
