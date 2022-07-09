@@ -44,36 +44,17 @@ require "php/session.php";
 
     <link rel="stylesheet" type="text/css" href="slideControl.css" />
     <style>
-    /* #actionchart {
-            width: auto;
-            height: 500px;
-        }  */
-    /* #actionchart {
-        width: 100%;
-        height: 500px;
-    } */
+    
     #actionchart {
         width: auto;
         height: 500px;
     }
-
-
-    /* #electricity,
-    #transport,
-    #carbonGharph {
-        width: 100%;
-        height: 400px;
-    } */
-
-
- 
-    
+   
     #datepicker {
          background-color:#D3D3D3;
          width:100px;
-       /* background-color:#E0E0E0; */
-        /* background-color:#CCCCCC; */
     }
+
    .bgcl{
       background-color:#F0F0F0;	
    }
@@ -118,7 +99,7 @@ require "php/session.php";
                                     </div>
                                     <div class="text-end pt-1">
                                         <p class="text-sm mb-0 text-capitalize">Electricity</p>
-                                        <h6 class="mb-0" id="Eletricity"></h6>
+                                        <h6 class="mb-0 mt-2" id="Electricity"></h6>
                                     </div>
                                 </div>
 
@@ -133,7 +114,7 @@ require "php/session.php";
                                     </div>
                                     <div class="text-end pt-1">
                                         <p class="text-sm mb-0 text-capitalize">Transport</p>
-                                        <h6 class="mb-0" id="Transport"></h6>
+                                        <h6 class="mb-0 mt-2" id="Transport"></h6>
                                     </div>
                                 </div>
                             </div>
@@ -150,7 +131,7 @@ require "php/session.php";
                                     </div>
                                     <div class="text-end pt-1">
                                         <p class="text-sm mb-0 text-capitalize">AFOLU</p>
-                                        <h6 class="mb-0" id="AFOLU"></h6>
+                                        <h6 class="mb-0 mt-3" id="AFOLU"></h6>
                                     </div>
                                 </div>
                             </div>
@@ -164,7 +145,7 @@ require "php/session.php";
                                     </div>
                                     <div class="text-end pt-1">
                                         <p class="text-sm mb-0 text-capitalize">Waste</p>
-                                        <h6 class="mb-0" id="Wastewater"> </h6>
+                                        <h6 class="mb-0 mt-3" id="WasteWater"> </h6>
                                     </div>
                                 </div>
                             </div>
@@ -173,12 +154,12 @@ require "php/session.php";
                             <div class="card">
                                 <div class="card-header p-3 pt-2">
                                     <div class="rounded mt-n4 position-absolute iconAdmin">
-                                        <center><i class="fa fa-industry mt-2 mb-2" aria-hidden="true"
+                                        <center><i class="fa fa-industry mt-2 mb-3" aria-hidden="true"
                                                 style="font-size:26px;color:#e9ecef"></i></center>
                                     </div>
                                     <div class="text-end pt-1">
                                         <p class="text-sm mb-0 text-capitalize">Industry</p>
-                                        <h6 class="mb-0" id="Industry"> </h6>
+                                        <h6 class="mb-0 mt-3" id="energy"> </h6>
                                     </div>
                                 </div>
                             </div>
@@ -187,19 +168,10 @@ require "php/session.php";
 
                         <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos-delay="200">
 
-                            <!-- <div id="actionchart">
-                            </div> -->
-                            <!-- <button class="tablink" onclick="openPage('t1', this, '#888')">2030</button>
-                            <button class="tablink" onclick="openPage('t2', this, '#888')">2050 </button> -->
-
-                                <!-- <div id="t1" class="tabcontent"> -->
                                 <div id="chartName">                             
-                                <div id="actionchart">
-                                </div>
+                                <div id="actionchart"> </div> 
+                                                        
                                  </div>
-                                 <!-- </div> -->
-
-                           
                             
                         </div>
                     </div>
@@ -223,25 +195,26 @@ require "php/session.php";
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                       <div class="row ">
-                                         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">
-                                         <p>1.Power generation capacity (MMW) </p>
-                                        <div class="row ">
-                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
-                                               <p>I.Renewable:
-                                                <input class="form-control" type="text" id="Power"  style="width: 100px; height: 30px;"></p>
-                                          </div>   
-                                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">                                              
-                                             <p> II.Nuclear:<input class="form-control" type="text" id="Power" style="width: 100px; height: 30px;"></p>
+                                       <div class="row">
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">
+                                          <p>1.Power generation capacity (MMW) </p>
+                                            <div class="row ">
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+                                                    <p>I.Renewable:
+                                                        <input class="form-control" type="text" id="Power"  style="width: 100px; height: 30px;"></p>
+                                                </div>   
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">                                              
+                                                    <p> II.Nuclear:<input class="form-control" type="text" id="Power" style="width: 100px; height: 30px;"></p>
                                                 </div>
                                             </div>    
-                                            </div>
+                                        </div>
                                              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
                                             <input type="text" id="datepicker" placeholder="select year" />
                                             <!-- <input class="range-slider__range range-slider__rangeE1" type="range"
                                                 id="ele1" value="100" valueE1="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueE1"></span>
                                             <span class="range-slider__value range-slider__valueEE1"></span> -->
+                                        </div>
                                         </div>
                                         <div class="row ">
                                          <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">
@@ -299,7 +272,7 @@ require "php/session.php";
                                      <div class="row ">
                                         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">
                                             <p>4.% of carbon to be captured at TPP.</p>
-                                                <input class="range-slider__range range-slider__rangeE3" type="range" id="ele3"
+                                            <input class="range-slider__range range-slider__rangeE3" type="range" id="ele3"
                                             value="100" valueE3="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueE3"></span>
                                             <span class="range-slider__value range-slider__valueEE3"></span>
@@ -591,25 +564,7 @@ require "php/session.php";
 
         </div>
     </section><!-- End Hero -->
-    <script>
-    function openPage(pageName, elmnt, color) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablink");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].style.backgroundColor = "";
-        }
-        document.getElementById(pageName).style.display = "block";
-        elmnt.style.backgroundColor = "#2b2b2b";
-    }
-
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
-    </script>
-    <!-- togglebtn data-on="2030" -->
+   
 
     <!-- ***** Footer Start ***** --> <?php
                                         include 'footer.php';
@@ -639,8 +594,7 @@ require "php/session.php";
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/vendor/jbox/jBox.all.min.js"></script>
     <script src="assets/js/bootstrap-show-modal.js"></script>
-    <!-- <script async src="//jsfiddle.net/RiteshG09/csd9qey0/5/embed/"></script> -->
-    <!-- <script async src="//jsfiddle.net/vW8zc/307embed/"></script> -->
+   
     <!-- ///datatimepeaker -->
      <script src="assets/js/jquery.ui.js"></script>
 <!-- toggle btn -->
@@ -653,7 +607,7 @@ require "php/session.php";
     <!-- Our JS Files -->
     <!-- <script src="js/energyElectricityModel.js"></script> -->
     <script src="js/actionPlan.js"></script>
-
+      
     <script src="js/common.js"></script>
     <script src="assets/js/scrollreveal.min.js"></script>
     <script type="text/javascript">
@@ -677,54 +631,10 @@ require "php/session.php";
 
     // }
     </script>
+
     <script type="text/javascript">
   
     </script>
-
-    <script>
-    function updateTextInput(val) {
-        document.getElementById('textInput').value = val;
-    }
-    </script>
-
-
-    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script> -->
-    <script type="text/javascript" src="jquery.slideControl.js"></script>
-
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $('.slideControl').slideControl();
-    });
-    </script>
-
-    <!-- Range Bar -->
-    <!-- <script>
- $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
- </script>-->
-    <script>
-    //     var rangeSlider = function(){
-    //   var slider = $('.range-slider'),
-    //       range = $('.range-slider__range'),
-    //       value = $('.range-slider__value');
-
-    //   slider.each(function(){
-
-    //     value.each(function(){
-    //       var value = $(this).prev().attr('value');
-    //       $(this).html(value);
-    //     });
-
-    //     range.on('input', function(){
-    //       $(this).next(value).html(this.value);
-    //     });
-    //   });
-    // };
-
-    // rangeSlider();
-    </script>
-
 
 </body>
 

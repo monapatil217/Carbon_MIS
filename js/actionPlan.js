@@ -1,6 +1,8 @@
+var root = null;
 $(document).ready(function () {
-    getCardData();
-    actionchart();
+    getCardData(2030);
+    actionchart(2030);
+    grtDate(2030);
 
 
 })
@@ -491,152 +493,345 @@ rangei3.on('input', function () {
 //     });
 // }
 
+////Display selected year graph
 
-
-
-function actionchart() {
+function actionchart(year) {
     var basicId = document.getElementById("basicId").value;
     var myobj = {};
+    // $("#chartName").empty();
+    // var html1 = '  <div id="actionchart"></div>';
+    // $("#chartName").append(html1);
     myobj["basicId"] = basicId;
+    myobj["year"] = year;
     $.ajax({
         type: "POST",
         async: false,
-        url: "php/actiongraph.php",
+        url: "php/yearwisedata.php",
         contentType: "application/json",
         data: JSON.stringify(myobj),
         success: function (data) {
             var datalist = JSON.parse(data);
+           
             $.each(datalist, function (index, element) {
-                var cData = element.data;
-                am5.ready(function () {
-                    // Create root element
-                    // https://www.amcharts.com/docs/v5/getting-started/#Root_element
-                    var root = am5.Root.new("actionchart");
-                    // Set themes
-                    // https://www.amcharts.com/docs/v5/concepts/themes/
-                    root.setThemes([
-                        am5themes_Animated.new(root)
-                    ]);
-                    // Create chart
-                    // https://www.amcharts.com/docs/v5/charts/xy-chart/
-                    var chart = root.container.children.push(am5xy.XYChart.new(root, {
-                        panX: true,
-                        panY: false,
-                        wheelX: "panX",
-                        wheelY: "zoomX",
-                        layout: root.verticalLayout
-                    }));
-                    // Add scrollbar
-                    // https://www.amcharts.com/docs/v5/charts/xy-chart/scrollbars/
-                    chart.set("scrollbarX", am5.Scrollbar.new(root, {
-                        orientation: "horizontal"
-                    }));
-                    var data = cData;
-                    // Create axes
-                    // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
-                    var xRenderer = am5xy.AxisRendererX.new(root, { minGridDistance: 30 });
-                    var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
-                        categoryField: "Sectore",
-                        // renderer: am5xy.AxisRendererX.new(root, {}),
-                        renderer: xRenderer,
-                        tooltip: am5.Tooltip.new(root, {
-                            themeTags: ["axis"],
-                            animationDuration: 200
-                        })
-                    }));
-                    xAxis.children.moveValue(am5.Label.new(root, {
-                        text: "Sectores",
-                        fill: am5.color(0xFFFFFF),
-                        x: am5.p50,
-                        centerX: am5.p50
-                    }), xAxis.children.length - 1);
-                    xRenderer.grid.template.set("visible", false);
-                    xRenderer.labels.template.setAll({
-                        fill: am5.color(0xFFFFFF)
-                    });
-                    xAxis.data.setAll(data);
-                    var yRenderer = am5xy.AxisRendererY.new(root, {});
-                    var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-                        min: 0,
-                        // renderer: am5xy.AxisRendererY.new(root, {})
-                        renderer: yRenderer
-                    }));
-                    yAxis.children.moveValue(am5.Label.new(root, {
-                        rotation: -90,
-                        text: "Emissions(kt/year)",
-                        fill: am5.color(0xFFFFFF),
-                        y: am5.p50,
-                        centerX: am5.p50
-                    }), 0);
-                    yRenderer.grid.template.setAll({
-                        strokeDasharray: [2, 2],
-                    });
-                    yRenderer.labels.template.setAll({
-                        fill: am5.color(0xFFFFFF)
-                    });
-                    // Add series
-                    // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
-                    var series0 = chart.series.push(am5xy.ColumnSeries.new(root, {
-                        name: "Income",
-                        xAxis: xAxis,
-                        yAxis: yAxis,
-                        valueYField: "emission",
-                        categoryXField: "Sectore",
-                        clustered: false,
-                        tooltip: am5.Tooltip.new(root, {
-                            labelText: "Emission: {valueY}"
-                        })
-                    }));
-                    series0.columns.template.setAll({
-                        width: am5.percent(80),
-                        tooltipY: 0
-                    });
-                    series0.data.setAll(data);
-                    var series1 = chart.series.push(am5xy.ColumnSeries.new(root, {
-                        name: "Income",
-                        xAxis: xAxis,
-                        yAxis: yAxis,
-                        valueYField: "changeemi",
-                        categoryXField: "Sectore",
-                        clustered: false,
-                        tooltip: am5.Tooltip.new(root, {
-                            labelText: "Post Intervention: {valueY}"
-                        })
-                    }));
-                    series1.columns.template.setAll({
-                        width: am5.percent(50),
-                        tooltipY: 0
-                    });
-                    series1.data.setAll(data);
-                    var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
-                    // Make stuff animate on load
-                    // https://www.amcharts.com/docs/v5/concepts/animations/
-                    chart.appear(1000, 100);
-                    series0.appear();
-                    series1.appear();
-                });
-            });       // end am5.ready())
+                divList = element.data;
+                showGraph("actionchart", divList);
+            })
+
         }
     });
 }
 
-function getCardData() {
+
+
+function showGraph(divId) {
+    am5.ready(function () {
+        // Create root element
+        // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+        if (root != null) {
+            alert(root);
+            root.dispose();
+        }
+        root = am5.Root.new(divId);
+
+
+        // Set themes
+        // https://www.amcharts.com/docs/v5/concepts/themes/
+        root.setThemes([
+            am5themes_Animated.new(root)
+        ]);
+        // Create chart
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/
+        var chart = root.container.children.push(am5xy.XYChart.new(root, {
+            panX: true,
+            panY: false,
+            wheelX: "panX",
+            wheelY: "zoomX",
+            layout: root.verticalLayout
+        }));
+        // Add scrollbar
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/scrollbars/
+        chart.set("scrollbarX", am5.Scrollbar.new(root, {
+            orientation: "horizontal"
+        }));
+        var data = divList;
+        // Create axes
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+        var xRenderer = am5xy.AxisRendererX.new(root, { minGridDistance: 30 });
+        var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+            categoryField: "Sectore",
+            // renderer: am5xy.AxisRendererX.new(root, {}),
+            renderer: xRenderer,
+            tooltip: am5.Tooltip.new(root, {
+                themeTags: ["axis"],
+                animationDuration: 200
+            })
+        }));
+        xAxis.children.moveValue(am5.Label.new(root, {
+            text: "Sectores",
+            fill: am5.color(0xFFFFFF),
+            x: am5.p50,
+            centerX: am5.p50
+        }), xAxis.children.length - 1);
+        xRenderer.grid.template.set("visible", false);
+        xRenderer.labels.template.setAll({
+            fill: am5.color(0xFFFFFF)
+        });
+        xAxis.data.setAll(data);
+        var yRenderer = am5xy.AxisRendererY.new(root, {});
+        var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+            min: 0,
+            // renderer: am5xy.AxisRendererY.new(root, {})
+            renderer: yRenderer
+        }));
+        yAxis.children.moveValue(am5.Label.new(root, {
+            rotation: -90,
+            text: "Emissions(kt/year)",
+            fill: am5.color(0xFFFFFF),
+            y: am5.p50,
+            centerX: am5.p50
+        }), 0);
+        yRenderer.grid.template.setAll({
+            strokeDasharray: [2, 2],
+        });
+        yRenderer.labels.template.setAll({
+            fill: am5.color(0xFFFFFF)
+        });
+        // Add series
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+        var series0 = chart.series.push(am5xy.ColumnSeries.new(root, {
+            name: "emission",
+            xAxis: xAxis,
+            yAxis: yAxis,
+            valueYField: "emission",
+            categoryXField: "Sectore",
+            clustered: false,
+            tooltip: am5.Tooltip.new(root, {
+                labelText: "Emission: {valueY}"
+            })
+        }));
+        series0.columns.template.setAll({
+            width: am5.percent(80),
+            tooltipY: 0
+        });
+        series0.data.setAll(data);
+        var series1 = chart.series.push(am5xy.ColumnSeries.new(root, {
+            name: "changeemi",
+            xAxis: xAxis,
+            yAxis: yAxis,
+            valueYField: "changeemi",
+            categoryXField: "Sectore",
+            clustered: false,
+            tooltip: am5.Tooltip.new(root, {
+                labelText: "Post Intervention: {valueY}"
+            })
+        }));
+        series1.columns.template.setAll({
+            width: am5.percent(50),
+            tooltipY: 0
+        });
+        series1.data.setAll(data);
+        var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
+        // Make stuff animate on load
+        // https://www.amcharts.com/docs/v5/concepts/animations/
+        chart.appear(1000, 100);
+        series0.appear();
+        series1.appear();
+    });
+}
+
+
+//////mmmm/////
+
+
+
+
+// function actionchart(year) {
+//     var basicId = document.getElementById("basicId").value;
+//     // $("#actionchart").empty();
+//     var myobj = {};
+//     myobj["basicId"] = basicId;
+//     myobj["year"] = year;
+//     $.ajax({
+//         type: "POST",
+//         async: false,
+//         url: "php/yearwisedata.php",
+//         contentType: "application/json",
+//         data: JSON.stringify(myobj),
+//         success: function (data) {
+//             var datalist = JSON.parse(data);
+//             $.each(datalist, function (index, element) {
+//                 var cData = element.data;
+//                 am5.ready(function () {
+//                     // Create root element
+//                     // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+//                     if (root != null) {
+//                         alert(root);
+//                         root.dispose();
+//                     }
+//                     root = am5.Root.new("actionchart");
+
+
+//                     // Set themes
+//                     // https://www.amcharts.com/docs/v5/concepts/themes/
+//                     root.setThemes([
+//                         am5themes_Animated.new(root)
+//                     ]);
+//                     // Create chart
+//                     // https://www.amcharts.com/docs/v5/charts/xy-chart/
+//                     var chart = root.container.children.push(am5xy.XYChart.new(root, {
+//                         panX: true,
+//                         panY: false,
+//                         wheelX: "panX",
+//                         wheelY: "zoomX",
+//                         layout: root.verticalLayout
+//                     }));
+//                     // Add scrollbar
+//                     // https://www.amcharts.com/docs/v5/charts/xy-chart/scrollbars/
+//                     chart.set("scrollbarX", am5.Scrollbar.new(root, {
+//                         orientation: "horizontal"
+//                     }));
+//                     var data = cData;
+//                     // Create axes
+//                     // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+//                     var xRenderer = am5xy.AxisRendererX.new(root, { minGridDistance: 30 });
+//                     var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+//                         categoryField: "Sectore",
+//                         // renderer: am5xy.AxisRendererX.new(root, {}),
+//                         renderer: xRenderer,
+//                         tooltip: am5.Tooltip.new(root, {
+//                             themeTags: ["axis"],
+//                             animationDuration: 200
+//                         })
+//                     }));
+//                     xAxis.children.moveValue(am5.Label.new(root, {
+//                         text: "Sectores",
+//                         fill: am5.color(0xFFFFFF),
+//                         x: am5.p50,
+//                         centerX: am5.p50
+//                     }), xAxis.children.length - 1);
+//                     xRenderer.grid.template.set("visible", false);
+//                     xRenderer.labels.template.setAll({
+//                         fill: am5.color(0xFFFFFF)
+//                     });
+//                     xAxis.data.setAll(data);
+
+//                     var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+//                         min: -10,
+//                         renderer: am5xy.AxisRendererY.new(root, {})
+//                     }));
+//                     // var yRenderer = am5xy.AxisRendererY.new(root, {});
+//                     // var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+//                     //     min: 0,
+//                     //     // renderer: am5xy.AxisRendererY.new(root, {})
+//                     //     renderer: yRenderer
+//                     // }));
+//                     // yAxis.children.moveValue(am5.Label.new(root, {
+//                     //     rotation: -90,
+//                     //     text: "Emissions(kt/year)",
+//                     //     fill: am5.color(0xFFFFFF),
+//                     //     y: am5.p50,
+//                     //     centerX: am5.p50
+//                     // }), 0);
+//                     // yRenderer.grid.template.setAll({
+//                     //     strokeDasharray: [2, 2],
+//                     // });
+//                     // yRenderer.labels.template.setAll({
+//                     //     fill: am5.color(0xFFFFFF)
+//                     // });
+//                     // Add series
+//                     // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+//                     var series0 = chart.series.push(am5xy.ColumnSeries.new(root, {
+//                         name: "emission",
+//                         xAxis: xAxis,
+//                         yAxis: yAxis,
+//                         valueYField: "emission",
+//                         categoryXField: "Sectore",
+//                         clustered: false,
+//                         tooltip: am5.Tooltip.new(root, {
+//                             labelText: "Emission: {valueY}"
+//                         })
+//                     }));
+//                     series0.columns.template.setAll({
+//                         width: am5.percent(80),
+//                         tooltipY: 0
+//                     });
+//                     series0.data.setAll(data);
+//                     var series1 = chart.series.push(am5xy.ColumnSeries.new(root, {
+//                         name: "changeemi",
+//                         xAxis: xAxis,
+//                         yAxis: yAxis,
+//                         valueYField: "changeemi",
+//                         categoryXField: "Sectore",
+//                         clustered: false,
+//                         tooltip: am5.Tooltip.new(root, {
+//                             labelText: "Post Intervention: {valueY}"
+//                         })
+//                     }));
+//                     series1.columns.template.setAll({
+//                         width: am5.percent(50),
+//                         tooltipY: 0
+//                     });
+//                     series1.data.setAll(data);
+//                     /////m
+//                     var series2 = chart.series.push(am5xy.ColumnSeries.new(root, {
+//                         name: "minusval",
+//                         xAxis: xAxis,
+//                         yAxis: yAxis,
+//                         valueYField: "year2007",
+//                         categoryXField: "Sectore",
+//                         clustered: false,
+//                         tooltip: am5.Tooltip.new(root, {
+//                             labelText: "2007: {valueY}"
+//                         })
+//                     }));
+
+//                     series2.columns.template.setAll({
+//                         width: am5.percent(50),
+//                         tooltipY: 0
+//                     });
+
+//                     series2.data.setAll(data);
+//                     /////m
+//                     var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
+//                     // Make stuff animate on load
+//                     // https://www.amcharts.com/docs/v5/concepts/animations/
+//                     chart.appear(1000, 100);
+//                     series0.appear();
+//                     series1.appear();
+//                     series2.appear();
+//                 });
+
+//             });
+//         }
+//     });
+// }
+
+function getCardData(year) {
     var myobj = {};
     var basicId = document.getElementById("basicId").value;
     myobj["basicId"] = basicId;
+    myobj["year"] = year;
     $.ajax({
         type: "POST",
         async: false,
-        url: "php/emiPieChart.php",
+        url: "php/yearwisedata.php",
         contentType: "application/json",
         data: JSON.stringify(myobj),
         success: function (data) {
             var divList = JSON.parse(data);
             $.each(divList, function (index, element) {
-                var category = element.category;
-                var value = element.value;
-                value = value.toFixed(2);
-                $("#" + category).append(value + "&nbsp;tons/year");
+
+                var data2 = element.data;
+                $.each(data2, function (index, element1) {
+
+                    var sector = element1.Sectore;
+                    $($("#" + sector).append(emission + "&nbsp;MtCO2e/year")).empty();
+                    var emission = element1.emission;
+                    // value = value.toFixed(2);
+                    $("#" + sector).append(emission + "&nbsp;MtCO2e/year");
+                })
+
+
             })
         }
     });
@@ -644,24 +839,34 @@ function getCardData() {
 
 document.getElementById('data-toggle').onchange = function (e) {
     var year = document.getElementById("data-toggle").value;
+
     // alert($('#data-toggle').val());
     // alert('Toggle: ' + $(this).prop('checked'));
     if ($(this).prop('checked') == true) {
-        actionchart(year);
-        alert("ok");
+        // year = 2030;
+        // actionchart(year);
+        actionchart(2030);
+        getCardData(2030);
+        grtDate(2030);
+
     }
     else {
-        actionchart(year);
-        alert("okkkkkk");
+        // year = 2050;
+        // actionchart(year);
+        actionchart(2050);
+        getCardData(2050);
+        grtDate(2050);
     }
-
 };
 
-$(function () {
+function grtDate(year) {
+    var finalYear = '2022:' + year;
+    $('#datepicker,#datepicker1').datepicker("destroy");
     $('#datepicker,#datepicker1').datepicker({
         changeYear: true,
         showButtonPanel: true,
         dateFormat: 'yy',
+        yearRange: '2022:' + year,
         onClose: function (dateText, inst) {
             var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
             $(this).datepicker('setDate', new Date(year, 1));
@@ -670,5 +875,4 @@ $(function () {
     $(".date-picker-year").focus(function () {
         $(".ui-datepicker-month").hide();
     });
-});
-
+}

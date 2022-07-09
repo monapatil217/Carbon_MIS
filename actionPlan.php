@@ -424,13 +424,6 @@ require "php/session.php";
     // })
     </script>
 
-    <script>
-    function updateTextInput(val) {
-        document.getElementById('textInput').value = val;
-    }
-    </script>
-
-
     <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script> -->
     <script type="text/javascript" src="jquery.slideControl.js"></script>
 
