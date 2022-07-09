@@ -355,6 +355,7 @@ function showBMWInput() {
     $("#bmwInput").append(html);
 }
 
+// Temporarily Deactivate designs 
 // function showHWInput() {
 //     var html = '';
 
@@ -599,6 +600,7 @@ function showMSWData() {
 
     var dumpingYardM = aDumpingYard;
 
+    // Temporarily Deactivate
     //validation
     // if (generatedM < collectionM) {
     //     alert("Genrated value is less than collected value.");
@@ -627,8 +629,9 @@ function showMSWData() {
     } else {
         mswData["t_incin"] = 0;
     }
-    //validation
 
+    // Temporarily Deactivate
+    //validation
     // var addtreat = (parseInt(compostedM) + parseInt(disposalM) + parseInt(incineratedM));
     // if (collectionM < addtreat) {
     //     alert("Collected value is less than treatment value.");
@@ -725,6 +728,8 @@ function showBMWData() {
 
     var treatedB = document.getElementById("treatedB").value;
     flag += customInputValidator(treatedB, "treatedB");
+
+    // Temporarily Deactivate
     // validation
     // if (generatedB < collectedB || collectedB < treatedB) {
     //     alert("Genrated value is less than collected value.");
@@ -776,7 +781,7 @@ function showBMWData() {
 
 
 }
-
+// Temporarily Deactivate
 // function showHWData() {
 
 //     var flag = 0;

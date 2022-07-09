@@ -41,13 +41,7 @@ $(document).ready(function() {
 
 
     })
-    // $(document).ready(function(){
-    //     $("body").delegate('#myInputNumber', 'focusout', function(){
-    //         if($(this).val() < 0){
-    //             $(this).val('0');
-    //         }
-    //     });
-    // });
+ 
 
 
 

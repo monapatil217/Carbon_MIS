@@ -216,19 +216,7 @@ require "php/session.php";
                             </div>
                           
                         </div>
-                        <!-- //////m -->
-                            <!-- sample graph -->
-                         <!-- <div class="row justify-content-center">
-                             
-                              <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6"
-                                data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                                
-                                <div id="chartdivsample">
-                                    
-                                </div>
-                            </div>
-                        </div> -->
-                         <!-- End sample graph -->                        
+                        <!-- //////m -->                    
                         <div></div>
                         <!-- Next btn symbol -->
                              <div class="row align-items-center justify-content-center">
@@ -320,181 +308,17 @@ require "php/session.php";
     <!-- Our JS Files -->
     <script src="js/energyElectricityModel.js"></script>
     <!-- <script src="js/induGraph.js"></script> -->
-    <!-- <script src="js/combinegraph.js"></script> -->
     <script src="js/compareGraph.js"></script>
-    
     
     <script src="js/common.js"></script>
     <script>
+    // City name above Graph
      var city= document.getElementById("cityName").value;
     var res = city.substring(0, 2);
     res=res.toUpperCase();
     $("#shcity").append(res +" - "+city);
+    // City name above Graph
     </script>
-    <!-- ////  sample graph-->
-    
-
-    <!-- <script>
-am5.ready(function() {
-
-// Create root element
-// https://www.amcharts.com/docs/v5/getting-started/#Root_element
-var root = am5.Root.new("chartdivsample");
-
-
-
-
-// Set themes
-// https://www.amcharts.com/docs/v5/concepts/themes/
-root.setThemes([
-  am5themes_Animated.new(root)
-]);
-
-
-// Create chart
-// https://www.amcharts.com/docs/v5/charts/xy-chart/
-var chart = root.container.children.push(am5xy.XYChart.new(root, {
-  panX: false,
-  panY: false,
-  wheelX: "panX",
-  wheelY: "zoomX",
-  layout: root.verticalLayout
-}));
-//    chart.labels.template.setAll({
-//                         fill: am5.color(0xFFFFFF)
-//                     });
-
-// Add legend
-// https://www.amcharts.com/docs/v5/charts/xy-chart/legend-xy-series/
-var legend = chart.children.push(
-  am5.Legend.new(root, {
-    centerX: am5.p50,
-    x: am5.p50
-  })
-);
-  legend.labels.template.setAll({
-                      fill: am5.color(0xFFFFFF)
-                    });
-
-// Set data
-var data = [{
-              xlabel: "CO2",
-              value1: 2180.0023,
-              value2: 62687.6644
-        },{
-              xlabel: "CH4",
-            //   value1: 0.60234,
-            //   value2: 0.65429
-               value1:  0.0023,
-              value2: 0.65429
-        },{
-              xlabel: "N2O",
-            //   value1: 0.81301,
-            //   value2: 0.91601
-             value1:0.0032,
-              value2: 0.91601
-        }]
-
-// Create axes
-// https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
- var xRenderer = am5xy.AxisRendererX.new(root, { minGridDistance: 80 });
-var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
-  categoryField: "xlabel",
-//   renderer: am5xy.AxisRendererX.new(root, {
-//     cellStartLocation: 0.1,
-//     cellEndLocation: 0.9
-//      }),
-  renderer: xRenderer,
-  tooltip: am5.Tooltip.new(root, {})
-}));
-xAxis.children.moveValue(am5.Label.new(root, {
-                            text: "Pollutant",
-                            fill: am5.color(0xFFFFFF),
-                            x: am5.p50,
-                            centerX: am5.p50
-                        }), xAxis.children.length - 1);
-
-                        xRenderer.grid.template.set("visible", false);
-                        xRenderer.labels.template.setAll({
-                            fill: am5.color(0xFFFFFF)
-                        });
-
-xAxis.data.setAll(data);
-
-var yRenderer = am5xy.AxisRendererY.new(root, { });
-var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-   renderer: yRenderer
-
-}));
-  yAxis.children.moveValue(am5.Label.new(root, {
-                            rotation: -90,
-                            text: "Emissions(ktons/year)",
-                            fill: am5.color(0xFFFFFF),
-                            y: am5.p50,
-                            centerX: am5.p50
-                        }), 0);
-
-
-                        yRenderer.labels.template.setAll({
-                            fill: am5.color(0xFFFFFF)
-                        });
-
-
-// Add series
-// https://www.amcharts.com/docs/v5/charts/xy-chart/series/
-function makeSeries(name, fieldName) {
-  var series = chart.series.push(am5xy.ColumnSeries.new(root, {
-    name: name,
-    xAxis: xAxis,
-    yAxis: yAxis,
-    valueYField: fieldName,
-    categoryXField: "xlabel"
-    
-  }));
-
-  series.columns.template.setAll({
-    tooltipText: "{categoryX} {name}: {valueY}",
-    width: am5.percent(90),
-    tooltipY: 0
-  });
-
-  series.data.setAll(data);
-
-  // Make stuff animate on load
-  // https://www.amcharts.com/docs/v5/concepts/animations/
-  series.appear();
-
-  series.bullets.push(function () {
-    return am5.Bullet.new(root, {
-      locationY: 0,
-      sprite: am5.Label.new(root, {
-        text: "{valueY}",
-        fill: root.interfaceColors.get("alternativeText"),
-        centerY: 0,
-        centerX: am5.p50,
-        populateText: true
-      })
-    });
-  });
-   
-
-  legend.data.push(series);
-}
-
-
-makeSeries("ThisCity", "value1");
-makeSeries("Maharashtra", "value2");
-   
-
-
-// Make stuff animate on load
-// https://www.amcharts.com/docs/v5/concepts/animations/#Forcing_appearance_animation
-chart.appear(1000, 100);
-});
-</script> -->
-
-
-    <!-- /////  sample graph end-->
 
 </body>
 

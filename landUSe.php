@@ -213,16 +213,18 @@ require "php/session.php";
     <script src="assets/js/main.js"></script>
     <!-- Our js File  -->
     <script src="js/common.js"></script>
-    <script>
-     var city= document.getElementById("cityName").value;
-    var res = city.substring(0, 2);
-    res=res.toUpperCase();
-    $("#shcity").append(res +" - "+city);
-    </script>
+
     <script src="js/landUseModel.js"></script>
     <!-- <script src="js/induGraph.js"></script> -->
     <script src="js/compareGraph.js"></script>
-
+    <script>
+    // City name above Graph
+    var city= document.getElementById("cityName").value;
+    var res = city.substring(0, 2);
+    res=res.toUpperCase();
+    $("#shcity").append(res +" - "+city);
+    // City name above Graph
+    </script>
 </body>
 
 </html>

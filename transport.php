@@ -231,12 +231,13 @@ require "php/session.php";
     <script src="js/compareGraph.js"></script>
     <script src="js/common.js"></script>
     <script>
-     var city= document.getElementById("cityName").value;
+    // City name above Graph
+    var city= document.getElementById("cityName").value;
     var res = city.substring(0, 2);
     res=res.toUpperCase();
     $("#shcity").append(res +" - "+city);
+    // City name above Graph
     </script>
-    <!-- <script src="js/travelGraph.js"></script> -->
 </body>
 
 </html>
