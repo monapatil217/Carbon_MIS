@@ -201,15 +201,16 @@ require "php/session.php";
                                             <div class="row ">
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
                                                     <p>I.Renewable:
-                                                        <input class="form-control" type="text" id="Power"  style="width: 100px; height: 30px;"></p>
+                                                        <input class="form-control" type="text" id="rew1"  style="width: 100px; height: 30px;"></p>
                                                 </div>   
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">                                              
-                                                    <p> II.Nuclear:<input class="form-control" type="text" id="Power" style="width: 100px; height: 30px;"></p>
+                                                    <p> II.Nuclear:
+                                                    <input class="form-control" type="text" id="nucl1" style="width: 100px; height: 30px;"></p>
                                                 </div>
                                             </div>    
                                         </div>
                                              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
-                                            <input type="text" id="datepicker" placeholder="select year" />
+                                            <input type="text" id="datepicker" name="eledtP1" placeholder="select year" />
                                             <!-- <input class="range-slider__range range-slider__rangeE1" type="range"
                                                 id="ele1" value="100" valueE1="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueE1"></span>
@@ -230,14 +231,14 @@ require "php/session.php";
                                                                 <label for="ele">No</label><br>
 
                                                 </div> 
-                                                 <input class="range-slider__range range-slider__rangeE2" type="range" id="ele2"
-                                                 value="100" valueE2="0" min="0" max="100">
-                                                <span class="range-slider__value range-slider__valueE2"></span>
-                                                <span class="range-slider__value range-slider__valueEE2"></span>		
+                                                 <input class="range-slider__range range-slider__rangeE1" type="range" id="ele1"
+                                                 value="100" valueE1="0" min="0" max="100">
+                                                <span class="range-slider__value range-slider__valueE1"></span>
+                                                <span id="e1" class="range-slider__value range-slider__valueEE1"></span>		
                                             </div>
                                             </div>
                                       <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
-                                            <input type="text" id="datepicker" placeholder="select year"  />
+                                            <input type="text" id="datepicker" name="eledtP2" placeholder="select year"  />
                                        
                                         </p>
                                     </div>
@@ -258,14 +259,14 @@ require "php/session.php";
                                                     </div>
                                                     <!-- </div> -->
                                             </div>	
-                                                <input class="range-slider__range range-slider__rangeE3" type="range" id="ele3"
-                                                value="100" valueE3="0" min="0" max="100">
-                                                <span class="range-slider__value range-slider__valueE3"></span>
-                                                <span class="range-slider__value range-slider__valueEE3"></span>	
+                                                <input class="range-slider__range range-slider__rangeE2" type="range" id="ele2"
+                                                value="100" valueE2="0" min="0" max="100">
+                                                <span class="range-slider__value range-slider__valueE2"></span>
+                                                <span class="range-slider__value range-slider__valueEE2"></span>	
                                         </div>
 
                                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
-                                            <input type="text" id="datepicker" placeholder="select year" />                                                                           
+                                            <input type="text" id="datepicker" name="eledtP3" placeholder="select year" />                                                                           
                                         </div>
 
                                     </div>
@@ -278,22 +279,17 @@ require "php/session.php";
                                             <span class="range-slider__value range-slider__valueEE3"></span>
                                        </div>
                                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
-                                            <input type="text" id="datepicker" placeholder="select year" />
+                                            <input type="text" id="datepicker" name="eledtP4" placeholder="select year" />
                                        </div>
                                        </div>
                                       
-                                       <div class="row ">
-                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">
-                                        5.% of carbon to be captured at TPP.
-                                         <input class="range-slider__range range-slider__rangeE3" type="range" id="ele3"
-                                            value="100" valueE3="0" min="0" max="100">
-                                        <span class="range-slider__value range-slider__valueE3"></span>
-                                        <span class="range-slider__value range-slider__valueEE3"></span>
+                                      <!-- <br> -->
+                                        <div class="row ">                               
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  mb-3 text-center">
+                                            <button class="btn btn-primary " type="button"
+                                                onclick="postAction();">SAVE</button>
                                         </div>
-                                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
-                                            <input type="text" id="datepicker" placeholder="select year"/>
-                                        </div>
-                                      </div>  
+                                     </div>       
                                     </div>
                                     </div>
                                 </div>
@@ -312,11 +308,11 @@ require "php/session.php";
                                         <div class="row ">
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
                                            I. Modal Shift (in %) for 2W:
-                                           <input type= "text" class="form-control" id="Model" style="width: 100px; height: 30px;">
+                                           <input type= "text" class="form-control" id="model2w" style="width: 100px; height: 30px;">
                                         </div>
                                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
                                             II. Modal Shift (in %) for 4W:
-                                            <input type= "text" class="form-control" id="Model" style="width: 100px; height: 30px;">
+                                            <input type= "text" class="form-control" id="model4w" style="width: 100px; height: 30px;">
                                         </div>   
                                             </div>
                                             </div>
@@ -325,20 +321,20 @@ require "php/session.php";
                                                 id="trans1" value="100" valueT1="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valueT1"></span>
                                             <span class="range-slider__value range-slider__valueTT1"></span> -->
-                                             <input type="text" id="datepicker" placeholder="select year"/>
+                                             <input type="text" id="datepicker"  name="transdtP1"  placeholder="select year"/>
                                                </div>                                     
                                         </div>
                                         <div class="row ">
                                         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 ">       
                                         <p>
                                             2.Subsidisation of Public Transport<br> </p>
-                                              <input class="range-slider__range range-slider__rangeT2" type="range"
-                                                id="trans2" value="100" valueT="0" min="0" max="100">
-                                            <span class="range-slider__value range-slider__valueT2"></span>
-                                            <span class="range-slider__value range-slider__valueTT2"></span>
+                                              <input class="range-slider__range range-slider__rangeT1" type="range"
+                                                id="trans1" value="100" valueT="0" min="0" max="100">
+                                            <span class="range-slider__value range-slider__valueT1"></span>
+                                            <span class="range-slider__value range-slider__valueTT1"></span>
                                         </div>
                                          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 ">                                         
-                                             <input type="text" id="datepicker" placeholder="select year"/>
+                                             <input type="text" id="datepicker" name="transdtP2" placeholder="select year"/>
                                              </div>
                                        
                                         </div>
@@ -356,13 +352,13 @@ require "php/session.php";
                                                                 <label for="cong">No</label> </p>
                                                 </div>
                                         </div>                
-                                            <input class="range-slider__range range-slider__rangeT3" type="range"
-                                            id="trans3" value="100" valueT="0" min="0" max="100">
-                                            <span class="range-slider__value range-slider__valueT3"></span>
-                                            <span class="range-slider__value range-slider__valueTT3"></span>
+                                            <input class="range-slider__range range-slider__rangeT2" type="range"
+                                            id="trans2" value="100" valueT="0" min="0" max="100">
+                                            <span class="range-slider__value range-slider__valueT2"></span>
+                                            <span class="range-slider__value range-slider__valueTT2"></span>
                                          </div>
                                           <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "> 
-                                                <input type="text" id="datepicker" placeholder="select year" />
+                                                <input type="text" id="datepicker" name="transdtP3" placeholder="select year" />
                                            </div>
                                        
                                         </div>
@@ -380,17 +376,25 @@ require "php/session.php";
                                                          <label for="walk">No</label> 
                                         </div>
                                     </div>
-                                                           <input class="range-slider__range range-slider__rangeT4" type="range"
-                                                id="trans4" value="100" valueT="0" min="0" max="100">
-                                            <span class="range-slider__value range-slider__valueT4"></span>
-                                            <span class="range-slider__value range-slider__valueTT4"></span>
+                                                           <input class="range-slider__range range-slider__rangeT3" type="range"
+                                                id="trans3" value="100" valueT="0" min="0" max="100">
+                                            <span class="range-slider__value range-slider__valueT3"></span>
+                                            <span class="range-slider__value range-slider__valueTT3"></span>
                                         </div>
                                          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "> 
-                                            <input type="text" id="datepicker" placeholder="select year"/>
+                                            <input type="text" id="datepicker" name="transdtP4" placeholder="select year"/>
                                           </div>
                                        
                                        
                                        </div>
+                                       <br>
+                                       <div class="row ">                               
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  mb-3 text-center">
+                                            <button class="btn btn-primary " type="button"
+                                                onclick="postAction();">SAVE</button>
+                                        </div>
+                                     </div>    
+
                                 </div>
                                 </div>
                             </div>
@@ -422,7 +426,7 @@ require "php/session.php";
                                                 <span class="range-slider__value range-slider__valueAFF1"></span>
                                         </div>
                                           <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "> 
-                                            <input type="text" id="datepicker" placeholder="select year"/>
+                                            <input type="text" id="datepicker" name="afoludtP1" placeholder="select year"/>
                                          </div>
                                         </div>
                                         <div class="row ">
@@ -445,9 +449,16 @@ require "php/session.php";
                                             <span class="range-slider__value range-slider__valueAFF2"></span>
                                             </div>
                                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "> 
-                                            <input type="text" id="datepicker" placeholder="select year"/>
+                                            <input type="text" id="datepicker" name="afoludtP2" placeholder="select year"/>
                                          </div>                                     
                                         </div>
+                                        <br>
+                                        <div class="row ">                               
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  mb-3 text-center">
+                                            <button class="btn btn-primary " type="button"
+                                                onclick="postAction();">SAVE</button>
+                                        </div>
+                                     </div>  
                                     </div>
                                     </div>
                                 </div>
@@ -469,9 +480,16 @@ require "php/session.php";
                                             <span class="range-slider__value range-slider__valueww1"></span>
                                              </div>
                                          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "> 
-                                            <input type="text" id="datepicker" placeholder="select year"/>
+                                            <input type="text" id="datepicker" name="wastedtP2" placeholder="select year"/>
                                          </div>                                          
                                 </div>
+                                <br>
+                                <div class="row ">                               
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  mb-3 text-center">
+                                            <button class="btn btn-primary " type="button"
+                                                onclick="postAction();">SAVE</button>
+                                        </div>
+                                </div>  
                                 </div>
                                 </div>
                             </div>
@@ -488,13 +506,13 @@ require "php/session.php";
                                       <p>
                                             1. Coal replaced by PNG 
                                             <input class="range-slider__range range-slider__rangei1" type="range"
-                                                id="indu1" value="100" valueI="0" min="0" max="100">
+                                                id="indu1" value="100" valueI1="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valuei1"></span>
                                             <span class="range-slider__value range-slider__valueii1"></span>
                                         </p>
                                         </div>
                                          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "> 
-                                            <input type="text" id="datepicker" placeholder="select year"/>
+                                            <input type="text" id="datepicker" name="indudtP1" placeholder="select year"/>
                                          </div>   
                                         </div>
 
@@ -503,12 +521,12 @@ require "php/session.php";
                                         <p>
                                             2.FO replaced by PNG
                                             <input class="range-slider__range range-slider__rangei2" type="range"
-                                                id="indu2" value="100" valueI="0" min="0" max="100">
+                                                id="indu2" value="100" valueI2="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valuei2"></span>
                                             <span class="range-slider__value range-slider__valueii2"></span> </p>
                                             </div> 
                                              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "> 
-                                            <input type="text" id="datepicker" placeholder="select year"/>
+                                            <input type="text" id="datepicker"  name="indudtP2" placeholder="select year"/>
                                          </div>   
                                         </div>        
                                        
@@ -517,13 +535,13 @@ require "php/session.php";
                                         <p>
                                             3.Briquettes replaced by PNG<br>
                                             <input class="range-slider__range range-slider__rangei3" type="range"
-                                                id="indu3" value="100" valueI="0" min="0" max="100">
+                                                id="indu3" value="100" valueI3="0" min="0" max="100">
                                             <span class="range-slider__value range-slider__valuei3"></span>
                                             <span class="range-slider__value range-slider__valueii3"></span>
                                         </p>
                                          </div> 
                                           <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "> 
-                                            <input type="text" id="datepicker" placeholder="select year"/>
+                                            <input type="text" id="datepicker"  name="indudtP3" placeholder="select year"/>
                                          </div>   
                                         </div>
                                         <div class="row ">
@@ -531,13 +549,13 @@ require "php/session.php";
                                         <p>
                                             4.HSD replaced by PNG<br>
                                             <input class="range-slider__range range-slider__rangei4" type="range"
-                                                id="indu3" value="100" valueI="0" min="0" max="100">
-                                            <span class="range-slider__value range-slider__valuei3"></span>
-                                            <span class="range-slider__value range-slider__valueii3"></span>
+                                                id="indu4" value="100" valueI4="0" min="0" max="100">
+                                            <span class="range-slider__value range-slider__valuei4"></span>
+                                            <span class="range-slider__value range-slider__valueii4"></span>
                                         </p>
                                         </div>
                                          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "> 
-                                            <input type="text" id="datepicker" placeholder="select year"/>
+                                            <input type="text" id="datepicker"  name="indudtP4" placeholder="select year"/>
                                          </div> 
                                          </div>
                                          <div class="row ">
@@ -545,19 +563,33 @@ require "php/session.php";
                                         <p>
                                            5. LDO replaced by PNG
                                         <input class="range-slider__range range-slider__rangei5" type="range"
-                                                id="indu3" value="100" valueI="0" min="0" max="100">
-                                            <span class="range-slider__value range-slider__valuei3"></span>
-                                            <span class="range-slider__value range-slider__valueii3"></span>
+                                                id="indu5" value="100" valueI5="0" min="0" max="100">
+                                            <span class="range-slider__value range-slider__valuei5"></span>
+                                            <span class="range-slider__value range-slider__valueii5"></span>
                                         </p>
                                         </div>
                                          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "> 
-                                            <input type="text" id="datepicker" placeholder="select year"/>
+                                            <input type="text" id="datepicker"  name="indudtP5" placeholder="select year"/>
                                          </div> 
                                          </div>
+                                         <br>
+                                        <div class="row ">                               
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  mb-3 text-center">
+                                            <button class="btn btn-primary " type="button"
+                                                onclick="postAction();">SAVE</button>
+                                        </div>
+                                     </div>  
                                 </div>
                                 </div>
                             <!-- </div> -->
-                                </div>
+                                </div> <br>
+                                <!-- <div class="row ">                               
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  mb-3 text-center">
+                                            <button class="btn btn-primary " type="button"
+                                                onclick="postAction();">SAVE</button>
+                                        </div>
+                                       
+                                     </div>    -->
                                     <!-- ///// -->                                       
                 <!-- </div> -->
             </div>
