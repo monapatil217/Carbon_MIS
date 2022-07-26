@@ -288,9 +288,20 @@ function pop() {
     '<div class="row mt-2 mb-3">' +
     '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 infoFont">' +
     '<ul style="margin-left: 10px;">' +
-    '<li class="popupli"> India is the third largest producer of electricity in the world .</li>' +
-    '<li class="popupli"> The national electric grid in India has an installed capacity of 388.134 GW as of 31 August 2021.</li>' +
-    '<li class="popupli"> Renewable power plants, which also include large hydroelectric plants, constitute 37% of India' + "'" + 's total installed capacity. </li>' +
+    '<li class="popupli"> Gain-Loss method is used to estimate the annual change in forest biomass.' +
+    '<li class="popupli"> Annual Change in carbon stocks = Annual gain in biomass (∆CG)- Annual decrease in carbon stock due to biomass loss (∆CL)</br>'+
+    '∆CG = A ● GTOTAL ● CF</br>' +
+
+    'GTOTAL = mean annual biomass increment </br>' +
+    'A= area of land </br>' + 
+    'CF = carbon fraction of dry matter </br>' +
+    
+    '∆CL = Lwood-removals  + Lfuelwood + Ldisturbance </br>' +
+    
+    'Lwood-removals = loss due to wood removals </br>' +
+    'Lfuelwood = fuel wood gathering </br>' +
+    'Ldisturbance = disturbances </br>' +
+    
     '</ul>'
     // + '<center> <a class="my-3" href="http://www.ghgplatform-india.org/emissionestimates-phase2" target="_blank" rel="noopener noreferrer">Reference</a></center>'
     // + '<center><a class="my-3" href="http://www.technogreen.co.in/Survey/files/Estimates-Energy-National.xlsx" target="_blank" rel="noopener noreferrer">Reference</a></center>'

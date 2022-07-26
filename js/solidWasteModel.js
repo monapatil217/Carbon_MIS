@@ -879,12 +879,28 @@ function pop() {
 
     +
     '<div class="row mt-2 mb-3">' +
+    '<div style="overflow:auto; width:auto;height:400px;">'+
     '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 infoFont">' +
     '<ul style="margin-left: 10px;">' +
-    '<li class="popupli"> India is the third largest producer of electricity in the world .</li>' +
-    '<li class="popupli"> The national electric grid in India has an installed capacity of 388.134 GW as of 31 August 2021.</li>' +
-    '<li class="popupli"> Renewable power plants, which also include large hydroelectric plants, constitute 37% of India' + "'" + 's total installed capacity. </li>' +
+    
+    '<li class="popupli"> Composting:</br>Emissions CH4 = Amt of waste composted (in kg) * Emissions factor (g CH4/kg of waste).</li>' +
+    '<li class="popupli"> Emission N2O = Amt of waste composted (in kg) * Emissions factor (g N2O/kg of waste).</li>' +
+    '<li class="popupli"> Incineration : </br>CO2 emissions(Gg) = Amt of solid waste incinerated (in Gg) * dry matter content * fraction of carbon in dry matter  * fraction  of fossil carbon in total carbon * oxidation factor * 44/12. </li>' +
+    '<li class="popupli"> CH4 emissions = Amt of solid waste incinerated (in Gg) * EF (kgCH4/Gg). </li>' +
+    '<li class="popupli"> N2O emissions =  Amt of solid waste incinerated (in Gg) * EF (kgN2O/Gg). </li>' +
+    '<li class="popupli"> Landfill :</br>CH4 emissions = [CH4 generated - RT]*(1-OXT)</br>R = CH4 recovered, OX = oxidation factor. </li>' +
+    '<li class="popupli"> CH4 generated = DDOCm decompT * 0.5 * 16/12. </li>' +
+    '<li class="popupli"> DDOCm  = W * DOC * DOCf * MCF</br>W = amount of waste in landfill Gg</br>DOC = degradable organic carbon , fraction</br>DOCf = fraction of DOC that can decompose</br>MCF = CH4 correction factor for aerobic decomposition. </li>' +
+    '<li class="popupli"> Biomedical Waste:</br>Biomedical waste is treated ny incineration which produces harmful greenhouse gases. </li>' +
+    '<li class="popupli"> CO2 emissions = Amt of hazardous waste * fraction of waste type * dry matter content * carbon component * fraction  of fossil carbon in total carbon * oxidation factor * 44/12. </li>' +
+    '<li class="popupli"> CH4 emissions = Amt of biomedical waste incinerated (in Gg) * EF (kgCH4/Gg). </li>' +
+    '<li class="popupli"> N2O emissions =  Amt of biomedical waste incinerated (in Gg) * EF (kgN2O/Gg). </li>' +
+    '<li class="popupli"> Hazardous Waste :</br>Hazardous waste is treated by incineration which produces harmful greenhouse gases. </li>' +
+    '<li class="popupli"> CO2 emissions = Amt of hazardous waste * dry matter content * carbon component * fraction  of fossil carbon in total carbon * oxidation factor * 44/12. </li>' +
+    '<li class="popupli"> CH4 emissions = Amt of hazardous waste incinerated (in Gg) * EF (kgCH4/Gg). </li>' +
+    '<li class="popupli"> N2O emissions =  Amt of hazardous waste incinerated (in Gg) * EF (kgN2O/Gg). </li>' +
     '</ul>'
+    '</div>'+
     // + '<center> <a class="my-3" href="http://www.ghgplatform-india.org/emissionestimates-phase2" target="_blank" rel="noopener noreferrer">Reference</a></center>'
     // + '<center><a class="my-3" href="http://www.technogreen.co.in/Survey/files/Estimates-Energy-National.xlsx" target="_blank" rel="noopener noreferrer">Reference</a></center>'
     +

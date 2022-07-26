@@ -346,9 +346,36 @@ function pop() {
     '<div class="row mt-2 mb-3">' +
     '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 infoFont">' +
     '<ul style="margin-left: 10px;">' +
-    '<li class="popupli"> India is the third largest producer of electricity in the world .</li>' +
-    '<li class="popupli"> The national electric grid in India has an installed capacity of 388.134 GW as of 31 August 2021.</li>' +
-    '<li class="popupli"> Renewable power plants, which also include large hydroelectric plants, constitute 37% of India' + "'" + 's total installed capacity. </li>' +
+    '<li class="popupli"> Amount of fuel(kg/day) = No. of vehicles * distance travelled (km/day) * approx. fuel consumed (Lit/km) * density of fuel(kg/l) .</li>' +
+    '<li class="popupli"> Emissions(ton/day) = Amount of fuel (kilotonne/day) * EF(CO2/CH4/N2O) * NCV(acc. to the fuel)  .</li>' +
+    '<div class="row mt-2 mb-3">' +
+    '<table border = "1">' +
+    '<tr>' +
+       '<th>Fuel type</th>' +
+       '<th>CO2</th>' +
+      '<th>CH4</th>' +
+       '<th>N2O</th>' +
+    '</tr>' +
+    '<tr>' +
+       '<td>Petrol</td>' +
+       '<td>0.00016</td>' +
+       '<td>0.00000008</td>' +
+       '<td>0.00000001</td>' +
+    '</tr>' +    
+    '<tr>' +
+       '<td>Diesel</td>' +
+       '<td>0.00017190</td>' +
+       '<td>0.00000001</td>' +
+       '<td>0.00000001</td>' +
+    '</tr>' +
+     '<tr>' +
+       '<td>CNG </td>' +
+       '<td>0.00005386</td>' +
+       '<td>0.00000009</td>' +
+       '<td>0.00000000</td>' +
+    '</tr>' +
+ '</table>' +
+        '</div> ' +
     '</ul>'
     // + '<center> <a class="my-3" href="http://www.ghgplatform-india.org/emissionestimates-phase2" target="_blank" rel="noopener noreferrer">Reference</a></center>'
     // + '<center><a class="my-3" href="http://www.technogreen.co.in/Survey/files/Estimates-Energy-National.xlsx" target="_blank" rel="noopener noreferrer">Reference</a></center>'

@@ -752,9 +752,9 @@ function pop() {
     '<div class="row mt-2 mb-3">' +
     '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 infoFont">' +
     '<ul style="margin-left: 10px;">' +
-    '<li class="popupli"> India is the third largest producer of electricity in the world .</li>' +
-    '<li class="popupli"> The national electric grid in India has an installed capacity of 388.134 GW as of 31 August 2021.</li>' +
-    '<li class="popupli"> Renewable power plants, which also include large hydroelectric plants, constitute 37% of India' + "'" + 's total installed capacity. </li>' +
+    '<li class="popupli"> The major driver for industrial processes and product use is the emissions arising from cement production.The other drivers of IPPU emissions are ammonia production and iron and steel production.</li>' +
+    '<li class="popupli"> Emissions = Total Quantity of industrial product * Unit covnersion * Emission Factor </li>' +
+    '<li class="popupli"> Unit conversion is necessary to convert the activity data into equivalent mass in tonnes. </li>' +
     '</ul>'
     // + '<center> <a class="my-3" href="http://www.ghgplatform-india.org/emissionestimates-phase2" target="_blank" rel="noopener noreferrer">Reference</a></center>'
     // + '<center><a class="my-3" href="http://www.technogreen.co.in/Survey/files/Estimates-Energy-National.xlsx" target="_blank" rel="noopener noreferrer">Reference</a></center>'

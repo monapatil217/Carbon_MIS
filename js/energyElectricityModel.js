@@ -346,9 +346,9 @@ function pop() {
     '<div class="row mt-2 mb-3">' +
     '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 infoFont">' +
     '<ul style="margin-left: 10px;">' +
-    '<li class="popupli"> India is the third largest producer of electricity in the world .</li>' +
-    '<li class="popupli"> The national electric grid in India has an installed capacity of 388.134 GW as of 31 August 2021.</li>' +
-    '<li class="popupli"> Renewable power plants, which also include large hydroelectric plants, constitute 37% of India' + "'" + 's total installed capacity. </li>' +
+    '<li class="popupli"> Amount of coal(kg/month) =  Amt of electricity(MW/month) * coal for 1 MW(700 kg/MW) * % share of coal(0.64)  .</li>' +
+    '<li class="popupli"> Emissions(ton/month) = Amt of coal(‘000 tonne/month) * EF(CO2/CH4/N2O) * NCV.</li>' +
+    '<li class="popupli"> 1 MW of electricity emits 0.84  ton CO2/month, 0.000009 ton CH4/month and 0.000012 ton N2O/month. </li>' +
     '</ul>'
     // + '<center> <a class="my-3" href="http://www.ghgplatform-india.org/emissionestimates-phase2" target="_blank" rel="noopener noreferrer">Reference</a></center>'
     // + '<center><a class="my-3" href="http://www.technogreen.co.in/Survey/files/Estimates-Energy-National.xlsx" target="_blank" rel="noopener noreferrer">Reference</a></center>'
