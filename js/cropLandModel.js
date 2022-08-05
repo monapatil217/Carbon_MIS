@@ -81,6 +81,7 @@ function showCropLand() {
                             '</div>' +
                             '</div>' +
                             '</div>';
+
                         // + '<div class="row justify-content-center">'
                         // + '<div class="col-md-6 col-lg-10 col-xl-9 col-10">'
                         // + '<label for="mineralS" class="form-label"> Area of cropland on mineral soil </label>'
