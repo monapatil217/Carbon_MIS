@@ -1,36 +1,36 @@
 var popup = document.getElementById('popup-wrapper');
 var btn = document.getElementById("popup-btn");
 var span = document.getElementById("close");
-btn.onclick = function() {
+btn.onclick = function () {
     popup.classList.add('show');
 }
-span.onclick = function() {
+span.onclick = function () {
     popup.classList.remove('show');
 }
 
-window.onclick = function(event) {
-        if (event.target == popup) {
-            popup.classList.remove('show');
-        }
+window.onclick = function (event) {
+    if (event.target == popup) {
+        popup.classList.remove('show');
     }
-    /////
+}
+/////
 var popup1 = document.getElementById('popup-wrapper1');
 var btn1 = document.getElementById("popup-btn1");
 var span1 = document.getElementById("close1");
-btn1.onclick = function() {
+btn1.onclick = function () {
     popup1.classList.add('show');
 }
-span1.onclick = function() {
+span1.onclick = function () {
     popup1.classList.remove('show');
 }
 
-window.onclick = function(event) {
-        if (event.target == popup1) {
-            popup1.classList.remove('show');
-        }
+window.onclick = function (event) {
+    if (event.target == popup1) {
+        popup1.classList.remove('show');
     }
-    ////
-$(document).ready(function() {
+}
+////
+$(document).ready(function () {
     showMSWInput();
     showBMWInput();
     // showHWInput();
@@ -53,16 +53,16 @@ function showMSWInput() {
         url: "php/getAllData.php",
         contentType: "application/json",
         data: JSON.stringify(myobj),
-        success: function(data) {
+        success: function (data) {
             var divList = JSON.parse(data);
-            $.each(divList, function(index, element) {
+            $.each(divList, function (index, element) {
                 var check = element.check;
 
                 if (check == "true") {
 
                     var eledata = element.cData;
 
-                    $.each(eledata, function(index, element1) {
+                    $.each(eledata, function (index, element1) {
                         var n_yard = element1.n_yard;
                         var yardData = element1.YardData;
                         html = '<div class="row">' +
@@ -74,51 +74,51 @@ function showMSWInput() {
                             ' </div>' +
                             ' </div>'
 
-                        +
-                        ' <div class="col-md-6 col-lg-4 col-xl-4 col-10 mt-3">' +
-                        ' <label for="collectionM" class="form-label"> Collection</label>' +
-                        ' <div class="input-group mb-2">' +
-                        ' <input type="number" id="collectionM" name="collectionM" value="' + element1.msw_col + '" class="form-control" placeholder="Collection" aria-label="Collection" aria-describedby="basic-addon2">' +
+                            +
+                            ' <div class="col-md-6 col-lg-4 col-xl-4 col-10 mt-3">' +
+                            ' <label for="collectionM" class="form-label"> Collection</label>' +
+                            ' <div class="input-group mb-2">' +
+                            ' <input type="number" id="collectionM" name="collectionM" value="' + element1.msw_col + '" class="form-control" placeholder="Collection" aria-label="Collection" aria-describedby="basic-addon2">' +
                             '  <span class="input-group-text" id="basic-addon-2">MTD</span>' +
                             ' </div>' +
                             ' </div>'
 
-                        +
-                        ' <div class="col-md-6 col-lg-6 col-xl-4 col-10 mt-3">' +
-                        '  <label for="treatment" class="form-label">Treatment</label>' +
-                        ' <div class="form-group col-md-2  col-xl-10">' +
-                        ' <select class="form-control" id="treatmentM" onchange="addTreatmentType();" >' +
-                        ' <option disabled selected> Treatment Type</option>' +
-                        ' <option value="Composting">Composting</option>' +
-                        '<option value="Landfill">Landfill</option>' +
-                        '<option value="Incineration">Incineration</option>' +
-                        '</select >' +
-                        '</div >' +
-                        '</div>' +
-                        '</div>' +
-                        '<div class="row" id="comp">'
+                            +
+                            ' <div class="col-md-6 col-lg-6 col-xl-4 col-10 mt-3">' +
+                            '  <label for="treatment" class="form-label">Treatment</label>' +
+                            ' <div class="form-group col-md-2  col-xl-10">' +
+                            ' <select class="form-control" id="treatmentM" onchange="addTreatmentType();" >' +
+                            ' <option disabled selected> Treatment Type</option>' +
+                            ' <option value="Composting">Composting</option>' +
+                            '<option value="Landfill">Landfill</option>' +
+                            '<option value="Incineration">Incineration</option>' +
+                            '</select >' +
+                            '</div >' +
+                            '</div>' +
+                            '</div>' +
+                            '<div class="row" id="comp">'
 
-                        +
-                        '<div class="row justify-content-center">' +
-                        '<div class="col-md-6 col-lg-10 col-xl-3 col-10">' +
-                        '<h4></h4>' +
-                        '</div>' +
-                        '</div>'
+                            +
+                            '<div class="row justify-content-center">' +
+                            '<div class="col-md-6 col-lg-10 col-xl-3 col-10">' +
+                            '<h4></h4>' +
+                            '</div>' +
+                            '</div>'
 
-                        +
-                        '</div>'
+                            +
+                            '</div>'
 
-                        +
-                        '<div class="row justify-content-left" >' +
-                        '<div class="col-md-6 col-lg-10 col-xl-3 col-10">' +
-                        '<button  id="dumpingYardM" name="dumpingYardM" value="' + element1.n_yard + '" type="button" class="btn btn-primary" onclick="addDumpingYard();">No.Of Yards ✚</button>' +
+                            +
+                            '<div class="row justify-content-left" >' +
+                            '<div class="col-md-6 col-lg-10 col-xl-3 col-10">' +
+                            '<button  id="dumpingYardM" name="dumpingYardM" value="' + element1.n_yard + '" type="button" class="btn btn-primary" onclick="addDumpingYard();">No.Of Yards ✚</button>' +
                             '</div>' +
                             '</div>'
                             // + ' </div>'
                             +
                             '<div class="row justify-content-center" id="adddDYard">';
                         var i = 1;
-                        $.each(yardData, function(index, element2) {
+                        $.each(yardData, function (index, element2) {
 
                             // for (var i = 1; i <= n_yard; i++) {
                             aDumpingYard++;
@@ -127,38 +127,38 @@ function showMSWInput() {
                                 '<div class="row  text-center ">' +
                                 '<h4>Details About Dumping Yard ' + i + ' </h4>'
 
-                            +
-                            ' </div>' +
-                            '<div class="row justify-content-center">'
+                                +
+                                ' </div>' +
+                                '<div class="row justify-content-center">'
 
-                            +
-                            '<div class="col-md-6 col-lg-10 col-xl-3 col-10">' +
-                            '<label for="area' + i + '" class="form-label"> Area of Dumping Yard</label>' +
+                                +
+                                '<div class="col-md-6 col-lg-10 col-xl-3 col-10">' +
+                                '<label for="area' + i + '" class="form-label"> Area of Dumping Yard</label>' +
                                 '<div class="input-group mb-2">' +
                                 '<input type="number" id="area' + i + '" name="area' + i + '" value="' + element2.area + '"  class="form-control" placeholder="Arera of Dumping Yard" aria-label="Arera of Dumping Yard" aria-describedby="basic-addon2">' +
                                 ' <span class="input-group-text" id="basic-addon2">sq.km</span>' +
                                 '</div>' +
                                 '</div>'
 
-                            +
-                            '<div class="col-md-6 col-lg-10 col-xl-3 col-10">' +
-                            '<label for="latitude' + i + '" class="form-label"> Latitude</label>' +
+                                +
+                                '<div class="col-md-6 col-lg-10 col-xl-3 col-10">' +
+                                '<label for="latitude' + i + '" class="form-label"> Latitude</label>' +
                                 '<div class="input-group mb-2">' +
                                 '<input type="number" id="latitude' + i + '" name="latitude' + i + '" value="' + element2.lat + '"  class="form-control" placeholder="Latitude" aria-label="Residential" aria-describedby="basic-addon2">' +
                                 '</div>' +
                                 '</div>'
 
-                            +
-                            '<div class="col-md-6 col-lg-10 col-xl-3 col-10">' +
-                            '<label for="longitude' + i + '" class="form-label"> Longitude</label>' +
+                                +
+                                '<div class="col-md-6 col-lg-10 col-xl-3 col-10">' +
+                                '<label for="longitude' + i + '" class="form-label"> Longitude</label>' +
                                 '<div class="input-group mb-2">' +
                                 '<input type="number" id="longitude' + i + '" name="longitude' + i + '" value="' + element2.loong + '"  class="form-control" placeholder="Longitude" aria-label="Longitude" aria-describedby="basic-addon2">' +
                                 '</div>' +
                                 '</div>'
 
-                            +
-                            '<div class="col-md-6 col-lg-10 col-xl-3 col-10">' +
-                            '<label for="apxWaste' + i + '" class="form-label"> Approximate Waste</label>' +
+                                +
+                                '<div class="col-md-6 col-lg-10 col-xl-3 col-10">' +
+                                '<label for="apxWaste' + i + '" class="form-label"> Approximate Waste</label>' +
                                 '<div class="input-group mb-2">' +
                                 '<input type="number" id="apxWaste' + i + '" name="apxWaste' + i + '" value="' + element2.app_waste + '"  class="form-control" placeholder="Approximate Waste" aria-label="Approximate Waste" aria-describedby="basic-addon2">' +
                                 ' <span class="input-group-text" id="basic-addon2">MTD</span>' +
@@ -168,8 +168,8 @@ function showMSWInput() {
                                 '</div>' +
                                 '</div></div>'
 
-                            +
-                            '</div>';
+                                +
+                                '</div>';
                             // + '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
                             // + '</div>';
@@ -198,49 +198,49 @@ function showMSWInput() {
                         ' </div>' +
                         ' </div>'
 
-                    +
-                    ' <div class="col-md-6 col-lg-4 col-xl-4 col-10 mt-3">' +
-                    ' <label for="collectionM" class="form-label"> Collection</label>' +
-                    ' <div class="input-group mb-2">' +
-                    ' <input type="number" id="collectionM" name="collectionM"  class="form-control" placeholder="Collection" aria-label="Collection" aria-describedby="basic-addon2">' +
-                    '  <span class="input-group-text" id="basic-addon-2">MTD</span>' +
-                    ' </div>' +
-                    ' </div>'
+                        +
+                        ' <div class="col-md-6 col-lg-4 col-xl-4 col-10 mt-3">' +
+                        ' <label for="collectionM" class="form-label"> Collection</label>' +
+                        ' <div class="input-group mb-2">' +
+                        ' <input type="number" id="collectionM" name="collectionM"  class="form-control" placeholder="Collection" aria-label="Collection" aria-describedby="basic-addon2">' +
+                        '  <span class="input-group-text" id="basic-addon-2">MTD</span>' +
+                        ' </div>' +
+                        ' </div>'
 
-                    +
-                    ' <div class="col-md-6 col-lg-6 col-xl-4 col-10 mt-3">' +
-                    '  <label for="treatment" class="form-label">Treatment</label>' +
-                    ' <div class="form-group col-md-2  col-xl-10">' +
-                    ' <select class="form-control" id="treatmentM" onchange="addTreatmentType();" >' +
-                    ' <option disabled selected> Treatment Type</option>' +
-                    ' <option value="Composting">Composting</option>' +
-                    '<option value="Landfill">Landfill</option>' +
-                    '<option value="Incineration">Incineration</option>' +
-                    '</select >' +
-                    '</div >' +
-                    '</div>' +
-                    '</div>' +
-                    '<div class="row" id="comp">'
+                        +
+                        ' <div class="col-md-6 col-lg-6 col-xl-4 col-10 mt-3">' +
+                        '  <label for="treatment" class="form-label">Treatment</label>' +
+                        ' <div class="form-group col-md-2  col-xl-10">' +
+                        ' <select class="form-control" id="treatmentM" onchange="addTreatmentType();" >' +
+                        ' <option disabled selected> Treatment Type</option>' +
+                        ' <option value="Composting">Composting</option>' +
+                        '<option value="Landfill">Landfill</option>' +
+                        '<option value="Incineration">Incineration</option>' +
+                        '</select >' +
+                        '</div >' +
+                        '</div>' +
+                        '</div>' +
+                        '<div class="row" id="comp">'
 
-                    +
-                    '</div>'
+                        +
+                        '</div>'
 
-                    +
-                    '<div class="row justify-content-left" >' +
-                    '<div class="col-md-6 col-lg-10 col-xl-3 col-10">' +
-                    '<button  id="dumpingYardM" name="dumpingYardM" value="" type="button" class="btn btn-primary" onclick="addDumpingYard();">No.Of Yards ✚</button>' +
-                    '</div>' +
-                    '</div>'
+                        +
+                        '<div class="row justify-content-left" >' +
+                        '<div class="col-md-6 col-lg-10 col-xl-3 col-10">' +
+                        '<button  id="dumpingYardM" name="dumpingYardM" value="" type="button" class="btn btn-primary" onclick="addDumpingYard();">No.Of Yards ✚</button>' +
+                        '</div>' +
+                        '</div>'
 
-                    +
-                    '<div class="row justify-content-center" id="adddDYard"> </div>'
+                        +
+                        '<div class="row justify-content-center" id="adddDYard"> </div>'
 
-                    +
-                    '<div class="row">' +
-                    '<div class="col-md-12 mb-3 mt-3 text-center">' +
-                    '<button class="btn btn-primary " type="button" onclick="showMSWData();">SAVE</button>' +
-                    '</div>' +
-                    '</div >';
+                        +
+                        '<div class="row">' +
+                        '<div class="col-md-12 mb-3 mt-3 text-center">' +
+                        '<button class="btn btn-primary " type="button" onclick="showMSWData();">SAVE</button>' +
+                        '</div>' +
+                        '</div >';
                 }
             });
         }
@@ -266,14 +266,14 @@ function showBMWInput() {
         url: "php/getAllData.php",
         contentType: "application/json",
         data: JSON.stringify(myobj),
-        success: function(data) {
+        success: function (data) {
             var divList = JSON.parse(data);
-            $.each(divList, function(index, element) {
+            $.each(divList, function (index, element) {
                 var check = element.check;
 
                 if (check == "true") {
                     var eledata = element.cData;
-                    $.each(eledata, function(index, element1) {
+                    $.each(eledata, function (index, element1) {
 
                         html = '<div class="row">' +
                             '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">' +
@@ -284,31 +284,31 @@ function showBMWInput() {
                             '        </div>' +
                             '    </div>'
 
-                        +
-                        '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">' +
-                        '        <label for="collectedB" class="form-label"> Collected</label>' +
-                        '        <div class="input-group mb-2">' +
-                        '            <input type="number" id="collectedB" name="collectedB"  value="' + element1.bmw_coll + '" class="form-control" placeholder="Collected" aria-label="Collected" aria-describedby="basic-addon2">' +
+                            +
+                            '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">' +
+                            '        <label for="collectedB" class="form-label"> Collected</label>' +
+                            '        <div class="input-group mb-2">' +
+                            '            <input type="number" id="collectedB" name="collectedB"  value="' + element1.bmw_coll + '" class="form-control" placeholder="Collected" aria-label="Collected" aria-describedby="basic-addon2">' +
                             '            <span class="input-group-text" id="basic-addon-2">MTD</span>' +
                             '        </div>' +
                             '    </div>'
 
-                        +
-                        '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">' +
-                        '        <label for="treatedB" class="form-label"> Treated </label>' +
-                        '        <div class="input-group mb-2">' +
-                        '            <input type="number" id="treatedB" name="treatedB"  value="' + element1.bmw_treat + '" class="form-control" placeholder="Treated" aria-label="Treated" aria-describedby="basic-addon2">' +
+                            +
+                            '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">' +
+                            '        <label for="treatedB" class="form-label"> Treated </label>' +
+                            '        <div class="input-group mb-2">' +
+                            '            <input type="number" id="treatedB" name="treatedB"  value="' + element1.bmw_treat + '" class="form-control" placeholder="Treated" aria-label="Treated" aria-describedby="basic-addon2">' +
                             '            <span class="input-group-text" id="basic-addon-2">MTD</span>' +
                             '        </div>' +
                             '    </div>' +
                             '</div>'
 
-                        +
-                        ' <div class="row">' +
-                        '<div class="col-md-12 mb-3 text-center">' +
-                        ' <button class="btn btn-primary " type="button" onclick="showBMWData();">SAVE</button>' +
-                        ' </div>' +
-                        ' </div >';
+                            +
+                            ' <div class="row">' +
+                            '<div class="col-md-12 mb-3 text-center">' +
+                            ' <button class="btn btn-primary " type="button" onclick="showBMWData();">SAVE</button>' +
+                            ' </div>' +
+                            ' </div >';
                     });
                     // addChart();
                 } else {
@@ -322,31 +322,31 @@ function showBMWInput() {
                         '        </div>' +
                         '    </div>'
 
-                    +
-                    '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">' +
-                    '        <label for="collectedB" class="form-label"> Collected</label>' +
-                    '        <div class="input-group mb-2">' +
-                    '            <input type="number" id="collectedB" name="collectedB" class="form-control" placeholder="Collected" aria-label="Collected" aria-describedby="basic-addon2">' +
-                    '            <span class="input-group-text" id="basic-addon-2">MTD</span>' +
-                    '        </div>' +
-                    '    </div>'
+                        +
+                        '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">' +
+                        '        <label for="collectedB" class="form-label"> Collected</label>' +
+                        '        <div class="input-group mb-2">' +
+                        '            <input type="number" id="collectedB" name="collectedB" class="form-control" placeholder="Collected" aria-label="Collected" aria-describedby="basic-addon2">' +
+                        '            <span class="input-group-text" id="basic-addon-2">MTD</span>' +
+                        '        </div>' +
+                        '    </div>'
 
-                    +
-                    '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">' +
-                    '        <label for="treatedB" class="form-label"> Treated </label>' +
-                    '        <div class="input-group mb-2">' +
-                    '            <input type="number" id="treatedB" name="treatedB" class="form-control" placeholder="Treated" aria-label="Treated" aria-describedby="basic-addon2">' +
-                    '            <span class="input-group-text" id="basic-addon-2">MTD</span>' +
-                    '        </div>' +
-                    '    </div>' +
-                    '</div>'
+                        +
+                        '    <div class="col-md-6 col-lg-6 col-xl-4 col-10">' +
+                        '        <label for="treatedB" class="form-label"> Treated </label>' +
+                        '        <div class="input-group mb-2">' +
+                        '            <input type="number" id="treatedB" name="treatedB" class="form-control" placeholder="Treated" aria-label="Treated" aria-describedby="basic-addon2">' +
+                        '            <span class="input-group-text" id="basic-addon-2">MTD</span>' +
+                        '        </div>' +
+                        '    </div>' +
+                        '</div>'
 
-                    +
-                    ' <div class="row">' +
-                    '<div class="col-md-12 mb-3 text-center">' +
-                    ' <button class="btn btn-primary " type="button" onclick="showBMWData();">SAVE</button>' +
-                    ' </div>' +
-                    ' </div >';
+                        +
+                        ' <div class="row">' +
+                        '<div class="col-md-12 mb-3 text-center">' +
+                        ' <button class="btn btn-primary " type="button" onclick="showBMWData();">SAVE</button>' +
+                        ' </div>' +
+                        ' </div >';
                 }
             });
         }
@@ -514,11 +514,11 @@ function addDumpingYard() {
         '<div class="row  text-center " >' +
         '<h4>Details About Dumping Yard ' + aDumpingYard + ' </h4>'
 
-    +
-    ' </div>' +
-    '<div class="row justify-content-center">' +
-    '<div class="col-md-6 col-lg-10 col-xl-3 col-10">' +
-    '<label for="area' + aDumpingYard + '" class="form-label"> Area of Dumping Yard</label>' +
+        +
+        ' </div>' +
+        '<div class="row justify-content-center">' +
+        '<div class="col-md-6 col-lg-10 col-xl-3 col-10">' +
+        '<label for="area' + aDumpingYard + '" class="form-label"> Area of Dumping Yard</label>' +
         '<div class="input-group mb-2">' +
         '<input type="number" id="area' + aDumpingYard + '" name="area' + aDumpingYard + '" class="form-control" placeholder="Area of Dumping Yard" aria-label="Arera of Dumping Yard" aria-describedby="basic-addon2">' +
         ' <span class="input-group-text" id="basic-addon2">sq.km</span>' +
@@ -526,28 +526,28 @@ function addDumpingYard() {
         '</div>' +
         '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-    +
-    '<label for="latitude' + aDumpingYard + '" class="form-label"> Latitude</label>' +
+        +
+        '<label for="latitude' + aDumpingYard + '" class="form-label"> Latitude</label>' +
         '<div class="input-group mb-2">' +
         '<input type="number" id="latitude' + aDumpingYard + '" name="latitude' + aDumpingYard + '" class="form-control" placeholder="Latitude" aria-label="Residential" aria-describedby="basic-addon2">' +
         '</div>'
 
-    +
-    '</div>' +
-    '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+        +
+        '</div>' +
+        '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-    +
-    '<label for="longitude' + aDumpingYard + '" class="form-label"> Longitude</label>' +
+        +
+        '<label for="longitude' + aDumpingYard + '" class="form-label"> Longitude</label>' +
         '<div class="input-group mb-2">' +
         '<input type="number" id="longitude' + aDumpingYard + '" name="longitude' + aDumpingYard + '" class="form-control" placeholder="Longitude" aria-label="Longitude" aria-describedby="basic-addon2">' +
         '</div>'
 
-    +
-    '</div>' +
-    '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+        +
+        '</div>' +
+        '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-    +
-    '<label for="apxWaste' + aDumpingYard + '" class="form-label"> Approximate Waste</label>' +
+        +
+        '<label for="apxWaste' + aDumpingYard + '" class="form-label"> Approximate Waste</label>' +
         '<div class="input-group mb-2">' +
         '<input type="number" id="apxWaste' + aDumpingYard + '" name="apxWaste' + aDumpingYard + '" class="form-control" placeholder="Approximate Waste" aria-label="Approximate Waste" aria-describedby="basic-addon2">' +
         ' <span class="input-group-text" id="basic-addon2">MTD</span>' +
@@ -556,13 +556,13 @@ function addDumpingYard() {
         '</div>' +
         '</div>'
 
-    +
-    '</div>' +
-    '</div>' +
-    '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
+        +
+        '</div>' +
+        '</div>' +
+        '<div class="col-md-6 col-lg-10 col-xl-3 col-10">'
 
-    +
-    '  </div>';
+        +
+        '  </div>';
 
 
 
@@ -691,7 +691,7 @@ function showMSWData() {
             url: "php/savemswsolid.php",
             contentType: "application/json",
             data: JSON.stringify(mswData),
-            success: function(data) {
+            success: function (data) {
                 // var data1 = JSON.parse(data);
                 if (data == "success") {
                     alert("Data Save Succesfuly");
@@ -761,7 +761,7 @@ function showBMWData() {
             url: "php/saveBmwSolid.php",
             contentType: "application/json",
             data: JSON.stringify(bmwData),
-            success: function(data) {
+            success: function (data) {
                 if (data == "success") {
                     alert("Data Save Succesfuly");
                     $("#faq-list-2").removeClass("show");
@@ -843,27 +843,27 @@ function showSolidInfo() {
     $("#popUpData").empty();
     var html1 = '<div class="row" >'
 
-    +'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto "><center><h5 class="mt-4">Solid Waste </h5></center>'
+        + '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto "><center><h5 class="mt-4">Solid Waste </h5></center>'
 
-    +
-    '<div class="row mt-2 mb-3">' +
-    '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">' +
-    '<ul style="margin-left: 10px;">' +
-    '<li class="popupli"> Solid waste generated from the city is 361 kg/day of CO2 equivalent in the environment. </li>' +
-    '<li class="popupli">The net annual emission of CH4 from landfills in India increased from 404 Gg in 1999–2000 . </li>' +
-    '<li class="popupli">India generates 62 million tonnes of waste each year. About 43 million tonnes (70%) are collected of which about 12 million tonnes are treated and 31 million tonnes are dumped in landfill sites.</li>'
-    // + '<li class="popupli">Around 37.9% installed generation capacity is due to renewable energy sources.</li>'
-    // + '<li class="popupli">Around 1.7% installed generation capacity is due to Nuclear Fuel.</li>'
-    +
-    '</ul>'
-    // + '<br>Despite its soaring energy needs, India has one of the lowest per capita rates of consumption of power in the world - 734 units as compared to a world average of 2,429 units. </b></p>'
-    // + '<center> <a class="my-3" href="http://www.ghgplatform-india.org/emissionestimates-phase2" target="_blank" rel="noopener noreferrer">Reference</a></center>'
-    // + '<center><a class="my-3" href="http://www.technogreen.co.in/Survey/files/Estimates-Energy-National.xlsx" target="_blank" rel="noopener noreferrer">Reference</a></center>'
+        +
+        '<div class="row mt-2 mb-3">' +
+        '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">' +
+        '<ul style="margin-left: 10px;">' +
+        '<li class="popupli"> Solid waste generated from the city is 361 kg/day of CO2 equivalent in the environment. </li>' +
+        '<li class="popupli">The net annual emission of CH4 from landfills in India increased from 404 Gg in 1999–2000 . </li>' +
+        '<li class="popupli">India generates 62 million tonnes of waste each year. About 43 million tonnes (70%) are collected of which about 12 million tonnes are treated and 31 million tonnes are dumped in landfill sites.</li>'
+        // + '<li class="popupli">Around 37.9% installed generation capacity is due to renewable energy sources.</li>'
+        // + '<li class="popupli">Around 1.7% installed generation capacity is due to Nuclear Fuel.</li>'
+        +
+        '</ul>'
+        // + '<br>Despite its soaring energy needs, India has one of the lowest per capita rates of consumption of power in the world - 734 units as compared to a world average of 2,429 units. </b></p>'
+        // + '<center> <a class="my-3" href="http://www.ghgplatform-india.org/emissionestimates-phase2" target="_blank" rel="noopener noreferrer">Reference</a></center>'
+        // + '<center><a class="my-3" href="http://www.technogreen.co.in/Survey/files/Estimates-Energy-National.xlsx" target="_blank" rel="noopener noreferrer">Reference</a></center>'
 
-    +
-    '</div> ' +
-    '</div>' +
-    '</div></div>';
+        +
+        '</div> ' +
+        '</div>' +
+        '</div></div>';
     $("#popUpData").append(html1);
 }
 ///calculation steps
@@ -875,37 +875,37 @@ function pop() {
     $("#popUpData1").empty();
     var html1 = '<div class="row" >'
 
-    +'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto "><center><h5 class="mt-4">calculations </h5></center>'
+        + '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto "><center><h5 class="mt-4">calculations </h5></center>'
 
-    +
-    '<div class="row mt-2 mb-3">' +
-    '<div style="overflow:auto; width:auto;height:400px;">'+
-    '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 infoFont">' +
-    '<ul style="margin-left: 10px;">' +
-    
-    '<li class="popupli"> Composting:</br>Emissions CH4 = Amt of waste composted (in kg) * Emissions factor (g CH4/kg of waste).</li>' +
-    '<li class="popupli"> Emission N2O = Amt of waste composted (in kg) * Emissions factor (g N2O/kg of waste).</li>' +
-    '<li class="popupli"> Incineration : </br>CO2 emissions(Gg) = Amt of solid waste incinerated (in Gg) * dry matter content * fraction of carbon in dry matter  * fraction  of fossil carbon in total carbon * oxidation factor * 44/12. </li>' +
-    '<li class="popupli"> CH4 emissions = Amt of solid waste incinerated (in Gg) * EF (kgCH4/Gg). </li>' +
-    '<li class="popupli"> N2O emissions =  Amt of solid waste incinerated (in Gg) * EF (kgN2O/Gg). </li>' +
-    '<li class="popupli"> Landfill :</br>CH4 emissions = [CH4 generated - RT]*(1-OXT)</br>R = CH4 recovered, OX = oxidation factor. </li>' +
-    '<li class="popupli"> CH4 generated = DDOCm decompT * 0.5 * 16/12. </li>' +
-    '<li class="popupli"> DDOCm  = W * DOC * DOCf * MCF</br>W = amount of waste in landfill Gg</br>DOC = degradable organic carbon , fraction</br>DOCf = fraction of DOC that can decompose</br>MCF = CH4 correction factor for aerobic decomposition. </li>' +
-    '<li class="popupli"> Biomedical Waste:</br>Biomedical waste is treated ny incineration which produces harmful greenhouse gases. </li>' +
-    '<li class="popupli"> CO2 emissions = Amt of hazardous waste * fraction of waste type * dry matter content * carbon component * fraction  of fossil carbon in total carbon * oxidation factor * 44/12. </li>' +
-    '<li class="popupli"> CH4 emissions = Amt of biomedical waste incinerated (in Gg) * EF (kgCH4/Gg). </li>' +
-    '<li class="popupli"> N2O emissions =  Amt of biomedical waste incinerated (in Gg) * EF (kgN2O/Gg). </li>' +
-    '<li class="popupli"> Hazardous Waste :</br>Hazardous waste is treated by incineration which produces harmful greenhouse gases. </li>' +
-    '<li class="popupli"> CO2 emissions = Amt of hazardous waste * dry matter content * carbon component * fraction  of fossil carbon in total carbon * oxidation factor * 44/12. </li>' +
-    '<li class="popupli"> CH4 emissions = Amt of hazardous waste incinerated (in Gg) * EF (kgCH4/Gg). </li>' +
-    '<li class="popupli"> N2O emissions =  Amt of hazardous waste incinerated (in Gg) * EF (kgN2O/Gg). </li>' +
-    '</ul>'
-    '</div>'+
-    // + '<center> <a class="my-3" href="http://www.ghgplatform-india.org/emissionestimates-phase2" target="_blank" rel="noopener noreferrer">Reference</a></center>'
-    // + '<center><a class="my-3" href="http://www.technogreen.co.in/Survey/files/Estimates-Energy-National.xlsx" target="_blank" rel="noopener noreferrer">Reference</a></center>'
-    +
-    '</div> ' +
+        +
+        '<div class="row mt-2 mb-3">' +
+        '<div style="overflow:auto; width:auto;height:400px;">' +
+        '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 infoFont">' +
+        '<ul style="margin-left: 10px;">' +
+
+        '<li class="popupli"> Composting:</br>Emissions CH4 = Amt of waste composted (in kg) * Emissions factor (g CH4/kg of waste).</li>' +
+        '<li class="popupli"> Emission N2O = Amt of waste composted (in kg) * Emissions factor (g N2O/kg of waste).</li>' +
+        '<li class="popupli"> Incineration : </br>CO2 emissions(Gg) = Amt of solid waste incinerated (in Gg) * dry matter content * fraction of carbon in dry matter  * fraction  of fossil carbon in total carbon * oxidation factor * 44/12. </li>' +
+        '<li class="popupli"> CH4 emissions = Amt of solid waste incinerated (in Gg) * EF (kgCH4/Gg). </li>' +
+        '<li class="popupli"> N2O emissions =  Amt of solid waste incinerated (in Gg) * EF (kgN2O/Gg). </li>' +
+        '<li class="popupli"> Landfill :</br>CH4 emissions = [CH4 generated - R<sub>T</sub>]*(1-OX<sub>T</sub>])</br>R = CH4 recovered, OX = oxidation factor. </li>' +
+        '<li class="popupli"> CH4 generated = DDOCm decompT * 0.5 * 16/12. </li>' +
+        '<li class="popupli"> DDOCm  = W * DOC * DOC<sub>f</sub> * MCF</br>W = amount of waste in landfill Gg</br>DOC = degradable organic carbon , fraction</br>DOC<sub>f</sub> = fraction of DOC that can decompose</br>MCF = CH4 correction factor for aerobic decomposition. </li>' +
+        '<li class="popupli"> Biomedical Waste:</br>Biomedical waste is treated ny incineration which produces harmful greenhouse gases. </li>' +
+        '<li class="popupli"> CO2 emissions = Amt of hazardous waste * fraction of waste type * dry matter content * carbon component * fraction  of fossil carbon in total carbon * oxidation factor * 44/12. </li>' +
+        '<li class="popupli"> CH4 emissions = Amt of biomedical waste incinerated (in Gg) * EF (kgCH4/Gg). </li>' +
+        '<li class="popupli"> N2O emissions =  Amt of biomedical waste incinerated (in Gg) * EF (kgN2O/Gg). </li>' +
+        '<li class="popupli"> Hazardous Waste :</br>Hazardous waste is treated by incineration which produces harmful greenhouse gases. </li>' +
+        '<li class="popupli"> CO2 emissions = Amt of hazardous waste * dry matter content * carbon component * fraction  of fossil carbon in total carbon * oxidation factor * 44/12. </li>' +
+        '<li class="popupli"> CH4 emissions = Amt of hazardous waste incinerated (in Gg) * EF (kgCH4/Gg). </li>' +
+        '<li class="popupli"> N2O emissions =  Amt of hazardous waste incinerated (in Gg) * EF (kgN2O/Gg). </li>' +
+        '</ul>'
     '</div>' +
-    '</div></div>';
+        // + '<center> <a class="my-3" href="http://www.ghgplatform-india.org/emissionestimates-phase2" target="_blank" rel="noopener noreferrer">Reference</a></center>'
+        // + '<center><a class="my-3" href="http://www.technogreen.co.in/Survey/files/Estimates-Energy-National.xlsx" target="_blank" rel="noopener noreferrer">Reference</a></center>'
+        +
+        '</div> ' +
+        '</div>' +
+        '</div></div>';
     $("#popUpData1").append(html1);
 }

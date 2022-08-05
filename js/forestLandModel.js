@@ -1,14 +1,14 @@
 var popup = document.getElementById('popup-wrapper');
 var btn = document.getElementById("popup-btn");
 var span = document.getElementById("close");
-btn.onclick = function() {
+btn.onclick = function () {
     popup.classList.add('show');
 }
-span.onclick = function() {
+span.onclick = function () {
     popup.classList.remove('show');
 }
 
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == popup) {
         popup.classList.remove('show');
     }
@@ -16,21 +16,21 @@ window.onclick = function(event) {
 var popup1 = document.getElementById('popup-wrapper1');
 var btn1 = document.getElementById("popup-btn1");
 var span1 = document.getElementById("close1");
-btn1.onclick = function() {
+btn1.onclick = function () {
     popup1.classList.add('show');
 }
-span1.onclick = function() {
+span1.onclick = function () {
     popup1.classList.remove('show');
 }
 
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == popup1) {
         popup1.classList.remove('show');
     }
 }
-$(document).ready(function() {
+$(document).ready(function () {
     showForestLand();
-    $(function() {
+    $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     })
 })
@@ -51,14 +51,14 @@ function showForestLand() {
         url: "php/getAllData.php",
         contentType: "application/json",
         data: JSON.stringify(myobj),
-        success: function(data) {
+        success: function (data) {
             var divList = JSON.parse(data);
-            $.each(divList, function(index, element) {
+            $.each(divList, function (index, element) {
                 var check = element.check;
 
                 if (check == "true") {
                     var eledata = element.cData;
-                    $.each(eledata, function(index, element1) {
+                    $.each(eledata, function (index, element1) {
 
                         html = '<div class="row justify-content-center">' +
                             '<div class="col-md-6 col-lg-10 col-xl-9 col-10">' +
@@ -220,7 +220,7 @@ function saveForestData() {
             url: "php/saveForest.php",
             contentType: "application/json",
             data: JSON.stringify(forestData),
-            success: function(data) {
+            success: function (data) {
                 //  var data1 = JSON.parse(data);
                 if (data == "success") {
                     alert("Data Save Succesfuly");
@@ -251,25 +251,25 @@ function showforestLInfo() {
     $("#popUpData").empty();
     var html1 = '<div class="row" >'
 
-    +'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto "><center><h5 class="mt-4">Forest Land </h5></center>'
+        + '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto "><center><h5 class="mt-4">Forest Land </h5></center>'
 
-    +
-    '<div class="row mt-2 mb-3">' +
-    '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">' +
-    '<ul style="margin-left: 10px;">' +
-    '<li class="popupli">An assessment by the Forest Survey of India (FSI) last year had projected that, by 2030, the carbon stock in forests as well as tree cover was likely to reach 31.87 billion tonnes of CO2 equivalent.</li>'
-    // + '<li class="popupli">Globally cotton cultivation accounts for 220 million metric tons of CO2 per year.</li>'
-    // + '<li class="popupli">Cropland-based agricultural activities account for 24.17 percent of India’s total methane and 95.84 percent of the total nitrous oxide emission from the agricultural sector.</li>'
-    +
-    '</ul>'
-    // +'<br>Despite its soaring energy needs, India has one of the lowest per capita rates of consumption of power in the world - 734 units as compared to a world average of 2,429 units. </b></p>'
-    // +'<center> <a class="my-3" href="http://www.ghgplatform-india.org/emissionestimates-phase2" target="_blank" rel="noopener noreferrer">Reference</a></center>' 
-    // +'<center><a class="my-3" href="http://www.technogreen.co.in/Survey/files/Estimates-Energy-National.xlsx" target="_blank" rel="noopener noreferrer">Reference</a></center>'
+        +
+        '<div class="row mt-2 mb-3">' +
+        '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">' +
+        '<ul style="margin-left: 10px;">' +
+        '<li class="popupli">An assessment by the Forest Survey of India (FSI) last year had projected that, by 2030, the carbon stock in forests as well as tree cover was likely to reach 31.87 billion tonnes of CO2 equivalent.</li>'
+        // + '<li class="popupli">Globally cotton cultivation accounts for 220 million metric tons of CO2 per year.</li>'
+        // + '<li class="popupli">Cropland-based agricultural activities account for 24.17 percent of India’s total methane and 95.84 percent of the total nitrous oxide emission from the agricultural sector.</li>'
+        +
+        '</ul>'
+        // +'<br>Despite its soaring energy needs, India has one of the lowest per capita rates of consumption of power in the world - 734 units as compared to a world average of 2,429 units. </b></p>'
+        // +'<center> <a class="my-3" href="http://www.ghgplatform-india.org/emissionestimates-phase2" target="_blank" rel="noopener noreferrer">Reference</a></center>' 
+        // +'<center><a class="my-3" href="http://www.technogreen.co.in/Survey/files/Estimates-Energy-National.xlsx" target="_blank" rel="noopener noreferrer">Reference</a></center>'
 
-    +
-    '</div> ' +
-    '</div>' +
-    '</div></div>';
+        +
+        '</div> ' +
+        '</div>' +
+        '</div></div>';
     $("#popUpData").append(html1);
 }
 
@@ -282,33 +282,33 @@ function pop() {
     $("#popUpData1").empty();
     var html1 = '<div class="row" >'
 
-    +'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto "><center><h5 class="mt-4">calculations </h5></center>'
+        + '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto "><center><h5 class="mt-4">calculations </h5></center>'
 
-    +
-    '<div class="row mt-2 mb-3">' +
-    '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 infoFont">' +
-    '<ul style="margin-left: 10px;">' +
-    '<li class="popupli"> Gain-Loss method is used to estimate the annual change in forest biomass.' +
-    '<li class="popupli"> Annual Change in carbon stocks = Annual gain in biomass (∆CG)- Annual decrease in carbon stock due to biomass loss (∆CL)</br>'+
-    '∆CG = A ● GTOTAL ● CF</br>' +
+        +
+        '<div class="row mt-2 mb-3">' +
+        '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 infoFont">' +
+        '<ul style="margin-left: 10px;">' +
+        '<li class="popupli"> Gain-Loss method is used to estimate the annual change in forest biomass.' +
+        '<li class="popupli"> Annual Change in carbon stocks = Annual gain in biomass (∆CG)</br>- Annual decrease in carbon stock due to biomass loss (∆CL)</br>' +
+        '∆CG = A ● GTOTAL ● CF</br>' +
 
-    'GTOTAL = mean annual biomass increment </br>' +
-    'A= area of land </br>' + 
-    'CF = carbon fraction of dry matter </br>' +
-    
-    '∆CL = Lwood-removals  + Lfuelwood + Ldisturbance </br>' +
-    
-    'Lwood-removals = loss due to wood removals </br>' +
-    'Lfuelwood = fuel wood gathering </br>' +
-    'Ldisturbance = disturbances </br>' +
-    
-    '</ul>'
-    // + '<center> <a class="my-3" href="http://www.ghgplatform-india.org/emissionestimates-phase2" target="_blank" rel="noopener noreferrer">Reference</a></center>'
-    // + '<center><a class="my-3" href="http://www.technogreen.co.in/Survey/files/Estimates-Energy-National.xlsx" target="_blank" rel="noopener noreferrer">Reference</a></center>'
-    +
-    '</div> ' +
-    '</div>' +
-    '</div></div>';
+        'GTOTAL = mean annual biomass increment </br>' +
+        'A= area of land </br>' +
+        'CF = carbon fraction of dry matter </br>' +
+
+        '∆CL = Lwood-removals  + Lfuelwood + Ldisturbance </br>' +
+
+        'Lwood-removals = loss due to wood removals </br>' +
+        'Lfuelwood = fuel wood gathering </br>' +
+        'Ldisturbance = disturbances </br>' +
+
+        '</ul>'
+        // + '<center> <a class="my-3" href="http://www.ghgplatform-india.org/emissionestimates-phase2" target="_blank" rel="noopener noreferrer">Reference</a></center>'
+        // + '<center><a class="my-3" href="http://www.technogreen.co.in/Survey/files/Estimates-Energy-National.xlsx" target="_blank" rel="noopener noreferrer">Reference</a></center>'
+        +
+        '</div> ' +
+        '</div>' +
+        '</div></div>';
     $("#popUpData1").append(html1);
 }
 /////
