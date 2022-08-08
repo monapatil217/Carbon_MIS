@@ -280,10 +280,6 @@ function intactionchart() {
                             labelText: "{name}, {categoryX}:{valueY}",
                             width: am5.percent(90),
                             tooltipY: 0
-
-
-                            // labelText: "{name}, {categoryX}:{valueY}",
-
                         });
 
                         series.data.setAll(data);
@@ -293,18 +289,6 @@ function intactionchart() {
                         series.appear();
 
                         series.bullets.push(function () {
-                            // return am5.Bullet.new(root, {
-                            //     locationY: 0,
-                            //     sprite: am5.Label.new(root, {
-                            //         text: "{valueY}",
-                            //         fill: root.interfaceColors.get("alternativeText"),
-                            //         centerY: 0,
-                            //         centerX: am5.p50,
-                            //         populateText: true
-
-                            //     })
-
-                            // });
                             return am5.Bullet.new(root, {
                                 locationY: 0.93,
                                 sprite: am5.Label.new(root, {
@@ -328,7 +312,8 @@ function intactionchart() {
                     makeSeries("Transport", "Transport");
                     makeSeries("AFOLU", "AFOLU");
                     makeSeries("MSW", "WasteWater");
-                    // makeSeries("Industries", "energy");//remove for temparary add in future->"Industries", "energy"
+                    makeSeries("Industries", "energy");
+                    //remove for temparary add in future->"Industries", "energy"
                     // makeSeries("Africa", "africa");
 
 

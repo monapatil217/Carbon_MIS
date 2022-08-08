@@ -158,7 +158,7 @@ require "php/session.php";
                                                 style="font-size:26px;color:#e9ecef"></i></center>
                                     </div>
                                     <div class="text-end pt-1">
-                                        <p class="text-sm mb-0 text-capitalize">Industry</p>
+                                        <p class="text-sm mb-0 text-capitalize">energy</p>
                                         <h6 class="mb-0 mt-3" id="energy"> </h6>
                                     </div>
                                 </div>
@@ -283,11 +283,11 @@ require "php/session.php";
                                        </div>
                                        </div>
                                       
-                                      <!-- <br> -->
+                                      <br>
                                         <div class="row ">                               
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  mb-3 text-center">
                                             <button class="btn btn-primary " type="button"
-                                                onclick="postAction();">SAVE</button>
+                                                onclick="eleAction();">SAVE</button>
                                         </div>
                                      </div>       
                                     </div>
@@ -391,10 +391,9 @@ require "php/session.php";
                                        <div class="row ">                               
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  mb-3 text-center">
                                             <button class="btn btn-primary " type="button"
-                                                onclick="postAction();">SAVE</button>
+                                                onclick="transAction();">SAVE</button>
                                         </div>
                                      </div>    
-
                                 </div>
                                 </div>
                             </div>
@@ -456,7 +455,7 @@ require "php/session.php";
                                         <div class="row ">                               
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  mb-3 text-center">
                                             <button class="btn btn-primary " type="button"
-                                                onclick="postAction();">SAVE</button>
+                                                onclick="afoluAction();">SAVE</button>
                                         </div>
                                      </div>  
                                     </div>
@@ -487,7 +486,7 @@ require "php/session.php";
                                 <div class="row ">                               
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  mb-3 text-center">
                                             <button class="btn btn-primary " type="button"
-                                                onclick="postAction();">SAVE</button>
+                                                onclick="wasteAction();">SAVE</button>
                                         </div>
                                 </div>  
                                 </div>
@@ -576,20 +575,21 @@ require "php/session.php";
                                         <div class="row ">                               
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  mb-3 text-center">
                                             <button class="btn btn-primary " type="button"
-                                                onclick="postAction();">SAVE</button>
+                                                onclick="induAction();">SAVE</button>
                                         </div>
                                      </div>  
                                 </div>
                                 </div>
                             <!-- </div> -->
-                                </div> <br>
-                                <!-- <div class="row ">                               
+                                </div> 
+                                <!-- <br>
+                                <div class="row ">                               
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  mb-3 text-center">
                                             <button class="btn btn-primary " type="button"
                                                 onclick="postAction();">SAVE</button>
                                         </div>
-                                       
-                                     </div>    -->
+                                        -->
+                                     </div>   
                                     <!-- ///// -->                                       
                 <!-- </div> -->
             </div>
